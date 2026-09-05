@@ -25,6 +25,7 @@ ARCHIVE_NAME = "super_writer-v1.0.0-skill.zip"
 
 # Python audit hooks enforce offline execution, including smoke-test subprocesses.
 AUDIT_HOOK = '''
+import functools
 import os
 import sys
 
@@ -96,8 +97,9 @@ if scenario:
         return path_metadata(original_lstat(*args, **kwargs))
 
     os.fstat = fstat
-    os.stat = stat_path
-    os.lstat = lstat_path
+    # Python 3.10 pathlib stores these as class attributes: avoid method binding.
+    os.stat = functools.partial(stat_path)
+    os.lstat = functools.partial(lstat_path)
 '''
 
 
