@@ -10,6 +10,7 @@ import re
 import shutil
 import sys
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -155,7 +156,7 @@ FRAMEWORK_MIN_CHARS = 500
 TRANSLATION_MIN_RATIO = 0.30
 CITATION_BANK_MULTIPLIER = 3
 CITATION_BANK_RECENT_RATIO = 0.80
-CURRENT_YEAR = 2026
+CURRENT_YEAR = date.today().year
 
 EXTERNAL_SOURCE_CHANNELS = {
     "web",
@@ -668,6 +669,8 @@ def validate_citation_support_bank(output_dir: Path, config: dict[str, object]) 
             + "."
         )
     rows = [row for row in rows if any(cell.strip() for cell in row)]
+    if not rows:
+        issues.append("citation_support_bank.md has no citation rows.")
 
     source_channel_idx = _find_citation_column(header, "source channel")
     has_external = False
@@ -689,17 +692,21 @@ def validate_citation_support_bank(output_dir: Path, config: dict[str, object]) 
         else:
             warnings.append(msg)
 
+    enforcement = config.get("citation_enforce_heuristics", False)
+    if type(enforcement) is not bool:
+        issues.append("citation_enforce_heuristics must be a JSON boolean.")
+    collection_findings = issues if enforcement is True else warnings
     if len(rows) < required_candidates:
-        issues.append(
+        collection_findings.append(
             f"citation_support_bank.md has fewer than {required_candidates} candidates; create 3x the target citation count before selecting final citations."
         )
     recent_rows = [row for row in rows if (year_from_row(row) or 0) >= recent_threshold]
     if len(recent_rows) < required_recent:
-        issues.append(
+        collection_findings.append(
             f"citation_support_bank.md should keep about 80% recent candidates since {recent_threshold}; found {len(recent_rows)} of required {required_recent}."
         )
     weak_rows = []
-    for index, row in enumerate(rows[:required_candidates], start=1):
+    for index, row in enumerate(rows, start=1):
         joined = " ".join(row)
         has_reference = any(token in joined for token in ("@", "doi", "DOI", "http", "arXiv", "Journal", "Proceedings"))
         has_sentence = len(joined) >= 80 and bool(re.search(r"[.!?。！？]", joined))

@@ -232,9 +232,12 @@ def _run_final_audit_gate(output_dir: Path, config: dict) -> tuple[bool, str, li
     except (ValueError, TypeError):
         target_count = 20
     citation_path = str(output_dir / "citation_support_bank.md")
+    citation_args = [citation_path, "--target-count", str(target_count), "--markdown", "--write"]
+    if config.get("citation_enforce_heuristics") is True:
+        citation_args.append("--enforce-heuristics")
     rc, _stdout, _stderr = _run_script(
         scripts_dir, "citation_bank_check.py",
-        [citation_path, "--target-count", str(target_count), "--markdown", "--write"],
+        citation_args,
     )
     if rc != 0:
         failures.append(f"citation_bank_check.py exit {rc}")
@@ -284,13 +287,16 @@ def _run_final_audit_gate(output_dir: Path, config: dict) -> tuple[bool, str, li
         rc, _stdout, _stderr = _run_script(scripts_dir, "latex_guard.py", lg_args)
         if rc != 0:
             failures.append(f"latex_guard.py exit {rc}")
-        try:
-            max_sections = int(config.get("max_sections", 6))
-        except (ValueError, TypeError):
-            max_sections = 6
+        section_args = [str(tex_path), "--markdown"]
+        max_sections = config.get("max_sections")
+        if max_sections is not None:
+            if type(max_sections) is not int or max_sections < 1:
+                failures.append("max_sections must be a positive JSON integer")
+            else:
+                section_args.extend(["--max-sections", str(max_sections)])
         rc, _stdout, _stderr = _run_script(
             scripts_dir, "section_economy_check.py",
-            [str(tex_path), "--max-sections", str(max_sections), "--markdown"],
+            section_args,
         )
         if rc != 0:
             failures.append(f"section_economy_check.py exit {rc}")

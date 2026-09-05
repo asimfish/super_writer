@@ -44,3 +44,25 @@ jobs:
         run: python scripts/latex_guard.py examples/synthetic-study/manuscript.tex --markdown
       - name: Build release bundle
         run: python tools/build_release.py
+
+  documents:
+    name: Examples and official template fixtures
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Update document-tool package index
+        run: sudo apt-get update
+      - name: Install document tools
+        run: sudo apt-get install -y --no-install-recommends pandoc texlive-latex-extra texlive-fonts-recommended poppler-utils
+      - name: Render and inspect worked examples
+        run: python tools/render_examples.py --output-dir build/rendered-examples
+      - name: Compile pinned official template fixtures
+        run: python tools/check_template_compatibility.py --output-dir build/template-check

@@ -26,8 +26,13 @@ in the user's manuscript. This is separate from exemplar learning.
 
 ## Rules
 
-- Generate at least `citation_target_count * 3` candidates (default: 60).
-- About 80% should be recent (2023 or later in 2026).
+- Use `citation_target_count * 3` candidates (default: 60) and about 80% recent
+  work as collection suggestions, not scientific-quality requirements. The
+  recency threshold is the current calendar year minus three.
+- Keep relevant foundational work. These heuristics produce advisories by
+  default; only an explicit `citation_enforce_heuristics: true` project setting
+  makes them blocking in the final gate. The standalone CLI equivalent is
+  `--enforce-heuristics`.
 - Each row pairs one paper with one or two support sentences.
 - Fill `Source Channel` for every row: `MCP-CNKI`, `MCP-IEEE`, `web`, `local`, `unknown`.
 - For external channels (`web`, `MCP-*`, `Crossref`, `PubMed`, `Scholar`,

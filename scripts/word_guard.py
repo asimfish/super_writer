@@ -64,17 +64,25 @@ MARKDOWN_ITALIC_PATTERN = re.compile(r"(?<![a-zA-Z0-9_])\*[a-zA-Z][^*\n]*[a-zA-Z
 # uses one of these but the docx rendered author-date (citeproc's default), the
 # Word citations silently diverge from the compiled PDF.
 NUMERIC_BIB_STYLES = frozenset({
-    "plain", "unsrt", "abbrv", "ieeetr", "ieee", "ieeetran", "acm", "siam", "vancouver",
+    "plain", "unsrt", "abbrv", "ieeetr", "ieee", "ieeetran", "ieeenat_fullname", "acm", "siam", "vancouver",
 })
 # Styles that legitimately render (Author, Year). When the source declares one of
 # these, author-year citations in the Word output are correct and must not be flagged.
 AUTHOR_DATE_BIB_STYLES = frozenset({
     "plainnat", "abbrvnat", "unsrtnat", "agsm", "apa", "apalike", "apacite",
     "chicago", "authordate", "harvard", "dinat", "kluwer", "nature",
+    "icml2026", "iclr2026_conference", "acl_natbib",
 })
 BIBSTYLE_PATTERN = re.compile(r"\\bibliographystyle\{([^}]+)\}")
 NUMERIC_CITE_PATTERN = re.compile(r"\[\d+(?:\s*[,–-]\s*\d+)*\]")
 AUTHOR_DATE_CITE_PATTERN = re.compile(r"\([A-Z][A-Za-z'’.-]+(?:\s+et al\.?)?,?\s+\d{4}[a-z]?\)")
+
+
+def bibliography_style(source_tex: str) -> str:
+    match = BIBSTYLE_PATTERN.search(source_tex)
+    if not match:
+        return ""
+    return re.split(r"[/\\]", match.group(1).strip().lower())[-1]
 
 
 def citation_style_finding(docx_text: str, source_tex: str) -> str | None:
@@ -88,7 +96,7 @@ def citation_style_finding(docx_text: str, source_tex: str) -> str | None:
     if not source_tex:
         return None
     match = BIBSTYLE_PATTERN.search(source_tex)
-    if not match or match.group(1).strip().lower() not in NUMERIC_BIB_STYLES:
+    if not match or bibliography_style(source_tex) not in NUMERIC_BIB_STYLES:
         return None
     if AUTHOR_DATE_CITE_PATTERN.search(docx_text) and not NUMERIC_CITE_PATTERN.search(docx_text):
         return (
@@ -102,30 +110,23 @@ def citation_style_finding(docx_text: str, source_tex: str) -> str | None:
 def author_year_citation_finding(docx_text: str, source_tex: str) -> str | None:
     """Flag author-year citations in the Word output unless the source is author-date.
 
-    PaperSpine's default rule (SKILL.md / references/latex.md) is plain numeric
-    [1] citations. word_guard previously only caught author-year when a numeric
-    \\bibliographystyle was supplied, so a docx rendered without any source tex
-    passed silently. This fires whenever (Author, Year) citations appear and the
-    source is NOT a known author-date style. Numeric-style sources are left to
-    citation_style_finding, which carries a more specific message.
+    Known venue styles are accepted without changing the official bibliography.
+    An unknown style remains unresolved; it is not evidence that numeric
+    citations are required. Numeric sources are checked by citation_style_finding.
     """
     match = AUTHOR_DATE_CITE_PATTERN.search(docx_text)
     if not match:
         return None
-    style = ""
-    if source_tex:
-        bib = BIBSTYLE_PATTERN.search(source_tex)
-        if bib:
-            style = bib.group(1).strip().lower()
+    style = bibliography_style(source_tex)
     if style in AUTHOR_DATE_BIB_STYLES:
         return None  # author-date is legitimate here
     if style in NUMERIC_BIB_STYLES:
         return None  # citation_style_finding owns this case
     return (
         f"Author-year citation found in the Word output (e.g. '{match.group(0)}'). "
-        "PaperSpine's default rule is plain square-bracket numeric citations, e.g. [1]. "
-        "Render with a numeric CSL (e.g. --csl=ieee.csl) or pass --tex so an author-date "
-        "\\bibliographystyle can be recognized; otherwise convert the citations to numeric form."
+        "The source bibliography style is missing or unrecognized. Pass --tex and verify "
+        "the official style before adapting this check. Do not convert valid venue "
+        "citations to numeric form merely to silence this finding."
     )
 
 

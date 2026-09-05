@@ -2,7 +2,7 @@
 
 - Owner: [asimfish/super_writer](https://github.com/asimfish/super_writer)
 - Skill ID: `super-writer`
-- Standalone version: `1.0.0`
+- Standalone version: `1.1.0`
 - Relationship: adapted PaperSpine V4 derivative; [provenance](UPSTREAM.md)
 - License: MIT with upstream notice retained
 - Invocation: implicit or explicit; `$super-writer`
@@ -10,9 +10,10 @@
 ## Observed Capabilities
 
 Declaration keys: Reads: project sources; Writes: project artifacts;
-Executes: Python and requested document tools; Network: bibliographic lookups;
-Credentials: none required by scripts; External effects: none beyond requested
-file operations. Approval gates: author motivation before drafting, explicit
+Executes: Python and requested document tools; Network: bibliographic lookups
+and explicitly invoked source-only template downloads;
+Credentials: none required by scripts; External effects: the declared requests
+and requested file operations. Approval gates: author motivation before drafting, explicit
 request before installing, sending, submitting, or publishing. Details follow.
 
 | Surface | Behavior | Boundary |
@@ -25,6 +26,8 @@ request before installing, sending, submitting, or publishing. Details follow.
 | Global preferences | Legacy wizard can read `~/.paperspine/config.json` or `PAPERSPINE_CONFIG_HOME`; `--setup-global` writes preferences | Only change global preferences when requested |
 | Document fixes | Word/submission guards can rewrite DOCX fonts with `--fix-fonts`; Word guard retains its backup | Run against intended generated documents and preserve source files |
 | Distribution tools | Build an allowlisted ZIP and install to an explicit destination | Reject existing installation targets and source symlinks; no global auto-install |
+| Source-only example tools | Recompute synthetic data; run Pandoc, TeX and Poppler; write explicitly selected demo outputs | No model calls or private material; shell escape disabled; not an OS sandbox |
+| Source-only template check | Download pinned public ZIPs from `media.icml.cc` and `codeload.github.com`, verify digests, compile fixtures | No document upload or credentials; styles in temporary directories, not redistributed |
 | External effects | No built-in manuscript submission, email, deployment, purchase, or publication | Preparing submission/reply text does not authorize sending it |
 
 The unused Semantic Scholar URL constant in the inherited citation-quality

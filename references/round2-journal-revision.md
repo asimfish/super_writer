@@ -9,11 +9,15 @@
 
 ## Phase 0: The Three R's — Corpus-Based Style Calibration
 
-The CASPArS method (Ohata, Martin & Ison, *J. Chem. Educ.*, 2025) calibrates writing at word, phrase, and structure level. Use the 3 deep-read journal papers as your corpus.
+Use the available deep-read papers as a small, task-matched corpus. For a conference
+paper, select examples of the same paper type and stage rather than transferring
+journal conventions unchanged. Corpus observations are soft guidance; official
+rules, the author's meaning, evidence strength and technical terminology take priority.
 
 **R1 — Recalibration**: Align word usage with field standards.
 - Compare your Round 1 draft against all 3 journal papers for each key term
-- Does this word appear with the same frequency? Example: if journal papers use "demonstrate" 15× and "show" 2×, recalibrate toward "demonstrate"
+- Compare how words function in context, not whether their frequencies match.
+  Do not replace "show" with "demonstrate" merely because it is more frequent.
 - Check: verb+noun pairs, adjective+noun pairs, preposition choices
 
 **R2 — Replacement**: Choose context-appropriate alternatives.
@@ -30,7 +34,7 @@ The CASPArS method (Ohata, Martin & Ison, *J. Chem. Educ.*, 2025) calibrates wri
 
 | R | Target Word/Pattern | Our Usage | Journal Consensus | Action |
 |---|---------------------|-----------|-------------------|--------|
-| R1 | "show" vs "demonstrate" | "show" 25× | "demonstrate" 15×, "show" 2× | Replace most "show" → "demonstrate" |
+| R1 | "show" vs "demonstrate" | Repeated "show" | Different verbs used for different evidence | Change only where the meaning and evidence support it |
 | R2 | "important" | 20× | varied: "critical", "essential" | Diversify |
 | R3 | sentence rhythm | avg 28 words/sentence | avg 22 words/sentence | Split longer sentences |
 
@@ -45,7 +49,7 @@ From the 3 journal papers' Pass 2 and Pass 3 outputs, build a specific checklist
 
 ### Structural
 - [ ] Section order matches journal convention [specify]
-- [ ] Section length ratios within ±10% of journal averages [list targets]
+- [ ] Section allocation fits the paper's argument, evidence and official page budget
 - [ ] Abstract format: [structured/unstructured, N words max]
 - [ ] Introduction length: [N words target]
 
@@ -56,12 +60,12 @@ From the 3 journal papers' Pass 2 and Pass 3 outputs, build a specific checklist
 - [ ] Each section closes like journal consensus: [pattern]
 
 ### Claims
-- [ ] Claim strength distribution matches journal averages (Strong: N%, Moderate: N%, Tentative: N%)
-- [ ] Hedging phrases match Template JS-3 consensus
+- [ ] Every claim's strength follows its supporting evidence, not corpus averages
+- [ ] Hedging states the specific uncertainty or scope boundary
 
 ### Terminology
-- [ ] All terms from Template JS-6 switched to journal consensus
-- [ ] No terms used that are absent from journal papers
+- [ ] Established technical terms are used consistently and correctly
+- [ ] New or paper-specific terms are defined clearly, even when absent from the corpus
 
 ### Citations
 - [ ] Citation density within journal range (N-N cites/page)

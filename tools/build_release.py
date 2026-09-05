@@ -27,7 +27,7 @@ REQUIRED_FILES = (
     "SKILL.md", "PATTERNS.md", "LICENSE", "VERSION", "UPSTREAM.md", "skill-card.md",
 )
 REQUIRED_DIRS = ("agents", "scripts", "references", "evals")
-OPTIONAL_FILES = ("README.md", "README.en.md", "CONTRIBUTING.md")
+OPTIONAL_FILES = ("README.md", "README.en.md", "CONTRIBUTING.md", "SECURITY.md", "CITATION.cff")
 OPTIONAL_DIRS = ("docs", "examples")
 EXCLUDED_NAMES = frozenset({
     "__pycache__", "venv", "env", "virtualenv", "site-packages", "node_modules",

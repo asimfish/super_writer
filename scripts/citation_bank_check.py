@@ -7,14 +7,16 @@ import argparse
 import json
 import re
 import sys
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from datetime import date
+import math
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from _paper_spine_utils import markdown_tables, year_from_row
 
-CURRENT_YEAR = 2026
+CURRENT_YEAR = date.today().year
 DEFAULT_TARGET_COUNT = 20
 DEFAULT_MULTIPLIER = 3
 DEFAULT_RECENT_RATIO = 0.80
@@ -30,6 +32,7 @@ class CitationBankResult:
     recent_count: int
     required_recent_count: int
     findings: list[str]
+    warnings: list[str] = field(default_factory=list)
 
 
 def parse_args() -> argparse.Namespace:
@@ -39,6 +42,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--multiplier", type=int, default=DEFAULT_MULTIPLIER)
     parser.add_argument("--recent-years", type=int, default=3)
     parser.add_argument("--recent-ratio", type=float, default=DEFAULT_RECENT_RATIO)
+    parser.add_argument("--enforce-heuristics", action="store_true",
+                        help="Make collection count and recency targets blocking (default: advisory)")
     parser.add_argument("--markdown", action="store_true")
     parser.add_argument("--json", action="store_true")
     parser.add_argument(
@@ -46,7 +51,12 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Write citation_bank_check.md next to citation_support_bank.md.",
     )
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.target_count < 1 or args.multiplier < 1 or args.recent_years < 0:
+        parser.error("target count and multiplier must be positive; recent years must be nonnegative")
+    if not math.isfinite(args.recent_ratio) or not 0 <= args.recent_ratio <= 1:
+        parser.error("recent ratio must be finite and between 0 and 1")
+    return args
 
 
 def has_claim_sentence(row: list[str]) -> bool:
@@ -75,10 +85,13 @@ def find_citation_table(text: str) -> tuple[list[str], list[list[str]]]:
     return [], []
 
 
-def validate(path: Path, target_count: int, multiplier: int, recent_years: int, recent_ratio: float) -> CitationBankResult:
+def validate(path: Path, target_count: int, multiplier: int, recent_years: int, recent_ratio: float,
+             enforce_heuristics: bool = False) -> CitationBankResult:
     required_candidates = target_count * multiplier
     required_recent_count = int(required_candidates * recent_ratio + 0.999)
     findings: list[str] = []
+    warnings: list[str] = []
+    collection_findings = findings if enforce_heuristics else warnings
     if not path.exists():
         return CitationBankResult(str(path), False, target_count, required_candidates, 0, 0, required_recent_count, ["file does not exist"])
 
@@ -94,20 +107,22 @@ def validate(path: Path, target_count: int, multiplier: int, recent_years: int, 
             findings.append(f"citation_support_bank.md table should include a `{required}` column.")
 
     nonempty_rows = [row for row in rows if any(cell.strip() for cell in row)]
+    if not nonempty_rows:
+        findings.append("citation_support_bank.md has no citation rows.")
     if len(nonempty_rows) < required_candidates:
-        findings.append(
+        collection_findings.append(
             f"citation_support_bank.md has {len(nonempty_rows)} candidates; expected at least {required_candidates} for target_count={target_count} and multiplier={multiplier}."
         )
 
     threshold = CURRENT_YEAR - recent_years
     recent_rows = [row for row in nonempty_rows if (year_from_row(row) or 0) >= threshold]
     if len(recent_rows) < required_recent_count:
-        findings.append(
+        collection_findings.append(
             f"citation_support_bank.md has {len(recent_rows)} recent candidates since {threshold}; expected at least {required_recent_count}."
         )
 
     weak_rows = []
-    for index, row in enumerate(nonempty_rows[:required_candidates], start=1):
+    for index, row in enumerate(nonempty_rows, start=1):
         if not has_claim_sentence(row) or not has_reference_format(row):
             weak_rows.append(index)
     if weak_rows:
@@ -125,6 +140,7 @@ def validate(path: Path, target_count: int, multiplier: int, recent_years: int, 
         len(recent_rows),
         required_recent_count,
         findings,
+        warnings,
     )
 
 
@@ -135,15 +151,17 @@ def to_markdown(result: CitationBankResult) -> str:
         f"- Path: `{result.path}`",
         f"- Status: {'PASS' if result.ok else 'FAIL'}",
         f"- Target citation count: {result.target_count}",
-        f"- Required candidate rows: {result.required_candidates}",
+        f"- Candidate collection target: {result.required_candidates}",
         f"- Candidate rows: {result.row_count}",
-        f"- Required recent rows: {result.required_recent_count}",
+        f"- Recent collection target: {result.required_recent_count}",
         f"- Recent rows: {result.recent_count}",
         "",
         "## Findings",
         "",
     ]
     lines.extend(f"- {finding}" for finding in result.findings) if result.findings else lines.append("- None")
+    lines.extend(["", "## Advisories", ""])
+    lines.extend(f"- {warning}" for warning in result.warnings) if result.warnings else lines.append("- None")
     lines.append("")
     return "\n".join(lines)
 
@@ -151,7 +169,8 @@ def to_markdown(result: CitationBankResult) -> str:
 def main() -> int:
     args = parse_args()
     path = Path(args.path)
-    result = validate(path, args.target_count, args.multiplier, args.recent_years, args.recent_ratio)
+    result = validate(path, args.target_count, args.multiplier, args.recent_years, args.recent_ratio,
+                      args.enforce_heuristics)
     markdown = to_markdown(result)
     if args.write:
         report_path = path.parent / "citation_bank_check.md"

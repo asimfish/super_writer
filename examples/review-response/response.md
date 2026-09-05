@@ -1,0 +1,55 @@
+---
+title: "Reviewer Response: Local Smoothing and Extrapolation"
+author: "Super Writer worked example"
+date: "September 2026"
+---
+
+**Educational mock response.** These comments were written for the repository;
+they did not come from a conference. The response uses only the measurements in
+the companion toy regression example. This generic layout is not a venue's
+official rebuttal template.
+
+## R1: The robustness claim is broader than the evidence
+
+**Comment.** The draft claims robustness to distribution shift, although the
+extrapolation results appear worse for five neighbors. Please reconcile the
+abstract with the table.
+
+**Response.** We agree. The in-domain mean MSE decreases from 0.1083 to 0.0851,
+but the extrapolation mean increases from 2.6891 to 3.7012. We removed the
+general robustness claim. The revised abstract reports both domains, and
+the Results section states that the in-domain advantage does not extend to
+this tested extrapolation setting. The Interpretation section explains why
+nearest-neighbor predictions are constant beyond the rightmost training input,
+without claiming that this determines the ranking on every function.
+
+## R2: The uncertainty notation is unclear
+
+**Comment.** Are the error bars confidence intervals? Were grid points treated
+as independent experimental runs?
+
+**Response.** The table reports sample standard deviation across five training
+seeds, not a confidence interval. Each seed produces one MSE per method and
+domain by averaging over 101 fixed grid points. The grid points are not counted
+as separate training replications. We now state the aggregation unit in the
+Experimental Protocol and label the column "Sample SD." We also removed
+"significantly" from the original claim because no significance test was run.
+
+## R3: Add a parametric baseline
+
+**Comment.** A parametric model could be a stronger extrapolation baseline.
+Can the paper establish superiority over that alternative?
+
+**Response.** The supplied experiment does not include that comparison, so it
+cannot establish such superiority. We identify the missing baseline explicitly
+in Limitations and retain the narrower comparison between one and five
+neighbors. We have not added a result, promised a completed run, or represented
+the suggested experiment as evidence already available.
+
+## Revision Locations
+
+| Comment | Change | Location in the companion manuscript |
+|:---|:---|:---|
+| R1 | Report both directions; narrow robustness claim | Abstract; Results; Interpretation |
+| R2 | Identify seed-level sample SD; remove significance claim | Experimental Protocol; Results table |
+| R3 | State unevaluated baseline and limit comparison | Limitations |

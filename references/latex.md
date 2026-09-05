@@ -42,17 +42,15 @@ python scripts/word_guard.py paper_rewriting_output/final_paper/paper.docx --tex
 never leave an older `paper.pdf` beside a newer `main.pdf`.
 `artifact_check.py` fails stale or mismatched `paper.pdf`.
 
-**Citation mechanism (hard rule):** Every in-text citation must be a real
-`\cite{key}` linked to a bibliography entry — either `\bibliographystyle{unsrt}`
-(or `plain`/`ieeetr`) + `\bibliography{references.bib}`, or a `thebibliography`
-block whose `\bibitem{key}` entries are reached by `\cite{key}`. Never type the
+**Citation mechanism (hard rule):** Every in-text citation must use the official
+template's linked citation commands, such as `\cite{key}`, `\citep{key}`, or
+`\citet{key}`, with matching BibTeX or `\bibitem{key}` entries. Preserve the
+official bibliography style, including author-year styles. Never type the
 bracket number as literal text: a hand-typed `[1]` is inert and links to nothing
 in either the PDF or the .docx, and the numbering silently desyncs if the
-reference list reorders. A numeric `bibliographystyle`/CSL still renders as `[1]`
-or `[3,12,13]`, so the visible plain-numeric style is preserved. Author-year
-citations and extra-parenthesized numeric citations such as `([15])` are
-forbidden. Do not use superscript for these citations unless the target journal
-explicitly requires it. `latex_guard.py` fails literal-bracket citations that
+reference list reorders. Match the Word CSL to the required citation mode.
+Do not add parentheses around numeric citations such as `([15])`, or change to
+superscript unless the venue requires it. `latex_guard.py` fails literal-bracket citations that
 have no `\cite` and flags numbering that exceeds the reference-entry count.
 
 **Title (hard rule):** `main.tex` must declare and render the paper title using
@@ -62,10 +60,12 @@ the paper title on the first page, not Abstract, Keywords, Introduction, or
 body paragraphs. `latex_guard.py` checks the TeX source; `word_guard.py`
 checks the .docx.
 
-The inherited numeric-citation guard is not a general validator for every venue.
-When official requirements use author-year citations, preserve those requirements
-and report the guard compatibility limitation. Do not change a venue template
-solely to silence this check or claim a check passed when it did not.
+The guards are not general validators for every venue. Word recognition includes
+the checked `icml2026`, `iclr2026_conference`, `acl_natbib` and numeric
+`ieeenat_fullname` styles; other styles can require a scoped adaptation.
+Do not change an official template solely to silence a check or claim a check
+passed when it did not. Section counts are advisory unless `max_sections` is
+explicitly configured as a positive integer.
 
 - Preserve citation keys and labels.
 - Copy approved images into `figures/` with stable labels.

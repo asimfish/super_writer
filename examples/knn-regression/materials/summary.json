@@ -1,0 +1,43 @@
+{
+  "data_kind": "synthetic function and noise; measured program outputs, not real-world observations",
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "train_size": 40,
+  "test_size_per_domain": 101,
+  "noise_uniform": [
+    -0.5,
+    0.5
+  ],
+  "aggregation": "mean and sample SD across training seeds",
+  "results": [
+    {
+      "domain": "in_domain",
+      "k": 1,
+      "mean_mse": 0.10827034151972416,
+      "sample_sd": 0.00558671100212528
+    },
+    {
+      "domain": "in_domain",
+      "k": 5,
+      "mean_mse": 0.08505487281444767,
+      "sample_sd": 0.012760841528392247
+    },
+    {
+      "domain": "extrapolation",
+      "k": 1,
+      "mean_mse": 2.689077989036772,
+      "sample_sd": 1.4619867024007525
+    },
+    {
+      "domain": "extrapolation",
+      "k": 5,
+      "mean_mse": 3.701182753005189,
+      "sample_sd": 1.3386131376246448
+    }
+  ]
+}

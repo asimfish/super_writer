@@ -1,0 +1,34 @@
+{
+  "reviewed_on": "2026-09-05",
+  "scope": "Pinned official template compilation fixtures; not full submission compliance or writing-quality evaluations.",
+  "distribution": "Upstream style files are downloaded only into a temporary directory and are not redistributed or relicensed.",
+  "templates": [
+    {
+      "id": "icml2026",
+      "official_guide": "https://icml.cc/Conferences/2026/AuthorInstructions",
+      "url": "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip",
+      "sha256": "8b29290f5828e176debb57ea9cc00252502973d55ea561a2f18a7f0a326bfc6c",
+      "archive_prefix": "",
+      "files": ["icml2026.sty", "icml2026.bst", "fancyhdr.sty"],
+      "citation_mode": "author-date"
+    },
+    {
+      "id": "iclr2026",
+      "official_guide": "https://iclr.cc/Conferences/2026/AuthorGuide",
+      "url": "https://codeload.github.com/ICLR/Master-Template/zip/46ed6f4c6cef5b175dde23639e77d44c3463b230",
+      "sha256": "0a9a2796bf562cb781bc0cf32e2956264bbc7b76278c93f7bf149f8093e23d98",
+      "archive_prefix": "Master-Template-46ed6f4c6cef5b175dde23639e77d44c3463b230/iclr2026/",
+      "files": ["iclr2026_conference.sty", "iclr2026_conference.bst", "fancyhdr.sty", "natbib.sty"],
+      "citation_mode": "author-date"
+    },
+    {
+      "id": "cvpr2026",
+      "official_guide": "https://cvpr.thecvf.com/Conferences/2026/AuthorGuidelines",
+      "url": "https://codeload.github.com/cvpr-org/author-kit/zip/12909ae437f6dbc7435069cfdb4ca44c18e6a02f",
+      "sha256": "f03514dd813f668e78419f651d9d5a2b227d0425069d17db4767e0006fc19e8a",
+      "archive_prefix": "author-kit-12909ae437f6dbc7435069cfdb4ca44c18e6a02f/",
+      "files": ["cvpr.sty", "ieeenat_fullname.bst"],
+      "citation_mode": "numeric"
+    }
+  ]
+}

@@ -106,13 +106,11 @@ Each blueprint must answer:
 6. What evidence from the user's materials supports each target paragraph?
 7. What style constraints apply: sentence length, citation density, claim strength, opening/closing style?
 
-**Section economy is a budget, not a wish.** Record the exemplars' consensus
-top-level section count (applied journal/conference papers run 4-6 sections) and
-make the blueprint match it. Do not emit one section per idea or one section per
-reviewer comment: a 2-paragraph "Experimental Setup" or a "Discussion" split off
-from "Conclusion" must be merged into a neighbor. `section_economy_check.py`
-hard-fails a top-level section count above the budget, so a bloated blueprint
-will not pass the final gate.
+**Section economy is an editorial decision.** Record exemplar counts, but allocate
+sections around the argument and official page budget. Review short or overlapping
+sections for possible merging; do not force a universal count. The check is
+advisory unless `max_sections` sets an explicit hard budget. Required venue
+sections and the paper's evidence take priority.
 
 ## Results and Discussion Discipline
 

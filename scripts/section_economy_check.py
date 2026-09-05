@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 """Section-economy guard for PaperSpine manuscripts.
 
-Applied journal/conference papers run roughly 4-6 top-level sections. Emitting
-one section per idea — a 2-paragraph "Experimental Setup", a "Discussion" split
-out from "Conclusion" — is structural bloat. The exemplar-learning step observes
-a real section economy but nothing enforced it, so this guard converts that
-budget into a hard gate: it fails when the top-level section count exceeds the
-budget and flags the thinnest sections as merge candidates.
+Section count is an editorial heuristic, not a universal venue requirement.
+Only an explicitly supplied budget is a hard gate; the default is advisory.
 
-Standard library only. Exit code 0 = within budget, 1 = over budget.
+Standard library only. Exit code 1 = over an explicit budget; 2 = invalid input.
 """
 
 from __future__ import annotations
@@ -19,6 +15,9 @@ import re
 import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _paper_spine_utils import strip_tex_comments
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -56,9 +55,10 @@ def find_main_tex(target: Path) -> Path | None:
 
 def numbered_sections(text: str) -> list[tuple[str, str]]:
     """Return (title, body) for each non-starred top-level \\section in the body."""
+    text = strip_tex_comments(text)
     doc_start = text.find("\\begin{document}")
     body = text[doc_start:] if doc_start != -1 else text
-    cut = re.search(r"\\begin\{thebibliography\}|\\bibliography\b|\\end\{document\}", body)
+    cut = re.search(r"\\begin\{thebibliography\}|\\(?:bibliography|printbibliography|appendix)\b|\\end\{document\}", body)
     region = body[: cut.start()] if cut else body
 
     matches = list(re.finditer(r"\\section(\*)?\s*\{([^{}]*)\}", region))
@@ -80,19 +80,21 @@ def content_units(body: str) -> int:
     return cjk + words
 
 
-def check(text: str, max_sections: int) -> tuple[int, list[SectionFinding]]:
+def check(text: str, max_sections: int | None = None) -> tuple[int, list[SectionFinding]]:
+    if max_sections is not None and (type(max_sections) is not int or max_sections < 1):
+        raise ValueError("max_sections must be a positive integer")
     sections = numbered_sections(text)
     count = len(sections)
     findings: list[SectionFinding] = []
 
-    if count > max_sections:
+    budget = DEFAULT_MAX_SECTIONS if max_sections is None else max_sections
+    if count > budget:
         titles = ", ".join(title or "(untitled)" for title, _ in sections)
         findings.append(SectionFinding(
-            "error",
-            f"{count} top-level sections exceeds the applied-paper budget of {max_sections}. "
-            "Real journal/conference papers run 4-6 sections; merge thin or overlapping ones "
-            "(e.g. fold 'Experimental Setup' into the Results opening, merge 'Discussion' into "
-            f"'Conclusion'). Sections: {titles}.",
+            "warning" if max_sections is None else "error",
+            f"{count} top-level sections exceeds the {'advisory' if max_sections is None else 'explicit'} "
+            f"budget of {budget}. Review overlap and the target paper type before merging. "
+            f"This is not a universal conference rule. Sections: {titles}.",
         ))
 
     sized = [(content_units(body), title) for title, body in sections]
@@ -107,14 +109,14 @@ def check(text: str, max_sections: int) -> tuple[int, list[SectionFinding]]:
     return count, findings
 
 
-def render_markdown(path: Path, count: int, max_sections: int, findings: list[SectionFinding]) -> str:
+def render_markdown(path: Path, count: int, max_sections: int | None, findings: list[SectionFinding]) -> str:
     errors = [f for f in findings if f.severity == "error"]
     lines = [
         "# Section Economy Check",
         "",
         f"- Manuscript: `{path}`",
         f"- Top-level sections: {count}",
-        f"- Budget (max): {max_sections}",
+        f"- Budget: {max_sections if max_sections is not None else str(DEFAULT_MAX_SECTIONS) + ' (advisory)'}",
         f"- Status: {'FAIL' if errors else 'PASS'}",
         "",
     ]
@@ -132,10 +134,12 @@ def render_markdown(path: Path, count: int, max_sections: int, findings: list[Se
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description="Check top-level section economy of a manuscript.")
     parser.add_argument("target", type=Path, help="main.tex or an output directory containing final_paper/main.tex")
-    parser.add_argument("--max-sections", type=int, default=DEFAULT_MAX_SECTIONS)
+    parser.add_argument("--max-sections", type=int, help="Explicit hard budget; otherwise section count is advisory")
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--markdown", action="store_true")
     args = parser.parse_args(argv)
+    if args.max_sections is not None and args.max_sections < 1:
+        parser.error("--max-sections must be a positive integer")
 
     tex_path = find_main_tex(args.target)
     if tex_path is None:

@@ -8,11 +8,18 @@ Discussion, limitations, applications, and background.
 ## Default Counts
 
 - `citation_target_count` defaults to `20`.
-- Generate at least `citation_target_count * 3` candidate rows before final
+- Consider `citation_target_count * 3` candidate rows before final
   selection. The default candidate pool is therefore `60`.
 - About 80% of candidate rows should be recent. Use a simple rule:
   `recent_threshold = current_year - 3`; in 2026, papers from 2023 onward are
   recent.
+
+These are collection heuristics, advisory by default, not venue rules. Relevance
+and evidence coverage take priority over age or volume. The final gate only
+enforces them when `citation_enforce_heuristics` is explicitly `true`; direct
+CLI users can opt in with `--enforce-heuristics`. Empty banks, missing schema,
+and unusable rows remain errors. All rows are checked, including rows beyond
+the suggested collection target.
 
 ## Paper Types To Search
 

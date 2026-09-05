@@ -1,0 +1,158 @@
+---
+title: "Local Smoothing Does Not Establish Extrapolation: A Reproducible Toy Study"
+author: "Super Writer worked example"
+date: "September 2026"
+abstract: |
+  Better error on a familiar input range does not establish robustness outside
+  that range. We illustrate this distinction with an executable, synthetic
+  nearest-neighbor regression study. One-neighbor and five-neighbor predictors
+  are fitted to 40 noisy observations from a known one-dimensional function,
+  using five fixed training seeds. On an interior evaluation grid, mean squared
+  error is 0.1083 for one neighbor and 0.0851 for five neighbors; on an
+  extrapolation grid, the corresponding errors are 2.6891 and 3.7012.
+  These measurements support a local comparison under the stated protocol,
+  not a claim of universal superiority or statistical significance. This is
+  an educational writing example, not a novel method or a submitted paper.
+---
+
+# Introduction
+
+A results paragraph can be numerically correct and still promise more than its
+experiment establishes. Consider a predictor that reduces error on a fixed
+evaluation set. That observation answers a question about the tested inputs,
+training procedure, and metric. It does not automatically answer whether the
+predictor improves on a different domain, under a different noise process, or
+with a different training budget. A useful manuscript makes that distinction
+visible before interpreting the result.
+
+We use nearest-neighbor regression to make this writing problem inspectable.
+The estimator is standard, so the reader need not disentangle a new method
+from a new claim. Our question is deliberately narrow: under one specified
+synthetic protocol, does averaging five nearby training responses improve
+mean squared error both inside and beyond the training input range?
+
+The example has two deliverables. First, it provides a short experiment that
+reconstructs every table entry from fixed seeds. Second, it shows how a paper
+can report an improvement and an adverse result without suppressing either.
+Neither deliverable is presented as a research novelty or evidence that this
+writing workflow improves conference acceptance rates.
+
+# Background and Scope
+
+Nearest-neighbor regression predicts a response by averaging training responses
+near a query. It is a conventional local estimator, discussed alongside the
+bias-variance tradeoff in statistical learning texts [@hastie2009]. We use this
+reference for the method's background, not as support for the numerical results
+of this example. Those results come only from the accompanying executable.
+
+Increasing the neighborhood size changes the observations being averaged.
+It can reduce sensitivity to individual noisy responses while also smoothing
+local variation. The balance depends on the signal, noise, sample size, and
+evaluation distribution. We therefore do not begin with the assumption that
+five neighbors must be preferable. Both neighborhood sizes and both evaluation
+domains are fixed in the script; there is no automated hyperparameter search.
+
+# Experimental Protocol
+
+The underlying response is
+
+$$
+f(x) = 2x + \sin(4\pi x).
+$$
+
+For each seed in $\{11,22,33,44,55\}$, we draw 40 training inputs uniformly
+from $[0,1)$ and add independent uniform response noise in $[-0.5,0.5]$.
+The random generator is Python's seeded `random.Random`. Each training pair
+consumes one input draw followed by one noise draw. The script specifies this
+order so reproductions do not depend on an unstated sampling convention.
+
+For $k\in\{1,5\}$, prediction is the arithmetic mean of the responses at the
+$k$ closest training inputs, using absolute input distance. Ties are resolved
+by training-row order. Both predictors see exactly the same training set
+within a seed. We do not learn a distance metric, rescale the input, or tune
+$k$ using the evaluation results.
+
+The in-domain grid is $x_i=(i+0.5)/101$ for $i=0,\ldots,100$. The
+extrapolation grid is obtained by adding one to every grid point. Evaluation
+targets are the noiseless function values $f(x_i)$, rather than new noisy
+observations. Thus the reported error measures recovery of the chosen
+function, not prediction of future noisy labels.
+
+For each training seed, method, and domain, we compute mean squared error over
+the 101 grid points. We then report the arithmetic mean and sample standard
+deviation across the five training seeds. The grid points are not treated as
+101 independent training replications. The standard deviation describes
+variation across these five fits; it is not a confidence interval.
+
+# Results
+
+| Evaluation domain | Neighbors | Mean MSE | Sample SD |
+|:---|---:|---:|---:|
+| In-domain | 1 | 0.1083 | 0.0056 |
+| In-domain | 5 | 0.0851 | 0.0128 |
+| Extrapolation | 1 | 2.6891 | 1.4620 |
+| Extrapolation | 5 | 3.7012 | 1.3386 |
+
+Inside the training input range, the five-neighbor predictor has lower mean
+MSE than the one-neighbor predictor under this protocol. The absolute
+reduction is approximately 0.0232. This supports the statement that local
+averaging improves the observed mean error in this particular comparison.
+We do not describe that reduction as statistically significant: five fixed
+training replications and a descriptive table are not an inferential test.
+
+Beyond the training range, the ordering reverses. Five neighbors have higher
+mean MSE, by approximately 1.0121. Omitting this domain would leave the
+impression that the in-domain improvement establishes a broader property
+than was tested. Reporting both domains instead makes the claim's boundary
+explicit: the observed advantage does not carry over to this extrapolation
+setting.
+
+The per-seed CSV is part of the example, alongside the aggregation JSON and
+the exact executable. Readers can inspect individual fits rather than rely
+only on rounded table entries. Reproduction checks compare unrounded values
+with a small floating-point tolerance and separately check the displayed
+rounding; they do not infer scientific validity from file existence.
+
+# Interpretation
+
+For any query to the right of all training inputs, the ordering of input
+distances is fixed. For a fixed training set, each nearest-neighbor predictor
+therefore returns a constant throughout our extrapolation interval: the
+response at the rightmost training input for $k=1$, or the mean response of
+the five rightmost inputs for $k=5$. Neither estimator extrapolates the
+chosen signal's linear trend or oscillations. This follows from the estimator
+definition, independently of the observed ranking in the results table.
+
+That observation explains why extrapolation needs its own evaluation; it
+does not prove that one neighbor will always outperform five there. The
+ranking also depends on noisy boundary responses, the sampled training
+inputs, and the target function. A different function or noise realization
+could change it. The strongest defensible conclusion remains a comparison
+of the reported errors under the stated conditions.
+
+# Limitations
+
+The study uses one function, one sample size, one noise distribution, two
+neighborhood sizes, and five fixed seeds. It contains no real-world data,
+external benchmark, validation-selected hyperparameters, uncertainty-calibrated
+prediction intervals, or evidence about other regressors. A smooth parametric
+baseline could answer a different and useful question, but none was evaluated
+here. It must not appear in the paper as a completed experiment.
+
+The protocol was designed for an inspectable educational example, not
+preregistered research. The example's author reviewed the resulting table
+before writing this manuscript. We make no claim that the setup or reported
+conditions were selected independently of the pedagogical objective.
+
+The manuscript was authored with AI assistance for this repository and
+checked against its accompanying code and materials. Its original prose and
+synthetic experiment are public teaching artifacts, not an autonomous-writing
+benchmark, a blind human evaluation, or a paper accepted by any venue.
+
+# Conclusion
+
+The five-neighbor predictor improves mean error on the tested in-domain grid
+but worsens it on the tested extrapolation grid. Keeping both observations
+in the manuscript turns a broad claim of robustness into a specific,
+reproducible comparison. The example illustrates an evidence boundary;
+it does not introduce a new learning method or establish general robustness.

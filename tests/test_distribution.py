@@ -324,7 +324,8 @@ class DistributionTests(unittest.TestCase):
     def test_current_checkout_keeps_linked_docs_examples_and_activation_contract(self) -> None:
         output = self.base / "actual checkout release"
         self.run_cli(REPOSITORY / "tools/build_release.py", "--output-dir", output)
-        payload = self.archive_payload(output / ARCHIVE_NAME)
+        version = (REPOSITORY / "VERSION").read_text(encoding="utf-8").strip()
+        payload = self.archive_payload(output / f"super_writer-v{version}-skill.zip")
         self.assert_manifest(payload)
         for name in ("CONTRIBUTING.md", "README.md", "README.en.md", "docs/validation.md",
                      "docs/usage.md", "examples/synthetic-study/manuscript.tex",

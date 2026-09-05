@@ -1,0 +1,24 @@
+name: Example or template proposal
+description: Propose a public writing exercise or versioned template fixture.
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario and missing coverage
+      description: What writing behavior or compatibility boundary does this demonstrate?
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Source and permission
+      description: Public URL, exact revision, license or your authorship, and synthetic data disclosure. Public availability alone is not redistribution permission.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Reproduction and acceptance
+      description: Raw inputs, expected checks, limitations, and what must be withheld in a blind exercise.
+    validations:
+      required: true

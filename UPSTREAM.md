@@ -9,6 +9,8 @@ Standalone versions start at 1.0.0; this does not rename the upstream V4 release
 | [asimfish/super_skill_team](https://github.com/asimfish/super_skill_team) | `2da7bebf8e84c7eb1065b4c61669650e336e9620`, `skills/paper/paper-spine/` | Exact extraction baseline, including local guard fixes and smoke regression |
 | [WUBING2023/PaperSpine](https://github.com/WUBING2023/PaperSpine) | `d4529208cda72aa075767611b0265b95b709b550` | Upstream V4 methodology, playbooks, role cards, and script foundations; MIT |
 | [c-narcissus/paper-framework-figure-studio-pro](https://github.com/c-narcissus/paper-framework-figure-studio-pro) | `77557418b4ca8c24fa8961206bf9b8f7f6d030e1` | Presentation reference for bilingual documentation, workflow explanation, examples, and release ZIPs only |
+| [asimfish/super_translate](https://github.com/asimfish/super_translate) | `32cdaedf59b62ab05bedf3faef6c07cec872402b` | High-level README organization: artifacts, reproduction and verification boundaries; no imported content |
+| [wanshuiyin/auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/auto-claude-code-research-in-sleep) | `e59008d7a42eea50a2797e55dd0d85bbbf6572f5` | High-level README organization: gallery, workflow and contribution routes; no imported content |
 
 Reviewed on 2026-09-05. The applicable upstream license was read at
 [this pinned revision](https://github.com/WUBING2023/PaperSpine/blob/d4529208cda72aa075767611b0265b95b709b550/LICENSE).
@@ -19,6 +21,16 @@ No code, skill instructions, screenshots, example papers, diagrams, or ZIP conte
 were copied from the figure-studio reference. Our documentation and synthetic
 examples were written for this repository. There is no endorsement implied by
 either reference project.
+
+The additional README references were studied for organization only. No code,
+prose, logos, screenshots, papers, performance claims or dependencies were copied.
+Their licenses do not become this project's license through inspiration.
+
+Official template sources and exact revisions/digests are recorded in
+`tests/fixtures/templates/sources.json` in the source repository. Upstream styles
+are downloaded into temporary directories for explicit compatibility checks,
+not vendored or relicensed. Fixture prose, the minimal numeric CSL and example
+manuscripts were independently written here.
 
 ## Standalone Changes
 
@@ -35,6 +47,10 @@ either reference project.
   changing document body content.
 - Retain script-level `PaperSpine` names where changing them would obscure
   provenance or affect existing integrations.
+- Recognize checked conference citation styles, make generic editorial budgets
+  advisory unless explicitly enforced, and check all candidate citation rows.
+- Add reproducible empirical, theoretical and response examples, real document
+  builds, pinned template fixtures and open-source contribution metadata.
 
 ## Maintenance
 

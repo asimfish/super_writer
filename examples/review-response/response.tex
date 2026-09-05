@@ -1,0 +1,149 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+  10pt,
+  letterpaper,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Reviewer Response: Local Smoothing and Extrapolation},
+  pdfauthor={Super Writer worked example},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Reviewer Response: Local Smoothing and Extrapolation}
+\author{Super Writer worked example}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\textbf{Educational mock response.} These comments were written for the
+repository; they did not come from a conference. The response uses only
+the measurements in the companion toy regression example. This generic
+layout is not a venue's official rebuttal template.
+
+\subsection{R1: The robustness claim is broader than the
+evidence}\label{r1-the-robustness-claim-is-broader-than-the-evidence}
+
+\textbf{Comment.} The draft claims robustness to distribution shift,
+although the extrapolation results appear worse for five neighbors.
+Please reconcile the abstract with the table.
+
+\textbf{Response.} We agree. The in-domain mean MSE decreases from
+0.1083 to 0.0851, but the extrapolation mean increases from 2.6891 to
+3.7012. We removed the general robustness claim. The revised abstract
+reports both domains, and the Results section states that the in-domain
+advantage does not extend to this tested extrapolation setting. The
+Interpretation section explains why nearest-neighbor predictions are
+constant beyond the rightmost training input, without claiming that this
+determines the ranking on every function.
+
+\subsection{R2: The uncertainty notation is
+unclear}\label{r2-the-uncertainty-notation-is-unclear}
+
+\textbf{Comment.} Are the error bars confidence intervals? Were grid
+points treated as independent experimental runs?
+
+\textbf{Response.} The table reports sample standard deviation across
+five training seeds, not a confidence interval. Each seed produces one
+MSE per method and domain by averaging over 101 fixed grid points. The
+grid points are not counted as separate training replications. We now
+state the aggregation unit in the Experimental Protocol and label the
+column ``Sample SD.'' We also removed ``significantly'' from the
+original claim because no significance test was run.
+
+\subsection{R3: Add a parametric
+baseline}\label{r3-add-a-parametric-baseline}
+
+\textbf{Comment.} A parametric model could be a stronger extrapolation
+baseline. Can the paper establish superiority over that alternative?
+
+\textbf{Response.} The supplied experiment does not include that
+comparison, so it cannot establish such superiority. We identify the
+missing baseline explicitly in Limitations and retain the narrower
+comparison between one and five neighbors. We have not added a result,
+promised a completed run, or represented the suggested experiment as
+evidence already available.
+
+\subsection{Revision Locations}\label{revision-locations}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Comment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Change
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Location in the companion manuscript
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+R1 & Report both directions; narrow robustness claim & Abstract;
+Results; Interpretation \\
+R2 & Identify seed-level sample SD; remove significance claim &
+Experimental Protocol; Results table \\
+R3 & State unevaluated baseline and limit comparison & Limitations \\
+\end{longtable}
+}
+
+\end{document}

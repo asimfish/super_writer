@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text">
+  <info>
+    <title>Super Writer numeric citation test</title>
+    <id>https://github.com/asimfish/super_writer/tests/numeric-citation-test</id>
+    <updated>2026-09-05T00:00:00+00:00</updated>
+  </info>
+  <citation>
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout>
+      <text variable="citation-number" prefix="[" suffix="] "/>
+      <names variable="author" suffix=". "><name initialize-with=". "/></names>
+      <text variable="title" suffix=". "/>
+      <text variable="publisher" suffix=", "/>
+      <date variable="issued" suffix="."><date-part name="year"/></date>
+    </layout>
+  </bibliography>
+</style>

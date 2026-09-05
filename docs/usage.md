@@ -84,6 +84,41 @@ This creates configuration only, not a manuscript or an approved motivation.
 Keep existing configs when resuming. Use `--classic-input` in a real terminal for
 the interactive version. Use `--word-output none` only when Word is not wanted.
 
+### Venue Rules and Optional Budgets
+
+Supply the official venue, year, track and submission stage, together with its
+current author instructions. The shipped ICML/ICLR/CVPR fixtures check specific
+2026 styles, not every venue rule or future template revision.
+
+Section count, reference collection size and recency are advisory by default.
+When a project actually requires a hard budget, add the corresponding fields to
+its existing `paper_spine_config.json` without discarding other settings:
+
+```json
+{
+  "max_sections": 8,
+  "citation_enforce_heuristics": true
+}
+```
+
+Omit these fields for advisory behavior. `max_sections` must be a positive
+integer; `citation_enforce_heuristics` must be a JSON boolean. Neither overrides
+official citation style or relaxes empty-bank, missing-field, invented-reference
+or unsupported-claim checks. See the [validation scope](validation.md).
+
+### Try a Bounded Public Example
+
+```text
+Use $super-writer to revise only examples/knn-regression/draft.md using the
+protocol and results in examples/knn-regression/materials/. Preserve both test
+domains and the uncertainty definition. Do not read the worked manuscript or
+writing-decisions file until after drafting. Do not invent experiments or claim
+statistical significance without a test.
+```
+
+Keep new output separate from the shipped example. The public answer is useful
+for comparison, but this exercise is not blind if the agent has already read it.
+
 ## ZIP 使用 / ZIP Use
 
 Download the release ZIP and matching `.sha256` file from the same release.

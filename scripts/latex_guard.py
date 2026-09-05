@@ -279,7 +279,7 @@ def check_citation_format(text: str) -> list[Finding]:
     body_no_math = re.sub(r"\$[^$]*?\$", " ", body_no_math)
 
     # Find parenthesized bracket citations: ([15]), ([3,12]).
-    # Plain [1] / [3,12,13] is the required style.
+    # Extra parentheses around a numeric citation are not a citation style.
     paren_pattern = re.compile(r"\(\[\d+(?:\s*[,–-]\s*\d+)*\]\)")
     for match in paren_pattern.finditer(body_no_math):
         line = line_number(text, doc_start + match.start())
@@ -290,8 +290,8 @@ def check_citation_format(text: str) -> list[Finding]:
         ))
 
     # Find rendered author-year citations: (Smith, 2020), (Jones and Lee, 2021),
-    # (Brown et al., 2019). The hard rule is plain numeric [1]; author-year is
-    # forbidden. Require a comma before the year so prose like "(see Section 2)"
+    # (Brown et al., 2019). These may be manually typed references, but author-year
+    # itself is valid for venues such as ICML. Prose like "(see Section 2)"
     # or "(in 2020)" is not flagged.
     author_year_pattern = re.compile(
         r"\(\s*[A-Z][A-Za-z.'’\-]+"
@@ -301,9 +301,10 @@ def check_citation_format(text: str) -> list[Finding]:
     for match in author_year_pattern.finditer(body_no_math):
         line = line_number(text, doc_start + match.start())
         findings.append(Finding(
-            "error", "citation-format",
-            f"Author-year citation {match.group(0).strip()} is not allowed. Use plain "
-            "square-bracket numeric citations, e.g. [1].",
+            "warning", "citation-format",
+            f"Possible hand-written author-year reference {match.group(0).strip()}. "
+            "Use the official template's citation commands and verify the bibliography link; "
+            "do not change the venue's citation style.",
             line,
         ))
 

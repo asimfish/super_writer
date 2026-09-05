@@ -8,7 +8,7 @@ description: >-
   casual copyediting, marketing copy, running experiments, or figure-only requests.
 metadata:
   author: asimfish
-  version: "1.0.0"
+  version: "1.1.0"
   source: "Adapted from PaperSpine V4; see UPSTREAM.md"
 ---
 
@@ -113,7 +113,8 @@ structure. Keep `source_map.md`, `reference_materials/source_index.md`,
 Build `citation_support_bank.md` with a candidate pool sized to config: the
 inherited defaults are a target of 20 citations, 3x candidates, and approximately
 80% recent work. These are configurable collection heuristics, not a reason to
-discard relevant foundational work or invent candidates.
+discard relevant foundational work or invent candidates. Collection checks are
+advisory unless `citation_enforce_heuristics` is explicitly `true`.
 
 Run the research and citation gates. Confirm the motivation and check the
 contribution before drafting. If the progress scanner does not list contribution

@@ -56,10 +56,10 @@ Advisory findings: review but do not over-rewrite.
 AIGC reduction (D1–D5) is about detector-risk signals; matching the *target
 journal's* voice is a separate axis. When the deep-read journal corpus and
 `journal-style-analysis.md` (JS templates) are available, apply the CASPArS
-"Three R's" calibration in `references/round2-journal-revision.md`
-(R1 Recalibration → R2 Replacement → R3 Redevelopment) to align word frequency,
-hedging/connector choice, claim-strength distribution, and sentence rhythm with
-the corpus, and build its Style Conformity Checklist. Record the analysis in
+context-sensitive calibration in `references/round2-journal-revision.md`
+(R1 Recalibration → R2 Replacement → R3 Redevelopment). Learn rhetorical moves
+and terminology usage, not target word frequencies or claim-strength quotas.
+Build its Style Conformity Checklist. Record the analysis in
 `restructuring_notes.md`. This complements, and does not replace, the humanize
 metrics above.
 

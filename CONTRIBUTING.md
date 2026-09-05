@@ -18,6 +18,28 @@ python3 tools/build_release.py
 The guards use the Python standard library. A new dependency needs a concrete
 reason, install instructions, license review, and CI coverage.
 
+## Writing Examples and Templates
+
+Start with a realistic input and an observable invariant: preserved numbers,
+explicit assumptions, a correct citation style or an honest response to an unrun
+experiment. Do not optimize for test count or attractive prose alone. Store raw
+materials separately from worked answers. State whether data are invented counts,
+measured synthetic outputs or licensed observations. Worked answers are not blind
+evaluations.
+
+Extended checks require Pandoc, TeX and Poppler:
+
+```bash
+python3 tools/render_examples.py --output-dir build/rendered-examples
+python3 tools/check_template_compatibility.py --output-dir build/template-check
+```
+
+The second command accesses pinned public archives. Record the official guide,
+year/track, immutable revision or digest, file allowlist and upstream terms. Do
+not vendor templates without permission or change official styles to satisfy a
+guard. Inspect every published PDF page and preview; keep README claims aligned.
+Use [SECURITY.md](SECURITY.md) for sensitive issues.
+
 Preserve legacy artifact names unless a migration is included. Update
 `SKILL.md`, `agents/openai.yaml`, `skill-card.md`, and activation cases together
 when changing how the skill routes or acts. Record imported work in `UPSTREAM.md`

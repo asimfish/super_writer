@@ -1,62 +1,66 @@
-# Super Writer
+<h1 align="center">Super Writer</h1>
+<p align="center"><strong>Give every claim evidence. Give every paragraph a reason.</strong></p>
+<p align="center">An Agent Skill for academic drafting, structural revision and reviewer responses</p>
 
-**Evidence-backed academic writing, from research materials to a traceable manuscript.**
-
-[中文](README.md) · [Releases](https://github.com/asimfish/super_writer/releases/latest) · [Skill](SKILL.md) · [Examples](docs/usage.md) · [Validation](docs/validation.md)
+<p align="center"><a href="README.md">中文</a> · English · <a href="#examples">Examples</a> · <a href="#quick-start">Quick start</a> · <a href="#verification">Verification</a> · <a href="SKILL.md">Agent entrypoint</a></p>
 
 [![CI](https://github.com/asimfish/super_writer/actions/workflows/ci.yml/badge.svg)](https://github.com/asimfish/super_writer/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/asimfish/super_writer)](https://github.com/asimfish/super_writer/releases)
+[![MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](docs/validation.md)
+[![Stars](https://img.shields.io/github/stars/asimfish/super_writer?style=flat)](https://github.com/asimfish/super_writer/stargazers)
 
-`super_writer` is a standalone Agent Skill repository. Invoke it as **`super-writer`**.
-It organizes sources, contribution claims, motivation, writing decisions, and
-delivery checks for an AI agent working on an academic paper or report.
+**Have the experiments and a draft, but not a clear contribution?** Super Writer
+organizes contributions, evidence and claim boundaries before planning the
+manuscript. It then checks citations, result interpretation and document delivery.
+It is not just a synonym-replacement prompt, and it must not turn missing
+experiments into completed results.
 
-Extracted from [Super Skill Team](https://github.com/asimfish/super_skill_team/tree/main/skills/paper/paper-spine)
-and adapted from [PaperSpine](https://github.com/WUBING2023/PaperSpine) V4.
-Pinned provenance and license attribution are in [UPSTREAM.md](UPSTREAM.md).
+The repository is `super_writer`; invoke **`$super-writer`**. Your AI agent does
+the writing. Python scripts supply repeatable checks. No model is bundled,
+and no acceptance or AI-detector outcome is promised.
 
-## Capabilities
+<a id="examples"></a>
+## Start With the Examples
 
-| Task | Design | Outputs |
-|---|---|---|
-| Build from materials | Inventory before claims | Source/evidence banks, asset map, claim register, draft |
-| Rewrite a manuscript | Preserve and audit the argument | Original logic map, rewrite matrix, logic-transfer audit |
-| Frame the contribution | Separate need, novelty, evidence, and boundaries | Confirmed contribution, SOTA gap map, author-approved motivation |
-| Learn exemplars | Separate rhetorical learning from cited evidence | Exemplar dossier and style profile |
-| Ground citations | Link each candidate to a sentence-level claim | Citation Support Bank and metadata checks |
-| Plan before drafting | Explain each writing unit's purpose and evidence | Section blueprints and Writing Rationale Matrix |
-| Review results | Map results to contribution promises | Results validation and reviewer objection records |
-| Deliver documents | Check source and converted output | LaTeX, compiled PDF when available, Word, Chinese translation |
-| Prepare submission or response | Requested extensions | Highlights, cover letter, reviewer response package |
+<table>
+<tr>
+<td width="33%" align="center"><a href="examples/knn-regression/manuscript.pdf"><img src="examples/knn-regression/preview.png" alt="Actual first page of the reproducible regression study PDF" width="100%"></a></td>
+<td width="33%" align="center"><a href="examples/theory-note/manuscript.pdf"><img src="examples/theory-note/preview.png" alt="Theory-note PDF with assumptions, proposition and proof" width="100%"></a></td>
+<td width="33%" align="center"><a href="examples/review-response/response.pdf"><img src="examples/review-response/preview.png" alt="One-page response to constructed reviewer comments" width="100%"></a></td>
+</tr>
+<tr>
+<td align="center"><strong>Reproducible study · 3 pages</strong><br><a href="examples/knn-regression/manuscript.md">Read</a> · <a href="examples/knn-regression/manuscript.pdf">PDF</a> · <a href="examples/knn-regression/manuscript.docx">Word</a></td>
+<td align="center"><strong>Theory note · 2 pages</strong><br><a href="examples/theory-note/manuscript.md">Read</a> · <a href="examples/theory-note/manuscript.pdf">PDF</a> · <a href="examples/theory-note/manuscript.docx">Word</a></td>
+<td align="center"><strong>Reviewer response · 1 page</strong><br><a href="examples/review-response/response.md">Read</a> · <a href="examples/review-response/response.pdf">PDF</a> · <a href="examples/review-response/response.docx">Word</a></td>
+</tr>
+</table>
 
-Two workflows (`rewrite_existing`, `build_from_materials`), four scenes
-(`journal`, `conference`, `report_review`, `competition`), English/Chinese output,
-and `flash` / `pro` research depth. Optional style calibration uses measurable
-text patterns; it does not promise to bypass AI detectors.
+Previews are rendered from the actual PDFs, not mockups. These are **AI-assisted
+educational worked examples checked against their materials**, not submitted
+papers, accepted papers or independent blind evaluations. The empirical data
+generator is synthetic, but every table value is computed by the public script.
+The theorem is elementary; the reviewer comments are constructed. No private
+manuscript or third-party full paper is distributed.
 
-## Workflow
+### Revision Means More Than Different Words
 
-```mermaid
-flowchart LR
-    A[Draft or materials] --> B[Research and sources]
-    B --> C[Contribution and citation support]
-    C --> D{Author motivation decision}
-    D --> E[Blueprint and rationale matrix]
-    E --> F[Draft or rewrite]
-    F --> G[Evidence and integrity audit]
-    G --> H[LaTeX / PDF / Word]
-    H --> I[Review and final checks]
-```
+| Over-strong input | Evidence-bounded revision |
+|---|---|
+| "Five-neighbor regression significantly outperforms one-neighbor regression and is robust to distribution shift." | "On the in-domain grid, five-neighbor regression reduces mean MSE from 0.1083 to 0.0851 across five fixed training seeds. On the extrapolation grid, mean MSE increases from 2.6891 to 3.7012; the in-domain advantage does not extend to this tested setting." |
 
-`SKILL.md` routes the task; `references/` contains stage playbooks; `agents/`
-contains specialist role cards; `scripts/` contains 25 Python tool files.
-Bounded audit, translation, and response requests use their relevant playbooks.
+The revision preserves the improvement and the adverse result. Without a
+significance test, it does not say "significantly."
 
-## Install and Start
+[Raw materials](examples/knn-regression/materials/) · [Experiment](examples/knn-regression/experiment.py) ·
+[Writing decisions](examples/knn-regression/writing-decisions.md) · [All examples](examples/README.md)
 
-Requirements: **Python 3.10+** and a file-capable AI agent. The Python guards use
-the standard library. Word export needs Pandoc; PDF compilation needs a TeX
-toolchain. No model, API key, Pandoc, or TeX distribution is bundled.
+<a id="quick-start"></a>
+## Quick Start
+
+**Python 3.10+ and an AI agent that can read local skills are required.**
+Guard scripts use the standard library. Word export needs Pandoc; PDF compilation
+needs TeX. Running a guard alone does not call a model or write a paper.
 
 ```bash
 git clone https://github.com/asimfish/super_writer.git
@@ -65,63 +69,158 @@ python3 tools/install_skill.py --destination "${CODEX_HOME:-$HOME/.codex}/skills
 ```
 
 For Claude Code, use `--destination "$HOME/.claude/skills/super-writer"`.
-On Windows use `python` or `py -3` and an explicit destination path.
-The installer refuses to overwrite existing installations. Start a new agent
-session after installation:
+On Windows, use `python` or `py -3` and your explicit destination path.
+The installer refuses existing directories. Preserve or move the previous
+installation before upgrading, especially if it contains local changes.
+
+Invoke in a fresh session:
 
 ```text
-Use $super-writer to revise draft.tex for my specified conference.
-Inspect existing progress and evidence, confirm the contribution and motivation,
-then plan and revise section by section. Preserve all experimental numbers and
-equations. Deliver an English manuscript and Word file.
+Use $super-writer to revise draft.tex using the supplied results and method notes.
+Inspect the materials and existing progress, identify the contribution and gaps,
+and ask me to confirm the motivation before planning sections. Preserve numbers,
+equations and citation keys. Use my target venue, year and submission stage.
 ```
 
-Alternatively, download `super_writer-v1.0.0-skill.zip` from
-[Releases](https://github.com/asimfish/super_writer/releases). It contains one
-`super-writer/` directory. Other agents can load its `SKILL.md` directly.
-Web environments need file extraction and Python execution to run guards;
-text-only environments can use the instructions but cannot claim script checks.
+For a bounded task:
 
-See [usage prompts](docs/usage.md) and the
-[synthetic study](examples/synthetic-study/). All sample measurements are
-explicitly synthetic, not research results or evidence of publication success.
+```text
+Use $super-writer only to audit and revise the abstract. Do not start the full
+paper workflow, search for references, or run new experiments. Identify which
+claims are supported and which must be narrowed.
+```
 
-[Example PDF](examples/synthetic-study/manuscript.pdf) · [Example Word](examples/synthetic-study/manuscript.docx)
+Without Git, download a versioned skill ZIP from
+[Releases](https://github.com/asimfish/super_writer/releases/latest).
+It contains a `super-writer/` directory. Other hosts need local file access,
+plus Python execution to run checks. [More prompts and configuration](docs/usage.md)
 
-<img src="examples/synthetic-study/preview.png" alt="Rendered synthetic paper with scope, protocol, result table, and limitations" width="640">
+## What It Covers
 
-## Check and Package
+| Task | Approach | Inspectable output |
+|---|---|---|
+| Draft from materials | Inventory methods, results, figures and gaps | Evidence bank, contribution, manuscript |
+| Structural revision | Plan what to preserve, move, rebuild or remove | Rewrite matrix, logic-transfer audit |
+| Research positioning | Separate motivation, contribution and evidence | Contribution, SOTA gap map |
+| Learn conventions | Transfer argument structure, not copied sentences | Style profile, section blueprints |
+| Citation support | Bind sources to statements; verify metadata | Citation Support Bank |
+| Writing and result audits | Record reasons; map results to promises | Rationale matrix, results-validation table |
+| Submission preparation and revision | Draft scoped materials and trace responses | Submission package, response package |
+| Documents and translation | Check citation links, labels, Word and coverage | LaTeX, PDF, Word, Chinese output |
 
-Run these development commands from a source checkout:
+Supports journal, conference, report/review and competition settings, English
+and Chinese, and `flash` / `pro` research depth. It does not replace experiments,
+author judgment, ethics review or submission systems, and does not send responses.
+
+## Design: Contribution Before Rhetoric
+
+```mermaid
+flowchart LR
+    A[Draft or research materials] --> B[Materials and literature]
+    B --> C[Contribution and evidence boundary]
+    C --> D{Author confirms motivation}
+    D --> E[Blueprints and writing rationale]
+    E --> F[Build or revise]
+    F --> G[Results and reviewer audit]
+    G --> H[Document and delivery checks]
+    G -.Evidence gap.-> C
+```
+
+- **Separate evidence from exemplars.** Examples teach structure; verified sources
+  and the author's materials substantiate factual claims.
+- **Plan the reason before the paragraph.** Important units have evidence,
+  a purpose and a claim boundary.
+- **Separate requirements from suggestions.** Word frequencies, section counts and
+  reference age cannot replace scientific integrity or official venue rules.
+- **Load progressively.** A bounded audit, translation or reply need not launch
+  a full-paper workflow.
+
+Legacy paths such as `paper_rewriting_output/` and `paper_spine_config.json`
+remain compatible. Word is on by default; disable it with `word_output=none`.
+Section count is advisory unless `max_sections` sets a hard budget. Collection
+size and recency are advisory unless `citation_enforce_heuristics=true`.
+
+<a id="verification"></a>
+## Verification, With Boundaries
+
+| Layer | What is checked | What it does not prove |
+|---|---|---|
+| Cross-platform regressions | Linux, macOS, Windows; installation, packaging, privacy, documents and guards | Equal writing performance across agents |
+| Reproducible examples | 20 empirical records, rounding, seed-level sample SD, exact-rational counterexamples | A novel method or a formally verified theorem |
+| Document builds | Real PDF compilation, unresolved references, overfull boxes, checked Word exports | Detection of every visual defect |
+| Official template fixtures | Pinned ICML 2026, ICLR 2026 and CVPR 2026; title, citation, equation, table and hidden identity sentinels | Complete submission compliance for a full paper |
+| Writing quality | Public materials, readable manuscripts and writing decisions | Independent human blind scores, acceptance gains or detector bypass |
+
+From the source repository root:
 
 ```bash
-python3 scripts/latex_guard.py examples/synthetic-study/manuscript.tex --markdown
 python3 scripts/smoke_test.py
 python3 -m unittest discover -s tests -v
+python3 examples/knn-regression/experiment.py
 python3 tools/build_release.py
 ```
 
-The release builder produces a versioned ZIP, per-file manifest, and SHA-256
-checksum. CI verifies tools and distribution behavior. Scientific quality and
-source-to-claim validity still require substantive author/reviewer judgment.
+With Pandoc, TeX and Poppler, rebuild examples and run the network-enabled template check:
 
-## Compatibility and Limits
+```bash
+python3 tools/render_examples.py --output-dir build/rendered-examples
+python3 tools/check_template_compatibility.py --output-dir build/template-check
+```
 
-Outputs remain in `paper_rewriting_output/`; legacy config
-`paper_spine_config.json`, artifact names, and `PAPERSPINE_CONFIG_HOME` are
-preserved. Word is required in a full run unless `word_output=none` is explicit.
+The latter downloads pinned public styles, checks SHA-256, and compiles in temporary
+directories with shell escape disabled. It does not upload manuscripts, edit
+styles or relicense upstream templates as MIT.
+[Validation details](docs/validation.md) · [Version changes and acceptance](docs/releases/v1.1.0.md)
 
-Inherited guards favor numeric citations and compact section structures.
-Author-year styles, specialized templates, and multi-file manuscripts need
-template-aware review. A progress inventory is not a fresh audit receipt.
-See [validation scope and known limitations](docs/validation.md).
+## FAQ
 
-## Contributing and License
+**How is this different from a polishing prompt?**
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible issue reports and checks,
-and [skill-card.md](skill-card.md) for file, network, and execution capabilities.
+Its main value is the traceable contribution, evidence, writing rationale,
+result interpretation and document checks, not universally better prose.
 
-[MIT licensed](LICENSE), preserving PaperSpine contributors' copyright.
-The bilingual documentation and release layout were informed by
-[paper-framework-figure-studio-pro](https://github.com/c-narcissus/paper-framework-figure-studio-pro).
-Its code, papers, figures, and skill packages are not included.
+**Are all top conferences fully supported?**
+
+No. Three pinned revisions have compilation fixtures. ACL citation recognition
+has regression coverage, not complete template certification. Current year,
+track, page limits, statements, anonymity and rebuttal rules still need checking.
+
+**Does a passing check mean I can submit?**
+
+No. DOI matching does not establish entailment, and a script does not certify
+scientific conclusions. Word structure checks do not replace inspecting equations,
+figures and pagination in a document viewer.
+
+**Where does the data go?**
+
+Citation verification can send bibliography metadata to Crossref; supported
+commands offer `--no-api`. Manuscript handling depends on your agent and provider;
+the project does not promise an offline host. See [capabilities](skill-card.md)
+and [security](SECURITY.md).
+
+## Roadmap
+
+- [x] Standalone installation, reproducible distribution and cross-platform checks.
+- [x] Reproducible empirical, theoretical and response examples in PDF and Word.
+- [x] Three pinned official-template builds and citation/editorial-policy regressions.
+- [ ] Unified venue, year, track and submission-stage configuration.
+- [ ] More paper-type blueprints, official templates and compliance checks.
+- [ ] Answer-withheld agent evaluations and independent human blind assessment.
+
+## Contributing, Citation and License
+
+Report problems in [Issues](https://github.com/asimfish/super_writer/issues) or
+follow [CONTRIBUTING.md](CONTRIBUTING.md) for fixes, fixtures and licensed public
+materials. Do not post private manuscripts, reviewer identities or secrets.
+Use [CITATION.cff](CITATION.cff) to cite this software.
+
+Adapted from [PaperSpine](https://github.com/WUBING2023/PaperSpine) V4 and maintained
+independently from [Super Skill Team](https://github.com/asimfish/super_skill_team).
+[MIT licensed](LICENSE), retaining upstream attribution. See [UPSTREAM.md](UPSTREAM.md).
+
+Presentation organization draws inspiration from
+[SuperTranslate](https://github.com/asimfish/super_translate),
+[ARIS](https://github.com/wanshuiyin/auto-claude-code-research-in-sleep), and
+[Figure Studio](https://github.com/c-narcissus/paper-framework-figure-studio-pro):
+show artifacts, then explain mechanisms and verification. No code, images,
+papers or performance numbers were copied, and no endorsement is implied.
