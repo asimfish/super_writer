@@ -27,6 +27,10 @@ manuscript-support fields, global preference setup cannot rewrite project config
 and `--fix-fonts` preserves `word/document.xml` exactly. These are bounded regression
 checks, not a claim that arbitrary files or future changes are secure.
 
+English and Chinese citation verification inspect the first Markdown table in a
+support bank. Keep the citation records in that table; later tables are not
+silently interpreted under its column labels.
+
 ## Known Limits in the Inherited Engine
 
 - `progress_check.py` primarily inventories stage artifacts. Contribution,

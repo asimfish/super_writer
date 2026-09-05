@@ -19,7 +19,7 @@ from urllib.request import Request, urlopen
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from _paper_spine_utils import table_rows
+from _paper_spine_utils import markdown_tables
 
 USER_AGENT = "PaperSpine/3.0 (citation-zh; https://github.com/WUBING2023/PaperSpine)"
 DOI_RE = re.compile(r"(?:doi\s*[:=]\s*|https?://doi\.org/)?(10\.\d{4,}/[^\s,;)]+)", re.IGNORECASE)
@@ -97,7 +97,8 @@ def check_citation_bank_zh(out_dir: Path) -> CitationVerificationZHResult:
         return CitationVerificationZHResult(str(bank_path))
 
     text = bank_path.read_text(encoding="utf-8", errors="ignore")
-    header, rows = table_rows(text)
+    tables = markdown_tables(text)
+    header, rows = (tables[0][0], tables[0][1:]) if tables else ([], [])
     if not rows:
         return CitationVerificationZHResult(str(bank_path))
 

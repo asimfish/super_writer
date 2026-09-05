@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Verify English citations in citation_support_bank.md against Crossref API.
 
-Self-contained — standard library only.  Queries the public Crossref REST API
+Standard library only. Queries the public Crossref REST API
 (no key required) to confirm that each candidate citation resolves to a real
 published work.
 
@@ -26,6 +26,8 @@ import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from _paper_spine_utils import markdown_tables
+
 CROSSREF_QUERY_URL = "https://api.crossref.org/works"
 USER_AGENT = "PaperSpine/1.0 (mailto:paperspine@example.com)"
 
@@ -38,25 +40,10 @@ YEAR_TOLERANCE = 1  # ±1 year
 # table helpers (self-contained, same idiom as humanize_check.py)
 # ---------------------------------------------------------------------------
 
-def _split_table_line(line: str) -> list[str]:
-    return [c.strip() for c in line.strip().strip("|").split("|")]
-
-
-def _is_sep(cells: list[str]) -> bool:
-    return bool(cells) and all(c and set(c) <= {"-", ":", " "} for c in cells)
-
-
 def _table_rows(text: str) -> tuple[list[str], list[list[str]]]:
-    rows: list[list[str]] = []
-    for raw in text.splitlines():
-        line = raw.strip()
-        if not (line.startswith("|") and line.endswith("|")):
-            continue
-        cells = _split_table_line(line)
-        if _is_sep(cells):
-            continue
-        rows.append(cells)
-    return (rows[0], rows[1:]) if rows else ([], [])
+    """Keep each row bound to the first table's own header."""
+    tables = markdown_tables(text)
+    return (tables[0][0], tables[0][1:]) if tables else ([], [])
 
 
 def _col_index(header: list[str], *names: str) -> int | None:

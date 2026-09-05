@@ -111,6 +111,26 @@ class EnglishCitationPrivacyTests(ReleaseSafetyFixture):
         )
         self.assertEqual([unquote(urlsplit(url).path) for url in urls], [f"/works/{PUBLIC_DOI}"])
 
+    def test_later_tables_do_not_reuse_first_reference_header(self) -> None:
+        reference = f"{PUBLIC_REFERENCE} DOI: {PUBLIC_DOI}"
+        path = self.bank(["Candidate ID", "Reference", "Support Claim Sentence", "Source Channel"],
+                         ["C1", reference, "Public support statement.", "web"])
+        first_table = path.read_text(encoding="utf-8")
+        for later_column in ("Notes", "Citation"):
+            with self.subTest(later_column=later_column):
+                self.bank(["Candidate ID", "Support Claim Sentence", later_column, "Source Channel"],
+                          ["C2", PRIVATE_CLAIM, reference if later_column == "Citation" else "Private notes", "web"])
+                second_table = path.read_text(encoding="utf-8")
+                path.write_text(first_table + "\n## Separate table\n\n" + second_table, encoding="utf-8")
+                fetcher = mock.Mock(return_value=None)
+                result = self.verifier.verify_citation(path, _fetcher=fetcher)
+                self.assertEqual(
+                    ([unquote(call.args[0]) for call in fetcher.call_args_list],
+                     [(entry.candidate_id, entry.reference_text) for entry in result.entries]),
+                    ([f"https://api.crossref.org/works/{PUBLIC_DOI}"], [("C1", reference)]),
+                    "A later table must neither authorize a lookup nor add entries under the first header",
+                )
+
     def test_missing_reference_column_never_exports_support_text(self) -> None:
         _, urls = self.verify(
             ["Candidate ID", "Support Claim Sentence", "Source Channel"],
@@ -238,6 +258,26 @@ class ChineseCitationPrivacyTests(ReleaseSafetyFixture):
         self.assertEqual([call.args[0] for call in fetcher.call_args_list], [PUBLIC_DOI])
         self.assertTrue(result.ok)
         self.assertEqual(result.checks[0].reference_text, self.reference)
+
+    def test_later_tables_do_not_reuse_first_reference_header(self) -> None:
+        path = self.bank(["Candidate ID", "Reference", "Support Claim Sentence", "Source Channel"],
+                         ["C1", self.reference, "Public support statement.", "web"])
+        first_table = path.read_text(encoding="utf-8")
+        for later_column in ("Notes", "Citation"):
+            with self.subTest(later_column=later_column):
+                self.bank(["Candidate ID", "Support Claim Sentence", later_column, "Source Channel"],
+                          ["C2", self.private_claim, self.reference if later_column == "Citation" else "Private notes", "web"])
+                second_table = path.read_text(encoding="utf-8")
+                path.write_text(first_table + "\n## Separate table\n\n" + second_table, encoding="utf-8")
+                with mock.patch.object(self.verifier, "verify_doi", return_value=True) as fetcher, \
+                        mock.patch.object(self.verifier.time, "sleep"):
+                    result = self.verifier.check_citation_bank_zh(self.base)
+                self.assertEqual(
+                    ([call.args[0] for call in fetcher.call_args_list],
+                     [(entry.candidate_id, entry.reference_text) for entry in result.checks]),
+                    ([PUBLIC_DOI], [("C1", self.reference)]),
+                    "A later table must neither authorize a lookup nor add checks under the first header",
+                )
 
     def test_missing_or_empty_reference_returns_not_ok_without_network(self) -> None:
         for empty_reference in (False, True):
