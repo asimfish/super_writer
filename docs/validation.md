@@ -26,6 +26,14 @@ links and allowlists are in
 platform/Python combinations and a separate Linux document job. Inspect the run
 for the commit in question; a badge is not a manuscript audit receipt.
 
+For the Ubuntu document environment, install the explicit dependencies below
+after updating the package index. The separate `lmodern` package supplies the
+LaTeX font support required by Pandoc; OpenType fonts alone are insufficient.
+
+```bash
+sudo apt-get install -y --no-install-recommends pandoc texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+```
+
 ## What the New Examples Test
 
 - **Empirical study:** recompute all 20 measurements, independently aggregate
