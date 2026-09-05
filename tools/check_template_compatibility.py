@@ -63,7 +63,8 @@ def check_pdf_text(template: str, pdf_text: str, pdf_info: str) -> None:
 def check_pdf_citation(pdf_text: str, mode: str) -> None:
     # This is an oracle for our one known fixture sentence, not arbitrary TeX.
     without_line_numbers = re.sub(r"(?m)^\s*\d{1,3}\s+", "", pdf_text)
-    compact = re.sub(r"\s+", "", without_line_numbers).casefold()
+    joined_lines = re.sub(r"(?<=[A-Za-z])-[ \t]*\r?\n[ \t]*(?=[A-Za-z])", "", without_line_numbers)
+    compact = re.sub(r"\s+", "", joined_lines).casefold()
     tail = compact.partition("standardbackground")[2][:60]
     valid = (tail.startswith("[1]") if mode == "numeric" else
              bool(re.match(r"\(?hastieetal\.[,(\[]*2009[)\]]", tail)) if mode == "author-date" else False)

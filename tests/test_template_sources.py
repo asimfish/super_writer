@@ -18,20 +18,25 @@ from check_template_compatibility import MAX_STYLE, check_pdf_citation, check_pd
 class TemplateSourceTests(unittest.TestCase):
     def test_rendered_numeric_mode_is_checked_not_inferred_from_source(self) -> None:
         check_pdf_citation("009 Nearest-neighbor regression is standard background [1].", "numeric")
+        check_pdf_citation("009 Nearest-neighbor regression is standard back-\n010 ground [1].", "numeric")
         with self.assertRaisesRegex(ValueError, "does not match"):
             check_pdf_citation("standard background Hastie et al. (2009).", "numeric")
 
     def test_rendered_author_date_handles_official_punctuation_and_line_numbers(self) -> None:
         for text in ("standard background\n023 (Hastie et al., 2009).", "standard background Hastie et al. (2009).",
-                     "standard background Hastie et al. [2009]."):
+                     "standard background Hastie et al. [2009].",
+                     "011   Nearest-neighbor regression is standard back-\n012   ground (Hastie et al., 2009).",
+                     "011   Nearest-neighbor regression is standard back-\r\n012   ground (Hastie et al., 2009)."):
             with self.subTest(text=text):
                 check_pdf_citation(text, "author-date")
         with self.assertRaisesRegex(ValueError, "does not match"):
             check_pdf_citation("standard background [1].", "author-date")
 
     def test_missing_fixture_sentence_cannot_pass_citation_check(self) -> None:
-        with self.assertRaisesRegex(ValueError, "does not match"):
-            check_pdf_citation("References: Hastie et al. (2009).", "author-date")
+        for text in ("References: Hastie et al. (2009).", "standard back-ground (Hastie et al., 2009).",
+                     "standard back-\n012 ground [1]."):
+            with self.subTest(text=text), self.assertRaisesRegex(ValueError, "does not match"):
+                check_pdf_citation(text, "author-date")
 
     def test_expected_rendered_content_accepts_small_caps_extraction(self) -> None:
         check_pdf_text("fixture", "S UPER W RITER T EMPLATE 0.1083 0.0851 Hastie", "Pages: 1")

@@ -161,6 +161,10 @@ out-of-page text, citation-mode drift, changed download bytes, unreviewed corpus
 records, missing notices and inappropriate heuristic blocking. Counts include
 some methods with multiple subcases; they are not 144 writing-quality trials.
 The old/new heuristic comparison reproduced a real v1.1.0 false rejection.
+The Linux template job also exposed a citation-oracle false rejection when
+TeX split `background` across lines as `back-` / `ground`. Its captured text is
+a regression case; only line-break hyphenation is normalized, and wrong citation
+modes still fail. This does not modify the official ACL style or the rendered PDF.
 
 No new model-based blind writing evaluation or Word-client visual certification
 was performed. AAAI remains guide-only. Source-only document commands explicitly
