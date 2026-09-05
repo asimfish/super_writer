@@ -109,7 +109,11 @@ def verify(spec: dict, output: Path | None) -> dict:
         layout_args = [sys.executable, str(ROOT / "scripts" / "pdf_layout_check.py"), "main.pdf", "--log", "main.log"]
         if spec["id"] == "eccv2026-rebuttal":
             layout_args += ["--max-pages", "1"]
-        layout = json.loads(command(layout_args, work))
+        try:
+            layout = json.loads(command(layout_args, work))
+        except RuntimeError as exc:
+            bbox = command(["pdftotext", "-bbox", "main.pdf", "-"], work)
+            raise ValueError(f"{exc}\n{spec['id']}: extracted fixture bounding boxes: {bbox[:8000]!r}") from exc
         command([sys.executable, str(ROOT / "scripts" / "latex_guard.py"), "main.tex",
                  "--bib", "references.bib", "--json"], work)
         (work / "body.tex").write_text(body, encoding="utf-8")
