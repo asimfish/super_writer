@@ -68,7 +68,8 @@ def check_pdf_citation(pdf_text: str, mode: str) -> None:
     valid = (tail.startswith("[1]") if mode == "numeric" else
              bool(re.match(r"\(?hastieetal\.[,(\[]*2009[)\]]", tail)) if mode == "author-date" else False)
     if not valid:
-        raise ValueError(f"Rendered fixture citation does not match {mode}: {tail!r}")
+        raise ValueError(f"Rendered fixture citation does not match {mode}: {tail!r}; "
+                         f"extracted fixture text: {pdf_text[:4000]!r}")
 
 
 def verify(spec: dict, output: Path | None) -> dict:
