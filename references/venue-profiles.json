@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-09-06",
+  "scope": "2026 archival profiles, not automatic submission clearance. Recheck official rules for the exact year, track and stage. Page boundaries require human inspection.",
+  "profiles": [
+    {
+      "id": "icml-2026-main-review", "venue": "ICML", "year": 2026, "track": "main", "stage": "review",
+      "template_ids": ["icml2026"], "citation_modes": ["author-date"], "body_pages": 8,
+      "excluded_from_body": ["references", "appendices", "impact statement"],
+      "appendix": "Same PDF, after references; essential evidence stays in the body.",
+      "required_checks": ["Anonymous paper and supplement; no acknowledgments or identifying links.", "Check main-track impact statement and current generative-AI policy."],
+      "official_sources": ["https://icml.cc/Conferences/2026/AuthorInstructions", "https://icml.cc/Conferences/2026/CallForPapers"],
+      "status": "pinned-fixture"
+    },
+    {
+      "id": "iclr-2026-main-review", "venue": "ICLR", "year": 2026, "track": "main", "stage": "review",
+      "template_ids": ["iclr2026"], "citation_modes": ["author-date"], "body_pages": 9,
+      "excluded_from_body": ["references", "appendices", "optional ethics statement (at most one page)", "optional reproducibility statement"],
+      "appendix": "After references; reviewers need not read it.",
+      "required_checks": ["Anonymous main paper and supplement.", "Do not use the 10-page discussion/camera-ready budget for initial review."],
+      "official_sources": ["https://iclr.cc/Conferences/2026/AuthorGuide"], "status": "pinned-fixture"
+    },
+    {
+      "id": "cvpr-2026-main-review", "venue": "CVPR", "year": 2026, "track": "main", "stage": "review",
+      "template_ids": ["cvpr2026"], "citation_modes": ["numeric"], "body_pages": 8,
+      "excluded_from_body": ["references"], "appendix": "Put additional material in the separate supplementary submission; check its current restrictions.",
+      "required_checks": ["Review mode, line numbers and paper ID.", "Anonymous source, figures, metadata and links.", "Do not borrow ECCV's LNCS format or page budget."],
+      "official_sources": ["https://cvpr.thecvf.com/Conferences/2026/AuthorGuidelines"], "status": "pinned-fixture"
+    },
+    {
+      "id": "neurips-2026-main-review", "venue": "NeurIPS", "year": 2026, "track": "main", "stage": "review",
+      "template_ids": ["neurips2026", "neurips2026-numeric"], "citation_modes": ["author-date", "numeric"], "body_pages": 9,
+      "excluded_from_body": ["references", "optional technical appendices", "mandatory paper checklist"],
+      "appendix": "Single PDF with references, optional technical appendices and mandatory checklist.",
+      "required_checks": ["Use the main review option; neither preprint nor final.", "Anonymous submission without acknowledgments.", "Complete the official checklist truthfully; no placeholder answers.", "Select the contribution type; disclose methodological LLM use as required. No official Word template."],
+      "official_sources": ["https://neurips.cc/Conferences/2026/MainTrackHandbook", "https://neurips.cc/Conferences/2026/CallForPapers"], "status": "pinned-fixture"
+    },
+    {
+      "id": "acl-2026-long-review", "venue": "ACL", "year": 2026, "track": "long", "stage": "review",
+      "template_ids": ["acl2026"], "citation_modes": ["author-date"], "body_pages": 8,
+      "excluded_from_body": ["limitations", "references", "appendices", "ethical considerations"],
+      "appendix": "After references, normally two-column; consult ARR exceptions.",
+      "required_checks": ["Required Limitations section after the body and before references.", "Anonymous ARR review mode and responsible NLP checklist.", "Apply ACL AI-assistance disclosure rules; proofreading-only exemptions do not cover all generative rewrites.", "Shared ACL style does not make ACL and EMNLP submission policies interchangeable."],
+      "official_sources": ["https://2026.aclweb.org/calls/main_conference_papers/", "https://aclrollingreview.org/cfp"], "status": "pinned-fixture"
+    },
+    {
+      "id": "acl-2026-short-review", "venue": "ACL", "year": 2026, "track": "short", "stage": "review",
+      "template_ids": ["acl2026"], "citation_modes": ["author-date"], "body_pages": 4,
+      "excluded_from_body": ["limitations", "references", "appendices", "ethical considerations"],
+      "appendix": "After references; a short paper must stand alone.",
+      "required_checks": ["Required Limitations section before references; no new results hidden there.", "Anonymous ARR review and responsible NLP checklist.", "Apply ACL AI-assistance disclosure rules; proofreading-only exemptions do not cover all generative rewrites.", "A short paper needs a focused contribution, not a compressed incomplete long paper."],
+      "official_sources": ["https://2026.aclweb.org/calls/main_conference_papers/", "https://aclrollingreview.org/cfp"], "status": "pinned-fixture"
+    },
+    {
+      "id": "emnlp-2026-long-review", "venue": "EMNLP", "year": 2026, "track": "long", "stage": "review",
+      "template_ids": ["acl2026"], "citation_modes": ["author-date"], "body_pages": 8,
+      "excluded_from_body": ["limitations", "references", "appendices", "ethical considerations"],
+      "appendix": "After references under ARR format rules.",
+      "required_checks": ["Required Limitations section before references and responsible NLP checklist.", "Anonymous review; verify EMNLP-specific commitment requirements.", "Authors remain accountable; the CFP rejects fully AI-generated or hallucinated papers."],
+      "official_sources": ["https://2026.emnlp.org/calls/main_conference_papers/", "https://aclrollingreview.org/cfp"], "status": "pinned-fixture"
+    },
+    {
+      "id": "emnlp-2026-short-review", "venue": "EMNLP", "year": 2026, "track": "short", "stage": "review",
+      "template_ids": ["acl2026"], "citation_modes": ["author-date"], "body_pages": 4,
+      "excluded_from_body": ["limitations", "references", "appendices", "ethical considerations"],
+      "appendix": "After references under ARR format rules; essential evidence stays in the body.",
+      "required_checks": ["Required Limitations section and responsible NLP checklist.", "Anonymous review; verify EMNLP-specific commitment and AI-use rules."],
+      "official_sources": ["https://2026.emnlp.org/calls/main_conference_papers/", "https://aclrollingreview.org/cfp"], "status": "pinned-fixture"
+    },
+    {
+      "id": "eccv-2026-main-review", "venue": "ECCV", "year": 2026, "track": "main", "stage": "review",
+      "template_ids": ["eccv2026"], "citation_modes": ["numeric"], "body_pages": 14,
+      "excluded_from_body": ["references"], "appendix": "No appendices in the main paper; use separate supplementary material.",
+      "required_checks": ["2026 LNCS-based review template, line numbers and paper ID.", "Do not replace LNCS fonts with CVPR or generic Times formatting.", "Anonymous paper, supplement, metadata and links."],
+      "official_sources": ["https://eccv.ecva.net/Conferences/2026/SubmissionPolicies"], "status": "pinned-fixture"
+    },
+    {
+      "id": "eccv-2026-main-rebuttal", "venue": "ECCV", "year": 2026, "track": "main", "stage": "rebuttal",
+      "template_ids": ["eccv2026-rebuttal"], "citation_modes": ["numeric"], "body_pages": 1,
+      "excluded_from_body": [], "appendix": "None; the one-page limit includes references.",
+      "required_checks": ["Use the separate two-column rebuttal template, not LNCS main-paper layout.", "Anonymous response with line numbers; no external links.", "No new contributions; avoid new experiments, especially those not requested by reviewers."],
+      "official_sources": ["https://eccv.ecva.net/Conferences/2026/SubmissionPolicies", "https://github.com/paolo-favaro/rebuttal-template"], "status": "pinned-fixture"
+    },
+    {
+      "id": "aaai-2026-main-review", "venue": "AAAI", "year": 2026, "track": "main", "stage": "review",
+      "template_ids": [], "citation_modes": [], "body_pages": 7,
+      "excluded_from_body": ["references", "reproducibility checklist"],
+      "appendix": "Verify the official supplementary-material instructions before assembly.",
+      "required_checks": ["Anonymous two-column US Letter submission.", "Official author-kit download returned HTTP 403 on 2026-09-06; styles and citations are not locally verified.", "Obtain the official kit; do not substitute an unofficial mirror or claim compilation coverage."],
+      "official_sources": ["https://aaai.org/conference/aaai/aaai-26/submission-instructions/", "https://aaai.org/authorkit26/"], "status": "guide-only-download-blocked"
+    }
+  ]
+}

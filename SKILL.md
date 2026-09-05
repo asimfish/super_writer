@@ -3,13 +3,13 @@ name: super-writer
 description: >-
   Plan, write, or structurally revise evidence-backed academic papers and reports,
   from existing drafts or research materials. Use when the task needs contribution and motivation
-  design, sentence-level citation support, manuscript audits, LaTeX/Word delivery,
+  design, academic style or terminology editing, sentence-level citation support, manuscript audits, LaTeX/Word delivery,
   Chinese translation, submission materials, or reviewer responses. Do not use for
   casual copyediting, marketing copy, running experiments, or figure-only requests.
 metadata:
   author: asimfish
-  version: "1.1.0"
-  source: "Adapted from PaperSpine V4; see UPSTREAM.md"
+  version: "1.2.0"
+  source: "PaperSpine derivative with selective upstream integrations; see UPSTREAM.md"
 ---
 
 # Super Writer
@@ -73,6 +73,9 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
 | Rewrite a draft | [rewrite](references/rewrite.md) | Original logic map, rewrite matrix, logic-transfer audit, manuscript |
 | Build from materials | [build](references/build.md) | Inventory, evidence bank, asset map, claim register, manuscript |
 | Style calibration | [humanize](references/humanize.md) | Tiered style matrix and `humanize_check.py` |
+| Natural academic expression | [academic expression](references/academic-expression.md) | Scoped edit or diagnosis; fidelity before style |
+| Terms and sentence patterns | [writing library](references/writing-library.md) | Bounded offline `writing_lookup.py` results; not claim evidence |
+| Venue and paper design | [paper blueprints](references/paper-blueprints.md), [typesetting](references/typesetting-validation.md) | Exact `venue_profile.py` selection and contribution-specific outline |
 | Results mapping | [results validation](references/results-validation.md) | Contribution-to-results mapping and guard |
 | LaTeX, PDF, Word | [latex](references/latex.md) | Source, compiled PDF when available, Word and format reports |
 | Chinese translation | [translate](references/translate.md) | Full translation, coverage, final Chinese Word |
@@ -136,6 +139,9 @@ For revisions, follow [logic transfer](references/logic-transfer-audit.md) and
 Use humanize only at the configured tier. Treat D1-D5 as local style heuristics;
 never promise detector evasion or invent an AI percentage. Complete the results
 mapping and its applicable guard before assembly.
+For natural academic editing, follow the academic-expression contract: preserve
+number-entity relationships, conditions, negation, uncertainty and technical terms
+before removing empty framing. Never conceal limitations to sound confident.
 
 ### 4. Audit and Assemble
 
@@ -150,6 +156,10 @@ its required template.
 Compile PDF when a TeX toolchain is available and record the result. Word is
 required unless config explicitly sets `word_output=none`; use Pandoc and the
 Word guard. Keep `paper.pdf` synchronized with compiled `main.pdf`.
+For conference work, resolve year, track and stage before choosing a template;
+follow [typesetting validation](references/typesetting-validation.md). Run
+`pdf_layout_check.py` on the compiled PDF and inspect every page visually.
+Its mechanical receipt is not submission clearance or evidence of authorship.
 
 | Configuration | Final Word File |
 |---|---|

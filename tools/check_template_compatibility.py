@@ -35,7 +35,7 @@ def style_files(data: bytes, spec: dict) -> dict[str, bytes]:
     result = {}
     with zipfile.ZipFile(io.BytesIO(data)) as archive:
         for name in spec["files"]:
-            if not re.fullmatch(r"[A-Za-z0-9_.-]+\.(?:sty|bst)", name):
+            if not re.fullmatch(r"[A-Za-z0-9_.-]+\.(?:sty|bst|cls)", name) or name.startswith("."):
                 raise ValueError("Only flat style filenames may be written")
             member = spec["archive_prefix"] + name
             matches = [entry for entry in archive.infolist() if entry.filename == member]
@@ -60,6 +60,17 @@ def check_pdf_text(template: str, pdf_text: str, pdf_info: str) -> None:
             raise ValueError(f"{template}: expected PDF content missing: {marker}")
 
 
+def check_pdf_citation(pdf_text: str, mode: str) -> None:
+    # This is an oracle for our one known fixture sentence, not arbitrary TeX.
+    without_line_numbers = re.sub(r"(?m)^\s*\d{1,3}\s+", "", pdf_text)
+    compact = re.sub(r"\s+", "", without_line_numbers).casefold()
+    tail = compact.partition("standardbackground")[2][:60]
+    valid = (tail.startswith("[1]") if mode == "numeric" else
+             bool(re.match(r"\(?hastieetal\.[,(\[]*2009[)\]]", tail)) if mode == "author-date" else False)
+    if not valid:
+        raise ValueError(f"Rendered fixture citation does not match {mode}: {tail!r}")
+
+
 def verify(spec: dict, output: Path | None) -> dict:
     with urllib.request.urlopen(spec["url"], timeout=45) as response:
         data = response.read(MAX_DOWNLOAD + 1)
@@ -74,19 +85,29 @@ def verify(spec: dict, output: Path | None) -> dict:
         body = (FIXTURES / "body.tex").read_text(encoding="utf-8")
         # Assemble this fixed fixture, not a general-purpose TeX include parser.
         (work / "main.tex").write_text(wrapper.replace(r"\input{body}", body), encoding="utf-8")
-        shutil.copyfile(ROOT / "examples" / "knn-regression" / "references.bib", work / "references.bib")
+        bibliography = (FIXTURES / "rebuttal-references.bib" if spec["id"] == "eccv2026-rebuttal"
+                        else ROOT / "examples" / "knn-regression" / "references.bib")
+        shutil.copyfile(bibliography, work / "references.bib")
         latex = ["pdflatex", "-no-shell-escape", "-interaction=nonstopmode", "-halt-on-error", "main.tex"]
         command(latex, work)
         command(["bibtex", "main"], work)
         command(latex, work)
         command(latex, work)
         log = (work / "main.log").read_text(encoding="utf-8", errors="replace")
-        if re.search(r"(?:Citation .* undefined|Reference .* undefined|There were undefined|Overfull \\[hv]box)", log):
-            raise ValueError(f"{spec['id']}: unresolved references or overfull boxes")
+        issues = re.findall(r"(?:Citation .* undefined|Reference .* undefined|There were undefined|Overfull \\[hv]box)[^\n]*(?:\n[^\n]*){0,3}", log)
+        if issues:
+            raise ValueError(f"{spec['id']}: unresolved references or overfull boxes\n" + "\n".join(issues[:5]))
         command(["pdftotext", "-layout", "main.pdf", "main.txt"], work)
         pdf_text = (work / "main.txt").read_text(encoding="utf-8")
         pdf_info = command(["pdfinfo", "main.pdf"], work)
         check_pdf_text(spec["id"], pdf_text, pdf_info)
+        check_pdf_citation(pdf_text, spec["citation_mode"])
+        if spec["id"] == "eccv2026-rebuttal" and re.search(r"https?\s*:", pdf_text):
+            raise ValueError("ECCV rebuttal fixture contains an external URL")
+        layout_args = [sys.executable, str(ROOT / "scripts" / "pdf_layout_check.py"), "main.pdf", "--log", "main.log"]
+        if spec["id"] == "eccv2026-rebuttal":
+            layout_args += ["--max-pages", "1"]
+        layout = json.loads(command(layout_args, work))
         command([sys.executable, str(ROOT / "scripts" / "latex_guard.py"), "main.tex",
                  "--bib", "references.bib", "--json"], work)
         (work / "body.tex").write_text(body, encoding="utf-8")
@@ -107,21 +128,23 @@ def verify(spec: dict, output: Path | None) -> dict:
             command(["pdftoppm", "-f", "1", "-singlefile", "-scale-to", "1400", "-png", "main.pdf", "preview"], work)
             for filename in ("main.tex", "main.pdf", "main.txt", "main.docx", "references.bib", "preview.png"):
                 shutil.copyfile(work / filename, output / filename)
+            (output / "layout-report.json").write_text(json.dumps(layout, indent=2) + "\n", encoding="utf-8")
     return {"template": spec["id"], "archive_sha256": spec["sha256"], "pages": pages,
             "official_styles_unchanged": unchanged, "citation_mode": spec["citation_mode"],
-            "latex_guard": "pass", "word_guard": "pass", "identity_sentinels_hidden": True}
+            "latex_guard": "pass", "word_guard": "pass", "identity_sentinels_hidden": True,
+            "rendered_citation_mode_verified": True, "pdf_layout": layout}
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, help="Optional explicit location for fixture artifacts and report")
-    parser.add_argument("--template", action="append", choices=("icml2026", "iclr2026", "cvpr2026"))
+    specs = json.loads((FIXTURES / "sources.json").read_text(encoding="utf-8"))["templates"]
+    parser.add_argument("--template", action="append", choices=[spec["id"] for spec in specs])
     args = parser.parse_args()
-    missing = [name for name in ("pandoc", "pdflatex", "bibtex", "pdftotext", "pdfinfo", "pdftoppm")
+    missing = [name for name in ("pandoc", "pdflatex", "bibtex", "pdftotext", "pdffonts", "pdfinfo", "pdftoppm")
                if not shutil.which(name)]
     if missing:
         parser.error("Required tools missing: " + ", ".join(missing))
-    specs = json.loads((FIXTURES / "sources.json").read_text(encoding="utf-8"))["templates"]
     results = []
     try:
         for spec in specs:

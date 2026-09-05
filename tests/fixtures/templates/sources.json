@@ -1,5 +1,5 @@
 {
-  "reviewed_on": "2026-09-05",
+  "reviewed_on": "2026-09-06",
   "scope": "Pinned official template compilation fixtures; not full submission compliance or writing-quality evaluations.",
   "distribution": "Upstream style files are downloaded only into a temporary directory and are not redistributed or relicensed.",
   "templates": [
@@ -29,6 +29,39 @@
       "archive_prefix": "author-kit-12909ae437f6dbc7435069cfdb4ca44c18e6a02f/",
       "files": ["cvpr.sty", "ieeenat_fullname.bst"],
       "citation_mode": "numeric"
+    },
+    {
+      "id": "neurips2026", "official_guide": "https://neurips.cc/Conferences/2026/MainTrackHandbook",
+      "url": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip",
+      "sha256": "82473931e3ef710fcd3f4a8cd4119b9de32e56825f90f9e5a6d55f2d01b817d9",
+      "archive_prefix": "", "files": ["neurips_2026.sty"], "citation_mode": "author-date"
+    },
+    {
+      "id": "neurips2026-numeric", "official_guide": "https://neurips.cc/Conferences/2026/MainTrackHandbook",
+      "url": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip",
+      "sha256": "82473931e3ef710fcd3f4a8cd4119b9de32e56825f90f9e5a6d55f2d01b817d9",
+      "archive_prefix": "", "files": ["neurips_2026.sty"], "citation_mode": "numeric"
+    },
+    {
+      "id": "acl2026", "official_guide": "https://aclrollingreview.org/cfp",
+      "url": "https://codeload.github.com/acl-org/acl-style-files/zip/d5adc823ff0f80f98c80405ca0ab66c68e684409",
+      "sha256": "35b158b724d04435a657ab214fe4da5f2b57808fc15ca0f24b751bc07b1d1c73",
+      "archive_prefix": "acl-style-files-d5adc823ff0f80f98c80405ca0ab66c68e684409/",
+      "files": ["acl.sty", "acl_natbib.bst"], "citation_mode": "author-date"
+    },
+    {
+      "id": "eccv2026", "official_guide": "https://eccv.ecva.net/Conferences/2026/SubmissionPolicies",
+      "url": "https://codeload.github.com/paolo-favaro/paper-template/zip/da8c09c40239d5665757527e77388f4716a6564a",
+      "sha256": "1c1c8a188decf1f1adfccadb0585ccc95cef17f7ef846f4a5291ba1c5407b4a1",
+      "archive_prefix": "paper-template-da8c09c40239d5665757527e77388f4716a6564a/",
+      "files": ["eccv.sty", "llncs.cls", "splncs04.bst"], "citation_mode": "numeric"
+    },
+    {
+      "id": "eccv2026-rebuttal", "official_guide": "https://eccv.ecva.net/Conferences/2026/SubmissionPolicies",
+      "url": "https://codeload.github.com/paolo-favaro/rebuttal-template/zip/f2e757126ae5cfe980104b2c61c8969ab11f12ed",
+      "sha256": "f59abde857747c2df151877a7c1184e2267a458d5fd9a57a8fec59a47688ade8",
+      "archive_prefix": "rebuttal-template-f2e757126ae5cfe980104b2c61c8969ab11f12ed/",
+      "files": ["cvpr.sty", "splncs04.bst"], "citation_mode": "numeric"
     }
   ]
 }

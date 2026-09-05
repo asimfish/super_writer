@@ -2,9 +2,9 @@
 
 - Owner: [asimfish/super_writer](https://github.com/asimfish/super_writer)
 - Skill ID: `super-writer`
-- Standalone version: `1.1.0`
+- Standalone version: `1.2.0`
 - Relationship: adapted PaperSpine V4 derivative; [provenance](UPSTREAM.md)
-- License: MIT with upstream notice retained
+- License: MIT software/methods with notices; CC0 original language cards; linked works excluded
 - Invocation: implicit or explicit; `$super-writer`
 
 ## Observed Capabilities
@@ -27,7 +27,10 @@ request before installing, sending, submitting, or publishing. Details follow.
 | Document fixes | Word/submission guards can rewrite DOCX fonts with `--fix-fonts`; Word guard retains its backup | Run against intended generated documents and preserve source files |
 | Distribution tools | Build an allowlisted ZIP and install to an explicit destination | Reject existing installation targets and source symlinks; no global auto-install |
 | Source-only example tools | Recompute synthetic data; run Pandoc, TeX and Poppler; write explicitly selected demo outputs | No model calls or private material; shell escape disabled; not an OS sandbox |
-| Source-only template check | Download pinned public ZIPs from `media.icml.cc` and `codeload.github.com`, verify digests, compile fixtures | No document upload or credentials; styles in temporary directories, not redistributed |
+| Source-only template check | Download pinned public ZIPs from `media.icml.cc`, `media.neurips.cc` and `codeload.github.com`, verify digests, compile fixtures | No document upload or credentials; styles in temporary directories, not redistributed |
+| Offline writing resources | Exact venue/year/track/stage profiles; bounded terminology and rhetorical-pattern lookup | No network or model calls; corpus is language support, not claim evidence |
+| PDF inspection | Poppler checks a bounded local PDF snapshot; optional log and explicit total-page limit; JSON hash receipt | No TeX execution or document edits; not a sandbox, anonymity audit or visual certification |
+| Source-only corpus maintenance | Explicit import command fetches SHA-256-pinned files from `raw.githubusercontent.com` | Public language data only; never executes upstream code or downloads linked papers |
 | External effects | No built-in manuscript submission, email, deployment, purchase, or publication | Preparing submission/reply text does not authorize sending it |
 
 The unused Semantic Scholar URL constant in the inherited citation-quality

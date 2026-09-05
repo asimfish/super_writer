@@ -5,6 +5,8 @@ This file is the canonical stage playbook for the paper-spine orchestrator.
 ## Purpose
 
 Assemble the LaTeX project, compile PDF when possible, and produce Word output.
+Follow [typesetting-validation.md](typesetting-validation.md) for conference
+profiles, dependency checks, current-file PDF receipts and visual inspection.
 Word (.docx) is a standard required artifact, not optional. Do not change
 manuscript logic during assembly.
 
@@ -62,7 +64,9 @@ checks the .docx.
 
 The guards are not general validators for every venue. Word recognition includes
 the checked `icml2026`, `iclr2026_conference`, `acl_natbib` and numeric
-`ieeenat_fullname` styles; other styles can require a scoped adaptation.
+`ieeenat_fullname` and `splncs04` styles. Explicit natbib numeric options are
+recognized for the plainnat family; ACL package-selected style is supported.
+Other styles can require a scoped adaptation.
 Do not change an official template solely to silence a check or claim a check
 passed when it did not. Section counts are advisory unless `max_sections` is
 explicitly configured as a positive integer.

@@ -7,6 +7,7 @@
 [![CI](https://github.com/asimfish/super_writer/actions/workflows/ci.yml/badge.svg)](https://github.com/asimfish/super_writer/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/asimfish/super_writer)](https://github.com/asimfish/super_writer/releases)
 [![MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![CC0 Data](https://img.shields.io/badge/Language_cards-CC0-lightgrey.svg)](DATA_LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](docs/validation.md)
 [![Stars](https://img.shields.io/github/stars/asimfish/super_writer?style=flat)](https://github.com/asimfish/super_writer/stargazers)
 
@@ -130,7 +131,7 @@ Word 默认开启，可显式设置 `word_output=none`。章节数量默认仅�
 | 跨平台回归 | Linux / macOS / Windows，安装、打包、隐私、文档与检查器 | 所有 agent 都有相同写作表现 |
 | 可复算样例 | 20 条实证记录重算、表格舍入、样本标准差、精确分数反例 | 新方法有效或定理已形式化验证 |
 | 文档构建 | 真实编译 PDF、检查未解析引用与溢出、导出并检查 Word | 所有视觉问题都可自动检出 |
-| 官方模板测试 | 固定版本 ICML 2026 / ICLR 2026 / CVPR 2026 的题名、引用、公式、表格和匿名标记用例 | 整篇论文已满足所有投稿规则 |
+| 官方模板测试 | 八个固定用例：ICML、ICLR、CVPR、NeurIPS 两种引用、ACL、ECCV 正文与 rebuttal | 整篇论文已满足所有投稿规则；AAAI 尚未编译验证 |
 | 写作质量 | 公开材料、逐段依据和可阅读样文 | 独立人类盲评、录用率提升或检测器绕过 |
 
 从源码根目录复现：
@@ -151,7 +152,7 @@ python3 tools/check_template_compatibility.py --output-dir build/template-check
 
 模板检查只下载固定公开样式，核对 SHA-256 后在临时目录编译，关闭 shell escape；
 不上传论文，不修改官方样式，也不把上游模板重新许可为 MIT。
-[完整验证范围](docs/validation.md) · [本版变更与验收](docs/releases/v1.1.0.md)
+[完整验证范围](docs/validation.md) · [本版变更与验收](docs/releases/v1.2.0.md)
 
 ## FAQ
 
@@ -161,7 +162,7 @@ python3 tools/check_template_compatibility.py --output-dir build/template-check
 
 **已经完整适配所有顶会了吗？**
 
-没有。当前有三套固定版本的模板编译用例；ACL 引用样式有回归覆盖，但不是完整模板认证。
+没有。当前有八个固定模板编译用例和明确标注覆盖范围的会议档案，不是完整模板认证。
 会议年份、赛道、页数、声明、匿名要求和 rebuttal 规则仍需按官方指南核实。
 
 **检查通过，就能直接投稿吗？**
@@ -175,13 +176,52 @@ Word 结构检查也不能替代打开文档检查公式、图片和分页。
 写作材料如何进入模型取决于你的 agent 与供应商；本项目不承诺宿主完全离线。
 详见 [能力与数据边界](skill-card.md)、[安全说明](SECURITY.md)。
 
+## v1.2：会议档案与写作资源
+
+**8 个会议、11 个年份/赛道/阶段档案、8 个模板编译用例、127 张离线术语与句式卡片。**
+会议数量、模板用例数量和完整投稿适配不是一回事：ACL/EMNLP 共用官方样式，
+NeurIPS 分别测试数字与作者年份引用，ECCV 正文与 rebuttal 使用不同模板。
+
+| 2026 档案 | 覆盖范围 |
+|---|---|
+| ICML / ICLR / CVPR | 主赛道匿名初审 |
+| NeurIPS | 主赛道匿名初审，两种合法引用模式 |
+| ACL / EMNLP | 长文、短文分别建档；保留必需的 Limitations |
+| ECCV | LNCS 正文与一页双栏 rebuttal 分开检查 |
+| AAAI | 指南档案；官方模板下载返回 403，明确未编译验证 |
+
+这些是 **2026 年固定快照**，不自动套用到下一年。按确切目标读取
+[会议档案](references/venue-profiles.json) 和官方来源，未知年份不会悄悄回退。
+
+```bash
+python3 scripts/venue_profile.py --list
+python3 scripts/venue_profile.py --id eccv-2026-main-rebuttal
+python3 scripts/writing_lookup.py "显著提升" --kind usage_note --limit 3
+python3 scripts/writing_lookup.py "distribution shift" --domain rl --kind definition --limit 3
+python3 scripts/pdf_layout_check.py paper.pdf --log main.log
+```
+
+- **论证蓝图：** 方法、理论、数据集/基准、系统效率、负结果/复现、综述/立场六类，不强套同一个章节结构。
+- **学术表达：** 区分只诊断、原位修改、局部改写和结构修订；先保真，再删冗余。保留不确定性、必要对比、术语和未完成实验的状态。
+- **术语卡片：** 保留定义、适用条件、误用提醒与来源标识。技术概念与写作目的分开检索，卡片不能充当实验或引用证据。
+- **排版收据：** PDF 字体嵌入、物理页边界、日志错误及文件哈希；逐页目视检查仍不可省略。
+
+[十组中英文改写边界样例](examples/academic-style/) ·
+[论证蓝图](references/paper-blueprints.md) ·
+[五个上游的吸收与排除记录](UPSTREAM.md#selective-integration-audit-2026-09-06)
+
+吸收的是经审计的方法和有许可的语料，不是捆绑五套代理。保留 PaperSpine 的贡献与证据设计，
+参考 PaperOrchestra 的验证思路，融合 shuorenhua 和 anti-defensive-writing 的表达方法，
+导入 Super Library 的 CC0 原创卡片。没有引入聊天缓存扫描、API 密钥搜集或自动安装。
+
 ## Roadmap
 
 - [x] 独立安装、可复现分发、跨平台检查。
 - [x] 可复算实证、理论短文、审稿回复样例和 PDF / Word 交付。
-- [x] 三套官方模板的固定版本编译测试，修复引用与编辑预算误报。
-- [ ] 统一的会议、年份、赛道与投稿阶段配置。
-- [ ] 更多论文类型的论证蓝图、官方模板和合规检查。
+- [x] 八个固定模板编译用例，以及引用、排版和编辑预算回归。
+- [x] 显式的会议、年份、赛道与阶段档案；六类论证蓝图。
+- [x] 选择性吸收五个上游，127 张离线卡片与学术表达边界样例。
+- [ ] 更多年份、camera-ready 阶段和 AAAI 官方模板编译验证。
 - [ ] 无答案泄漏的 agent 行为评测与独立人类盲评。
 
 ## 参与、引用与许可
@@ -192,7 +232,8 @@ Word 结构检查也不能替代打开文档检查公式、图片和分页。
 
 基于 [PaperSpine](https://github.com/WUBING2023/PaperSpine) V4，从
 [Super Skill Team](https://github.com/asimfish/super_skill_team) 独立维护，采用
-[MIT License](LICENSE)，保留上游版权。来源和固定提交见 [UPSTREAM.md](UPSTREAM.md)。
+[MIT License](LICENSE)，保留上游版权。原创术语卡片单独采用 [CC0](DATA_LICENSE)，
+链接论文不在授权范围内。[第三方声明](THIRD_PARTY_NOTICES.md) · [来源与固定提交](UPSTREAM.md)。
 
 展示组织参考 [SuperTranslate](https://github.com/asimfish/super_translate)、
 [ARIS](https://github.com/wanshuiyin/auto-claude-code-research-in-sleep) 和

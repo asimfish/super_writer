@@ -133,6 +133,8 @@ class DistributionTests(unittest.TestCase):
             "SKILL.md": "---\nname: super-writer\ndescription: Synthetic packaging fixture.\n---\n",
             "PATTERNS.md": "# Synthetic patterns\n",
             "LICENSE": "Synthetic test metadata, not a release license.\n",
+            "DATA_LICENSE": (REPOSITORY / "DATA_LICENSE").read_text(encoding="utf-8"),
+            "THIRD_PARTY_NOTICES.md": (REPOSITORY / "THIRD_PARTY_NOTICES.md").read_text(encoding="utf-8"),
             "VERSION": "1.0.0\n",
             "UPSTREAM.md": "# Synthetic provenance\n",
             "skill-card.md": "# Synthetic capability card\n",
@@ -328,6 +330,8 @@ class DistributionTests(unittest.TestCase):
         payload = self.archive_payload(output / f"super_writer-v{version}-skill.zip")
         self.assert_manifest(payload)
         for name in ("CONTRIBUTING.md", "README.md", "README.en.md", "docs/validation.md",
+                     "DATA_LICENSE", "THIRD_PARTY_NOTICES.md", "references/writing-library.json",
+                     "references/venue-profiles.json", "examples/academic-style/cases.json",
                      "docs/usage.md", "examples/synthetic-study/manuscript.tex",
                      "examples/synthetic-study/materials/results.csv"):
             self.assertEqual(payload[name], (REPOSITORY / name).read_bytes(), name)
@@ -354,6 +358,10 @@ class DistributionTests(unittest.TestCase):
         self.assert_manifest(installed)
         result = self.run_cli(destination / "scripts/material_inventory.py", "--help")
         self.assertIn("usage:", result.stdout.lower())
+        result = self.run_cli(destination / "scripts/writing_lookup.py", "显著提升", "--kind", "usage_note", "--limit", "1", "--format", "ids")
+        self.assertEqual(result.stdout.strip(), "general.usage-note.significant.001")
+        result = self.run_cli(destination / "scripts/venue_profile.py", "--id", "eccv-2026-main-rebuttal", "--format", "json")
+        self.assertEqual(json.loads(result.stdout)["profiles"][0]["body_pages"], 1)
         result = self.run_cli(destination / "scripts/smoke_test.py")
         self.assertIn("Cases: 11 passed, 0 failed", result.stdout)
         self.assertEqual(result.stdout.count("[PASS]"), 11)
@@ -466,6 +474,17 @@ class DistributionTests(unittest.TestCase):
     def test_readme_requires_its_contributing_companion(self) -> None:
         (self.repo / "CONTRIBUTING.md").unlink()
         self.assert_rejected_source()
+
+    def test_corpus_requires_data_license_and_third_party_notices(self) -> None:
+        for name in ("DATA_LICENSE", "THIRD_PARTY_NOTICES.md"):
+            with self.subTest(name=name):
+                path = self.repo / name
+                data = path.read_bytes()
+                path.unlink()
+                try:
+                    self.assert_rejected_source()
+                finally:
+                    path.write_bytes(data)
 
     def test_missing_required_source_fails_without_creating_output(self) -> None:
         for name in ("SKILL.md", "LICENSE", "VERSION", "UPSTREAM.md", "skill-card.md",

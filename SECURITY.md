@@ -15,11 +15,20 @@ promised response-time SLA.
 - Citation scripts can query Crossref with explicit bibliography metadata, never
   private support fields as fallback queries. Use `--no-api` where supported.
 - The source-only template check downloads pinned public archives from
-  `media.icml.cc` and `codeload.github.com`. No document upload or credentials.
+  `media.icml.cc`, `media.neurips.cc` and `codeload.github.com`. No document upload or credentials.
   Digest mismatches fail; only allowlisted styles enter temporary directories.
 - Document tools execute document/style code. Demonstration builders disable TeX
   shell escape and restrict TeX file access, but are not an OS sandbox. Use only
   reviewed fixtures and styles; isolate untrusted submissions.
+- Demonstration builders detect MiKTeX and pass `--disable-installer` for TeX
+  and BibTeX, overriding automatic package installation for those commands.
+  Missing dependencies need explicit resolution, not a global-setting change.
+- Offline venue/library lookup reads bundled JSON only. The explicit source-only
+  corpus importer accesses fixed files on `raw.githubusercontent.com`, checks
+  SHA-256 and never executes upstream code or fetches linked papers.
+- PDF inspection uses local Poppler against a size-bounded snapshot with process
+  timeouts. It does not execute TeX or upload content; parser vulnerabilities
+  still require a maintained toolchain and appropriate process isolation.
 - Build/install tools use an allowlist, reject source links and refuse to replace
   existing installations. Preserve local changes before upgrading.
 - Offline tests intercept network calls. Passing tests or scanners do not prove

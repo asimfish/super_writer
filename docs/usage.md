@@ -53,6 +53,47 @@ resolve the script under the installed skill and keep the user's project as cwd.
 ## 翻译、投稿与回复 / Requested Extensions
 
 ```text
+Use $super-writer only for the requested translation, submission materials or
+response. Do not send or submit anything, and do not invent completed experiments.
+```
+
+## 学术表达 / Academic Expression
+
+```text
+使用 $super-writer，只改下面的摘要，使其自然直接。先保留数字与对象的对应、
+不确定性、范围、术语和引用，再删冗余。不要为了自信而删掉局限性，也不要启动全文写作。
+```
+
+For diagnosis only, explicitly request findings without a rewritten passage.
+`references/academic-expression.md` defines edit scopes. Full style-stage
+matrices retain their legacy columns. D1-D5 thresholds are advisory by default;
+only explicit JSON `humanize_enforce_heuristics: true` enables legacy blocking.
+Required audit structure still applies; no high-severity issue need be invented.
+
+## 会议与词库 / Venue and Language Cards
+
+```bash
+python3 scripts/venue_profile.py --id acl-2026-short-review
+python3 scripts/writing_lookup.py "causal caution" --kind sentence_pattern --limit 3
+python3 scripts/writing_lookup.py --id general.usage-note.significant.001 --format json
+```
+
+These commands are offline. Unknown years/stages require official research, not
+a nearest-profile fallback. Cards support language selection; their example
+results are not this paper's evidence. Query a technical term and a rhetorical
+function separately, with a bounded result count and optional `--max-chars`.
+
+```bash
+python3 scripts/pdf_layout_check.py /path/to/main.pdf --log /path/to/main.log
+```
+
+The PDF checker requires Poppler. `--max-pages` constrains total PDF pages,
+not a body-only venue budget. A mechanical PASS does not certify visual layout,
+anonymity or complete submission eligibility.
+
+## 翻译与交付提示 / Delivery Prompts
+
+```text
 使用 $super-writer 为已有英文稿生成完整中文翻译和 paper.zh.docx。
 保留表格、图注、引用、公式和数值，给出翻译覆盖检查。
 ```

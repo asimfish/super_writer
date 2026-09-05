@@ -2,6 +2,12 @@
 
 Research conferences as deadline-bound peer-review venues.
 
+Start with the year/track/stage-specific [venue profiles](venue-profiles.json)
+using `scripts/venue_profile.py`. Profiles are archival, not automatic current
+policy. Use [paper blueprints](paper-blueprints.md) for the contribution type
+and [typesetting validation](typesetting-validation.md) for the actual PDF.
+Official rules override generic section, citation and style heuristics.
+
 ## Official Sources
 
 Find and record:

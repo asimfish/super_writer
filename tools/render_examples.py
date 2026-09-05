@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from functools import lru_cache
 import json
 import os
 from pathlib import Path
@@ -17,7 +18,16 @@ ROOT = Path(__file__).resolve().parents[1]
 SAMPLES = {"knn-regression": "manuscript", "theory-note": "manuscript", "review-response": "response"}
 
 
+@lru_cache(maxsize=4)
+def installer_flags(binary: str) -> tuple[str, ...]:
+    result = subprocess.run([binary, "--version"], capture_output=True, text=True,
+                            encoding="utf-8", errors="replace", timeout=15, check=True)
+    return ("--disable-installer",) if "miktex" in (result.stdout + result.stderr).casefold() else ()
+
+
 def command(args: list[str], cwd: Path) -> str:
+    if args[0] in {"pdflatex", "bibtex"}:
+        args = [args[0], *installer_flags(args[0]), *args[1:]]
     result = subprocess.run(args, cwd=cwd, capture_output=True, text=True, encoding="utf-8",
                             errors="replace", timeout=120,
                             env={**os.environ, "openin_any": "p", "openout_any": "p"})

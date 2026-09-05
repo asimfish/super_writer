@@ -14,6 +14,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from xml.etree import ElementTree
 
+from _paper_spine_utils import strip_tex_comments
+
 PLACEHOLDER_PATTERNS = (
     r"\bTODO\b",
     r"\bTBD\b",
@@ -64,7 +66,7 @@ MARKDOWN_ITALIC_PATTERN = re.compile(r"(?<![a-zA-Z0-9_])\*[a-zA-Z][^*\n]*[a-zA-Z
 # uses one of these but the docx rendered author-date (citeproc's default), the
 # Word citations silently diverge from the compiled PDF.
 NUMERIC_BIB_STYLES = frozenset({
-    "plain", "unsrt", "abbrv", "ieeetr", "ieee", "ieeetran", "ieeenat_fullname", "acm", "siam", "vancouver",
+    "plain", "unsrt", "abbrv", "ieeetr", "ieee", "ieeetran", "ieeenat_fullname", "acm", "siam", "vancouver", "splncs04",
 })
 # Styles that legitimately render (Author, Year). When the source declares one of
 # these, author-year citations in the Word output are correct and must not be flagged.
@@ -79,10 +81,34 @@ AUTHOR_DATE_CITE_PATTERN = re.compile(r"\([A-Z][A-Za-z'’.-]+(?:\s+et al\.?)?,?
 
 
 def bibliography_style(source_tex: str) -> str:
+    source_tex = strip_tex_comments(source_tex)
     match = BIBSTYLE_PATTERN.search(source_tex)
     if not match:
+        if re.search(r"\\usepackage(?:\[[^\]]*\])?\{acl\}", source_tex):
+            return "acl_natbib"  # The official ACL package selects its own BST.
         return ""
     return re.split(r"[/\\]", match.group(1).strip().lower())[-1]
+
+
+def numeric_citation_source(source_tex: str) -> bool:
+    source_tex = strip_tex_comments(source_tex)
+    style = bibliography_style(source_tex)
+    if style in NUMERIC_BIB_STYLES:
+        return True
+    # Natbib's plainnat family supports both modes; BST names alone are insufficient.
+    if style in {"plainnat", "abbrvnat", "unsrtnat"}:
+        declarations = re.finditer(
+            r"\\(?:usepackage|RequirePackage)\[([^\]]*)\]\{natbib\}"
+            r"|\\PassOptionsToPackage\{([^}]*)\}\{natbib\}"
+            r"|\\setcitestyle\{([^}]*)\}", source_tex)
+        numeric = False
+        for declaration in declarations:
+            options = next(value for value in declaration.groups() if value is not None)
+            for option in options.split(","):
+                if option.strip() in {"numbers", "authoryear"}:
+                    numeric = option.strip() == "numbers"
+        return numeric
+    return False
 
 
 def citation_style_finding(docx_text: str, source_tex: str) -> str | None:
@@ -95,12 +121,11 @@ def citation_style_finding(docx_text: str, source_tex: str) -> str | None:
     """
     if not source_tex:
         return None
-    match = BIBSTYLE_PATTERN.search(source_tex)
-    if not match or bibliography_style(source_tex) not in NUMERIC_BIB_STYLES:
+    if not numeric_citation_source(source_tex):
         return None
     if AUTHOR_DATE_CITE_PATTERN.search(docx_text) and not NUMERIC_CITE_PATTERN.search(docx_text):
         return (
-            f"Citation style mismatch: source uses numeric \\bibliographystyle{{{match.group(1).strip()}}} "
+            f"Citation style mismatch: source uses numeric citations ({bibliography_style(source_tex)}) "
             "but the Word citations render author-date. Pass a numeric CSL "
             "(e.g. --csl=ieee.csl) so Word matches the PDF's [1] style."
         )

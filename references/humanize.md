@@ -4,8 +4,9 @@ This file is the canonical stage playbook for the paper-spine orchestrator.
 
 ## Purpose
 
-Reduce measurable AIGC detector risk signals while preserving factual accuracy
-and the author's meaning. Applies tier-specific writing constraints.
+Improve natural academic expression while preserving evidence and meaning.
+Start with [academic-expression.md](academic-expression.md). D1-D5 describe
+local surface heuristics, not measured detector risk or authorship evidence.
 
 ## Important Disclaimers
 
@@ -13,9 +14,9 @@ and the author's meaning. Applies tier-specific writing constraints.
 - Do **not** output a fabricated "AI rate" or percentage.
 - Platform references are risk mappings, not descriptions of internal algorithms.
 
-## Platform Selection
+## Optional Legacy Platform Notes
 
-Read the appropriate platform reference based on the target detector:
+Only when a user explicitly asks about a named platform, consult the legacy notes:
 - CNKI → `references/platform-cnki.md`
 - Weipu → `references/platform-weipu.md`
 - Unknown / general → `references/platform-general.md`
@@ -23,9 +24,9 @@ Read the appropriate platform reference based on the target detector:
 These map platform-level risk dimensions to the machine-checkable metrics
 that `humanize_check.py` measures (D1–D5).
 
-## Tier-Based Required Dimensions
+## Tier-Based Audit Coverage
 
-| Tier | Required | Advisory |
+| Tier | Required audit coverage | Other dimensions |
 |------|----------|----------|
 | `light` | D1, D4 | D2, D3, D5 |
 | `medium` | D1, D2, D3, D4 | D5 |
@@ -43,17 +44,21 @@ that `humanize_check.py` measures (D1–D5).
 python scripts/humanize_check.py paper_rewriting_output --markdown --write
 ```
 
-Produces `humanize_report.md` with D1–D5 measured results. The report splits
-findings into Required Findings (blocking) and Advisory Findings (non-blocking).
+Produces `humanize_report.md` with local D1-D5 measurements. Matrix structure and
+configured audit coverage remain required. Style measurements are advisory by
+default; only explicit JSON `humanize_enforce_heuristics: true` opts into legacy
+threshold blocking. Never change facts or terms to satisfy a frequency target.
+It is valid to record no high-severity findings or to leave a passage unchanged.
 
 ## Three-Round Revision Loop
 
-At most 3 rounds. In each round, fix required dimensions' FAIL/WARNING findings.
-Advisory findings: review but do not over-rewrite.
+At most 3 scoped rounds. Fix actual fidelity/clarity defects and audit structure.
+Inspect heuristic findings in context; do not force them to PASS by introducing
+synonyms, unsupported detail, artificial sentence variation or hidden limitations.
 
 ## Target-Journal Style Conformity (optional deeper method)
 
-AIGC reduction (D1–D5) is about detector-risk signals; matching the *target
+Local style diagnostics (D1-D5) and matching the *target
 journal's* voice is a separate axis. When the deep-read journal corpus and
 `journal-style-analysis.md` (JS templates) are available, apply the CASPArS
 context-sensitive calibration in `references/round2-journal-revision.md`

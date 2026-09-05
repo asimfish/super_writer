@@ -6,9 +6,11 @@ authors:
   - name: "Super Writer contributors"
 repository-code: "https://github.com/asimfish/super_writer"
 url: "https://github.com/asimfish/super_writer"
-version: 1.1.0
+version: 1.2.0
 date-released: 2026-09-06
-license: MIT
+license:
+  - MIT
+  - CC0-1.0
 keywords:
   - academic-writing
   - agent-skill

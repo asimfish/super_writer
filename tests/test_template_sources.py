@@ -12,10 +12,27 @@ import warnings
 import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
-from check_template_compatibility import MAX_STYLE, check_pdf_text, style_files
+from check_template_compatibility import MAX_STYLE, check_pdf_citation, check_pdf_text, style_files
 
 
 class TemplateSourceTests(unittest.TestCase):
+    def test_rendered_numeric_mode_is_checked_not_inferred_from_source(self) -> None:
+        check_pdf_citation("009 Nearest-neighbor regression is standard background [1].", "numeric")
+        with self.assertRaisesRegex(ValueError, "does not match"):
+            check_pdf_citation("standard background Hastie et al. (2009).", "numeric")
+
+    def test_rendered_author_date_handles_official_punctuation_and_line_numbers(self) -> None:
+        for text in ("standard background\n023 (Hastie et al., 2009).", "standard background Hastie et al. (2009).",
+                     "standard background Hastie et al. [2009]."):
+            with self.subTest(text=text):
+                check_pdf_citation(text, "author-date")
+        with self.assertRaisesRegex(ValueError, "does not match"):
+            check_pdf_citation("standard background [1].", "author-date")
+
+    def test_missing_fixture_sentence_cannot_pass_citation_check(self) -> None:
+        with self.assertRaisesRegex(ValueError, "does not match"):
+            check_pdf_citation("References: Hastie et al. (2009).", "author-date")
+
     def test_expected_rendered_content_accepts_small_caps_extraction(self) -> None:
         check_pdf_text("fixture", "S UPER W RITER T EMPLATE 0.1083 0.0851 Hastie", "Pages: 1")
 
@@ -51,6 +68,15 @@ class TemplateSourceTests(unittest.TestCase):
         spec["sha256"] = "0" * 64
         with self.assertRaisesRegex(ValueError, "SHA-256 mismatch"):
             style_files(data, spec)
+
+    def test_lncs_class_is_allowlisted_without_allowing_executable_extensions(self) -> None:
+        data, spec = self.archive([("upstream/llncs.cls", b"class")])
+        spec["files"] = ["llncs.cls"]
+        self.assertEqual(style_files(data, spec), {"llncs.cls": b"class"})
+        for name in ("setup.py", ".hidden.sty", "../llncs.cls", "subdir/llncs.cls"):
+            spec["files"] = [name]
+            with self.subTest(name=name), self.assertRaisesRegex(ValueError, "flat style"):
+                style_files(data, spec)
 
     def test_missing_member_is_not_silently_accepted(self) -> None:
         data, spec = self.archive([])

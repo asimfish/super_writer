@@ -129,7 +129,7 @@ DIMENSION_ALIASES = {
 }
 
 # --- tier-based required dimensions ---
-# All tiers still report D1-D5 findings. PASS/FAIL verdict depends on this map.
+# Audit coverage uses this map; measurement failures block only by explicit opt-in.
 TIER_REQUIRED_DIMENSIONS = {
     "none": set(),
     "light": {"D1", "D4"},
@@ -282,6 +282,7 @@ class HumanizeCheckResult:
     path: str
     ok: bool
     humanize_tier: str = "medium"
+    enforce_heuristics: bool = False
     matrix_rows: int = 0
     manuscript_paragraphs: int = 0
     coverage_ratio: float = 0.0
@@ -813,13 +814,8 @@ def dedupe(items: list[str]) -> list[str]:
     return unique
 
 
-def check_matrix(matrix_path: Path, manuscript_text: str, lang: str, humanize_tier: str = "medium", thresholds: HumanizeThresholds | None = None, threshold_warnings: list[str] | None = None) -> HumanizeCheckResult:
-    """Evaluate humanize output with tier-aware hard gates.
-
-    Light tier hard-gates only structural validity plus D1/D4 FAIL findings.
-    D1/D4 WARNING findings and all D2/D3/D5 findings remain visible as
-    advisory so the report is useful without blocking a light pass.
-    """
+def check_matrix(matrix_path: Path, manuscript_text: str, lang: str, humanize_tier: str = "medium", thresholds: HumanizeThresholds | None = None, threshold_warnings: list[str] | None = None, enforce_heuristics: bool = False) -> HumanizeCheckResult:
+    """Check the audit structure; style heuristics are advisory unless opted in."""
     if thresholds is None:
         thresholds = DEFAULT_THRESHOLDS
     if threshold_warnings is None:
@@ -827,6 +823,7 @@ def check_matrix(matrix_path: Path, manuscript_text: str, lang: str, humanize_ti
 
     result = HumanizeCheckResult(str(matrix_path), False)
     result.humanize_tier = humanize_tier
+    result.enforce_heuristics = enforce_heuristics is True
     result.thresholds = {
         k: getattr(thresholds, k) for k in _THRESHOLD_KEY_MAP.values()
         if hasattr(thresholds, k)
@@ -835,6 +832,7 @@ def check_matrix(matrix_path: Path, manuscript_text: str, lang: str, humanize_ti
 
     structural_required: list[str] = []
     structural_advisory: list[str] = []
+    heuristic_findings: list[str] = []
     required_set = TIER_REQUIRED_DIMENSIONS.get(humanize_tier, TIER_REQUIRED_DIMENSIONS["medium"])
 
     if not matrix_path.exists():
@@ -890,11 +888,7 @@ def check_matrix(matrix_path: Path, manuscript_text: str, lang: str, humanize_ti
                 dim_hits.add(code)
 
     if result.matrix_rows > 2 and severity_counts["high"] == 0:
-        high_finding = "No high-severity patterns found - matrix may be under-reporting"
-        if humanize_tier in {"medium", "heavy"}:
-            structural_required.append(high_finding)
-        else:
-            structural_advisory.append(high_finding)
+        structural_advisory.append("No high-severity patterns recorded. This is valid when supported by the audit; do not invent findings.")
 
     required_missing = sorted(DIMENSION_CODE_TO_NAME[code] for code in required_set if code not in dim_hits)
     advisory_missing = sorted(
@@ -911,9 +905,9 @@ def check_matrix(matrix_path: Path, manuscript_text: str, lang: str, humanize_ti
     if len(lengths) > 2:
         result.sentence_length_stddev = round(statistics.stdev(lengths), 2)
         if result.sentence_length_stddev < thresholds.min_sentence_length_stddev:
-            structural_required.append(
+            heuristic_findings.append(
                 f"Sentence length stddev = {result.sentence_length_stddev} - too uniform. "
-                f"AI text typically < {thresholds.min_sentence_length_stddev}; human text > 10."
+                "Inspect rhythm in context; this is not an authorship or quality determination."
             )
 
     char_count = len(manuscript_text)
@@ -921,15 +915,15 @@ def check_matrix(matrix_path: Path, manuscript_text: str, lang: str, humanize_ti
     if char_count > 0:
         result.connector_density = round(conn_count / (char_count / 1000), 2)
         if result.connector_density > thresholds.max_connector_density:
-            structural_required.append(
+            heuristic_findings.append(
                 f"Connector density = {result.connector_density}/1k chars "
-                f"(threshold: {thresholds.max_connector_density}). High connector density is a strong AI signal."
+                f"(threshold: {thresholds.max_connector_density}). Inspect whether the connections carry necessary logic."
             )
 
     if re.search(r"(?m)^\s*(?:[-—–―]\s*){3,}$", manuscript_text):
-        structural_required.append(
+        heuristic_findings.append(
             "Long dash separators detected (e.g. '---' or '———'). "
-            "These are a strong AI-generation signal - replace with section headings or blank lines."
+            "Inspect their document function; Markdown separators are not evidence of AI authorship."
         )
 
     result.dimension_results = evaluate_dimensions(manuscript_text, lang, thresholds)
@@ -938,11 +932,15 @@ def check_matrix(matrix_path: Path, manuscript_text: str, lang: str, humanize_ti
     for dimension in result.dimension_results.values():
         if dimension.status == "PASS":
             continue
-        if dimension.code in required_set and dimension.status == "FAIL":
+        if result.enforce_heuristics and dimension.code in required_set and dimension.status == "FAIL":
             required_dim.extend(dimension.findings)
         else:
             advisory_dim.extend(dimension.findings)
 
+    if result.enforce_heuristics:
+        required_dim.extend(heuristic_findings)
+    else:
+        advisory_dim.extend(heuristic_findings)
     result.required_findings = dedupe(structural_required + required_dim)
     result.advisory_findings = dedupe(structural_advisory + advisory_dim)
     result.findings = dedupe(structural_required + required_dim + structural_advisory + advisory_dim)
@@ -967,7 +965,8 @@ def to_markdown(result: HumanizeCheckResult) -> str:
         "",
     ]
 
-    required_set = TIER_REQUIRED_DIMENSIONS.get(result.humanize_tier, TIER_REQUIRED_DIMENSIONS["medium"])
+    required_set = (TIER_REQUIRED_DIMENSIONS.get(result.humanize_tier, TIER_REQUIRED_DIMENSIONS["medium"])
+                    if result.enforce_heuristics else set())
 
     if result.dimension_results:
         for dimension in result.dimension_results.values():
@@ -1035,16 +1034,21 @@ def main() -> int:
 
     lang = "zh"
     humanize_tier = "medium"
+    enforce_heuristics = False
     config_path = out_dir / "paper_spine_config.json"
     if config_path.exists():
         try:
             config = json.loads(config_path.read_text(encoding="utf-8"))
+            if not isinstance(config, dict):
+                raise ValueError("Configuration must be a JSON object")
             lang = config.get("output_language", "zh")
             humanize_tier = config.get("humanize_tier", "medium")
+            enforce_heuristics = config.get("humanize_enforce_heuristics") is True
             if humanize_tier not in ("none", "light", "medium", "heavy"):
                 humanize_tier = "medium"
-        except json.JSONDecodeError:
-            pass
+        except (ValueError, OSError) as exc:
+            print(f"Invalid humanize configuration: {exc}", file=sys.stderr)
+            return 2
 
     manuscript_text = ""
     final_paper = out_dir / "final_paper"
@@ -1053,11 +1057,12 @@ def main() -> int:
             manuscript_text += f.read_text(encoding="utf-8", errors="ignore") + "\n"
 
     thresholds, threshold_warnings = load_thresholds(out_dir)
-    result = check_matrix(matrix_path, manuscript_text, lang, humanize_tier, thresholds, threshold_warnings)
+    result = check_matrix(matrix_path, manuscript_text, lang, humanize_tier, thresholds, threshold_warnings, enforce_heuristics)
 
     if args.json:
         print(json.dumps({
             "ok": result.ok, "humanize_tier": result.humanize_tier,
+            "enforce_heuristics": result.enforce_heuristics,
             "matrix_rows": result.matrix_rows,
             "paragraphs": result.manuscript_paragraphs,
             "coverage": result.coverage_ratio,

@@ -16,11 +16,14 @@ standard library and temporary fixtures; it needs no model or paid API.
 | `python3 -m unittest discover -s tests -v` | Distribution, installation, portability, privacy, document preservation, policy wiring and example regressions | Agent-level writing quality |
 | `python3 examples/knn-regression/experiment.py` | Recomputed deterministic experimental summary | Real-world generalization or significance |
 | `python3 tools/render_examples.py --output-dir build/rendered-examples` | PDF/Word export; text, reference, font and overfull-box checks | Every document client's rendering |
-| `python3 tools/check_template_compatibility.py --output-dir build/template-check` | Three pinned official styles compile with original fixtures | Complete submission compliance |
+| `python3 tools/check_template_compatibility.py --output-dir build/template-check` | Eight pinned official-template fixtures, including two citation modes and a distinct rebuttal | Complete submission compliance |
+| `python3 tools/import_writing_library.py --check` | Reproduce 127 selected cards and data-license bytes from pinned public inputs | Citation entailment or completeness of terminology |
+| `python3 scripts/pdf_layout_check.py paper.pdf --log main.log` | Snapshot hash, physical-page bounds, font embedding and optional log check | Visual quality, anonymity or source-to-PDF build provenance |
 | `python3 tools/build_release.py` | Allowlisted ZIP, manifest and archive checksum | That an arbitrary download matches without checking its hash |
 
-The document commands require Pandoc, pdfLaTeX, BibTeX and Poppler. Only the
-explicit template command downloads style archives. Its SHA-256 pins, official
+The document commands require Pandoc, pdfLaTeX, BibTeX and Poppler. The explicit
+template command downloads style archives; the separate importer downloads
+pinned public corpus inputs. Template SHA-256 pins, official
 links and allowlists are in
 [`sources.json`](../tests/fixtures/templates/sources.json). CI runs four portable
 platform/Python combinations and a separate Linux document job. Inspect the run
@@ -66,12 +69,23 @@ is distributed. PDF previews are generated from the actual documents.
 | ICML 2026 | Author-date | Compilation, citations, table/equation references, hidden identity sentinels |
 | ICLR 2026 | Author-date | Same bounded checks |
 | CVPR 2026 | Numeric | Same bounded checks |
+| NeurIPS 2026 main review | Author-date and numeric, separately compiled | Same checks; explicit natbib mode retained |
+| ACL style, used by ACL/EMNLP 2026 | Author-date | Package-selected bibliography; separate long/short profiles |
+| ECCV 2026 main review | Numeric, LNCS | Unchanged class/style; no CVPR font substitution |
+| ECCV 2026 rebuttal | Numeric, two-column | Distinct template; one total page and no external URL in fixture text |
+| AAAI 2026 | Not locally verified | Guide-only profile; official kit returned HTTP 403 |
 
 The source tool verifies archive hashes, reads only named style files in a
 temporary directory, disables shell escape, and verifies that style bytes remain
 unchanged. Regression fixtures reject changed hashes, duplicate/missing members,
 symlinks, oversized members and non-flat output filenames. This is not an OS
 sandbox; TeX and its packages remain executable dependencies.
+MiKTeX builds explicitly disable automatic package installation. Template tests
+also invoke the PDF receipt tool; no word bounding box may escape the physical
+page and fonts must be embedded. These are not content-margin or readability
+proofs. Type 3 and image-only pages require inspection rather than a universal
+policy verdict. The file-hash receipt identifies inspected bytes; it does not
+retroactively certify other versions.
 
 The Word companions test numeric/author-date recognition and content/font guards.
 They are **not official Word submission templates**. Fixtures do not test every
@@ -87,6 +101,12 @@ excluded from that count. Citation collection size and recency are suggestions
 unless `citation_enforce_heuristics=true`; empty banks and malformed rows still
 fail, including records beyond the suggested collection target. This changes
 heuristic severity, not evidence requirements.
+
+Natural-expression heuristics are likewise advisory unless
+`humanize_enforce_heuristics` is exactly JSON `true`. Matrix structure and required
+dimension coverage remain checked. A truthful audit need not invent a
+high-severity defect. Ten authored expression cases check declared protected
+spans; no automated test here proves arbitrary semantic preservation.
 
 Citation privacy tests intercept network calls: manuscript-support fields cannot
 become fallback search queries. Global preference setup cannot rewrite project
@@ -117,8 +137,34 @@ interpreted under its column labels.
   execute them against an agent. A writing-quality benchmark needs held-out raw
   inputs, blinded scoring, negative cases and reported failures.
 
-Broad venue/year/track/stage profiles and independent writing evaluations remain
-future work. The project does not call these complete because a test suite passes.
+The 11 profiles cover eight named venues at specific 2026 stages. Additional
+years, camera-ready stages, verified AAAI compilation and independent writing
+evaluations remain future work. A test suite does not complete those tasks.
+
+## Local 1.2.0 Release Check
+
+Recorded on 2026-09-06. The previous release record below is historical.
+
+| Check | Observed result |
+|---|---|
+| Full suite, Python 3.10.19 and 3.14.3 on macOS | 144 cases per interpreter: 143 passed, 1 skipped because PowerShell was unavailable |
+| Inherited CLI smoke | 11 passed |
+| New resources | Exact venue selection, no year fallback, bounded offline lookup, Chinese aliases, whole-card JSON budgets, provenance and license preservation |
+| Corpus regeneration | 127 cards and 37 discovery-source records reproduce exactly from pinned inputs |
+| Official templates | Eight cases compile, PDF citation modes and document guards pass, official styles unchanged; all nine rendered pages visually inspected |
+| Existing worked examples | Three PDFs and Word companions rebuilt successfully; sources remain unchanged |
+| Metadata | Skill validator, CFF 1.2.0 schema/version and YAML checks pass; 161 relative file/image links checked |
+| Distribution | Real runtime and installed offline lookup/profile commands tested from paths containing spaces; missing corpus licenses block packaging |
+
+The 48 added tests include negative cases for malformed PDF-tool output,
+out-of-page text, citation-mode drift, changed download bytes, unreviewed corpus
+records, missing notices and inappropriate heuristic blocking. Counts include
+some methods with multiple subcases; they are not 144 writing-quality trials.
+The old/new heuristic comparison reproduced a real v1.1.0 false rejection.
+
+No new model-based blind writing evaluation or Word-client visual certification
+was performed. AAAI remains guide-only. Source-only document commands explicitly
+disable MiKTeX auto-installation; see the release notes for the early discovery.
 
 ## Local 1.1.0 Release Check
 

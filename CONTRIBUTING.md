@@ -40,6 +40,17 @@ not vendor templates without permission or change official styles to satisfy a
 guard. Inspect every published PDF page and preview; keep README claims aligned.
 Use [SECURITY.md](SECURITY.md) for sensitive issues.
 
+Venue additions must identify year, track and stage in `references/venue-profiles.json`.
+Distinguish guide-only entries from compiled fixtures; never count a shared style
+as independent coverage. Check actual citation modes, reference exclusions and
+mandatory sections against primary sources, not last year's assumptions.
+
+Language-card updates use `python3 tools/import_writing_library.py --check` to
+verify reproducibility, or `--write` after reviewing pinned upstream changes.
+Review the corpus-specific license, source links and qualifications. Never
+import papers, unreviewed entries, agent-cache scanners or copied paper prompts.
+Ship `DATA_LICENSE` and `THIRD_PARTY_NOTICES.md` with the generated corpus.
+
 Preserve legacy artifact names unless a migration is included. Update
 `SKILL.md`, `agents/openai.yaml`, `skill-card.md`, and activation cases together
 when changing how the skill routes or acts. Record imported work in `UPSTREAM.md`

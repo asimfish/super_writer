@@ -27,7 +27,7 @@ REQUIRED_FILES = (
     "SKILL.md", "PATTERNS.md", "LICENSE", "VERSION", "UPSTREAM.md", "skill-card.md",
 )
 REQUIRED_DIRS = ("agents", "scripts", "references", "evals")
-OPTIONAL_FILES = ("README.md", "README.en.md", "CONTRIBUTING.md", "SECURITY.md", "CITATION.cff")
+OPTIONAL_FILES = ("README.md", "README.en.md", "CONTRIBUTING.md", "SECURITY.md", "CITATION.cff", "DATA_LICENSE", "THIRD_PARTY_NOTICES.md")
 OPTIONAL_DIRS = ("docs", "examples")
 EXCLUDED_NAMES = frozenset({
     "__pycache__", "venv", "env", "virtualenv", "site-packages", "node_modules",
@@ -162,6 +162,12 @@ def collect_payload(root: Path) -> tuple[str, dict[str, bytes]]:
     if (any(name in payload for name in ("README.md", "README.en.md"))
             and "CONTRIBUTING.md" not in payload):
         raise DistributionError("CONTRIBUTING.md is required when distributing a README")
+    if "references/writing-library.json" in payload:
+        for name in ("DATA_LICENSE", "THIRD_PARTY_NOTICES.md"):
+            if name not in payload:
+                raise DistributionError(f"Corpus distribution requires {name}")
+    if "references/academic-expression.md" in payload and "THIRD_PARTY_NOTICES.md" not in payload:
+        raise DistributionError("Adapted writing methods require THIRD_PARTY_NOTICES.md")
     version = payload["VERSION"].decode("utf-8").strip()
     if not re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", version):
         raise DistributionError("VERSION must contain a plain MAJOR.MINOR.PATCH version")

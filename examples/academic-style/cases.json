@@ -1,0 +1,75 @@
+{
+  "scope": "Original authored boundary demonstrations, not held-out or independent agent evaluations. Literal checks do not establish semantic fidelity for arbitrary text.",
+  "cases": [
+    {
+      "id": "remove-empty-preamble", "mode": "bounded",
+      "input": "It is worth noting that the model reduces mean MSE from 0.1083 to 0.0851 on the in-domain grid across five fixed seeds.",
+      "output": "The model reduces mean MSE from 0.1083 to 0.0851 on the in-domain grid across five fixed seeds.",
+      "protected": ["mean MSE from 0.1083 to 0.0851", "on the in-domain grid", "across five fixed seeds"],
+      "reason": "Remove a preamble, retaining metric, direction, scope and aggregation."
+    },
+    {
+      "id": "keep-adverse-result", "mode": "bounded",
+      "input": "To be clear, in-domain MSE decreases from 0.1083 to 0.0851, but extrapolation MSE increases from 2.6891 to 3.7012.",
+      "output": "In-domain MSE decreases from 0.1083 to 0.0851, but extrapolation MSE increases from 2.6891 to 3.7012.",
+      "protected": ["0.1083 to 0.0851", "extrapolation MSE increases from 2.6891 to 3.7012"],
+      "reason": "The contrast contains an adverse result; it is not defensive padding."
+    },
+    {
+      "id": "retain-real-uncertainty", "mode": "in-place",
+      "input": "The observations are consistent with the proposed mechanism, although the design does not identify a causal effect.",
+      "output": "The observations are consistent with the proposed mechanism, although the design does not identify a causal effect.",
+      "protected": ["consistent with", "does not identify a causal effect"],
+      "reason": "No change is warranted. Removing the qualification would overstate identification."
+    },
+    {
+      "id": "statistical-significance", "mode": "bounded",
+      "input": "It should be noted that the supplied analysis reports a statistically significant difference (p=0.004; Holm-adjusted), with a 95% confidence interval of [0.02, 0.08].",
+      "output": "The supplied analysis reports a statistically significant difference (p=0.004; Holm-adjusted), with a 95% confidence interval of [0.02, 0.08].",
+      "protected": ["statistically significant", "p=0.004; Holm-adjusted", "95% confidence interval of [0.02, 0.08]"],
+      "reason": "Constructed input with a supplied statistical result: preserve justified significant, without inventing its analysis."
+    },
+    {
+      "id": "theory-quantifiers", "mode": "bounded",
+      "input": "We would like to emphasize that for nonnegative weights summing to one, the weighted average lies between the minimum and maximum observed values.",
+      "output": "For nonnegative weights summing to one, the weighted average lies between the minimum and maximum observed values.",
+      "protected": ["nonnegative weights summing to one", "between the minimum and maximum observed values"],
+      "reason": "Remove authorial framing, not the assumption needed by the range bound."
+    },
+    {
+      "id": "unrun-baseline", "mode": "bounded",
+      "input": "We respectfully acknowledge that the linear baseline has not been run. We propose evaluating it in future work.",
+      "output": "The linear baseline has not been run. We propose evaluating it in future work.",
+      "protected": ["has not been run", "propose evaluating it in future work"],
+      "reason": "A proposal must not become a completed comparison or an unapproved promise."
+    },
+    {
+      "id": "chinese-technical-register", "mode": "in-place",
+      "input": "值得注意的是，离线强化学习中的分布偏移仍未解决；当前实验只覆盖两个固定数据集。",
+      "output": "离线强化学习中的分布偏移仍未解决；当前实验只覆盖两个固定数据集。",
+      "protected": ["离线强化学习", "分布偏移仍未解决", "只覆盖两个固定数据集"],
+      "reason": "Preserve ordinary technical terms, negation and evaluation scope."
+    },
+    {
+      "id": "keep-necessary-contrast", "mode": "in-place",
+      "input": "The bound controls prediction range, not prediction error.",
+      "output": "The bound controls prediction range, not prediction error.",
+      "protected": ["prediction range, not prediction error"],
+      "reason": "Useful conceptual contrast is not an anti-pattern merely because it contains not."
+    },
+    {
+      "id": "number-entity-binding", "mode": "bounded",
+      "input": "It is important to note that model A reaches 71.2% accuracy and model B reaches 74.8% on the same held-out split.",
+      "output": "Model A reaches 71.2% accuracy and model B reaches 74.8% on the same held-out split.",
+      "protected": ["A reaches 71.2%", "B reaches 74.8%", "on the same held-out split"],
+      "reason": "Exchanging the numbers' model assignments would fail fidelity even if the number set remained unchanged."
+    },
+    {
+      "id": "no-fake-concretization", "mode": "in-place",
+      "input": "The framework organizes the available evidence; its effect on writing time has not been measured.",
+      "output": "The framework organizes the available evidence; its effect on writing time has not been measured.",
+      "protected": ["organizes the available evidence", "writing time has not been measured"],
+      "reason": "Do not invent a deployed system or productivity improvement to sound concrete."
+    }
+  ]
+}

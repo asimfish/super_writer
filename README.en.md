@@ -7,6 +7,7 @@
 [![CI](https://github.com/asimfish/super_writer/actions/workflows/ci.yml/badge.svg)](https://github.com/asimfish/super_writer/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/asimfish/super_writer)](https://github.com/asimfish/super_writer/releases)
 [![MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![CC0 Data](https://img.shields.io/badge/Language_cards-CC0-lightgrey.svg)](DATA_LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](docs/validation.md)
 [![Stars](https://img.shields.io/github/stars/asimfish/super_writer?style=flat)](https://github.com/asimfish/super_writer/stargazers)
 
@@ -148,7 +149,7 @@ size and recency are advisory unless `citation_enforce_heuristics=true`.
 | Cross-platform regressions | Linux, macOS, Windows; installation, packaging, privacy, documents and guards | Equal writing performance across agents |
 | Reproducible examples | 20 empirical records, rounding, seed-level sample SD, exact-rational counterexamples | A novel method or a formally verified theorem |
 | Document builds | Real PDF compilation, unresolved references, overfull boxes, checked Word exports | Detection of every visual defect |
-| Official template fixtures | Pinned ICML 2026, ICLR 2026 and CVPR 2026; title, citation, equation, table and hidden identity sentinels | Complete submission compliance for a full paper |
+| Official template fixtures | Eight cases: ICML, ICLR, CVPR, NeurIPS in two citation modes, ACL, ECCV main and rebuttal | Complete submission compliance; AAAI is not compilation-verified |
 | Writing quality | Public materials, readable manuscripts and writing decisions | Independent human blind scores, acceptance gains or detector bypass |
 
 From the source repository root:
@@ -170,7 +171,7 @@ python3 tools/check_template_compatibility.py --output-dir build/template-check
 The latter downloads pinned public styles, checks SHA-256, and compiles in temporary
 directories with shell escape disabled. It does not upload manuscripts, edit
 styles or relicense upstream templates as MIT.
-[Validation details](docs/validation.md) · [Version changes and acceptance](docs/releases/v1.1.0.md)
+[Validation details](docs/validation.md) · [Version changes and acceptance](docs/releases/v1.2.0.md)
 
 ## FAQ
 
@@ -181,8 +182,8 @@ result interpretation and document checks, not universally better prose.
 
 **Are all top conferences fully supported?**
 
-No. Three pinned revisions have compilation fixtures. ACL citation recognition
-has regression coverage, not complete template certification. Current year,
+No. Eight pinned compilation fixtures and bounded venue profiles are available,
+not complete template certification. Current year,
 track, page limits, statements, anonymity and rebuttal rules still need checking.
 
 **Does a passing check mean I can submit?**
@@ -198,13 +199,58 @@ commands offer `--no-api`. Manuscript handling depends on your agent and provide
 the project does not promise an offline host. See [capabilities](skill-card.md)
 and [security](SECURITY.md).
 
+## v1.2: Venue and Writing Resources
+
+**8 venues, 11 year/track/stage profiles, 8 compilation fixtures and 127 offline
+term/sentence cards.** These are different counts: ACL/EMNLP share official
+styles, NeurIPS has two citation fixtures, and ECCV main/rebuttal formats differ.
+
+| 2026 profile | Scope |
+|---|---|
+| ICML / ICLR / CVPR | Main-track anonymous initial review |
+| NeurIPS | Main-track review, numeric and author-date citation fixtures |
+| ACL / EMNLP | Separate long/short profiles; required Limitations retained |
+| ECCV | LNCS main paper and one-page two-column rebuttal |
+| AAAI | Guide only; official kit returned HTTP 403, no verified compilation |
+
+These are **2026 snapshots**, not automatic rules for future submissions. The
+[catalog](references/venue-profiles.json) links official sources and refuses
+implicit year/stage fallback.
+
+```bash
+python3 scripts/venue_profile.py --list
+python3 scripts/venue_profile.py --id eccv-2026-main-rebuttal
+python3 scripts/writing_lookup.py "distribution shift" --domain rl --kind definition --limit 3
+python3 scripts/writing_lookup.py "result boundary" --section experiments --limit 3
+python3 scripts/pdf_layout_check.py paper.pdf --log main.log
+```
+
+- **Six argument designs:** method, theory, dataset/benchmark, systems/efficiency,
+  negative result/replication, and survey/position. One outline does not fit all.
+- **Natural academic expression:** diagnose-only, in-place, bounded and structural
+  scopes. Fidelity before concision; retain uncertainty, terms and unrun-work status.
+- **Language cards:** definitions, usage constraints, misuse warnings and source
+  IDs. Technical and rhetorical queries are separate; cards are not claim evidence.
+- **PDF receipts:** font embedding, physical-page bounds, log errors and content
+  hashes. Visual inspection of every page remains necessary.
+
+[Ten bilingual boundary cases](examples/academic-style/) ·
+[Argument blueprints](references/paper-blueprints.md) ·
+[Five-upstream integration audit](UPSTREAM.md#selective-integration-audit-2026-09-06)
+
+This integrates methods and licensed records, not five agent stacks:
+PaperSpine's evidence design, PaperOrchestra's validation lessons, writing methods
+from shuorenhua and anti-defensive-writing, and Super Library's CC0 original
+cards. No chat-cache scan, API-key discovery or automatic install is introduced.
+
 ## Roadmap
 
 - [x] Standalone installation, reproducible distribution and cross-platform checks.
 - [x] Reproducible empirical, theoretical and response examples in PDF and Word.
-- [x] Three pinned official-template builds and citation/editorial-policy regressions.
-- [ ] Unified venue, year, track and submission-stage configuration.
-- [ ] More paper-type blueprints, official templates and compliance checks.
+- [x] Eight pinned template fixtures and citation/layout/editorial-policy regressions.
+- [x] Explicit venue/year/track/stage profiles and six argument designs.
+- [x] Five-upstream selective integration, 127 offline cards and academic-style cases.
+- [ ] Additional years, camera-ready stages and verified official AAAI compilation.
 - [ ] Answer-withheld agent evaluations and independent human blind assessment.
 
 ## Contributing, Citation and License
@@ -216,7 +262,9 @@ Use [CITATION.cff](CITATION.cff) to cite this software.
 
 Adapted from [PaperSpine](https://github.com/WUBING2023/PaperSpine) V4 and maintained
 independently from [Super Skill Team](https://github.com/asimfish/super_skill_team).
-[MIT licensed](LICENSE), retaining upstream attribution. See [UPSTREAM.md](UPSTREAM.md).
+[MIT software](LICENSE), retaining upstream attribution. Original language cards
+are [CC0](DATA_LICENSE); linked papers are excluded.
+[Third-party notices](THIRD_PARTY_NOTICES.md) · [Provenance](UPSTREAM.md)
 
 Presentation organization draws inspiration from
 [SuperTranslate](https://github.com/asimfish/super_translate),
