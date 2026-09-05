@@ -1,0 +1,41 @@
+{
+  "skill": "super-writer",
+  "activation_cases": [
+    {
+      "id": "explicit-rewrite",
+      "prompt": "Use $super-writer to structurally revise my conference manuscript using the supplied results.",
+      "should_activate": true,
+      "expected_behavior": "Inspect evidence and progress, establish contribution and author motivation, then plan the rewrite."
+    },
+    {
+      "id": "materials-build",
+      "prompt": "根据我的实验表格和方法笔记构建期刊论文，逐段记录证据和写作理由。",
+      "should_activate": true,
+      "expected_behavior": "Use build_from_materials with source inventory, contribution boundaries, and a rationale matrix."
+    },
+    {
+      "id": "bounded-response",
+      "prompt": "使用 super-writer，针对这些审稿意见整理逐条回复和修改位置。",
+      "should_activate": true,
+      "expected_behavior": "Use the response playbook within the requested scope; do not send the response or launch a whole new paper."
+    },
+    {
+      "id": "explicit-exclusion",
+      "prompt": "不要使用 super-writer，也不要开始论文流程，只修正这句话的标点。",
+      "should_activate": false,
+      "expected_behavior": "Respect explicit exclusion and perform the small edit directly."
+    },
+    {
+      "id": "marketing-neighbor",
+      "prompt": "写一段产品营销文案，突出这个笔记软件的卖点。",
+      "should_activate": false,
+      "expected_behavior": "Route to ordinary copywriting rather than evidence-backed academic writing."
+    },
+    {
+      "id": "figure-only-neighbor",
+      "prompt": "只根据已有方法描述画一张架构图，不修改或撰写论文。",
+      "should_activate": false,
+      "expected_behavior": "Use a figure workflow; do not trigger manuscript contribution or citation stages."
+    }
+  ]
+}

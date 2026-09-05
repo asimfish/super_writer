@@ -1,0 +1,8 @@
+interface:
+  display_name: "Super Writer"
+  short_description: "Evidence-backed paper writing and revision"
+  brand_color: "#2563EB"
+  default_prompt: "Use $super-writer to inspect my research materials, confirm the contribution and motivation, and write or revise an evidence-backed manuscript."
+
+policy:
+  allow_implicit_invocation: true

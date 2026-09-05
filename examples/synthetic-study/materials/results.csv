@@ -1,0 +1,5 @@
+condition,method,successes,trials
+clean,baseline,82,100
+clean,candidate,84,100
+perturbed,baseline,61,100
+perturbed,candidate,69,100
