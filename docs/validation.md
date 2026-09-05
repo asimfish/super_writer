@@ -34,9 +34,12 @@ after updating the package index. The separate `lmodern` package supplies the
 LaTeX font support required by Pandoc; OpenType fonts alone are insufficient.
 `texlive-science` supplies the `algorithm` and `algorithmic` packages required
 by the unchanged ICML style.
+`cm-super` supplies Type 1 fonts for the unchanged ECCV style's T1 encoding.
+Its metrics match the original Computer Modern family; see the
+[font package description](https://ctan.org/pkg/cm-super).
 
 ```bash
-sudo apt-get install -y --no-install-recommends pandoc texlive-latex-extra texlive-fonts-recommended texlive-science lmodern poppler-utils
+sudo apt-get install -y --no-install-recommends pandoc texlive-latex-extra texlive-fonts-recommended texlive-science lmodern cm-super poppler-utils
 ```
 
 ## What the New Examples Test
@@ -165,6 +168,12 @@ The Linux template job also exposed a citation-oracle false rejection when
 TeX split `background` across lines as `back-` / `ground`. Its captured text is
 a regression case; only line-break hyphenation is normalized, and wrong citation
 modes still fail. This does not modify the official ACL style or the rendered PDF.
+The Linux ECCV build then exposed missing Type 1 font dependencies: extracted
+`fi`/`ffi` ligatures became XML-invalid `U+001C`/`U+001E` characters. A disposable
+Debian 12 font probe reproduced this with Type 3 output; installing only
+`cm-super` and rebuilding the same source produced Type 1 fonts with Unicode
+maps and valid bounding-box XML. CI now installs that dependency explicitly.
+The strict XML parser, original fixture prose and official styles remain unchanged.
 
 No new model-based blind writing evaluation or Word-client visual certification
 was performed. AAAI remains guide-only. Source-only document commands explicitly
