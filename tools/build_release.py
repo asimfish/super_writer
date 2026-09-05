@@ -99,11 +99,15 @@ def _read_source(root: Path, relative: Path) -> bytes:
         data = stream.read()
         after = os.fstat(stream.fileno())
     current = _checked_path(root, relative)
+    # Windows may give lstat/fstat different ctime semantics; compare each API
+    # against itself across the read, while matching file identity across APIs.
     if (not os.path.samestat(opened, current)
             or (opened.st_size, opened.st_mtime_ns, opened.st_ctime_ns)
             != (after.st_size, after.st_mtime_ns, after.st_ctime_ns)
-            or (after.st_size, after.st_mtime_ns, after.st_ctime_ns)
-            != (current.st_size, current.st_mtime_ns, current.st_ctime_ns)):
+            or (before.st_size, before.st_mtime_ns, before.st_ctime_ns)
+            != (current.st_size, current.st_mtime_ns, current.st_ctime_ns)
+            or (after.st_size, after.st_mtime_ns)
+            != (current.st_size, current.st_mtime_ns)):
         raise DistributionError(f"Source changed while reading: {relative}")
     return data
 

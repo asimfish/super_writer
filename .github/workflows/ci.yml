@@ -36,26 +36,6 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Compile Python
         run: python -m compileall -q scripts tools tests
-      - name: Diagnose Windows file metadata
-        if: runner.os == 'Windows'
-        shell: python
-        run: |
-          import json
-          import os
-          from pathlib import Path
-          fields = ('st_dev', 'st_ino', 'st_size', 'st_mtime_ns', 'st_ctime_ns', 'st_birthtime_ns', 'st_nlink')
-          for name in ('SKILL.md', 'UPSTREAM.md', 'LICENSE'):
-              path = Path(name)
-              before = path.lstat()
-              with path.open('rb') as stream:
-                  opened = os.fstat(stream.fileno())
-                  stream.read()
-                  after = os.fstat(stream.fileno())
-              current = path.lstat()
-              print(json.dumps({'file': name, **{
-                  label: {key: getattr(value, key, None) for key in fields}
-                  for label, value in (('before', before), ('opened', opened), ('after', after), ('current', current))
-              }}))
       - name: Synthetic guard regressions
         run: python scripts/smoke_test.py
       - name: Distribution and portable usage

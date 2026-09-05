@@ -42,6 +42,62 @@ def audit(event, args):
             raise OSError("injected publication failure")
 
 sys.addaudithook(audit)
+
+# Inject only OS metadata; the real build/install CLI and identity checks run.
+scenario = os.environ.get("DISTRIBUTION_METADATA_FAULT")
+if scenario:
+    original_stat = os.stat
+    original_lstat = os.lstat
+    original_fstat = os.fstat
+    source = original_stat(os.environ["DISTRIBUTION_METADATA_PATH"])
+    handle_samples = 0
+
+    class Metadata:
+        def __init__(self, actual, **changes):
+            self.actual = actual
+            self.__dict__.update(changes)
+
+        def __getattr__(self, name):
+            return getattr(self.actual, name)
+
+    def fstat(fd):
+        global handle_samples
+        actual = original_fstat(fd)
+        if not os.path.samestat(source, actual):
+            return actual
+        handle_samples += 1
+        if scenario == "stable-ctime":
+            # Windows 3.12 fstat ctime can differ from pathname creation time.
+            return Metadata(actual, st_ctime_ns=source.st_ctime_ns + 1_000_000_000)
+        if scenario.startswith("cross:"):
+            field = scenario.split(":", 1)[1]
+            return Metadata(actual, **{field: getattr(actual, field) + 1})
+        if scenario.startswith("handle:") and handle_samples >= 2:
+            field = scenario.split(":", 1)[1]
+            return Metadata(actual, **{field: getattr(actual, field) + 1})
+        if scenario == "opened-identity":
+            return Metadata(actual, st_ino=actual.st_ino + 1)
+        return actual
+
+    def path_metadata(actual):
+        if handle_samples < 2 or not os.path.samestat(source, actual):
+            return actual
+        if scenario.startswith("path:"):
+            field = scenario.split(":", 1)[1]
+            return Metadata(actual, **{field: getattr(actual, field) + 1})
+        if scenario == "current-identity":
+            return Metadata(actual, st_ino=actual.st_ino + 1)
+        return actual
+
+    def stat_path(*args, **kwargs):
+        return path_metadata(original_stat(*args, **kwargs))
+
+    def lstat_path(*args, **kwargs):
+        return path_metadata(original_lstat(*args, **kwargs))
+
+    os.fstat = fstat
+    os.stat = stat_path
+    os.lstat = lstat_path
 '''
 
 
@@ -172,6 +228,27 @@ class DistributionTests(unittest.TestCase):
         self.assertFalse(archive.parent.exists())
         self.assertFalse(destination.parent.exists())
 
+    def assert_metadata_rejected(self, scenario: str, phase: str) -> None:
+        source = self.repo / "SKILL.md"
+        original = source.read_bytes()
+        environment = {
+            "DISTRIBUTION_METADATA_FAULT": scenario,
+            "DISTRIBUTION_METADATA_PATH": str(source),
+        }
+        output = self.base / "rejected release"
+        destination = self.base / "rejected install" / "super-writer"
+        for script, flag, target in (
+            ("build_release.py", "--output-dir", output),
+            ("install_skill.py", "--destination", destination),
+        ):
+            with self.subTest(tool=script):
+                result = self.run_cli(self.repo / "tools" / script, flag, target,
+                                      success=False, environment=environment)
+                self.assertIn(f"Source changed while {phase}: SKILL.md", result.stderr)
+                self.assertFalse(output.exists())
+                self.assertFalse(destination.parent.exists())
+                self.assertEqual(source.read_bytes(), original)
+
     def test_zip_contents_digests_and_real_runtime_smoke(self) -> None:
         archive = self.build()
         self.assertEqual(archive.name, ARCHIVE_NAME)
@@ -206,6 +283,41 @@ class DistributionTests(unittest.TestCase):
         original = first.read_bytes()
         self.build(first.parent)
         self.assertEqual(first.read_bytes(), original)
+
+    def test_stable_cross_api_ctime_difference_preserves_build_and_install(self) -> None:
+        baseline = self.build(self.base / "baseline release")
+        environment = {
+            "DISTRIBUTION_METADATA_FAULT": "stable-ctime",
+            "DISTRIBUTION_METADATA_PATH": str(self.repo / "SKILL.md"),
+        }
+        injected = self.build(self.base / "different ctime release", environment=environment)
+        self.assertEqual(baseline.read_bytes(), injected.read_bytes())
+        destination = self.install(environment=environment)
+        installed = {path.relative_to(destination).as_posix(): path.read_bytes()
+                     for path in destination.rglob("*") if path.is_file()}
+        self.assertEqual(installed, self.archive_payload(baseline))
+        self.assert_manifest(installed)
+
+    def test_handle_metadata_changes_during_read_are_rejected(self) -> None:
+        for field in ("st_size", "st_mtime_ns", "st_ctime_ns"):
+            with self.subTest(field=field):
+                self.assert_metadata_rejected(f"handle:{field}", "reading")
+
+    def test_path_metadata_changes_during_read_are_rejected(self) -> None:
+        for field in ("st_size", "st_mtime_ns", "st_ctime_ns"):
+            with self.subTest(field=field):
+                self.assert_metadata_rejected(f"path:{field}", "reading")
+
+    def test_stable_cross_api_size_and_mtime_differences_are_rejected(self) -> None:
+        for field in ("st_size", "st_mtime_ns"):
+            with self.subTest(field=field):
+                self.assert_metadata_rejected(f"cross:{field}", "reading")
+
+    def test_source_identity_change_while_opening_is_rejected(self) -> None:
+        self.assert_metadata_rejected("opened-identity", "opening")
+
+    def test_source_identity_change_after_read_is_rejected(self) -> None:
+        self.assert_metadata_rejected("current-identity", "reading")
 
     def test_current_checkout_keeps_linked_docs_examples_and_activation_contract(self) -> None:
         output = self.base / "actual checkout release"
@@ -297,9 +409,12 @@ class DistributionTests(unittest.TestCase):
                     (outside / "preserve.txt").write_bytes(b"existing")
                 target = parent / "super-writer"
                 target.symlink_to(outside, target_is_directory=True)
+                original_link = target.readlink()
+                original_identity = target.lstat()
                 self.install(target, success=False)
                 self.assertTrue(target.is_symlink())
-                self.assertEqual(target.readlink(), outside)
+                self.assertEqual(target.readlink(), original_link)
+                self.assertTrue(os.path.samestat(original_identity, target.lstat()))
                 if dangling:
                     self.assertFalse(outside.exists())
                 else:
