@@ -66,3 +66,5 @@ jobs:
         run: python tools/render_examples.py --output-dir build/rendered-examples
       - name: Compile pinned official template fixtures
         run: python tools/check_template_compatibility.py --output-dir build/template-check
+      - name: Compile generic experiment tables in two layouts
+        run: python tools/check_table_templates.py --output-dir build/table-check

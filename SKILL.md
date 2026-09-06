@@ -3,12 +3,12 @@ name: super-writer
 description: >-
   Plan, write, or structurally revise evidence-backed academic papers and reports,
   from existing drafts or research materials. Use when the task needs contribution and motivation
-  design, academic style or terminology editing, sentence-level citation support, manuscript audits, LaTeX/Word delivery,
+  design, section or experiment-table structure, academic style or terminology editing, sentence-level citation support, manuscript audits, LaTeX/Word delivery,
   Chinese translation, submission materials, or reviewer responses. Do not use for
   casual copyediting, marketing copy, running experiments, or figure-only requests.
 metadata:
   author: asimfish
-  version: "1.2.0"
+  version: "1.3.0"
   source: "PaperSpine derivative with selective upstream integrations; see UPSTREAM.md"
 ---
 
@@ -75,6 +75,7 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
 | Style calibration | [humanize](references/humanize.md) | Tiered style matrix and `humanize_check.py` |
 | Natural academic expression | [academic expression](references/academic-expression.md) | Scoped edit or diagnosis; fidelity before style |
 | Terms and sentence patterns | [writing library](references/writing-library.md) | Bounded offline `writing_lookup.py` results; not claim evidence |
+| Section, paragraph and table design | [writing protocols](references/writing-protocols.md) | One `writing_guide.py` protocol/variant with evidence checks; table placeholders stay explicit |
 | Venue and paper design | [paper blueprints](references/paper-blueprints.md), [typesetting](references/typesetting-validation.md) | Exact `venue_profile.py` selection and contribution-specific outline |
 | Results mapping | [results validation](references/results-validation.md) | Contribution-to-results mapping and guard |
 | LaTeX, PDF, Word | [latex](references/latex.md) | Source, compiled PDF when available, Word and format reports |
@@ -130,6 +131,13 @@ Read [writing rationale](references/writing-rationale-matrix.md). Each writing
 unit needs a function, motivation link, exemplar/SOTA pattern, venue norm,
 evidence anchor, planned change, and final-text check. The first row explains
 the whole-paper framework. Generic cells and post-hoc checklists are insufficient.
+
+For an active section or experiment table, select one protocol and suitable
+variant from [writing protocols](references/writing-protocols.md), not the whole
+JSON corpus. Map its moves to present, missing or inapplicable author evidence
+in the existing plan. A required check does not require fabricated prose or
+experiments. Do not force a theory paper into an empirical structure or claim
+that a generic table is an official venue template.
 
 Run `progress_check.py --gate planning`, then use the selected rewrite/build
 playbook. Preserve equations, numeric facts, citation keys, and user requirements.

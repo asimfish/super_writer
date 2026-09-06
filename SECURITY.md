@@ -23,9 +23,13 @@ promised response-time SLA.
 - Demonstration builders detect MiKTeX and pass `--disable-installer` for TeX
   and BibTeX, overriding automatic package installation for those commands.
   Missing dependencies need explicit resolution, not a global-setting change.
-- Offline venue/library lookup reads bundled JSON only. The explicit source-only
-  corpus importer accesses fixed files on `raw.githubusercontent.com`, checks
-  SHA-256 and never executes upstream code or fetches linked papers.
+- Offline venue/card lookup reads bundled JSON. Protocol lookup reads bounded
+  JSON and allowlisted TeX skeletons with digest and symlink checks; it never
+  compiles, fills placeholders or writes files. The explicit source-only importer
+  accesses pinned public data, audited table source and licenses on
+  `raw.githubusercontent.com`, verifies every input before writes, and never
+  executes upstream code or fetches linked papers. Only the separately invoked
+  source-only table checker compiles its fixed synthetic fixtures.
 - PDF inspection uses local Poppler against a size-bounded snapshot with process
   timeouts. It does not execute TeX or upload content; parser vulnerabilities
   still require a maintained toolchain and appropriate process isolation.

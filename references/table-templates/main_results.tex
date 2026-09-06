@@ -1,0 +1,30 @@
+% Adapted from Super Library (MIT); see LICENSE in this directory.
+% Generic table skeleton, not an official venue template.
+% Replace SL_* from verified author data before compiling; never invent values.
+% Wrap headers and remove manual vertical spacing; official styles take precedence.
+% Super Library main-results table. Requires \usepackage{booktabs}.
+% Replace every SL_* token and remove comments that do not apply.
+\begin{table}[t]
+  \centering
+  \small
+  \caption{SL_CAPTION. Results use SL_PROTOCOL. Values are SL_AGGREGATE over
+  SL_N independent SL_RUN_UNIT; uncertainty is SL_UNCERTAINTY. Higher/lower is
+  better as indicated. Resource-mismatched methods are identified explicitly.}
+  \label{tab:SL_LABEL}
+  \begin{tabular}{lccccc}
+    \toprule
+    Method & \shortstack{Data /\\pretraining} & \shortstack{Compute /\\interaction} & SL_METRIC_A $\uparrow$ &
+    SL_METRIC_B $\downarrow$ & SL_METRIC_C $\uparrow$ \\
+    \midrule
+    SL_BASELINE_A & SL_DATA_A & SL_BUDGET_A & SL_VALUE & SL_VALUE & SL_VALUE \\
+    SL_BASELINE_B & SL_DATA_B & SL_BUDGET_B & SL_VALUE & SL_VALUE & SL_VALUE \\
+    \midrule
+    SL_METHOD & SL_DATA_OURS & SL_BUDGET_OURS & SL_VALUE & SL_VALUE & SL_VALUE \\
+    \bottomrule
+  \end{tabular}
+
+  \parbox{0.98\linewidth}{\footnotesize
+  SL_NOTE: Define every abbreviation and denominator. Bold only within a
+  protocol-comparable group; do not rank rows with materially different data,
+  model scale, tuning, compute, or interaction budgets.}
+\end{table}

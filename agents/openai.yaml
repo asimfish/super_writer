@@ -1,6 +1,6 @@
 interface:
   display_name: "Super Writer"
-  short_description: "Evidence-backed writing, academic style and venue checks"
+  short_description: "Evidence-backed papers, section design and venue checks"
   brand_color: "#2563EB"
   default_prompt: "Use $super-writer to inspect my research materials, confirm the contribution and motivation, and write or revise an evidence-backed manuscript."
 

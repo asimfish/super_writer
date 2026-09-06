@@ -1,0 +1,29 @@
+% Adapted from Super Library (MIT); see LICENSE in this directory.
+% Generic table skeleton, not an official venue template.
+% Replace SL_* from verified author data before compiling; never invent values.
+% Wrap headers and remove manual vertical spacing; official styles take precedence.
+% Super Library ablation table. Requires \usepackage{booktabs}.
+% Replace every SL_* token. Keep coupled variants when interactions are plausible.
+\begin{table}[t]
+  \centering
+  \small
+  \caption{Ablation of SL_DESIGN_CHOICES under the matched SL_PROTOCOL. Values
+  are SL_AGGREGATE over SL_N independent SL_RUN_UNIT with SL_UNCERTAINTY.}
+  \label{tab:SL_LABEL}
+  \begin{tabular}{lcccc}
+    \toprule
+    Variant & SL_COMPONENT_A & SL_COMPONENT_B & SL_METRIC $\uparrow$ &
+    \shortstack{Change from\\full model} \\
+    \midrule
+    Full model       & Yes & Yes & SL_VALUE & -- \\
+    Without A        & No  & Yes & SL_VALUE & SL_DELTA \\
+    Without B        & Yes & No  & SL_VALUE & SL_DELTA \\
+    Without A and B  & No  & No  & SL_VALUE & SL_DELTA \\
+    \bottomrule
+  \end{tabular}
+
+  \parbox{0.98\linewidth}{\footnotesize
+  SL_NOTE: State the matched initialization, data, optimization, compute,
+  selection, and seeds. Interpret small or noisy differences cautiously; a
+  removal study alone does not identify a universal causal mechanism.}
+\end{table}

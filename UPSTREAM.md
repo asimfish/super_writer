@@ -53,6 +53,28 @@ data-license digests. `references/writing-library.json` records the exact inputs
 and selection policy. `--check` reproduces the generated files without changes.
 See [DATA_LICENSE](DATA_LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
+## Writing Resource Extension: 2026-09-07
+
+Rechecked Super Library at the same pinned `5a5c55c0e553fc11c6b2886a5fa1a3f6094108a7`
+revision. v1.2 selected 127 cards; v1.3 adds three original related-work patterns
+(embodied systems, RL regimes, and world-model generation/control), reaching
+130 cards including all 78 reviewed sentence patterns. The 37 discovery-source
+records are unchanged. This is not a claim of 130 conference templates.
+
+Added all 16 writer-facing protocols and their 30 variants without rewriting
+their data fields. Excluded the peer-review protocol and its two variants,
+attested phrases and the upstream orchestration/task routes. Related IDs outside
+the card selection remain explicit unbundled pointers. Required moves are
+conditioned locally on present, missing or inapplicable author evidence.
+
+Adapted five MIT TeX table skeletons with wrapped long headers and no manual
+vertical spacing. The full table license is retained separately from CC0 data.
+The importer pins all nine input files, verifies every input before writing,
+and records both upstream and adapted table hashes. The offline protocol CLI
+is independently implemented here; lookup never compiles or fills table cells.
+The source-only renderer uses labeled synthetic fixtures in two layouts, not
+real experimental findings or new official-venue compatibility claims.
+
 These are selective integrations into one academic-writing skill, not five
 bundled orchestrators. No companion is silently installed and none of these
 projects is claimed to endorse Super Writer.

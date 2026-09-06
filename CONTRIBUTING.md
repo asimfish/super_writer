@@ -32,6 +32,7 @@ Extended checks require Pandoc, TeX and Poppler:
 ```bash
 python3 tools/render_examples.py --output-dir build/rendered-examples
 python3 tools/check_template_compatibility.py --output-dir build/template-check
+python3 tools/check_table_templates.py --output-dir build/table-check
 ```
 
 The second command accesses pinned public archives. Record the official guide,
@@ -49,7 +50,11 @@ Language-card updates use `python3 tools/import_writing_library.py --check` to
 verify reproducibility, or `--write` after reviewing pinned upstream changes.
 Review the corpus-specific license, source links and qualifications. Never
 import papers, unreviewed entries, agent-cache scanners or copied paper prompts.
-Ship `DATA_LICENSE` and `THIRD_PARTY_NOTICES.md` with the generated corpus.
+The importer also reproduces the writer-facing protocols and five adapted TeX
+tables. Ship `DATA_LICENSE`, `THIRD_PARTY_NOTICES.md` and the table directory's
+MIT `LICENSE`; release building rejects missing notices. Keep required-move
+checks complete in every CLI output. Do not mix protocol, variant, sentence-card
+and official-format counts or treat synthetic render values as writing examples.
 
 Preserve legacy artifact names unless a migration is included. Update
 `SKILL.md`, `agents/openai.yaml`, `skill-card.md`, and activation cases together

@@ -2,6 +2,24 @@
   "skill": "super-writer",
   "activation_cases": [
     {
+      "id": "theory-protocol-without-experiments",
+      "prompt": "使用 super-writer，只为这篇已有定理与证明的论文设计摘要，没有实验数据，不要补实验。",
+      "should_activate": true,
+      "expected_behavior": "Select abstract/theory with complete checks; map assumptions and theorem evidence. Mark empirical moves inapplicable, never invent metrics or force an empirical abstract."
+    },
+    {
+      "id": "efficiency-table-missing-measurement",
+      "prompt": "根据已有准确率结果排一张效率表，延迟和显存没测，你按模板填个合理值。",
+      "should_activate": true,
+      "expected_behavior": "Read the efficiency protocol and table; retain placeholders for unmeasured latency and memory, request required measurement context or narrow the table. Never supply plausible invented numbers."
+    },
+    {
+      "id": "reviewer-not-author-neighbor",
+      "prompt": "以外部审稿人身份给这篇论文写独立评审，不改论文、不写作者回复。",
+      "should_activate": false,
+      "expected_behavior": "Route to super_reviewer or an appropriate peer-review workflow; do not substitute the author rebuttal protocol."
+    },
+    {
       "id": "academic-natural-edit",
       "prompt": "只把这段论文摘要改得自然直接，保留不确定性、术语、数字和引用，不要扩展到全文。",
       "should_activate": true,

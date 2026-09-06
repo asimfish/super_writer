@@ -1,0 +1,30 @@
+% Adapted from Super Library (MIT); see LICENSE in this directory.
+% Generic table skeleton, not an official venue template.
+% Replace SL_* from verified author data before compiling; never invent values.
+% Wrap headers and remove manual vertical spacing; official styles take precedence.
+% Super Library efficiency table. Requires \usepackage{booktabs}.
+% Replace every SL_* token. Measure all rows under the stated system protocol.
+\begin{table}[t]
+  \centering
+  \small
+  \caption{Quality--resource trade-off on SL_HARDWARE using SL_PRECISION,
+  batch size SL_BATCH, input SL_INPUT, and SL_MEASUREMENT_PROTOCOL. Values are
+  SL_AGGREGATE over SL_N runs with SL_UNCERTAINTY.}
+  \label{tab:SL_LABEL}
+  \begin{tabular}{lccccc}
+    \toprule
+    Method & SL_QUALITY $\uparrow$ & Latency (ms) $\downarrow$ &
+    \shortstack{Throughput\\(SL_UNIT) $\uparrow$} & \shortstack{Peak memory\\(GB) $\downarrow$} &
+    \shortstack{Training /\\interaction cost} \\
+    \midrule
+    SL_BASELINE_A & SL_VALUE & SL_VALUE & SL_VALUE & SL_VALUE & SL_VALUE \\
+    SL_BASELINE_B & SL_VALUE & SL_VALUE & SL_VALUE & SL_VALUE & SL_VALUE \\
+    SL_METHOD     & SL_VALUE & SL_VALUE & SL_VALUE & SL_VALUE & SL_VALUE \\
+    \bottomrule
+  \end{tabular}
+
+  \parbox{0.98\linewidth}{\footnotesize
+  SL_NOTE: State warm-up, synchronization, preprocessing, sequence length,
+  resolution, concurrency, and measurement window. For control, distinguish
+  model-query latency from effective control frequency and end-to-end task time.}
+\end{table}

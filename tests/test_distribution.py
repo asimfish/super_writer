@@ -331,6 +331,8 @@ class DistributionTests(unittest.TestCase):
         self.assert_manifest(payload)
         for name in ("CONTRIBUTING.md", "README.md", "README.en.md", "docs/validation.md",
                      "DATA_LICENSE", "THIRD_PARTY_NOTICES.md", "references/writing-library.json",
+                     "references/writing-protocols.json", "scripts/writing_guide.py",
+                     "references/table-templates/LICENSE", "references/table-templates/efficiency.tex",
                      "references/venue-profiles.json", "examples/academic-style/cases.json",
                      "docs/usage.md", "examples/synthetic-study/manuscript.tex",
                      "examples/synthetic-study/materials/results.csv"):
@@ -360,6 +362,10 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("usage:", result.stdout.lower())
         result = self.run_cli(destination / "scripts/writing_lookup.py", "显著提升", "--kind", "usage_note", "--limit", "1", "--format", "ids")
         self.assertEqual(result.stdout.strip(), "general.usage-note.significant.001")
+        result = self.run_cli(destination / "scripts/writing_guide.py", "引言", "--variant", "theory-analysis", "--format", "json")
+        self.assertEqual(json.loads(result.stdout)["guide"]["id"], "introduction")
+        result = self.run_cli(destination / "scripts/writing_guide.py", "效率表", "--format", "json")
+        self.assertIn("SL_HARDWARE", json.loads(result.stdout)["table"]["latex"])
         result = self.run_cli(destination / "scripts/venue_profile.py", "--id", "eccv-2026-main-rebuttal", "--format", "json")
         self.assertEqual(json.loads(result.stdout)["profiles"][0]["body_pages"], 1)
         result = self.run_cli(destination / "scripts/smoke_test.py")
@@ -497,6 +503,15 @@ class DistributionTests(unittest.TestCase):
                     self.assert_rejected_source()
                 finally:
                     path.write_bytes(data)
+
+    def test_protocol_only_distribution_still_requires_data_license(self) -> None:
+        (self.repo / "references/writing-library.json").unlink()
+        (self.repo / "DATA_LICENSE").unlink()
+        self.assert_rejected_source()
+
+    def test_table_distribution_requires_its_mit_license(self) -> None:
+        (self.repo / "references/table-templates/LICENSE").unlink()
+        self.assert_rejected_source()
 
     def test_invalid_version_cannot_escape_or_name_a_release(self) -> None:
         for version in ("", "../escape", "1.0.0\n../escape", "1.0", "v1.0.0", "01.0.0"):

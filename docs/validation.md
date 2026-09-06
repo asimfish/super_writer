@@ -17,7 +17,8 @@ standard library and temporary fixtures; it needs no model or paid API.
 | `python3 examples/knn-regression/experiment.py` | Recomputed deterministic experimental summary | Real-world generalization or significance |
 | `python3 tools/render_examples.py --output-dir build/rendered-examples` | PDF/Word export; text, reference, font and overfull-box checks | Every document client's rendering |
 | `python3 tools/check_template_compatibility.py --output-dir build/template-check` | Eight pinned official-template fixtures, including two citation modes and a distinct rebuttal | Complete submission compliance |
-| `python3 tools/import_writing_library.py --check` | Reproduce 127 selected cards and data-license bytes from pinned public inputs | Citation entailment or completeness of terminology |
+| `python3 tools/import_writing_library.py --check` | Reproduce 130 cards, 16 protocols / 30 variants, five tables and licenses from pinned inputs | Citation entailment or completeness of terminology |
+| `python3 tools/check_table_templates.py --output-dir build/table-check` | Five generic tables in single-column and two-column full-width layouts; ten synthetic PDF fixtures | Official-format compliance, narrow-column fit or real experimental results |
 | `python3 scripts/pdf_layout_check.py paper.pdf --log main.log` | Snapshot hash, physical-page bounds, font embedding and optional log check | Visual quality, anonymity or source-to-PDF build provenance |
 | `python3 tools/build_release.py` | Allowlisted ZIP, manifest and archive checksum | That an arbitrary download matches without checking its hash |
 
@@ -143,6 +144,31 @@ interpreted under its column labels.
 The 11 profiles cover eight named venues at specific 2026 stages. Additional
 years, camera-ready stages, verified AAAI compilation and independent writing
 evaluations remain future work. A test suite does not complete those tasks.
+
+## Local 1.3.0 Release Check
+
+Observed on 2026-09-07, macOS / Python 3.14.3, MiKTeX pdfTeX and Poppler.
+This is a local receipt; inspect the exact GitHub commit/tag for remote CI results.
+
+| Check | Observed result |
+|---|---|
+| Full portable suite | 161 tests: 160 pass, one PowerShell test skipped because the executable is absent locally |
+| Inherited smoke suite | 11/11 pass; Python compilation passes |
+| Added resource contracts | 15 focused tests pass, including every alias and all 30 variants, complete warnings/checks, small-budget refusal, card availability, paths/hashes, import failure before writes and synthetic fixture scope |
+| Distribution | Full manifest equality, deterministic rebuild, installed lookup outside the skill directory with spaces and network audit hooks; missing CC0/MIT notices rejected |
+| Upstream reproduction | All nine pins verify; 130 cards, 37 source records, 16 protocols / 30 variants, five adapted tables and licenses reproduce exactly |
+| Preservation | All 127 previous cards and all 37 source records are unchanged; precisely three sentence-pattern IDs added |
+| Table compilation | Five tables x two layouts, ten one-page PDFs; embedded fonts, text bounds, no overfull boxes or unresolved placeholders |
+| Visual inspection | Five distinct table renderings inspected; the ten final previews match the inspected single/full-width renderings byte-for-byte |
+| Metadata and docs | Skill validator, CFF 1.2.0 schema/version and YAML checks pass; 201 relative file/image links checked; 14 unique activation expectations |
+
+The table fixtures use arbitrary synthetic numbers solely to test rendering.
+The separate protocol-application example uses the existing measured synthetic
+regression results. Neither is an answer-withheld writing evaluation. The three
+new activation expectations are declared behavior, not measured activation rates.
+Existing official-style fixtures remain in the Linux CI job alongside the new
+table check; this extension adds no official venue coverage or Word-client visual
+certification. Tool-environment dependencies were not installed globally.
 
 ## Local 1.2.0 Release Check
 

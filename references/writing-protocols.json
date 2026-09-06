@@ -1,0 +1,1971 @@
+{
+  "schema_version": 1,
+  "license": "CC0-1.0 (original protocol records); MIT (table source)",
+  "scope": "Evidence-conditioned writing structures, not official venue rules or evidence for claims.",
+  "upstream": {
+    "repository": "https://github.com/asimfish/super_library",
+    "commit": "5a5c55c0e553fc11c6b2886a5fa1a3f6094108a7",
+    "input_sha256": {
+      "skills/super-library/references/index.json": "721e48a4ae4a9b401b1e9346b12c764bd02863f3bf4782c7bc1249871693469d",
+      "library/compact_ids.json": "f04c60c98709db37de08f2a20f1b284ec5a70fd3c68dd4159ed3da32dea74862",
+      "DATA_LICENSE": "858aa43d09445eb1ae9b8aaede251569d3431d5e2bf40410794913b1a0f19648",
+      "LICENSE": "9e53589d75a510a23d6f238d68b23072bdb906a3e0365e48188edff24ccc12c5",
+      "templates/tables/main_results.tex": "e52794d8871d0b5e09852445028e06b3e0f447bf45047dc0742406fcdc066c57",
+      "templates/tables/ablation.tex": "25139df9bc9716fcda03d8bd2633b7b9cd6a6134b6412d50897755f33180b228",
+      "templates/tables/generalization.tex": "2244faa3cbbf7e0f03bc479ab3911caa99e4062f54871f2437ed0bf08ed02193",
+      "templates/tables/efficiency.tex": "8051b01c5c65e3d17591fe5e66ba4f429fa977aa544cc9d08b7b2ce48396077f",
+      "templates/tables/sensitivity.tex": "2f76bf8fdbf6c45c99dd8a43be49d76ba288834a437ef1448fe2f6fa2954c2a8"
+    },
+    "selection": "All writer-facing protocols; review excluded."
+  },
+  "available_card_ids": [
+    "emb.definition.active-perception.001",
+    "emb.definition.cross-embodiment.001",
+    "emb.definition.diffusion-policy.001",
+    "emb.definition.domain-randomization.001",
+    "emb.definition.embodied-ai.001",
+    "emb.definition.generalist-policy.001",
+    "emb.definition.sim-to-real.001",
+    "emb.definition.visuomotor-policy.001",
+    "emb.sentence-pattern.related-work-memory-geometry.001",
+    "emb.sentence-pattern.related-work.001",
+    "emb.term.embodiment.001",
+    "emb.usage-note.imitation-bc.001",
+    "general.anti-pattern.ability-noun.001",
+    "general.anti-pattern.more-superior.001",
+    "general.anti-pattern.perform-good.001",
+    "general.sentence-pattern.ablation-interaction.001",
+    "general.sentence-pattern.ablation.001",
+    "general.sentence-pattern.abstract-gap.001",
+    "general.sentence-pattern.abstract-insight.001",
+    "general.sentence-pattern.abstract-method.001",
+    "general.sentence-pattern.abstract-result.001",
+    "general.sentence-pattern.abstract-scope.001",
+    "general.sentence-pattern.baseline-provenance.001",
+    "general.sentence-pattern.caption-ablation.001",
+    "general.sentence-pattern.caption-efficiency.001",
+    "general.sentence-pattern.caption-generalization.001",
+    "general.sentence-pattern.caption-main-results.001",
+    "general.sentence-pattern.caption-sensitivity.001",
+    "general.sentence-pattern.causal-caution.001",
+    "general.sentence-pattern.contrast.001",
+    "general.sentence-pattern.contribution.001",
+    "general.sentence-pattern.define.001",
+    "general.sentence-pattern.define.002",
+    "general.sentence-pattern.experiment-overview.001",
+    "general.sentence-pattern.failure-denominator.001",
+    "general.sentence-pattern.fair-comparison.001",
+    "general.sentence-pattern.foundation.001",
+    "general.sentence-pattern.future.001",
+    "general.sentence-pattern.gap.001",
+    "general.sentence-pattern.heldout-split.001",
+    "general.sentence-pattern.independent-runs.001",
+    "general.sentence-pattern.intro-approach-axes.001",
+    "general.sentence-pattern.intro-challenge-design.001",
+    "general.sentence-pattern.intro-contribution-evidence.001",
+    "general.sentence-pattern.intro-nongoal.001",
+    "general.sentence-pattern.intro-observation-design.001",
+    "general.sentence-pattern.intro-operational-scope.001",
+    "general.sentence-pattern.intro-restrictive-assumption.001",
+    "general.sentence-pattern.latency-protocol.001",
+    "general.sentence-pattern.limitation.001",
+    "general.sentence-pattern.metric-direction-unit.001",
+    "general.sentence-pattern.motivate.001",
+    "general.sentence-pattern.position.001",
+    "general.sentence-pattern.position.002",
+    "general.sentence-pattern.quantify.001",
+    "general.sentence-pattern.real-system-trials.001",
+    "general.sentence-pattern.rebuttal-acknowledge.001",
+    "general.sentence-pattern.rebuttal-answer.001",
+    "general.sentence-pattern.rebuttal-clarify.001",
+    "general.sentence-pattern.rebuttal-concede.001",
+    "general.sentence-pattern.rebuttal-correct.001",
+    "general.sentence-pattern.rebuttal-evidence.001",
+    "general.sentence-pattern.rebuttal-matched-budget.001",
+    "general.sentence-pattern.rebuttal-no-evidence.001",
+    "general.sentence-pattern.rebuttal-revision.001",
+    "general.sentence-pattern.related-family.001",
+    "general.sentence-pattern.related-synthesis.001",
+    "general.sentence-pattern.reproducibility-default.001",
+    "general.sentence-pattern.resource-parity.001",
+    "general.sentence-pattern.result-absolute-relative.001",
+    "general.sentence-pattern.result-boundary.001",
+    "general.sentence-pattern.result-concentration.001",
+    "general.sentence-pattern.result-consistency.001",
+    "general.sentence-pattern.result-hypothesis-caution.001",
+    "general.sentence-pattern.result-null.001",
+    "general.sentence-pattern.result-tradeoff.001",
+    "general.sentence-pattern.result-variability.001",
+    "general.sentence-pattern.review-actionable-question.001",
+    "general.sentence-pattern.review-calibrated-assessment.001",
+    "general.sentence-pattern.review-credit-disclosure.001",
+    "general.sentence-pattern.review-grounded-weakness.001",
+    "general.sentence-pattern.review-post-rebuttal.001",
+    "general.sentence-pattern.scope.001",
+    "general.sentence-pattern.transition.001",
+    "general.sentence-pattern.translation-preserve.001",
+    "general.sentence-pattern.validation-selection.001",
+    "general.term.inductive-bias.001",
+    "general.usage-note.effectiveness.001",
+    "general.usage-note.generalization-axis.001",
+    "general.usage-note.missing-zero-na.001",
+    "general.usage-note.modality.001",
+    "general.usage-note.performance.001",
+    "general.usage-note.respectively.001",
+    "general.usage-note.review-evidence-scope.001",
+    "general.usage-note.significant.001",
+    "general.usage-note.state-of-the-art.001",
+    "rl.definition.conservative-q.001",
+    "rl.definition.offline-distribution-shift.001",
+    "rl.definition.offline-rl.001",
+    "rl.definition.reinforcement-learning.001",
+    "rl.sentence-pattern.related-work-regime.001",
+    "rl.sentence-pattern.related-work.001",
+    "rl.term.policy.001",
+    "rl.term.sample-efficiency.001",
+    "rl.term.value-overestimation.001",
+    "rl.usage-note.on-off-policy.001",
+    "vla.definition.chain-of-affordance.001",
+    "vla.definition.continuous-action-head.001",
+    "vla.sentence-pattern.related-work.001",
+    "vla.term.action-expert.001",
+    "vla.term.action-vocabulary.001",
+    "vla.term.embodiment-specific-decoder.001",
+    "vla.term.visual-trace-prompting.001",
+    "vla.usage-note.control-latency.001",
+    "vla.usage-note.open-closed-loop.001",
+    "vla.usage-note.pretrain-finetune.001",
+    "wm.definition.embodied-world-model.001",
+    "wm.definition.latent-state.001",
+    "wm.definition.model-based-rl.001",
+    "wm.definition.visual-world-model.001",
+    "wm.definition.world-model.001",
+    "wm.sentence-pattern.related-work-generation-control.001",
+    "wm.sentence-pattern.related-work.001",
+    "wm.term.compounding-model-error.001",
+    "wm.term.imagined-trajectories.001",
+    "wm.term.latent-dynamics.001",
+    "wm.term.latent-imagination.001",
+    "wm.term.model-predictive-control.001",
+    "wm.usage-note.one-vs-multistep.001",
+    "wm.usage-note.planning-vs-policy.001"
+  ],
+  "guides": [
+    {
+      "aliases": [
+        "abstract",
+        "摘要",
+        "paper summary"
+      ],
+      "avoid": [
+        "Opening with an unverifiable claim that the broad field is fundamentally important.",
+        "Using 'novel', 'effective', 'superior', or 'state-of-the-art' as substitutes for a technical contribution and verified result.",
+        "Listing modules without explaining the insight that connects them.",
+        "Adding citations, results, or deployment claims not present in the completed paper."
+      ],
+      "guide_type": "section_protocol",
+      "id": "abstract",
+      "inputs": [
+        "One-sentence problem and evaluated scope.",
+        "The specific unresolved limitation or challenge addressed by this paper.",
+        "The paper's core insight and the mechanism that realizes it.",
+        "Verified principal evidence, including benchmark, metric, comparison, statistic, and uncertainty when available.",
+        "Assumptions, deployment boundary, or evaluated generalization axis that materially limits the claim."
+      ],
+      "label": "Abstract: claim-aligned empirical summary",
+      "moves": [
+        {
+          "checks": [
+            "Map every proposed abstract claim to a section, theorem, table, or figure in the paper.",
+            "Remove a claim if the mapped evidence does not support its comparison set or generalization scope.",
+            "Keep aspirational motivation grammatically distinct from achieved results."
+          ],
+          "id": "claim-ledger",
+          "label": "Build an abstract claim ledger",
+          "required": true
+        },
+        {
+          "checks": [
+            "Name the task or setting before the broad application motivation.",
+            "Describe a concrete assumption, failure mode, resource bottleneck, or missing capability rather than calling prior work insufficient.",
+            "Do not claim priority or novelty unless independently verified."
+          ],
+          "id": "problem-gap",
+          "label": "State the problem and precise gap",
+          "required": true
+        },
+        {
+          "checks": [
+            "State what makes the approach work conceptually, then name the mechanism.",
+            "Do not enumerate low-level modules that do not affect the paper-level contribution."
+          ],
+          "id": "insight-mechanism",
+          "label": "Connect insight to mechanism",
+          "required": true
+        },
+        {
+          "checks": [
+            "Prefer one decision-relevant verified result over 'extensive experiments demonstrate'.",
+            "Distinguish absolute change from relative change and percentage points.",
+            "End with the supported implication or boundary, not a universal superiority claim."
+          ],
+          "id": "evidence-scope",
+          "label": "Report evidence with scope",
+          "required": true
+        }
+      ],
+      "purpose": "Produce a compact summary whose problem, contribution, evidence, and scope exactly match the completed paper.",
+      "related_entry_ids": [
+        "general.sentence-pattern.motivate.001",
+        "general.sentence-pattern.gap.001",
+        "general.sentence-pattern.contribution.001",
+        "general.sentence-pattern.quantify.001",
+        "general.usage-note.generalization-axis.001",
+        "general.usage-note.state-of-the-art.001"
+      ],
+      "section": "abstract",
+      "templates": [
+        {
+          "id": "empirical-method",
+          "name": "Empirical method paper",
+          "sequence": [
+            "Task and operational context.",
+            "Specific limitation under a named setting or assumption.",
+            "Core insight.",
+            "Method and mechanism.",
+            "Verified principal comparison with evaluation scope.",
+            "Supported implication or explicit boundary."
+          ],
+          "when": "The main contribution is a method evaluated on benchmarks, simulation, or real systems."
+        },
+        {
+          "id": "resource-benchmark",
+          "name": "Resource or benchmark paper",
+          "sequence": [
+            "Capability that cannot currently be measured well.",
+            "Coverage or validity gap in existing resources.",
+            "What the new resource contains and how it is constructed.",
+            "What diagnostic dimensions or tasks it enables.",
+            "Verified baseline findings and what they reveal.",
+            "Access, scope, or limitation statement."
+          ],
+          "when": "The main contribution is a dataset, environment, benchmark, or evaluation protocol."
+        },
+        {
+          "id": "theory",
+          "name": "Theory-led paper",
+          "sequence": [
+            "Problem and formal setting.",
+            "Limitation of existing guarantees.",
+            "Main result with its assumptions.",
+            "Key proof or algorithmic idea at a high level.",
+            "Implication relative to the prior bound or setting.",
+            "Empirical evidence only if it is actually part of the contribution."
+          ],
+          "when": "The main contribution is a theorem, guarantee, bound, or analysis."
+        }
+      ],
+      "use_when": "Drafting or revising an AI-paper abstract after the methods and principal results are known.",
+      "verification": [
+        "The abstract uses the same task, method name, metric names, and comparison direction as the body.",
+        "Every number matches the final table or theorem, including units, denominator, and aggregation.",
+        "No conclusion extends beyond the evaluated datasets, tasks, embodiments, shifts, or assumptions.",
+        "The target venue's current length, paragraph, citation, and formatting rules were checked separately."
+      ]
+    },
+    {
+      "aliases": [
+        "introduction",
+        "intro",
+        "引言",
+        "贡献段"
+      ],
+      "avoid": [
+        "A universal six-paragraph requirement; use functional moves and merge them when the argument benefits.",
+        "A straw-man progression from a deliberately weak 'naive' solution to the proposed method.",
+        "Chronological paper listing, unverified 'first' claims, and generic importance claims.",
+        "Contribution bullets that mix a task definition, one module, and a result at incompatible levels."
+      ],
+      "guide_type": "section_protocol",
+      "id": "introduction",
+      "inputs": [
+        "Paper type: method, new problem or setting, resource, empirical study, or theory.",
+        "Task definition, relevant application stakes, and intended reader prerequisites.",
+        "Closest approach families and the verified axes on which they differ.",
+        "The exact limitation addressed, including its assumptions and practical consequence.",
+        "Core insight, design elements, contribution claims, and the experiment or theorem supporting each claim."
+      ],
+      "label": "Introduction: limitation–insight–evidence alignment",
+      "moves": [
+        {
+          "checks": [
+            "Define the operational task before expanding to broader motivation.",
+            "Use a concrete running scenario only when it is real and technically representative.",
+            "Avoid claiming that all prior work shares one weakness."
+          ],
+          "id": "scope-problem",
+          "label": "Establish scope and problem",
+          "required": true
+        },
+        {
+          "checks": [
+            "Group work by representation, supervision, data, decision mechanism, interaction regime, or deployment assumption.",
+            "Use only verified literature relationships and reserve detailed chronology for Related Work.",
+            "Make the comparison axis explicit before stating the limitation."
+          ],
+          "id": "approach-map",
+          "label": "Map closest approaches",
+          "required": true
+        },
+        {
+          "checks": [
+            "Name the condition under which the limitation matters.",
+            "Separate lack of evaluation from evidence of failure.",
+            "Do not turn a design difference into a defect without evidence."
+          ],
+          "id": "gap-consequence",
+          "label": "State gap and consequence",
+          "required": true
+        },
+        {
+          "checks": [
+            "State the key insight before the component list.",
+            "Map each emphasized challenge to a design choice.",
+            "Explain the causal claim only as strongly as the design and analysis allow."
+          ],
+          "id": "insight-design",
+          "label": "Bridge insight to design",
+          "required": true
+        },
+        {
+          "checks": [
+            "Write parallel contributions at the same abstraction level.",
+            "Pair each empirical contribution with a named evaluation question or display.",
+            "Replace 'extensive experiments' with the evaluated axes and principal finding.",
+            "Preview only outcomes the supplied results state: never add a comparison, superiority claim, or guarantee word such as 'consistently' or 'ensures' that the material does not contain."
+          ],
+          "id": "contributions-evidence",
+          "label": "Pair contributions with evidence",
+          "required": true
+        },
+        {
+          "checks": [
+            "State assumptions or non-goals that prevent an overbroad reading.",
+            "Keep the boundary consistent with the Limitations and Experiments sections."
+          ],
+          "id": "scope-boundary",
+          "label": "Close with scope",
+          "required": false
+        }
+      ],
+      "purpose": "Build an argument that moves from a scoped problem to a verified gap, design insight, contribution, and evidence without relying on a fixed paragraph count.",
+      "related_entry_ids": [
+        "general.sentence-pattern.motivate.001",
+        "general.sentence-pattern.gap.001",
+        "general.sentence-pattern.contribution.001",
+        "general.sentence-pattern.scope.001",
+        "general.sentence-pattern.related-family.001",
+        "general.sentence-pattern.related-synthesis.001"
+      ],
+      "section": "introduction",
+      "templates": [
+        {
+          "id": "technique-paper",
+          "name": "Technique paper",
+          "sequence": [
+            "Operational task and stakes.",
+            "Closest method families and relevant comparison axes.",
+            "Limitation under a named condition.",
+            "Key insight and method overview.",
+            "Contribution–evidence pairs.",
+            "Supported scope or non-goal."
+          ],
+          "when": "A new method addresses a known task."
+        },
+        {
+          "id": "new-setting-resource",
+          "name": "New setting or resource",
+          "sequence": [
+            "Missing capability or evaluation need.",
+            "Why existing settings fail to measure it.",
+            "Definition and design principles of the new setting.",
+            "Coverage, validity, and diagnostic axes.",
+            "Baseline findings and remaining gap.",
+            "Availability and boundary."
+          ],
+          "when": "The paper primarily introduces a task, dataset, benchmark, or problem formulation."
+        },
+        {
+          "id": "theory-analysis",
+          "name": "Theory or analysis paper",
+          "sequence": [
+            "Formal problem and why it matters.",
+            "Known results and the unresolved regime.",
+            "Main insight or analytical device.",
+            "Principal result and assumptions.",
+            "Consequences and evidence.",
+            "Limits of the analysis."
+          ],
+          "when": "The main contribution is explanatory or formal rather than architectural."
+        }
+      ],
+      "use_when": "Planning, drafting, or restructuring an AI-paper Introduction.",
+      "verification": [
+        "Construct a matrix from limitation to challenge, design choice, contribution, and supporting experiment or theorem.",
+        "Check every literature statement against primary papers rather than the library or another paper's Related Work.",
+        "Ensure contribution wording matches the Abstract and does not exceed the evidence summarized later.",
+        "Read the Introduction once without citations: the logical bridge should remain clear."
+      ]
+    },
+    {
+      "aliases": [
+        "experiments",
+        "evaluation",
+        "实验",
+        "实验设置",
+        "experimental setup"
+      ],
+      "avoid": [
+        "Calling a study comprehensive because it contains many datasets without covering the paper's actual claim axes.",
+        "Reporting only favorable seeds, tasks, checkpoints, qualitative examples, or hyperparameter ranges.",
+        "Attributing a gain to one component from a tiny or noisy ablation difference.",
+        "Treating simulation success, offline metrics, open-loop prediction, and closed-loop deployment as interchangeable evidence.",
+        "Using an appendix pointer to replace the minimum protocol information needed to interpret a main result."
+      ],
+      "domain_overlays": [
+        {
+          "checks": [
+            "Separate environment interactions, gradient updates, episodes, wall-clock time, replay ratio, and offline transition count; never report them as one generic sample budget.",
+            "Name the environment version, observation and action interfaces, horizon or termination rule, reward convention, and any score normalization reference.",
+            "Report evaluation episodes per seed, independent training seeds, aggregation across tasks, uncertainty, and the checkpoint-selection protocol.",
+            "For offline RL, describe dataset provenance, behavior-policy mixture, support or coverage diagnostics, and whether any online interaction or evaluation data informed tuning."
+          ],
+          "id": "reinforcement_learning",
+          "label": "Reinforcement learning"
+        },
+        {
+          "checks": [
+            "Separate one-step prediction, multi-step open-loop rollout, closed-loop planning, and downstream policy evidence; none is a substitute for another.",
+            "Report prediction target, latent or observation space, action conditioning, context length, rollout horizon, replanning interval, and stochastic sampling procedure.",
+            "State whether planning uses ground-truth observations between decisions and whether reward, value, termination, or uncertainty heads are learned.",
+            "Evaluate compounding error across horizons and connect control claims to return, success, constraint, or planning metrics under a named interaction budget."
+          ],
+          "id": "world_models",
+          "label": "World models"
+        },
+        {
+          "checks": [
+            "Name simulator and real-system conditions separately, including platform, sensing, workspace, control loop, safety constraints, and sim-to-real differences.",
+            "Define a trial, reset, intervention, timeout, partial completion, and success denominator; report per-task counts and uncertainty rather than only a pooled percentage.",
+            "Describe demonstrations by task, trajectory, timestep, operator, embodiment, and collection policy when these affect data comparability.",
+            "Make held-out objects, scenes, tasks, instructions, users, and embodiments distinct generalization axes and disclose selection on any held-out condition."
+          ],
+          "id": "embodied_ai",
+          "label": "Embodied AI and robot learning"
+        },
+        {
+          "checks": [
+            "Report pretraining and robot data mixtures, embodiment-specific heads, action representation, prediction horizon, execution horizon, and feedback or replanning interval.",
+            "Separate model-query latency, action-chunk generation time, effective control frequency, end-to-end task time, and hardware or precision conditions.",
+            "State whether evaluation is open-loop prediction, closed-loop control, simulation, or physical deployment and avoid transferring conclusions across those regimes.",
+            "Name instruction, object, scene, task, and embodiment splits separately; report adaptation, prompting, fine-tuning, or calibration used at evaluation time."
+          ],
+          "id": "vision_language_action",
+          "label": "Vision-language-action models"
+        }
+      ],
+      "guide_type": "section_protocol",
+      "id": "experiments",
+      "inputs": [
+        "Empirical claim list and one research question per claim.",
+        "Datasets, tasks, splits, environments, embodiments, populations, and held-out units.",
+        "Metrics with direction, units, denominator, aggregation unit, and decision relevance.",
+        "Baseline implementations, training data, pretraining, tuning, parameter, compute, and interaction budgets.",
+        "Seeds or trials, checkpoint and hyperparameter selection protocol, uncertainty statistic, and statistical tests when used.",
+        "Hardware, software versions, training and evaluation compute, real-system safety constraints, and failure records."
+      ],
+      "label": "Experiments: claim-to-evidence protocol",
+      "moves": [
+        {
+          "checks": [
+            "For every claim, record research question, comparison axis, protocol, metric, display, and allowed interpretation.",
+            "Place claim-critical evidence in the main paper when the venue warns that reviewers may not consult appendices.",
+            "Remove experiments that do not test a stated claim or label them exploratory."
+          ],
+          "id": "claim-evidence-matrix",
+          "label": "Create the claim–evidence matrix",
+          "required": true
+        },
+        {
+          "checks": [
+            "Describe task, data provenance, split construction, held-out unit, and evaluation population.",
+            "For embodied work, distinguish simulation from real-system trials and name the control loop, intervention, reset, and success denominator.",
+            "For RL, distinguish environment steps, gradient steps, episodes, wall-clock time, and offline data size."
+          ],
+          "id": "evaluation-scope",
+          "label": "Define evaluation scope",
+          "required": true
+        },
+        {
+          "checks": [
+            "State whether higher or lower is better, the unit, and the averaging unit.",
+            "Report the number of independent seeds, runs, scenes, tasks, episodes, or trials and avoid treating correlated samples as independent.",
+            "Name mean, median, standard deviation, standard error, confidence interval, or percentile explicitly."
+          ],
+          "id": "metrics-statistics",
+          "label": "Define metrics and statistical unit",
+          "required": true
+        },
+        {
+          "checks": [
+            "Record implementation source, version, reproduction changes, and tuning protocol for each baseline.",
+            "Disclose material differences in pretraining data, model scale, supervision, compute, and interaction budget.",
+            "Do not bold a result as best when protocols are not comparable."
+          ],
+          "id": "baseline-fairness",
+          "label": "Establish baseline fairness",
+          "required": true
+        },
+        {
+          "checks": [
+            "Lead each result paragraph with the question or comparison axis.",
+            "Point to the display, quantify the relevant difference, state consistency or exceptions, then give a calibrated interpretation.",
+            "Report null, negative, unstable, or adverse results when they bear on the claim."
+          ],
+          "id": "main-results",
+          "label": "Answer the primary research questions",
+          "required": true
+        },
+        {
+          "checks": [
+            "Use ablation for component or mechanism claims, generalization for named shifts, robustness for named perturbations, and efficiency for named resources.",
+            "Add sensitivity or scaling analysis when a conclusion depends on a chosen hyperparameter or scale.",
+            "Include qualitative examples and failure cases when metrics conceal behavior relevant to deployment."
+          ],
+          "id": "targeted-analysis",
+          "label": "Add only claim-relevant analyses",
+          "required": false
+        },
+        {
+          "checks": [
+            "Provide enough implementation and evaluation detail to reconstruct the reported protocol.",
+            "State code, data, simulator, benchmark, and model availability only as actually provided.",
+            "Use the target venue's current reproducibility checklist or statement and point to manuscript locations."
+          ],
+          "id": "reproducibility",
+          "label": "Close reproducibility gaps",
+          "required": true
+        }
+      ],
+      "purpose": "Design and write an experimental section in which each major empirical claim is tested under an explicit protocol and bounded interpretation.",
+      "related_entry_ids": [
+        "general.sentence-pattern.fair-comparison.001",
+        "general.sentence-pattern.reproducibility-default.001",
+        "general.sentence-pattern.ablation.001",
+        "general.sentence-pattern.quantify.001",
+        "general.sentence-pattern.rebuttal-matched-budget.001",
+        "general.usage-note.generalization-axis.001",
+        "general.usage-note.significant.001"
+      ],
+      "section": "experiments",
+      "templates": [
+        {
+          "id": "standard-empirical",
+          "name": "Standard empirical evaluation",
+          "sequence": [
+            "Research questions or evaluation goals.",
+            "Tasks, datasets, splits, and metrics.",
+            "Baselines and fairness controls.",
+            "Implementation, selection, and statistical protocol.",
+            "Main results organized by research question.",
+            "Ablation or mechanism analysis.",
+            "Generalization, robustness, efficiency, qualitative behavior, or failures only as claim-relevant.",
+            "Scope summary and appendix pointers."
+          ],
+          "when": "The paper has benchmarked quantitative claims."
+        },
+        {
+          "id": "real-robot",
+          "name": "Real-robot or real-system evaluation",
+          "sequence": [
+            "Platform, sensing, control frequency, workspace, safety protocol, and task definitions.",
+            "Trial independence, reset procedure, intervention policy, denominator, and success criteria.",
+            "Training data and sim-to-real or cross-embodiment conditions.",
+            "Matched baselines and deployment latency.",
+            "Per-task result counts with uncertainty.",
+            "Representative failures and safety-relevant limitations."
+          ],
+          "when": "Physical deployment or human intervention is part of the evidence."
+        },
+        {
+          "id": "theory-plus-empirical",
+          "name": "Theory with supporting experiments",
+          "sequence": [
+            "Question tied to the theorem or assumption.",
+            "Synthetic setting that isolates the predicted behavior.",
+            "Metric and parameter regime.",
+            "Comparison with the predicted trend or bound.",
+            "Realistic setting, if used, clearly separated from proof.",
+            "Conditions where empirical behavior departs from the theory."
+          ],
+          "when": "Experiments illustrate or stress-test a formal result."
+        }
+      ],
+      "use_when": "Planning or writing the complete empirical evaluation, before selecting a specialized table or analysis guide.",
+      "verification": [
+        "Every main empirical claim has a visible row in the claim–evidence matrix.",
+        "Numbers and method labels agree across Abstract, Experiments, captions, tables, figures, and appendix.",
+        "Absolute changes, relative changes, and percentage-point changes are labeled correctly.",
+        "Comparison conclusions name the matched and unmatched resources.",
+        "Metric direction, units, denominator, number of runs, and uncertainty are recoverable without guessing.",
+        "Supplement placement follows current venue rules; critical evidence is not hidden behind an optional review path."
+      ]
+    },
+    {
+      "aliases": [
+        "results analysis",
+        "experiment analysis",
+        "实验分析",
+        "结果分析",
+        "observations"
+      ],
+      "avoid": [
+        "Beginning every sentence with 'Table X shows' and paraphrasing the full table.",
+        "Using 'because' or 'due to' when an ablation only establishes association.",
+        "Describing a one-benchmark gain as general improvement.",
+        "Calling overlapping error bars a significance test or non-overlapping bars proof of a mechanism."
+      ],
+      "guide_type": "analysis_protocol",
+      "id": "experiments.analysis",
+      "inputs": [
+        "The research question and comparison axis.",
+        "Exact table or figure location and verified values.",
+        "Aggregation, uncertainty, and statistical unit.",
+        "Expected mechanism, plausible alternatives, exceptions, and failure cases."
+      ],
+      "label": "Experimental analysis: evidence before interpretation",
+      "moves": [
+        {
+          "checks": [
+            "Point to the display and identify the rows, columns, or trend relevant to the question.",
+            "Quantify the difference in the metric's natural unit and distinguish relative from absolute change.",
+            "Keep every number bound to the exact scope and denominator the material assigns it: never reattach an aggregate figure to a subset of tasks or a subset figure to the aggregate.",
+            "State whether the pattern is consistent across tasks, datasets, seeds, scales, or shifts."
+          ],
+          "id": "evidence",
+          "label": "State the evidence",
+          "required": true
+        },
+        {
+          "checks": [
+            "Use 'is consistent with' or 'suggests' for a mechanism not directly identified.",
+            "Name alternative explanations such as scale, data, tuning, or compute when they remain uncontrolled.",
+            "Do not equate lack of statistical significance with equivalence."
+          ],
+          "id": "interpretation",
+          "label": "Calibrate interpretation",
+          "required": true
+        },
+        {
+          "checks": [
+            "Identify settings where the advantage diminishes, reverses, or becomes unstable.",
+            "State quality–efficiency, robustness–accuracy, or data–compute trade-offs explicitly.",
+            "Connect a failure case to the claim it limits."
+          ],
+          "id": "boundary",
+          "label": "Report boundary and trade-off",
+          "required": true
+        }
+      ],
+      "purpose": "Turn verified results into precise analysis paragraphs without merely narrating a table or overstating a mechanism.",
+      "related_entry_ids": [
+        "general.phrase.results-suggest.001",
+        "general.sentence-pattern.causal-caution.001",
+        "general.sentence-pattern.quantify.001",
+        "general.usage-note.significant.001",
+        "general.usage-note.effectiveness.001"
+      ],
+      "section": "experiments",
+      "templates": [
+        {
+          "id": "result-paragraph",
+          "name": "Main result paragraph",
+          "sequence": [
+            "Question and display pointer.",
+            "Quantified main comparison.",
+            "Consistency across relevant settings.",
+            "Calibrated explanation.",
+            "Exception, uncertainty, or trade-off."
+          ],
+          "when": "A table or figure answers one primary research question."
+        },
+        {
+          "id": "ablation-paragraph",
+          "name": "Ablation paragraph",
+          "sequence": [
+            "Component question and full-model anchor.",
+            "Matched variant comparison.",
+            "Magnitude relative to uncertainty.",
+            "Interaction or non-additivity if modules are coupled.",
+            "Narrow conclusion about contribution, not universal necessity."
+          ],
+          "when": "Variants test components, losses, data sources, or design choices."
+        },
+        {
+          "id": "failure-paragraph",
+          "name": "Failure analysis paragraph",
+          "sequence": [
+            "Failure taxonomy and denominator.",
+            "Most frequent or consequential category.",
+            "Condition associated with the failure.",
+            "Plausible explanation separated from observed fact.",
+            "Implication for scope, deployment, or future evaluation."
+          ],
+          "when": "Failures are categorized qualitatively or quantitatively."
+        }
+      ],
+      "use_when": "Writing main-result, ablation, robustness, efficiency, or failure-analysis paragraphs after displays are finalized.",
+      "verification": [
+        "Every adjective such as consistent, substantial, stable, or efficient is tied to a visible statistic or named condition.",
+        "The prose does not repeat every cell; it selects the comparison that answers the stated question.",
+        "Interpretations preserve uncertainty and do not exceed the intervention or control structure.",
+        "Negative and anomalous results are not silently omitted from the described trend."
+      ]
+    },
+    {
+      "aliases": [
+        "table",
+        "tables",
+        "表格",
+        "caption",
+        "表注"
+      ],
+      "avoid": [
+        "Using decorative color or mandatory best/second-best colors.",
+        "Mixing percentages and fractions in one metric without explicit units.",
+        "Averaging metrics with incompatible scales into an unexplained overall score.",
+        "Packing setup details into tiny cells that reviewers cannot read.",
+        "Opening the caption with metric names instead of the compared systems, or repeating a per-metric higher-or-lower-is-better gloss when arrows or one collective note already define direction."
+      ],
+      "guide_type": "table_protocol",
+      "id": "experiments.table.common",
+      "inputs": [
+        "Research question and comparison axis.",
+        "Source data, analysis script, and exact mapping from cells to outputs.",
+        "Metric direction, units, denominator, aggregation, uncertainty, and number of independent runs.",
+        "Protocol differences in data, pretraining, compute, interaction, tuning, hardware, or evaluation."
+      ],
+      "label": "Tables: common construction and reporting standard",
+      "moves": [
+        {
+          "checks": [
+            "A reader should be able to state what comparison the table answers in one sentence.",
+            "Split unrelated settings or metrics when grouping obscures the decision."
+          ],
+          "id": "question",
+          "label": "Assign one primary question",
+          "required": true
+        },
+        {
+          "checks": [
+            "Open by naming the compared systems or methods; the first clause states what entities the table compares, not which metrics it lists.",
+            "Name task, dataset or environment, split, and evaluation setting.",
+            "Define metric direction, units, aggregation, uncertainty, number of runs, abbreviations, and emphasis rules; column arrows or one collective direction note suffice.",
+            "State consequential protocol differences or point to a precise footnote."
+          ],
+          "id": "caption",
+          "label": "Write a self-contained caption",
+          "required": true
+        },
+        {
+          "checks": [
+            "Group baselines by method family or protocol and keep row labels stable across tables.",
+            "Order columns by task, shift, or metric logic rather than by favorable outcome.",
+            "Use consistent precision justified by measurement uncertainty."
+          ],
+          "id": "body",
+          "label": "Structure rows and columns",
+          "required": true
+        },
+        {
+          "checks": [
+            "Do not use color as the only cue; define bold, underline, symbols, and arrows.",
+            "Distinguish zero, missing, not reported, and not applicable.",
+            "Prefer restrained horizontal rules and avoid vertical-rule clutter."
+          ],
+          "id": "encoding",
+          "label": "Use accessible, unambiguous encoding",
+          "required": true
+        },
+        {
+          "checks": [
+            "Every cited value and ranking in prose matches the table.",
+            "Cells trace to source data and transformations.",
+            "Emphasis compares only rows under a defensible common protocol."
+          ],
+          "id": "reconciliation",
+          "label": "Reconcile table and prose",
+          "required": true
+        }
+      ],
+      "purpose": "Make each table answer one research question with enough protocol information to interpret every comparison.",
+      "related_entry_ids": [
+        "general.sentence-pattern.fair-comparison.001",
+        "general.sentence-pattern.quantify.001",
+        "general.usage-note.respectively.001",
+        "general.usage-note.significant.001"
+      ],
+      "section": "experiments",
+      "templates": [
+        {
+          "id": "caption-shell",
+          "name": "General quantitative caption",
+          "sequence": [
+            "Which systems or methods are compared, and on what task or setting.",
+            "Protocol or split.",
+            "Metric names with arrows and units.",
+            "Statistic, uncertainty, and number of independent runs.",
+            "Meaning of emphasis and missing-value symbols.",
+            "Material protocol exceptions."
+          ],
+          "when": "The table reports comparable numeric results."
+        }
+      ],
+      "use_when": "Designing or auditing any quantitative experimental table.",
+      "verification": [
+        "The table remains interpretable when separated from the surrounding paragraph.",
+        "Bold or underline never implies a fair ranking across incomparable protocols.",
+        "Missing values use a documented symbol and are not encoded as zero.",
+        "The table is legible in grayscale and at final publication size.",
+        "No significance marker appears without a verified test, comparison, and correction policy when applicable."
+      ]
+    },
+    {
+      "aliases": [
+        "main results table",
+        "comparison table",
+        "主结果表",
+        "主表"
+      ],
+      "avoid": [
+        "Ranking a larger pretrained model against a from-scratch baseline as if architecture were the only difference.",
+        "Selecting baseline numbers from incompatible papers or evaluation protocols without a clear separator.",
+        "Using average rank or an overall score to conceal regressions on important tasks."
+      ],
+      "guide_type": "table_protocol",
+      "id": "experiments.table.main_results",
+      "inputs": [
+        "Proposed variants and verified baseline set.",
+        "Task or dataset groups and principal decision-relevant metrics.",
+        "Pretraining, data, model-scale, compute, interaction, and tuning differences.",
+        "Per-run values or verified aggregate statistics."
+      ],
+      "label": "Main-results table",
+      "moves": [
+        {
+          "checks": [
+            "Separate methods that use extra data, pretraining, privileged inputs, larger models, or different interaction budgets.",
+            "Include the strongest relevant baseline that can be evaluated fairly; explain omissions."
+          ],
+          "id": "baseline-groups",
+          "label": "Group comparable baselines",
+          "required": true
+        },
+        {
+          "checks": [
+            "Lead with the metric that answers the research question.",
+            "Add resource or safety metrics when the main claim depends on them.",
+            "Use an overall average only when component metrics are commensurate and the weighting is defined."
+          ],
+          "id": "metric-columns",
+          "label": "Prioritize claim-relevant metrics",
+          "required": true
+        },
+        {
+          "checks": [
+            "Apply best-result emphasis only within comparable row groups.",
+            "Do not hide uncertainty to make a small ranking difference appear decisive."
+          ],
+          "id": "ranking",
+          "label": "Define ranking scope",
+          "required": true
+        }
+      ],
+      "purpose": "Compare the proposed method with relevant baselines while making protocol equivalence and principal metrics visible.",
+      "related_entry_ids": [
+        "general.sentence-pattern.caption-main-results.001",
+        "general.sentence-pattern.fair-comparison.001",
+        "general.sentence-pattern.latency-protocol.001",
+        "general.sentence-pattern.rebuttal-matched-budget.001",
+        "general.sentence-pattern.quantify.001"
+      ],
+      "section": "experiments",
+      "templates": [
+        {
+          "id": "method-by-task",
+          "name": "Methods by tasks or datasets",
+          "sequence": [
+            "Rows: method families, then the proposed method and named variants.",
+            "Columns: protocol flags, task–metric groups, then a justified aggregate.",
+            "Caption: opens by naming the compared systems, then setting, split, metric directions, aggregation, runs, emphasis, and extra-resource flags.",
+            "Footnotes: implementation or protocol exceptions."
+          ],
+          "when": "The same methods are evaluated under a common protocol across multiple tasks."
+        }
+      ],
+      "use_when": "The central table supports the paper's primary empirical comparison.",
+      "verification": [
+        "Every baseline row identifies whether results are reproduced, taken from a source, or rerun.",
+        "The same checkpoint-selection and evaluation budget are used or differences are disclosed.",
+        "The prose quantifies the primary comparison instead of only claiming the best rank."
+      ]
+    },
+    {
+      "aliases": [
+        "ablation table",
+        "消融实验",
+        "组件分析",
+        "component study"
+      ],
+      "avoid": [
+        "Calling a hyperparameter sweep an ablation without defining the design claim.",
+        "Removing multiple coupled components in one row and attributing the change to one of them.",
+        "Reporting only the best seed or one favorable task."
+      ],
+      "guide_type": "table_protocol",
+      "id": "experiments.table.ablation",
+      "inputs": [
+        "Full model and the claim attached to each component or design choice.",
+        "Matched training data, initialization, optimization, compute, evaluation, and seeds.",
+        "Known or plausible component interactions.",
+        "Per-variant statistics and uncertainty."
+      ],
+      "label": "Ablation table",
+      "moves": [
+        {
+          "checks": [
+            "Use the full method as an explicit anchor.",
+            "Change one factor at a time unless the table explicitly tests an interaction.",
+            "Retune only under a declared common policy; disabling a component may change the best optimization settings."
+          ],
+          "id": "variant-design",
+          "label": "Design interpretable variants",
+          "required": true
+        },
+        {
+          "checks": [
+            "Add factorial or paired variants when components are theoretically coupled.",
+            "Do not add single-component drops as if effects were additive when interactions are expected."
+          ],
+          "id": "interaction",
+          "label": "Expose interactions",
+          "required": false
+        },
+        {
+          "checks": [
+            "Compare the effect magnitude with run-to-run uncertainty.",
+            "Conclude contribution under the tested configuration, not universal necessity.",
+            "Report removals that improve a metric and discuss the trade-off."
+          ],
+          "id": "conclusion",
+          "label": "Bound the conclusion",
+          "required": true
+        }
+      ],
+      "purpose": "Test component, loss, data, or design claims with matched variants and conclusions no stronger than the intervention supports.",
+      "related_entry_ids": [
+        "general.sentence-pattern.ablation.001",
+        "general.sentence-pattern.causal-caution.001",
+        "general.sentence-pattern.reproducibility-default.001"
+      ],
+      "section": "experiments",
+      "templates": [
+        {
+          "id": "component-matrix",
+          "name": "Component presence matrix",
+          "sequence": [
+            "Rows: base, incremental or factorial variants, and full method.",
+            "Columns: explicit component indicators followed by claim-relevant metrics.",
+            "Caption: opens by naming the ablated system, then matched resources, seeds, uncertainty, and full-model definition.",
+            "Analysis: largest supported effect, interaction, uncertainty, and exception."
+          ],
+          "when": "Several discrete modules are toggled."
+        }
+      ],
+      "use_when": "A table compares the full method with controlled variants.",
+      "verification": [
+        "All variants use the declared matched protocol.",
+        "The table includes the actual full method used for the main result.",
+        "Component names are identical in Method, table, caption, and prose.",
+        "Ablation claims do not rely on differences smaller than the reported uncertainty without further analysis."
+      ]
+    },
+    {
+      "aliases": [
+        "generalization table",
+        "robustness table",
+        "泛化表",
+        "鲁棒性表",
+        "unseen evaluation"
+      ],
+      "avoid": [
+        "Labeling a random example split as novel-task or novel-environment generalization.",
+        "Reporting only shifted results and hiding degradation in the reference condition.",
+        "Tuning on the test shift while describing it as unseen."
+      ],
+      "guide_type": "table_protocol",
+      "id": "experiments.table.generalization",
+      "inputs": [
+        "Training distribution and exact held-out unit.",
+        "Reference, shifted, and severity conditions.",
+        "Metric, denominator, seeds or trials, and uncertainty.",
+        "Whether model selection used any shifted-condition information."
+      ],
+      "label": "Generalization and robustness table",
+      "moves": [
+        {
+          "checks": [
+            "Name what is unseen and how it was withheld.",
+            "Separate interpolation, compositional recombination, domain shift, and open-set evaluation."
+          ],
+          "id": "shift-axis",
+          "label": "Define the shift axis",
+          "required": true
+        },
+        {
+          "checks": [
+            "Report in-distribution or seen-condition performance beside shifted performance.",
+            "Make accuracy–robustness trade-offs visible."
+          ],
+          "id": "reference-condition",
+          "label": "Retain a reference condition",
+          "required": true
+        },
+        {
+          "checks": [
+            "State which data selected hyperparameters and checkpoints.",
+            "Do not call a condition held out if it influenced tuning or prompt selection."
+          ],
+          "id": "selection-leakage",
+          "label": "Audit selection leakage",
+          "required": true
+        }
+      ],
+      "purpose": "Make the training–evaluation shift or perturbation explicit and report performance across both reference and shifted conditions.",
+      "related_entry_ids": [
+        "general.usage-note.generalization-axis.001",
+        "general.sentence-pattern.scope.001",
+        "general.sentence-pattern.quantify.001"
+      ],
+      "section": "experiments",
+      "templates": [
+        {
+          "id": "train-test-shift",
+          "name": "Training versus shifted evaluation",
+          "sequence": [
+            "Rows: methods under comparable training data.",
+            "Columns: seen reference, each named shift or severity, and a defined gap metric if useful.",
+            "Caption: opens by naming the compared systems, then held-out unit, selection protocol, metric, runs, uncertainty, and arrows.",
+            "Analysis: shifted-condition difference, reference trade-off, consistency, and residual failure."
+          ],
+          "when": "Methods are compared across seen and one or more unseen conditions."
+        }
+      ],
+      "use_when": "Claims concern unseen tasks, objects, environments, embodiments, distributions, corruptions, or perturbations.",
+      "verification": [
+        "The held-out definition can be reconstructed from the caption or referenced setup.",
+        "The term out-of-distribution is tied to a specific changed variable.",
+        "Any robustness average states the perturbation set and weighting.",
+        "The conclusion does not generalize beyond the sampled shift."
+      ]
+    },
+    {
+      "aliases": [
+        "efficiency table",
+        "latency table",
+        "compute table",
+        "效率表",
+        "部署效率"
+      ],
+      "avoid": [
+        "Calling a method efficient solely because it has fewer parameters.",
+        "Comparing latency measured on different hardware without separation.",
+        "Reporting throughput at a large batch as single-sample latency.",
+        "Ignoring preprocessing, communication, simulator, or action-decoding time when it dominates deployment."
+      ],
+      "guide_type": "table_protocol",
+      "id": "experiments.table.efficiency",
+      "inputs": [
+        "Quality metric and the exact resource axis.",
+        "Hardware, software, precision, batch size, sequence length, input resolution, and concurrency.",
+        "Training data or interaction budget and stopping rule.",
+        "Warm-up, synchronization, preprocessing, and measurement window."
+      ],
+      "label": "Efficiency and deployment table",
+      "moves": [
+        {
+          "checks": [
+            "Distinguish parameters, FLOPs, accelerator-hours, wall-clock time, peak memory, latency, throughput, energy, environment steps, and demonstrations.",
+            "Do not use sample efficiency when only optimization steps are reduced."
+          ],
+          "id": "resource-definition",
+          "label": "Define the resource",
+          "required": true
+        },
+        {
+          "checks": [
+            "State hardware, precision, batch, input shape, warm-up, synchronization, and included preprocessing.",
+            "For robot policies, distinguish model inference latency from end-to-end control-loop frequency."
+          ],
+          "id": "measurement-protocol",
+          "label": "Fix the measurement protocol",
+          "required": true
+        },
+        {
+          "checks": [
+            "Report quality and resource in the same table or linked display.",
+            "Compare at matched quality, matched resource, or present the Pareto frontier."
+          ],
+          "id": "quality-resource",
+          "label": "Show the quality–resource trade-off",
+          "required": true
+        }
+      ],
+      "purpose": "Report quality jointly with the resource that defines efficiency under a reproducible measurement protocol.",
+      "related_entry_ids": [
+        "general.sentence-pattern.rebuttal-matched-budget.001",
+        "general.sentence-pattern.fair-comparison.001",
+        "vla.usage-note.control-latency.001",
+        "rl.term.sample-efficiency.001"
+      ],
+      "section": "experiments",
+      "templates": [
+        {
+          "id": "deployment-profile",
+          "name": "Deployment profile",
+          "sequence": [
+            "Rows: methods and deployment variants.",
+            "Columns: quality, parameters, peak memory, latency and/or throughput, and control rate when relevant.",
+            "Caption: opens by naming the compared systems, then hardware, precision, batch, input, timing boundary, repeats, and uncertainty; use column arrows or one collective direction note instead of per-metric higher-or-lower glosses.",
+            "Analysis: matched-quality or matched-resource comparison and trade-off."
+          ],
+          "when": "Methods are compared for inference or control deployment."
+        }
+      ],
+      "use_when": "Claims concern sample, compute, memory, parameter, latency, throughput, energy, or deployment efficiency.",
+      "verification": [
+        "Resource units and measurement boundaries are explicit.",
+        "Training and inference resources are not mixed in one undefined efficiency claim.",
+        "Reported throughput and latency use compatible batch and concurrency assumptions.",
+        "Any deployment claim is checked against the actual real-time requirement."
+      ]
+    },
+    {
+      "aliases": [
+        "sensitivity table",
+        "hyperparameter table",
+        "scaling table",
+        "敏感性分析",
+        "参数扫描"
+      ],
+      "avoid": [
+        "Showing a narrow range centered on the selected value without rationale.",
+        "Choosing a different best hyperparameter for every test task without disclosing the oracle.",
+        "Calling a three-point sweep a scaling law.",
+        "Hiding unstable or failed settings."
+      ],
+      "guide_type": "table_protocol",
+      "id": "experiments.table.sensitivity",
+      "inputs": [
+        "Parameter or scale, unit, candidate range, and rationale.",
+        "Selection set, selection objective, and whether the sweep was planned or exploratory.",
+        "Matched factors held constant across values.",
+        "Per-value metric, resource, runs, and uncertainty."
+      ],
+      "label": "Sensitivity, sweep, and scaling table",
+      "moves": [
+        {
+          "checks": [
+            "Report the full evaluated range in a meaningful linear or logarithmic order.",
+            "Mark the chosen default and state how it was selected.",
+            "Include boundary values that can reveal collapse when feasible."
+          ],
+          "id": "range",
+          "label": "Define the range and default",
+          "required": true
+        },
+        {
+          "checks": [
+            "State data, optimization, compute, evaluation, and seeds held constant.",
+            "When scale changes compute, report the changed resource rather than implying a one-factor intervention."
+          ],
+          "id": "controls",
+          "label": "Hold other factors fixed",
+          "required": true
+        },
+        {
+          "checks": [
+            "Report stability range, monotonicity, saturation, reversal, or instability.",
+            "Separate a tuning optimum from evidence for the proposed mechanism."
+          ],
+          "id": "conclusion",
+          "label": "Describe sensitivity, not just optimum",
+          "required": true
+        }
+      ],
+      "purpose": "Show how conclusions change with a hyperparameter, data scale, model scale, horizon, or evaluation budget without cherry-picking.",
+      "related_entry_ids": [
+        "general.sentence-pattern.reproducibility-default.001",
+        "general.sentence-pattern.quantify.001",
+        "general.sentence-pattern.causal-caution.001"
+      ],
+      "section": "experiments",
+      "templates": [
+        {
+          "id": "parameter-sweep",
+          "name": "Parameter or scale sweep",
+          "sequence": [
+            "Rows: ordered parameter or scale values with the default marked.",
+            "Columns: claim-relevant metric, uncertainty, and changed resource.",
+            "Caption: opens by naming the system under sensitivity analysis, then range, selection protocol, controls, runs, and default marker.",
+            "Analysis: trend, stable region, chosen point, and exception."
+          ],
+          "when": "One ordered variable is varied."
+        }
+      ],
+      "use_when": "A claim or design choice depends on a selected value, range, or scale.",
+      "verification": [
+        "All evaluated values are reported or omissions are explained.",
+        "Test-set performance did not select the final value unless explicitly declared as exploratory.",
+        "Scaling conclusions separate benefits of model size, data, and compute where the design permits.",
+        "The prose discusses the trend and uncertainty rather than only the maximum cell."
+      ]
+    },
+    {
+      "aliases": [
+        "related work",
+        "literature review",
+        "相关工作",
+        "文献综述"
+      ],
+      "avoid": [
+        "One sentence per paper with no cross-paper synthesis.",
+        "Citation clusters whose individual sources do not support the whole sentence.",
+        "Describing prior work only through limitations while omitting its intended setting or strength.",
+        "Using temporal recency as a proxy for relevance, quality, or novelty."
+      ],
+      "guide_type": "section_protocol",
+      "id": "related_work",
+      "inputs": [
+        "The exact task, setting, and claim that the literature discussion must contextualize.",
+        "Verified primary papers with bibliographic metadata and notes tied to specific passages.",
+        "A small set of organizing families and explicit comparison axes such as objective, supervision, data regime, assumptions, compute, or deployment setting.",
+        "The present paper's factual relationship to each relevant family, including shared assumptions and material differences."
+      ],
+      "label": "Related Work: evidence-verified synthesis and positioning",
+      "moves": [
+        {
+          "checks": [
+            "Open every primary paper used for a definition, historical claim, method characterization, or comparison.",
+            "Record what the cited passage supports and do not infer absent limitations from silence.",
+            "Use the library's source IDs only as navigation; never treat a corpus summary as the citation evidence."
+          ],
+          "id": "evidence-ledger",
+          "label": "Verify the literature evidence",
+          "required": true
+        },
+        {
+          "checks": [
+            "Group papers by the technical choice that matters to this paper rather than by arbitrary chronology.",
+            "State the comparison axis before naming examples from a family.",
+            "Separate families that solve different problem settings instead of ranking them together."
+          ],
+          "id": "family-taxonomy",
+          "label": "Build a task-relevant taxonomy",
+          "required": true
+        },
+        {
+          "checks": [
+            "Describe a recurring approach, then identify a verified assumption, mechanism, or scope difference.",
+            "Make the subject of every evaluative statement explicit: method, dataset, protocol, or result.",
+            "Distinguish reported evidence from the authors' interpretation and from this paper's synthesis."
+          ],
+          "id": "synthesis",
+          "label": "Synthesize similarities and differences",
+          "required": true
+        },
+        {
+          "checks": [
+            "State what is shared with prior work before the differentiating axis.",
+            "Name the changed assumption, supervision, data, mechanism, evaluation, or deployment constraint.",
+            "Do not imply superiority unless a verified comparable experiment supports it."
+          ],
+          "id": "position",
+          "label": "Position the present work precisely",
+          "required": true
+        }
+      ],
+      "purpose": "Organize verified primary papers into problem-relevant families, compare them on explicit axes, and locate the present work without paper-by-paper narration or unsupported priority claims.",
+      "related_entry_ids": [
+        "general.sentence-pattern.related-family.001",
+        "general.sentence-pattern.related-synthesis.001",
+        "general.sentence-pattern.position.001",
+        "general.sentence-pattern.contrast.001",
+        "general.usage-note.modality.001",
+        "general.usage-note.state-of-the-art.001"
+      ],
+      "section": "related_work",
+      "templates": [
+        {
+          "id": "taxonomy-first",
+          "name": "Taxonomy-first synthesis",
+          "sequence": [
+            "Define the shared task and organizing axis.",
+            "Describe the first family and its operative assumption.",
+            "Contrast the next family on the same axis.",
+            "Synthesize the unresolved boundary across families.",
+            "Position the present work on that boundary."
+          ],
+          "when": "Several approach families address a common task under different assumptions."
+        },
+        {
+          "id": "concept-evolution",
+          "name": "Concept evolution",
+          "sequence": [
+            "State the original formulation or capability with a primary source.",
+            "Describe the verified change introduced by subsequent work.",
+            "Compare the resulting families on a stable axis rather than merely listing years.",
+            "Identify the remaining problem addressed here."
+          ],
+          "when": "Chronology is scientifically meaningful because later work changes a specific assumption or capability."
+        }
+      ],
+      "use_when": "Planning, drafting, or revising an AI-paper Related Work section or a focused literature-positioning paragraph.",
+      "verification": [
+        "Every citation exists, has been opened, and supports the adjacent proposition at the stated scope.",
+        "Every comparison names a common axis and avoids ranking incompatible protocols.",
+        "Definitions are paraphrases unless a short quotation is explicitly marked and permitted.",
+        "The section represents close alternatives fairly, including assumptions that favor the present method.",
+        "No claim uses latest, first, only, most, or state-of-the-art without a separately verified comparison set."
+      ]
+    },
+    {
+      "aliases": [
+        "method",
+        "methodology",
+        "approach",
+        "方法",
+        "模型设计"
+      ],
+      "avoid": [
+        "Using intuitive prose in place of an operational definition.",
+        "Introducing modules as a list without interfaces or design rationale.",
+        "Hiding optimization, selection, or inference details behind 'we follow standard practice'.",
+        "Claiming a component causes an improvement when the design only establishes correlation."
+      ],
+      "guide_type": "section_protocol",
+      "id": "method",
+      "inputs": [
+        "Operational task definition, notation, inputs, outputs, supervision, and assumptions.",
+        "Component graph with tensor or state interfaces and the purpose of each component.",
+        "Objectives with signs, weights, estimators, gradient boundaries, and optimization schedule.",
+        "Training-data flow and deployment-time procedure, including what information is available at each stage.",
+        "Claim-to-mechanism map and material compute, latency, memory, or sampling requirements."
+      ],
+      "label": "Method: executable specification and design rationale",
+      "moves": [
+        {
+          "checks": [
+            "Define every symbol before or at first use and state tensor, sequence, or state semantics when ambiguity matters.",
+            "Separate training-only supervision or privileged information from inference-time inputs.",
+            "State assumptions and non-goals that limit what the formulation represents."
+          ],
+          "id": "formulation",
+          "label": "Define the problem and information boundary",
+          "required": true
+        },
+        {
+          "checks": [
+            "For each component, state its input, output, transformation, and downstream consumer.",
+            "Explain why the component addresses a named failure mode or claim rather than only naming its architecture.",
+            "Keep notation and component names identical across text, equations, figures, pseudocode, and appendices."
+          ],
+          "id": "interfaces",
+          "label": "Specify components through interfaces",
+          "required": true
+        },
+        {
+          "checks": [
+            "Define each loss or reward term, coefficient, estimator, normalization, mask, and reduction.",
+            "State where gradients flow or stop and which parameters each term updates.",
+            "Distinguish the optimized surrogate from the scientific quantity it is intended to improve."
+          ],
+          "id": "objective",
+          "label": "Make the learning objective auditable",
+          "required": true
+        },
+        {
+          "checks": [
+            "Give an ordered training procedure with data sampling, update ratios, target updates, and selection protocol where relevant.",
+            "Give an ordered inference or control procedure with state, decoding, replanning, stopping, and timing boundaries.",
+            "Surface stochastic choices, seeds, search budgets, or external modules that affect reproducibility."
+          ],
+          "id": "procedure",
+          "label": "Separate training and inference procedures",
+          "required": true
+        }
+      ],
+      "purpose": "Describe the problem formulation, components, objective, training procedure, and inference behavior precisely enough that a technically competent reader can reconstruct the method and test each claimed mechanism.",
+      "related_entry_ids": [
+        "general.sentence-pattern.define.001",
+        "general.sentence-pattern.intro-challenge-design.001",
+        "general.sentence-pattern.reproducibility-default.001",
+        "general.sentence-pattern.transition.001",
+        "general.usage-note.respectively.001"
+      ],
+      "section": "method",
+      "templates": [
+        {
+          "id": "model-objective-procedure",
+          "name": "Model–objective–procedure",
+          "sequence": [
+            "Problem formulation and notation.",
+            "System overview and component interfaces.",
+            "Representation or prediction modules.",
+            "Training objectives and optimization.",
+            "Inference or control procedure.",
+            "Complexity, assumptions, and implementation-critical details."
+          ],
+          "when": "A learned architecture is the main contribution."
+        },
+        {
+          "id": "algorithmic",
+          "name": "Algorithmic procedure",
+          "sequence": [
+            "Formal setting and objective.",
+            "Core update or search rule.",
+            "Estimator, approximation, and stopping conditions.",
+            "Pseudocode with all externally chosen quantities defined.",
+            "Computational requirements and applicable guarantees."
+          ],
+          "when": "The contribution is primarily an update rule, planner, optimizer, or decision procedure."
+        }
+      ],
+      "use_when": "Planning, drafting, or auditing an AI-paper Method section, algorithm description, or implementation-facing formulation.",
+      "verification": [
+        "A reader can trace every input to every output without guessing an unstated module or data source.",
+        "Equations, pseudocode, diagrams, and prose use consistent notation and ordering.",
+        "Train-time and test-time information, computation, and model variants are explicitly separated.",
+        "Every mechanism claim has a corresponding experiment, theorem, diagnostic, or explicitly limited interpretation.",
+        "Implementation details that materially affect the comparison are in the main text or clearly routed appendix."
+      ]
+    },
+    {
+      "aliases": [
+        "limitations",
+        "failure modes",
+        "局限性",
+        "不足"
+      ],
+      "avoid": [
+        "Generic statements that more data, compute, or future research may help.",
+        "Presenting a missing experiment as evidence of likely success or failure.",
+        "Minimizing a consequential failure because it occurs outside the average benchmark case.",
+        "Adding a limitation that contradicts the paper's main claim without reconciling the scope."
+      ],
+      "guide_type": "section_protocol",
+      "id": "limitations",
+      "inputs": [
+        "The paper's claims and the exact evidence supporting each claim.",
+        "Untested datasets, tasks, shifts, embodiments, populations, or deployment conditions that a reader might otherwise infer.",
+        "Observed failures, null results, sensitivity, safety concerns, and resource requirements.",
+        "Assumptions in the formulation, data, annotations, simulator, metrics, or evaluation protocol."
+      ],
+      "label": "Limitations: evidence boundary and consequential failure modes",
+      "moves": [
+        {
+          "checks": [
+            "Name the evaluated axis and the nearest unsupported extrapolation.",
+            "Distinguish not evaluated, evaluated with a null result, and observed failure.",
+            "Use calibrated modality so uncertainty is not converted into a negative result."
+          ],
+          "id": "claim-boundary",
+          "label": "Bound each claim",
+          "required": true
+        },
+        {
+          "checks": [
+            "State the condition under which the failure occurs and the observable consequence.",
+            "Connect the boundary to a data, model, objective, protocol, or deployment mechanism when evidence permits.",
+            "Identify who or what is affected when the limitation has safety, fairness, or operational consequences."
+          ],
+          "id": "failure-consequence",
+          "label": "Describe mechanism and consequence",
+          "required": true
+        },
+        {
+          "checks": [
+            "Describe existing safeguards or diagnostics as implemented facts.",
+            "Label proposed mitigations as future work and do not imply they are validated.",
+            "Prioritize limitations that materially change interpretation over generic statements that all methods could make."
+          ],
+          "id": "mitigation",
+          "label": "Separate current mitigation from future work",
+          "required": true
+        }
+      ],
+      "purpose": "State where the evidence, assumptions, resources, and deployment conditions stop supporting the paper's claims, and identify concrete failure modes without generic disclaimers.",
+      "related_entry_ids": [
+        "general.sentence-pattern.limitation.001",
+        "general.sentence-pattern.result-boundary.001",
+        "general.sentence-pattern.result-null.001",
+        "general.sentence-pattern.result-tradeoff.001",
+        "general.sentence-pattern.future.001",
+        "general.usage-note.generalization-axis.001",
+        "general.usage-note.modality.001"
+      ],
+      "section": "limitations",
+      "templates": [
+        {
+          "id": "empirical-boundary",
+          "name": "Empirical boundary",
+          "sequence": [
+            "Supported claim and evaluated scope.",
+            "Nearest untested or failed condition.",
+            "Observed evidence or reason for uncertainty.",
+            "Effect on interpretation or deployment.",
+            "Current mitigation and clearly labeled future validation."
+          ],
+          "when": "The main limitation is incomplete evaluation or a measured failure region."
+        },
+        {
+          "id": "assumption-resource",
+          "name": "Assumption or resource boundary",
+          "sequence": [
+            "Required assumption or resource.",
+            "Where it enters the method or evaluation.",
+            "What changes when it is violated or unavailable.",
+            "Scope of claims that remain valid."
+          ],
+          "when": "Performance relies on information, data, compute, hardware, or a formal assumption."
+        }
+      ],
+      "use_when": "Drafting a Limitations section, failure-boundary discussion, broader-impact caveat, or scoped response to an untested setting.",
+      "verification": [
+        "Every limitation is specific enough to suggest a test, affected claim, or deployment decision.",
+        "Observed failures, null results, and untested settings are linguistically distinct.",
+        "The section does not introduce evidence or causal explanations absent from the paper.",
+        "Resource and data limitations include units, scale, provenance, or access conditions where relevant.",
+        "Safety-relevant limitations are not hidden behind vague future-work language."
+      ]
+    },
+    {
+      "aliases": [
+        "conclusion",
+        "concluding remarks",
+        "结论",
+        "总结"
+      ],
+      "avoid": [
+        "Repeating the Abstract nearly verbatim.",
+        "Introducing a new experiment, citation, comparison, or technical mechanism.",
+        "Ending with an unbounded claim that the method opens broad new possibilities.",
+        "Omitting a trade-off that is necessary to interpret the main result."
+      ],
+      "guide_type": "section_protocol",
+      "id": "conclusion",
+      "inputs": [
+        "Final problem statement and contribution claims.",
+        "Principal verified result or theoretical implication with its evaluation scope.",
+        "The most consequential limitation or next research question.",
+        "Any broader implication that follows directly from the paper rather than from aspiration."
+      ],
+      "label": "Conclusion: contribution–evidence–scope closure",
+      "moves": [
+        {
+          "checks": [
+            "Restate the addressed problem at the same scope as the Introduction.",
+            "Name the core insight and contribution rather than listing every module.",
+            "Avoid copying the Abstract sentence by sentence."
+          ],
+          "id": "synthesis",
+          "label": "Synthesize problem and contribution",
+          "required": true
+        },
+        {
+          "checks": [
+            "State the principal verified finding and the setting in which it holds.",
+            "Retain exceptions, trade-offs, or uncertainty that materially affect the conclusion.",
+            "Do not upgrade a trend or benchmark result into a causal or universal claim."
+          ],
+          "id": "evidence",
+          "label": "Close the claim with evidence",
+          "required": true
+        },
+        {
+          "checks": [
+            "Identify a specific remaining boundary or research direction grounded in the findings.",
+            "State untested settings as untested: never assert that performance degrades, transfers, or persists in any setting the supplied evidence did not evaluate.",
+            "Separate demonstrated capability from plausible broader impact.",
+            "Introduce no new method detail, citation-dependent literature claim, or result."
+          ],
+          "id": "boundary",
+          "label": "End with a bounded implication",
+          "required": true
+        }
+      ],
+      "purpose": "Close the paper by restating the solved problem, core contribution, principal verified evidence, and remaining boundary without adding new claims or repeating the abstract verbatim.",
+      "related_entry_ids": [
+        "general.sentence-pattern.contribution.001",
+        "general.sentence-pattern.abstract-result.001",
+        "general.sentence-pattern.scope.001",
+        "general.sentence-pattern.result-boundary.001",
+        "general.sentence-pattern.result-tradeoff.001",
+        "general.sentence-pattern.future.001"
+      ],
+      "section": "conclusion",
+      "templates": [
+        {
+          "id": "empirical-closure",
+          "name": "Empirical paper closure",
+          "sequence": [
+            "Problem and core design insight.",
+            "Contribution at system or algorithm level.",
+            "Principal evidence with evaluation scope.",
+            "Trade-off or limitation that affects interpretation.",
+            "Specific next question or bounded implication."
+          ],
+          "when": "The main contribution is an empirically evaluated method or system."
+        },
+        {
+          "id": "theory-resource-closure",
+          "name": "Theory or resource closure",
+          "sequence": [
+            "Formal or measurement gap addressed.",
+            "Main result or resource contribution.",
+            "What the result enables or reveals under stated assumptions.",
+            "Boundary of validity or coverage.",
+            "Concrete follow-up enabled by the contribution."
+          ],
+          "when": "The main contribution is a theorem, benchmark, dataset, or analysis."
+        }
+      ],
+      "use_when": "Drafting or revising the final paper section after claims, results, and limitations are stable.",
+      "verification": [
+        "Every conclusion claim appears earlier with supporting evidence or analysis.",
+        "Numbers, comparisons, and scope match the final Results and Limitations sections.",
+        "No state-of-the-art, generalization, deployment, or causal claim is strengthened during summarization.",
+        "The final sentence communicates a specific implication or boundary rather than generic future work."
+      ]
+    },
+    {
+      "aliases": [
+        "rebuttal",
+        "reviewer response",
+        "response letter",
+        "审稿回复",
+        "答辩"
+      ],
+      "avoid": [
+        "Thanking the reviewer without answering the question.",
+        "Compressing answer, evidence, limits, and revision into one unbroken paragraph.",
+        "Restating the same number or claim in successive sentences as connective filler.",
+        "Claiming that the reviewer misunderstood when the manuscript omitted the needed distinction.",
+        "Conceding a presentation flaw or promising a clarification edit that the supplied facts do not establish.",
+        "Promising broad experiments without completed results, resources, or permission.",
+        "Using significance, fairness, or state-of-the-art language without the required evidence."
+      ],
+      "guide_type": "section_protocol",
+      "id": "rebuttal",
+      "inputs": [
+        "The reviewer's concern decomposed into factual questions or requested actions.",
+        "Existing manuscript evidence, table or figure locations, analyses, and exact results available before the response deadline.",
+        "The valid scope of the current claim and any aspect that should be conceded.",
+        "Specific text, figure, table, appendix, or experiment changes that are actually authorized and feasible."
+      ],
+      "label": "Rebuttal: answer–evidence–revision with fixed evidence",
+      "moves": [
+        {
+          "checks": [
+            "Separate misunderstanding, missing explanation, valid limitation, factual error, and request for new evidence.",
+            "Answer each atomic concern once and preserve the reviewer's strongest interpretation.",
+            "Do not frame disagreement as reviewer confusion when the manuscript was ambiguous.",
+            "Never manufacture a concession: when the supplied facts show the reviewer misread and do not establish a manuscript defect, correct the misreading politely instead of conceding an ambiguity or presentation flaw the facts do not state; a polite correction needs no apology, so do not apologize for a defect the facts do not establish."
+          ],
+          "id": "classify",
+          "label": "Classify the concern",
+          "required": true
+        },
+        {
+          "checks": [
+            "Begin with yes, no, agreement, correction, or a one-sentence scoped answer; one opening clause that names the reviewer's concern, with or without brief thanks, is acceptable only when the same or the next sentence delivers that answer.",
+            "State the claim boundary before explanatory background when scope is disputed.",
+            "Acknowledge a valid concern without conceding unrelated claims."
+          ],
+          "id": "answer",
+          "label": "Lead with the answer",
+          "required": true
+        },
+        {
+          "checks": [
+            "Give the exact table, figure, equation, appendix, or result and state what it supports.",
+            "Report metric, denominator, comparison, runs, and uncertainty when the response relies on a number.",
+            "If evidence is absent, say so and narrow the claim instead of inventing a result."
+          ],
+          "id": "evidence",
+          "label": "Point to existing evidence",
+          "required": true
+        },
+        {
+          "checks": [
+            "Commit a revision only when the task supplies an authorized change or the concern itself establishes a manuscript defect to fix; when nothing needs to change, state that the manuscript already addresses the concern instead of inventing a clarification edit.",
+            "Describe the exact manuscript change, and name a section, figure, or line location only when the supplied materials state one; otherwise describe the change without inventing a location.",
+            "Distinguish completed analysis from a promised revision or future experiment.",
+            "Ensure the revision resolves the stated concern rather than only adding volume."
+          ],
+          "id": "revision",
+          "label": "Commit to a concrete revision",
+          "required": false
+        },
+        {
+          "checks": [
+            "When both the supporting evidence and its limits are substantive, give the direct answer with its evidence in one paragraph and the evidence boundary with the committed revision in a following paragraph.",
+            "State each supplied fact or number exactly once; do not restate a result as a transition between points.",
+            "Prefer plain verb phrases over stacked nominalizations so the response reads as an author addressing a colleague."
+          ],
+          "id": "shape",
+          "label": "Shape the response as an answer-then-limits arc",
+          "required": true
+        }
+      ],
+      "purpose": "Respond directly to reviewer concerns using existing evidence, precise scope, and concrete manuscript changes while distinguishing correction, clarification, concession, and new work.",
+      "related_entry_ids": [
+        "general.sentence-pattern.rebuttal-answer.001",
+        "general.sentence-pattern.rebuttal-acknowledge.001",
+        "general.sentence-pattern.rebuttal-evidence.001",
+        "general.sentence-pattern.rebuttal-no-evidence.001",
+        "general.sentence-pattern.rebuttal-revision.001",
+        "general.sentence-pattern.rebuttal-concede.001",
+        "general.sentence-pattern.fair-comparison.001"
+      ],
+      "section": "rebuttal",
+      "templates": [
+        {
+          "id": "clarification",
+          "name": "Clarification with existing evidence",
+          "sequence": [
+            "Direct scoped answer.",
+            "Exact existing evidence and what it establishes.",
+            "Source of ambiguity in the current manuscript.",
+            "Concrete clarification and location."
+          ],
+          "when": "The concern is addressed by evidence already in the submission but presentation is unclear."
+        },
+        {
+          "id": "valid-limitation",
+          "name": "Valid limitation or missing evidence",
+          "sequence": [
+            "Explicit agreement on the valid concern.",
+            "What the current evidence does and does not establish.",
+            "Narrowed claim or limitation statement.",
+            "Feasible revision, with new experiments labeled only if actually run."
+          ],
+          "when": "The reviewer identifies an unsupported scope, untested condition, or real weakness."
+        }
+      ],
+      "use_when": "Drafting a conference rebuttal, response-to-reviewers document, or concise answer to a technical concern.",
+      "verification": [
+        "The scoped answer arrives within the first two sentences; any opening acknowledgment names the concern and never substitutes for the answer.",
+        "Answer-plus-evidence and limits-plus-revision occupy separate paragraphs when each is substantive.",
+        "No supplied fact or number is restated more than once.",
+        "Every numeric or comparative statement matches the submission or a clearly identified completed addition.",
+        "Promises correspond to concrete edits that can be delivered under the venue rules.",
+        "Tone is factual and respectful without exaggerating agreement or certainty.",
+        "No citation, experiment, result, or venue policy is invented.",
+        "No concession, manuscript defect, or revision commitment appears unless the supplied facts establish it."
+      ]
+    },
+    {
+      "aliases": [
+        "translation",
+        "Chinese to English",
+        "paper translation",
+        "中英翻译",
+        "论文翻译"
+      ],
+      "avoid": [
+        "Translating words in source order before identifying the proposition.",
+        "Replacing technical terms with stylistically varied near-synonyms.",
+        "Strengthening may, can, suggests, or is associated with into proves or demonstrates.",
+        "Adding an explanatory clause that is plausible but absent from the source."
+      ],
+      "guide_type": "section_protocol",
+      "id": "translation",
+      "inputs": [
+        "Source text plus its section, domain, intended readers, and neighboring sentences.",
+        "A terminology lock for method names, benchmark names, symbols, metrics, and repeated concepts.",
+        "The proposition structure: actor, action or relation, object, condition, comparison, evidence, negation, and modality.",
+        "Any primary source that must be checked for a technical definition or literature claim."
+      ],
+      "label": "Translation: proposition-first scientific English",
+      "moves": [
+        {
+          "checks": [
+            "Identify who or what performs each action and what condition limits the statement.",
+            "Preserve negation, causal direction, quantifiers, uncertainty, comparison direction, and temporal order.",
+            "Resolve omitted Chinese subjects only from context; surface ambiguity instead of guessing."
+          ],
+          "id": "proposition",
+          "label": "Recover the scientific proposition",
+          "required": true
+        },
+        {
+          "checks": [
+            "Retrieve the canonical term by domain without relying on literal dictionary equivalence.",
+            "Use one English form for each concept unless a distinction is intended.",
+            "Preserve symbols, method names, citation keys, metric units, dataset names, and capitalization."
+          ],
+          "id": "terminology",
+          "label": "Lock technical terminology",
+          "required": true
+        },
+        {
+          "checks": [
+            "Choose sentence structure for the section and intent rather than mirroring Chinese word order.",
+            "Use attested collocations only when they match the proposition and rewrite original patterns around the facts.",
+            "Make comparison axes and antecedents explicit where English readers would otherwise misread them."
+          ],
+          "id": "realization",
+          "label": "Realize the section-specific discourse move",
+          "required": true
+        },
+        {
+          "checks": [
+            "Compare the translation against the source for omissions, additions, stronger modality, and reversed relations.",
+            "Check all numbers, units, parentheses, citations, equations, and respectively mappings.",
+            "Do not add explanations, praise, novelty, or evidence absent from the source."
+          ],
+          "id": "backcheck",
+          "label": "Back-check fidelity",
+          "required": true
+        }
+      ],
+      "purpose": "Translate Chinese AI-paper prose by preserving the scientific proposition, terminology, notation, evidence strength, and discourse function before realizing it in field-standard English.",
+      "related_entry_ids": [
+        "general.sentence-pattern.translation-preserve.001",
+        "general.usage-note.modality.001",
+        "general.usage-note.respectively.001",
+        "general.usage-note.significant.001",
+        "general.usage-note.generalization-axis.001",
+        "general.anti-pattern.ability-noun.001",
+        "general.anti-pattern.perform-good.001"
+      ],
+      "section": "translation",
+      "templates": [
+        {
+          "id": "technical-prose",
+          "name": "Technical proposition",
+          "sequence": [
+            "Recover proposition and condition.",
+            "Lock terms and notation.",
+            "Select section-appropriate subject and verb.",
+            "Realize modifiers near the quantity or noun they constrain.",
+            "Back-check evidence strength and factual completeness."
+          ],
+          "when": "Translating method, experiment, or analysis prose."
+        },
+        {
+          "id": "definition-literature",
+          "name": "Definition or literature claim",
+          "sequence": [
+            "Identify the exact definitional or literature proposition.",
+            "Verify the primary source and canonical term.",
+            "Paraphrase rather than present source-derived wording as a quotation.",
+            "Preserve citation scope and distinguish synthesis from source claims."
+          ],
+          "when": "The source defines a concept or characterizes prior work."
+        }
+      ],
+      "use_when": "Translating or bilingual-editing AI-paper text, captions, rebuttals, definitions, or technical explanations from Chinese into English.",
+      "verification": [
+        "Back-translation preserves the same technical proposition, negation, comparison, and uncertainty.",
+        "Terminology is consistent with the paper and the target research community.",
+        "Every number, unit, symbol, citation, benchmark, and method name is unchanged unless correction was explicitly requested.",
+        "English syntax is natural for the target section and does not retain avoidable Chinese topic-comment structure.",
+        "No factual content, novelty claim, causal claim, or citation was added."
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "file": "main_results.tex",
+      "guide_id": "experiments.table.main_results",
+      "id": "main_results",
+      "label": "Main-results table",
+      "requires": [
+        "booktabs"
+      ],
+      "sha256": "70bfee2d6cc9b6c1a409e00a40d2b496c1e5d1215588ee2daee3dbeaaa2a3729",
+      "upstream_path": "templates/tables/main_results.tex",
+      "upstream_sha256": "e52794d8871d0b5e09852445028e06b3e0f447bf45047dc0742406fcdc066c57",
+      "license": "MIT",
+      "adaptation": "Wrapped long headers; removed manual vertical spacing."
+    },
+    {
+      "file": "ablation.tex",
+      "guide_id": "experiments.table.ablation",
+      "id": "ablation",
+      "label": "Ablation table",
+      "requires": [
+        "booktabs"
+      ],
+      "sha256": "5d58794cf7fb5a4fe92abf57934475ee3ea104057ae0d66bc7dff03295d13d32",
+      "upstream_path": "templates/tables/ablation.tex",
+      "upstream_sha256": "25139df9bc9716fcda03d8bd2633b7b9cd6a6134b6412d50897755f33180b228",
+      "license": "MIT",
+      "adaptation": "Wrapped long headers; removed manual vertical spacing."
+    },
+    {
+      "file": "generalization.tex",
+      "guide_id": "experiments.table.generalization",
+      "id": "generalization",
+      "label": "Generalization and robustness table",
+      "requires": [
+        "booktabs"
+      ],
+      "sha256": "cd8603d339e8231f82c1e491cb6bcf5d7f86b77c3863c3dc62f245e181bc06d4",
+      "upstream_path": "templates/tables/generalization.tex",
+      "upstream_sha256": "2244faa3cbbf7e0f03bc479ab3911caa99e4062f54871f2437ed0bf08ed02193",
+      "license": "MIT",
+      "adaptation": "Wrapped long headers; removed manual vertical spacing."
+    },
+    {
+      "file": "efficiency.tex",
+      "guide_id": "experiments.table.efficiency",
+      "id": "efficiency",
+      "label": "Efficiency and deployment table",
+      "requires": [
+        "booktabs"
+      ],
+      "sha256": "63a42c156c65e80f5b392323a3569506899342d16c675fd28726e4b6b578cd64",
+      "upstream_path": "templates/tables/efficiency.tex",
+      "upstream_sha256": "8051b01c5c65e3d17591fe5e66ba4f429fa977aa544cc9d08b7b2ce48396077f",
+      "license": "MIT",
+      "adaptation": "Wrapped long headers; removed manual vertical spacing."
+    },
+    {
+      "file": "sensitivity.tex",
+      "guide_id": "experiments.table.sensitivity",
+      "id": "sensitivity",
+      "label": "Sensitivity, sweep, and scaling table",
+      "requires": [
+        "booktabs"
+      ],
+      "sha256": "7486613b3103adcc927902b1e29f3764ec21e52b4fd43e7cfd73ab424fc93a9d",
+      "upstream_path": "templates/tables/sensitivity.tex",
+      "upstream_sha256": "2f76bf8fdbf6c45c99dd8a43be49d76ba288834a437ef1448fe2f6fa2954c2a8",
+      "license": "MIT",
+      "adaptation": "Wrapped long headers; removed manual vertical spacing."
+    }
+  ]
+}

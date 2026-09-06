@@ -166,12 +166,13 @@ With Pandoc, TeX and Poppler, rebuild examples and run the network-enabled templ
 ```bash
 python3 tools/render_examples.py --output-dir build/rendered-examples
 python3 tools/check_template_compatibility.py --output-dir build/template-check
+python3 tools/check_table_templates.py --output-dir build/table-check
 ```
 
 The latter downloads pinned public styles, checks SHA-256, and compiles in temporary
 directories with shell escape disabled. It does not upload manuscripts, edit
 styles or relicense upstream templates as MIT.
-[Validation details](docs/validation.md) · [Version changes and acceptance](docs/releases/v1.2.0.md)
+[Validation details](docs/validation.md) · [Version changes and acceptance](docs/releases/v1.3.0.md)
 
 ## FAQ
 
@@ -199,10 +200,19 @@ commands offer `--no-api`. Manuscript handling depends on your agent and provide
 the project does not promise an offline host. See [capabilities](skill-card.md)
 and [security](SECURITY.md).
 
-## v1.2: Venue and Writing Resources
+## v1.3: From Paper Design to Sentences and Tables
 
-**8 venues, 11 year/track/stage profiles, 8 compilation fixtures and 127 offline
-term/sentence cards.** These are different counts: ACL/EMNLP share official
+| Resource layer | Current inventory | Purpose |
+|---|---|---|
+| Venue profiles | 8 venues, 11 year/track/stage profiles | Resolve the exact submission target |
+| Official-format tests | 8 pinned compilation fixtures | Check tested styles and citation modes |
+| Whole-paper designs | 6 | Match argument structure to contribution |
+| Section/paragraph protocols | 16 protocols, 30 variants | Inputs, argument sequence, anti-patterns and evidence checks |
+| Language cards | 130, including 78 sentence patterns | Terms, expressions and misuse boundaries |
+| Experiment tables | 5 skeletons, 10 layout fixtures | Main results, ablation, generalization, efficiency and sensitivity |
+
+Do not sum these as "conference templates." Language patterns, section designs
+and generic tables are not official submission formats. ACL/EMNLP share official
 styles, NeurIPS has two citation fixtures, and ECCV main/rebuttal formats differ.
 
 | 2026 profile | Scope |
@@ -222,6 +232,9 @@ python3 scripts/venue_profile.py --list
 python3 scripts/venue_profile.py --id eccv-2026-main-rebuttal
 python3 scripts/writing_lookup.py "distribution shift" --domain rl --kind definition --limit 3
 python3 scripts/writing_lookup.py "result boundary" --section experiments --limit 3
+python3 scripts/writing_guide.py --list
+python3 scripts/writing_guide.py introduction --variant theory-analysis
+python3 scripts/writing_guide.py "efficiency table" --format json
 python3 scripts/pdf_layout_check.py paper.pdf --log main.log
 ```
 
@@ -231,11 +244,17 @@ python3 scripts/pdf_layout_check.py paper.pdf --log main.log
   scopes. Fidelity before concision; retain uncertainty, terms and unrun-work status.
 - **Language cards:** definitions, usage constraints, misuse warnings and source
   IDs. Technical and rhetorical queries are separate; cards are not claim evidence.
+- **Section protocols:** one guide or variant per lookup, with all evidence checks
+  retained. Mark material present, missing or inapplicable; never fabricate to fill a structure.
+- **Experiment tables:** replace `SL_*` with verified material. Wrapped headers,
+  `booktabs` and a separate MIT notice; lookup never fills cells, writes or executes TeX.
 - **PDF receipts:** font embedding, physical-page bounds, log errors and content
   hashes. Visual inspection of every page remains necessary.
 
 [Ten bilingual boundary cases](examples/academic-style/) ·
 [Argument blueprints](references/paper-blueprints.md) ·
+[16 protocols and five table skeletons](references/writing-protocols.md) ·
+[Worked protocol application](examples/protocol-application/README.md) ·
 [Five-upstream integration audit](UPSTREAM.md#selective-integration-audit-2026-09-06)
 
 This integrates methods and licensed records, not five agent stacks:
@@ -249,7 +268,8 @@ cards. No chat-cache scan, API-key discovery or automatic install is introduced.
 - [x] Reproducible empirical, theoretical and response examples in PDF and Word.
 - [x] Eight pinned template fixtures and citation/layout/editorial-policy regressions.
 - [x] Explicit venue/year/track/stage profiles and six argument designs.
-- [x] Five-upstream selective integration, 127 offline cards and academic-style cases.
+- [x] Five-upstream selective integration, 130 offline cards and academic-style cases.
+- [x] Super Library's 16 writer protocols, 30 variants and five tables with bounded offline lookup.
 - [ ] Additional years, camera-ready stages and verified official AAAI compilation.
 - [ ] Answer-withheld agent evaluations and independent human blind assessment.
 
@@ -262,7 +282,7 @@ Use [CITATION.cff](CITATION.cff) to cite this software.
 
 Adapted from [PaperSpine](https://github.com/WUBING2023/PaperSpine) V4 and maintained
 independently from [Super Skill Team](https://github.com/asimfish/super_skill_team).
-[MIT software](LICENSE), retaining upstream attribution. Original language cards
+[MIT software](LICENSE), retaining upstream attribution. Original language cards and protocol data
 are [CC0](DATA_LICENSE); linked papers are excluded.
 [Third-party notices](THIRD_PARTY_NOTICES.md) · [Provenance](UPSTREAM.md)
 

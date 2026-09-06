@@ -162,10 +162,14 @@ def collect_payload(root: Path) -> tuple[str, dict[str, bytes]]:
     if (any(name in payload for name in ("README.md", "README.en.md"))
             and "CONTRIBUTING.md" not in payload):
         raise DistributionError("CONTRIBUTING.md is required when distributing a README")
-    if "references/writing-library.json" in payload:
+    if any(name in payload for name in ("references/writing-library.json", "references/writing-protocols.json")):
         for name in ("DATA_LICENSE", "THIRD_PARTY_NOTICES.md"):
             if name not in payload:
                 raise DistributionError(f"Corpus distribution requires {name}")
+    if any(name.startswith("references/table-templates/") and name.endswith(".tex") for name in payload):
+        for name in ("references/table-templates/LICENSE", "THIRD_PARTY_NOTICES.md"):
+            if name not in payload:
+                raise DistributionError(f"Table distribution requires {name}")
     if "references/academic-expression.md" in payload and "THIRD_PARTY_NOTICES.md" not in payload:
         raise DistributionError("Adapted writing methods require THIRD_PARTY_NOTICES.md")
     version = payload["VERSION"].decode("utf-8").strip()

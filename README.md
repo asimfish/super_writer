@@ -148,11 +148,12 @@ python3 tools/build_release.py
 ```bash
 python3 tools/render_examples.py --output-dir build/rendered-examples
 python3 tools/check_template_compatibility.py --output-dir build/template-check
+python3 tools/check_table_templates.py --output-dir build/table-check
 ```
 
 模板检查只下载固定公开样式，核对 SHA-256 后在临时目录编译，关闭 shell escape；
 不上传论文，不修改官方样式，也不把上游模板重新许可为 MIT。
-[完整验证范围](docs/validation.md) · [本版变更与验收](docs/releases/v1.2.0.md)
+[完整验证范围](docs/validation.md) · [本版变更与验收](docs/releases/v1.3.0.md)
 
 ## FAQ
 
@@ -176,9 +177,18 @@ Word 结构检查也不能替代打开文档检查公式、图片和分页。
 写作材料如何进入模型取决于你的 agent 与供应商；本项目不承诺宿主完全离线。
 详见 [能力与数据边界](skill-card.md)、[安全说明](SECURITY.md)。
 
-## v1.2：会议档案与写作资源
+## v1.3：从整篇蓝图到句式与表格
 
-**8 个会议、11 个年份/赛道/阶段档案、8 个模板编译用例、127 张离线术语与句式卡片。**
+| 资源层 | 当前数量 | 用途 |
+|---|---|---|
+| 会议档案 | 8 个会议、11 个年份/赛道/阶段档案 | 按确切投稿目标查规则 |
+| 官方格式测试 | 8 个固定编译用例 | 检查受测样式及引用模式 |
+| 整篇论证蓝图 | 6 类 | 按贡献类型设计论文 |
+| 章节与段落协议 | 16 类、30 种结构变体 | 输入要求、论证顺序、禁用写法和证据检查 |
+| 语言卡片 | 130 张，其中 78 张句式卡 | 术语、表达及误用边界 |
+| 实验表格骨架 | 5 套、10 个布局编译用例 | 主结果、消融、泛化、效率、敏感性 |
+
+以上资源不能简单相加称作“顶会模板”。句式、章节结构和通用表格不是官方投稿格式。
 会议数量、模板用例数量和完整投稿适配不是一回事：ACL/EMNLP 共用官方样式，
 NeurIPS 分别测试数字与作者年份引用，ECCV 正文与 rebuttal 使用不同模板。
 
@@ -198,16 +208,23 @@ python3 scripts/venue_profile.py --list
 python3 scripts/venue_profile.py --id eccv-2026-main-rebuttal
 python3 scripts/writing_lookup.py "显著提升" --kind usage_note --limit 3
 python3 scripts/writing_lookup.py "distribution shift" --domain rl --kind definition --limit 3
+python3 scripts/writing_guide.py --list
+python3 scripts/writing_guide.py "引言" --variant theory-analysis
+python3 scripts/writing_guide.py "效率表" --format json
 python3 scripts/pdf_layout_check.py paper.pdf --log main.log
 ```
 
 - **论证蓝图：** 方法、理论、数据集/基准、系统效率、负结果/复现、综述/立场六类，不强套同一个章节结构。
 - **学术表达：** 区分只诊断、原位修改、局部改写和结构修订；先保真，再删冗余。保留不确定性、必要对比、术语和未完成实验的状态。
 - **术语卡片：** 保留定义、适用条件、误用提醒与来源标识。技术概念与写作目的分开检索，卡片不能充当实验或引用证据。
+- **章节协议：** 每次读取一个协议或变体，仍保留全部证据检查。将材料标为已有、缺失或不适用，不为填满结构而编造内容。
+- **实验表格：** 按实际数据替换 `SL_*`；表头已换行，保留 `booktabs` 与独立 MIT 声明。检索不会填数、写文件或执行 TeX。
 - **排版收据：** PDF 字体嵌入、物理页边界、日志错误及文件哈希；逐页目视检查仍不可省略。
 
 [十组中英文改写边界样例](examples/academic-style/) ·
 [论证蓝图](references/paper-blueprints.md) ·
+[16 类协议与 5 套表格目录](references/writing-protocols.md) ·
+[协议应用样例](examples/protocol-application/README.md) ·
 [五个上游的吸收与排除记录](UPSTREAM.md#selective-integration-audit-2026-09-06)
 
 吸收的是经审计的方法和有许可的语料，不是捆绑五套代理。保留 PaperSpine 的贡献与证据设计，
@@ -220,7 +237,8 @@ python3 scripts/pdf_layout_check.py paper.pdf --log main.log
 - [x] 可复算实证、理论短文、审稿回复样例和 PDF / Word 交付。
 - [x] 八个固定模板编译用例，以及引用、排版和编辑预算回归。
 - [x] 显式的会议、年份、赛道与阶段档案；六类论证蓝图。
-- [x] 选择性吸收五个上游，127 张离线卡片与学术表达边界样例。
+- [x] 选择性吸收五个上游，130 张离线卡片与学术表达边界样例。
+- [x] Super Library 的 16 类写作协议、30 种变体和 5 套实验表格；有界离线检索。
 - [ ] 更多年份、camera-ready 阶段和 AAAI 官方模板编译验证。
 - [ ] 无答案泄漏的 agent 行为评测与独立人类盲评。
 
@@ -232,7 +250,7 @@ python3 scripts/pdf_layout_check.py paper.pdf --log main.log
 
 基于 [PaperSpine](https://github.com/WUBING2023/PaperSpine) V4，从
 [Super Skill Team](https://github.com/asimfish/super_skill_team) 独立维护，采用
-[MIT License](LICENSE)，保留上游版权。原创术语卡片单独采用 [CC0](DATA_LICENSE)，
+[MIT License](LICENSE)，保留上游版权。原创语言卡片与协议数据单独采用 [CC0](DATA_LICENSE)，
 链接论文不在授权范围内。[第三方声明](THIRD_PARTY_NOTICES.md) · [来源与固定提交](UPSTREAM.md)。
 
 展示组织参考 [SuperTranslate](https://github.com/asimfish/super_translate)、

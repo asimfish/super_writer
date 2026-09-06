@@ -83,6 +83,27 @@ a nearest-profile fallback. Cards support language selection; their example
 results are not this paper's evidence. Query a technical term and a rhetorical
 function separately, with a bounded result count and optional `--max-chars`.
 
+## 章节结构与实验表格 / Protocols and Tables
+
+```bash
+python3 scripts/writing_guide.py --list
+python3 scripts/writing_guide.py "引言" --variant theory-analysis
+python3 scripts/writing_guide.py experiments.analysis --variant result-paragraph --format json
+python3 scripts/writing_guide.py "效率表" --format json
+```
+
+16 类协议包含 30 种结构变体；5 套 LaTeX 表格属于相应的表格协议，并非额外的会议格式。
+每次只读取当前单元所需协议，逐项区分已有、缺失、不适用的证据，再选择相关句式。
+`required` 表示需要检查，不代表必须编造正文、实验或局限性来填满结构。
+
+These commands are read-only and offline. Selecting a variant retains all
+evidence checks. An insufficient character budget fails without truncation;
+use `--max-chars` explicitly when needed. TeX keeps `SL_*` placeholders and
+does not compile until replaced with verified project material. The synthetic
+values in source-only rendering tests are never supplied by lookup.
+See the [inventory and contract](../references/writing-protocols.md) and
+[worked application](../examples/protocol-application/README.md).
+
 ```bash
 python3 scripts/pdf_layout_check.py /path/to/main.pdf --log /path/to/main.log
 ```

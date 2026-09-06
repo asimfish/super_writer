@@ -7,9 +7,15 @@
     "input_sha256": {
       "skills/super-library/references/index.json": "721e48a4ae4a9b401b1e9346b12c764bd02863f3bf4782c7bc1249871693469d",
       "library/compact_ids.json": "f04c60c98709db37de08f2a20f1b284ec5a70fd3c68dd4159ed3da32dea74862",
-      "DATA_LICENSE": "858aa43d09445eb1ae9b8aaede251569d3431d5e2bf40410794913b1a0f19648"
+      "DATA_LICENSE": "858aa43d09445eb1ae9b8aaede251569d3431d5e2bf40410794913b1a0f19648",
+      "LICENSE": "9e53589d75a510a23d6f238d68b23072bdb906a3e0365e48188edff24ccc12c5",
+      "templates/tables/main_results.tex": "e52794d8871d0b5e09852445028e06b3e0f447bf45047dc0742406fcdc066c57",
+      "templates/tables/ablation.tex": "25139df9bc9716fcda03d8bd2633b7b9cd6a6134b6412d50897755f33180b228",
+      "templates/tables/generalization.tex": "2244faa3cbbf7e0f03bc479ab3911caa99e4062f54871f2437ed0bf08ed02193",
+      "templates/tables/efficiency.tex": "8051b01c5c65e3d17591fe5e66ba4f429fa977aa544cc9d08b7b2ce48396077f",
+      "templates/tables/sensitivity.tex": "2f76bf8fdbf6c45c99dd8a43be49d76ba288834a437ef1448fe2f6fa2954c2a8"
     },
-    "selection": "reviewed/source_checked compact IDs plus general.* and vla.*, excluding attested collocations"
+    "selection": "reviewed/source_checked compact IDs plus general.*, vla.*, and all sentence_pattern cards, excluding attested collocations"
   },
   "scope": "Language discovery, not evidence for manuscript claims; linked works retain their own rights.",
   "taxonomy": {
@@ -771,6 +777,46 @@
       ],
       "topic_families": [
         "embodied_reasoning_agents"
+      ]
+    },
+    {
+      "avoid": "Do not treat 2D versus 3D representation as the only meaningful difference when memory and interaction regimes also differ.",
+      "domains": [
+        "embodied_ai"
+      ],
+      "examples": [
+        "Embodied approaches vary in their geometric representation ({geometry}), temporal memory ({memory}), interaction regime ({regime}), and supervision ({signals})."
+      ],
+      "expression": "Embodied systems should be grouped by geometry, memory, interaction, and supervision.",
+      "guidance": "Use only axes that materially separate the cited methods and verify every assigned category.",
+      "id": "emb.sentence-pattern.related-work-memory-geometry.001",
+      "intents": [
+        "position",
+        "compare"
+      ],
+      "kind": "sentence_pattern",
+      "meaning": "A Related Work scaffold that distinguishes representational and data assumptions instead of listing agents by publication date.",
+      "provenance": {
+        "note": "Original literature-synthesis scaffold, not a source-derived sentence.",
+        "type": "original_pattern"
+      },
+      "quality": {
+        "last_reviewed": "2026-07-30",
+        "status": "reviewed",
+        "tier": "gold"
+      },
+      "sections": [
+        "related_work"
+      ],
+      "source_ids": [],
+      "tags": [
+        "related-work",
+        "comparison-axis",
+        "embodied"
+      ],
+      "topic_families": [
+        "embodied_reasoning_agents",
+        "egocentric_3d_grounding"
       ]
     },
     {
@@ -4445,6 +4491,45 @@
       ]
     },
     {
+      "avoid": "Do not present offline, online, model-based, multi-agent, and constrained methods as directly comparable without a common problem setting.",
+      "domains": [
+        "reinforcement_learning"
+      ],
+      "examples": [
+        "These methods share {objective}, but differ in their data regime ({regimes}), interaction budget ({budgets}), information structure ({information}), and optimization objective ({objectives})."
+      ],
+      "expression": "RL literature should be organized by data regime, interaction budget, information structure, and optimization objective.",
+      "guidance": "Select the axes relevant to the cited family and explicitly mark changes in assumptions or supervision.",
+      "id": "rl.sentence-pattern.related-work-regime.001",
+      "intents": [
+        "position",
+        "compare"
+      ],
+      "kind": "sentence_pattern",
+      "meaning": "A Related Work scaffold for avoiding comparisons between methods that solve materially different reinforcement-learning problems.",
+      "provenance": {
+        "note": "Original literature-synthesis scaffold; paper assignments require verification.",
+        "type": "original_pattern"
+      },
+      "quality": {
+        "last_reviewed": "2026-07-30",
+        "status": "reviewed",
+        "tier": "gold"
+      },
+      "sections": [
+        "related_work"
+      ],
+      "source_ids": [],
+      "tags": [
+        "related-work",
+        "comparison-axis",
+        "RL"
+      ],
+      "topic_families": [
+        "rl_theory_evaluation"
+      ]
+    },
+    {
       "avoid": "Do not compare results taken from incompatible protocols without a caveat.",
       "domains": [
         "reinforcement_learning"
@@ -5388,6 +5473,47 @@
       "topic_families": [
         "world_model_general",
         "dynamics_representation"
+      ]
+    },
+    {
+      "avoid": "Do not collapse pixel prediction, occupancy forecasting, latent control models, and learned simulators into an undifferentiated list.",
+      "domains": [
+        "world_models"
+      ],
+      "examples": [
+        "Prior world models emphasize {prediction target}; among them, {family} additionally conditions on {control}, whereas {family} is evaluated through {decision use}."
+      ],
+      "expression": "Separate predictive fidelity, controllability, and decision utility when positioning world models.",
+      "guidance": "Verify each paper on the named axis and avoid inferring decision utility from media quality.",
+      "id": "wm.sentence-pattern.related-work-generation-control.001",
+      "intents": [
+        "position",
+        "compare",
+        "contrast"
+      ],
+      "kind": "sentence_pattern",
+      "meaning": "A Related Work organizer for distinguishing models that forecast observations from models that are action-controllable or validated through downstream decisions.",
+      "provenance": {
+        "note": "Original comparison scaffold; facts and citations must be supplied from primary papers.",
+        "type": "original_pattern"
+      },
+      "quality": {
+        "last_reviewed": "2026-07-30",
+        "status": "reviewed",
+        "tier": "gold"
+      },
+      "sections": [
+        "related_work"
+      ],
+      "source_ids": [],
+      "tags": [
+        "related-work",
+        "comparison-axis",
+        "world-model"
+      ],
+      "topic_families": [
+        "world_model_general",
+        "video_occupancy_world_models"
       ]
     },
     {

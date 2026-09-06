@@ -32,17 +32,28 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Language Cards
+## Language Cards and Protocols
 
-`references/writing-library.json` contains selected Super Library original
+`references/writing-library.json` and `references/writing-protocols.json` contain selected Super Library original
 records under [CC0-1.0](DATA_LICENSE), not this repository's MIT grant.
 Copyright (c) 2026 Super Library contributors. Attribution is retained for
 provenance even though CC0 does not require it.
 
 Source titles, identifiers, venue names and links identify external works.
 Rights to those papers, trademarks and other third-party content remain with
-their holders. No full papers, figures, tables or abstracts are redistributed.
+their holders. No full papers, paper figures, paper tables or abstracts are redistributed.
 Source metadata is for discovery, not claim verification or copying permission.
+
+## Generic Table Source
+
+The five files in `references/table-templates/` adapt independently written
+Super Library TeX skeletons, not tables copied from research papers. They use
+the upstream MIT software license, retained in full in
+[table-templates/LICENSE](references/table-templates/LICENSE).
+Copyright (c) 2026 Super Library contributors. Changes wrap long headers,
+remove manual vertical spacing and add provenance comments. Original and
+adapted hashes are recorded in the protocol index. These are not official
+conference styles and do not relicense external material.
 
 ## Official Templates and Design References
 

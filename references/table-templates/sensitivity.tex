@@ -1,0 +1,29 @@
+% Adapted from Super Library (MIT); see LICENSE in this directory.
+% Generic table skeleton, not an official venue template.
+% Replace SL_* from verified author data before compiling; never invent values.
+% Wrap headers and remove manual vertical spacing; official styles take precedence.
+% Super Library sensitivity table. Requires \usepackage{booktabs}.
+% Replace every SL_* token and disclose whether the sweep was planned.
+\begin{table}[t]
+  \centering
+  \small
+  \caption{Sensitivity to SL_PARAMETER on SL_SELECTION_SET. All other factors
+  use SL_MATCHED_CONFIGURATION. Values are SL_AGGREGATE over SL_N independent
+  SL_RUN_UNIT with SL_UNCERTAINTY.}
+  \label{tab:SL_LABEL}
+  \begin{tabular}{cccc}
+    \toprule
+    SL_PARAMETER (SL_UNIT) & SL_METRIC $\uparrow$ & SL_RESOURCE $\downarrow$ &
+    Selection status \\
+    \midrule
+    SL_VALUE_A & SL_RESULT & SL_COST & Candidate \\
+    SL_VALUE_B & SL_RESULT & SL_COST & Selected \\
+    SL_VALUE_C & SL_RESULT & SL_COST & Candidate \\
+    SL_VALUE_D & SL_RESULT & SL_COST & Candidate \\
+    \bottomrule
+  \end{tabular}
+
+  \parbox{0.98\linewidth}{\footnotesize
+  SL_NOTE: Report the tested range, rationale, selection objective, held-constant
+  factors, and whether conclusions remain stable around the selected value.}
+\end{table}

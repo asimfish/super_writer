@@ -93,7 +93,8 @@ class LibraryTests(unittest.TestCase):
 
     def test_corpus_ids_provenance_and_discovery_sources_are_complete(self) -> None:
         entries = self.index["entries"]
-        self.assertEqual(len(entries), 127)
+        self.assertEqual(len(entries), 130)
+        self.assertEqual(sum(entry["kind"] == "sentence_pattern" for entry in entries), 78)
         self.assertEqual(len(entries), len({entry["id"] for entry in entries}))
         sources = {s["id"] for s in self.index["sources"]}
         for entry in entries:

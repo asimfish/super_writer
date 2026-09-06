@@ -1,0 +1,33 @@
+% Adapted from Super Library (MIT); see LICENSE in this directory.
+% Generic table skeleton, not an official venue template.
+% Replace SL_* from verified author data before compiling; never invent values.
+% Wrap headers and remove manual vertical spacing; official styles take precedence.
+% Super Library generalization table. Requires \usepackage{booktabs}.
+% Replace every SL_* token and name exactly what was held out.
+\begin{table}[t]
+  \centering
+  \small
+  \caption{Generalization across SL_SHIFT_AXIS. SL_HELD_OUT_UNIT is excluded
+  from training and model selection. Values are SL_AGGREGATE over SL_N
+  independent SL_RUN_UNIT with SL_UNCERTAINTY.}
+  \label{tab:SL_LABEL}
+  \begin{tabular}{llccc}
+    \toprule
+    Method & \shortstack{Evaluation\\condition} & Shift severity & SL_METRIC $\uparrow$ &
+    \shortstack{Gap from\\reference} \\
+    \midrule
+    SL_BASELINE & Reference distribution & 0 & SL_VALUE & -- \\
+    SL_BASELINE & SL_SHIFT_A & SL_LEVEL_A & SL_VALUE & SL_GAP \\
+    SL_BASELINE & SL_SHIFT_B & SL_LEVEL_B & SL_VALUE & SL_GAP \\
+    \midrule
+    SL_METHOD & Reference distribution & 0 & SL_VALUE & -- \\
+    SL_METHOD & SL_SHIFT_A & SL_LEVEL_A & SL_VALUE & SL_GAP \\
+    SL_METHOD & SL_SHIFT_B & SL_LEVEL_B & SL_VALUE & SL_GAP \\
+    \bottomrule
+  \end{tabular}
+
+  \parbox{0.98\linewidth}{\footnotesize
+  SL_NOTE: Distinguish unseen objects, scenes, tasks, instructions, users, and
+  embodiments. Report adaptation or calibration performed on shifted data and
+  do not describe one held-out axis as general out-of-distribution robustness.}
+\end{table}

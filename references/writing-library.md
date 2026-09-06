@@ -6,6 +6,11 @@ Coverage includes general research writing, world models, reinforcement
 learning, embodied AI, robot learning and vision-language-action. It is not
 an exhaustive terminology dictionary or an evidence database.
 
+The selection contains 130 cards: 78 sentence patterns and 52 definitions,
+terms, usage notes or anti-patterns. All 78 reviewed upstream sentence-pattern
+cards are included; not all 274 upstream entries are imported. For section
+structures and tables, use [writing protocols](writing-protocols.md) separately.
+
 Resolve commands against the skill directory, keeping the paper project as cwd:
 
 ```bash
