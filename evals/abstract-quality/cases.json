@@ -1,0 +1,50 @@
+{
+  "scope": "Original synthetic calibration cases; not measured effectiveness",
+  "cases": [
+    {
+      "id": "mixed-contribution-retention",
+      "materials": "Synthetic study: the author prioritizes a theorem showing that aggregate resource usage cannot identify the worst client delay under a stated heterogeneous-load construction. A per-client audit distinguishes the constructed cases. A queue simulator demonstrates the discrepancy. Implementation uses a parser, event queue, trace recorder and report formatter. There is no measured throughput gain.",
+      "request": "Choose the abstract that better communicates the author's primary contribution without changing the facts. Explain the information tradeoff.",
+      "drafts": {
+        "A": "We study auditing client delays in queue simulations. Our implementation combines a parser, event queue, trace recorder, and report formatter. A per-client audit distinguishes cases constructed under heterogeneous load, and a queue simulator demonstrates a discrepancy between aggregate resource usage and client delays. The study does not establish a throughput improvement.",
+        "B": "Aggregate resource usage need not reveal the worst client delay. Under a heterogeneous-load construction, we prove that the aggregate cannot identify this quantity, while a per-client audit distinguishes the constructed cases. Queue simulations illustrate the discrepancy. The contribution concerns what an audit can identify, not a demonstrated throughput improvement."
+      },
+      "oracle": {
+        "kind": "valid_but_weaker",
+        "fidelity": {"A": "pass", "B": "pass"},
+        "preferred": ["B"],
+        "reason": "B retains the author-prioritized theorem. A's implementation inventory is true but displaces the main contribution; omission is not a fabricated factual claim."
+      }
+    },
+    {
+      "id": "approximation-boundary",
+      "materials": "Synthetic study: an exact optimizer has a monotonic objective guarantee for convex losses with exact gradients. The implemented optimizer uses approximate gradients; its guarantee was not established. In three deterministic toy problems, its objective decreased at every recorded iteration. No other experiments exist.",
+      "request": "Assess whether either abstract overstates the supplied evidence, then give a preference with reasons.",
+      "drafts": {
+        "A": "We derive a monotonic optimization scheme for convex losses with exact gradients and implement an approximate-gradient variant. Its objective decreases at every recorded iteration on three toy problems. These observations support the practical variant on the tested problems but do not extend the exact scheme's guarantee to approximate gradients.",
+        "B": "We derive a monotonic optimization scheme for convex losses and implement an approximate-gradient variant that retains the monotonic guarantee. Its objective decreases at every recorded iteration on three toy problems, supporting practical use of the guaranteed method. The experiments are limited to these three problems."
+      },
+      "oracle": {
+        "kind": "factual_failure",
+        "fidelity": {"A": "pass", "B": "fail"},
+        "preferred": ["A"],
+        "reason": "B invents transfer of the exact-gradient guarantee. Its final experimental limitation does not repair the false guarantee."
+      }
+    },
+    {
+      "id": "valid-evidence-allocation",
+      "materials": "Synthetic tool study: a schema checker combines declared constraints with generated edge cases. In a controlled exercise it detects 18 of 20 seeded schema errors; the baseline detects 10. On that workload it takes 4 seconds rather than 3. No unseeded production faults were assessed. The author has not prioritized speed over detection or vice versa.",
+      "request": "Compare these abstracts. A tie is allowed when differences do not justify a substantive preference.",
+      "drafts": {
+        "A": "A schema checker combines declared constraints with generated edge cases to detect seeded errors. In a controlled exercise it finds 18 of 20 errors, compared with 10 for the baseline, while taking 4 rather than 3 seconds. The evidence establishes a detection-runtime tradeoff on this workload, not effectiveness on unseeded production faults.",
+        "B": "Combining declared constraints with generated edge cases offers a detection-runtime tradeoff for schema checking. On a controlled workload, the checker takes 4 seconds versus the baseline's 3 and detects 18 of 20 seeded errors versus 10. Its effectiveness on unseeded production faults remains untested."
+      },
+      "oracle": {
+        "kind": "defensible_tie",
+        "fidelity": {"A": "pass", "B": "pass"},
+        "preferred": ["A", "B"],
+        "reason": "Both preserve mechanism, the complete comparison and boundary. Result ordering alone does not establish superiority; a minor stylistic preference is acceptable if not called a material quality gap."
+      }
+    }
+  ]
+}

@@ -101,6 +101,20 @@ projects is claimed to endorse Super Writer.
 
 ## Maintenance
 
+### Abstract editorial synthesis (2026-09-11)
+
+The abstract decision guide, exemplar notes, and synthetic calibration fixtures
+are independent editorial synthesis, not imported paper text or executable
+upstream code. The 24 publication titles, years, and direct source URLs are
+listed in [abstract-exemplars.md](references/abstract-exemplars.md). Sources were
+read on 2026-09-10; no upstream Git commit applies to these publication pages.
+No full abstracts, figures, private manuscripts, or private evaluation outputs
+are bundled. Linked publications retain their own copyright and licenses;
+public availability is not treated as permission to relicense their content.
+The repository license covers the original notes/fixtures, not the linked works.
+The pinned Super Library protocol JSON and reproduction contract are unchanged.
+These editorial hypotheses do not establish a measured effectiveness gain.
+
 This repository is the owner of the standalone `super-writer` distribution.
 The monorepo `paper-spine` entry remains a historical/compatible predecessor;
 installing both can create overlapping routing and is unnecessary.

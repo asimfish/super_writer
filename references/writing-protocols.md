@@ -24,6 +24,11 @@ output is returned. Choose one variant or explicitly increase the budget.
 
 ## Apply to Actual Material
 
+For an abstract, first read [abstract decisions](abstract-decisions.md). Select
+the protocol variant after identifying the central contribution, especially for
+theory-plus-empirical or diagnostic work. The selected sequence is adaptable;
+it must not displace a supported, author-prioritized contribution.
+
 1. Select the contribution-specific whole-paper [blueprint](paper-blueprints.md)
    only when the request is whole-paper design. A bounded section request does
    not authorize a full workflow.

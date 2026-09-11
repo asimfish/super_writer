@@ -225,6 +225,9 @@ python3 scripts/pdf_layout_check.py paper.pdf --log main.log
 [论证蓝图](references/paper-blueprints.md) ·
 [16 类协议与 5 套表格目录](references/writing-protocols.md) ·
 [协议应用样例](examples/protocol-application/README.md) ·
+[摘要贡献决策](references/abstract-decisions.md) ·
+[24 篇摘要范例分析](references/abstract-exemplars.md) ·
+[摘要评审校准样例](evals/abstract-quality/README.md) ·
 [五个上游的吸收与排除记录](UPSTREAM.md#selective-integration-audit-2026-09-06)
 
 吸收的是经审计的方法和有许可的语料，不是捆绑五套代理。保留 PaperSpine 的贡献与证据设计，

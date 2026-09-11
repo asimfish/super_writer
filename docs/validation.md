@@ -6,6 +6,27 @@ behavior below, not research novelty, factual entailment or acceptance gains.
 
 ## Reproducible Checks
 
+### Abstract decision update (2026-09-11)
+
+The local abstract guide and 24 original exemplar notes add contribution-first
+selection and separate factual fidelity from argument quality. Three synthetic
+calibration cases cover a valid contribution omission, an overstated theoretical
+guarantee, and a defensible tie. Their oracles are expectations, not observed
+model results. `test_abstract_calibration.py` checks fixture integrity only.
+No independent forward-test of this update or acceptance/quality gain is claimed.
+Use new held-out topics and hide the oracles when running a model evaluation.
+Runtime permissions and executable resources are unchanged; references and
+fixtures are local text. Publication and global installation remain separate.
+
+Local verification on 2026-09-11: Python 3.14 ran 163 tests successfully with
+one PowerShell-unavailable skip; upstream resource reproduction and diff checks
+passed. The skill-creator frontmatter validator passed using the system Python
+with its existing PyYAML. The first suite attempt used the system Python below
+the distribution's 3.10 minimum and failed version gates; no requirement was
+weakened to make it pass. Exemplar links and calibration schema checks do not
+establish semantic quality. Release assessment remains CONDITIONAL pending
+independent behavioral evaluation; no publication or global install was done.
+
 Run from the source checkout with Python 3.10+. The portable suite uses the
 standard library and temporary fixtures; it needs no model or paid API.
 

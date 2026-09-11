@@ -76,6 +76,7 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
 | Natural academic expression | [academic expression](references/academic-expression.md) | Scoped edit or diagnosis; fidelity before style |
 | Terms and sentence patterns | [writing library](references/writing-library.md) | Bounded offline `writing_lookup.py` results; not claim evidence |
 | Section, paragraph and table design | [writing protocols](references/writing-protocols.md) | One `writing_guide.py` protocol/variant with evidence checks; table placeholders stay explicit |
+| Abstract drafting or comparison | [abstract decisions](references/abstract-decisions.md) | Preserve the central contribution before selecting a structure; compare argument quality separately from factual fidelity |
 | Venue and paper design | [paper blueprints](references/paper-blueprints.md), [typesetting](references/typesetting-validation.md) | Exact `venue_profile.py` selection and contribution-specific outline |
 | Results mapping | [results validation](references/results-validation.md) | Contribution-to-results mapping and guard |
 | LaTeX, PDF, Word | [latex](references/latex.md) | Source, compiled PDF when available, Word and format reports |

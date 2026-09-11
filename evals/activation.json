@@ -2,6 +2,18 @@
   "skill": "super-writer",
   "activation_cases": [
     {
+      "id": "mixed-abstract-priority",
+      "prompt": "Use super-writer to draft only an abstract. The main contribution is a conditional theorem; the experiments only illustrate it. Keep the theorem visible rather than listing implementation modules.",
+      "should_activate": true,
+      "expected_behavior": "Use abstract-decisions before choosing a protocol; preserve the supported author-prioritized theorem and its conditions, distinguish illustration from proof, and avoid a full-paper workflow."
+    },
+    {
+      "id": "abstract-quality-not-compliance",
+      "prompt": "Compare these two factually accurate abstracts from the same paper. Explain which communicates the main contribution better; a tie is allowed. Do not rewrite them.",
+      "should_activate": true,
+      "expected_behavior": "Assess contribution retention, argument connections, evidence choice and compression with located reasons. Do not equate correctness or word count with excellence, invent a quality percentage, or rewrite without request."
+    },
+    {
       "id": "theory-protocol-without-experiments",
       "prompt": "使用 super-writer，只为这篇已有定理与证明的论文设计摘要，没有实验数据，不要补实验。",
       "should_activate": true,
