@@ -309,6 +309,15 @@ def _load_json(path):
         return json.load(stream, object_pairs_hook=_json_object, parse_constant=_nonfinite)
 
 
+def require_new_output(path):
+    # Windows exclusive open can follow a dangling link; inspect the entry itself.
+    try:
+        Path(path).lstat()
+    except FileNotFoundError:
+        return
+    raise FileExistsError(f"Output entry already exists: {path}")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Offline AI-spec pilot validation and summary.")
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -345,6 +354,7 @@ def main(argv=None):
             )
         rendered = json.dumps(result, indent=2, ensure_ascii=True, allow_nan=False) + "\n"
         if args.output:
+            require_new_output(args.output)
             with args.output.open("x", encoding="utf-8") as stream:
                 stream.write(rendered)
         else:

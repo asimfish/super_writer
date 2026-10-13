@@ -1,13 +1,16 @@
 """Infrastructure-not-writing tests: every passage and judgment is synthetic."""
 
 import copy
+import contextlib
 import importlib.util
+import io
 import json
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -575,6 +578,32 @@ class CLITests(unittest.TestCase):
         result = self.run_cli("--writer", path, "--output", target)
         self.assertNotEqual(result.returncode, 0)
         self.assertFalse((self.root / "absent.json").exists())
+
+    def test_exclusive_output_rejects_link_before_permissive_windows_open(self):
+        source = self.write_json("writer.json", writer())
+        target = self.root / "target.json"
+        absent = self.root / "absent.json"
+        try:
+            target.symlink_to(absent)
+        except (OSError, NotImplementedError):
+            if sys.platform == "win32":
+                self.skipTest("Windows symlink creation requires an enabled privilege.")
+            raise
+        original_open = Path.open
+        reached_output = []
+
+        def follow_output(path, *args, **kwargs):
+            if path == target:
+                reached_output.append(path)
+                path = path.resolve()
+            return original_open(path, *args, **kwargs)
+
+        with mock.patch.object(Path, "open", follow_output), contextlib.redirect_stderr(io.StringIO()):
+            with self.assertRaises(SystemExit):
+                pilot.main(["--writer", str(source), "--output", str(target)])
+        self.assertEqual(reached_output, [])
+        self.assertFalse(absent.exists())
+        self.assertTrue(target.is_symlink())
 
     def test_cli_gate_failure_is_reported_not_a_schema_error(self):
         result = self.run_cli(*self.summary_arguments([review("J01"), review("J02")]))

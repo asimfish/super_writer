@@ -22,6 +22,7 @@ def read(path):
 
 
 def write_new(path, value):
+    pilot.require_new_output(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("x", encoding="utf-8") as stream:
         stream.write(json.dumps(value, indent=2, ensure_ascii=True) + "\n")
@@ -270,6 +271,7 @@ def main():
             for name, data in (("summary", summary), ("word_counts", diagnostics), ("normalized_reviews", reviews)):
                 write_new(ROOT / f"{name}.json", data)
         elif args.action == "render":
+            pilot.require_new_output(ROOT / "comparison.html")
             with (ROOT / "comparison.html").open("x", encoding="utf-8") as stream:
                 stream.write(render())
         elif args.action == "receipts":

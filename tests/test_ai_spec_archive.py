@@ -6,7 +6,9 @@ import importlib.util
 import json
 from pathlib import Path
 import tempfile
+import sys
 import unittest
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -135,6 +137,32 @@ class ProvenanceTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 archive.write_new(path, {"synthetic": False})
             self.assertEqual(path.read_bytes(), before)
+
+    def test_archive_rejects_link_before_permissive_windows_open(self):
+        with tempfile.TemporaryDirectory() as temp:
+            target = Path(temp) / "target.json"
+            absent = Path(temp) / "absent.json"
+            try:
+                target.symlink_to(absent)
+            except (OSError, NotImplementedError):
+                if sys.platform == "win32":
+                    self.skipTest("Windows symlink creation requires an enabled privilege.")
+                raise
+            original_open = Path.open
+            reached_output = []
+
+            def follow_output(path, *args, **kwargs):
+                if path == target:
+                    reached_output.append(path)
+                    path = path.resolve()
+                return original_open(path, *args, **kwargs)
+
+            with mock.patch.object(Path, "open", follow_output):
+                with self.assertRaises(FileExistsError):
+                    archive.write_new(target, {"synthetic": True})
+            self.assertEqual(reached_output, [])
+            self.assertFalse(absent.exists())
+            self.assertTrue(target.is_symlink())
 
 
 class PublishedArchiveTests(unittest.TestCase):

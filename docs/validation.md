@@ -6,6 +6,27 @@ behavior below, not research novelty, factual entailment or acceptance gains.
 
 ## Reproducible Checks
 
+### Pilot output-link portability (2026-10-13)
+
+The [first pilot publication CI](https://github.com/asimfish/super_writer/actions/runs/38399574723)
+passes Linux 3.10/3.12, macOS 3.12 and document fixtures, but Windows 3.12 fails
+`test_exclusive_output_rejects_dangling_symlink`: exclusive text opening follows
+the dangling output link instead of rejecting its existing directory entry.
+This is separate from the earlier atlas cross-drive defect.
+
+A shared `lstat` preflight now rejects any existing output entry, including a
+dangling link, before exclusive opening in the pilot CLI and archive JSON/HTML
+writers. Two permissive-opener replay tests first fail, then pass; the original
+Windows-capable integration test remains unchanged. Static leaf checks are not
+a guarantee against hostile directory replacement or filesystem races.
+
+Locally, all 58 pilot checks pass; the full suite runs 282 tests, with 281 passes
+and one PowerShell-unavailable skip. Focused replay also passes on Python 3.9.
+All 55 experimental byte receipts, 13 completion strings, derived judgments and
+HTML remain unchanged; no writing result or gate is revised. This is macOS
+replay evidence, not local Windows execution. Corrective-commit remote CI is
+checked separately before delivery.
+
 ### Current AI-spec pilot archive (2026-10-13)
 
 The [new writing pilot](ai-spec-pilot-evaluation.md) fails its preference gate:
