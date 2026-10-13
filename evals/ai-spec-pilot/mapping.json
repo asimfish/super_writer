@@ -1,0 +1,50 @@
+{
+  "R01_s1_abstract": {
+    "A": "candidate",
+    "B": "baseline"
+  },
+  "R01_s1_methods": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "R01_s1_results": {
+    "A": "candidate",
+    "B": "baseline"
+  },
+  "R01_s2_abstract": {
+    "A": "candidate",
+    "B": "baseline"
+  },
+  "R01_s2_methods": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "R01_s2_results": {
+    "A": "candidate",
+    "B": "baseline"
+  },
+  "R02_s1_abstract": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "R02_s1_methods": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "R02_s1_results": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "R02_s2_abstract": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "R02_s2_methods": {
+    "A": "baseline",
+    "B": "candidate"
+  },
+  "R02_s2_results": {
+    "A": "baseline",
+    "B": "candidate"
+  }
+}

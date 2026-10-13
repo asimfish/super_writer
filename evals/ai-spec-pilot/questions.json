@@ -1,0 +1,68 @@
+{
+  "questions": {
+    "R01": {
+      "abstract": [
+        {
+          "id": "a1",
+          "question": "What is the main contribution, and how does its design support its purpose?"
+        },
+        {
+          "id": "a2",
+          "question": "What improvement is supported, under what evaluation scope?"
+        }
+      ],
+      "methods": [
+        {
+          "id": "m1",
+          "question": "How does collection avoid being confined to a convenient scene or easy task?"
+        },
+        {
+          "id": "m2",
+          "question": "What is mixed during policy training, and what comparison distinguishes the data resource?"
+        }
+      ],
+      "results": [
+        {
+          "id": "r1",
+          "question": "What do the main numerical gains measure and what is the comparator?"
+        },
+        {
+          "id": "r2",
+          "question": "What is controlled in the diversity comparison, and what interpretation does it support?"
+        }
+      ]
+    },
+    "R02": {
+      "abstract": [
+        {
+          "id": "a1",
+          "question": "What does this system evaluate, and why are its main components needed?"
+        },
+        {
+          "id": "a2",
+          "question": "What does the evidence justify, and what stronger claim is not warranted?"
+        }
+      ],
+      "methods": [
+        {
+          "id": "m1",
+          "question": "How are control and visual gaps reduced, rather than simply named?"
+        },
+        {
+          "id": "m2",
+          "question": "What does MMRV penalize, how is it aggregated, and which direction is better?"
+        }
+      ],
+      "results": [
+        {
+          "id": "r1",
+          "question": "What does Table I's comparison establish, and which numbers are not robot success rates?"
+        },
+        {
+          "id": "r2",
+          "question": "What evidence connects simulated robustness behavior to a real shift, and what remains limited?"
+        }
+      ]
+    }
+  }
+}

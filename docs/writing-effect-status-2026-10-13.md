@@ -3,13 +3,15 @@
 ## Current Verdict
 
 **No stable writing-quality improvement has been demonstrated.** The current
-68-entry AI specification and selective STE-context integration have engineering
-and authored contrast tests, but no new independently generated/assessed writing
-trial. They must not inherit older candidates' results.
+68-entry AI specification now has a separate selected-guidance pilot:
+candidate 3 / baseline 10 / tie 11 on 12 DROID/SIMPLER pairs. Its frozen gate
+fails, and default guidance remains unchanged. See the
+[new trial and located losses](ai-spec-pilot-evaluation.md); older candidates'
+results are not inherited or pooled.
 
-This update recomputes counts from existing saved results; it is not a fresh
-generation, a new blind test, or another set of observations. Original responses,
-votes, frozen guides and source receipts are unchanged.
+The earlier-round diagnosis below recomputes existing saved results; it adds no
+observations to those rounds. Their original responses, votes, frozen guides
+and source receipts remain unchanged. The newly executed pilot is separate.
 
 ## What the Existing Experiments Say
 
@@ -61,27 +63,28 @@ prove why the candidate protocol caused them, or that a larger dictionary will
 repair them. New testing must separate faithful claims, explicit recoverable
 relationships and style preference.
 
-## Next Test Is Not Yet Executed
+## Prepared Test Now Executed
 
-The [next-round protocol](../evals/ai-spec-pilot/PROTOCOL.md) proposes an incremental
-test of current AI-spec guidance against the same strong common writing guide,
-with Abstract, Methods and Results, two replicates and anonymized comparisons.
-It is not a rerun that can retroactively pass the earlier failed gate.
+The [prepared protocol](../evals/ai-spec-pilot/PROTOCOL.md) is retained unchanged.
+After explicit user authorization, the [execution archive](../evals/ai-spec-pilot/README.md)
+freezes common guides, four relevant records per unit, original located facts,
+reader questions, budgets, edit passes and decision rules before generation.
+Four writer contexts complete actual initial responses and one edit each;
+two reviewers, two readers and a separate auditor assess the saved final texts.
+This cannot retroactively pass any preceding gate.
 
-Public-source candidates are DROID (dataset/resource contribution) and SIMPLER
-(evaluation methodology). A repository search found no occurrences of these
-titles in prior development/evaluation records; that is not a guarantee against
-model recall. They become development material once inspected. DROID's public
-[RSS landing abstract](https://roboticsproceedings.org/rss20/p120.html) and
-[current arXiv metadata](https://arxiv.org/abs/2403.12945) give different dataset
-counts; source versions must be reconciled before any fact packet is frozen.
-[SIMPLER v1](https://arxiv.org/html/2405.05941v1) is confirmed; the attempted v2 HTML URL does not exist. Source preparation
-must not mix versions or infer facts from search summaries.
+DROID uses the [RSS PDF body](https://www.roboticsproceedings.org/rss20/p120.pdf)
+with 76k successful episodes and 86 task verbs, excluding differing landing/arXiv
+counts. SIMPLER uses [arXiv v1](https://arxiv.org/pdf/2405.05941v1).
+The earlier attempted v2 HTML URL did not exist and was not used.
+Inspected sections and source hashes are recorded. These are development cases,
+not a guarantee against model recall; the coordinator saw public abstracts.
 
-Independent sub-agent generation/review has been requested but not authorized
-in the current turn. No agent is dispatched, no draft or judgment is fabricated,
-and no new preference count is reported. Materials and mappings are not yet
-frozen; the protocol is explicitly a prepared design, not an executed result.
+New preferences are Abstract 0 / 5 / 3, Methods 1 / 1 / 6, Results 2 / 4 / 2
+(candidate / baseline / tie). Both conditions pass all packet-fidelity checks.
+All final writers meet budgets; six reader answers exceed their cap and remain
+unaltered. No raw response is replaced. The one unanimous candidate pair does
+not satisfy cross-paper support, and neither required unit net favors candidate.
 
 ## Engineering Is a Separate Outcome
 

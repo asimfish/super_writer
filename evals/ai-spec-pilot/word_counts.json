@@ -1,0 +1,234 @@
+[
+  {
+    "condition": "baseline",
+    "writer_id": "W01",
+    "replicate": 1,
+    "phase": "initial",
+    "word_counts": {
+      "R01": {
+        "abstract": 171,
+        "methods": 133,
+        "results": 138,
+        "notes": {
+          "abstract": 36,
+          "methods": 37,
+          "results": 39
+        }
+      },
+      "R02": {
+        "abstract": 164,
+        "methods": 145,
+        "results": 142,
+        "notes": {
+          "abstract": 40,
+          "methods": 35,
+          "results": 41
+        }
+      }
+    },
+    "budget_violations": []
+  },
+  {
+    "condition": "baseline",
+    "writer_id": "W01",
+    "replicate": 1,
+    "phase": "final",
+    "word_counts": {
+      "R01": {
+        "abstract": 160,
+        "methods": 138,
+        "results": 141,
+        "notes": {
+          "abstract": 36,
+          "methods": 39,
+          "results": 36
+        }
+      },
+      "R02": {
+        "abstract": 161,
+        "methods": 134,
+        "results": 135,
+        "notes": {
+          "abstract": 39,
+          "methods": 37,
+          "results": 39
+        }
+      }
+    },
+    "budget_violations": []
+  },
+  {
+    "condition": "baseline",
+    "writer_id": "W02",
+    "replicate": 2,
+    "phase": "initial",
+    "word_counts": {
+      "R01": {
+        "abstract": 152,
+        "methods": 134,
+        "results": 150,
+        "notes": {
+          "abstract": 40,
+          "methods": 40,
+          "results": 42
+        }
+      },
+      "R02": {
+        "abstract": 177,
+        "methods": 129,
+        "results": 126,
+        "notes": {
+          "abstract": 44,
+          "methods": 39,
+          "results": 41
+        }
+      }
+    },
+    "budget_violations": []
+  },
+  {
+    "condition": "baseline",
+    "writer_id": "W02",
+    "replicate": 2,
+    "phase": "final",
+    "word_counts": {
+      "R01": {
+        "abstract": 154,
+        "methods": 145,
+        "results": 144,
+        "notes": {
+          "abstract": 41,
+          "methods": 37,
+          "results": 43
+        }
+      },
+      "R02": {
+        "abstract": 161,
+        "methods": 127,
+        "results": 132,
+        "notes": {
+          "abstract": 48,
+          "methods": 42,
+          "results": 45
+        }
+      }
+    },
+    "budget_violations": []
+  },
+  {
+    "condition": "candidate",
+    "writer_id": "W03",
+    "replicate": 1,
+    "phase": "initial",
+    "word_counts": {
+      "R01": {
+        "abstract": 175,
+        "methods": 142,
+        "results": 150,
+        "notes": {
+          "abstract": 33,
+          "methods": 31,
+          "results": 40
+        }
+      },
+      "R02": {
+        "abstract": 171,
+        "methods": 132,
+        "results": 147,
+        "notes": {
+          "abstract": 36,
+          "methods": 34,
+          "results": 37
+        }
+      }
+    },
+    "budget_violations": []
+  },
+  {
+    "condition": "candidate",
+    "writer_id": "W03",
+    "replicate": 1,
+    "phase": "final",
+    "word_counts": {
+      "R01": {
+        "abstract": 172,
+        "methods": 135,
+        "results": 137,
+        "notes": {
+          "abstract": 40,
+          "methods": 41,
+          "results": 41
+        }
+      },
+      "R02": {
+        "abstract": 172,
+        "methods": 132,
+        "results": 150,
+        "notes": {
+          "abstract": 39,
+          "methods": 40,
+          "results": 41
+        }
+      }
+    },
+    "budget_violations": []
+  },
+  {
+    "condition": "candidate",
+    "writer_id": "W04",
+    "replicate": 2,
+    "phase": "initial",
+    "word_counts": {
+      "R01": {
+        "abstract": 171,
+        "methods": 144,
+        "results": 138,
+        "notes": {
+          "abstract": 42,
+          "methods": 49,
+          "results": 43
+        }
+      },
+      "R02": {
+        "abstract": 169,
+        "methods": 130,
+        "results": 144,
+        "notes": {
+          "abstract": 45,
+          "methods": 42,
+          "results": 48
+        }
+      }
+    },
+    "budget_violations": []
+  },
+  {
+    "condition": "candidate",
+    "writer_id": "W04",
+    "replicate": 2,
+    "phase": "final",
+    "word_counts": {
+      "R01": {
+        "abstract": 175,
+        "methods": 134,
+        "results": 139,
+        "notes": {
+          "abstract": 48,
+          "methods": 42,
+          "results": 47
+        }
+      },
+      "R02": {
+        "abstract": 179,
+        "methods": 132,
+        "results": 146,
+        "notes": {
+          "abstract": 43,
+          "methods": 43,
+          "results": 47
+        }
+      }
+    },
+    "budget_violations": []
+  }
+]

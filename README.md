@@ -18,6 +18,10 @@
 仓库名是 `super_writer`，调用名是 **`$super-writer`**。写作由你使用的 AI agent 执行；
 Python 脚本负责可重复的检查。项目不自带模型，不承诺录用或 AI 检测通过。
 
+**最新写作验证：** DROID/SIMPLER 的 12 组对照、24 段成稿中，候选 3 票、基线 10 票、持平 11 票，
+**未通过预设门槛，默认规则不变**。指标解释有局部改善，但证据选择与段落衔接仍有退步。
+[完整结果和失败分析](docs/ai-spec-pilot-evaluation.md) · [横向对比](evals/ai-spec-pilot/comparison.html)
+
 <a id="examples"></a>
 ## 样文：先看结果
 

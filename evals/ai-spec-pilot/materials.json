@@ -1,0 +1,114 @@
+{
+  "scope": "Original editorial fact packets from declared body sections, not abstracts, full-body writing or unseen-paper assurance. Use only these facts as paper evidence. No source quotations.",
+  "papers": [
+    {
+      "id": "R01",
+      "name": "DROID",
+      "contribution": "A distributed manipulation-data resource and reproducible collection platform, evaluated using existing diffusion policies, not a new learning algorithm.",
+      "facts": [
+        {
+          "id": "D01",
+          "location": "RSS PDF Section III-A; Fig. 2",
+          "text": "A portable shared Franka Panda platform at 13 institutions uses two adjustable external stereo cameras, a wrist stereo camera and VR teleoperation. Common hardware makes distributed control reproducible while portability enables scene changes."
+        },
+        {
+          "id": "D02",
+          "location": "RSS PDF Section III-B",
+          "text": "For each new scene, collectors position and calibrate cameras, enter feasible tasks, and receive randomly sampled tasks per episode. Periodic prompts vary camera placement, lighting, clutter or base position to broaden coverage rather than favor easy tasks."
+        },
+        {
+          "id": "D03",
+          "location": "RSS PDF Section III-B",
+          "text": "The dataset counts 76,000 successful episodes. About 16,000 additional unsuccessful trajectories are released but excluded from that count and from the co-training experiments. Crowdsourcing supplies up to three independent language instructions per episode."
+        },
+        {
+          "id": "D04",
+          "location": "RSS PDF Introduction; Fig. 1 and task-count footnote",
+          "text": "The selected PDF reports 350 hours, 564 scenes, 52 buildings and 86 tasks. Task count uses unique verbs in language instructions, not 86 independently specified benchmark tasks."
+        },
+        {
+          "id": "D05",
+          "location": "RSS PDF Section V-A",
+          "text": "Policy evaluation uses six tasks in four locations spanning laboratory, office and household settings, all on the DROID hardware. Each task has its own out-of-distribution variant, such as distractors, new manipulated objects or a camera shift."
+        },
+        {
+          "id": "D06",
+          "location": "RSS PDF Sections V-A(b), V-B",
+          "text": "Separate language-conditioned diffusion policies are trained per task. DROID co-training mixes in-domain demonstrations and successful DROID trajectories 50/50. Comparators are in-domain-only training and 50/50 co-training with a curated Open X-Embodiment (OXE) mixture. All use the same policy backbone."
+        },
+        {
+          "id": "D07",
+          "location": "RSS PDF Section V-B; Fig. 8",
+          "text": "Each method and task setting uses ten rollouts. In-distribution evaluation reflects the demonstration distribution with perturbed initial robot and object positions; OOD variants test changes beyond it. Across the six tasks, the mean success rate of DROID co-training exceeds the next-best method by 22 percentage points in-distribution and 17 percentage points OOD. Figure 8 reports standard error around across-task mean success rates; it does not supply a significance test here."
+        },
+        {
+          "id": "D08",
+          "location": "RSS PDF Section V-C; Fig. 10",
+          "text": "A scene-diversity comparison holds subset size at 7,362 successful demonstrations: trajectories from the 20 most represented scenes versus a uniformly sampled, more scene-diverse subset. Both use 50/50 in-domain co-training. The more diverse subset performs better on the challenging OOD tasks studied, supporting a role for scene diversity without isolating every possible confound."
+        },
+        {
+          "id": "D09",
+          "location": "RSS PDF Sections III, VI",
+          "text": "The release includes collection hardware/software instructions, visualization and policy-training resources. Results support the value of this dataset for the evaluated tasks and scene changes, not universal cross-embodiment transfer or replacement of in-domain demonstrations."
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "name": "SIMPLER",
+      "contribution": "A simulated evaluation framework for real-data-trained robot policies, with methods to reduce control/visual gaps and a margin-aware ranking metric, not a new universally superior policy.",
+      "facts": [
+        {
+          "id": "S01",
+          "location": "arXiv 2405.05941v1 Section III-A",
+          "text": "The evaluation target is relative policy performance and informative behavior comparisons between simulation and real robots. Exact real-world success-rate reproduction and replacing all physical evaluations are not the goal."
+        },
+        {
+          "id": "S02",
+          "location": "v1 Section III-B; equations 1-2",
+          "text": "Mean Maximum Rank Violation (MMRV) penalizes simulator misranking by the real-world success-rate margin between the two policies. For each policy it takes the worst such margin, then averages over policies. Lower is better. Pearson r is also reported; linear correlation alone can misrepresent nonlinear but order-preserving performance and narrow-range noisy comparisons."
+        },
+        {
+          "id": "S03",
+          "location": "v1 Section IV-A; Fig. 4",
+          "text": "System identification replays actions from existing real demonstration trajectories in simulation, compares end-effector translation and rotation, and tunes controller stiffness/damping through simulated annealing to reduce trajectory mismatch. It aligns action effects rather than training a replacement policy; no newly collected demonstrations are required for this step."
+        },
+        {
+          "id": "S04",
+          "location": "v1 Section IV-B; Fig. 5",
+          "text": "Visual Matching combines segmented simulated robots and interactive objects with an inpainted real-scene background, then adjusts or projects textures to better match real objects and robot appearance. It is not just photorealistic background rendering. Robot-color versions are averaged where movement changes appearance."
+        },
+        {
+          "id": "S05",
+          "location": "v1 Sections IV-B, V",
+          "text": "Variant Aggregation instead randomizes visual environment variants and averages evaluation outcomes. The default Visual Matching approach directly minimizes visual discrepancies. SIMPLER implements Google Robot and WidowX BridgeData V2 task setups in SAPIEN, focusing mainly on rigid-body tasks that contemporary physics simulation can approximate."
+        },
+        {
+          "id": "S06",
+          "location": "v1 Section VI-A",
+          "text": "Experiments pair real and simulated evaluations of existing generalist policies, including RT-1 checkpoints, RT-1-X, RT-2-X and Octo for Google Robot, and RT-1-X/Octo for WidowX. Octo simulated success rates are averaged over three seeds; Google Robot evaluations average four arm/gripper color versions."
+        },
+        {
+          "id": "S07",
+          "location": "v1 Section VI-B; Table I",
+          "text": "For six policy checkpoints on the three Google Robot task groups in Table I, average MMRV is 0.056 for Visual Matching, 0.143 for Variant Aggregation and 0.375 for validation action MSE; corresponding mean Pearson r is 0.924, 0.778 and 0.308. These are policy-ranking agreement measures, not robot success rates, speedups or statistical significance tests."
+        },
+        {
+          "id": "S08",
+          "location": "v1 Section VI-B; Fig. 7",
+          "text": "WidowX BridgeData V2 task comparisons also show strong ranking agreement, with task-averaged MMRV 0.014 and Pearson r 0.890. Some policy checkpoints remain sensitive to visual differences; agreement is not exact reproduction for every policy or task."
+        },
+        {
+          "id": "S09",
+          "location": "v1 Section VI-C; Figs. 8-9",
+          "text": "Controlled shifts in background, lighting, distractors, table texture and camera pose reproduce policy-dependent robustness patterns. Simulation suggested Octo-Base was more arm-texture-sensitive than RT-1-X; new real-world arm-wrapping experiments supported that relative sensitivity."
+        },
+        {
+          "id": "S10",
+          "location": "v1 Sections V, VI-B",
+          "text": "The open-source release includes environments and construction guidance. Strong relative agreement in the tested setups motivates a policy-development signal, not a guarantee for deformable objects, unseen robots or arbitrary simulator fidelity."
+        }
+      ]
+    }
+  ]
+}

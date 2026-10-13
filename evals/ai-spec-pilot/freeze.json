@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "status": "frozen before generation",
+  "frozen_at": "2026-10-13 11:51:13 UTC",
+  "parent_commit": "05bd47dc45158c595b8b45581366ec68a43d4b8f",
+  "common_guide_commit": "bfc1406e7c3778d4154930d6d158049e84b3736d",
+  "authorization": "User explicitly replied 允许 to independent public-paper writers and anonymous assessors.",
+  "model": "inherited parent configuration; no model or reasoning override; exact service token usage unavailable",
+  "context": {
+    "fork_context": false,
+    "restrictions": "prompt-only narrow paths; not OS quarantine",
+    "coordinator_exposure": "Read public author abstracts while checking metadata; source body sections inspected for packets. No claim of pretraining-unseen papers."
+  },
+  "cases": [
+    {
+      "id": "R01",
+      "url": "https://www.roboticsproceedings.org/rss20/p120.pdf",
+      "sha256": "f37321af021aba1d19351a166241db48230b82e85c3fccf2054261fd46ca339a",
+      "scope": "Sections III-A/B, V-A/B/C, VI; Figs. 1/2/8/10; Introduction count/footnote only.",
+      "version_resolution": "RSS PDF body uses 76k successful episodes and 86 task verbs. Landing page 65k and arXiv abstract 84 task differences are not mixed into packet.",
+      "local_only": "Downloaded full PDF and extraction excluded from publication."
+    },
+    {
+      "id": "R02",
+      "url": "https://arxiv.org/pdf/2405.05941v1",
+      "sha256": "6a9481f3c0fc43fa6736e5f5fc8ddb72ebf05aad7dbd0ff31721e4d6bffec9e5",
+      "scope": "Sections III-A/B, IV-A/B, V, VI-A/B/C; equations 1-2 and Table I; Figs. 4-9.",
+      "local_only": "Downloaded full PDF and extraction excluded from publication."
+    }
+  ],
+  "writers": [
+    {
+      "id": "W01",
+      "condition": "baseline",
+      "replicate": 1
+    },
+    {
+      "id": "W02",
+      "condition": "baseline",
+      "replicate": 2
+    },
+    {
+      "id": "W03",
+      "condition": "candidate",
+      "replicate": 1
+    },
+    {
+      "id": "W04",
+      "condition": "candidate",
+      "replicate": 2
+    }
+  ],
+  "dispatch_order": [
+    "W03",
+    "W01",
+    "W04",
+    "W02"
+  ],
+  "passes": [
+    "initial",
+    "one edit"
+  ],
+  "final_word_budgets": {
+    "abstract": [
+      150,
+      190
+    ],
+    "methods": [
+      110,
+      150
+    ],
+    "results": [
+      120,
+      160
+    ],
+    "notes": [
+      0,
+      60
+    ]
+  },
+  "counter": "[A-Za-z0-9]+(?:[-'\\u2019][A-Za-z0-9]+)*",
+  "decoder": "Strict JSON response; retain raw completion before parsing. Invalid structural output is an outcome, no repair/retry. Trailing whitespace accepted by JSON parser.",
+  "seed": 20261013,
+  "blinding": "random.Random(seed).choice([False,True]) per sorted paper/sample/unit; J02 swaps displayed A/B and reverses pair list; normalize its judgment identities only after raw preservation. T01/T02 use canonical reader packet.",
+  "selected_records": {
+    "abstract": [
+      "ai.rule.operation",
+      "ai.rule.co-contributions",
+      "ai.rule.scope",
+      "ai.rule.quantities"
+    ],
+    "methods": [
+      "ai.rule.operation",
+      "ai.rule.definition",
+      "ai.rule.contrast",
+      "ai.rule.term-consistency"
+    ],
+    "results": [
+      "ai.rule.result-answer",
+      "ai.rule.quantities",
+      "ai.rule.uncertainty",
+      "ai.rule.evaluation-target"
+    ]
+  },
+  "clarity_context": "not used; no procedure/referent problem requiring additional STE guide",
+  "gate": "Positive candidate-minus-baseline votes on both Abstract and Methods; >=2 unanimously candidate pairs spanning >=2 papers; zero consequential candidate fidelity failures; zero final budget violations for both conditions. No runtime promotion even on pass.",
+  "deviations": [],
+  "inputs": {
+    "PROTOCOL.md": {
+      "sha256": "b9e1c1ccc7a89c952b66e53c10148ed05be57f72f50b1d31c608185707097122",
+      "bytes": 6496,
+      "words": 882
+    },
+    "materials.json": {
+      "sha256": "30394a9ba1a808ad92f58b9ad0e19f1024d63eb6d34d597d573b686108d90baf",
+      "bytes": 8689,
+      "words": 1035
+    },
+    "questions.json": {
+      "sha256": "7a8c3c91a9326d5aa8c85e8937ab195f42f56f0a03eaee3b4e4d8adee3b86b9e",
+      "bytes": 1968,
+      "words": 193
+    },
+    "questions.private.json": {
+      "sha256": "29d419f5258c8c10ceee8dfd26cab9b1783ab7293a2a2ed3839a577ea7d5376a",
+      "bytes": 4111,
+      "words": 390
+    },
+    "guides/abstract-decisions.md": {
+      "sha256": "453a43957c5ac9d58707df81bfdce72ac25895f88296f4f4a6bf598194825848",
+      "bytes": 9489,
+      "words": 1299
+    },
+    "guides/argument-transfer.md": {
+      "sha256": "d04c5c900b274185782723901eb9d60fd1979abe3ba239c996a18f7359a18f3c",
+      "bytes": 11143,
+      "words": 1594
+    },
+    "guides/selected-ai-records.json": {
+      "sha256": "38a273b3c121d08ea2e51630d544ad49068d17278abbaa49bb404052bda113cc",
+      "bytes": 29797,
+      "words": 2773
+    },
+    "guides/writing-protocols.md": {
+      "sha256": "56586ceda2ec9f19a049eaf09befbdab2f118e2b1c6bb21c580562f527a9e8b8",
+      "bytes": 9362,
+      "words": 1231
+    },
+    "prompts/W01.txt": {
+      "sha256": "f681c7821e2200dd65de0c605f201bff8e9994c18b13fded01637f6d6bae12a7",
+      "bytes": 2319,
+      "words": 321
+    },
+    "prompts/W02.txt": {
+      "sha256": "65f18421a36d6efbd0a268bb0c1ca7e9e752db6005ae10ca6cd8ab868dc7fe70",
+      "bytes": 2319,
+      "words": 321
+    },
+    "prompts/W03.txt": {
+      "sha256": "51d512416ec16822d2ec4f723929c8742cefe46a0dfd577d46368da03855e6f7",
+      "bytes": 2706,
+      "words": 373
+    },
+    "prompts/W04.txt": {
+      "sha256": "96ea68547c0c3acd3868781f0195ae3717d830d1aff57128115cdb713b2510b1",
+      "bytes": 2706,
+      "words": 373
+    },
+    "prompts/audit.txt": {
+      "sha256": "e2833905607796dc8dac39b9c6f7d7ddea17165dc297fe40cfafd63f6a5a8ffa",
+      "bytes": 2228,
+      "words": 315
+    },
+    "prompts/edit.txt": {
+      "sha256": "e00626388f940c84674b60eecf41eed9e141fe5692b16e8a9e79711d3f4cab77",
+      "bytes": 709,
+      "words": 107
+    },
+    "prompts/judge.txt": {
+      "sha256": "43da1ce6bfd660fbbd82f030a1590194506de6c03c271f964f30c5ab5906e7cb",
+      "bytes": 1778,
+      "words": 250
+    },
+    "prompts/reader.txt": {
+      "sha256": "9ce02cb592a336c43650d5091bae76c3b9b36905efada9944dc5808d6f9f1700",
+      "bytes": 1318,
+      "words": 200
+    }
+  }
+}

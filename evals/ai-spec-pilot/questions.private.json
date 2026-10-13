@@ -1,0 +1,117 @@
+{
+  "scope": "Frozen before writer dispatch. Reader-visible questions only; reference aspects withheld from readers and writers.",
+  "questions": {
+    "R01": {
+      "abstract": [
+        {
+          "id": "a1",
+          "question": "What is the main contribution, and how does its design support its purpose?",
+          "aspects": [
+            "data resource rather than new policy algorithm",
+            "distributed/shared collection enables diverse scenes"
+          ]
+        },
+        {
+          "id": "a2",
+          "question": "What improvement is supported, under what evaluation scope?",
+          "aspects": [
+            "co-training improves success/robustness",
+            "tested manipulation tasks/scene changes; not universal transfer"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "id": "m1",
+          "question": "How does collection avoid being confined to a convenient scene or easy task?",
+          "aspects": [
+            "portable shared hardware/scene changes",
+            "random tasks or scene augmentation"
+          ]
+        },
+        {
+          "id": "m2",
+          "question": "What is mixed during policy training, and what comparison distinguishes the data resource?",
+          "aspects": [
+            "50/50 in-domain plus successful DROID",
+            "same backbone; in-domain-only and OXE controls"
+          ]
+        }
+      ],
+      "results": [
+        {
+          "id": "r1",
+          "question": "What do the main numerical gains measure and what is the comparator?",
+          "aspects": [
+            "22/17 percentage-point across-task success differences ID/OOD",
+            "next-best method; not relative percent or significance claim"
+          ]
+        },
+        {
+          "id": "r2",
+          "question": "What is controlled in the diversity comparison, and what interpretation does it support?",
+          "aspects": [
+            "7362 demonstration subset size",
+            "more scene-diverse subset better on tested OOD tasks"
+          ]
+        }
+      ]
+    },
+    "R02": {
+      "abstract": [
+        {
+          "id": "a1",
+          "question": "What does this system evaluate, and why are its main components needed?",
+          "aspects": [
+            "relative performance of real-trained policies",
+            "control/visual gaps; ranking metric"
+          ]
+        },
+        {
+          "id": "a2",
+          "question": "What does the evidence justify, and what stronger claim is not warranted?",
+          "aspects": [
+            "sim-real ranking/behavior agreement in tested setups",
+            "not exact absolute outcomes or replacement of real evaluations"
+          ]
+        }
+      ],
+      "methods": [
+        {
+          "id": "m1",
+          "question": "How are control and visual gaps reduced, rather than simply named?",
+          "aspects": [
+            "replay real actions; tune stiffness/damping to trajectory errors",
+            "real background with simulated foreground plus texture matching"
+          ]
+        },
+        {
+          "id": "m2",
+          "question": "What does MMRV penalize, how is it aggregated, and which direction is better?",
+          "aspects": [
+            "misranking weighted by real success margin",
+            "worst margin per policy then average; lower better"
+          ]
+        }
+      ],
+      "results": [
+        {
+          "id": "r1",
+          "question": "What does Table I's comparison establish, and which numbers are not robot success rates?",
+          "aspects": [
+            "Visual Matching improves relative ranking agreement vs VarAgg/MSE",
+            "MMRV0.056/0.143/0.375; r0.924/0.778/0.308 in Google task groups"
+          ]
+        },
+        {
+          "id": "r2",
+          "question": "What evidence connects simulated robustness behavior to a real shift, and what remains limited?",
+          "aspects": [
+            "Octo more arm-texture-sensitive than RT-1-X; real wrapping supports",
+            "tested setups/policies; imperfect simulation"
+          ]
+        }
+      ]
+    }
+  }
+}

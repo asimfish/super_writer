@@ -1,0 +1,740 @@
+{
+  "spec_version": "0.4",
+  "scope": "Local AI research writing decisions, not ASD-STE100 compliance, a universal word whitelist, scientific claim evidence or a measured quality gain. All examples are synthetic. Source links provide terminology context, not evidence for the user's results.",
+  "units": {
+    "abstract": [
+      {
+        "topics": [
+          "argument_structure"
+        ],
+        "levels": [
+          "sentence",
+          "paragraph"
+        ],
+        "source_notes": [],
+        "id": "ai.rule.operation",
+        "kind": "writing_rule",
+        "expression": "Explain the operation connecting components",
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "abstract",
+          "method"
+        ],
+        "intents": [
+          "clarify"
+        ],
+        "status": "editorial",
+        "part_of_speech": "not applicable",
+        "meaning": "A reader should understand what a design does, not merely recognize its component names.",
+        "guidance": "Explain a supported input-operation-output relation when a component list leaves the method unintelligible.",
+        "avoid": "Naming a scheduler, decoder and cache, then asserting that the system is effective.",
+        "conditions": [
+          "Use when the reader cannot recover the relevant interaction from the surrounding text."
+        ],
+        "exceptions": [
+          "An informative definition or formal result may carry the contribution without a mechanistic explanation."
+        ],
+        "evidence_required": [
+          "Actual operations and dependencies; causal attribution needs separate evidence."
+        ],
+        "example_context": "Synthetic: a scheduler requests a new observation when the previous observation exceeds an age threshold.",
+        "examples": [
+          "The scheduler requests a new observation once the current observation exceeds the age threshold."
+        ],
+        "counter_examples": [
+          {
+            "text": "Our age-aware scheduler improves observation quality and guarantees reliable control.",
+            "why": "A name and intended role do not establish quality or a control guarantee."
+          }
+        ],
+        "owner": "references/argument-transfer.md",
+        "source_ids": []
+      },
+      {
+        "topics": [
+          "argument_structure"
+        ],
+        "levels": [
+          "paragraph",
+          "section",
+          "document"
+        ],
+        "source_notes": [],
+        "id": "ai.rule.co-contributions",
+        "kind": "writing_rule",
+        "expression": "Preserve author-prioritized co-contributions",
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "abstract",
+          "introduction",
+          "conclusion"
+        ],
+        "intents": [
+          "scope"
+        ],
+        "status": "invariant",
+        "part_of_speech": "not applicable",
+        "meaning": "Compression should not silently erase a supported contribution the author prioritizes.",
+        "guidance": "Allocate space according to supported promises, not a fixed five-sentence outline or metric quota.",
+        "avoid": "Keeping only empirical scores in a theory-plus-empirical abstract.",
+        "conditions": [
+          "Use when compressing multiple confirmed contributions."
+        ],
+        "exceptions": [
+          "Author-approved scope reductions can omit secondary contributions; no universal contribution-evidence ordering is imposed."
+        ],
+        "evidence_required": [
+          "Confirmed priorities and evidence for each retained promise."
+        ],
+        "example_context": "Synthetic: the confirmed contribution includes a conditional bound and a measured runtime reduction.",
+        "examples": [
+          "We establish the bound under assumption A and report lower runtime in the tested setting."
+        ],
+        "counter_examples": [
+          {
+            "text": "We introduce a faster implementation.",
+            "why": "The author's prioritized theoretical contribution disappears."
+          }
+        ],
+        "owner": "references/contribution.md",
+        "source_ids": []
+      },
+      {
+        "topics": [
+          "claim_strength",
+          "evaluation_protocol"
+        ],
+        "levels": [
+          "sentence",
+          "paragraph"
+        ],
+        "source_notes": [],
+        "id": "ai.rule.scope",
+        "kind": "writing_rule",
+        "expression": "Attach consequential scope to the claim",
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "abstract",
+          "experiments",
+          "limitations",
+          "conclusion"
+        ],
+        "intents": [
+          "scope"
+        ],
+        "status": "invariant",
+        "part_of_speech": "not applicable",
+        "meaning": "Conditions that change a result's interpretation remain recoverable where the result is claimed.",
+        "guidance": "Name the relevant population, budget, split or assumptions rather than appending an unrelated blanket disclaimer.",
+        "avoid": "Converting a result on a tested shift into general robustness or a conditional theorem into a universal guarantee.",
+        "conditions": [
+          "Use when changing the condition could change the conclusion."
+        ],
+        "exceptions": [
+          "A nearby unambiguous definition may supply the condition; do not repeat it mechanically in every sentence."
+        ],
+        "evidence_required": [
+          "The evaluation population or theorem assumptions."
+        ],
+        "example_context": "Synthetic: a robot succeeds on held-out objects in a fixed task; new tasks were not tested.",
+        "examples": [
+          "The policy transfers to held-out objects in the evaluated task."
+        ],
+        "counter_examples": [
+          {
+            "text": "The policy generalizes to unseen tasks.",
+            "why": "The held-out axis changes from objects to tasks."
+          }
+        ],
+        "owner": "references/abstract-decisions.md",
+        "source_ids": [],
+        "related_library_ids": [
+          "general.usage-note.generalization-axis.001"
+        ]
+      },
+      {
+        "topics": [
+          "evaluation_protocol",
+          "statistics"
+        ],
+        "levels": [
+          "sentence",
+          "section"
+        ],
+        "source_notes": [
+          {
+            "source_id": "rliable",
+            "location": "Abstract; aggregate scores, finite runs and uncertainty",
+            "observation": "Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."
+          }
+        ],
+        "id": "ai.rule.quantities",
+        "kind": "writing_rule",
+        "expression": "Report the measurement unit and aggregation level",
+        "domains": [
+          "general",
+          "embodied_ai",
+          "reinforcement_learning"
+        ],
+        "sections": [
+          "experiments",
+          "abstract"
+        ],
+        "intents": [
+          "define",
+          "evidence"
+        ],
+        "status": "invariant",
+        "part_of_speech": "not applicable",
+        "meaning": "Tasks, episodes, executions, seeds and sampled trajectories are different reporting units.",
+        "guidance": "Associate each count and average with its actual experimental scope; ask rather than infer a missing denominator.",
+        "avoid": "Turning sampled trajectories or repeated executions into independent training seeds.",
+        "conditions": [
+          "Use for sample counts, rates and aggregate metrics."
+        ],
+        "exceptions": [
+          "A declared table caption may supply a shared denominator; its scope must cover the particular comparison."
+        ],
+        "evidence_required": [
+          "Numerator, denominator, aggregation rule and sampling unit."
+        ],
+        "example_context": "Synthetic: three trained policies each execute ten robot trials.",
+        "examples": [
+          "We evaluate three trained policies with ten executions per policy."
+        ],
+        "counter_examples": [
+          {
+            "text": "We evaluate 30 independent training seeds.",
+            "why": "Robot executions do not become independent model training runs."
+          }
+        ],
+        "owner": "references/writing-protocols.md",
+        "source_ids": [
+          "rliable"
+        ]
+      }
+    ],
+    "methods": [
+      {
+        "topics": [
+          "argument_structure"
+        ],
+        "levels": [
+          "sentence",
+          "paragraph"
+        ],
+        "source_notes": [],
+        "id": "ai.rule.operation",
+        "kind": "writing_rule",
+        "expression": "Explain the operation connecting components",
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "abstract",
+          "method"
+        ],
+        "intents": [
+          "clarify"
+        ],
+        "status": "editorial",
+        "part_of_speech": "not applicable",
+        "meaning": "A reader should understand what a design does, not merely recognize its component names.",
+        "guidance": "Explain a supported input-operation-output relation when a component list leaves the method unintelligible.",
+        "avoid": "Naming a scheduler, decoder and cache, then asserting that the system is effective.",
+        "conditions": [
+          "Use when the reader cannot recover the relevant interaction from the surrounding text."
+        ],
+        "exceptions": [
+          "An informative definition or formal result may carry the contribution without a mechanistic explanation."
+        ],
+        "evidence_required": [
+          "Actual operations and dependencies; causal attribution needs separate evidence."
+        ],
+        "example_context": "Synthetic: a scheduler requests a new observation when the previous observation exceeds an age threshold.",
+        "examples": [
+          "The scheduler requests a new observation once the current observation exceeds the age threshold."
+        ],
+        "counter_examples": [
+          {
+            "text": "Our age-aware scheduler improves observation quality and guarantees reliable control.",
+            "why": "A name and intended role do not establish quality or a control guarantee."
+          }
+        ],
+        "owner": "references/argument-transfer.md",
+        "source_ids": []
+      },
+      {
+        "topics": [
+          "argument_structure"
+        ],
+        "levels": [
+          "word",
+          "sentence",
+          "paragraph"
+        ],
+        "source_notes": [
+          {
+            "source_id": "marmot-ste-context",
+            "location": "SKILL.md operating rules 3-4, 10-11 and rewrite method 3-4; references/essential-rules.md terms, noun groups and surface ambiguity",
+            "observation": "The skill prioritizes intended meaning, stable terminology and referent clarity. We extend the existing definition owner rather than adding a duplicate rule; academic voice and compound exceptions are local adaptations."
+          }
+        ],
+        "id": "ai.rule.definition",
+        "kind": "writing_rule",
+        "expression": "Define objects and symbols before using their relationships",
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "method",
+          "experiments"
+        ],
+        "intents": [
+          "define"
+        ],
+        "status": "editorial",
+        "part_of_speech": "not applicable",
+        "meaning": "Definitions make the subject, operation and mathematical dependence recoverable.",
+        "guidance": "Introduce the relevant object and symbol, then explain the relation it participates in. Resolve ambiguous antecedents and modifier attachments using the author's defined relationships, not a guessed actor or forced synonym.",
+        "avoid": "Acronym chains, ambiguous pronouns and equations whose quantities are never identified.",
+        "conditions": [
+          "Use for new symbols, resources, modules or ambiguous technical nouns.",
+          "Use when a pronoun or compact compound leaves two materially different technical readings."
+        ],
+        "exceptions": [
+          "Standard notation may need only a compact definition; established definitions need not be repeated.",
+          "Keep unambiguous pronouns and standard compound terms; passive voice can retain the intended information focus when the known actor is not the topic."
+        ],
+        "evidence_required": [
+          "Author definitions and the actual equation or implementation."
+        ],
+        "example_context": "Synthetic: tau is the age threshold used by the scheduler. A separate synthetic case: a teacher supplies pseudo-labels to a student, and only the student parameters change.",
+        "examples": [
+          "Let tau denote the maximum observation age; the scheduler refreshes observations older than tau.",
+          "The teacher supplies pseudo-labels to the student; only the student is updated."
+        ],
+        "counter_examples": [
+          {
+            "text": "It uses tau to improve the system.",
+            "why": "Neither the referent nor tau's operational meaning is recoverable."
+          },
+          {
+            "text": "The teacher supplies pseudo-labels to the student, and it is updated.",
+            "why": "The ambiguous antecedent can assign the update to the teacher or the student; the author supplies the intended target."
+          }
+        ],
+        "owner": "references/paper-blueprints.md",
+        "source_ids": [
+          "marmot-ste-context"
+        ]
+      },
+      {
+        "topics": [
+          "evaluation_protocol",
+          "argument_structure"
+        ],
+        "levels": [
+          "paragraph",
+          "section"
+        ],
+        "source_notes": [
+          {
+            "source_id": "domainbed",
+            "location": "Abstract; evaluation conditions and model selection",
+            "observation": "Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."
+          }
+        ],
+        "id": "ai.rule.contrast",
+        "kind": "writing_rule",
+        "expression": "Explain what the comparator distinguishes",
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "experiments",
+          "abstract"
+        ],
+        "intents": [
+          "compare"
+        ],
+        "status": "editorial",
+        "part_of_speech": "not applicable",
+        "meaning": "A result comparison answers a contribution question instead of merely restating table rows.",
+        "guidance": "Identify the informative contrast and retain resource or training differences that affect interpretation.",
+        "avoid": "Calling an unmatched-resource comparison a controlled component ablation.",
+        "conditions": [
+          "Use when choosing and interpreting the main comparison."
+        ],
+        "exceptions": [
+          "Unmatched stronger references may be useful if their distinct comparison role and resources remain explicit."
+        ],
+        "evidence_required": [
+          "Comparator identity, controlled factors and relevant unmatched budgets."
+        ],
+        "example_context": "Synthetic: A uses additional demonstrations; B does not.",
+        "examples": [
+          "A scores higher than B with an additional demonstration budget; this comparison does not isolate the architecture change."
+        ],
+        "counter_examples": [
+          {
+            "text": "The ablation proves that the architecture change causes the improvement.",
+            "why": "Training data differs, so the named factor is not isolated."
+          }
+        ],
+        "owner": "references/results-validation.md",
+        "source_ids": [
+          "domainbed"
+        ]
+      },
+      {
+        "topics": [
+          "argument_structure"
+        ],
+        "levels": [
+          "word",
+          "document"
+        ],
+        "source_notes": [],
+        "id": "ai.rule.term-consistency",
+        "kind": "writing_rule",
+        "expression": "Keep a stable term for a stable defined object",
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "method",
+          "experiments",
+          "translation"
+        ],
+        "intents": [
+          "clarify"
+        ],
+        "status": "editorial",
+        "part_of_speech": "not applicable",
+        "meaning": "Synonym variation can falsely suggest that one object is several different objects.",
+        "guidance": "Use the manuscript's operational definition; preserve distinct terms when they denote distinct quantities.",
+        "avoid": "Alternating episode, trajectory and demonstration as stylistic synonyms.",
+        "conditions": [
+          "Use where referents or technical meanings could become ambiguous."
+        ],
+        "exceptions": [
+          "Accepted abbreviations and explicitly defined equivalent names are fine; the dictionary is not an exhaustive whitelist."
+        ],
+        "evidence_required": [
+          "Definitions and referent identity in this manuscript."
+        ],
+        "example_context": "Synthetic: the paper defines a demonstration as an expert-provided episode.",
+        "examples": [
+          "We collect 20 demonstrations, each consisting of one expert-provided episode."
+        ],
+        "counter_examples": [
+          {
+            "text": "We collect 20 demonstrations and evaluate the 20 training seeds.",
+            "why": "The second noun changes the unit instead of restating it."
+          }
+        ],
+        "owner": "references/academic-expression.md",
+        "source_ids": []
+      }
+    ],
+    "results": [
+      {
+        "id": "ai.rule.result-answer",
+        "kind": "writing_rule",
+        "expression": "Connect an experimental result to the question it answers",
+        "topics": [
+          "argument_structure",
+          "evaluation_protocol"
+        ],
+        "levels": [
+          "paragraph",
+          "section"
+        ],
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "experiments",
+          "abstract"
+        ],
+        "intents": [
+          "evidence",
+          "compare"
+        ],
+        "status": "editorial",
+        "part_of_speech": "not applicable",
+        "meaning": "A result paragraph explains the supported implication of a comparison, not merely a sequence of scores.",
+        "guidance": "State the experimental question, retain the informative comparison and explain only the implication the design supports.",
+        "avoid": "Replacing a table with prose that repeats every number, or inventing a causal story to make the paragraph sound explanatory.",
+        "conditions": [
+          "Reporting an experiment intended to distinguish a contribution, behavior or limitation."
+        ],
+        "exceptions": [
+          "A descriptive dataset report may have no controlled hypothesis; describe the observed distribution without inventing one."
+        ],
+        "evidence_required": [
+          "Question, comparison role, protocol and a bounded interpretation of the actual observation."
+        ],
+        "example_context": "Synthetic: An index is changed while weights and queries stay fixed; returned document identifiers are logged. No answer-correctness test is available.",
+        "examples": [
+          "With model weights and queries fixed, replacing the index changes which documents are retrieved; this experiment tests retrieval responsiveness, not answer correctness."
+        ],
+        "counter_examples": [
+          {
+            "text": "The new index improves reasoning and guarantees accurate answers.",
+            "why": "Document selection does not establish reasoning quality or answer correctness."
+          }
+        ],
+        "owner": "references/results-validation.md",
+        "source_ids": [
+          "rag"
+        ],
+        "source_notes": [
+          {
+            "source_id": "rag",
+            "location": "Sections 4.4 and 4.5",
+            "observation": "Named result subsections motivate bounded experimental questions. The synthetic test and its limitations are original, not results copied from RAG."
+          }
+        ]
+      },
+      {
+        "topics": [
+          "evaluation_protocol",
+          "statistics"
+        ],
+        "levels": [
+          "sentence",
+          "section"
+        ],
+        "source_notes": [
+          {
+            "source_id": "rliable",
+            "location": "Abstract; aggregate scores, finite runs and uncertainty",
+            "observation": "Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."
+          }
+        ],
+        "id": "ai.rule.quantities",
+        "kind": "writing_rule",
+        "expression": "Report the measurement unit and aggregation level",
+        "domains": [
+          "general",
+          "embodied_ai",
+          "reinforcement_learning"
+        ],
+        "sections": [
+          "experiments",
+          "abstract"
+        ],
+        "intents": [
+          "define",
+          "evidence"
+        ],
+        "status": "invariant",
+        "part_of_speech": "not applicable",
+        "meaning": "Tasks, episodes, executions, seeds and sampled trajectories are different reporting units.",
+        "guidance": "Associate each count and average with its actual experimental scope; ask rather than infer a missing denominator.",
+        "avoid": "Turning sampled trajectories or repeated executions into independent training seeds.",
+        "conditions": [
+          "Use for sample counts, rates and aggregate metrics."
+        ],
+        "exceptions": [
+          "A declared table caption may supply a shared denominator; its scope must cover the particular comparison."
+        ],
+        "evidence_required": [
+          "Numerator, denominator, aggregation rule and sampling unit."
+        ],
+        "example_context": "Synthetic: three trained policies each execute ten robot trials.",
+        "examples": [
+          "We evaluate three trained policies with ten executions per policy."
+        ],
+        "counter_examples": [
+          {
+            "text": "We evaluate 30 independent training seeds.",
+            "why": "Robot executions do not become independent model training runs."
+          }
+        ],
+        "owner": "references/writing-protocols.md",
+        "source_ids": [
+          "rliable"
+        ]
+      },
+      {
+        "topics": [
+          "statistics",
+          "claim_strength"
+        ],
+        "levels": [
+          "sentence",
+          "paragraph"
+        ],
+        "source_notes": [
+          {
+            "source_id": "rliable",
+            "location": "Abstract; aggregate scores, finite runs and uncertainty",
+            "observation": "Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."
+          }
+        ],
+        "id": "ai.rule.uncertainty",
+        "kind": "writing_rule",
+        "expression": "Keep consequential uncertainty and its definition",
+        "domains": [
+          "general",
+          "reinforcement_learning"
+        ],
+        "sections": [
+          "experiments",
+          "abstract",
+          "limitations"
+        ],
+        "intents": [
+          "evidence"
+        ],
+        "status": "invariant",
+        "part_of_speech": "not applicable",
+        "meaning": "Dispersion and interval estimates qualify a result; different uncertainty summaries are not interchangeable.",
+        "guidance": "Retain supplied uncertainty where it changes interpretation and state whether it is SD, SE, CI or another declared summary.",
+        "avoid": "Inventing error bars or treating overlap as a significance test.",
+        "conditions": [
+          "Use for close comparisons or claims depending on variability."
+        ],
+        "exceptions": [
+          "Do not manufacture intervals for an unreplicated result; identify the reporting gap or narrow the claim."
+        ],
+        "evidence_required": [
+          "Uncertainty definition, replication unit and interval or dispersion procedure."
+        ],
+        "example_context": "Synthetic: the author reports 0.72 plus/minus 0.03 as SD across seeds.",
+        "examples": [
+          "The mean score is 0.72, with SD 0.03 across training seeds."
+        ],
+        "counter_examples": [
+          {
+            "text": "The 95% confidence interval is 0.72 plus/minus 0.03.",
+            "why": "A reported SD cannot be relabeled as a confidence interval."
+          }
+        ],
+        "owner": "references/writing-protocols.md",
+        "source_ids": [
+          "rliable"
+        ]
+      },
+      {
+        "id": "ai.rule.evaluation-target",
+        "kind": "writing_rule",
+        "expression": "Name the evaluated construct before interpreting its score",
+        "topics": [
+          "evaluation_protocol",
+          "grounding_faithfulness"
+        ],
+        "levels": [
+          "paragraph",
+          "section"
+        ],
+        "domains": [
+          "general",
+          "multimodal"
+        ],
+        "sections": [
+          "experiments",
+          "limitations"
+        ],
+        "intents": [
+          "clarify",
+          "evidence"
+        ],
+        "status": "editorial",
+        "part_of_speech": "not applicable",
+        "meaning": "A measurement of support, correctness, plausibility or mechanism faithfulness does not automatically measure the others.",
+        "guidance": "State the question, evaluation reference and unit; connect the score to that construct before drawing an implication.",
+        "avoid": "Using reader approval of an explanation as evidence that it captures the model's decision process.",
+        "conditions": [
+          "Use when a metric label admits multiple interpretations or a conclusion crosses constructs."
+        ],
+        "exceptions": [
+          "A named metric can be used after its construct and protocol have been defined nearby; a compact abstract need not repeat its full specification."
+        ],
+        "evidence_required": [
+          "Operational construct, reference or oracle, units, and validation appropriate to the proposed interpretation."
+        ],
+        "example_context": "Synthetic: Readers rate rationales as convincing; no model-process evaluation is conducted.",
+        "examples": [
+          "Reader ratings measure rationale plausibility, not explanation faithfulness."
+        ],
+        "counter_examples": [
+          {
+            "text": "The convincing rationales faithfully explain the model's decisions.",
+            "why": "No evidence about the prediction process was collected."
+          }
+        ],
+        "owner": "references/results-validation.md",
+        "source_ids": [
+          "explanation-faithfulness",
+          "alce"
+        ],
+        "source_notes": [
+          {
+            "source_id": "explanation-faithfulness",
+            "location": "Section 2; Section 5",
+            "observation": "Distinguishes plausibility from reflecting prediction processes; the reader-question framing here is original editorial synthesis."
+          },
+          {
+            "source_id": "alce",
+            "location": "Sections 3.1-3.4",
+            "observation": "Correctness, fluency and citation quality are evaluated separately; shortcut outputs expose the risk of conflating these constructs."
+          }
+        ]
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "rliable",
+      "title": "Deep Reinforcement Learning at the Edge of the Statistical Precipice",
+      "url": "https://arxiv.org/abs/2108.13264",
+      "read_scope": "Abstract; aggregate scores, finite runs and uncertainty",
+      "reviewed_on": "2026-10-12"
+    },
+    {
+      "id": "domainbed",
+      "title": "In Search of Lost Domain Generalization",
+      "url": "https://arxiv.org/abs/2007.01434",
+      "read_scope": "Abstract; evaluation conditions and model selection",
+      "reviewed_on": "2026-10-12"
+    },
+    {
+      "id": "rag",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "url": "https://arxiv.org/html/2005.11401v4",
+      "read_scope": "Abstract, Introduction, Section 2, Sections 4.4 and 4.5 including index hot-swapping; not a full-paper review",
+      "reviewed_on": "2026-10-12"
+    },
+    {
+      "id": "alce",
+      "title": "Enabling Large Language Models to Generate Text with Citations",
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "read_scope": "Abstract; PDF Sections 3.1-3.4 evaluation, especially citation recall/precision definitions (printed pages 6468-6469). Appendix E not reviewed.",
+      "reviewed_on": "2026-10-13"
+    },
+    {
+      "id": "explanation-faithfulness",
+      "title": "Towards Faithfully Interpretable NLP Systems: How Should We Define and Evaluate Faithfulness?",
+      "url": "https://aclanthology.org/2020.acl-main.386/",
+      "read_scope": "PDF abstract/introduction, Section 2 faithfulness versus plausibility, and Section 5 evaluation guidelines. An opinion paper, not a universal metric specification.",
+      "reviewed_on": "2026-10-13"
+    },
+    {
+      "id": "marmot-ste-context",
+      "title": "MARMOTatZJU asd-ste100-writing-context 1.1 (third-party skill design)",
+      "url": "https://github.com/MARMOTatZJU/SkillLibMARMOTatZJU/tree/afd2875fe08cf5586dd0b2116b24190308c8b7db/skills/asd-ste100-writing-context",
+      "read_scope": "All four bundled Markdown files and repository MIT license at the pinned commit. Design context, not an authoritative ASD-STE100 rule/dictionary verification; official public explanatory pages were accessible only through indexed search content.",
+      "reviewed_on": "2026-10-13"
+    }
+  ]
+}

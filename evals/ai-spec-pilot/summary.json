@@ -1,0 +1,653 @@
+{
+  "scope": "Two development papers; inherited-model packet-grounded pilot; correlated judgments, no runtime promotion or author-abstract superiority claim.",
+  "reviewer_ids": [
+    "J01",
+    "J02"
+  ],
+  "pair_count": 12,
+  "overall": {
+    "votes": {
+      "baseline": 10,
+      "candidate": 3,
+      "tie": 11
+    },
+    "candidate_minus_baseline": -7,
+    "unanimous": {
+      "baseline": [
+        "R01_s1_abstract",
+        "R01_s2_abstract",
+        "R01_s2_results",
+        "R02_s2_results"
+      ],
+      "candidate": [
+        "R02_s1_results"
+      ],
+      "tie": [
+        "R01_s1_methods",
+        "R01_s1_results",
+        "R01_s2_methods",
+        "R02_s2_abstract"
+      ]
+    },
+    "disagreements": [
+      "R02_s1_abstract",
+      "R02_s1_methods",
+      "R02_s2_methods"
+    ]
+  },
+  "per_unit": {
+    "abstract": {
+      "votes": {
+        "baseline": 5,
+        "candidate": 0,
+        "tie": 3
+      },
+      "candidate_minus_baseline": -5,
+      "unanimous": {
+        "baseline": [
+          "R01_s1_abstract",
+          "R01_s2_abstract"
+        ],
+        "candidate": [],
+        "tie": [
+          "R02_s2_abstract"
+        ]
+      },
+      "disagreements": [
+        "R02_s1_abstract"
+      ]
+    },
+    "methods": {
+      "votes": {
+        "baseline": 1,
+        "candidate": 1,
+        "tie": 6
+      },
+      "candidate_minus_baseline": 0,
+      "unanimous": {
+        "baseline": [],
+        "candidate": [],
+        "tie": [
+          "R01_s1_methods",
+          "R01_s2_methods"
+        ]
+      },
+      "disagreements": [
+        "R02_s1_methods",
+        "R02_s2_methods"
+      ]
+    },
+    "results": {
+      "votes": {
+        "baseline": 4,
+        "candidate": 2,
+        "tie": 2
+      },
+      "candidate_minus_baseline": -2,
+      "unanimous": {
+        "baseline": [
+          "R01_s2_results",
+          "R02_s2_results"
+        ],
+        "candidate": [
+          "R02_s1_results"
+        ],
+        "tie": [
+          "R01_s1_results"
+        ]
+      },
+      "disagreements": []
+    }
+  },
+  "per_paper": {
+    "R01": {
+      "votes": {
+        "baseline": 6,
+        "candidate": 0,
+        "tie": 6
+      },
+      "candidate_minus_baseline": -6,
+      "unanimous": {
+        "baseline": [
+          "R01_s1_abstract",
+          "R01_s2_abstract",
+          "R01_s2_results"
+        ],
+        "candidate": [],
+        "tie": [
+          "R01_s1_methods",
+          "R01_s1_results",
+          "R01_s2_methods"
+        ]
+      },
+      "disagreements": []
+    },
+    "R02": {
+      "votes": {
+        "baseline": 4,
+        "candidate": 3,
+        "tie": 5
+      },
+      "candidate_minus_baseline": -1,
+      "unanimous": {
+        "baseline": [
+          "R02_s2_results"
+        ],
+        "candidate": [
+          "R02_s1_results"
+        ],
+        "tie": [
+          "R02_s2_abstract"
+        ]
+      },
+      "disagreements": [
+        "R02_s1_abstract",
+        "R02_s1_methods",
+        "R02_s2_methods"
+      ]
+    }
+  },
+  "pairs": {
+    "R01_s1_abstract": {
+      "paper": "R01",
+      "sample": 1,
+      "unit": "abstract",
+      "votes": {
+        "baseline": 2,
+        "candidate": 0,
+        "tie": 0
+      },
+      "preferences": {
+        "J01": "baseline",
+        "J02": "baseline"
+      },
+      "outcome": "baseline"
+    },
+    "R01_s1_methods": {
+      "paper": "R01",
+      "sample": 1,
+      "unit": "methods",
+      "votes": {
+        "baseline": 0,
+        "candidate": 0,
+        "tie": 2
+      },
+      "preferences": {
+        "J01": "tie",
+        "J02": "tie"
+      },
+      "outcome": "tie"
+    },
+    "R01_s1_results": {
+      "paper": "R01",
+      "sample": 1,
+      "unit": "results",
+      "votes": {
+        "baseline": 0,
+        "candidate": 0,
+        "tie": 2
+      },
+      "preferences": {
+        "J01": "tie",
+        "J02": "tie"
+      },
+      "outcome": "tie"
+    },
+    "R01_s2_abstract": {
+      "paper": "R01",
+      "sample": 2,
+      "unit": "abstract",
+      "votes": {
+        "baseline": 2,
+        "candidate": 0,
+        "tie": 0
+      },
+      "preferences": {
+        "J01": "baseline",
+        "J02": "baseline"
+      },
+      "outcome": "baseline"
+    },
+    "R01_s2_methods": {
+      "paper": "R01",
+      "sample": 2,
+      "unit": "methods",
+      "votes": {
+        "baseline": 0,
+        "candidate": 0,
+        "tie": 2
+      },
+      "preferences": {
+        "J01": "tie",
+        "J02": "tie"
+      },
+      "outcome": "tie"
+    },
+    "R01_s2_results": {
+      "paper": "R01",
+      "sample": 2,
+      "unit": "results",
+      "votes": {
+        "baseline": 2,
+        "candidate": 0,
+        "tie": 0
+      },
+      "preferences": {
+        "J01": "baseline",
+        "J02": "baseline"
+      },
+      "outcome": "baseline"
+    },
+    "R02_s1_abstract": {
+      "paper": "R02",
+      "sample": 1,
+      "unit": "abstract",
+      "votes": {
+        "baseline": 1,
+        "candidate": 0,
+        "tie": 1
+      },
+      "preferences": {
+        "J01": "baseline",
+        "J02": "tie"
+      },
+      "outcome": "disagreement"
+    },
+    "R02_s1_methods": {
+      "paper": "R02",
+      "sample": 1,
+      "unit": "methods",
+      "votes": {
+        "baseline": 1,
+        "candidate": 0,
+        "tie": 1
+      },
+      "preferences": {
+        "J01": "tie",
+        "J02": "baseline"
+      },
+      "outcome": "disagreement"
+    },
+    "R02_s1_results": {
+      "paper": "R02",
+      "sample": 1,
+      "unit": "results",
+      "votes": {
+        "baseline": 0,
+        "candidate": 2,
+        "tie": 0
+      },
+      "preferences": {
+        "J01": "candidate",
+        "J02": "candidate"
+      },
+      "outcome": "candidate"
+    },
+    "R02_s2_abstract": {
+      "paper": "R02",
+      "sample": 2,
+      "unit": "abstract",
+      "votes": {
+        "baseline": 0,
+        "candidate": 0,
+        "tie": 2
+      },
+      "preferences": {
+        "J01": "tie",
+        "J02": "tie"
+      },
+      "outcome": "tie"
+    },
+    "R02_s2_methods": {
+      "paper": "R02",
+      "sample": 2,
+      "unit": "methods",
+      "votes": {
+        "baseline": 0,
+        "candidate": 1,
+        "tie": 1
+      },
+      "preferences": {
+        "J01": "candidate",
+        "J02": "tie"
+      },
+      "outcome": "disagreement"
+    },
+    "R02_s2_results": {
+      "paper": "R02",
+      "sample": 2,
+      "unit": "results",
+      "votes": {
+        "baseline": 2,
+        "candidate": 0,
+        "tie": 0
+      },
+      "preferences": {
+        "J01": "baseline",
+        "J02": "baseline"
+      },
+      "outcome": "baseline"
+    }
+  },
+  "budget_violations": [],
+  "consequential_candidate_failures": [],
+  "gate": {
+    "passed": false,
+    "criteria": {
+      "abstract_net_positive": false,
+      "methods_net_positive": false,
+      "unanimous_candidate_across_papers": false,
+      "no_consequential_candidate_failures": true,
+      "no_final_budget_deviations": true
+    },
+    "reasons": [
+      "Abstract candidate-minus-baseline votes must be > 0.",
+      "Methods candidate-minus-baseline votes must be > 0.",
+      "At least two unanimous candidate pairs across at least two papers are required."
+    ],
+    "automatic_runtime_promotion": false
+  },
+  "limits": [
+    "Only this two-paper, two-replicate, three-unit pilot is summarized; no other studies are pooled.",
+    "The 24 reviewer votes are correlated judgments, not 24 independent experiments.",
+    "Scores are ordinal schema-checked ratings; they do not determine this preference gate.",
+    "Budget and consequential failure records are supplied externally; absence is not an independent audit.",
+    "Passing supports further validation only, not human validity, conference acceptance, general writing improvement or runtime promotion."
+  ],
+  "ordinal_scores": {
+    "all": {
+      "baseline": {
+        "contribution": {
+          "n": 24,
+          "mean": 5.0
+        },
+        "rationale": {
+          "n": 24,
+          "mean": 4.958333333333333
+        },
+        "precision": {
+          "n": 24,
+          "mean": 5.0
+        },
+        "evidence": {
+          "n": 24,
+          "mean": 5.0
+        },
+        "language": {
+          "n": 24,
+          "mean": 4.916666666666667
+        }
+      },
+      "candidate": {
+        "contribution": {
+          "n": 24,
+          "mean": 5.0
+        },
+        "rationale": {
+          "n": 24,
+          "mean": 4.916666666666667
+        },
+        "precision": {
+          "n": 24,
+          "mean": 4.958333333333333
+        },
+        "evidence": {
+          "n": 24,
+          "mean": 4.875
+        },
+        "language": {
+          "n": 24,
+          "mean": 4.75
+        }
+      }
+    },
+    "abstract": {
+      "baseline": {
+        "contribution": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "rationale": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "precision": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "evidence": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "language": {
+          "n": 8,
+          "mean": 5.0
+        }
+      },
+      "candidate": {
+        "contribution": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "rationale": {
+          "n": 8,
+          "mean": 4.875
+        },
+        "precision": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "evidence": {
+          "n": 8,
+          "mean": 4.625
+        },
+        "language": {
+          "n": 8,
+          "mean": 4.625
+        }
+      }
+    },
+    "methods": {
+      "baseline": {
+        "contribution": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "rationale": {
+          "n": 8,
+          "mean": 4.875
+        },
+        "precision": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "evidence": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "language": {
+          "n": 8,
+          "mean": 5.0
+        }
+      },
+      "candidate": {
+        "contribution": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "rationale": {
+          "n": 8,
+          "mean": 4.875
+        },
+        "precision": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "evidence": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "language": {
+          "n": 8,
+          "mean": 5.0
+        }
+      }
+    },
+    "results": {
+      "baseline": {
+        "contribution": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "rationale": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "precision": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "evidence": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "language": {
+          "n": 8,
+          "mean": 4.75
+        }
+      },
+      "candidate": {
+        "contribution": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "rationale": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "precision": {
+          "n": 8,
+          "mean": 4.875
+        },
+        "evidence": {
+          "n": 8,
+          "mean": 5.0
+        },
+        "language": {
+          "n": 8,
+          "mean": 4.625
+        }
+      }
+    }
+  },
+  "recovery": {
+    "baseline": {
+      "all": {
+        "recovered": 40,
+        "partial": 8
+      },
+      "by_unit": {
+        "abstract": {
+          "recovered": 12,
+          "partial": 4
+        },
+        "methods": {
+          "recovered": 14,
+          "partial": 2
+        },
+        "results": {
+          "recovered": 14,
+          "partial": 2
+        }
+      }
+    },
+    "candidate": {
+      "all": {
+        "recovered": 42,
+        "partial": 6
+      },
+      "by_unit": {
+        "abstract": {
+          "recovered": 12,
+          "partial": 4
+        },
+        "methods": {
+          "recovered": 16
+        },
+        "results": {
+          "recovered": 14,
+          "partial": 2
+        }
+      }
+    }
+  },
+  "passage_fidelity": {
+    "baseline": {
+      "pass": 12
+    },
+    "candidate": {
+      "pass": 12
+    }
+  },
+  "witness_checks": {
+    "records": 96,
+    "nonexact": [],
+    "audit_disagreements": [],
+    "reader_answer_over_budget": [
+      {
+        "reader_id": "T01",
+        "id": "R02_s1_results",
+        "side": "A",
+        "question_id": "r1",
+        "exact": true,
+        "empty": false,
+        "answer_words": 48
+      },
+      {
+        "reader_id": "T01",
+        "id": "R02_s1_results",
+        "side": "B",
+        "question_id": "r1",
+        "exact": true,
+        "empty": false,
+        "answer_words": 47
+      },
+      {
+        "reader_id": "T01",
+        "id": "R02_s2_results",
+        "side": "A",
+        "question_id": "r1",
+        "exact": true,
+        "empty": false,
+        "answer_words": 48
+      },
+      {
+        "reader_id": "T02",
+        "id": "R02_s1_results",
+        "side": "A",
+        "question_id": "r1",
+        "exact": true,
+        "empty": false,
+        "answer_words": 46
+      },
+      {
+        "reader_id": "T02",
+        "id": "R02_s1_results",
+        "side": "B",
+        "question_id": "r1",
+        "exact": true,
+        "empty": false,
+        "answer_words": 46
+      },
+      {
+        "reader_id": "T02",
+        "id": "R02_s2_results",
+        "side": "A",
+        "question_id": "r1",
+        "exact": true,
+        "empty": false,
+        "answer_words": 46
+      }
+    ]
+  }
+}

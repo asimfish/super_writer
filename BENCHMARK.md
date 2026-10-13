@@ -6,11 +6,21 @@ calibration still do not establish human effectiveness. Software tests
 do not measure prose quality. No model weights are trained by the skill.
 
 **Current status (2026-10-13): no stable writing-quality improvement is demonstrated.**
-The latest 68-entry specification/STE integration has no fresh generation/review
-result. [Current diagnosis and remote-CI outcome](docs/writing-effect-status-2026-10-13.md)
-separate Methods failure signals from the successful engineering checks.
-The [next pilot protocol](evals/ai-spec-pilot/PROTOCOL.md) is prepared, not executed;
-source packets and independent-agent authorization are not yet frozen.
+The latest selected AI-spec pilot is now complete: candidate 3 / baseline 10 /
+tie 11, with a failed continuation gate and no runtime promotion.
+[Current diagnosis](docs/writing-effect-status-2026-10-13.md) and
+[the new report](docs/ai-spec-pilot-evaluation.md) separate writing outcomes
+from successful engineering checks. The original prepared protocol is retained;
+[the executed archive](evals/ai-spec-pilot/README.md) contains frozen inputs and raw responses.
+
+- [Current AI-spec pilot](docs/ai-spec-pilot-evaluation.md): DROID and SIMPLER,
+  two replicates and three units, 12 pairs/24 final passages. Abstract votes
+  are 0 / 5 / 3, Methods 1 / 1 / 6, Results 2 / 4 / 2. One unanimous candidate
+  pair, four baseline, four ties, three disagreements. All 24 packet-fidelity
+  checks pass; audited reader answers are candidate 42 recovered/6 partial,
+  baseline 40/8, not an objective comprehension gain. Six reader cap deviations
+  remain visible. No default-guide change or pooling with preceding rounds.
+  [Complete horizontal comparison](evals/ai-spec-pilot/comparison.html).
 
 - [Abstract-only transfer confirmation](docs/abstract-transfer-evaluation.md):
   six papers, two samples and twelve equal-pass pairs under the exact preceding

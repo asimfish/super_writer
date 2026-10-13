@@ -1,0 +1,48 @@
+{
+  "writers": {
+    "W01": {
+      "agent_id": "01a1351b-9713-79e3-9d87-4d8127c7e398",
+      "nickname": "Schrodinger"
+    },
+    "W02": {
+      "agent_id": "01a1351b-97c7-7511-a878-07329e9b14a0",
+      "nickname": "Aquinas"
+    },
+    "W03": {
+      "agent_id": "01a1351b-96c5-7bf3-ac92-46865919da2c",
+      "nickname": "Huygens"
+    },
+    "W04": {
+      "agent_id": "01a1351b-974e-7370-920d-37c9c29ca921",
+      "nickname": "Beauvoir"
+    }
+  },
+  "assessors": {
+    "J01": {
+      "agent_id": "01a13529-e3c3-7a42-a3e8-467ed3aabcc1",
+      "nickname": "Faraday"
+    },
+    "J02": {
+      "agent_id": "01a13529-e40a-7f72-825a-915063e02b44",
+      "nickname": "Carver"
+    },
+    "T01": {
+      "agent_id": "01a13529-e431-7501-8ecd-ea005abe2d48",
+      "nickname": "Hubble"
+    },
+    "T02": {
+      "agent_id": "01a13529-e469-7b51-aadf-e7f56a439072",
+      "nickname": "Pauli"
+    },
+    "F01": {
+      "agent_id": "01a13531-969c-7bd2-b54a-c910a40815f1",
+      "nickname": "Socrates"
+    }
+  },
+  "model": "inherited; no overrides",
+  "passes": "exactly two submissions per writer, initial completion preserved before the edit input",
+  "exposure": "Authorized paths recorded in exact prompts; tool-level exposure trace unavailable; prompt-only separation, not filesystem isolation.",
+  "artifacts": "Responses contain exact returned completion strings; raw JSON files are decoded views.",
+  "retries": [],
+  "token_usage": "Not exposed by agent interface. Counter-word and byte exposure receipts are in freeze.json; response lengths are in word_counts.json."
+}

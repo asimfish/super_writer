@@ -1,0 +1,44 @@
+{
+  "browser": "153.0.8010.12",
+  "views": [
+    {
+      "width": 1600,
+      "height": 1100,
+      "overflow": false,
+      "overlap": 0,
+      "horizontal": true,
+      "exact_final_passages": 24,
+      "exact_initial_passages": 24,
+      "expanded_details": 60,
+      "links": 3,
+      "filter_journey": "pass"
+    },
+    {
+      "width": 900,
+      "height": 1000,
+      "overflow": false,
+      "overlap": 0,
+      "horizontal": true,
+      "exact_final_passages": 24,
+      "exact_initial_passages": 24,
+      "expanded_details": 60,
+      "links": 3,
+      "filter_journey": "pass"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "overlap": 0,
+      "horizontal": false,
+      "exact_final_passages": 24,
+      "exact_initial_passages": 24,
+      "expanded_details": 60,
+      "links": 3,
+      "filter_journey": "pass"
+    }
+  ],
+  "errors": [],
+  "remoteRequests": [],
+  "scope": "Offline text integrity, layout and filtering, not evidence of writing effectiveness."
+}

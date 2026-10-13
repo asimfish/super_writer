@@ -6,6 +6,33 @@ behavior below, not research novelty, factual entailment or acceptance gains.
 
 ## Reproducible Checks
 
+### Current AI-spec pilot archive (2026-10-13)
+
+The [new writing pilot](ai-spec-pilot-evaluation.md) fails its preference gate:
+candidate 3 / baseline 10 / tie 11. The following checks establish engineering
+integrity, not a writing-quality gain or runtime promotion.
+
+- Python 3.14: 280 tests, 279 pass and one PowerShell-unavailable skip. The 56
+  new pilot checks cover synthetic schema/gate failures, reversal, frozen input
+  tampering, completion preservation, witnessed answers and archived results.
+- All 11 existing CLI smoke checks pass; Python compilation and diff checks pass.
+  Focused synthetic pilot checks also pass under local Python 3.9, outside the
+  project's supported Python 3.10+ promise.
+- `archive.py check` reproduces 13 completion strings, 12-pair blinding, word
+  counts, judgments, 96 audited answers and HTML; experimental byte receipts match.
+  All source-catalog hashes and the default argument-transfer guide remain unchanged.
+- Chromium 153.0.8010.12 at 1600x1100, 900x1000 and 390x844 verifies every final
+  and initial passage, all 60 expandable details, filter/reset paths and three
+  local links. No horizontal overflow, section overlap, console errors or remote
+  requests; all three screenshots are inspected. See the
+  [browser receipt](../evals/ai-spec-pilot/browser-check.json).
+- Release packaging succeeds using the existing builder. No dependency install,
+  version/tag change, full source-paper redistribution or runtime-guide change.
+  Public-source PDFs/extractions stay outside the repo. Six reader-answer cap
+  deviations remain visible, with no model-output repair or exclusion.
+
+These are local macOS checks; remote CI/platform outcomes are separate evidence.
+
 ### Atlas cross-drive portability (2026-10-13)
 
 The first public CI for `bfc1406` completed with four successful jobs (Linux

@@ -21,6 +21,12 @@ The repository is `super_writer`; invoke **`$super-writer`**. Your AI agent does
 the writing. Python scripts supply repeatable checks. No model is bundled,
 and no acceptance or AI-detector outcome is promised.
 
+**Latest writing test:** 12 DROID/SIMPLER pairs and 24 final passages give candidate
+3 / baseline 10 / tie 11. **The frozen gate fails; default guidance is unchanged.**
+Local metric explanation improves, but evidence selection and cohesion still lose.
+[Results and failure analysis](docs/ai-spec-pilot-evaluation.md) ·
+[Side-by-side comparison](evals/ai-spec-pilot/comparison.html)
+
 <a id="examples"></a>
 ## Start With the Examples
 

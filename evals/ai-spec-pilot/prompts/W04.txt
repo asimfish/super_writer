@@ -1,0 +1,15 @@
+You are writing original English research prose from an evidence packet. This is a controlled pilot, not a literature search. Do not browse, access author abstracts, prior evaluations, repository instructions or any other files. Do not write files or delegate. Only read these absolute files:
+/Users/liyufeng/Code/super_writer/evals/ai-spec-pilot/materials.json
+/Users/liyufeng/Code/super_writer/evals/ai-spec-pilot/guides/argument-transfer.md
+/Users/liyufeng/Code/super_writer/evals/ai-spec-pilot/guides/abstract-decisions.md
+/Users/liyufeng/Code/super_writer/evals/ai-spec-pilot/guides/writing-protocols.md
+Treat source locations as evidence anchors, not language to quote. No invented facts, significance tests, contribution claims or extra domain knowledge. Author abstracts are intentionally absent. This is the INITIAL draft pass only. A subsequent message will permit exactly one edit; do not simulate or return a final version now.
+For each of R01 and R02, write three self-contained passages:
+abstract: a research-paper abstract conveying problem, contribution, operative design and selected main evidence with its scope; 150-190 words.
+methods: one coherent methods overview explaining how the design works and how it is evaluated, not a parts list; 110-150 words.
+results: one coherent experimental-results paragraph interpreting the decisive comparison and a supported secondary check, with scope; 120-160 words.
+Use the same normal evidence-linked planning and read-back for every passage. A concise editorial note per unit (at most 60 words) may record selection and a scope check; keep it separate from the prose. Avoid unnecessary detail and qualifications, but retain necessary ones. These word limits also apply to the later final pass. The counter is ASCII alphanumeric words optionally joined by hyphens or straight/curly apostrophes; numbers count. Do not use headings inside passages. You need not mention every fact.
+Return ONLY one JSON object, no code fence, with exactly this structure (fill actual prose):
+{"writer_id":"W04","replicate":2,"cases":[{"id":"R01","abstract":"...","methods":"...","results":"...","notes":{"abstract":"...","methods":"...","results":"..."}},{"id":"R02","abstract":"...","methods":"...","results":"...","notes":{"abstract":"...","methods":"...","results":"..."}}]}
+
+Additional authorized input: /Users/liyufeng/Code/super_writer/evals/ai-spec-pilot/guides/selected-ai-records.json. Read the complete selected records. Apply only the four records listed for the relevant unit, preserving their conditions, exceptions and source context. These are extra editorial guidance, not factual evidence for either paper. No additional clarity guide is supplied.
