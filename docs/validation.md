@@ -6,6 +6,23 @@ behavior below, not research novelty, factual entailment or acceptance gains.
 
 ## Reproducible Checks
 
+### Atlas cross-drive portability (2026-10-13)
+
+The first public CI for `bfc1406` completed with four successful jobs (Linux
+Python 3.10/3.12, macOS Python 3.12, and document/template fixtures) but failed
+the Windows Python 3.12 job. Two atlas CLI tests could not render into the
+system temporary directory: repository and output were on different drives,
+which cannot have a relative path. `ntpath.relpath` reproduces that exception.
+
+Owner links now use encoded local file URIs across drives and retain relative
+links on one drive. A Windows-path fixture first fails, then passes with the
+fix; same-drive and existing deterministic/symlink/drift checks remain covered.
+Local Python 3.14 runs 224 tests: 223 pass, 1 PowerShell-unavailable skip;
+all 11 atlas tests pass and checked-in HTML/SVG bytes remain unchanged. This is
+host-independent Windows path evidence, not a Windows execution claim. The
+corrected commit's remote Windows result must be checked separately. No writing
+guidance, frozen quality experiment or effectiveness conclusion is changed.
+
 ### Selective MARMOT context integration (2026-10-13)
 
 The [pinned source review](research/marmot-ste-integration-2026-10-13.md) reads

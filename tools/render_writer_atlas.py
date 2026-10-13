@@ -35,6 +35,8 @@ def link(name: str, base: Path) -> str:
     source = ROOT / name
     if not source.is_file():
         raise ValueError(f"Missing architecture owner: {name}")
+    if source.drive.casefold() != base.drive.casefold():
+        return esc(source.as_uri())
     return esc(Path(os.path.relpath(source, base)).as_posix())
 
 

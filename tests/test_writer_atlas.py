@@ -5,7 +5,7 @@ from __future__ import annotations
 import copy
 from html.parser import HTMLParser
 import json
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 import subprocess
 import sys
 import tempfile
@@ -38,10 +38,24 @@ class Elements(HTMLParser):
 
 
 class AtlasTests(unittest.TestCase):
+    def test_cross_drive_owner_links_use_encoded_file_uris(self) -> None:
+        class ExistingWindowsPath(PureWindowsPath):
+            def is_file(self) -> bool:
+                return True
+
+        with patch.object(atlas, "ROOT", ExistingWindowsPath("D:/Writer Repo")):
+            actual = atlas.link("references/build.md", PureWindowsPath("C:/Temp/atlas"))
+        self.assertEqual(actual, "file:///D:/Writer%20Repo/references/build.md")
+
+    def test_same_drive_owner_links_remain_relative(self) -> None:
+        with patch.object(atlas.os.path, "relpath", return_value="../references/build.md"):
+            self.assertEqual(atlas.link("references/build.md", ROOT / "docs"), "../references/build.md")
+
     def test_deterministic_render_and_nonwriting_check(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp).resolve() / "atlas"
-            self.assertEqual(cli(output).returncode, 0)
+            result = cli(output)
+            self.assertEqual(result.returncode, 0, result.stderr)
             snapshots = {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in output.rglob("*") if p.is_file()}
             self.assertEqual(cli(output, "--check").returncode, 0)
             self.assertEqual({p: (p.read_bytes(), p.stat().st_mtime_ns) for p in snapshots}, snapshots)
@@ -58,7 +72,8 @@ class AtlasTests(unittest.TestCase):
     def test_drift_fails_without_repairing_the_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp).resolve() / "atlas"
-            self.assertEqual(cli(output).returncode, 0)
+            result = cli(output)
+            self.assertEqual(result.returncode, 0, result.stderr)
             html = output / "writer-atlas.html"
             html.write_text("changed output", encoding="utf-8")
             self.assertEqual(cli(output, "--check").returncode, 1)
