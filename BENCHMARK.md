@@ -5,6 +5,13 @@ evidence of improved conference acceptance. Broad coverage and subsequent evalua
 calibration still do not establish human effectiveness. Software tests
 do not measure prose quality. No model weights are trained by the skill.
 
+**Current status (2026-10-13): no stable writing-quality improvement is demonstrated.**
+The latest 68-entry specification/STE integration has no fresh generation/review
+result. [Current diagnosis and remote-CI outcome](docs/writing-effect-status-2026-10-13.md)
+separate Methods failure signals from the successful engineering checks.
+The [next pilot protocol](evals/ai-spec-pilot/PROTOCOL.md) is prepared, not executed;
+source packets and independent-agent authorization are not yet frozen.
+
 - [Abstract-only transfer confirmation](docs/abstract-transfer-evaluation.md):
   six papers, two samples and twelve equal-pass pairs under the exact preceding
   candidate. Preferences are candidate 10 / baseline 6 / tie 8; two unanimous
