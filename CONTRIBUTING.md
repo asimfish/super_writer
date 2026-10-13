@@ -56,6 +56,38 @@ MIT `LICENSE`; release building rejects missing notices. Keep required-move
 checks complete in every CLI output. Do not mix protocol, variant, sentence-card
 and official-format counts or treat synthetic render values as writing examples.
 
+## Local AI Specification Additions
+
+The original [AI specification](references/ai-writing-spec.md) is separate from
+the imported, pinned corpus. Follow the [curation workflow](references/ai-spec-learning.md)
+and use the [current research record](docs/research/ai-spec-expansion-2026-10-13.md)
+as an evidence format, not a fixed entry quota.
+
+Identify the concrete reader confusion and check existing owners first. Record
+primary URL/version, actual read scope, located observation and local inference.
+Keep conditions, evidence needs, a shared synthetic context, explained negative
+wording and a legitimate exception with the canonical record. Declare self-review
+as such; do not imply an independent review that did not occur. Assign kind,
+topic and writing level separately, without creating a second dictionary database.
+
+Candidate hypotheses remain in research notes until reviewed. Schema/CLI/atlas
+checks establish engineering properties; quality claims need a separate frozen
+comparison. Newly studied papers are development references, not unseen tests.
+Do not use the upstream importer to overwrite the original catalog or promote
+experimental drafting defaults after a failed quality gate.
+
+```bash
+python3 -B -m unittest discover -s tests -p test_ai_writing_spec.py -v
+python3 -B tools/render_writer_atlas.py --output-dir docs
+python3 -B tools/render_writer_atlas.py --output-dir docs --check
+python3 -B -m unittest discover -s tests -p test_writer_atlas.py -v
+```
+
+Regenerate and inspect the PNG with the explicit browser command in
+[ADR-001](docs/designs/adr-001-ai-writing-spec.md#verification-and-maintenance).
+Keep counts, source notes, examples and distribution checks synchronized.
+The workflow does not schedule research or add runtime network access.
+
 Preserve legacy artifact names unless a migration is included. Update
 `SKILL.md`, `agents/openai.yaml`, `skill-card.md`, and activation cases together
 when changing how the skill routes or acts. Record imported work in `UPSTREAM.md`

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 335" role="img" aria-labelledby="flow-title flow-desc">
+<title id="flow-title">Super Writer: evidence, guidance and checks</title>
+<desc id="flow-desc">An agent-driven workflow. Guidance feeds planning and drafting; defects return to their owner. Blind quality comparison is separate and optional.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#20272c;letter-spacing:0}.node rect{fill:#fff;stroke:#818c94;stroke-width:1.2}.node text{font-size:13px}.file{font-family:monospace;font-size:10px!important;fill:#52636e}.flow{fill:none;stroke:#374850;stroke-width:1.4;marker-end:url(#arrow)}.guide{stroke:#24778c;stroke-dasharray:5 4}.repair{stroke:#a94739}.caption,.node .caption{font-size:11px;fill:#52636e}</style>
+<rect x="8" y="100" width="575" height="102" fill="none" stroke="#c5cdd2" stroke-dasharray="3 4"/>
+<text x="20" y="96" class="caption">Author evidence and its owning writing stages</text>
+<a href="../../references/build.md" class="node" data-node="materials"><rect x="10" y="114" width="170" height="76"/><text x="95" y="139" text-anchor="middle">Author materials</text><text x="95" y="156" text-anchor="middle" class="caption">Facts and boundaries</text><text x="95" y="175" text-anchor="middle" class="file">build.md</text></a>
+<path class="flow" data-edge="materials-planning" d="M 180 152 H 200"/>
+<a href="../../references/writing-rationale-matrix.md" class="node" data-node="planning"><rect x="200" y="114" width="170" height="76"/><text x="285" y="139" text-anchor="middle">Contribution + plan</text><text x="285" y="156" text-anchor="middle" class="caption">Evidence-linked choices</text><text x="285" y="175" text-anchor="middle" class="file">writing-rationale-matrix.md</text></a>
+<path class="flow" data-edge="planning-draft" d="M 370 152 H 390"/>
+<a href="../../references/rewrite.md" class="node" data-node="draft"><rect x="390" y="114" width="170" height="76"/><text x="475" y="139" text-anchor="middle">Draft / rewrite</text><text x="475" y="156" text-anchor="middle" class="caption">Agent-generated prose</text><text x="475" y="175" text-anchor="middle" class="file">build.md / rewrite.md</text></a>
+<path class="flow" data-edge="draft-readback" d="M 560 152 H 580"/>
+<a href="../../references/argument-transfer.md" class="node" data-node="readback"><rect x="580" y="114" width="170" height="76"/><text x="665" y="139" text-anchor="middle">Semantic read-back</text><text x="665" y="156" text-anchor="middle" class="caption">Recover claim and scope</text><text x="665" y="175" text-anchor="middle" class="file">argument-transfer.md</text></a>
+<path class="flow" data-edge="readback-guards" d="M 750 152 H 770"/>
+<a href="../../scripts/progress_check.py" class="node" data-node="guards"><rect x="770" y="114" width="170" height="76"/><text x="855" y="139" text-anchor="middle">Guards / delivery</text><text x="855" y="156" text-anchor="middle" class="caption">Coded constraints only</text><text x="855" y="175" text-anchor="middle" class="file">progress_check.py</text></a>
+<a href="../../references/ai-writing-spec.json" class="node" data-node="spec"><rect x="170" y="16" width="320" height="50"/><text x="330.0" y="37" text-anchor="middle">Local rules + conditional dictionary</text><text x="330.0" y="55" text-anchor="middle" class="file">ai-writing-spec.json</text></a>
+<a href="../../references/writing-library.json" class="node" data-node="library"><rect x="565" y="16" width="365" height="50"/><text x="747.5" y="37" text-anchor="middle">Pinned language cards + writing protocols</text><text x="747.5" y="55" text-anchor="middle" class="file">130 cards; 16 protocols / 30 variants</text></a>
+<path class="flow guide" data-edge="spec-planning" d="M 330 66 V 80 H 285 V 114"/>
+<path class="flow guide" data-edge="library-draft" d="M 745 66 V 84 H 475 V 114"/>
+<path class="flow repair" data-edge="readback-owner" d="M 665 190 V 226 H 315 V 202"/>
+<path class="repair" data-edge="guards-owner" d="M 855 190 V 226 H 665" fill="none" stroke-width="1.4"/>
+<text x="500" y="242" text-anchor="middle" class="caption">Return a defect to its owning stage, not a new automatic engine</text>
+<a href="../../references/blind-evaluation.md" class="node" data-node="quality"><rect x="515" y="278" width="405" height="42"/><text x="717" y="295" text-anchor="middle">Optional frozen, equal-budget blind comparison</text><text x="717" y="310" text-anchor="middle" class="caption">Development evidence; no automatic default promotion</text></a>
+<path class="flow guide" data-edge="draft-quality" d="M 475 190 V 299 H 515"/>
+<text x="20" y="289" class="caption">Solid: author workflow. Dashed: guidance / optional evaluation.</text>
+<text x="20" y="309" class="caption">Writing and semantic checks are performed by an agent or reader.</text>
+</svg>

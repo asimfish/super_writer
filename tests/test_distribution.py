@@ -330,6 +330,13 @@ class DistributionTests(unittest.TestCase):
         payload = self.archive_payload(output / f"super_writer-v{version}-skill.zip")
         self.assert_manifest(payload)
         for name in ("CONTRIBUTING.md", "README.md", "README.en.md", "docs/validation.md",
+                     "BENCHMARK.md", "references/ai-writing-spec.json", "references/ai-writing-spec.md",
+                     "references/ai-spec-learning.md", "docs/designs/adr-002-classification-and-curation.md",
+                     "docs/research/ai-spec-expansion-2026-10-12.md", "examples/ai-writing-spec/README.md",
+                     "docs/research/ai-spec-expansion-2026-10-13.md", "examples/ai-writing-spec/grounding-and-horizon.md",
+                     "docs/research/marmot-ste-integration-2026-10-13.md", "references/clarity-context.md",
+                     "examples/ai-writing-spec/clarity-context.md", "references/marmot-ste-context.LICENSE",
+                     "docs/writer-atlas.html", "docs/assets/writer-flow.svg", "docs/assets/writer-atlas.png",
                      "DATA_LICENSE", "THIRD_PARTY_NOTICES.md", "references/writing-library.json",
                      "references/writing-protocols.json", "scripts/writing_guide.py",
                      "references/table-templates/LICENSE", "references/table-templates/efficiency.tex",
@@ -338,6 +345,7 @@ class DistributionTests(unittest.TestCase):
                      "examples/synthetic-study/materials/results.csv"):
             self.assertEqual(payload[name], (REPOSITORY / name).read_bytes(), name)
         self.assertIn("name: super-writer", payload["SKILL.md"].decode("utf-8").splitlines())
+        self.assertIn(b"--catalog ai-spec", payload["references/ai-writing-spec.md"])
         self.assertIn(b"CONTRIBUTING.md", payload["README.md"])
         activation = json.loads(payload["evals/activation.json"])
         self.assertEqual(activation["skill"], "super-writer")
@@ -345,6 +353,35 @@ class DistributionTests(unittest.TestCase):
                                     for case in activation["activation_cases"]), 2)
         self.assertGreaterEqual(sum(case["should_activate"] is False
                                     for case in activation["activation_cases"]), 2)
+        extracted = self.base / "actual checkout extracted"
+        with zipfile.ZipFile(output / f"super_writer-v{version}-skill.zip") as archive:
+            archive.extractall(extracted)
+        result = self.run_cli(extracted / "super-writer/scripts/writing_lookup.py",
+                              "--catalog", "ai-spec", "--id", "ai.term.fine-tuning", "--format", "json")
+        entry = json.loads(result.stdout)["entries"][0]
+        self.assertEqual(entry["id"], "ai.term.fine-tuning")
+        self.assertTrue(entry["conditions"] and entry["exceptions"] and entry["counter_examples"])
+        result = self.run_cli(extracted / "super-writer/scripts/writing_lookup.py",
+                              "--catalog", "ai-spec", "动作分块", "--topic", "embodied_control",
+                              "--level", "word", "--kind", "technical_term", "--limit", "1", "--format", "json")
+        entry = json.loads(result.stdout)["entries"][0]
+        self.assertEqual(entry["id"], "ai.term.action-chunking")
+        self.assertTrue(entry["source_notes"])
+
+        result = self.run_cli(extracted / "super-writer/scripts/writing_lookup.py",
+                              "--catalog", "ai-spec", "视觉定位", "--domain", "多模态",
+                              "--topic", "支持与忠实性", "--level", "词语",
+                              "--kind", "technical_term", "--limit", "1", "--format", "json")
+        entry = json.loads(result.stdout)["entries"][0]
+        canonical = json.loads(payload["references/ai-writing-spec.json"])
+        self.assertEqual(entry, next(e for e in canonical["entries"] if e["id"] == "ai.term.visual-grounding"))
+        result = self.run_cli(extracted / "super-writer/scripts/writing_lookup.py",
+                              "--catalog", "ai-spec", "复现步骤", "--topic", "evaluation_protocol",
+                              "--level", "sentence", "--kind", "writing_rule", "--limit", "1", "--format", "json")
+        entry = json.loads(result.stdout)["entries"][0]
+        self.assertEqual(entry, next(e for e in canonical["entries"] if e["id"] == "ai.rule.procedure-order"))
+        self.assertEqual(hashlib.sha256(payload["references/marmot-ste-context.LICENSE"]).hexdigest(),
+                         "fe29e8048edc1f0ae8123ffc96ba0b3022d1fb2b7aa6995ffa708c539376fd1e")
 
     def test_default_output_is_dist_in_working_directory(self) -> None:
         self.run_cli(self.repo / "tools/build_release.py")
@@ -511,6 +548,10 @@ class DistributionTests(unittest.TestCase):
 
     def test_table_distribution_requires_its_mit_license(self) -> None:
         (self.repo / "references/table-templates/LICENSE").unlink()
+        self.assert_rejected_source()
+
+    def test_context_method_distribution_requires_its_mit_notice(self) -> None:
+        (self.repo / "references/marmot-ste-context.LICENSE").unlink()
         self.assert_rejected_source()
 
     def test_invalid_version_cannot_escape_or_name_a_release(self) -> None:

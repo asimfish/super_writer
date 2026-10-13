@@ -11,6 +11,10 @@ not independent blind evaluations.
 | [Theory note](theory-note/) | Assumptions, proof, counterexample | Direct proof and exact-rational checks; no novelty claim | [Markdown](theory-note/manuscript.md), [PDF](theory-note/manuscript.pdf), [Word](theory-note/manuscript.docx) |
 | [Reviewer response](review-response/) | Correct a claim, explain sample SD, acknowledge an unrun baseline | Constructed comments linked to the regression manuscript | [Markdown](review-response/response.md), [PDF](review-response/response.pdf), [Word](review-response/response.docx) |
 | [Minimal claim revision](synthetic-study/) | Narrow an over-strong sentence | Hand-invented tutorial counts, explicitly labeled | [Evidence](synthetic-study/evidence-to-claim.md), [PDF](synthetic-study/manuscript.pdf), [Word](synthetic-study/manuscript.docx) |
+| [Argument transfer](argument-transfer/README.md) | Turn accurate measurements into an answer to a research question | Existing computed regression values; manually authored contrast, not a blind trial | Located writing decisions and English before/after passages |
+| [AI writing boundaries](ai-writing-spec/README.md) | Distinguish prompt conditioning, control feedback, retrieval support and claim strength | Six original synthetic contexts; not real-paper results or a blind quality test | Canonical positive/negative wording, explained errors and legitimate exceptions |
+| [Grounding and task-chain Results](ai-writing-spec/grounding-and-horizon.md) | Separate evaluation targets and turn scores into bounded answers | Five original synthetic contexts; not real-paper results or a blind quality test | Same-fact contrasts, two complete Results paragraph comparisons and explicit chain arithmetic |
+| [Context-sensitive clarity](ai-writing-spec/clarity-context.md) | Preserve referents, modifier attachment and required procedure order without forcing maintenance grammar onto papers | Four original synthetic contexts; no command execution, independent domain review or compliance claim | Same-fact contrasts and legitimate voice/tense, technical-term and literal-interface exceptions |
 
 ## Reproduce
 

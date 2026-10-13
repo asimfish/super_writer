@@ -32,6 +32,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## MARMOT Context-Sensitive Writing Method
+
+`references/clarity-context.md` and the two located AI-spec records selectively
+adapt text-function triage and meaning/action-preservation methods from the
+pinned MARMOT `asd-ste100-writing-context` skill. Academic guidance and all
+examples are independently written; no upstream instruction file or STE
+rule database is bundled. The upstream MIT copyright and permission notice are
+retained in full in [marmot-ste-context.LICENSE](references/marmot-ste-context.LICENSE).
+That license does not relicense the official ASD-STE100 standard or dictionary.
+Source and exclusion details are in [UPSTREAM.md](UPSTREAM.md#marmot-ste-context-integration-2026-10-13).
+
 ## Language Cards and Protocols
 
 `references/writing-library.json` and `references/writing-protocols.json` contain selected Super Library original

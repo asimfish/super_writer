@@ -113,6 +113,119 @@ Supports journal, conference, report/review and competition settings, English
 and Chinese, and `flash` / `pro` research depth. It does not replace experiments,
 author judgment, ethics review or submission systems, and does not send responses.
 
+### How the System Is Organized
+
+Separate **workflow** (how materials become a manuscript), **resources**
+(conditional argument and expression support), and **verification** (facts,
+delivery and writing quality). Resources support the workflow; their counts are
+not module counts, and passing a guard does not establish better writing.
+The [system guide, in Chinese](docs/system-organization.md) explains structure,
+formation, an annotated unit, conditional entries, boundaries and provenance.
+
+[![AI research writing engineering overview](docs/assets/writer-atlas.png)](docs/writer-atlas.html)
+
+[Interactive engineering atlas](docs/writer-atlas.html) ·
+[Specification and bounded lookup](references/ai-writing-spec.md) ·
+[Design decision](docs/designs/adr-001-ai-writing-spec.md)
+
+The local AI specification contains **19 rules, 15 claim-usage entries and 34 technical
+terms**, selected across **9 reader-problem topics and 5 writing levels**. Each retains a meaning or function, conditions, evidence requirements,
+exceptions, original synthetic contrasts and an owning file. It guides existing
+planning and prose read-back, not an automatic semantic checker or transplanted
+maintenance vocabulary. This engineering extension is not a measured writing
+gain; the 130 imported language cards and their pins stay separate.
+
+[Curated expansion workflow](references/ai-spec-learning.md) ·
+[Primary sources and actual read scopes](docs/research/ai-spec-expansion-2026-10-13.md) ·
+[Six synthetic boundary cases](examples/ai-writing-spec/README.md) ·
+[Five grounding/faithfulness/task-chain cases and Results contrasts](examples/ai-writing-spec/grounding-and-horizon.md)
+
+[Selective MARMOT STE-context integration](docs/research/marmot-ste-integration-2026-10-13.md)
+adds text-function selection, referent/modifier clarity and reproducibility step
+order. [Four original contrasts](examples/ai-writing-spec/clarity-context.md)
+retain legitimate academic voice/tense, technical terms and literal commands,
+without importing STE compliance claims or maintenance-domain hard limits.
+
+Nineteen primary-source records and one third-party skill-design record disclose actual read scopes. New distinctions
+separate source support, world truth and explanation faithfulness, as well as
+plan validity, skill feasibility and full execution. Worked paragraphs use these
+boundaries to answer an experimental question rather than enumerate scores.
+
+Research observations become conditional entries only after scope, evidence,
+exceptions and duplication checks. This is an agent/manual maintenance process,
+not an automatic crawler, scheduled expansion or evidence of improved writing.
+
+### Learning a Paper's Writing Decisions
+
+The [argument-transfer workflow](references/argument-transfer.md) connects a
+located exemplar choice to the reader's question, why that choice works, our
+supporting evidence, and a concrete text action. The exemplar learner hands those
+decisions to the writer through the existing dossier and rationale matrix; the
+final check first reconstructs the relationship and comparison from prose
+without the plan, then checks the evidence. Missing relations or unsupported
+implications are repaired in the actual sentence, not by marking a table complete.
+
+This can mean explaining what permits a simplification or choosing a comparison
+that distinguishes interpretations. Sentence counts, keyword matches and filled
+tables alone do not show successful transfer. The skill provides reading and
+planning context; it does not train model weights. See the [same-evidence worked
+comparison](examples/argument-transfer/README.md) and the Chinese README's module
+inventory for the current material, research, contribution, planning, drafting,
+results, language, citation, delivery and evaluation components.
+
+An [isolated-context pilot](docs/argument-transfer-evaluation.md) compares
+abstracts and Results on three original synthetic topics. Two anonymous,
+reversed-order reviewers give one candidate preference and eleven ties, with
+no unanimous directional preference. Raw outputs and disagreements are recorded;
+a fuller workflow or one better sentence is not evidence of stable improvement.
+
+A [real-body follow-up](docs/body-argument-transfer-evaluation.md) uses two CoRL
+papers and two fresh writer contexts per condition. Of eight pairs, three
+unanimously favor the candidate, one favors the baseline, two tie and two have
+reviewer disagreement. Specific operational explanations improve some drafts,
+but opposite outcomes across replicates rule out a stable-gain claim here.
+
+An [equal-pass revision pilot](docs/readback-revision-evaluation.md) uses shared
+initial drafts of VQ-BeT and IBRL: two of eight pairs unanimously favor the new
+guide, one favors the baseline, two tie and three disagree. Source auditing flags
+an outcome-definition ambiguity in one preferred candidate. Results improve
+locally, but no consistent abstract or general superiority is established.
+
+The [broader evaluation](docs/broad-writing-evaluation.md) covers
+**12 real papers, six domains and three samples per paper**, testing Abstract,
+Methods/Analysis and Results. Its 216 final passages form 108 equal-pass pairs;
+anonymous votes are candidate 12, baseline 20 and tie 184. One pair unanimously
+favors the candidate and four favor the baseline. **No overall gain is shown.**
+Separate prose-only readers and primary/supplementary source audits are retained;
+near-ceiling understanding scores are not evidence of successful learning.
+Inspect [all 108 pairs side by side](evals/broad-writing/comparison-complete.html)
+and the [raw archive](evals/broad-writing/README.md). These passages reconstruct
+published research for evaluation, not author abstracts, independent human
+blind review or new scientific results from this project.
+
+A subsequent [12-case synthetic evaluator calibration](docs/evaluator-control-calibration.md)
+includes missing relationships, changed metric events, omitted guarantee conditions
+and valid neutral alternatives. Reviewers favor faithful prose in all 18 defective-pair
+judgments; fine auditors detect all 18 critical defects with no false flag among
+30 faithful/neutral judgments. The prespecified admission gate passes, not a writing-gain
+test. Successful reader rejection of a false statement does not make that statement true.
+Inspect [all controls and both audit channels](evals/evaluator-controls/comparison.html).
+
+A separately frozen [operative-relation follow-up](docs/operative-relation-evaluation.md)
+uses two new paper cases, twelve pairs and twenty-four final passages. Overall
+votes are candidate 5 / baseline 5 / tie 14. Abstracts give 4 / 0 / 4, but Methods
+and Results do not favor the candidate. **No overall gain or runtime promotion.**
+All ties, disagreements and budget deviations remain in the
+[side-by-side comparison](evals/operative-relation/comparison.html).
+
+An [abstract-only confirmation](docs/abstract-transfer-evaluation.md) uses the
+unchanged candidate on six papers and twelve pairs. Votes are candidate 10 /
+baseline 6 / tie 8; both sample strata and four papers net favor candidate.
+**The frozen continuation gate fails:** one Neural ODE pair unanimously favors
+baseline because its contribution/evidence ordering is clearer. All source-audit
+channels pass equally, not a fidelity or reader-grounding improvement. Default
+writing guidance remains unchanged. Inspect [every abstract](evals/abstract-transfer/comparison.html).
+
 ## Design: Contribution Before Rhetoric
 
 ```mermaid

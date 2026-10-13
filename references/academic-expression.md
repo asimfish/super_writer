@@ -71,6 +71,15 @@ force a heuristic score down. Retain the last evidence-valid version.
 Use [writing-library.md](writing-library.md) for bounded offline lookup. Query the
 technical concept and rhetorical purpose separately. A sentence card's example
 is a scaffold, not a claim to paste or a source supporting the paper's results.
+For AI claim verbs, learning regimes or measurement units, use the separate
+[AI writing specification](ai-writing-spec.md). Read its meaning, conditions,
+exceptions and evidence requirements together; do not replace words using only
+a dictionary label. Its synthetic contrasts are not manuscript evidence.
+
+For ambiguous referents, noun groups or research-artifact procedures, use
+[context-sensitive clarity](clarity-context.md). Select by text function; keep
+academic voice/tense choices, literal strings and supplied action dependencies.
+This is a selective method adaptation, not a controlled-language compliance pass.
 
 ## Reporting
 

@@ -11,6 +11,13 @@ terms, usage notes or anti-patterns. All 78 reviewed upstream sentence-pattern
 cards are included; not all 274 upstream entries are imported. For section
 structures and tables, use [writing protocols](writing-protocols.md) separately.
 
+The original library remains the lookup default. The separate, locally authored
+[AI writing specification](ai-writing-spec.md) contains 19 rules, 15 claim-usage entries
+and 34 technical terms via explicit `--catalog ai-spec`, with topic/level facets.
+These are conditional
+editorial records, not more imported cards or a universal vocabulary whitelist.
+They do not change the 130-card count, imported data or reproduction pins.
+
 Resolve commands against the skill directory, keeping the paper project as cwd:
 
 ```bash

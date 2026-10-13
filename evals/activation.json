@@ -2,6 +2,48 @@
   "skill": "super-writer",
   "activation_cases": [
     {
+      "id": "academic-clarity-not-maintenance-grammar",
+      "prompt": "使用 $super-writer 只改论文方法段中的 it 指代和名词修饰关系。保留 vision-language-action model、running mean 以及准确的被动语态和时态。",
+      "should_activate": true,
+      "expected_behavior": "Use context-sensitive clarity and the existing definition record within a bounded edit. Resolve from author evidence, retain legitimate technical compounds and academic grammar, and do not force STE word limits or a full-paper workflow."
+    },
+    {
+      "id": "research-reproduction-text-not-command-execution",
+      "prompt": "用 super-writer 编辑论文复现附录的步骤：先确认 checkpoint 校验通过，再清理中间文件，保留最终归档。只编辑文字，不要执行命令。",
+      "should_activate": true,
+      "expected_behavior": "Preserve supplied preconditions, exact targets and action order through ai.rule.procedure-order. Keep required actions visible; do not invent safeguards, change literal identifiers or execute instructions."
+    },
+    {
+      "id": "general-runbook-neighbor",
+      "prompt": "给生产数据库写一份操作 runbook，不涉及研究论文或学术材料。",
+      "should_activate": false,
+      "expected_behavior": "Use an appropriate operations/documentation workflow. Absorbing text-function design does not make super-writer a general runbook or safety skill."
+    },
+    {
+      "id": "explicit-ste-dictionary-exclusion",
+      "prompt": "不要用 super-writer，只用官方 ASD-STE100 字典审核这段维修指令是否通过认证。",
+      "should_activate": false,
+      "expected_behavior": "Respect the explicit exclusion and standard-authority boundary. The local guide and third-party skill paraphrase cannot establish official dictionary approval or certification."
+    },
+    {
+      "id": "ai-terminology-conditional",
+      "prompt": "用 super-writer 检查论文里 zero-shot 和 fine-tuning 是否准确：基座被冻结，但我们用目标任务数据训练了 LoRA。只检查术语，不改全文。",
+      "should_activate": true,
+      "expected_behavior": "Retrieve bounded AI-spec meanings and exceptions. Adapter training is fine-tuning despite frozen base weights; clarify the stated zero-shot budget. Check evidence and return scoped findings, not an automatic full-paper rewrite."
+    },
+    {
+      "id": "ai-latency-boundary",
+      "prompt": "使用 $super-writer 改结果段：只测了 decoder 的 12 ms，想说整个机器人端到端延迟就是 12 ms。",
+      "should_activate": true,
+      "expected_behavior": "Use the latency/end-to-end AI-spec entries; keep the decoder-only measurement boundary. Do not turn it into sensor-to-action latency or invent missing pipeline measurements."
+    },
+    {
+      "id": "maintenance-standard-neighbor",
+      "prompt": "只验证这份航空维修手册是否符合完整 ASD-STE100 受控词典，不涉及学术论文，也不要使用 super-writer。",
+      "should_activate": false,
+      "expected_behavior": "Respect explicit exclusion and the maintenance-domain boundary. The local AI specification does not implement or certify STE compliance."
+    },
+    {
       "id": "mixed-abstract-priority",
       "prompt": "Use super-writer to draft only an abstract. The main contribution is a conditional theorem; the experiments only illustrate it. Keep the theorem visible rather than listing implementation modules.",
       "should_activate": true,

@@ -100,6 +100,110 @@ Windows 使用 `python` 或 `py -3`，并填写自己的完整目标路径。
 支持期刊、会议、报告/综述、竞赛场景，中英文输出，`flash` / `pro` 调研深度。
 它不代替实验执行、作者判断、研究伦理审查或投稿系统，也不会自动发送审稿回复。
 
+### 当前系统的模块
+
+先区分三个问题：**工作流**说明材料怎样变成成稿，**资源**提供可选的论证与表达支持，
+**验证**检查事实、交付和写作效果。它们相互连接，但不能把资源数当成模块数，或把检查通过当成写得更好。
+
+[体系说明：结构、形成过程、单元拆解、归纳条目、边界与验证](docs/system-organization.md)
+
+[![AI 写作系统工程概览](docs/assets/writer-atlas.png)](docs/writer-atlas.html)
+
+[可交互工程概览](docs/writer-atlas.html) · [完整写作规格与查询](references/ai-writing-spec.md) ·
+[设计取舍](docs/designs/adr-001-ai-writing-spec.md)
+
+本地 AI 写作规格包含 **19 条规范、15 个条件化主张用词、34 个专业术语**，
+按 **9 类问题主题 × 5 个写作层级** 检索，而不是只按领域堆积句式。
+每条保留词义或作用、适用条件、证据要求、例外、原创正反例和负责它的文件。
+它接入已有规划与成稿读回流程，不新增自动语义检查器，也不照搬航空维护的词表和句长限制。
+这是工程能力扩展，尚不代表新一轮盲测质量提升；原有 130 张语言卡及上游固定版本保持独立。
+
+[调研与扩充流程](references/ai-spec-learning.md) ·
+[本轮一手来源及阅读范围](docs/research/ai-spec-expansion-2026-10-13.md) ·
+[六组原创边界正反例](examples/ai-writing-spec/README.md) ·
+[五组 grounding／忠实性／任务链案例与结果段对比](examples/ai-writing-spec/grounding-and-horizon.md)
+
+已[选择性吸收 MARMOT 的 STE 写作 skill](docs/research/marmot-ste-integration-2026-10-13.md)：
+按文本用途选择规则，补充指代／修饰关系和复现步骤顺序。
+[四组原创对照](examples/ai-writing-spec/clarity-context.md)说明为什么学术被动语态、时态、
+专业词和字面命令不能为了简化而随意改动；不引入 STE 合规承诺或航空领域的硬限制。
+
+当前共有 19 个一手来源记录及 1 个第三方 skill 设计来源，每个标明实际阅读范围。新增内容区分来源支持、世界事实、
+解释忠实性，以及计划有效、技能可行与完整执行；样文展示如何用这些区分回答实验问题。
+
+新增条目保留具体来源位置和本地归纳依据；候选先审查条件、证据、例外及重复项，
+再进入正式目录。这是可重复的人工／agent 维护流程，不是自动爬取或定时扩充任务。
+
+| 模块 | 实际负责什么 | 主要入口 |
+|---|---|---|
+| 材料与进度 | 盘点初稿、方法、表格、图和已完成阶段 | `intake`、`resume`、材料 inventory |
+| 调研与范文学习 | 目标要求、SOTA 定位、来源索引、范文的写作选择 | [research](references/research.md)、[exemplar dossier](references/exemplar-learning-dossier.md) |
+| 贡献与动机 | 确定研究要回答的问题、贡献和证据边界 | [contribution](references/contribution.md) |
+| 论证迁移与规划 | 将范文选择绑定到自己的证据及正文动作，设计整篇和段落 | [argument transfer](references/argument-transfer.md)、蓝图、写作理由矩阵 |
+| 正文生成与结构修订 | 从材料构建、从初稿重写、检查主线是否贯穿 | [build](references/build.md)、[rewrite](references/rewrite.md)、逻辑迁移审计 |
+| 实验解释与表格 | 让关键对照回答贡献问题，保留范围、反例和不确定性 | [writing protocols](references/writing-protocols.md)、Results validation |
+| 语言与术语 | 自然学术表达、术语、句式和风格诊断 | 130 张语言卡、[条件化 AI 规格](references/ai-writing-spec.md)、academic expression、humanize |
+| 引用与审稿 | 句子级引用支持、事实完整性、贡献与清晰度审查 | citation bank、integrity audit、structured review |
+| 文档与返修 | 精确会议档案、LaTeX/PDF/Word、翻译、投稿准备和回复 | venue profile、文档 guards、translation/respond |
+| 写作评测 | 字面约束诊断、匿名比较、评分聚合和报告 | [blind evaluation](references/blind-evaluation.md)、`tools/` 中的评测工具 |
+
+### 怎样学到优秀论文的写法
+
+范文学习的交接单位是一个**写作选择**：来源段落做了什么、它解决了读者的什么疑问、
+为什么有效、我们哪条证据允许迁移、正文中具体怎样实现。选择记录在现有 dossier 和写作矩阵里，
+生成后先不看计划，从成稿复述操作、结果和对照条件，再核对证据；丢失的关系或过强暗示要在实际句子中修复。
+它可能是“先解释为什么可以简化”，也可能是“用一组有区分力的对照检验解释”，
+而不是规定所有摘要必须有五句、删到某个数字数量或更换一批高级词。
+
+这是上下文中的阅读、规划和改写机制；本项目没有训练模型权重。范文的机制、数据和新颖性
+不会自动成为我们论文的事实。软件检查能验证约束，是否成功迁移论证仍要阅读正文及盲评。
+
+[看相同数据的流水账/论证段落对照](examples/argument-transfer/README.md) ·
+[可执行的迁移流程](references/argument-transfer.md)
+
+新一轮隔离上下文测试覆盖三组原创合成材料的摘要及 Results，两位匿名、交换顺序的评审给出
+1 次候选偏好和 11 次平局，没有一致的优势判断。保留[原始输出及完整报告](docs/argument-transfer-evaluation.md)，
+不把更完整的流程或单个好句子当作稳定写作提升。
+
+随后用两篇此前未参与本仓库改进的 CoRL 论文正文测试，每版两个隔离写作者，生成 16 段摘要和 Results。
+八组对照中，三组一致偏好新版、一组一致偏好基线、两组平局、两组有分歧。
+具体进步在于解释“为什么这个操作或对照有意义”；同一论文摘要在不同样本中仍出现相反结果，
+因此尚不能宣称稳定提升。[真实正文测试及原始记录](docs/body-argument-transfer-evaluation.md)
+
+上一轮用 VQ-BeT 和 IBRL 的正文，比较同一初稿各修订一次的结果。
+八组对照中，两组一致偏好新版、一组偏好旧版、两组平局、三组有分歧。
+独立源文审计又标记一处新版指标含义歧义，所以连偏好票也不能代替事实验证；
+Results 有局部解释改善，摘要尚无一致优势。
+[等预算修订测试、失败案例及全部原始输出](docs/readback-revision-evaluation.md)
+
+此前大范围一轮扩展到 **12 篇真实论文、6 个领域、每篇 3 个样本**，同时测试摘要、Methods/Analysis 和 Results。
+216 段修订稿组成 108 组等预算对照；匿名评审给出新版 12 票、基线 20 票、持平 184 票，
+只有 1 组一致偏好新版、4 组一致偏好基线，**没有显示整体写作提升**。
+另保留成稿独立阅读、正文事实核验和全部领域的补充核验；理解评分接近满分，不能作为学习成功的证据。
+[完整报告与限制](docs/broad-writing-evaluation.md) ·
+[108 组横向对比](evals/broad-writing/comparison-complete.html) ·
+[原始输出与复查入口](evals/broad-writing/README.md)
+这些样文是对已发表研究的写作重构，不是作者原摘要、独立人类盲评或我们的新研究结果。
+
+随后完成 **12 组合成评审校准**：包含关系缺失、指标含义错误、保证条件缺失，以及合法改写与平局。
+评审在 18 次缺陷对比中均选正确版本，细核验识别全部 18 次关键缺陷判断，未误伤 30 次合法文本判断。
+预先规定的校准门槛通过，但这不是写作提升；“读者看出了错误”也不等于“原句正确”。
+[校准报告与限制](docs/evaluator-control-calibration.md) ·
+[全部控制文本与两种核验](evals/evaluator-controls/comparison.html)
+
+校准后另用两篇新论文测试“压缩时保留操作与条件”，完成 12 组对照、24 段修订稿。
+总票数新版 5、基线 5、持平 14；摘要为 4 / 0 / 4，但 Methods 和 Results 未见优势，
+**仍不能宣称整体提升，也未升级默认写作规则**。保留全部平局、分歧和预算违规。
+[新一轮报告](docs/operative-relation-evaluation.md) ·
+[12 组横向对比](evals/operative-relation/comparison.html)
+
+摘要专项确认再扩展到 **6 篇论文、12 组对照**，保持同一候选规则不变。
+候选 10 票、基线 6 票、持平 8 票；两个采样层和四篇论文净偏向候选，
+但 Neural ODE 一组一致偏好基线，**未通过预先规定的继续验证门槛，默认规则保持不变**。
+评审指出退步来自多项贡献与对应证据的顺序错位，而非数值错误；两版正文核验标签均通过也不代表写作提升。
+[摘要迁移报告与失败分析](docs/abstract-transfer-evaluation.md) ·
+[全部摘要横向对比](evals/abstract-transfer/comparison.html)
+
 ## 设计：贡献先于修辞
 
 ```mermaid

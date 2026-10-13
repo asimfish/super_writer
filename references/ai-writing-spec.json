@@ -1,0 +1,2663 @@
+{
+  "schema_version": "2",
+  "catalog": "ai-spec",
+  "spec_version": "0.4",
+  "reviewed_on": "2026-10-13",
+  "license": "MIT for original editorial synthesis; linked works retain their rights.",
+  "scope": "Local AI research writing decisions, not ASD-STE100 compliance, a universal word whitelist, scientific claim evidence or a measured quality gain. All examples are synthetic. Source links provide terminology context, not evidence for the user's results.",
+  "taxonomy": {
+    "domains": ["general", "world_models", "reinforcement_learning", "embodied_ai", "robot_learning", "vision_language_action", "multimodal"],
+    "sections": ["title", "abstract", "introduction", "related_work", "method", "experiments", "limitations", "conclusion", "rebuttal", "translation"],
+    "intents": ["define", "clarify", "compare", "evidence", "scope"],
+    "kinds": ["writing_rule", "claim_usage", "technical_term"],
+    "topics": ["argument_structure","claim_strength","learning_regimes","evaluation_protocol","statistics","embodied_control","systems_measurement","citation_support","grounding_faithfulness"],
+    "levels": ["word","sentence","paragraph","section","document"],
+    "filter_aliases": {
+      "domain": {"rl": "reinforcement_learning", "robotics": "robot_learning", "vla": "vision_language_action", "具身智能": "embodied_ai", "多模态": "multimodal"},
+      "section": {"实验": "experiments", "摘要": "abstract", "方法": "method"},
+      "intent": {"定义": "define", "对比": "compare"},
+      "topic": {"论证组织": "argument_structure", "主张强度": "claim_strength", "学习范式": "learning_regimes", "评估协议": "evaluation_protocol", "统计": "statistics", "具身控制": "embodied_control", "系统测量": "systems_measurement", "引用支持": "citation_support", "支持与忠实性": "grounding_faithfulness"},
+      "level": {"词语": "word", "句子": "sentence", "段落": "paragraph", "章节": "section", "全文": "document"}
+    }
+  },
+  "aliases": {
+    "显著": ["significant"], "零样本": ["zero-shot"], "少样本": ["few-shot"],
+    "微调": ["fine-tuning"], "预训练": ["pretraining"], "推理": ["inference"],
+    "测试时适应": ["test-time adaptation"], "泛化": ["generalization"],
+    "分布外": ["out-of-distribution"], "数据泄漏": ["data leakage"],
+    "成功率": ["success rate"], "演示": ["demonstration"], "轨迹": ["trajectory"],
+    "回合": ["episode"], "延迟": ["latency"], "吞吐": ["throughput"],
+    "端到端": ["end-to-end"], "不确定性": ["uncertainty"],
+    "动作分块": ["action chunking"], "上下文学习": ["in-context learning"], "检索增强": ["retrieval-augmented generation"],
+    "离线强化学习": ["offline reinforcement learning"], "模仿学习": ["imitation learning"],
+    "开环": ["open-loop"], "闭环": ["closed-loop"], "偏好优化": ["preference optimization"],
+    "可扩展": ["scalable"], "新颖": ["novel"], "因果": ["causal"],
+    "忠实": ["faithful"], "无幻觉": ["hallucination-free"], "事实精确率": ["factual precision"],
+    "引用召回率": ["citation recall"], "引用精确率": ["citation precision"],
+    "对象幻觉": ["object hallucination"], "视觉定位": ["visual grounding"],
+    "机器人可供性": ["robotic affordance"], "任务链成功": ["task-chain success"], "长时程": ["long-horizon"],
+    "复现步骤": ["reproducibility instructions"], "指代歧义": ["ambiguous antecedents"]
+  },
+  "sources": [
+    {"id": "clip", "title": "Learning Transferable Visual Models From Natural Language Supervision", "url": "https://arxiv.org/abs/2103.00020", "read_scope": "Abstract; zero-shot transfer context", "reviewed_on": "2026-10-12"},
+    {"id": "lora", "title": "LoRA: Low-Rank Adaptation of Large Language Models", "url": "https://arxiv.org/abs/2106.09685", "read_scope": "Abstract; pretrained-weight and trainable-adapter distinction", "reviewed_on": "2026-10-12"},
+    {"id": "rliable", "title": "Deep Reinforcement Learning at the Edge of the Statistical Precipice", "url": "https://arxiv.org/abs/2108.13264", "read_scope": "Abstract; aggregate scores, finite runs and uncertainty", "reviewed_on": "2026-10-12"},
+    {"id": "domainbed", "title": "In Search of Lost Domain Generalization", "url": "https://arxiv.org/abs/2007.01434", "read_scope": "Abstract; evaluation conditions and model selection", "reviewed_on": "2026-10-12"},
+    {"id": "tent", "title": "Tent: Fully Test-time Adaptation by Entropy Minimization", "url": "https://arxiv.org/abs/2006.10726v3", "read_scope": "Abstract; test-time optimization and statistics", "reviewed_on": "2026-10-12"},
+    {"id": "sklearn", "title": "scikit-learn: Common pitfalls and recommended practices", "url": "https://scikit-learn.org/stable/common_pitfalls.html", "read_scope": "Data leakage and preprocessing guidance, retrieved search content; not a pinned software dependency", "reviewed_on": "2026-10-12"},
+    {"id":"neurips-checklist","title":"NeurIPS Paper Checklist","url":"https://neurips.cc/public/guides/PaperChecklist","read_scope":"Claims, limitations, theory assumptions, reproducibility, experimental settings, uncertainty and compute questions; live page, not year-specific compliance certification","reviewed_on":"2026-10-12"},
+    {"id":"gpt3","title":"Language Models are Few-Shot Learners","url":"https://arxiv.org/abs/2005.14165v4","read_scope":"Abstract only; prompt demonstrations without gradient updates","reviewed_on":"2026-10-12"},
+    {"id":"rag","title":"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks","url":"https://arxiv.org/html/2005.11401v4","read_scope":"Abstract, Introduction, Section 2, Sections 4.4 and 4.5 including index hot-swapping; not a full-paper review","reviewed_on":"2026-10-12"},
+    {"id":"offline-rl","title":"Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems","url":"https://arxiv.org/abs/2005.01643v3","read_scope":"Abstract only; previously collected data without additional online collection","reviewed_on":"2026-10-12"},
+    {"id":"act","title":"Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware","url":"https://arxiv.org/html/2304.13705v1","read_scope":"Section IV opening, IV-A and Algorithms 1-2; demonstration training, action chunks and overlapping feedback; not a full-paper review","reviewed_on":"2026-10-12"},
+    {"id":"dpo","title":"Direct Preference Optimization: Your Language Model is Secretly a Reward Model","url":"https://arxiv.org/html/2305.18290v3","read_scope":"Abstract and Section 4, equations 4-7 and pipeline description; not the complete theorem proofs or experiment audit","reviewed_on":"2026-10-12"},
+    {"id":"factscore","title":"FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation","url":"https://aclanthology.org/2023.emnlp-main.741/","read_scope":"Abstract and introduction; PDF Section 3.1 definition and assumptions (printed page 12078). Not the complete estimator or experiment audit.","reviewed_on":"2026-10-13"},
+    {"id":"alce","title":"Enabling Large Language Models to Generate Text with Citations","url":"https://aclanthology.org/2023.emnlp-main.398/","read_scope":"Abstract; PDF Sections 3.1-3.4 evaluation, especially citation recall/precision definitions (printed pages 6468-6469). Appendix E not reviewed.","reviewed_on":"2026-10-13"},
+    {"id":"chair","title":"Object Hallucination in Image Captioning","url":"https://aclanthology.org/D18-1437/","read_scope":"Abstract, introduction and PDF Section 2.1 CHAIR (printed pages 4037-4038): denominators, object vocabulary and annotation coverage. No metric implementation audit.","reviewed_on":"2026-10-13"},
+    {"id":"explanation-faithfulness","title":"Towards Faithfully Interpretable NLP Systems: How Should We Define and Evaluate Faithfulness?","url":"https://aclanthology.org/2020.acl-main.386/","read_scope":"PDF abstract/introduction, Section 2 faithfulness versus plausibility, and Section 5 evaluation guidelines. An opinion paper, not a universal metric specification.","reviewed_on":"2026-10-13"},
+    {"id":"calvin","title":"CALVIN: A Benchmark for Language-Conditioned Policy Learning for Long-Horizon Robot Manipulation Tasks","url":"https://arxiv.org/html/2112.03227v2","read_scope":"Abstract and Section III-C challenge: training/test conditions, single-goal versus sequential rollouts, and evaluation metrics. Not a full-paper review or reproduction of a later benchmark release.","reviewed_on":"2026-10-13"},
+    {"id":"saycan","title":"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances","url":"https://arxiv.org/html/2204.01691v2","read_scope":"Section 3 skill/value-function grounding and Algorithm 1; Section 5 setup and separate planning/execution metric definitions. No full experiment or causal audit.","reviewed_on":"2026-10-13"},
+    {"id":"mdetr","title":"MDETR -- Modulated Detection for End-to-End Multi-Modal Understanding","url":"https://arxiv.org/abs/2104.12763v2","read_scope":"Pinned v2 abstract only; author project summary and text-conditioned box-evaluation description also read. CVF PDF body retrieval failed; no body review claimed.","reviewed_on":"2026-10-13"},
+    {"id":"marmot-ste-context","title":"MARMOTatZJU asd-ste100-writing-context 1.1 (third-party skill design)","url":"https://github.com/MARMOTatZJU/SkillLibMARMOTatZJU/tree/afd2875fe08cf5586dd0b2116b24190308c8b7db/skills/asd-ste100-writing-context","read_scope":"All four bundled Markdown files and repository MIT license at the pinned commit. Design context, not an authoritative ASD-STE100 rule/dictionary verification; official public explanatory pages were accessible only through indexed search content.","reviewed_on":"2026-10-13"}
+  ],
+  "entries": [
+    {
+      "topics": ["claim_strength","evaluation_protocol"], "levels": ["sentence","paragraph"],
+      "source_notes": [],
+      "id": "ai.rule.evidence", "kind": "writing_rule", "expression": "Preserve evidence-bearing relationships",
+      "domains": ["general"], "sections": ["abstract", "method", "experiments", "rebuttal", "translation"], "intents": ["evidence"],
+      "status": "invariant", "part_of_speech": "not applicable",
+      "meaning": "An edit preserves the relation between a quantity, its entity, measurement unit and condition, not merely the presence of each token.",
+      "guidance": "Check source-to-draft omissions and draft-to-source additions within the requested unit.",
+      "avoid": "Keeping two scores but swapping the methods, denominator, metric direction or evaluation setting.",
+      "conditions": ["Apply to factual rewriting, translation and result reporting."],
+      "exceptions": ["An abstract may omit secondary detail when its remaining claim stays accurate; necessary scope cannot be omitted."],
+      "evidence_required": ["Located author facts and their original relationships."],
+      "example_context": "Synthetic: A succeeds in 8 of 10 trials; B in 6 of 10 trials.",
+      "examples": ["A succeeds in 8 of 10 trials, compared with 6 of 10 for B."],
+      "counter_examples": [{"text": "B succeeds in 8 of 10 trials, outperforming A.", "why": "The entity-score assignment and comparison direction are reversed."}],
+      "owner": "references/academic-expression.md", "source_ids": []
+    },
+    {
+      "topics": ["citation_support","argument_structure"], "levels": ["sentence","paragraph","document"],
+      "source_notes": [],
+      "id": "ai.rule.evidence-role", "kind": "writing_rule", "expression": "Separate exemplar style from manuscript evidence",
+      "domains": ["general"], "sections": ["abstract", "introduction", "method", "experiments"], "intents": ["evidence"],
+      "status": "invariant", "part_of_speech": "not applicable",
+      "meaning": "A reference can teach an explanatory choice without establishing our method's result or novelty.",
+      "guidance": "Transfer the reader-facing function only when the author's materials support it; establish citation support independently.",
+      "avoid": "Copying a source paper's mechanism, speedup or claim strength into our paper.",
+      "conditions": ["Use whenever drafting from an exemplar or sentence scaffold."],
+      "exceptions": ["The same publication may also support a cited claim, but that support must be checked separately."],
+      "evidence_required": ["Exemplar location and a separate author evidence anchor."],
+      "example_context": "Synthetic: the exemplar has a proven equivalence; our project has only runtime measurements.",
+      "examples": ["We describe the proposed simplification and report its measured runtime."],
+      "counter_examples": [{"text": "Our simplification is mathematically equivalent to the original objective.", "why": "The source's proof cannot establish equivalence for this project."}],
+      "owner": "references/argument-transfer.md", "source_ids": []
+    },
+    {
+      "topics": ["claim_strength","evaluation_protocol"], "levels": ["sentence","paragraph"],
+      "source_notes": [],
+      "id": "ai.rule.scope", "kind": "writing_rule", "expression": "Attach consequential scope to the claim",
+      "domains": ["general"], "sections": ["abstract", "experiments", "limitations", "conclusion"], "intents": ["scope"],
+      "status": "invariant", "part_of_speech": "not applicable",
+      "meaning": "Conditions that change a result's interpretation remain recoverable where the result is claimed.",
+      "guidance": "Name the relevant population, budget, split or assumptions rather than appending an unrelated blanket disclaimer.",
+      "avoid": "Converting a result on a tested shift into general robustness or a conditional theorem into a universal guarantee.",
+      "conditions": ["Use when changing the condition could change the conclusion."],
+      "exceptions": ["A nearby unambiguous definition may supply the condition; do not repeat it mechanically in every sentence."],
+      "evidence_required": ["The evaluation population or theorem assumptions."],
+      "example_context": "Synthetic: a robot succeeds on held-out objects in a fixed task; new tasks were not tested.",
+      "examples": ["The policy transfers to held-out objects in the evaluated task."],
+      "counter_examples": [{"text": "The policy generalizes to unseen tasks.", "why": "The held-out axis changes from objects to tasks."}],
+      "owner": "references/abstract-decisions.md", "source_ids": [],
+      "related_library_ids": ["general.usage-note.generalization-axis.001"]
+    },
+    {
+      "topics": ["argument_structure"], "levels": ["sentence","paragraph"],
+      "source_notes": [],
+      "id": "ai.rule.operation", "kind": "writing_rule", "expression": "Explain the operation connecting components",
+      "domains": ["general"], "sections": ["abstract", "method"], "intents": ["clarify"],
+      "status": "editorial", "part_of_speech": "not applicable",
+      "meaning": "A reader should understand what a design does, not merely recognize its component names.",
+      "guidance": "Explain a supported input-operation-output relation when a component list leaves the method unintelligible.",
+      "avoid": "Naming a scheduler, decoder and cache, then asserting that the system is effective.",
+      "conditions": ["Use when the reader cannot recover the relevant interaction from the surrounding text."],
+      "exceptions": ["An informative definition or formal result may carry the contribution without a mechanistic explanation."],
+      "evidence_required": ["Actual operations and dependencies; causal attribution needs separate evidence."],
+      "example_context": "Synthetic: a scheduler requests a new observation when the previous observation exceeds an age threshold.",
+      "examples": ["The scheduler requests a new observation once the current observation exceeds the age threshold."],
+      "counter_examples": [{"text": "Our age-aware scheduler improves observation quality and guarantees reliable control.", "why": "A name and intended role do not establish quality or a control guarantee."}],
+      "owner": "references/argument-transfer.md", "source_ids": []
+    },
+    {
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "word",
+        "sentence",
+        "paragraph"
+      ],
+      "source_notes": [
+        {
+          "source_id": "marmot-ste-context",
+          "location": "SKILL.md operating rules 3-4, 10-11 and rewrite method 3-4; references/essential-rules.md terms, noun groups and surface ambiguity",
+          "observation": "The skill prioritizes intended meaning, stable terminology and referent clarity. We extend the existing definition owner rather than adding a duplicate rule; academic voice and compound exceptions are local adaptations."
+        }
+      ],
+      "id": "ai.rule.definition",
+      "kind": "writing_rule",
+      "expression": "Define objects and symbols before using their relationships",
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "define"
+      ],
+      "status": "editorial",
+      "part_of_speech": "not applicable",
+      "meaning": "Definitions make the subject, operation and mathematical dependence recoverable.",
+      "guidance": "Introduce the relevant object and symbol, then explain the relation it participates in. Resolve ambiguous antecedents and modifier attachments using the author's defined relationships, not a guessed actor or forced synonym.",
+      "avoid": "Acronym chains, ambiguous pronouns and equations whose quantities are never identified.",
+      "conditions": [
+        "Use for new symbols, resources, modules or ambiguous technical nouns.",
+        "Use when a pronoun or compact compound leaves two materially different technical readings."
+      ],
+      "exceptions": [
+        "Standard notation may need only a compact definition; established definitions need not be repeated.",
+        "Keep unambiguous pronouns and standard compound terms; passive voice can retain the intended information focus when the known actor is not the topic."
+      ],
+      "evidence_required": [
+        "Author definitions and the actual equation or implementation."
+      ],
+      "example_context": "Synthetic: tau is the age threshold used by the scheduler. A separate synthetic case: a teacher supplies pseudo-labels to a student, and only the student parameters change.",
+      "examples": [
+        "Let tau denote the maximum observation age; the scheduler refreshes observations older than tau.",
+        "The teacher supplies pseudo-labels to the student; only the student is updated."
+      ],
+      "counter_examples": [
+        {
+          "text": "It uses tau to improve the system.",
+          "why": "Neither the referent nor tau's operational meaning is recoverable."
+        },
+        {
+          "text": "The teacher supplies pseudo-labels to the student, and it is updated.",
+          "why": "The ambiguous antecedent can assign the update to the teacher or the student; the author supplies the intended target."
+        }
+      ],
+      "owner": "references/paper-blueprints.md",
+      "source_ids": [
+        "marmot-ste-context"
+      ]
+    },
+    {
+      "topics": ["evaluation_protocol","argument_structure"], "levels": ["paragraph","section"],
+      "source_notes": [{"source_id":"domainbed","location":"Abstract; evaluation conditions and model selection","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.rule.contrast", "kind": "writing_rule", "expression": "Explain what the comparator distinguishes",
+      "domains": ["general"], "sections": ["experiments", "abstract"], "intents": ["compare"],
+      "status": "editorial", "part_of_speech": "not applicable",
+      "meaning": "A result comparison answers a contribution question instead of merely restating table rows.",
+      "guidance": "Identify the informative contrast and retain resource or training differences that affect interpretation.",
+      "avoid": "Calling an unmatched-resource comparison a controlled component ablation.",
+      "conditions": ["Use when choosing and interpreting the main comparison."],
+      "exceptions": ["Unmatched stronger references may be useful if their distinct comparison role and resources remain explicit."],
+      "evidence_required": ["Comparator identity, controlled factors and relevant unmatched budgets."],
+      "example_context": "Synthetic: A uses additional demonstrations; B does not.",
+      "examples": ["A scores higher than B with an additional demonstration budget; this comparison does not isolate the architecture change."],
+      "counter_examples": [{"text": "The ablation proves that the architecture change causes the improvement.", "why": "Training data differs, so the named factor is not isolated."}],
+      "owner": "references/results-validation.md", "source_ids": ["domainbed"]
+    },
+    {
+      "topics": ["evaluation_protocol","statistics"], "levels": ["sentence","section"],
+      "source_notes": [{"source_id":"rliable","location":"Abstract; aggregate scores, finite runs and uncertainty","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.rule.quantities", "kind": "writing_rule", "expression": "Report the measurement unit and aggregation level",
+      "domains": ["general", "embodied_ai", "reinforcement_learning"], "sections": ["experiments", "abstract"], "intents": ["define", "evidence"],
+      "status": "invariant", "part_of_speech": "not applicable",
+      "meaning": "Tasks, episodes, executions, seeds and sampled trajectories are different reporting units.",
+      "guidance": "Associate each count and average with its actual experimental scope; ask rather than infer a missing denominator.",
+      "avoid": "Turning sampled trajectories or repeated executions into independent training seeds.",
+      "conditions": ["Use for sample counts, rates and aggregate metrics."],
+      "exceptions": ["A declared table caption may supply a shared denominator; its scope must cover the particular comparison."],
+      "evidence_required": ["Numerator, denominator, aggregation rule and sampling unit."],
+      "example_context": "Synthetic: three trained policies each execute ten robot trials.",
+      "examples": ["We evaluate three trained policies with ten executions per policy."],
+      "counter_examples": [{"text": "We evaluate 30 independent training seeds.", "why": "Robot executions do not become independent model training runs."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["rliable"]
+    },
+    {
+      "topics": ["statistics","claim_strength"], "levels": ["sentence","paragraph"],
+      "source_notes": [{"source_id":"rliable","location":"Abstract; aggregate scores, finite runs and uncertainty","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.rule.uncertainty", "kind": "writing_rule", "expression": "Keep consequential uncertainty and its definition",
+      "domains": ["general", "reinforcement_learning"], "sections": ["experiments", "abstract", "limitations"], "intents": ["evidence"],
+      "status": "invariant", "part_of_speech": "not applicable",
+      "meaning": "Dispersion and interval estimates qualify a result; different uncertainty summaries are not interchangeable.",
+      "guidance": "Retain supplied uncertainty where it changes interpretation and state whether it is SD, SE, CI or another declared summary.",
+      "avoid": "Inventing error bars or treating overlap as a significance test.",
+      "conditions": ["Use for close comparisons or claims depending on variability."],
+      "exceptions": ["Do not manufacture intervals for an unreplicated result; identify the reporting gap or narrow the claim."],
+      "evidence_required": ["Uncertainty definition, replication unit and interval or dispersion procedure."],
+      "example_context": "Synthetic: the author reports 0.72 plus/minus 0.03 as SD across seeds.",
+      "examples": ["The mean score is 0.72, with SD 0.03 across training seeds."],
+      "counter_examples": [{"text": "The 95% confidence interval is 0.72 plus/minus 0.03.", "why": "A reported SD cannot be relabeled as a confidence interval."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["rliable"]
+    },
+    {
+      "topics": ["argument_structure"], "levels": ["paragraph","section","document"],
+      "source_notes": [],
+      "id": "ai.rule.co-contributions", "kind": "writing_rule", "expression": "Preserve author-prioritized co-contributions",
+      "domains": ["general"], "sections": ["abstract", "introduction", "conclusion"], "intents": ["scope"],
+      "status": "invariant", "part_of_speech": "not applicable",
+      "meaning": "Compression should not silently erase a supported contribution the author prioritizes.",
+      "guidance": "Allocate space according to supported promises, not a fixed five-sentence outline or metric quota.",
+      "avoid": "Keeping only empirical scores in a theory-plus-empirical abstract.",
+      "conditions": ["Use when compressing multiple confirmed contributions."],
+      "exceptions": ["Author-approved scope reductions can omit secondary contributions; no universal contribution-evidence ordering is imposed."],
+      "evidence_required": ["Confirmed priorities and evidence for each retained promise."],
+      "example_context": "Synthetic: the confirmed contribution includes a conditional bound and a measured runtime reduction.",
+      "examples": ["We establish the bound under assumption A and report lower runtime in the tested setting."],
+      "counter_examples": [{"text": "We introduce a faster implementation.", "why": "The author's prioritized theoretical contribution disappears."}],
+      "owner": "references/contribution.md", "source_ids": []
+    },
+    {
+      "topics": ["argument_structure"], "levels": ["word","document"],
+      "source_notes": [],
+      "id": "ai.rule.term-consistency", "kind": "writing_rule", "expression": "Keep a stable term for a stable defined object",
+      "domains": ["general"], "sections": ["method", "experiments", "translation"], "intents": ["clarify"],
+      "status": "editorial", "part_of_speech": "not applicable",
+      "meaning": "Synonym variation can falsely suggest that one object is several different objects.",
+      "guidance": "Use the manuscript's operational definition; preserve distinct terms when they denote distinct quantities.",
+      "avoid": "Alternating episode, trajectory and demonstration as stylistic synonyms.",
+      "conditions": ["Use where referents or technical meanings could become ambiguous."],
+      "exceptions": ["Accepted abbreviations and explicitly defined equivalent names are fine; the dictionary is not an exhaustive whitelist."],
+      "evidence_required": ["Definitions and referent identity in this manuscript."],
+      "example_context": "Synthetic: the paper defines a demonstration as an expert-provided episode.",
+      "examples": ["We collect 20 demonstrations, each consisting of one expert-provided episode."],
+      "counter_examples": [{"text": "We collect 20 demonstrations and evaluate the 20 training seeds.", "why": "The second noun changes the unit instead of restating it."}],
+      "owner": "references/academic-expression.md", "source_ids": []
+    },
+    {
+      "topics": ["claim_strength","argument_structure"], "levels": ["sentence","paragraph"],
+      "source_notes": [],
+      "id": "ai.rule.qualification", "kind": "writing_rule", "expression": "Remove empty framing, not scientific qualifications",
+      "domains": ["general"], "sections": ["abstract", "method", "limitations", "rebuttal"], "intents": ["clarify", "scope"],
+      "status": "editorial", "part_of_speech": "not applicable",
+      "meaning": "Directness removes redundant framing without strengthening the scientific statement.",
+      "guidance": "Prefer an explicit subject and action where helpful; retain assumptions, negation, technical names and warranted uncertainty.",
+      "avoid": "Global bans on passive voice, -ing terms, long sentences or the word limitation.",
+      "conditions": ["Use when editing vague preambles or unnecessarily stacked clauses."],
+      "exceptions": ["Passive voice may appropriately foreground an experimental object; reinforcement learning is a protected technical term."],
+      "evidence_required": ["The original statement's scope and the sentence's actual rhetorical function."],
+      "example_context": "Synthetic: a proof holds only for bounded rewards.",
+      "examples": ["For bounded rewards, the estimator satisfies the stated bound."],
+      "counter_examples": [{"text": "The estimator always satisfies the bound.", "why": "Simplification removes the condition that licenses the claim."}],
+      "owner": "references/academic-expression.md", "source_ids": []
+    },
+    {
+      "topics": ["argument_structure","claim_strength"], "levels": ["sentence","paragraph"],
+      "source_notes": [],
+      "id": "ai.rule.readback", "kind": "writing_rule", "expression": "Read the claim from prose before checking the plan",
+      "domains": ["general"], "sections": ["abstract", "method", "experiments"], "intents": ["clarify", "evidence"],
+      "status": "editorial", "part_of_speech": "not applicable",
+      "meaning": "A complete matrix does not establish that the actual prose communicates its intended relationship.",
+      "guidance": "Reconstruct the operation or comparison from the draft alone, then check the strongest reasonable reading against evidence.",
+      "avoid": "Supplying a missing relation from the writer's notes and marking the prose complete.",
+      "conditions": ["Use for a claim-bearing unit after drafting or compression."],
+      "exceptions": ["This is semantic self-review, not an independent source audit or evidence of better writing."],
+      "evidence_required": ["Final prose location, recoverable relationship and its evidence anchor."],
+      "example_context": "Synthetic: a draft names a routing module but never explains which observation it selects.",
+      "examples": ["The router selects the most recent observation that satisfies the visibility constraint."],
+      "counter_examples": [{"text": "Our visibility-aware router yields effective perception.", "why": "The intended selection operation remains only in working notes."}],
+      "owner": "references/argument-transfer.md", "source_ids": []
+    },
+    {
+      "topics": ["evaluation_protocol","claim_strength"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.usage.evaluate", "kind": "claim_usage", "expression": "evaluate",
+      "domains": ["general"], "sections": ["abstract", "experiments"], "intents": ["evidence"],
+      "status": "conditional", "part_of_speech": "verb",
+      "meaning": "Measure or assess under a specified protocol; the verb alone does not assert a favorable result.",
+      "guidance": "Use for a completed assessment and report its setting; distinguish planned evaluation.",
+      "avoid": "Replacing evaluate with demonstrate when the source reports only what was tested.",
+      "conditions": ["A protocol was actually executed."], "exceptions": ["An introduction may describe planned evaluation explicitly in future tense."],
+      "evidence_required": ["Executed protocol or an explicit planned-work label."],
+      "example_context": "Synthetic: tests were run on four tasks, with mixed outcomes.",
+      "examples": ["We evaluate the policy on four tasks."],
+      "counter_examples": [{"text": "We demonstrate reliable performance on four tasks.", "why": "Completed testing does not establish reliability."}],
+      "owner": "references/writing-protocols.md", "source_ids": []
+    },
+    {
+      "topics": ["claim_strength"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.usage.demonstrate", "kind": "claim_usage", "expression": "demonstrate",
+      "domains": ["general"], "sections": ["abstract", "experiments", "conclusion"], "intents": ["evidence"],
+      "status": "conditional", "part_of_speech": "verb",
+      "meaning": "Show a specific property or finding supported by the stated evidence, not every capability suggested by a design.",
+      "guidance": "Name the demonstrated outcome and its scope; preserve the source's evidential strength when reconstructing a paper.",
+      "avoid": "Using the verb to promote design intent, a small pilot or correlation into a broad validated mechanism.",
+      "conditions": ["The evidence directly supports the named outcome."], "exceptions": ["Use propose, evaluate or observe if support is incomplete; demonstrate is not universally banned."],
+      "evidence_required": ["A located experiment, example or derivation supporting this particular outcome."],
+      "example_context": "Synthetic: a constructed example exhibits a failure of one estimator.",
+      "examples": ["The constructed example demonstrates a failure of the estimator under this shift."],
+      "counter_examples": [{"text": "The example demonstrates that all estimators fail under distribution shift.", "why": "The evidence covers one estimator and one constructed setting."}],
+      "owner": "references/academic-expression.md", "source_ids": []
+    },
+    {
+      "topics": ["claim_strength"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.usage.prove", "kind": "claim_usage", "expression": "prove",
+      "domains": ["general"], "sections": ["abstract", "method", "experiments"], "intents": ["evidence"],
+      "status": "conditional", "part_of_speech": "verb",
+      "meaning": "Establish the stated formal proposition through a proof under explicit assumptions.",
+      "guidance": "Keep quantifiers, assumptions and the proved object; empirical support is not a mathematical proof.",
+      "avoid": "Claiming an ablation proves necessity or all-distribution robustness.",
+      "conditions": ["A proof of the actual proposition is available."], "exceptions": ["Informal evidence may support a conjecture but should be described as evidence, not silently relabeled proof."],
+      "evidence_required": ["Proposition, assumptions and corresponding proof."],
+      "example_context": "Synthetic: a proof establishes a bound for bounded rewards.",
+      "examples": ["We prove the bound for bounded rewards."],
+      "counter_examples": [{"text": "Three successful runs prove the bound for all rewards.", "why": "Runs neither establish a theorem nor remove its assumptions."}],
+      "owner": "references/paper-blueprints.md", "source_ids": []
+    },
+    {
+      "topics": ["statistics","claim_strength"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"rliable","location":"Abstract; aggregate scores, finite runs and uncertainty","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.usage.significant", "kind": "claim_usage", "expression": "significant / statistically significant",
+      "domains": ["general", "reinforcement_learning"], "sections": ["abstract", "experiments", "conclusion"], "intents": ["evidence"],
+      "status": "conditional", "part_of_speech": "adjective",
+      "meaning": "Statistical significance concerns a specified inferential procedure; practical importance is a separate judgment.",
+      "guidance": "Name the test or inferential criterion and the comparison. Otherwise report the measured difference without statistical implication.",
+      "avoid": "Treating a large percentage, overlapping error bars or a favorable average as a significance test.",
+      "conditions": ["Use statistically significant only when the stated procedure supports that inference."],
+      "exceptions": ["Non-statistical significant may mean important in ordinary prose, but avoid ambiguous metric claims; substantial also needs a justified interpretation."],
+      "evidence_required": ["Test or interval procedure, sampling unit, criterion and comparison; multiplicity handling when relevant."],
+      "example_context": "Synthetic: A scores 0.72 and B 0.69; no inferential procedure was supplied.",
+      "examples": ["A scores 0.72, compared with 0.69 for B."],
+      "counter_examples": [{"text": "A significantly outperforms B.", "why": "A difference in point estimates alone does not establish statistical significance."}],
+      "owner": "references/academic-expression.md", "source_ids": ["rliable"],
+      "related_library_ids": ["general.usage-note.significant.001"]
+    },
+    {
+      "topics": ["evaluation_protocol","claim_strength"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.usage.robust", "kind": "claim_usage", "expression": "robust",
+      "domains": ["general", "embodied_ai"], "sections": ["abstract", "experiments", "limitations"], "intents": ["scope"],
+      "status": "conditional", "part_of_speech": "adjective",
+      "meaning": "A declared property under specified perturbations, failures or assumptions; the mathematical sense may differ from an empirical claim.",
+      "guidance": "Name the robustness axis and evidence or the formal robustness definition.",
+      "avoid": "Using robust as praise for an unperturbed average score.",
+      "conditions": ["The paper defines and evaluates or proves the relevant robustness property."],
+      "exceptions": ["Keep robust inside an established algorithm name, but do not infer that the name validates a property."],
+      "evidence_required": ["Perturbation range and protocol, or a formal definition and proof."],
+      "example_context": "Synthetic: results cover three specified lighting perturbations only.",
+      "examples": ["Performance is retained under the three tested lighting perturbations."],
+      "counter_examples": [{"text": "The policy is robust to real-world variation.", "why": "The claim extends beyond the tested perturbation family."}],
+      "owner": "references/abstract-decisions.md", "source_ids": []
+    },
+    {
+      "topics": ["systems_measurement","claim_strength"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.usage.efficient", "kind": "claim_usage", "expression": "efficient",
+      "domains": ["general"], "sections": ["abstract", "method", "experiments"], "intents": ["compare"],
+      "status": "conditional", "part_of_speech": "adjective",
+      "meaning": "A benefit on a named resource axis, workload and comparison, not a synonym for small or fast in every setting.",
+      "guidance": "Specify memory, training compute, latency, throughput or interactions, retaining the quality and measurement boundary.",
+      "avoid": "Inferring lower wall-clock latency from fewer parameters or FLOPs alone.",
+      "conditions": ["The claimed resource benefit has a measurement or a properly scoped analytical bound."],
+      "exceptions": ["A parameter-efficient method name can be retained without claiming measured end-to-end speed."],
+      "evidence_required": ["Resource metric, hardware or analytical model, workload, comparator and quality scope."],
+      "example_context": "Synthetic: A has fewer parameters, but runtime has not been measured.",
+      "examples": ["A uses fewer parameters than B; runtime is not measured."],
+      "counter_examples": [{"text": "A runs faster because it has fewer parameters.", "why": "Parameter count does not determine measured latency."}],
+      "owner": "references/writing-protocols.md", "source_ids": [],
+      "related_library_ids": ["general.sentence-pattern.latency-protocol.001"]
+    },
+    {
+      "topics": ["learning_regimes","evaluation_protocol"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"clip","location":"Abstract; zero-shot transfer context","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.zero-shot", "kind": "technical_term", "expression": "zero-shot",
+      "domains": ["general", "vision_language_action", "embodied_ai"], "sections": ["abstract", "method", "experiments"], "intents": ["define", "scope"],
+      "status": "conditional", "part_of_speech": "adjective",
+      "meaning": "An explicitly specified target-task use without the target-task examples or adaptation excluded by that protocol; it does not imply no pretraining exposure.",
+      "guidance": "State zero with respect to what: labeled target examples, demonstrations, parameter updates or another declared budget.",
+      "avoid": "Calling a model universally unseen or adaptation-free merely because no target labels were used.",
+      "conditions": ["The protocol states which task information and adaptation are absent."],
+      "exceptions": ["Zero-shot classification, deployment and in-context prompting have different conventions; the manuscript's operational definition governs."],
+      "evidence_required": ["Target information budget, adaptation procedure and known pretraining exposure limits."],
+      "example_context": "Synthetic: a pretrained classifier uses text labels but no dataset-specific parameter fitting.",
+      "examples": ["We evaluate zero-shot classification without dataset-specific parameter fitting."],
+      "counter_examples": [{"text": "The model has never seen any related concept during training.", "why": "A zero-shot evaluation protocol does not establish pretraining absence."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["clip"]
+    },
+    {
+      "topics": ["learning_regimes","evaluation_protocol"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.term.few-shot", "kind": "technical_term", "expression": "few-shot",
+      "domains": ["general", "vision_language_action", "robot_learning"], "sections": ["abstract", "method", "experiments"], "intents": ["define", "scope"],
+      "status": "conditional", "part_of_speech": "adjective",
+      "meaning": "A stated small example budget under a named adaptation or conditioning procedure.",
+      "guidance": "Specify number, unit, selection and whether examples condition a prompt or train parameters.",
+      "avoid": "Treating four prompt examples and four robot demonstration episodes as the same training budget.",
+      "conditions": ["The example unit and adaptation procedure are specified."],
+      "exceptions": ["Different fields use different shot units; retain the established task convention and define it locally."],
+      "evidence_required": ["Example count and type, selection protocol and update mechanism."],
+      "example_context": "Synthetic: four labeled examples are supplied in context with fixed model parameters.",
+      "examples": ["We use four labeled in-context examples without parameter updates."],
+      "counter_examples": [{"text": "We fine-tune the model on four examples.", "why": "Prompt conditioning is not a parameter update."}],
+      "owner": "references/writing-protocols.md", "source_ids": []
+    },
+    {
+      "topics": ["learning_regimes"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"lora","location":"Abstract; pretrained-weight and trainable-adapter distinction","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.fine-tuning", "kind": "technical_term", "expression": "fine-tuning",
+      "domains": ["general", "vision_language_action"], "sections": ["method", "experiments", "abstract"], "intents": ["define"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "Additional training of a pretrained model or attached trainable parameters for a specified task or domain.",
+      "guidance": "State which parameters change, the data budget and training procedure; distinguish full and parameter-efficient updates.",
+      "avoid": "Equating retrieval or prompting alone with fine-tuning.",
+      "conditions": ["At least the declared model or adapter parameters undergo training updates."],
+      "exceptions": ["Adapter-only or LoRA training is fine-tuning even when base weights remain frozen."],
+      "evidence_required": ["Trainable parameters, data, objective and update procedure."],
+      "example_context": "Synthetic: only low-rank adapters are trained; base weights are frozen.",
+      "examples": ["We fine-tune low-rank adapters while keeping the base weights frozen."],
+      "counter_examples": [{"text": "No fine-tuning occurs because the base weights remain frozen.", "why": "Trainable adapter updates are omitted from the statement."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["lora"]
+    },
+    {
+      "topics": ["learning_regimes"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"clip","location":"Abstract; zero-shot transfer context","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."},{"source_id":"lora","location":"Abstract; pretrained-weight and trainable-adapter distinction","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.pretraining", "kind": "technical_term", "expression": "pretraining",
+      "domains": ["general", "vision_language_action", "world_models"], "sections": ["method", "experiments"], "intents": ["define", "scope"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "The declared training stage preceding the focal adaptation or downstream evaluation.",
+      "guidance": "Name the pretrained checkpoint, known data scope and distinction from target adaptation; disclose unknown coverage.",
+      "avoid": "Claiming unseen evaluation concepts solely because downstream training excludes them.",
+      "conditions": ["A prior trained checkpoint or prior training stage is used."],
+      "exceptions": ["A staged system may have several pretraining stages; define the reference stage rather than forcing a single global label."],
+      "evidence_required": ["Checkpoint provenance and available training-data disclosure."],
+      "example_context": "Synthetic: the base checkpoint's complete training corpus is unknown.",
+      "examples": ["We use the pretrained checkpoint; overlap with its undisclosed training corpus cannot be excluded."],
+      "counter_examples": [{"text": "All test concepts are unseen during pretraining.", "why": "An undisclosed corpus cannot support this exclusion."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["clip", "lora"]
+    },
+    {
+      "topics": ["learning_regimes","systems_measurement"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"tent","location":"Abstract; test-time optimization and statistics","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.inference", "kind": "technical_term", "expression": "inference",
+      "domains": ["general", "vision_language_action", "embodied_ai"], "sections": ["method", "experiments"], "intents": ["define"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "The declared procedure that produces predictions, samples or actions; it may include additional test-time computation.",
+      "guidance": "State the procedure and timing boundary, including search, sampling or adaptation when present.",
+      "avoid": "Treating a single forward-pass time as the cost of an entire decision pipeline.",
+      "conditions": ["The prediction or action-generation procedure is specified."],
+      "exceptions": ["Test-time adaptation can update parameters; do not assert inference always means fixed weights."],
+      "evidence_required": ["Execution steps and the measured or reported boundary."],
+      "example_context": "Synthetic: prediction includes one adaptation update before a forward pass.",
+      "examples": ["The inference procedure updates the adapter once before predicting."],
+      "counter_examples": [{"text": "Inference requires only a forward pass with fixed parameters.", "why": "The declared procedure includes an adapter update before prediction."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["tent"]
+    },
+    {
+      "topics": ["learning_regimes","evaluation_protocol"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"tent","location":"Abstract; test-time optimization and statistics","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.test-time-adaptation", "kind": "technical_term", "expression": "test-time adaptation",
+      "domains": ["general", "world_models"], "sections": ["method", "experiments", "limitations"], "intents": ["define", "scope"],
+      "status": "conditional", "part_of_speech": "noun phrase",
+      "meaning": "A declared change to model parameters, statistics or state using information available at test time.",
+      "guidance": "Report target information, updated quantities, update budget and reset or persistence policy.",
+      "avoid": "Calling target-adapted predictions adaptation-free or hiding test-time updates from efficiency measurements.",
+      "conditions": ["The procedure adapts a declared quantity at test time."],
+      "exceptions": ["The specific adaptation mechanism differs across methods; extra search alone need not be described as parameter adaptation."],
+      "evidence_required": ["Update rule, data access, cost and state persistence."],
+      "example_context": "Synthetic: normalization statistics are updated using unlabeled target batches.",
+      "examples": ["We update normalization statistics on unlabeled target batches at test time."],
+      "counter_examples": [{"text": "The model uses no target information.", "why": "Unlabeled target batches are still target information."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["tent"]
+    },
+    {
+      "topics": ["evaluation_protocol"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"domainbed","location":"Abstract; evaluation conditions and model selection","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.ood", "kind": "technical_term", "expression": "out-of-distribution (OOD)",
+      "domains": ["general", "world_models", "embodied_ai"], "sections": ["abstract", "experiments", "limitations"], "intents": ["define", "scope"],
+      "status": "conditional", "part_of_speech": "adjective",
+      "meaning": "A specified shift relative to a declared reference distribution; held-out samples alone do not imply distribution shift.",
+      "guidance": "Name the reference, held-out axis and actual shift construction or observed population change.",
+      "avoid": "Calling an ordinary random test split OOD because its individual samples are unseen.",
+      "conditions": ["The declared evaluation differs on the specified distributional axis."],
+      "exceptions": ["Operational OOD definitions vary; report the chosen construction without claiming all distribution shifts."],
+      "evidence_required": ["Reference distribution, split design and shift axis."],
+      "example_context": "Synthetic: evaluation is a random split from the same sampled population.",
+      "examples": ["We evaluate on a held-out random split from the same population."],
+      "counter_examples": [{"text": "The random test split establishes OOD robustness.", "why": "Sample separation neither defines a shift nor establishes broad robustness."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["domainbed"]
+    },
+    {
+      "topics": ["evaluation_protocol","claim_strength"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"domainbed","location":"Abstract; evaluation conditions and model selection","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.generalization", "kind": "technical_term", "expression": "generalization",
+      "domains": ["general", "embodied_ai", "reinforcement_learning"], "sections": ["abstract", "experiments"], "intents": ["define", "scope"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "Performance beyond the fitting data on a specified sample, object, task or distribution axis, or a precisely stated formal generalization property.",
+      "guidance": "State what is held out, how selection is separated and whether the claim is empirical or formal.",
+      "avoid": "Converting held-out objects into unseen tasks or empirical transfer into a universal bound.",
+      "conditions": ["The claimed axis and the evaluation or proof supporting it are available."],
+      "exceptions": ["A theory result can concern generalization without an empirical shift experiment; retain its assumptions and quantifiers."],
+      "evidence_required": ["Held-out unit and selection protocol, or the exact theorem and proof."],
+      "example_context": "Synthetic: tests hold out objects but retain training task instructions.",
+      "examples": ["We assess generalization to held-out objects under the same task instructions."],
+      "counter_examples": [{"text": "The experiment proves generalization to new tasks.", "why": "Neither the held-out axis nor the evidential status matches."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["domainbed"],
+      "related_library_ids": ["general.usage-note.generalization-axis.001"]
+    },
+    {
+      "topics": ["evaluation_protocol"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"sklearn","location":"Data leakage and preprocessing guidance, retrieved search content; not a pinned software dependency","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."},{"source_id":"domainbed","location":"Abstract; evaluation conditions and model selection","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.held-out", "kind": "technical_term", "expression": "held-out",
+      "domains": ["general"], "sections": ["method", "experiments"], "intents": ["define", "scope"],
+      "status": "conditional", "part_of_speech": "adjective",
+      "meaning": "Excluded from a named fitting, development or selection stage; not automatically excluded from all prior exposure.",
+      "guidance": "Specify held out from what and whether evaluation data influenced tuning or model selection.",
+      "avoid": "Calling a test set untouched after using it to select checkpoints.",
+      "conditions": ["The exclusion stage and partition are specified."],
+      "exceptions": ["A validation partition can be held out from gradient fitting while still used for selection; say so rather than banning the term."],
+      "evidence_required": ["Partition and stage-specific access protocol."],
+      "example_context": "Synthetic: validation data selects a checkpoint but is not used for gradient fitting.",
+      "examples": ["The validation split is held out from fitting and used for checkpoint selection."],
+      "counter_examples": [{"text": "The validation split is untouched by model development.", "why": "Checkpoint selection is part of model development."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["sklearn", "domainbed"]
+    },
+    {
+      "topics": ["evaluation_protocol"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"sklearn","location":"Data leakage and preprocessing guidance, retrieved search content; not a pinned software dependency","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.data-leakage", "kind": "technical_term", "expression": "data leakage",
+      "domains": ["general"], "sections": ["method", "experiments", "limitations"], "intents": ["define"],
+      "status": "conditional", "part_of_speech": "noun phrase",
+      "meaning": "Information crosses a declared evaluation or prediction-time boundary and can bias the claimed assessment.",
+      "guidance": "Identify the actual access path, boundary and effect rather than diagnosing leakage from high scores alone.",
+      "avoid": "Claiming leakage-free evaluation solely because filenames or partition labels differ.",
+      "conditions": ["The information access is disallowed by the stated evaluation protocol."],
+      "exceptions": ["A declared transductive or test-time-adaptation protocol may permit target inputs; do not silently judge it under an incompatible inductive protocol."],
+      "evidence_required": ["Access history, preprocessing/selection protocol and permitted target information."],
+      "example_context": "Synthetic: preprocessing statistics are fitted using the test split in an inductive evaluation.",
+      "examples": ["Test data influences fitted preprocessing statistics, violating the declared evaluation boundary."],
+      "counter_examples": [{"text": "There is no leakage because test labels were not used.", "why": "Unlabeled test inputs can still cross a disallowed fitting boundary."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["sklearn"]
+    },
+    {
+      "topics": ["evaluation_protocol","statistics"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.term.success-rate", "kind": "technical_term", "expression": "success rate",
+      "domains": ["embodied_ai", "robot_learning", "reinforcement_learning"], "sections": ["abstract", "experiments"], "intents": ["define", "evidence"],
+      "status": "conditional", "part_of_speech": "noun phrase",
+      "meaning": "A proportion under a defined success criterion, trial denominator and aggregation rule.",
+      "guidance": "Distinguish pooled-trial success from a mean of per-task rates, especially with unequal trial counts.",
+      "avoid": "Reporting a macro task average as a pooled trial proportion.",
+      "conditions": ["A success criterion, denominator and averaging rule are available."],
+      "exceptions": ["Success can be graded or multi-stage; use the actual metric definition rather than forcing a binary rate."],
+      "evidence_required": ["Success criterion, trial counts, task weights and uncertainty unit."],
+      "example_context": "Synthetic: task A has 8/10 successes; task B has 1/2; macro averaging is used.",
+      "examples": ["The mean of the two task success rates is 65%."],
+      "counter_examples": [{"text": "The pooled success rate is 65%.", "why": "The pooled rate is 9/12, or 75%, not the macro average."}],
+      "owner": "references/writing-protocols.md", "source_ids": []
+    },
+    {
+      "topics": ["learning_regimes","embodied_control"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.term.demonstration", "kind": "technical_term", "expression": "demonstration",
+      "domains": ["robot_learning", "embodied_ai", "vision_language_action"], "sections": ["method", "experiments"], "intents": ["define"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "An example of behavior supplied for imitation, instruction or evaluation, with a declared unit and source.",
+      "guidance": "Say whether a demonstration is an episode, a segment, a prompt example or another defined unit.",
+      "avoid": "Equating demonstration count with independent training runs, time steps or robot executions.",
+      "conditions": ["The example source and counting unit are specified."],
+      "exceptions": ["Language-model in-context demonstrations need not be robot trajectories; retain the relevant domain meaning."],
+      "evidence_required": ["Demonstrator source, episode/segment definition and data budget."],
+      "example_context": "Synthetic: ten expert episodes each contain 100 recorded steps.",
+      "examples": ["The dataset contains ten expert demonstrations, each with 100 recorded steps."],
+      "counter_examples": [{"text": "The dataset contains 1,000 independent demonstrations.", "why": "Time steps do not become independent behavior examples."}],
+      "owner": "references/writing-protocols.md", "source_ids": []
+    },
+    {
+      "topics": ["embodied_control","evaluation_protocol"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.term.trajectory", "kind": "technical_term", "expression": "trajectory",
+      "domains": ["robot_learning", "reinforcement_learning", "world_models"], "sections": ["method", "experiments"], "intents": ["define"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "A defined sequence of states, observations or actions; it can be generated, planned, logged or physically executed.",
+      "guidance": "Name the trajectory type and distinguish sampled plans from real executed episodes.",
+      "avoid": "Treating several sampled candidate trajectories as several independent real-world trials.",
+      "conditions": ["The sequence contents, origin and execution status are specified."],
+      "exceptions": ["A trajectory may be a segment rather than a complete episode; preserve the paper's definition."],
+      "evidence_required": ["Sequence definition and whether it was generated, logged or executed."],
+      "example_context": "Synthetic: eight candidate plans are sampled and one is executed.",
+      "examples": ["We sample eight candidate trajectories and execute one selected plan."],
+      "counter_examples": [{"text": "We perform eight robot trials.", "why": "Sampled plans are not physical executions."}],
+      "owner": "references/writing-protocols.md", "source_ids": []
+    },
+    {
+      "topics": ["embodied_control","evaluation_protocol"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.term.episode", "kind": "technical_term", "expression": "episode",
+      "domains": ["reinforcement_learning", "robot_learning", "embodied_ai"], "sections": ["method", "experiments"], "intents": ["define"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "A sequence under a specified initialization and termination or truncation protocol.",
+      "guidance": "Report task, horizon, reset conditions and relation to trials or demonstrations where relevant.",
+      "avoid": "Equating repeated episodes from one checkpoint with independently trained policies.",
+      "conditions": ["Start and termination or truncation rules are declared."],
+      "exceptions": ["Continuing tasks can use artificial evaluation windows; identify the window rather than implying natural task termination."],
+      "evidence_required": ["Reset policy, horizon and replication unit."],
+      "example_context": "Synthetic: one checkpoint is evaluated for 20 episodes.",
+      "examples": ["We evaluate the checkpoint for 20 episodes."],
+      "counter_examples": [{"text": "The result averages 20 independent training runs.", "why": "Evaluation episodes and training runs are different units."}],
+      "owner": "references/writing-protocols.md", "source_ids": []
+    },
+    {
+      "topics": ["systems_measurement"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.term.latency", "kind": "technical_term", "expression": "latency",
+      "domains": ["general", "vision_language_action", "embodied_ai"], "sections": ["abstract", "experiments"], "intents": ["define", "compare"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "Elapsed time between declared start and completion events for a request, decision or measured component.",
+      "guidance": "Name hardware, precision, batch, warm-up, synchronization and the timing boundary; distinguish mean from tail latency.",
+      "avoid": "Calling decoder-only timing sensor-to-action delay or inferring latency from FLOPs.",
+      "conditions": ["Timing events and measurement protocol are available."],
+      "exceptions": ["A component latency can be useful if labeled as that component; not every claim requires an end-to-end measurement."],
+      "evidence_required": ["Start/end events, measurement setup and aggregation."],
+      "example_context": "Synthetic: only decoder execution is timed at 12 ms.",
+      "examples": ["Decoder latency is 12 ms under the stated measurement setup."],
+      "counter_examples": [{"text": "The robot's sensor-to-action latency is 12 ms.", "why": "Sensing, preprocessing and communication are not in the measured interval."}],
+      "owner": "references/writing-protocols.md", "source_ids": [],
+      "related_library_ids": ["general.sentence-pattern.latency-protocol.001", "vla.usage-note.control-latency.001"]
+    },
+    {
+      "topics": ["systems_measurement"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.term.throughput", "kind": "technical_term", "expression": "throughput",
+      "domains": ["general"], "sections": ["abstract", "experiments"], "intents": ["define", "compare"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "Completed declared work units per elapsed interval under a stated workload and concurrency regime.",
+      "guidance": "State tokens, requests, actions or another unit, including batch/concurrency and quality or latency constraints.",
+      "avoid": "Treating higher batch throughput as lower individual-request latency.",
+      "conditions": ["The counted work and elapsed interval are defined."],
+      "exceptions": ["Prefill, decoding and complete-request throughput measure different work; define the selected metric."],
+      "evidence_required": ["Work unit, concurrency, hardware, interval and any service constraints."],
+      "example_context": "Synthetic: batching raises requests per second, but per-request latency is not reported.",
+      "examples": ["Batching raises request throughput in the tested workload."],
+      "counter_examples": [{"text": "Batching makes every request faster.", "why": "Aggregate completion rate does not establish per-request latency."}],
+      "owner": "references/writing-protocols.md", "source_ids": []
+    },
+    {
+      "topics": ["systems_measurement","learning_regimes"], "levels": ["word","sentence"],
+      "source_notes": [],
+      "id": "ai.term.end-to-end", "kind": "technical_term", "expression": "end-to-end",
+      "domains": ["general", "embodied_ai", "vision_language_action"], "sections": ["method", "experiments"], "intents": ["define", "scope"],
+      "status": "conditional", "part_of_speech": "adjective",
+      "meaning": "An explicit full boundary for a pipeline or optimization objective; end-to-end learning and end-to-end timing are different senses.",
+      "guidance": "Name the input/output or timing boundary and state excluded stages. Do not transfer the training sense into a runtime claim.",
+      "avoid": "Calling model-only execution an end-to-end deployment measurement.",
+      "conditions": ["The intended sense and endpoints are specified."],
+      "exceptions": ["A model can be trained end-to-end while deployed with unmeasured preprocessing; keep the two claims separate."],
+      "evidence_required": ["Optimization or measurement boundary, including excluded stages."],
+      "example_context": "Synthetic: the network is jointly trained, but timing covers its forward pass only.",
+      "examples": ["The network is trained end-to-end; the reported latency covers its forward pass only."],
+      "counter_examples": [{"text": "End-to-end training establishes the reported end-to-end system latency.", "why": "An optimization boundary is not a timing boundary."}],
+      "owner": "references/writing-protocols.md", "source_ids": []
+    },
+    {
+      "topics": ["statistics"], "levels": ["word","sentence"],
+      "source_notes": [{"source_id":"rliable","location":"Abstract; aggregate scores, finite runs and uncertainty","observation":"Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."}],
+      "id": "ai.term.uncertainty", "kind": "technical_term", "expression": "uncertainty",
+      "domains": ["general", "reinforcement_learning", "world_models"], "sections": ["method", "experiments", "limitations"], "intents": ["define", "evidence"],
+      "status": "conditional", "part_of_speech": "noun",
+      "meaning": "A defined uncertainty quantity, such as statistical estimation uncertainty, variability or predictive uncertainty; these senses differ.",
+      "guidance": "Identify the quantity, source and estimator; do not interchange across-run dispersion and calibrated predictive uncertainty.",
+      "avoid": "Calling a confidence interval an SD or an ensemble's spread a validated calibration guarantee.",
+      "conditions": ["The uncertainty source and summary are defined."],
+      "exceptions": ["A paper may discuss uncertainty qualitatively when no estimate exists, but must not fabricate an interval."],
+      "evidence_required": ["Uncertainty definition, estimator, replication unit and calibration evidence if claimed."],
+      "example_context": "Synthetic: intervals quantify uncertainty in an aggregate score estimated from finite runs.",
+      "examples": ["The interval summarizes estimation uncertainty in the aggregate score."],
+      "counter_examples": [{"text": "The interval proves that individual predictions are calibrated.", "why": "Aggregate estimation uncertainty does not establish predictive calibration."}],
+      "owner": "references/writing-protocols.md", "source_ids": ["rliable"]
+    },
+    {
+      "id": "ai.rule.paragraph-function",
+      "kind": "writing_rule",
+      "expression": "Organize a paragraph around a reader question",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "introduction",
+        "method",
+        "experiments",
+        "related_work"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "editorial",
+      "part_of_speech": "not applicable",
+      "meaning": "Paragraph organization follows the local explanatory task rather than an arbitrary sentence quota.",
+      "guidance": "Identify the question this paragraph answers and connect its supported statements to that answer.",
+      "avoid": "Listing unrelated dataset, architecture and runtime details in their discovery order.",
+      "conditions": [
+        "The paragraph contains several facts whose relationship is unclear."
+      ],
+      "exceptions": [
+        "A compact overview or enumerated contribution paragraph may intentionally answer several linked questions; do not force one rigid pattern."
+      ],
+      "evidence_required": [
+        "A stated reader question and the author-supported relationships among the selected facts."
+      ],
+      "example_context": "Synthetic: A paragraph explains how new documents enter a system; its weights remain fixed and its index is replaced.",
+      "examples": [
+        "To incorporate new documents without updating model weights, we replace the retrieval index and generate answers conditioned on the retrieved passages."
+      ],
+      "counter_examples": [
+        {
+          "text": "We use an index. The model has many layers. We also tested several tasks.",
+          "why": "Independent facts never answer how new documents enter the system."
+        }
+      ],
+      "owner": "references/writing-rationale-matrix.md",
+      "source_ids": [
+        "rag"
+      ],
+      "source_notes": [
+        {
+          "source_id": "rag",
+          "location": "Section 2 and Section 4.5, Index hot-swapping",
+          "observation": "Operation and result subsections are organized around distinct questions. This paragraph advice is an editorial inference, not a universal paper rule."
+        }
+      ]
+    },
+    {
+      "id": "ai.rule.result-answer",
+      "kind": "writing_rule",
+      "expression": "Connect an experimental result to the question it answers",
+      "topics": [
+        "argument_structure",
+        "evaluation_protocol"
+      ],
+      "levels": [
+        "paragraph",
+        "section"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "experiments",
+        "abstract"
+      ],
+      "intents": [
+        "evidence",
+        "compare"
+      ],
+      "status": "editorial",
+      "part_of_speech": "not applicable",
+      "meaning": "A result paragraph explains the supported implication of a comparison, not merely a sequence of scores.",
+      "guidance": "State the experimental question, retain the informative comparison and explain only the implication the design supports.",
+      "avoid": "Replacing a table with prose that repeats every number, or inventing a causal story to make the paragraph sound explanatory.",
+      "conditions": [
+        "Reporting an experiment intended to distinguish a contribution, behavior or limitation."
+      ],
+      "exceptions": [
+        "A descriptive dataset report may have no controlled hypothesis; describe the observed distribution without inventing one."
+      ],
+      "evidence_required": [
+        "Question, comparison role, protocol and a bounded interpretation of the actual observation."
+      ],
+      "example_context": "Synthetic: An index is changed while weights and queries stay fixed; returned document identifiers are logged. No answer-correctness test is available.",
+      "examples": [
+        "With model weights and queries fixed, replacing the index changes which documents are retrieved; this experiment tests retrieval responsiveness, not answer correctness."
+      ],
+      "counter_examples": [
+        {
+          "text": "The new index improves reasoning and guarantees accurate answers.",
+          "why": "Document selection does not establish reasoning quality or answer correctness."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [
+        "rag"
+      ],
+      "source_notes": [
+        {
+          "source_id": "rag",
+          "location": "Sections 4.4 and 4.5",
+          "observation": "Named result subsections motivate bounded experimental questions. The synthetic test and its limitations are original, not results copied from RAG."
+        }
+      ]
+    },
+    {
+      "id": "ai.rule.citation-support",
+      "kind": "writing_rule",
+      "expression": "Match citation support to the particular attached claim",
+      "topics": [
+        "citation_support",
+        "claim_strength"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph",
+        "document"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "introduction",
+        "related_work",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "evidence"
+      ],
+      "status": "invariant",
+      "part_of_speech": "not applicable",
+      "meaning": "A relevant paper title is not sufficient support for every clause in the sentence carrying its citation.",
+      "guidance": "Check the located source passage against each substantive clause; split differently supported assertions when needed.",
+      "avoid": "Using a method citation to support an unreported deployment or safety guarantee.",
+      "conditions": [
+        "Adding or preserving a citation for a factual claim."
+      ],
+      "exceptions": [
+        "A survey may support a broad synthesis when its reviewed scope actually covers it; no one-citation-per-clause quota is imposed."
+      ],
+      "evidence_required": [
+        "Verified source identity, specific passage and a support relation for the attached claim."
+      ],
+      "example_context": "Synthetic: A source describes retrieval-conditioned generation; it does not establish safety for medical deployment.",
+      "examples": [
+        "The cited work describes retrieval-conditioned generation. Clinical deployment safety is not established by that method description."
+      ],
+      "counter_examples": [
+        {
+          "text": "Retrieval-conditioned generation is safe for clinical deployment, as established by the cited method paper.",
+          "why": "The deployment claim exceeds the checked source passage."
+        }
+      ],
+      "owner": "references/citation.md",
+      "source_ids": [
+        "rag"
+      ],
+      "source_notes": [
+        {
+          "source_id": "rag",
+          "location": "Section 2",
+          "observation": "This passage provides a method description, not a deployment-safety claim. The citation-support invariant is our editorial guard."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.suggest",
+      "kind": "claim_usage",
+      "expression": "suggest",
+      "topics": [
+        "claim_strength"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "verb",
+      "meaning": "Offer a supported but not decisive interpretation; the hedge does not create missing evidence.",
+      "guidance": "Name the observation and plausible interpretation while retaining alternative explanations.",
+      "avoid": "Hedging an unsupported causal assertion and treating it as supported.",
+      "conditions": [
+        "Evidence licenses a tentative inference rather than a demonstrated conclusion."
+      ],
+      "exceptions": [
+        "Use a direct observation verb for an established measurement, or prove for a valid theorem; do not hedge every statement."
+      ],
+      "evidence_required": [
+        "Relevant observation and the limitations of its inference."
+      ],
+      "example_context": "Synthetic: A single pilot run has fewer failures after a cache change, but other settings also differ.",
+      "examples": [
+        "The pilot suggests a possible reduction in failures, although the changed settings prevent attribution to caching alone."
+      ],
+      "counter_examples": [
+        {
+          "text": "The pilot suggests that caching eliminates control failures.",
+          "why": "A hedge does not license elimination or isolate caching."
+        }
+      ],
+      "owner": "references/academic-expression.md",
+      "source_ids": [
+        "neurips-checklist"
+      ],
+      "source_notes": [
+        {
+          "source_id": "neurips-checklist",
+          "location": "Claims and Limitations questions",
+          "observation": "The checklist asks authors to align claims and scope with results. It does not prescribe this verb; our wording advice is conditional."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.enable",
+      "kind": "claim_usage",
+      "expression": "enable",
+      "topics": [
+        "claim_strength",
+        "argument_structure"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "verb",
+      "meaning": "Make a specified operation available under stated conditions; not a synonym for measured improvement.",
+      "guidance": "Identify the enabled operation and the actual prerequisite it supplies.",
+      "avoid": "Converting interface availability into reliable performance or superior quality.",
+      "conditions": [
+        "The design or implementation actually provides the named operation."
+      ],
+      "exceptions": [
+        "Enable may legitimately describe a supported capability even without a superiority comparison; qualify design intent if not implemented."
+      ],
+      "evidence_required": [
+        "Implemented operation and prerequisites; separate measurements for performance claims."
+      ],
+      "example_context": "Synthetic: An interface accepts a replacement document index without requiring weight changes.",
+      "examples": [
+        "The interface enables index replacement without updating model weights."
+      ],
+      "counter_examples": [
+        {
+          "text": "The interface enables universally accurate generation.",
+          "why": "An available update operation does not establish answer quality."
+        }
+      ],
+      "owner": "references/ai-writing-spec.md",
+      "source_ids": [
+        "rag"
+      ],
+      "source_notes": [
+        {
+          "source_id": "rag",
+          "location": "Section 4.5, Index hot-swapping",
+          "observation": "External-memory replacement is a useful capability distinction; the interface example and word-choice guidance are original."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.state-of-the-art",
+      "kind": "claim_usage",
+      "expression": "state-of-the-art",
+      "topics": [
+        "claim_strength",
+        "evaluation_protocol"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "adjective phrase",
+      "meaning": "A time- and protocol-bounded comparison claim, not an intrinsic property of a method.",
+      "guidance": "State the benchmark, comparison set, metric and relevant budget; verify the comparison cutoff.",
+      "avoid": "Promoting the best score among two selected baselines into an unrestricted field-wide claim.",
+      "conditions": [
+        "The covered comparison set and evaluated protocol warrant the stated ranking."
+      ],
+      "exceptions": [
+        "A cited historical claim may be reported as such with its original scope and date; strongest observed baseline is preferable when coverage is incomplete."
+      ],
+      "evidence_required": [
+        "Dated comparison coverage, matched protocol, metric direction, budgets and uncertainty where consequential."
+      ],
+      "example_context": "Synthetic: A test compares A with B and C; no coverage of other published methods has been checked.",
+      "examples": [
+        "A has the highest observed score among B and C under the tested protocol."
+      ],
+      "counter_examples": [
+        {
+          "text": "A is the state of the art in robot learning.",
+          "why": "The field-wide comparison and other protocols were not checked."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [
+        "neurips-checklist"
+      ],
+      "source_notes": [
+        {
+          "source_id": "neurips-checklist",
+          "location": "Claims and Experimental setting/details questions",
+          "observation": "Scope and experimental detail motivate this local comparison guard; the checklist does not certify a ranking."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.scalable",
+      "kind": "claim_usage",
+      "expression": "scalable",
+      "topics": [
+        "systems_measurement",
+        "claim_strength"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "adjective",
+      "meaning": "A claim about behavior as a specified workload or resource axis changes.",
+      "guidance": "Name the scaling axis, observed or derived relationship and tested range.",
+      "avoid": "Inferring scalability from one fast run or confusing parameter count with measured workload scaling.",
+      "conditions": [
+        "There is evidence across the named axis or an explicitly conditional analytical bound."
+      ],
+      "exceptions": [
+        "A theoretical complexity result may support an asymptotic claim without a large deployment; distinguish it from measured scaling."
+      ],
+      "evidence_required": [
+        "Scaling axis, resource limits, range and measurement procedure or derivation assumptions."
+      ],
+      "example_context": "Synthetic: Runtime is measured at several batch sizes on one device; multiple-device scaling was not tested.",
+      "examples": [
+        "We measure runtime across the tested batch sizes on one device; this does not assess multi-device scaling."
+      ],
+      "counter_examples": [
+        {
+          "text": "The system scales to arbitrarily many devices.",
+          "why": "The evaluation varies batch size, not device count or communication cost."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "neurips-checklist"
+      ],
+      "source_notes": [
+        {
+          "source_id": "neurips-checklist",
+          "location": "Experiment compute resources question",
+          "observation": "Resource reporting motivates a local scaling-scope guard; no universal threshold is inferred."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.novel",
+      "kind": "claim_usage",
+      "expression": "novel",
+      "topics": [
+        "claim_strength",
+        "citation_support"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "introduction",
+        "related_work"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "adjective",
+      "meaning": "A scoped originality claim relative to relevant prior work, not a decorative substitute for explaining the contribution.",
+      "guidance": "Describe the specific new distinction and check the relevant prior-art boundary.",
+      "avoid": "Calling a familiar module novel because this project uses it for the first time.",
+      "conditions": [
+        "The identified distinction is supported by the authors' comparison with relevant work."
+      ],
+      "exceptions": [
+        "A new combination or application may be a valid contribution without every component being new; describe its actual novelty."
+      ],
+      "evidence_required": [
+        "Contribution identity and relevant prior-art review with an explicit search boundary."
+      ],
+      "example_context": "Synthetic: The project reuses a published retriever but introduces a separately supported index-update procedure.",
+      "examples": [
+        "We reuse the published retriever and introduce the specified index-update procedure."
+      ],
+      "counter_examples": [
+        {
+          "text": "We introduce a novel retriever.",
+          "why": "The novelty has been assigned to the reused component."
+        }
+      ],
+      "owner": "references/contribution.md",
+      "source_ids": [
+        "neurips-checklist"
+      ],
+      "source_notes": [
+        {
+          "source_id": "neurips-checklist",
+          "location": "Claims question",
+          "observation": "Accurate contribution scope motivates the guard. The checklist is not a prior-art search or proof of novelty."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.causal",
+      "kind": "claim_usage",
+      "expression": "causal",
+      "topics": [
+        "claim_strength",
+        "evaluation_protocol"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "adjective",
+      "meaning": "An attribution or causal-estimand claim whose identification depends on the design and assumptions.",
+      "guidance": "Specify the claimed causal relation, intervention or identification argument and remaining assumptions.",
+      "avoid": "Calling a correlation causal, or treating any component ablation as proof of the full proposed mechanism.",
+      "conditions": [
+        "The evidence and identification assumptions support the named causal claim."
+      ],
+      "exceptions": [
+        "Causal may name a model class or hypothesis without asserting an identified effect; distinguish those senses explicitly."
+      ],
+      "evidence_required": [
+        "Estimand or mechanistic claim, design, confound control and identification assumptions."
+      ],
+      "example_context": "Synthetic: Two changes are made together and success rises in the observed runs.",
+      "examples": [
+        "Success rises after both changes; this comparison does not isolate either change's causal effect."
+      ],
+      "counter_examples": [
+        {
+          "text": "The routing change causally improves success.",
+          "why": "The named change is not isolated and no identification argument is supplied."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [],
+      "source_notes": []
+    },
+    {
+      "id": "ai.term.in-context-learning",
+      "kind": "technical_term",
+      "expression": "in-context learning",
+      "topics": [
+        "learning_regimes"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Task conditioning through the supplied context; distinguish prompt examples from gradient-based parameter updates.",
+      "guidance": "Name the context information and report any parameter updates separately.",
+      "avoid": "Calling prompt demonstrations fine-tuning or claiming that fixed weights imply absence of target information.",
+      "conditions": [
+        "Describing a prompt-conditioned task procedure."
+      ],
+      "exceptions": [
+        "A pipeline can combine in-context demonstrations with adapter training; state both rather than forcing one exclusive label."
+      ],
+      "evidence_required": [
+        "Prompt contents and the actual update procedure."
+      ],
+      "example_context": "Synthetic: Two labeled examples are placed in the prompt; no parameters are updated.",
+      "examples": [
+        "We provide two labeled in-context examples without updating model parameters."
+      ],
+      "counter_examples": [
+        {
+          "text": "We fine-tune the model on two examples.",
+          "why": "The examples condition the prompt rather than an optimization step."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "gpt3"
+      ],
+      "source_notes": [
+        {
+          "source_id": "gpt3",
+          "location": "Abstract",
+          "observation": "The abstract distinguishes text demonstrations from gradient updates; no training-corpus exclusion is inferred."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.retrieval-augmented-generation",
+      "kind": "technical_term",
+      "expression": "retrieval-augmented generation (RAG)",
+      "topics": [
+        "learning_regimes",
+        "argument_structure"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Generation conditioned on retrieved material; retrieval presence alone does not establish faithful support or factual correctness.",
+      "guidance": "Specify what is retrieved, how it conditions generation and what grounding or correctness tests are actually performed.",
+      "avoid": "Treating a returned passage or citation as proof that every generated statement is supported.",
+      "conditions": [
+        "An actual retrieval step supplies information to generation."
+      ],
+      "exceptions": [
+        "Retrievers or generators may also be trained or fine-tuned; retrieval and weight updates are separate axes."
+      ],
+      "evidence_required": [
+        "Retrieval/generation data flow and separate support or correctness evaluation if claimed."
+      ],
+      "example_context": "Synthetic: A generator receives retrieved passages, but statement-level support has not been evaluated.",
+      "examples": [
+        "The generator conditions on retrieved passages; statement-level support remains unevaluated."
+      ],
+      "counter_examples": [
+        {
+          "text": "All generated statements are grounded because the system uses RAG.",
+          "why": "Conditioning on material does not establish that the output is supported by it."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "rag"
+      ],
+      "source_notes": [
+        {
+          "source_id": "rag",
+          "location": "Section 2",
+          "observation": "Retrieval and generation are connected operations. The fidelity warning is local editorial synthesis, not a reported RAG failure rate."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.offline-reinforcement-learning",
+      "kind": "technical_term",
+      "expression": "offline reinforcement learning",
+      "topics": [
+        "learning_regimes"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "reinforcement_learning",
+        "embodied_ai",
+        "robot_learning"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Reward-directed policy learning from previously collected data without additional environment collection during the declared offline phase.",
+      "guidance": "State the dataset, learning objective and which phase excludes new interactions.",
+      "avoid": "Using offline to mean merely no internet access, or labeling every demonstration regression objective offline RL.",
+      "conditions": [
+        "The described learning phase optimizes the stated reward-directed objective from fixed collected data."
+      ],
+      "exceptions": [
+        "Offline pretraining followed by online fine-tuning is a hybrid pipeline; report each phase separately."
+      ],
+      "evidence_required": [
+        "Dataset origin, objective, environment-collection schedule and phase boundary."
+      ],
+      "example_context": "Synthetic: An agent uses stored reward-labeled transitions, then collects new data in a later fine-tuning phase.",
+      "examples": [
+        "We perform offline RL on the fixed transition dataset, followed by online fine-tuning."
+      ],
+      "counter_examples": [
+        {
+          "text": "The entire pipeline requires no new environment interactions.",
+          "why": "The later online phase is silently removed."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "offline-rl"
+      ],
+      "source_notes": [
+        {
+          "source_id": "offline-rl",
+          "location": "Abstract",
+          "observation": "The abstract identifies learning from previously collected data without additional online collection; detailed algorithm taxonomy was not reviewed."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.imitation-learning",
+      "kind": "technical_term",
+      "expression": "imitation learning",
+      "topics": [
+        "learning_regimes",
+        "embodied_control"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "embodied_ai",
+        "robot_learning",
+        "reinforcement_learning"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Learning behavior from demonstrations; an imitation objective is not automatically reward-based policy optimization.",
+      "guidance": "Identify the demonstrated behavior and actual loss; distinguish behavioral cloning from other imitation formulations.",
+      "avoid": "Calling action prediction RL solely because a learned policy is evaluated in an environment.",
+      "conditions": [
+        "Training uses demonstration behavior to learn a policy or behavior model."
+      ],
+      "exceptions": [
+        "Imitation can initialize an RL phase or use adversarial objectives; name the actual combination instead of equating all imitation with supervised regression."
+      ],
+      "evidence_required": [
+        "Demonstration provenance, prediction targets, objective and later optimization phases."
+      ],
+      "example_context": "Synthetic: A policy predicts demonstrated actions using only a supervised regression loss; no RL objective is optimized.",
+      "examples": [
+        "We train an imitation policy by regressing demonstrated actions."
+      ],
+      "counter_examples": [
+        {
+          "text": "We train the policy with reinforcement learning.",
+          "why": "Environment evaluation does not change the stated training objective."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "act"
+      ],
+      "source_notes": [
+        {
+          "source_id": "act",
+          "location": "Section IV opening and Algorithm 1",
+          "observation": "Demonstrations supply action-prediction targets. The broader conditional terminology distinctions are local synthesis."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.action-chunking",
+      "kind": "technical_term",
+      "expression": "action chunking",
+      "topics": [
+        "embodied_control"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "embodied_ai",
+        "robot_learning",
+        "vision_language_action"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Predicting or organizing multiple future actions as a chunk; prediction horizon and executed prefix are separate quantities.",
+      "guidance": "State chunk horizon, executed actions before replanning, observation cadence and controller level.",
+      "avoid": "Inferring a feedback-free controller from a multi-action prediction tensor.",
+      "conditions": [
+        "The method predicts or executes a sequence of actions as a unit."
+      ],
+      "exceptions": [
+        "A chunked policy can consume fresh observations every step, execute a prefix or combine overlapping predictions; the chunk size alone does not specify feedback cadence."
+      ],
+      "evidence_required": [
+        "Prediction horizon, execution policy, observation schedule and low-level control loop."
+      ],
+      "example_context": "Synthetic: A policy predicts six actions but consumes a fresh observation and recomputes its command at each step.",
+      "examples": [
+        "The policy predicts six-action chunks and recomputes commands from fresh observations at every step."
+      ],
+      "counter_examples": [
+        {
+          "text": "The policy runs open-loop for six steps.",
+          "why": "The feedback interval is one step, not the prediction horizon."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "act"
+      ],
+      "source_notes": [
+        {
+          "source_id": "act",
+          "location": "Section IV-A and Algorithm 2",
+          "observation": "Chunk prediction and fresh observations need not share the same cadence; no source chunk size or success score is copied."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.open-loop",
+      "kind": "technical_term",
+      "expression": "open-loop control",
+      "topics": [
+        "embodied_control"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "embodied_ai",
+        "robot_learning"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "At a specified controller level and interval, commands are not adjusted from feedback during that interval.",
+      "guidance": "Declare the control level, feedback signal and interval, rather than calling the entire robot open-loop.",
+      "avoid": "Ignoring low-level feedback when describing a high-level execution schedule.",
+      "conditions": [
+        "Describing the absence of a particular feedback path during a bounded interval."
+      ],
+      "exceptions": [
+        "A high-level action sequence may execute open-loop while a low-level servo tracks targets using feedback; both descriptions can be correct at their declared levels."
+      ],
+      "evidence_required": [
+        "Command schedule, feedback paths and controller hierarchy."
+      ],
+      "example_context": "Synthetic: High-level targets are fixed for a chunk while the joint servo corrects tracking error.",
+      "examples": [
+        "The high-level targets remain fixed during the chunk, while the joint servo uses tracking feedback."
+      ],
+      "counter_examples": [
+        {
+          "text": "The robot uses no feedback.",
+          "why": "The statement erases the active low-level feedback loop."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "act"
+      ],
+      "source_notes": [
+        {
+          "source_id": "act",
+          "location": "Section IV opening and IV-A",
+          "observation": "Target prediction and low-level PID tracking are distinct; this operational definition is local guidance, not a universal control taxonomy."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.closed-loop",
+      "kind": "technical_term",
+      "expression": "closed-loop control",
+      "topics": [
+        "embodied_control"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "embodied_ai",
+        "robot_learning"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "At the declared controller level, observed feedback affects subsequent commands; the feedback type and cadence matter.",
+      "guidance": "Specify the sensed quantity, update cadence and how observations change commands.",
+      "avoid": "Calling recorded video a visual feedback loop when it never affects commands.",
+      "conditions": [
+        "A stated feedback path actually changes the control computation."
+      ],
+      "exceptions": [
+        "Low-level proprioceptive feedback does not imply high-level visual replanning; identify the loop being described."
+      ],
+      "evidence_required": [
+        "Feedback signal, causal data flow into command computation and timing."
+      ],
+      "example_context": "Synthetic: Cameras log evaluation videos but only joint error affects servo commands.",
+      "examples": [
+        "The joint servo uses closed-loop tracking; the logged camera images do not drive visual replanning."
+      ],
+      "counter_examples": [
+        {
+          "text": "The system performs closed-loop visual control.",
+          "why": "The camera data is logged, not fed into the control computation."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "act"
+      ],
+      "source_notes": [
+        {
+          "source_id": "act",
+          "location": "Section IV opening and Algorithm 2",
+          "observation": "Separate observation-conditioned policy commands from low-level tracking. The logging counter-example is original."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.preference-optimization",
+      "kind": "technical_term",
+      "expression": "preference optimization",
+      "topics": [
+        "learning_regimes"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Optimization using preference information; the objective, label source and use of explicit reward models must be specified.",
+      "guidance": "Distinguish direct preference objectives from reward-model fitting followed by RL; report human, synthetic or mixed label provenance.",
+      "avoid": "Equating every preference dataset with human feedback or every preference objective with an explicit reward-model pipeline.",
+      "conditions": [
+        "Preferences influence the learning objective."
+      ],
+      "exceptions": [
+        "A direct objective may imply a reward representation without fitting a separate reward network; different methods still require their own assumptions."
+      ],
+      "evidence_required": [
+        "Objective, reference model, label provenance and actual optimization stages."
+      ],
+      "example_context": "Synthetic: A direct pairwise objective trains on machine-labeled preference pairs without fitting a separate reward network.",
+      "examples": [
+        "We optimize a direct preference objective on machine-labeled pairs, without fitting a separate reward network."
+      ],
+      "counter_examples": [
+        {
+          "text": "We train a human reward model and optimize it with RL.",
+          "why": "Both the label provenance and the optimization stages have changed."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "dpo"
+      ],
+      "source_notes": [
+        {
+          "source_id": "dpo",
+          "location": "Section 4, equations 4-7 and pipeline",
+          "observation": "Direct policy optimization is distinguished from an explicit reward-model/RL pipeline; no universal equivalence beyond the stated assumptions is inferred."
+        }
+      ]
+    },
+    {
+      "id": "ai.rule.evaluation-target",
+      "kind": "writing_rule",
+      "expression": "Name the evaluated construct before interpreting its score",
+      "topics": [
+        "evaluation_protocol",
+        "grounding_faithfulness"
+      ],
+      "levels": [
+        "paragraph",
+        "section"
+      ],
+      "domains": [
+        "general",
+        "multimodal"
+      ],
+      "sections": [
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "clarify",
+        "evidence"
+      ],
+      "status": "editorial",
+      "part_of_speech": "not applicable",
+      "meaning": "A measurement of support, correctness, plausibility or mechanism faithfulness does not automatically measure the others.",
+      "guidance": "State the question, evaluation reference and unit; connect the score to that construct before drawing an implication.",
+      "avoid": "Using reader approval of an explanation as evidence that it captures the model's decision process.",
+      "conditions": [
+        "Use when a metric label admits multiple interpretations or a conclusion crosses constructs."
+      ],
+      "exceptions": [
+        "A named metric can be used after its construct and protocol have been defined nearby; a compact abstract need not repeat its full specification."
+      ],
+      "evidence_required": [
+        "Operational construct, reference or oracle, units, and validation appropriate to the proposed interpretation."
+      ],
+      "example_context": "Synthetic: Readers rate rationales as convincing; no model-process evaluation is conducted.",
+      "examples": [
+        "Reader ratings measure rationale plausibility, not explanation faithfulness."
+      ],
+      "counter_examples": [
+        {
+          "text": "The convincing rationales faithfully explain the model's decisions.",
+          "why": "No evidence about the prediction process was collected."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [
+        "explanation-faithfulness",
+        "alce"
+      ],
+      "source_notes": [
+        {
+          "source_id": "explanation-faithfulness",
+          "location": "Section 2; Section 5",
+          "observation": "Distinguishes plausibility from reflecting prediction processes; the reader-question framing here is original editorial synthesis."
+        },
+        {
+          "source_id": "alce",
+          "location": "Sections 3.1-3.4",
+          "observation": "Correctness, fluency and citation quality are evaluated separately; shortcut outputs expose the risk of conflating these constructs."
+        }
+      ]
+    },
+    {
+      "id": "ai.rule.evidence-modality",
+      "kind": "writing_rule",
+      "expression": "Match the claim to the available evidence modality",
+      "topics": [
+        "grounding_faithfulness",
+        "evaluation_protocol"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general",
+        "multimodal",
+        "vision_language_action"
+      ],
+      "sections": [
+        "method",
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "clarify",
+        "evidence"
+      ],
+      "status": "editorial",
+      "part_of_speech": "not applicable",
+      "meaning": "Input availability, visible evidence and annotation coverage constrain different claims; an unobserved property is not automatically absent.",
+      "guidance": "Identify the source view or reference used to verify the particular object, relation or statement; distinguish unsupported, contradicted and unassessed.",
+      "avoid": "Treating a missing caption mention or an occluded image region as proof that an object is absent.",
+      "conditions": [
+        "Use for visual support checks and other incomplete references."
+      ],
+      "exceptions": [
+        "A complete reference for the evaluated property can supply negative evidence; a partial view generally cannot."
+      ],
+      "evidence_required": [
+        "Actual modality, reference coverage, visibility and the declared treatment of unknown cases."
+      ],
+      "example_context": "Synthetic: A caption omits a mug; the reference captions are not an exhaustive object inventory.",
+      "examples": [
+        "The caption does not mention a mug, but this does not establish absence from the image."
+      ],
+      "counter_examples": [
+        {
+          "text": "The image contains no mug because the reference caption does not mention one.",
+          "why": "The caption inventory is incomplete; absence of a mention is not proof of object absence."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [
+        "chair"
+      ],
+      "source_notes": [
+        {
+          "source_id": "chair",
+          "location": "Section 2.1",
+          "observation": "Object presence checks combine caption and segmentation evidence; the reference coverage limitation motivates this local writing distinction."
+        }
+      ]
+    },
+    {
+      "id": "ai.rule.failure-localization",
+      "kind": "writing_rule",
+      "expression": "Separate failure stages before attributing a cause",
+      "topics": [
+        "embodied_control",
+        "evaluation_protocol",
+        "argument_structure"
+      ],
+      "levels": [
+        "paragraph",
+        "section"
+      ],
+      "domains": [
+        "embodied_ai",
+        "robot_learning",
+        "vision_language_action"
+      ],
+      "sections": [
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "clarify",
+        "evidence"
+      ],
+      "status": "editorial",
+      "part_of_speech": "not applicable",
+      "meaning": "Plan validity, state-dependent skill feasibility and full execution are distinct stages; a gap between their rates is not a causal diagnosis.",
+      "guidance": "Explain which stage the evidence checks, then report what remains unresolved rather than assigning every downstream failure to one module.",
+      "avoid": "Inferring planner quality from execution alone or treating a stage-localized error as an isolated causal effect.",
+      "conditions": [
+        "Use when evaluating staged language-to-action or planning-and-control systems."
+      ],
+      "exceptions": [
+        "A controlled intervention or otherwise justified identification can support causal attribution; retain its actual scope."
+      ],
+      "evidence_required": [
+        "Separate stage criteria and logs; comparable trial units; interventions if a cause is claimed."
+      ],
+      "example_context": "Synthetic: Nine of ten plans are judged valid; six instructions finish physically; there is no controlled intervention.",
+      "examples": [
+        "Planning validity and full execution are reported separately; their gap does not isolate the cause of execution failures."
+      ],
+      "counter_examples": [
+        {
+          "text": "The planner causes all four execution failures.",
+          "why": "The cause is not isolated by a comparison of stage scores."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [
+        "saycan"
+      ],
+      "source_notes": [
+        {
+          "source_id": "saycan",
+          "location": "Section 3 and Section 5 evaluation metric definitions",
+          "observation": "Skill relevance and affordance affect selection; plan validity and physical instruction completion are separate reported targets."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.grounded",
+      "kind": "claim_usage",
+      "expression": "grounded",
+      "topics": [
+        "grounding_faithfulness",
+        "claim_strength"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general",
+        "multimodal",
+        "embodied_ai"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "adjective",
+      "meaning": "A claim tied to a specified reference, modality or feasible action model; the intended sense and support relation must be recoverable.",
+      "guidance": "Name what is grounded in what, and whether the claim describes conditioning, alignment, verified support or estimated feasibility.",
+      "avoid": "Equating receipt of images or retrieved text with verification of every generated statement.",
+      "conditions": [
+        "Use with a specified grounding sense and evidence appropriate to that sense."
+      ],
+      "exceptions": [
+        "In grounded planning, a declared state-conditioned skill model may operationalize feasibility; this does not certify generated text or all real-world actions."
+      ],
+      "evidence_required": [
+        "Grounding referent, operational procedure and any support or alignment evaluation actually performed."
+      ],
+      "example_context": "Synthetic: An answer model receives image inputs but output-to-region alignment is not evaluated.",
+      "examples": [
+        "The answers are image-conditioned; visual grounding of individual statements is not tested."
+      ],
+      "counter_examples": [
+        {
+          "text": "Every answer is visually grounded because the model receives images.",
+          "why": "Image input does not establish output alignment or statement support."
+        }
+      ],
+      "owner": "references/academic-expression.md",
+      "source_ids": [
+        "mdetr",
+        "saycan"
+      ],
+      "source_notes": [
+        {
+          "source_id": "mdetr",
+          "location": "v2 abstract; author project summary",
+          "observation": "Text-conditioned detection and downstream grounding tasks have explicit visual targets; input conditioning alone is a different claim."
+        },
+        {
+          "source_id": "saycan",
+          "location": "Section 3",
+          "observation": "Grounding in state-conditioned robotic affordances uses a different referent from image-region or citation support."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.faithful",
+      "kind": "claim_usage",
+      "expression": "faithful",
+      "topics": [
+        "grounding_faithfulness",
+        "claim_strength"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "adjective",
+      "meaning": "Either consistency with a specified source or fidelity of an explanation to a model process; these senses require different checks.",
+      "guidance": "Disambiguate the referent; distinguish unsupported-by-source from false-in-the-world, and convincing rationale from process fidelity.",
+      "avoid": "Using factually correct prose, source consistency or reader preference as a substitute for mechanism evidence.",
+      "conditions": [
+        "Use only with a named target and an evaluation that tests the intended relation."
+      ],
+      "exceptions": [
+        "Measured source consistency supports a bounded source-faithfulness claim, not necessarily world truth; a validated mechanism check can support its own process-faithfulness claim."
+      ],
+      "evidence_required": [
+        "Located source support or a declared model-process test; evaluation scope and unresolved cases."
+      ],
+      "example_context": "Synthetic: A date is independently verified outside the provided passage but absent from it; readers also approve the generated rationale; no process check is run.",
+      "examples": [
+        "The date is externally verified but unsupported by the provided passage; the rationale is reader-approved, while explanation faithfulness is not evaluated."
+      ],
+      "counter_examples": [
+        {
+          "text": "The approved rationale is faithful to the model, and the unsupported date is false.",
+          "why": "Reader approval tests plausibility, not process fidelity; unsupported-by-source is not equivalent to false."
+        }
+      ],
+      "owner": "references/academic-expression.md",
+      "source_ids": [
+        "explanation-faithfulness",
+        "factscore"
+      ],
+      "source_notes": [
+        {
+          "source_id": "explanation-faithfulness",
+          "location": "Section 2",
+          "observation": "Explanation faithfulness concerns prediction processes rather than human plausibility."
+        },
+        {
+          "source_id": "factscore",
+          "location": "Section 3.1",
+          "observation": "Support is operationalized relative to a declared reference knowledge source. The external-date example is original."
+        }
+      ]
+    },
+    {
+      "id": "ai.usage.hallucination-free",
+      "kind": "claim_usage",
+      "expression": "hallucination-free",
+      "topics": [
+        "grounding_faithfulness",
+        "claim_strength"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general",
+        "multimodal"
+      ],
+      "sections": [
+        "abstract",
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "adjective",
+      "meaning": "No errors of a declared hallucination type under a stated evaluation; it is not a universal guarantee across types, prompts and conditions.",
+      "guidance": "Prefer a bounded observed-error statement when only a finite sample and limited reference coverage are checked.",
+      "avoid": "Turning zero detected object errors into guaranteed correctness of all attributes, relations and future outputs.",
+      "conditions": [
+        "Use with a declared error taxonomy, evaluation scope, reference coverage and detection procedure."
+      ],
+      "exceptions": [
+        "A finite evaluation can justify no observed errors under that protocol; a formal universal claim requires its own assumptions and proof, not just zero detections."
+      ],
+      "evidence_required": [
+        "Checked error types, sample unit/count, reference coverage and adjudication or detector limitations."
+      ],
+      "example_context": "Synthetic: Fifty captions are checked for unsupported object mentions against the declared object inventory; no such errors are detected; attributes are not checked.",
+      "examples": [
+        "No object hallucinations are observed in the 50 evaluated captions; attribute errors are not assessed."
+      ],
+      "counter_examples": [
+        {
+          "text": "The system is hallucination-free for every image and description.",
+          "why": "The universal statement exceeds both the tested error types and the finite sample."
+        }
+      ],
+      "owner": "references/academic-expression.md",
+      "source_ids": [
+        "chair"
+      ],
+      "source_notes": [
+        {
+          "source_id": "chair",
+          "location": "Section 2.1",
+          "observation": "CHAIR checks object hallucination using limited object/reference definitions, not every possible visual error."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.factual-precision",
+      "kind": "technical_term",
+      "expression": "factual precision",
+      "topics": [
+        "grounding_faithfulness",
+        "evaluation_protocol"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "method",
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "The fraction of evaluated generated factual units supported by a specified reference, with units and aggregation declared; not answer completeness or universal truth.",
+      "guidance": "State atomic-unit extraction, support reference and averaging. If calling a result FActScore, match its specified aggregation and disclose response/abstention handling.",
+      "avoid": "Calling a short answer complete merely because the facts it states are supported.",
+      "conditions": [
+        "Use when generated facts are decomposed and checked against a declared reference."
+      ],
+      "exceptions": [
+        "Custom protocols can count abstentions differently if named and specified; FActScore conditions its prompt-level average on responses, so do not silently relabel a different aggregation."
+      ],
+      "evidence_required": [
+        "Fact units, per-response support checks, averaging, response rate and independent coverage targets if completeness is claimed."
+      ],
+      "example_context": "Synthetic: A response has ten extracted atomic facts, eight supported by the reference; required-topic coverage is not measured.",
+      "examples": [
+        "The reference supports 8 of 10 extracted atomic facts; answer completeness is not evaluated."
+      ],
+      "counter_examples": [
+        {
+          "text": "The answer is 80% complete because its factual precision is 80%.",
+          "why": "Support precision over generated facts does not measure completeness of the requested answer."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [
+        "factscore"
+      ],
+      "source_notes": [
+        {
+          "source_id": "factscore",
+          "location": "Section 3.1 definition and assumptions",
+          "observation": "Defines reference-relative support over atomic facts and an average conditional on responding; assumes unambiguous support and a suitable reference."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.citation-recall",
+      "kind": "technical_term",
+      "expression": "citation recall",
+      "topics": [
+        "citation_support",
+        "grounding_faithfulness"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "method",
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Under the ALCE protocol, the average statement-level indicator that nonempty cited passages jointly support the entire statement; not retrieval recall or answer completeness.",
+      "guidance": "Declare statement segmentation, support procedure and empty-citation handling; keep this measure separate from citation precision and content correctness.",
+      "avoid": "Counting only statements that already have citations, or confusing coverage of emitted statements with coverage of the question.",
+      "conditions": [
+        "Use with a specified citation-support evaluation; name the protocol when using ALCE's definition."
+      ],
+      "exceptions": [
+        "Multiple passages may jointly support a statement; other citation-recall definitions are legitimate if their unit and denominator are explicit."
+      ],
+      "evidence_required": [
+        "All evaluated statements, citation assignments, combined support checks and aggregation."
+      ],
+      "example_context": "Synthetic: Four statements are evaluated; three have cited passages supporting their full content and one is uncited.",
+      "examples": [
+        "The cited passages support three of four evaluated statements; ALCE-style citation recall is 75% under this segmentation."
+      ],
+      "counter_examples": [
+        {
+          "text": "Citation recall is 100% because all three cited statements are supported.",
+          "why": "The uncited statement has been removed from the denominator."
+        }
+      ],
+      "owner": "references/citation.md",
+      "source_ids": [
+        "alce"
+      ],
+      "source_notes": [
+        {
+          "source_id": "alce",
+          "location": "Section 3.3 citation recall",
+          "observation": "A statement receives credit only with nonempty citations and support for its entire content from the combined cited passages."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.citation-precision",
+      "kind": "technical_term",
+      "expression": "citation precision",
+      "topics": [
+        "citation_support",
+        "grounding_faithfulness"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "method",
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Under ALCE, per-citation credit requires full statement support and a citation that is not irrelevant; relevance accounts for individual or necessary joint support.",
+      "guidance": "Report the protocol and per-citation unit. Do not require every cited passage to support every clause alone, or penalize individually sufficient citations solely for redundancy.",
+      "avoid": "Redefining precision as the smallest possible citation set or assuming it certifies answer completeness.",
+      "conditions": [
+        "Use with a declared per-citation support/relevance check."
+      ],
+      "exceptions": [
+        "ALCE is not a minimal-set criterion: individually supporting citations can both be credited; joint support and other explicit precision protocols remain possible."
+      ],
+      "evidence_required": [
+        "Full statement support, per-citation individual support and effect of removing a citation from the set."
+      ],
+      "example_context": "Synthetic: One statement has two citations; each passage alone supports its full content.",
+      "examples": [
+        "Under the ALCE criterion, both citations can be relevant even though either would suffice alone."
+      ],
+      "counter_examples": [
+        {
+          "text": "Only one citation is correct because the second is redundant.",
+          "why": "Both are individually supporting; redundancy alone does not make a citation irrelevant under this criterion."
+        }
+      ],
+      "owner": "references/citation.md",
+      "source_ids": [
+        "alce"
+      ],
+      "source_notes": [
+        {
+          "source_id": "alce",
+          "location": "Section 3.3 citation precision and footnote 4",
+          "observation": "Credit depends on statement recall and non-irrelevance. Individually sufficient citations are allowed; Appendix E limitations were not reviewed."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.object-hallucination",
+      "kind": "technical_term",
+      "expression": "object hallucination",
+      "topics": [
+        "grounding_faithfulness",
+        "evaluation_protocol"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "multimodal",
+        "vision_language_action"
+      ],
+      "sections": [
+        "method",
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "A generated object mention unsupported by the declared visual object reference; a narrow error type whose vocabulary and annotation coverage must be specified.",
+      "guidance": "Declare how object mentions/presence are matched and whether the rate counts object instances or sentences containing an error.",
+      "avoid": "Equating an object-only metric with the absence of wrong attributes, relations or spatial reasoning.",
+      "conditions": [
+        "Use when checking generated object mentions against a visual reference with defined coverage."
+      ],
+      "exceptions": [
+        "Limited reference coverage requires qualification or adjudication of unknowns; an exhaustive reference can support stronger absence judgments within its scope."
+      ],
+      "evidence_required": [
+        "Object vocabulary/matching policy, presence reference, unknown handling and object- or sentence-level denominator."
+      ],
+      "example_context": "Synthetic: An evaluated caption mentions a bicycle absent from the checked object reference; only object mentions are scored.",
+      "examples": [
+        "The bicycle mention is an object hallucination under the checked reference; attributes and relations are outside this score."
+      ],
+      "counter_examples": [
+        {
+          "text": "The object-only check proves that the caption has no visual errors.",
+          "why": "Unscored attributes and relations may still be wrong; this metric covers a narrower construct."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [
+        "chair"
+      ],
+      "source_notes": [
+        {
+          "source_id": "chair",
+          "location": "Section 2.1 CHAIR",
+          "observation": "Distinguishes object-instance and sentence-level rates and uses bounded object/reference matching. No taxonomy or implementation is imported."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.visual-grounding",
+      "kind": "technical_term",
+      "expression": "visual grounding",
+      "topics": [
+        "grounding_faithfulness",
+        "evaluation_protocol"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "multimodal",
+        "vision_language_action"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "In a declared localization sense, linking language referents to visual regions or objects and evaluating that link; distinguish this from merely conditioning on an image.",
+      "guidance": "Name the referent, visual target and localization protocol. Keep phrase localization distinct from general answer support or action feasibility.",
+      "avoid": "Inferring successful localization from image input, plausible text or an unvalidated attention plot.",
+      "conditions": [
+        "Use when a language-to-visual-target relation is defined and the intended sense is explicit."
+      ],
+      "exceptions": [
+        "Targets can be boxes, segmentation masks or other declared spatial representations; not every use of grounded in robotics refers to visual localization."
+      ],
+      "evidence_required": [
+        "Query/target units, reference regions, matching thresholds and the alignment checks actually performed."
+      ],
+      "example_context": "Synthetic: Twenty phrase queries have box annotations; twelve predicted regions meet the declared overlap threshold.",
+      "examples": [
+        "Twelve of twenty phrase queries meet the declared box-overlap criterion for visual grounding."
+      ],
+      "counter_examples": [
+        {
+          "text": "All answers are visually grounded because images enter the model.",
+          "why": "Image input alone does not verify localization or answer support."
+        }
+      ],
+      "owner": "references/results-validation.md",
+      "source_ids": [
+        "mdetr"
+      ],
+      "source_notes": [
+        {
+          "source_id": "mdetr",
+          "location": "v2 abstract; author project pretraining/box-evaluation summary",
+          "observation": "Phrase/object alignment and downstream referring-expression tasks provide context for this bounded localization sense; the full PDF body was not reviewed."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.robotic-affordance",
+      "kind": "technical_term",
+      "expression": "robotic affordance",
+      "topics": [
+        "embodied_control",
+        "grounding_faithfulness"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "embodied_ai",
+        "robot_learning",
+        "vision_language_action"
+      ],
+      "sections": [
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "The state-, agent- and skill-dependent possibility of achieving an action outcome; an estimated skill value can operationalize it but is not an unconditional guarantee.",
+      "guidance": "Specify the skill, current state and meaning of the feasibility score; distinguish semantic usefulness from physical executability.",
+      "avoid": "Treating a language model's preference for a useful action as evidence that the robot can perform it now.",
+      "conditions": [
+        "Use with a declared agent/skill/state relation or a specified affordance estimator."
+      ],
+      "exceptions": [
+        "A task-specific feasibility definition or calibrated probability may be appropriate when validated; not every value function is a calibrated probability."
+      ],
+      "evidence_required": [
+        "Agent and skill library, state information, score meaning, training/evaluation scope and calibration if probabilistic claims are made."
+      ],
+      "example_context": "Synthetic: A language score ranks fetch-cup highly, but the state-conditioned skill-value estimate is low.",
+      "examples": [
+        "The instruction favors fetch-cup semantically, while its estimated robotic affordance is low in the current state."
+      ],
+      "counter_examples": [
+        {
+          "text": "The robot is guaranteed to fetch the cup because the action is linguistically appropriate.",
+          "why": "Semantic relevance is not a physical guarantee, and an estimated skill score has its own uncertainty."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "saycan"
+      ],
+      "source_notes": [
+        {
+          "source_id": "saycan",
+          "location": "Section 3; Algorithm 1",
+          "observation": "Combines language usefulness with state-conditioned skill value/affordance; estimated feasibility and semantic relevance are different roles."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.task-chain-success",
+      "kind": "technical_term",
+      "expression": "task-chain success",
+      "topics": [
+        "embodied_control",
+        "evaluation_protocol",
+        "statistics"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "embodied_ai",
+        "robot_learning"
+      ],
+      "sections": [
+        "experiments",
+        "limitations"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "noun phrase",
+      "meaning": "Completion of every ordered subgoal under a stated chain protocol; full-chain success, successful-prefix length and conditional stage success are different summaries.",
+      "guidance": "Specify chain length/order, progression/termination criteria, resets and denominator; never substitute marginal single-task rates for chain success.",
+      "avoid": "Averaging isolated task scores or dividing last-stage completions by survivors while calling it full-chain success.",
+      "conditions": [
+        "Use when subgoals are evaluated as an ordered sequence with declared progression and state carryover."
+      ],
+      "exceptions": [
+        "Mean successful prefix length and conditional stage rates are valid complementary measures when labeled; interrupted or reset protocols need their own definitions."
+      ],
+      "evidence_required": [
+        "Number of initial chains, stage success criteria, survivor counts, reset/termination rules and aggregation."
+      ],
+      "example_context": "Synthetic: Twelve four-task chains stop at first failure without intermediate resets; successful prefix counts are 12, 9, 6, 3.",
+      "examples": [
+        "Full-chain success is 3 of 12 initial chains (25%); last-stage success conditional on reaching it is 3 of 6 (50%)."
+      ],
+      "counter_examples": [
+        {
+          "text": "Full-chain success is 50% because three of the six chains reaching the last task complete it.",
+          "why": "The denominator is conditional survivors, not all initial chains."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "calvin"
+      ],
+      "source_notes": [
+        {
+          "source_id": "calvin",
+          "location": "Section III-C challenge: sequential evaluation",
+          "observation": "Sequential progression depends on subgoal completion; single-goal and chain rollouts are separate protocols. The four-task arithmetic is original, not CALVIN results."
+        }
+      ]
+    },
+    {
+      "id": "ai.term.long-horizon",
+      "kind": "technical_term",
+      "expression": "long-horizon",
+      "topics": [
+        "embodied_control",
+        "evaluation_protocol",
+        "claim_strength"
+      ],
+      "levels": [
+        "word",
+        "sentence"
+      ],
+      "domains": [
+        "embodied_ai",
+        "robot_learning",
+        "reinforcement_learning"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "define",
+        "scope"
+      ],
+      "status": "conditional",
+      "part_of_speech": "adjective",
+      "meaning": "A domain-relative description of extended temporal dependency or sequential decision depth; prediction length, execution duration and task-chain depth are different axes.",
+      "guidance": "State the evaluated horizon axis and task dependence; explain what makes it long in this setting rather than using a universal step threshold.",
+      "avoid": "Claiming demonstrated long-horizon task completion from a long predicted action chunk or many unrelated short trials.",
+      "conditions": [
+        "Use with a defined temporal or sequential axis and an appropriate evaluation for the claimed capability."
+      ],
+      "exceptions": [
+        "A domain-specific time/decision scale may justify the label without task chains; no fixed chain length or number of seconds applies to all domains."
+      ],
+      "evidence_required": [
+        "Duration/decisions/subgoals, dependencies, feedback and resets, and actual task-completion evidence."
+      ],
+      "example_context": "Synthetic: An evaluation uses four dependent subgoals without intermediate resets; the policy predicts 32-action chunks, but that prediction length is not the task definition.",
+      "examples": [
+        "We evaluate four-subgoal task chains with state carried between subgoals; the 32-action prediction horizon is reported separately."
+      ],
+      "counter_examples": [
+        {
+          "text": "A 32-action output proves successful long-horizon task execution.",
+          "why": "The prediction horizon does not establish the duration, dependency depth or success of physical task execution."
+        }
+      ],
+      "owner": "references/writing-protocols.md",
+      "source_ids": [
+        "calvin",
+        "act"
+      ],
+      "source_notes": [
+        {
+          "source_id": "calvin",
+          "location": "Abstract and Section III-C",
+          "observation": "Language-conditioned sequential tasks provide an operational long-horizon setting, not a universal numerical threshold."
+        },
+        {
+          "source_id": "act",
+          "location": "Section IV-A; Algorithms 1-2 (previously read)",
+          "observation": "Prediction chunks and observation-conditioned execution are distinct. This source was read in the earlier curation round."
+        }
+      ]
+    },
+    {
+      "id": "ai.rule.procedure-order",
+      "kind": "writing_rule",
+      "expression": "Preserve preconditions, action order and required steps in reproducibility instructions",
+      "topics": [
+        "evaluation_protocol",
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "method",
+        "experiments",
+        "translation"
+      ],
+      "intents": [
+        "clarify",
+        "evidence"
+      ],
+      "status": "invariant",
+      "part_of_speech": "not applicable",
+      "meaning": "In instructions intended for execution, preconditions and required sequence are part of the technical meaning, not optional stylistic framing.",
+      "guidance": "Make the action target and its precondition recoverable before the reader acts; keep required steps in the procedure rather than an optional note. Preserve supplied warnings and literal commands without executing them.",
+      "avoid": "Moving a validation step after an irreversible action, broadening a deletion target or burying a required safeguard in a note.",
+      "conditions": [
+        "Apply to requested reproducibility steps or operation instructions associated with a research artifact, not to every descriptive method sentence."
+      ],
+      "exceptions": [
+        "Declared simultaneous or independent actions need not be serialized; a prior unambiguous precondition can apply to a whole block. A scientific description need not become imperative instructions."
+      ],
+      "evidence_required": [
+        "Author-supplied preconditions, required actions, actual dependencies, targets and any existing warnings; do not invent safety guarantees."
+      ],
+      "example_context": "Synthetic: The checkpoint checksum must be verified before intermediate shards are removed; the final archive must be retained.",
+      "examples": [
+        "After verifying the checkpoint checksum, remove only the intermediate shards; retain the final archive."
+      ],
+      "counter_examples": [
+        {
+          "text": "Remove all shards and then verify the checkpoint checksum.",
+          "why": "The order and target change: verification occurs too late and the final archive is no longer protected."
+        }
+      ],
+      "owner": "references/clarity-context.md",
+      "source_ids": [
+        "marmot-ste-context"
+      ],
+      "source_notes": [
+        {
+          "source_id": "marmot-ste-context",
+          "location": "SKILL.md operating rules 1, 6-7; references/essential-rules.md passage priorities and preservation; references/source-boundary.md verification boundary",
+          "observation": "Text function, preconditions and required actions are relevant design ideas. The research-specific checksum example is original; numeric STE limits, warning labels and rule-ID authority are not imported."
+        }
+      ]
+    }
+  ]
+}
