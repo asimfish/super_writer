@@ -1,0 +1,346 @@
+{
+  "reviews": [
+    {
+      "id": "P09_s2_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "Both explain narrow-width spatial filtering and conditional sequential evaluation. A's 'successive combined designs' and B's 'conditional on earlier modifications' reflect P09 Secs. 2.1, 2.4-2.6 and Fig. 4: fixed training, pre-expansion depthwise filtering, and normalized downsampling. B foregrounds affordability slightly more directly, but neither has a substantive explanatory advantage."
+    },
+    {
+      "id": "P10_s2_abstract",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B's 'same primitives to support optimization and fast rasterization' makes the representation-renderer coupling clearer than A's 'accessible to a differentiable tile rasterizer' (P10 Secs. 4-6). Both faithfully report Table 1's A6000 throughput and mixed Mip-NeRF360 metrics, with storage and artifacts supported by Sec. 7.4. B organizes these into a stronger abstract-level contribution."
+    },
+    {
+      "id": "P10_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "A's 'without a fixed primitive-count cutoff' and B's opacity reconstruction accurately summarize P10 Sec. 6. Both connect real-time rendering to metric-dependent quality and storage costs (Table 1; Sec. 7.4). A names the datasets and appearance encoding; B states the LPIPS comparison. These supported selection differences do not establish a meaningful abstract-level winner."
+    },
+    {
+      "id": "P09_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "A's 'dense channel transformations carry most of the work' matches P09 Sec. 2.5's rationale for moving depthwise filtering before expansion. B explains the same ordering through its reduced channel count. Both accurately connect simplified blocks and normalized downsampling to the fixed-recipe sequential evaluation (Secs. 2.1, 2.6; Fig. 4). Their methodological explanations are effectively equivalent."
+    },
+    {
+      "id": "P10_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'avoiding variable-length per-pixel histories' and B's 'extra per-pixel storage constant' express the same backward-pass advantage documented in P10 Sec. 6. Both accurately connect tile sorting, approximate visibility, reverse traversal, image loss, and gradient-guided densification (Secs. 5.1-5.2). B spells out duplication and thresholds; A emphasizes acquiring detail. Neither materially improves the methods explanation."
+    },
+    {
+      "id": "P10_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "A explains size-dependent cloning and splitting; B emphasizes that the 'same differentiable rasterizer supports reconstruction and subsequent viewing.' Both are grounded in P10 Secs. 4-6 and summarize the contribution clearly. Table 1 supports their quality and throughput comparisons, and Sec. 7.4 supports storage and coverage limitations. These complementary emphases leave the abstracts closely matched."
+    },
+    {
+      "id": "P09_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "A's 'convolutional route to competitive recognition' and B's 'convolutional alternative for the evaluated recognition tasks' draw similarly bounded conclusions. P09 Secs. 2.1 and 2.5 support their fixed-training and narrow-width kernel explanations; Table 1 verifies both classification examples, and Sec. 4 supports downstream competitiveness. B makes the initial training step slightly more explicit, without changing the abstract's explanatory strength."
+    },
+    {
+      "id": "P10_s2_results",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "B's 'interactive display at competitive quality' connects Table 1's metric-dependent comparison to the practical contribution and storage cost. Its Truck cutoff result directly tests whether an optimization shortcut preserves quality (P10 Sec. 7.3; Table 3). A is accurate, but its intervening Tanks & Temples budget comparison makes the results argument less unified."
+    },
+    {
+      "id": "P09_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "Both connect classification accuracy and measured throughput (P09 Table 1) to COCO transfer (Table 3), then interpret neutral or unstable roadmap changes (Secs. 2.5-2.6). A's 'evaluated combination' emphasizes conditional attribution; B's 'condition of the reported downsampling result' specifies stabilization. Both synthesize the evidence rather than merely listing gains, with no meaningful difference in results-paragraph quality."
+    },
+    {
+      "id": "P10_s2_methods",
+      "winner": "A",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "concern",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "B's 'accelerating display through a fixed gradient cutoff' blurs training and inference: P10 Sec. 7.3 tests skipping gradients to speed optimization, not display. This warrants a localized fidelity concern, not rejection of the method description. A relates reverse traversal directly to gradient support and memory, matching Sec. 6; both otherwise match Secs. 5-6."
+    },
+    {
+      "id": "P09_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "Both explain the strengthened baseline and convolutional redesign before presenting classification, scaling, and transfer evidence (P09 Sec. 2.1; Table 1; Sec. 4). A's multimodal and structured-output boundary is supported by Limitations F. B's conclusion is already bounded to 'these recognition tasks.' The extra caveat does not make A inherently better; both convey the central contribution clearly."
+    },
+    {
+      "id": "P09_s2_results",
+      "winner": "A",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 4
+      },
+      "reason": "A's 'prediction quality rather than the classification speed benefit' distinguishes what the downstream comparisons establish (P09 Tables 1, 3, 4). Both correctly qualify EfficientNetV2-L's different 480 x 480 setting. B's closing return to its higher classification score adds less to interpreting the COCO/ADE20K results. All reported values and evaluation conditions are supported."
+    },
+    {
+      "id": "P10_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'storage per pixel need not grow' and B's 'without a predetermined count limit' capture complementary requirements established in P10 Sec. 6. Both explain tile duplication, shared sorting, opacity saturation, reverse traversal, and approximate blending with accurate causal links. A foregrounds gradient preservation; B foregrounds shared visibility work. These are equally effective explanations of the rasterizer."
+    },
+    {
+      "id": "P10_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "Both interpret the same quality-throughput-storage tradeoff accurately (P10 Table 1), and both identify Truck's gradient-cap failure (Sec. 7.3; Table 3). B's 'separate Truck ablation using manually downsampled inputs' supplies useful provenance from the table caption; A already distinguishes Truck from the preceding dataset averages. A's popping explanation matches Sec. 7.4. Their results arguments remain near-equivalent."
+    },
+    {
+      "id": "P09_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "A's 'competitive alternative to Swin in these workloads' and B's 'Transformer-style organization without relying on self-attention' both reflect P09's closing remarks in Sec. 2.6. Their narrow-width kernel rationale and classification/scaling examples match Sec. 2.5 and Table 1; Sec. 4 supports transfer. A emphasizes conditional attribution, B the organizing question. Neither offers a decisive abstract-level advantage."
+    },
+    {
+      "id": "P09_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "A's 'coordinated redesign' and B's 'tested activation layout' are both supported by P09 Sec. 2.6: GELU substitution is neutral, fewer activations help, and normalized separate downsampling reaches 82.0%. Both distinguish this roadmap result from Table 3's pretrained COCO comparison and preserve conditional attribution. A leads with synthesis; B builds from the strengthened baseline. Both fulfill the results function."
+    },
+    {
+      "id": "P09_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both accurately place LayerNorm before the pointwise layers and GELU between them (P09 Fig. 4; Sec. 2.6), explaining why depthwise filtering precedes fourfold expansion (Secs. 2.4-2.5). A's 'configuration already reached' and B's 'conditional on the preceding architecture' equally characterize the fixed-recipe roadmap. Their block, hierarchy, and evaluation descriptions are precise and comparably readable."
+    },
+    {
+      "id": "P10_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "Both turn Table 1's training-budget comparison and Table 3's gradient-cap ablation into coherent tradeoff arguments. A's 'matched-GPU speedup' caution is supported by P10 Sec. 7.2, footnote 2; B's 'manually downsampled inputs' matches Table 3's caption. Neither makes an unsupported timing comparison, and both retain Sec. 7.4's limitations. These different contextual choices do not break the near tie."
+    }
+  ]
+}

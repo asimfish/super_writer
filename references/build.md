@@ -67,6 +67,11 @@ no-fabrication rule as prose.
 
 ## Build Rules
 
+- For exemplar-informed writing, use `references/argument-transfer.md` to turn
+  the selected source choice into a reader question, evidence anchor and actual
+  text action in the existing plan. Draft an answer supported by the materials.
+  Read back the claim from final prose before checking the plan; repair lost
+  relationships and unsupported implications before marking the row complete.
 - Treat images as potential figure assets.
 - Do not fabricate missing experiments or results.
 - Quote paths with spaces or non-ASCII chars.

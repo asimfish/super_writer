@@ -1,0 +1,60 @@
+{
+  "audits": [
+    {
+      "id": "G2_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A03 Sections 3.2-3.3 (lines 51-64, 115-136) support the prose's rare-token/class binding and frozen-model class regularization. Its 'An Imagen ablation' sentence explicitly gives reduced collapse, increased diversity, and slightly lower subject fidelity, matching Section 4.3, Table 3 (lines 269-285). Tables 1-2 support the Stable Diffusion comparisons and user preferences; Section 4.5 supports the limitations. The reading's core and scope are directly grounded in 'prior-preservation loss' and the prose's comparison 'over Textual Inversion'."
+    },
+    {
+      "id": "G2_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose's 'pairing a rare-token identifier' and class-image rehearsal faithfully summarize A03 Sections 3.2-3.3 (lines 51-64, 115-136). Its Imagen ablation sentence explicitly preserves the benefit/cost tradeoff in Section 4.3, Table 3 (lines 269-285). Section 4.1 supports the DINO rationale; Tables 1-2 support the numerical and preference comparisons. The reading's class-linked, prompt-responsive core is stated in the prose. Its Stable Diffusion scope is grounded in the full 'Across 3,000 generated images' sentence, including the Textual Inversion comparator."
+    },
+    {
+      "id": "G2_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A04 Section 2 (lines 26-71, 88-107) supports the prose's executed-call filtering against both controls and augmented-text fine-tuning. Section 4.2, Table 3 and lines 196-200, 216-235 support its single-call, call-encouraging ASDiv comparison. Tables 4-5 support mixed task results; Sections 4.3-4.4 support perplexity and scaling claims. The closing sentence explicitly retains Section 6's chaining/interaction limits (lines 367-376). The reading's prediction-improving core and first-number, single-call scope are stated directly, with its witnesses present in the prose."
+    },
+    {
+      "id": "G2_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose's loss-filtering and fine-tuning account matches A04 Section 2 (lines 50-71, 88-103); its five APIs match Section 3. Section 4.2, Table 3 (lines 189-200, 216-235) supports ASDiv 40.4 versus 14.8 and GPT-3 14.0, the first-number metric, and top-ten/single-call decoding. Tables 4-5 support the qualified QA/translation results. 'Chained and interactive tool use remain unsupported' preserves Section 6's limits. The reading's loss-reducing core and single-call enabled/disabled scope are explicitly grounded in these prose statements."
+    },
+    {
+      "id": "G2_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A04 Section 2 (lines 50-71, 88-107) supports the prose's two-control prediction filter and learned tool decisions. Section 4.2, Table 3 supports ASDiv 40.4, text-only 9.6, disabled 14.8, and GPT-3 14.0 under the stated single-call setup. Tables 4-5 support qualified QA/translation claims; Sections 4.3-4.4 support perplexity and scaling. Its closing independent-generation/chaining/interaction limitation matches Section 6. The reading's core and ASDiv comparator scope are explicit. Omitting the first-number scoring detail does not contradict this abstract-level result."
+    },
+    {
+      "id": "G2_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose explicitly explains both loss baselines and augmented-text fine-tuning, matching A04 Section 2 (lines 50-71, 88-103). Its encouraged, single-call evaluation and ASDiv contrasts match Section 4.2, Table 3 (lines 189-200). Qualified QA/translation results match Tables 4-5; perplexity and the GPT-2 scaling statement match Sections 4.3-4.4. The closing sentence preserves independent-call and noninteractive limitations from Section 6. The reading's supervision core, comparator scope, and 'allows at most one per input' witness are all directly supported by the prose."
+    },
+    {
+      "id": "G2_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A03 Sections 3.2-3.3 (lines 51-64, 115-136) support the prose's class-linked identifier and original-model class regularization. Its Imagen ablation sentence explicitly states reduced collapse, increased diversity, and slightly lower fidelity, matching Section 4.3, Table 3 (lines 269-285). Section 4.1 supports the 30-subject/25-prompt suite; Tables 1-2 and lines 241-242 support numerical results and majority-vote preferences. Section 4.5 supports its limits. The reading's core and Stable Diffusion identity/alignment scope directly match 'prior-preservation loss' and 'relative to Textual Inversion'."
+    },
+    {
+      "id": "G2_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose's rare-token/class association and class-only, original-model samples match A03 Sections 3.2-3.3 (lines 51-64, 115-136). Its Imagen ablation sentence explicitly retains the preservation/diversity benefit and subject-fidelity cost in Section 4.3, Table 3 (lines 269-285). Section 4.1 and Tables 1-2 support the evaluation suite, DINO rationale, numerical comparisons, and preferences; Section 4.5 supports the limitations. The reading's identity-preserving variation core is grounded in 'drawing on the class prior'; its comparison scope is explicit in the Stable Diffusion/Textual Inversion sentence."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "readings": [
+    {
+      "id": "D4_text_113",
+      "core_relation": "SELF-RAG 7B raises ASQA citation precision/recall over Llama2-FT 7B but slightly lowers correctness. Ablation supports the combined training configuration; inference settings trade attribution against fluency and accuracy.",
+      "scope": "Same five ASQA passages and 150,000 training pairs; ablation uses 50,000 examples and 150 questions. Retrieval reduction hurts PopQA more than PubHealth.",
+      "witness": "better evidence attribution rather than a gain on every answer metric",
+      "unclear": "Separate effects of retrieval-aware training and reflection tokens are not recoverable."
+    },
+    {
+      "id": "D4_text_137",
+      "core_relation": "Controlled position and distractor changes reveal that larger context windows and successful exact lookup do not establish effective question-answering evidence use: middle placements degrade accuracy, and reader gains saturate before retrieval recall.",
+      "scope": "Multi-document QA and UUID retrieval; extended-window comparisons use inputs fitting both windows. Query repetition repairs synthetic retrieval, not QA; Claude variants nearly perfectly retrieve UUIDs.",
+      "witness": "accommodating more tokens and retrieving a matching value are insufficient indicators",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_131",
+      "core_relation": "Move a supported answer passage within a fixed document set to isolate evidence-position effects; vary distractor count to test additional material. Closed-book/oracle controls distinguish memory-based answering from undistracted evidence use.",
+      "scope": "2,655 paragraph-answer NaturalQuestions-Open queries; 10/20/30 documents; answer-filtered distractors. UUID lookup reduces semantic confounds; query repetition tests task differences. Greedy outputs count correct-answer/value containment.",
+      "witness": "changes its position without changing the answer or removing its support",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_133",
+      "core_relation": "GPT-3.5-Turbo drops from 88.3% oracle accuracy to below its 56.1% closed-book baseline among distractors; 16K adds little on shared-length inputs. Query repetition fixes UUID retrieval, not QA, separating lookup from evidence-use difficulty.",
+      "scope": "Worst 20/30-document QA configurations; standard/16K comparison uses 10/20 documents fitting both windows. At 300 UUID pairs, 16K retrieval improves from 45.6% worst-case to perfect.",
+      "witness": "Making exact lookup easier therefore does not remove the positional difficulty",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_141",
+      "core_relation": "Self-RAG 13B has higher ASQA citation precision than retrieval-augmented ChatGPT but lower recall/correctness. The 7B PopQA gain over same-data Llama2-FT suggests benefits beyond example availability; customization exposes support/fluency and retrieval/accuracy tradeoffs.",
+      "scope": "ASQA uses five identical passages; precision 70.3 versus 65.1, recall 71.3 versus 76.6, correctness 31.7 versus 40.7. PopQA accuracy: 54.9% versus 48.7%; reduced retrieval harms PopQA more than PubHealth.",
+      "witness": "rather than isolating either",
+      "unclear": "Separate training and reflection effects are not recoverable."
+    },
+    {
+      "id": "D4_text_143",
+      "core_relation": "Reorder a fixed question's answer-bearing document among answer-filtered distractors to isolate position from evidence availability; vary document count to test context length. Closed-book and oracle prompts anchor no-evidence and distraction-free performance.",
+      "scope": "2,655 paragraph-annotated NaturalQuestions-Open queries; 10/20/30 documents. Serialized UUID JSON has 75/140/300 pairs and 500 examples per setting. Greedy decoding scores answer/value containment; UUIDs test minimal-language token matching.",
+      "witness": "makes position, rather than answer availability, the quantity under test",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_117",
+      "core_relation": "Query repetition gives GPT-3.5-Turbo (16K) perfect UUID retrieval from 45.6% worst-case accuracy but leaves QA positional sensitivity intact. Flan-UL2 becomes middle-sensitive beyond its training window, while larger GPT windows give little advantage on shared-length inputs. Thus task and training length qualify nominal capacity.",
+      "scope": "300 UUID pairs; Flan-UL2's within-window positional spread is 1.9 percentage points at 2,048 tokens. Standard/16K comparison uses 10/20 documents fitting both windows.",
+      "witness": "task demands and training context relevant to evaluating long-context capability",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_135",
+      "core_relation": "Self-RAG trains reflection judgments that rank passage-conditioned sentence candidates, making evidence assessment determine continuations. Adjustable retrieval/scoring offers evidence-aware decoding without retraining or an inference-time critic, but higher citation precision need not improve other response qualities.",
+      "scope": "Critic trained on GPT-4 judgments annotates examples offline; zero-shot 7B/13B evaluation covers six tasks. On identical five-passage ASQA inputs, 13B precision rises versus ChatGPT while recall falls; stronger support weighting lowers MAUVE.",
+      "witness": "rather than merely accompanying the response",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_109",
+      "core_relation": "Self-RAG generates retrieval and critique tokens, then uses its own support-aware scores to select passage-conditioned sentences. Offline critic supervision enables adjustable evidence use; gains in attribution or factual accuracy do not imply uniformly better answers.",
+      "scope": "Zero-shot 7B/13B evaluations span factual QA, classification, biographies, and cited long-form answers. Same-data 7B PopQA accuracy rises 48.7% to 54.9%; ASQA precision beats ChatGPT but recall/correctness lag, and stronger support weighting reduces fluency.",
+      "witness": "makes predicted evidence support part of sentence selection",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_125",
+      "core_relation": "SELF-RAG learns retrieval decisions and separate relevance/support/utility judgments to select sentences, letting users adjust evidence emphasis without retraining or an inference-time critic. This improves attribution while exposing correctness and fluency tradeoffs.",
+      "scope": "Offline GPT-4-feedback critic; zero-shot 7B/13B Llama 2 evaluation on six tasks. With five identical ASQA documents and matched instruction-output data, 7B precision is 66.9% versus 5.0%, but correctness is lower; increased support weight lowers MAUVE.",
+      "witness": "rather than a uniform gain across response qualities",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_121",
+      "core_relation": "Query repetition lifts GPT-3.5-Turbo (16K) UUID lookup from 45.6% worst-position to 100% without fixing QA position effects; Claude also combines near-perfect lookup with position-sensitive QA. More available evidence therefore need not yield better answers.",
+      "scope": "300 UUID pairs. Some GPT-3.5-Turbo 20/30-document cases underperform 56.1% closed-book accuracy; reader gains become marginal beyond 20 retrieved documents although recall keeps improving.",
+      "witness": "repairing lookup does not resolve the broader evidence-use problem",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_123",
+      "core_relation": "Position/context-length diagnostics show that accepting longer inputs does not ensure evidence use: middle passages hurt QA, larger windows offer little on shared inputs, and improved lookup leaves QA positional failures. Saturating reader accuracy despite rising recall identifies an evidence-use bottleneck.",
+      "scope": "Multi-document QA and synthetic key-value tasks preserve the answer. Encoder-decoder robustness holds within training context lengths but degrades beyond them; some QA cases underperform no-document answering.",
+      "witness": "successful token retrieval need not entail effective evidence use",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_139",
+      "core_relation": "Train a generator on response and offline critic reflection tokens, then rank each passage-conditioned sentence through segment-level beam search combining generation likelihood with relevance/support/utility probabilities. Separately scoring support lets predicted grounding influence continuation selection.",
+      "scope": "Llama 2 critic distilled from GPT-4 feedback; passage context is excluded from training loss. Weighted, normalized favorable-token probabilities and a retrieval threshold are adjustable without retraining or an inference-time critic.",
+      "witness": "separating whether to obtain evidence from how strongly support should influence answer selection",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_119",
+      "core_relation": "Moving evidence and varying distractors reveals that context capacity and exact matching do not establish reliable evidence use: QA favors context ends, and query repetition repairs UUID lookup without repairing QA positional sensitivity.",
+      "scope": "2,655 NaturalQuestions-Open queries plus random UUID retrieval. Shared-window comparisons show similar standard/extended profiles; Claude-1.3 nearly perfectly retrieves UUIDs. GPT-3.5-Turbo can underperform no-document QA despite supplied evidence.",
+      "witness": "how much text a model can accept",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_115",
+      "core_relation": "Same-data Self-RAG 7B improves PopQA accuracy and ASQA precision over Llama2-FT but slightly reduces ASQA correctness. 13B beats retrieved ChatGPT on precision, not recall/correctness; support weighting and retrieval frequency introduce costs, supporting tunable rather than uniformly superior evidence use.",
+      "scope": "7B gains: PopQA 48.7% to 54.9%; precision 5.0% to 66.9%; correctness 31.0% to 30.0%. The 13B comparison uses identical five ASQA documents and zero retrieval threshold. Less retrieval harms PopQA more than PubHealth.",
+      "witness": "raises citation precision but lowers MAUVE",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_127",
+      "core_relation": "Train the generator to emit text and offline critic judgments; trigger retrieval by thresholding normalized retrieval-token probability. Generate sentence candidates per passage and retain high-scoring continuations using segment-level beam search, so predicted support affects claims selected.",
+      "scope": "Llama 2-7B critic trained on GPT-4 feedback; next-token training excludes passage text from loss. Candidate scores combine generation and weighted favorable-critique probabilities; priorities change without retraining or inference-time critic evaluation.",
+      "witness": "using predicted evidence support as a decoding criterion",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_111",
+      "core_relation": "Move annotated answer paragraphs among unchanged distractors to isolate position; vary document count to test added distraction. Closed-book and single-answer-document controls distinguish stored knowledge from directly accessible evidence; moving UUID targets tests position with minimal linguistic content.",
+      "scope": "2,655 NaturalQuestions-Open queries; answer-filtered Contriever Wikipedia distractors; 10/20/30 documents. JSON lookup uses 75/140/300 UUID pairs, 500 examples per size. Greedy outputs are scored by answer/value containment.",
+      "witness": "rather than requiring an exact match to the entire response",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_129",
+      "core_relation": "Offline critic annotations train a generator to produce text and relevance/support/utility judgments. During retrieval, passage-conditioned sentences are beam-ranked by generation likelihood plus weighted reflection probabilities; separate support scoring can penalize relevant but incompletely supported claims before selection.",
+      "scope": "Llama 2 critic trained on GPT-4 judgments; next-token loss excludes retrieved passage text. Scores use normalized probabilities, with adjustable critique weights/retrieval threshold and no retraining or inference-time critic.",
+      "witness": "rather than supplying feedback after selection",
+      "unclear": "none"
+    }
+  ]
+}

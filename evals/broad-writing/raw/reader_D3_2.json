@@ -1,0 +1,130 @@
+{
+  "readings": [
+    {
+      "id": "D3_text_098",
+      "core_relation": "GaLore optimizes compact projected gradients and lifts updates to full-rank weights. Refreshed subspaces expand accumulated changes, reducing optimizer-state memory without low-rank weight constraints.",
+      "scope": "One untuned 7B C4 run on 64 A100s over 19.7B tokens gives perplexity 14.65 versus Adam's 14.61. Separate 22.0 GB profiling combines projection, 8-bit states, per-layer updates, batch 256, and no offloading/checkpointing. Bounds concern conditional fixed-projection behavior; measured 1B throughput decreases.",
+      "witness": "full-rank weights can be updated through compact gradient representations",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_094",
+      "core_relation": "DoRA normalizes frozen pretrained columns plus low-rank updates, then applies separately learned magnitudes, separating scale from direction. Zero updates and pretrained norms preserve initialization.",
+      "scope": "The evaluated implementation recomputes but detaches normalization denominators, saving backpropagation memory and retaining magnitude learning. Its directional gradient is scaled, unlike the scaled orthogonal projection obtained by exact differentiation; the analyzed geometry therefore differs from the implementation.",
+      "witness": "using a scaled rather than projected directional gradient",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_092",
+      "core_relation": "DoRA normalizes columns of frozen W0 plus BA and rescales them with learned magnitudes, assigning column lengths to magnitudes and directions to low-rank factors.",
+      "scope": "Magnitudes start at pretrained norms; zero B preserves initial weights. Experiments recompute but detach normalization denominators, reducing memory while omitting their derivatives: forward separation remains, but scaled gradients replace the exact scaled, perpendicular projections.",
+      "witness": "replacing the projected directional gradient with a scaled gradient",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_104",
+      "core_relation": "Rank-512 GaLore reaches 15.64 perplexity versus full-rank 15.56 and LoRA 19.21, with estimated storage of 4.38 versus 7.80 and 6.17 GB. Compressing statistics preserves quality better than low-rank parameterization here.",
+      "scope": "C4, 1B, 13.1B tokens. Separate 22.0 GB 7B profiling combines projection, 8-bit states, per-layer updates, small batches. At 1B with batch 256, memory falls 6.93 to 5.63 GB but throughput falls 1205.31 to 1019.63 tokens/s versus 8-bit Adam.",
+      "witness": "not memory and throughput simultaneously",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_080",
+      "core_relation": "GaLore projects gradients onto leading singular vectors, stores Adam moments in the smaller representation, and lifts processed updates to dense weights. Refreshing projections lets accumulated changes escape a single low-rank factorization.",
+      "scope": "For m <= n, an m-by-r projector produces r-by-n gradients; the opposite side is used otherwise. Contraction requires fixed projections, no adaptive regularization, sufficient retained-subspace curvature, and a suitable learning rate. It establishes subspace progress, not convergence of refreshed Adam.",
+      "witness": "not convergence of the periodically refreshed Adam procedure",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_096",
+      "core_relation": "GaLore compresses optimizer statistics through projected gradients while retaining full weights; refreshing projections permits changes beyond a fixed low-rank representation. This reduces memory while largely retaining model quality.",
+      "scope": "One untuned 7B C4 trial on 64 A100s gives perplexity 14.65 versus 14.61 after 19.7B tokens. Separate 22.0 GB profiling combines projection, 8-bit states, per-layer updates, small batches, no checkpointing/offloading. GLUE stays close to full fine-tuning. Theory is conditional and fixed-subspace; measured 1B throughput is lower.",
+      "witness": "not faster training",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_078",
+      "core_relation": "DoRA separates learned column magnitudes from normalized low-rank directional updates, motivated by opposite magnitude-direction correlations for LoRA and full fine-tuning. This improves evaluated parameter efficiency; weights can merge before inference.",
+      "scope": "Eight LLaMA-7B tasks: 78.4% versus published LoRA's 74.7%, with learning-rate adjustment; half-rank achieves 77.5% with 0.43% trainable parameters. Multimodal scores improve, but video remains below full fine-tuning. Detachment saves 24.4% memory at a 0.2-point accuracy cost.",
+      "witness": "an alternative to enlarging the low-rank update budget",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_100",
+      "core_relation": "GaLore's 1B C4 perplexity is 15.64 versus Adam's 15.56, LoRA's 19.21, and ReLoRA's 18.33; lower optimizer storage avoids adapters' larger quality penalties.",
+      "scope": "Estimated storage is 4.38 GB versus 7.80 for Adam and 6.17 for adapters, excluding activations and gradients. Ranks and tuning budgets match; ReLoRA has no warmup. The untuned distributed 7B quality trial is separate from 22.0 GB small-batch profiling, which does not establish consumer-GPU pretraining completion. Matching 1B throughput decreases.",
+      "witness": "these estimates exclude activations and stored gradients",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_086",
+      "core_relation": "Rank-8 DoRA achieves 77.9% versus LoRA's 40.7% with nearly equal trainable fractions, also beating rank-32 LoRA's 74.7%. This supports improved accuracy per adaptation parameter under the reported recipes.",
+      "scope": "Eight LLaMA-7B tests; learning rates can differ. DoRA accuracy is nonmonotonic with rank: 61.9% at 4, 78.4% at 32, 72.1% at 64. VL-BART video aggregate improves 83.5 to 85.4 but trails full fine-tuning's 87.5; mixed metrics do not establish uniform accuracy gains.",
+      "witness": "without eliminating either rank sensitivity or the remaining video-task gap",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_102",
+      "core_relation": "DoRA separates a learned column magnitude vector from low-rank directional adaptation, enabling independent length adjustment without dense trainable weights. Opposite LoRA/full-fine-tuning correlations motivate this; merged weights support inference.",
+      "scope": "Eight pooled-training LLaMA-7B benchmarks: 78.4% versus published LoRA's 74.7%, with 0.84% versus 0.83% trainable parameters and adjusted learning rate. Half-rank yields 77.5% with 0.43%. Multimodal scores improve, but video trails full fine-tuning. Denominator detachment reduces memory with small score changes.",
+      "witness": "improve the tested accuracy-parameter tradeoff",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_074",
+      "core_relation": "GaLore forms P from leading gradient singular vectors, stores Adam moments for P^T G in r-by-n space, and lifts scaled updates to dense weights, reducing optimizer storage.",
+      "scope": "For m <= n. Refreshing P explores changing subspaces without larger moments; infrequent refreshes miss directions, frequent ones add decomposition cost and can misalign statistics. Contraction assumes the specified gradient form, fixed projections, Lipschitz continuity, bounded weights, a contraction condition, and identity regularization; it does not guarantee refreshed Adam convergence.",
+      "witness": "without enlarging the moment arrays",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_076",
+      "core_relation": "Half-rank DoRA achieves 77.5% commonsense accuracy with 0.43% trainable parameters versus LoRA's 74.7% with 0.83%; same-rank DoRA reaches 78.4% with 0.84%. Gains therefore need not require larger adaptation budgets.",
+      "scope": "Eight LLaMA-7B tasks; the imported baseline and adjusted learning rate compare recipes, not isolated decomposition. VL-BART correlations support independent adjustment but do not establish causation. Its video average improves 83.5 to 85.4, remaining below full fine-tuning's 87.5.",
+      "witness": "without establishing the cause of the accuracy gains",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_106",
+      "core_relation": "GaLore optimizes projected gradients and expands updates onto dense weights; refreshed bases allow changes beyond one subspace. This reduces optimizer-state memory without factorizing trainable weights.",
+      "scope": "C4: tuned 1B perplexity 15.64 versus Adam's 15.56 and LoRA's 19.21; one untuned distributed 7B run gives 14.65 versus 14.61 after 19.7B tokens. Separate 22.0 GB profiling uses 8-bit states, per-layer updates, batch 256, no offloading/checkpointing. Theory is conditional, fixed-projection, identity-regularized; tested 1B throughput decreases.",
+      "witness": "dense-weight training under tighter memory budgets",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_088",
+      "core_relation": "Half-rank DoRA exceeds published LoRA accuracy with fewer trainable parameters: 77.5% versus 74.7% on LLaMA-7B, and 80.8% versus 80.5% on 13B, supporting economical adaptation.",
+      "scope": "Reference configurations adjust learning rates, so decomposition is not isolated as the cause. VL-BART correlations resemble full fine-tuning more than LoRA, but video scores remain below full fine-tuning, especially YC2C. LLaVA loses to LoRA on VQAv2 and VQAT despite aggregate gains.",
+      "witness": "not uniform task superiority",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_082",
+      "core_relation": "DoRA normalizes frozen pretrained columns plus low-rank updates and multiplies them by learned magnitudes, separating column rescaling from direction changes. Pretrained norms and zero low-rank products preserve initial weights.",
+      "scope": "The implementation recomputes but detaches denominators to save gradient-graph storage. Forward parameterization and magnitude gradients remain, but directional gradients become scaling alone instead of exact scaled orthogonal projections. Adapted weights can merge for inference.",
+      "witness": "changing the exact direction gradient from a scaled orthogonal projection to scaling alone",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_090",
+      "core_relation": "GaLore projects G using leading left singular vectors P, updates Adam moments in r-by-n space, and maps processed updates through P to full-dimensional weights, reducing statistics storage without low-rank weight factorization.",
+      "scope": "For m <= n; refreshing P follows changing gradient directions. The theorem assumes fixed projections, structured Lipschitz components, bounded weights, no adaptive regularization, and sufficient projected curvature relative to variation. It guarantees conditional subspace progress, not refreshed Adam convergence to a full-space optimum.",
+      "witness": "Its guarantee concerns progress within one subspace",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_108",
+      "core_relation": "DoRA independently learns column magnitudes while low-rank factors adapt normalized directions, motivated by LoRA's positive versus full fine-tuning's negative coupling. It improves evaluated parameter efficiency and merges without adapter latency.",
+      "scope": "Eight LLaMA-7B tasks: 78.4% versus published LoRA's 74.7%, with similar trainable fractions and adjusted learning rate. Half-rank yields 77.5% with 0.43% trainable parameters. Separate detachment ablation saves 24.4% memory with a 0.2-point accuracy decrease. Multimodal aggregates improve, but video trails full fine-tuning.",
+      "witness": "an independently learned magnitude",
+      "unclear": "none"
+    },
+    {
+      "id": "D3_text_084",
+      "core_relation": "7B profiling measures 22.0 GB, 63.3% below BF16 Adam and 52.3% below 8-bit Adam. Projection plus compressed states and per-layer updates save memory, but matching 1B throughput decreases from 1205.31 to 1019.63 tokens/s.",
+      "scope": "Batch 256, no checkpointing/offloading. A separate single 7B trial on 64 A100s gives perplexity 14.65 versus 14.61 after 19.7B tokens, not statistical equivalence or completed consumer-GPU pretraining. The findings favor memory-constrained use, not faster training; savings cannot be attributed to projection alone.",
+      "witness": "when memory is the binding constraint",
+      "unclear": "none"
+    }
+  ]
+}

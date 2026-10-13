@@ -1,0 +1,26 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "pairs": 12,
+    "raw_prose_strings_verified": 36,
+    "filters": true,
+    "details": true,
+    "no_overflow_or_overlap": true,
+    "page_errors": 0
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pairs": 12,
+    "raw_prose_strings_verified": 36,
+    "filters": true,
+    "details": true,
+    "no_overflow_or_overlap": true,
+    "page_errors": 0
+  }
+]

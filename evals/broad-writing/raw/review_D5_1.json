@@ -1,0 +1,130 @@
+{
+  "reviews": [
+    {
+      "id": "P09_s2_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's narrow-width explanation and B's separation of spatial and dense channel operations both capture the rationale in P09 Secs. 2.3-2.5. Both correctly connect normalized transitions to the divergence reported in Sec. 2.6 and describe Sec. 2.1's fixed recipe and three-seed averaging. Their closing statements equally preserve the conditional nature of sequential architectural comparisons."
+    },
+    {
+      "id": "P10_s2_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A connects shared primitives to fitting and rasterization; B connects adaptable geometry to projection and explicitly names spherical harmonics. Both explanations are supported by P10 Secs. 3-6. Table 1 and Sec. 7.2 support their dataset-average speed and training ranges, while Sec. 7.4 supports the storage and artifact limitations. Neither abstract's selection or presentation has a decisive advantage."
+    },
+    {
+      "id": "P10_s3_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A explains opacity recovery during backpropagation; B explicitly connects projection to avoiding normal estimation. P10 Secs. 4 and 6 support both mechanisms. A's higher SSIM and lower LPIPS across all three datasets are verified in Table 1, as are B's SSIM and PSNR qualifications. Both integrate those results with storage and visibility limitations without claiming uniform superiority."
+    },
+    {
+      "id": "P09_s1_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both opening explanations correctly separate depthwise spatial filtering from pointwise channel mixing (P09 Secs. 2.3-2.5). B locates GELU between the pointwise layers; A explicitly compares filtering before and after expansion. Sec. 2.6 and Figure 4 support those descriptions. Both retain the fixed training, approximate compute control, and conditional attribution needed to explain the methodological trajectory."
+    },
+    {
+      "id": "P10_s3_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A explicitly states constant extra per-pixel storage; B explains how reverse traversal avoids variable-length histories. Both accurately connect one keyed GPU sort, shared tile lists, opacity stopping, and uncapped gradient contributors (P10 Sec. 6). Their final optimization descriptions correctly relate the L1/D-SSIM loss to geometry updates and gradient-selected cloning or splitting (Secs. 5.1-5.2). These are comparably effective methods explanations."
+    },
+    {
+      "id": "P10_s1_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A foregrounds reuse of the differentiable rasterizer for reconstruction and viewing; B foregrounds how cloning and splitting allocate detail. Both are supported by P10 Secs. 3, 5, and 6. Table 1 supports the real-dataset performance summaries and the remaining Mip-NeRF360 PSNR deficit. Both conclusions integrate competitive quality with larger stored models and artifacts, rather than presenting an unqualified speed claim."
+    },
+    {
+      "id": "P09_s2_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's broader spatial processing and B's narrower-width filtering both explain the cost rationale in P09 Sec. 2.5, rather than merely listing architectural changes. Both establish the fixed-recipe comparison and accurately report Table 1's 384-resolution ConvNeXt-B and scaled XL results. Their downstream summaries and attention-free conclusions remain within the recognition tasks evaluated in Sec. 4. The functional differences are minor."
+    },
+    {
+      "id": "P10_s2_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A develops the interactive-display/storage tradeoff; B additionally illustrates the iteration-budget tradeoff with Tanks & Temples. Both uses of P10 Table 1 are pertinent and correctly conditioned. Their separate Truck comparisons reproduce Table 3's 24.81-to-13.84 dB decline and connect it to preserving gradients, as discussed in Sec. 7.3. A's tighter focus and B's additional within-method comparison remain near-tied."
+    },
+    {
+      "id": "P09_s1_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both lead with simultaneous accuracy and measured-throughput gains, correctly witnessed by P09 Table 1, and use Table 3's ImageNet-22K COCO comparison as transfer evidence. Their later GELU, kernel-saturation, and downsampling statements match Secs. 2.5-2.6. A emphasizes the normalization condition; B emphasizes limits on independent component attribution. Both conclusions fit the reported sequential redesign, without a decisive difference."
+    },
+    {
+      "id": "P10_s2_methods",
+      "winner": "B",
+      "A": {"fidelity": "concern", "contribution": 5, "argument": 4, "selection": 5, "language": 4},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's 'accelerating display through a fixed gradient cutoff' conflates fitting with viewing: P10 Sec. 7.3 tests skipping gradients to accelerate optimization, not display. B accurately links opacity-based stopping and reverse traversal to uncapped gradient propagation (Sec. 6), with a clearer forward/backward sequence. A otherwise preserves the rasterizer's mechanism, so the fidelity concern is localized."
+    },
+    {
+      "id": "P09_s1_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both accurately use the 76.1%-to-78.8% training gain to motivate the fixed-recipe architectural study (P09 Sec. 2.1), then connect block organization to classification, scaling, and transfer evidence (Secs. 2.3-2.6, 3.1, and 4). A's conclusion is already scoped to these recognition tasks. B's multimodal and structured-output qualification is supported by Sec. F, but its presence does not itself establish an abstract-level advantage."
+    },
+    {
+      "id": "P09_s2_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both correctly condition the Swin-B comparison on ImageNet-1K training and 384-resolution inputs, and give EfficientNetV2-L's different resolution and cost (P09 Table 1). Tables 3-4 support their pretrained COCO and ADE20K comparisons. A closes by distinguishing competitiveness from the higher EfficientNet classification score; B distinguishes downstream prediction quality from classification throughput. Both organize the evidence coherently and remain source-faithful."
+    },
+    {
+      "id": "P10_s1_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 4},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "B's 'storage per pixel need not grow' makes the memory consequence explicit, and its ending connects gradients to varying depth complexity, both supported by P10 Sec. 6. A faithfully explains the same sorting and reverse-traversal mechanism, including approximation for larger splats, but repeats the fixed-count point in its final two sentences. B is slightly cleaner; the methodological explanations remain near-tied."
+    },
+    {
+      "id": "P10_s1_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A specifies the ablation's manually downsampled inputs; B more directly explains why the gradient result matters. Both accurately distinguish the published Mip-NeRF360 reference from the iteration-budget comparison (P10 Table 1), and reproduce Truck's 24.81-to-13.84 dB collapse (Table 3; Sec. 7.3). Their artifact conclusions are supported by Sec. 7.4. These are complementary presentation strengths, not a decisive difference."
+    },
+    {
+      "id": "P09_s3_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's stage-computation and normalized-transition explanation and B's narrower-width block explanation are both supported by P09 Secs. 2.2-2.6. Both connect the ImageNet scale-up and COCO/ADE20K evaluations to a competitive attention-free backbone (Table 1; Sec. 4). B makes conditional attribution explicit, but A does not claim an isolated attention-removal effect. Neither has a decisive functional advantage as an abstract."
+    },
+    {
+      "id": "P09_s3_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "reason": "A identifies ResNet-50 for the initial training gain, whereas B leaves that model implicit but leads with a clear coordinated-redesign thesis. P09 Secs. 2.1 and 2.6 support the baseline, neutral GELU substitution, activation reduction, and stabilized roadmap result. Both retain conditional attribution and correctly use Table 3's COCO comparison as transfer evidence. The contextual and organizational strengths remain close."
+    },
+    {
+      "id": "P09_s3_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both explain narrow-width depthwise filtering followed by fourfold pointwise expansion, LayerNorm placement, and the intervening GELU, matching P09 Secs. 2.4-2.6 and Figure 4. A relates this separation to Transformer organization; B foregrounds its cost rationale. Both correctly report Sec. 2.1's fixed recipe and seed averaging, then explain why sequential effects depend on the preceding configuration. Their methods functions are equally well served."
+    },
+    {
+      "id": "P10_s3_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A specifies manually downsampled ablation inputs but omits frame-rate hardware; B supplies A6000 context and correctly distinguishes 48 GPU-hours on four A100s from a matched-device comparison (P10 Sec. 7.2, footnote 2). Both faithfully explain Table 1's budget tradeoff and Table 3's 26.05-to-19.19 dB ablation loss. A's focused ablation account and B's broader deployment conditions remain near-tied."
+    }
+  ]
+}

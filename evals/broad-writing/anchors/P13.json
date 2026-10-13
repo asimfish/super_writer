@@ -1,0 +1,18 @@
+{
+  "id": "P13",
+  "purpose": "Original grounding aids, not mandatory fact coverage or desired preferences.",
+  "units": {
+    "abstract": [
+      {"role": "core", "reader_question": "How do accessible demonstrations and sequence prediction support fine manipulation?", "expected_relation": "ALOHA collects joint-space demonstrations and ACT learns action chunks with overlapping prediction aggregation for precise visually conditioned control.", "source_locator": {"section": "III-IV", "pdf_pages": [3, 6]}},
+      {"role": "scope", "reader_question": "What bounds learned task capability?", "expected_relation": "Reported real-task gains do not remove perception, data, gripper or torque limits; attempted failure tasks remain outside demonstrated success.", "source_locator": {"section": "V; Appendix F", "pdf_pages": [8, 17]}}
+    ],
+    "methods": [
+      {"role": "core", "reader_question": "What does temporal ensembling combine?", "expected_relation": "At each control step the policy predicts an overlapping action chunk, then combines predictions for that same target timestep rather than smoothing adjacent-time actions.", "source_locator": {"section": "IV.A; Algorithm 2", "pdf_pages": [5, 6]}},
+      {"role": "scope", "reader_question": "How do training and deployment use the latent variable?", "expected_relation": "Training conditions the variational encoder on demonstrations; deployment sets the latent to zero and uses current observations instead of future demonstrated actions.", "source_locator": {"section": "IV.B-C; Algorithms 1-2", "pdf_pages": [5, 6]}}
+    ],
+    "results": [
+      {"role": "core", "reader_question": "What comparison supports performance beyond the headline tasks?", "expected_relation": "ACT beats the listed real-task baselines but outcomes vary substantially across tasks; simulation ablations separately test chunking and the variational objective.", "source_locator": {"section": "V.C; VI", "pdf_pages": [8, 11], "tables": ["II", "III"], "figure": "9"}},
+      {"role": "scope", "reader_question": "Which protocols prevent conflating kinds of success?", "expected_relation": "Hardware ratios use one training seed and 25 evaluations; simulation and ablation protocols differ, and teleoperation capability is distinct from learned autonomous policy success.", "source_locator": {"section": "III; V.C; VI.A", "pdf_pages": [4, 10], "tables": ["I", "II"]}}
+    ]
+  }
+}

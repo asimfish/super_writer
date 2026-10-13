@@ -1,0 +1,20 @@
+{
+  "raw/initial_G1_1.json": "eb2c7976558fabd127f5715777a8668c03d6fb2fb5e9cf189f3f96e5043aee85",
+  "raw/baseline_G1_1.json": "2c783d61918e6210106cb717bd0d7430023266c060cd5d88b51b7c7501d073c5",
+  "raw/candidate_G1_1.json": "c5a55d5f383566c6b436da01227150cc12ce8a5e69eb5343365207249354f506",
+  "raw/initial_G1_2.json": "ea77dbc3a2b26531d0488f4c1f779fead6438e20c63e7591a82db6d633eea586",
+  "raw/baseline_G1_2.json": "9f94284f35a755b2c83bcc05edda52e93038d9850cbf839c38af10aa094ea3d2",
+  "raw/candidate_G1_2.json": "c34c9a49a39051d08fed76fb538118d53be8b6a2e58811129c4275ca44d87cd5",
+  "raw/initial_G2_1.json": "c6f51804d9c6998b55738e6aeff51636e033cfd7b2d77b4a8b2f10ce4b826681",
+  "raw/baseline_G2_1.json": "20fdfc7a412d492f713b74caed23119861a55d77ee4b57f86593a6554d707d38",
+  "raw/candidate_G2_1.json": "2552f95a120cc8ea11a8ba04e1eb706735b5c37d775b85cb4e1d4a4f76b32a5c",
+  "raw/initial_G2_2.json": "18c66ddfcdba680b587a2ab6f8580759378b72ed9416787c21c6cf6c7525afb3",
+  "raw/baseline_G2_2.json": "475161297af021227bf649e50d8b21da35be65142765dacc7ad3452da82c3201",
+  "raw/candidate_G2_2.json": "b208bf6f329e97a098bf1a43954534a77f0a6198257ec7ce2f8d772db14733fa",
+  "raw/initial_G3_1.json": "6de02c7f7038cde43d5ae12eb2b43dc3d40efb211cb79c8d01a07ace9cd318fe",
+  "raw/baseline_G3_1.json": "a18f50aa9e07384bd25d66e467c58497672fec6a6915b85352b77e2f8877afea",
+  "raw/candidate_G3_1.json": "3b1baeb57cd47775aa31dec52b90562d0dd9673fb405b671786eccf3a0a7ea0b",
+  "raw/initial_G3_2.json": "f531b3573845f3aa5b2d88a62b664026edd51bc90a82bfe8cfa2b0a40004b87f",
+  "raw/baseline_G3_2.json": "70d18951e3b2cdba62422039879764cf78699330f8b930e9f917572ab46657e4",
+  "raw/candidate_G3_2.json": "b318b92cc5fd5b8df99a58cec106e8cea5e05e04f126f789f7b310f2d9c802e9"
+}

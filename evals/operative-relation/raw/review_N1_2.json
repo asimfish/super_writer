@@ -1,0 +1,46 @@
+{
+  "reviews": [
+    {
+      "id": "N1_s1_results",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both explain the fixed-batch chain from more robots to shorter rollouts, faster training, and eventual reward loss, matching Sections 2.2.1 and 4.1/Figure 4. Both preserve the simplified, curriculum-free comparison and distinguish the million-sample baseline from matched-batch scaling. A more explicitly connects low-count sample correlation to longer trajectories; B more concretely explains why curriculum-driven difficulty changes undermine reward comparison. These small strengths balance. Neither turns the task-specific compromise into an unlimited-scaling claim, and both are clear within the requested length."
+    },
+    {
+      "id": "N1_s1_abstract",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both connect GPU residency to reduced transfers, describe performance-adaptive terrain relocation, and bound the training and deployment findings by rollout length and imperfect maps, consistent with Sections 2-4. B's 'Because the shared mesh cannot readily change at resets' gives an explicit problem-to-remedy explanation for relocation, whereas A states its operation and regeneration benefit without that motivating constraint. B therefore has a slight explanatory advantage, not a fidelity advantage. Both present the measured training speed and hardware transfer without claiming universal robustness; both are fluent full abstracts."
+    },
+    {
+      "id": "N1_s2_methods",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both reproduce the reasoning in Sections 2.2.1-2.2.2: an unobserved time limit cannot be anticipated like task termination, so zero continuation would wrongly truncate the critic target. Both explicitly describe reward augmentation with the critic's discounted prediction for the interrupted trajectory, not the newly reset episode. A stresses that episode duration and collection length are independent; B directly states the resulting need to handle time-outs inside batches. Both actually explain this consequence rather than merely naming bootstrapping, with equally clear prose and no material distinction."
+    },
+    {
+      "id": "N1_s2_abstract",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both explain reduced CPU-GPU transfers and adaptive relocation without terrain regeneration, matching Sections 2.1-2.2 and 3.1. B adds an explicit synthesis about parallel collection and progressively challenging experience, but A already conveys those mechanisms through performance-based difficulty changes and GPU execution. Both connect fixed-batch parallelism to shortened trajectories and learning impairment, and use Sections 4.2-4.3 to bound training speed, terrain traversal, and hardware deployment. Their map-related robustness limitation and final conclusions are substantively equivalent. Neither has a meaningful explanatory or language deficit."
+    },
+    {
+      "id": "N1_s2_results",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both satisfy the central objective: under the stated Figure 4 conditions, fixed-batch scaling shortens rollouts, eventually damaging advantage estimation despite faster collection. Both retain the tentative status of the low-count diversity explanation and the larger-batch time cost, consistent with Section 4.1. B slightly strengthens the explanation by connecting less diverse samples specifically to 'longer individual trajectories'; A names reduced diversity without developing that connection. Both reject unlimited parallelism and clearly distinguish the high-reward baseline from the practical compromise. This supports a narrow preference without a coarse score difference."
+    },
+    {
+      "id": "N1_s1_methods",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both explain the observation-dependent distinction between predictable task endings and unpredictable time-limit interruption in Section 2.2.2. They describe the actual remedy, separately detecting time-outs and adding the critic's discounted remaining-return prediction, and explain why continuation belongs in the target. Both then connect episodes spanning short batches to time-outs occurring away from collection boundaries, consistent with Section 2.2.1. A ends with the absence of update-triggered resets; B integrates that fact into its final handling requirement. These are equivalent explanations, not merely equivalent terminology, and both read clearly."
+    }
+  ]
+}

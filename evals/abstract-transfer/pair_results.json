@@ -1,0 +1,494 @@
+[
+  {
+    "id": "A02_s2",
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A02_s1",
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "winners": [
+      "candidate",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A01_s1",
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "winners": [
+      "baseline",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A01_s2",
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "winners": [
+      "candidate",
+      "candidate"
+    ],
+    "outcome": "unanimous_candidate",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A03_s2",
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "winners": [
+      "candidate",
+      "candidate"
+    ],
+    "outcome": "unanimous_candidate",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A04_s2",
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "winners": [
+      "candidate",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A04_s1",
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A03_s1",
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "winners": [
+      "baseline",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A06_s1",
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A05_s2",
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "winners": [
+      "baseline",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A05_s1",
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "A06_s2",
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "winners": [
+      "baseline",
+      "baseline"
+    ],
+    "outcome": "unanimous_baseline",
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ],
+        "reader_support": [
+          "text_grounded",
+          "text_grounded"
+        ]
+      }
+    }
+  }
+]

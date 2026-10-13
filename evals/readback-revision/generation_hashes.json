@@ -1,0 +1,17 @@
+{
+  "raw/baseline_1.json": "05ba25918086b829903a6ca46646a93f3f6b0f692d8f70ec844dd3b4378cd41a",
+  "raw/baseline_2.json": "acc477c9b5f2fd0f077a8d17ab4f306799832788f411acdcd5f7a86bc29dc71d",
+  "raw/candidate_1.json": "ee2255f35a63cd7728a1ec162ccaca425348a4bc828193e593b67cdb5ac31bc8",
+  "raw/candidate_2.json": "ed462a146d7721b694cfbe8a38fdec4f07ef5b4d659f1c15c624d1cf13162055",
+  "raw/initial_1.json": "dde22e59b9b675dd893ed3382770d578640a32e75fe856d776d095ad32121a9b",
+  "raw/initial_2.json": "0b35971c86813624ba7fb1391f299f2ac437191e8776d298b1b3d08fcb0c7ff2",
+  "PROTOCOL.md": "7c7429ceb5e24f51f7cff1c838bf0cde307a9620712a77baca5eda9d8ee1d18a",
+  "request.json": "cc1266a377b19f3f87563cc358805a1477ea82f2f0afdc8db80435f8fe77d813",
+  "source_receipts.json": "b4c6da6d64d01ce7c1c679a531953c22810958880cc93ce8b4a824e1d6993d56",
+  "baseline/abstract-decisions.md": "453a43957c5ac9d58707df81bfdce72ac25895f88296f4f4a6bf598194825848",
+  "baseline/writing-protocols.md": "56586ceda2ec9f19a049eaf09befbdab2f118e2b1c6bb21c580562f527a9e8b8",
+  "baseline/argument-transfer.md": "56d917608751479209aa8478ab44d4be1622fb6ac5c18a5d3f64be5c31f51383",
+  "candidate/argument-transfer.md": "d04c5c900b274185782723901eb9d60fd1979abe3ba239c996a18f7359a18f3c",
+  "inputs/P1.txt": "0f8a18f4780678c1fcbf1517d8b4191c44139e56113b1e61e044d92d247cc011",
+  "inputs/P2.txt": "a2120a260b438f1222b8efbba9858302e0138d2153e93454c648edab56d7bb59"
+}

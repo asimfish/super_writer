@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "D1_text_001",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_002",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_003",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_004",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_005",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_006",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_007",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_008",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_009",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_010",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_011",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_012",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_013",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_014",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_015",
+    "words": 53,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_016",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_017",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_018",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_019",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_020",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_021",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_022",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_023",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_024",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_025",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_026",
+    "words": 53,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_027",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_028",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_029",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_030",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_031",
+    "words": 52,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_032",
+    "words": 55,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_033",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_034",
+    "words": 54,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_035",
+    "words": 54,
+    "budget_pass": true
+  },
+  {
+    "id": "D1_text_036",
+    "words": 51,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_037",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_038",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_039",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_040",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_041",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_042",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_043",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_044",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_045",
+    "words": 74,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_046",
+    "words": 71,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_047",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_048",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_049",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_050",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_051",
+    "words": 71,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_052",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_053",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_054",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_055",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_056",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_057",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_058",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_059",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_060",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_061",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_062",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_063",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_064",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_065",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_066",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_067",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_068",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_069",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_070",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_071",
+    "words": 72,
+    "budget_pass": true
+  },
+  {
+    "id": "D2_text_072",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_073",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_074",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_075",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_076",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_077",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_078",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_079",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_080",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_081",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_082",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_083",
+    "words": 74,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_084",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_085",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_086",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_087",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_088",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_089",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_090",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_091",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_092",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_093",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_094",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_095",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_096",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_097",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_098",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_099",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_100",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_101",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_102",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_103",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_104",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_105",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_106",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_107",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "id": "D3_text_108",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_109",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_110",
+    "words": 72,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_111",
+    "words": 75,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_112",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_113",
+    "words": 74,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_114",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_115",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_116",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_117",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_118",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_119",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_120",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_121",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_122",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_123",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_124",
+    "words": 71,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_125",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_126",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_127",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_128",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_129",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_130",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_131",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_132",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_133",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_134",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_135",
+    "words": 71,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_136",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_137",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_138",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_139",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_140",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_141",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_142",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_143",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "id": "D4_text_144",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_145",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_146",
+    "words": 51,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_147",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_148",
+    "words": 51,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_149",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_150",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_151",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_152",
+    "words": 52,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_153",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_154",
+    "words": 52,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_155",
+    "words": 55,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_156",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_157",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_158",
+    "words": 51,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_159",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_160",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_161",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_162",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_163",
+    "words": 51,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_164",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_165",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_166",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_167",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_168",
+    "words": 55,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_169",
+    "words": 54,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_170",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_171",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_172",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_173",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_174",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_175",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_176",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_177",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_178",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_179",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D5_text_180",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_181",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_182",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_183",
+    "words": 47,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_184",
+    "words": 52,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_185",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_186",
+    "words": 55,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_187",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_188",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_189",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_190",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_191",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_192",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_193",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_194",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_195",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_196",
+    "words": 65,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_197",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_198",
+    "words": 53,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_199",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_200",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_201",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_202",
+    "words": 48,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_203",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_204",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_205",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_206",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_207",
+    "words": 51,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_208",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_209",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_210",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_211",
+    "words": 51,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_212",
+    "words": 52,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_213",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_214",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_215",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "id": "D6_text_216",
+    "words": 60,
+    "budget_pass": true
+  }
+]

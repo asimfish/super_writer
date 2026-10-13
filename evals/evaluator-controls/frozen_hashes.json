@@ -1,0 +1,14 @@
+{
+  "cases.json": "b07a37839abe049a24134b87bff7a7e4bbb05ff8ab001f87860034a23532c082",
+  "PROTOCOL.md": "46617a97aa8c154e11c4c7ac2c5370b8928f67c77957eb9fb8b1682db8ede1fc",
+  "fixture_review.final.json": "52c30b209815f35ef845af15489b98d65fdf75ef8bf7d5ff4c656d2465b135a6",
+  "control_eval.py": "9fd410f903187d26e921955b81d35955b8b4bec0e01689775b7911589b8adf30",
+  "tasks.initial.json": "ae351848598981a2d01e8a81afd7a2c0661527fe67a82ecca0878f5878585c62",
+  "mapping.json": "48ac7d448086b8f49ad98395cc0201addfde8fa2fe161adff54af74d0d6f0be4",
+  "packets/reader_1.json": "b024d395bdb26890e38852650cbf7f75fa5ef9c4b0f241ca2b54af611dc43ea1",
+  "packets/reader_2.json": "38ba7bbc7353f304afb285ff72e44a0c46abc14afa811c3837dfc5d2cd533f8d",
+  "packets/reader_3.json": "313b5b64cc22bf6ce24311d3d93daf674ffa472d7d8d97a8c79764e517d9d3f9",
+  "packets/reader_4.json": "0e9ce1878bba1797025aeef49830e38148289e8ec1e90235d4c390e22c99ec8e",
+  "packets/review_1.json": "5fd073d547d4623402509b9495438ab3640ed751d503f3841db7c74c62d75213",
+  "packets/review_2.json": "cd9d4136f8c324145a7a74b51573d8d4c6ec98b03c756c8fb2db0a17d692f57f"
+}

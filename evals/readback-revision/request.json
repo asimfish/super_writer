@@ -1,0 +1,34 @@
+{
+  "task": "Produce a conference-style English abstract and one Results paragraph for robot-learning readers using only the supplied body material. Communicate the distinctive contribution and what an informative comparison establishes, rather than inventory every component or table. Do not invent missing motivation, facts, significance or guarantees. Use the supplied scope for Results. Put unresolved source/reporting questions in working notes rather than generic disclaimers.",
+  "revision_task": "Revise the supplied initial abstract and Results paragraph into publication-quality prose using only the same body evidence and the designated guides. Preserve supported contributions and findings; do not assume an initial claim is correct. Use one revision response. Both conditions receive identical initial drafts and evidence.",
+  "abstract_words": [
+    150,
+    200
+  ],
+  "results_words": [
+    120,
+    180
+  ],
+  "cases": [
+    {
+      "id": "P1",
+      "body_file": "inputs/P1.txt",
+      "results_scope": "Section 4 findings: choose an informative comparison rather than enumerate tables."
+    },
+    {
+      "id": "P2",
+      "body_file": "inputs/P2.txt",
+      "results_scope": "Sections V-VI findings: choose an informative comparison rather than enumerate tables."
+    }
+  ],
+  "output_schema": {
+    "cases": [
+      {
+        "id": "P1",
+        "working_notes": "brief internal planning/revision notes, at most 120 words",
+        "abstract": "text",
+        "results": "text"
+      }
+    ]
+  }
+}

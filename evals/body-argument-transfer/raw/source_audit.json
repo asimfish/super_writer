@@ -1,0 +1,488 @@
+{
+  "audits": [
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "abstract",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "We show that the noise prediction function is equivariant under planar rotations when the expert policy is equivariant, and derive rotation representations for both forms of six-degree-of-freedom control.",
+          "assessment": "Supported conditional theory summary. Proposition 1 assumes an SO(2)-equivariant expert and noise transforming as actions; Proposition 2 treats absolute and relative 6DoF commands. The draft does not assert full SE(3) symmetry or a performance guarantee.",
+          "source": "wang25a.pdf, physical p. 3, section 4.1, Proposition 1; p. 4, section 4.2, Proposition 2"
+        },
+        {
+          "claim": "a shared temporal U-Net across those rotations and an equivariant decoder preserve the transformation structure.",
+          "assessment": "Supported: regular-representation observation/action embeddings are indexed by a finite rotation subgroup; the same U-Net is applied to each corresponding group-element pair before equivariant noise decoding.",
+          "source": "wang25a.pdf, physical p. 5, section 4.3 and Figure 3"
+        },
+        {
+          "claim": "the voxel-based policy with absolute control reaches 63.9% average peak success with 100 demonstrations per task, compared with 42.0% for RGB-based standard diffusion policy.",
+          "assessment": "Supported by Table 2's absolute-control, 100-demo column. These are twelve-task averages of training-time peak success, not final-checkpoint rates; the draft correctly identifies the different observation representations.",
+          "source": "wang25a.pdf, physical p. 6, Tables 1-2 and section 5.1"
+        },
+        {
+          "claim": "the equivariant policy achieves 80-95% success across six tasks, versus 0-60% for the non-equivariant baseline, using 20-60 demonstrations per task.",
+          "assessment": "Supported: Table 3 spans 16-19 successes of 20 for EquiDiff and 0-12 of 20 for the baseline, with 20, 40, 40, 40, 60 and 58 demonstrations. Section 5.3 confirms identical voxel inputs and approximately matched parameter counts. The final qualification about smaller image-relative gains matches Table 2.",
+          "source": "wang25a.pdf, physical pp. 7-8, section 5.3 and Table 3; p. 6, Table 2"
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "abstract",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "when the expert policy is SO(2)-equivariant and noise transforms like actions, the associated noise predictor is also equivariant.",
+          "assessment": "Supported; both stated premises match Proposition 1. This is a conditional denoising result, not an unconditional generalization guarantee.",
+          "source": "wang25a.pdf, physical p. 3, section 4.1, Proposition 1"
+        },
+        {
+          "claim": "Absolute targets rotate with the scene, whereas relative updates require conjugation because the current pose also rotates",
+          "assessment": "Supported: absolute commands transform by T_g A, while relative commands transform by T_g A T_g^-1. The finite-subgroup encoder/shared-U-Net/decoder construction described afterward is also stated in the body.",
+          "source": "wang25a.pdf, physical p. 4, section 4.2; p. 5, section 4.3"
+        },
+        {
+          "claim": "the image model attains 53.7% mean peak success versus 42.0% for the non-equivariant diffusion baseline.",
+          "assessment": "Supported for twelve tasks, 100 demos and absolute control as explicitly specified. Image-relative gaps are smaller in Table 2, and section 5.1 explicitly identifies image/state rotation mismatch.",
+          "source": "wang25a.pdf, physical p. 6, Table 2; p. 5, section 5.1"
+        },
+        {
+          "claim": "the voxel model achieves 80-95% success with 20-60 demonstrations, exceeding a similarly sized non-equivariant policy receiving the same voxel inputs.",
+          "assessment": "Supported for the six physical tasks. The baseline uses the same voxel grid and a non-equivariant 3D convolutional encoder with approximately the same trainable-parameter count; Table 3 gives the stated success range.",
+          "source": "wang25a.pdf, physical p. 8, section 5.3 and Table 3"
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "results",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "the image-based equivariant policy achieves 53.7% average success across 12 simulation tasks, versus 42.0% for DiffPo-C using the same temporal U-Net backbone.",
+          "assessment": "Supported in the stated absolute-control, 100-demo setting. Both methods use two-camera RGB inputs and the temporal U-Net architecture; the comparison supports a benefit that does not require voxel observations.",
+          "source": "wang25a.pdf, physical pp. 5-6, section 5.1 and Table 2"
+        },
+        {
+          "claim": "The voxel version reaches 72.6% with 200 demonstrations, exceeding the strongest baseline's 71.4% with 1,000 demonstrations",
+          "assessment": "Supported as an absolute-control twelve-task average comparison: 71.4% is DiffPo-C's highest baseline average at 1000 demos. The candidate acknowledges the observation change and does not claim a win in every task.",
+          "source": "wang25a.pdf, physical p. 6, Tables 1-2; p. 7, section 5.1"
+        },
+        {
+          "claim": "Simulation values are peak success rates over 50 evaluations during training, averaged across three seeds.",
+          "assessment": "Supported measurement definition. Fifty refers to evaluation occasions during training, not fifty hardware trials.",
+          "source": "wang25a.pdf, physical p. 6, Table 1 caption and section 5.1"
+        },
+        {
+          "claim": "With 40 demonstrations, letter alignment succeeds in 19/20 trials for EquiDiff and 0/20 for the non-equivariant policy.",
+          "assessment": "Supported; the matched-voxel, approximately matched-size hardware comparison and all-six-task advantage are explicit in section 5.3 and Table 3.",
+          "source": "wang25a.pdf, physical p. 8, section 5.3 and Table 3"
+        },
+        {
+          "claim": "average improvements over the best baseline are 2.1-3.7 percentage points across the tested budgets.",
+          "assessment": "Supported for image-based relative control: the differences are 2.1, 3.1 and 3.7 points at 100, 200 and 1000 demos. At 1000 demos the comparator is BC RNN, not DiffPo-C.",
+          "source": "wang25a.pdf, physical p. 6, Table 2, relative-control rows"
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "results",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "image-based EquiDiff achieved 53.7% mean peak success across twelve simulation tasks under absolute control, compared with 42.0% for DiffPo-C",
+          "assessment": "Supported at 100 demos. Sections 5.1 and 4.3 identify the RGB inputs and common temporal U-Net architecture. The candidate's subsequent maxima-over-50-evaluations, three-seed definition matches the Table 1 caption.",
+          "source": "wang25a.pdf, physical pp. 5-6, sections 4.3, 5.1 and Tables 1-2"
+        },
+        {
+          "claim": "Under relative control, the corresponding averages were 35.4% and 33.3%",
+          "assessment": "Supported for image EquiDiff and DiffPo-C at the same 100-demo budget, demonstrating a smaller measured gap than in absolute control.",
+          "source": "wang25a.pdf, physical p. 6, Table 2"
+        },
+        {
+          "claim": "after 40 demonstrations, EquiDiff completed letter alignment in 19 of 20 trials, whereas the non-equivariant baseline completed none.",
+          "assessment": "Supported. Both use identical voxel grids and approximately matched parameter counts; the all-task EquiDiff range is 80-95%.",
+          "source": "wang25a.pdf, physical p. 8, section 5.3 and Table 3"
+        },
+        {
+          "claim": "support an architectural benefit beyond simply switching to 3D observations",
+          "assessment": "Supported as a bounded interpretation of the RGB-to-RGB simulation and voxel-to-voxel hardware comparisons, not a claim that every architectural or training difference has been separately ablated.",
+          "source": "wang25a.pdf, physical pp. 5-6, section 5.1; p. 8, section 5.3"
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "abstract",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "When the expert policy is SO(2)-equivariant and noise transforms like actions, the associated noise predictor inherits that equivariance.",
+          "assessment": "Supported with the assumptions of Proposition 1 intact. The absolute-left-multiplication versus relative-conjugation distinction in the following sentence matches Proposition 2.",
+          "source": "wang25a.pdf, physical pp. 3-4, sections 4.1-4.2, Propositions 1-2"
+        },
+        {
+          "claim": "Equivariant encoders and a decoder surround a temporal U-Net shared across discrete rotation-indexed embeddings",
+          "assessment": "Supported by the finite-subgroup regular embeddings and shared group-element U-Net computation. Section 5.1 also supports the distinction between voxel/state rotation alignment and oblique-image mismatch.",
+          "source": "wang25a.pdf, physical p. 5, sections 4.3, 5.1 and Figure 3"
+        },
+        {
+          "claim": "the RGB version reaches 53.7% average peak success with 100 demonstrations per task under absolute control, versus 42.0% for a non-equivariant diffusion policy using the same temporal backbone.",
+          "assessment": "Supported for twelve tasks. The next numerical comparison also matches the absolute-control averages: voxel EquiDiff at 200 demos is 72.6%, while RGB DiffPo-C at 1000 is 71.4%. The modality difference is explicitly retained.",
+          "source": "wang25a.pdf, physical p. 6, Table 2 and Table 1 caption"
+        },
+        {
+          "claim": "the equivariant policy achieves 80-95% success across six tasks with 20-60 demonstrations.",
+          "assessment": "Supported hardware range and demonstration budgets; section 5.3 supplies the same-voxel, approximately matched-parameter baseline condition stated immediately before this claim.",
+          "source": "wang25a.pdf, physical p. 8, section 5.3 and Table 3"
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "abstract",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "For an SO(2)-equivariant expert, transforming observations and noisy actions together also transforms the target noise, provided noise follows the action representation.",
+          "assessment": "Supported conditional reading of Proposition 1. Absolute and relative SE(3) command representations refer to action spaces, not a claim of unrestricted SE(3) symmetry.",
+          "source": "wang25a.pdf, physical p. 3, section 4.1, Proposition 1; p. 4, section 4.2"
+        },
+        {
+          "claim": "a temporal U-Net with parameters shared across discrete rotations.",
+          "assessment": "Supported: the same U-Net operates on each group-element pair of regular-representation embeddings, between equivariant encoders and decoder.",
+          "source": "wang25a.pdf, physical p. 5, section 4.3 and Figure 3"
+        },
+        {
+          "claim": "voxel-input absolute control with 200 demonstrations averages 72.6% peak success over training, exceeding the strongest baseline average with 1,000 demonstrations (71.4%)",
+          "assessment": "Supported as a twelve-task average, not a per-task guarantee. The measurement is training-time maxima over 50 evaluations, averaged over three seeds, consistent with the candidate's peak/seed wording.",
+          "source": "wang25a.pdf, physical p. 6, Tables 1-2; p. 7, section 5.1"
+        },
+        {
+          "claim": "success ranges from 80% to 95%, compared with 0%-60% for a similarly sized non-equivariant policy using the same voxels.",
+          "assessment": "Supported for six physical tasks with 20-60 demos and 20 trials per task. The subsequent low-data tendency is supported for the voxel absolute-control comparison emphasized here: gaps against the best baseline decrease from 21.9 to 14.8 to 6.5 points. Sensing-related symmetry failures are acknowledged in the body.",
+          "source": "wang25a.pdf, physical p. 8, section 5.3, Table 3 and section 6; p. 6, Table 2"
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "results",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "absolute-control success averages 53.7% versus 42.0% at 100 demonstrations per task across 12 MimicGen environments.",
+          "assessment": "Supported RGB/common-temporal-U-Net comparison. The next sentence correctly defines these as three-seed averages of maxima over 50 evaluation occasions during training.",
+          "source": "wang25a.pdf, physical pp. 5-6, section 5.1 and Tables 1-2"
+        },
+        {
+          "claim": "at the same demonstration budget, RGB relative-control averages are 35.4% and 33.3%.",
+          "assessment": "Supported for EquiDiff (Im) and DiffPo-C at 100 demos; the action-control condition changes the measured advantage.",
+          "source": "wang25a.pdf, physical p. 6, Table 2"
+        },
+        {
+          "claim": "With 40 demonstrations, letter alignment succeeds in 19/20 trials for EquiDiff versus 0/20 for the baseline.",
+          "assessment": "Supported; the hardware baseline receives the same voxel grid and has approximately matched trainable parameters, as the candidate states.",
+          "source": "wang25a.pdf, physical p. 8, section 5.3 and Table 3"
+        },
+        {
+          "claim": "Bagel baking, trained with 58 demonstrations, succeeds in 16/20 versus 2/20 trials; all EquiDiff failures on that task are attributed to robot joint limits.",
+          "assessment": "Supported exactly by Table 3 and the body results paragraph. 'Attributed' correctly reports the authors' explanation rather than an independently verified cause.",
+          "source": "wang25a.pdf, physical p. 8, section 5.3, Results and Table 3"
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "results",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "EquiDiff succeeds in 80%-95% of trials across six tasks, versus 0%-60% for a non-equivariant diffusion policy using the same voxel grid and approximately the same parameter count; each policy receives 20 trials per task.",
+          "assessment": "Supported in the stated 20-60-demo setting. The following letter-alignment contrast of 19/20 versus 0/20 also matches Table 3.",
+          "source": "wang25a.pdf, physical p. 8, section 5.3 and Table 3"
+        },
+        {
+          "claim": "with 100 demonstrations and absolute control, the RGB version averages 53.7% success across 12 tasks, compared with 42.0% for DiffPo-C",
+          "assessment": "Supported. Sections 5.1 and 4.3 identify the common RGB observation type and temporal U-Net architecture. The candidate supplies the correct training-maxima and three-seed definition in the following sentence.",
+          "source": "wang25a.pdf, physical pp. 5-6, sections 4.3, 5.1 and Tables 1-2"
+        },
+        {
+          "claim": "The absolute-control RGB advantage is smaller with more demonstrations, and relative-control RGB gains over the strongest baseline are modest.",
+          "assessment": "Supported: absolute-image gaps against DiffPo-C are 11.7, 10.7 and 8.3 points; image-relative gaps against the best baseline are 2.1, 3.1 and 3.7 points. This is not a claim that relative gains shrink monotonically.",
+          "source": "wang25a.pdf, physical p. 6, Table 2"
+        },
+        {
+          "claim": "without attributing the gains simply to a richer visual input.",
+          "assessment": "Supported bounded interpretation: neither the RGB-to-RGB simulation nor the voxel-to-voxel hardware contrast is merely a modality switch. No universal or exclusive causal attribution is asserted.",
+          "source": "wang25a.pdf, physical pp. 5-6, section 5.1; p. 8, section 5.3"
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "abstract",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "It optimizes worst-case excess imitation loss relative to a reference policy, focusing on domains where the learned policy falls behind the reference rather than on high absolute losses alone.",
+          "assessment": "Supported: the robust objective maximizes a weighted domain-average learned-minus-reference BC loss while the policy minimizes it. Curation is target-task-independent, and averaged weights are reusable for separate downstream policies. No universal optimality guarantee is claimed.",
+          "source": "hejna25a.pdf, physical pp. 3-5, sections 3-3.2 and equation (3)"
+        },
+        {
+          "claim": "Gaussian action normalization and discretized action likelihoods address mismatched loss scales, multimodal actions, and outlier-sensitive regression losses; validation-based early stopping guards against reference overfitting.",
+          "assessment": "Supported as the stated design rationale: per-embodiment normalization, action-dimension binning and per-domain validation-based checkpoint selection adapt Group DRO to robotics.",
+          "source": "hejna25a.pdf, physical pp. 4-5, sections 3.1-3.2"
+        },
+        {
+          "claim": "with local co-training data (25 demonstrations per adaptation task) assigned a total mixture weight of 5%.",
+          "assessment": "Supported experimental condition: 25 demos for each of three representative in-domain tasks jointly enter the mixture at 5%; evaluation is after co-training, not zero-shot.",
+          "source": "hejna25a.pdf, physical p. 6, section 4.1, Training and Evaluation Details"
+        },
+        {
+          "claim": "For RT-X subsets retaining 25% of the data, Re-Mix achieves 80% mean success across four tasks, versus 38% with size-proportional sampling and 33% with expert weights.",
+          "assessment": "Supported by the displayed Figure 3 averages of 0.80, 0.38 and 0.33. Uniform is datapoint-uniform, hence size-proportional by domain. The full Bridge two-task comparison is similar, while its four-task 25% subset favors Re-Mix, as summarized afterward.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3; p. 6, Figure 1 and section 4.1; p. 8, section 4.4"
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "abstract",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Re-Mix learns reusable domain weights through minimax optimization of excess loss relative to a reference policy, prioritizing domains where the learned policy has not yet matched the reference.",
+          "assessment": "Supported by the excess-BC-loss objective and separation of weight estimation from final policy training. Domain selection does not require a specified target task; the text describes a reference-relative criterion, not raw difficulty or a proved optimal mixture.",
+          "source": "hejna25a.pdf, physical pp. 3-5, sections 3-3.2 and equation (3)"
+        },
+        {
+          "claim": "validation-based early stopping keeps the reference informative rather than allowing near-zero training loss to erase this comparison.",
+          "assessment": "Supported: the body explains that near-zero reference losses make excess loss effectively raw loss. Normalization, binning and averaging of learned weights are also explicit method steps.",
+          "source": "hejna25a.pdf, physical pp. 4-5, sections 3.1-3.2"
+        },
+        {
+          "claim": "25 demonstrations for each of three representative tasks contribute 5% of the training mixture.",
+          "assessment": "Supported co-training protocol. The same section specifies diffusion heads for the final policies and real-world evaluation.",
+          "source": "hejna25a.pdf, physical p. 6, section 4.1"
+        },
+        {
+          "claim": "With 25% of RT-X data retained, Re-Mix reaches 80% reported mean success, compared with 38% for uniform subsetting and 33% for expert-weighted subsetting.",
+          "assessment": "Supported Figure 3 aggregate values. The following Bridge contrast is also supported: Figure 1 reports similar full-data performance, whereas Figure 3's subset comparison favors Re-Mix. These are separate evaluations, not paired full/subset task means.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3 and section 4.2; p. 6, Figure 1; p. 8, section 4.4"
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "results",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "With all Bridge data, Re-Mix and uniform sampling produced similar task success; retaining only 25% of the dataset yielded reported mean success of 90% for Re-Mix, 50% for uniform subsetting, and 22% for Self-Supervised Prototypes",
+          "assessment": "Supported: Figure 1 shows similar full-data results, and Figure 3 gives subset averages of 0.90, 0.50 and 0.22. Full and subset Bridge evaluations contain two and four tasks respectively; the draft contrasts these settings without claiming a paired full-to-subset performance gain.",
+          "source": "hejna25a.pdf, physical p. 6, Figure 1; p. 7, Figure 3 and section 4.2; p. 8, section 4.4"
+        },
+        {
+          "claim": "At the same retention fraction on RT-X, Re-Mix reached 80%, versus 38% with uniform and 33% with expert-derived subset weights.",
+          "assessment": "Supported by Figure 3's four-task RT-X 25% subset means. The visual-diversity baseline is used on Bridge, not RT-X; the paragraph correctly places it in the Bridge comparison.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3; p. 8, section 4.4"
+        },
+        {
+          "claim": "which selects trajectories using CLIP image embeddings.",
+          "assessment": "Supported compressed account of SSP: trajectory-averaged CLIP embeddings are clustered with k=32, and data close to centroids are discarded to promote diversity. No alternative action-informed SSP procedure is invented.",
+          "source": "hejna25a.pdf, physical p. 8, section 4.4"
+        },
+        {
+          "claim": "Final diffusion policies shared 400,000 training steps and co-training data comprising 25 demonstrations for each of three representative tasks at 5% mixture weight; evaluation used ten physical executions per task.",
+          "assessment": "Supported. Section 4.1 states these training/evaluation conditions and says pretraining-only policies failed on the custom setups, supporting the closing distinction between limited co-training generalization and zero-shot transfer.",
+          "source": "hejna25a.pdf, physical p. 6, section 4.1"
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "results",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "At a fixed 25% RT-X data budget, Re-Mix achieves 80% mean success across four hardware tasks, compared with 38% for size-proportional sampling and 33% for expert-defined weights.",
+          "assessment": "Supported by Figure 3; the 25% target applies to total dataset size. Uniform weights correspond to domain sizes, not equal probability per domain.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3 and section 4.3; p. 8, section 4.4"
+        },
+        {
+          "claim": "Final diffusion policies train for 400,000 gradient steps with local demonstrations at 5% mixture weight; each task receives 10 evaluation trials.",
+          "assessment": "Supported matched final-policy training/evaluation protocol. Section 4.4 explicitly states that training still samples domains according to the exact learned weights after subsetting; matching these budgets does not claim equal curation overhead.",
+          "source": "hejna25a.pdf, physical p. 6, section 4.1; p. 8, section 4.4"
+        },
+        {
+          "claim": "On Bridge, the four-task subset evaluation yields 90% mean success for Re-Mix, versus 50% for uniform sampling and 22% for image-based Self-Supervised Prototypes.",
+          "assessment": "Supported by Figure 3. The contrasting two-task full-data Bridge result is similar for the learned and uniform mixtures, as stated in Figure 1 and section 4.2.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3 and section 4.2; p. 6, Figure 1"
+        },
+        {
+          "claim": "using a checkpoint 50,000 steps after early stopping reduces performance, and replacing discrete actions with continuous actions worsens the subset results.",
+          "assessment": "Supported by the prose in section 4.5, which places all ablations in the 25% subset setting and identifies Bridge for the continuous-action comparison. Figure 4 is outside pages 2-8, but the candidate claims only the directions reported in the permitted prose, not uncheckable plotted numbers.",
+          "source": "hejna25a.pdf, physical p. 8, section 4.5"
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "abstract",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Re-Mix, which learns domain weights through group distributionally robust optimization on loss relative to a reference policy, rather than raw loss.",
+          "assessment": "Supported excess-loss method description. The normalization, action discretization and early-stopping rationale that follows matches the robotics-specific issues discussed in the body.",
+          "source": "hejna25a.pdf, physical pp. 4-5, sections 3.1-3.2 and equation (3)"
+        },
+        {
+          "claim": "Re-Mix returns reusable weights rather than a final policy: weights learned with discrete action models guide both diffusion-policy training and data retention without target-task information.",
+          "assessment": "Supported scope and workflow: curation returns averaged weights reusable for other policy types and for subsetting, without needing a target task to select the mixture.",
+          "source": "hejna25a.pdf, physical p. 3, section 3, Problem Setup; p. 5, section 3.2; pp. 7-8, section 4.4"
+        },
+        {
+          "claim": "with a 5% in-domain co-training mixture because pretraining alone fails to transfer to the evaluation setups.",
+          "assessment": "Supported for the custom WidowX/Franka setups in these experiments. This is not a claim that pretraining always fails across other evaluation environments.",
+          "source": "hejna25a.pdf, physical p. 6, section 4.1"
+        },
+        {
+          "claim": "On RT-X, learned weights outperform uniform and expert-designed mixtures and retain reported performance after reducing the dataset to 25%.",
+          "assessment": "Supported as the authors' reported aggregate result: full RT-X means are 0.80/0.42/0.48 for Re-Mix/Uniform/Human; subset means are 0.80/0.38/0.33. The full figure displays six tasks and the subset four, so this is not identical-task or per-task preservation. The candidate says 'reported performance' and makes no such stronger claim.",
+          "source": "hejna25a.pdf, physical p. 6, Figure 2; p. 7, Figure 3 and section 4.2; p. 8, section 4.4"
+        },
+        {
+          "claim": "On quarter-sized Bridge V2, mean success is 90%, versus 50% for uniform subsetting and 22% for visual-embedding selection.",
+          "assessment": "Supported by Figure 3's Bridge 25% subset panel. Figure 1 and section 4.2 support the subsequent statement that full-data Bridge weighting makes little difference.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3 and section 4.2; p. 6, Figure 1"
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "abstract",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "It learns reusable domain weights through minimax optimization of excess imitation loss relative to a reference policy, so weighting depends on the gap to a reference rather than raw domain difficulty.",
+          "assessment": "Supported: the minimax objective uses domain-average learned-minus-reference BC loss; the goal is target-task-independent curation. The draft does not claim that this guarantees an optimal mixture for every downstream model.",
+          "source": "hejna25a.pdf, physical pp. 3-5, sections 3-3.2 and equation (3)"
+        },
+        {
+          "claim": "Re-Mix applies Gaussian action normalization within embodiments, discretizes actions for weight estimation, and selects checkpoints before domain-level overfitting.",
+          "assessment": "Supported method adaptations. The discrete curation model and downstream diffusion policy are explicitly separated in section 3.2; reuse does not imply action spaces are identical.",
+          "source": "hejna25a.pdf, physical pp. 4-5, sections 3.1-3.2; p. 6, section 4.1"
+        },
+        {
+          "claim": "use 25 in-domain demonstrations for each of three tasks at a 5% co-training weight.",
+          "assessment": "Supported training condition, accurately limiting the real-robot evidence to co-training rather than zero-shot deployment.",
+          "source": "hejna25a.pdf, physical p. 6, section 4.1"
+        },
+        {
+          "claim": "With 25% of RT-X retained, Re-Mix achieves 80% mean success, compared with 38% for uniform and 33% for human-curated weights.",
+          "assessment": "Supported displayed subset means. The following claim that full Bridge reweighting has little benefit, while subsetting reveals differences, matches the separate full-data and subset evaluations; no paired task-set comparison is asserted.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3 and section 4.2; p. 6, Figure 1; p. 8, section 4.4"
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "results",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "80% versus 38% with uniform and 33% with human-defined weights on RT-X, and 90% versus 50% with uniform and 22% with vision-based SSP on Bridge.",
+          "assessment": "Supported by the two Figure 3 panels at 25% total retained size, each displaying four tasks. The numbers are reported aggregate success percentages, not relative-percent improvements.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3; p. 8, section 4.4"
+        },
+        {
+          "claim": "Each subset comparison covers four tasks with ten real-robot trials per task.",
+          "assessment": "Supported by the four plotted task categories in each panel and Figure 3's caption. This uses the subset figure, not Figure 2's inconsistent full-data caption.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3; p. 6, section 4.1"
+        },
+        {
+          "claim": "Final diffusion policies train for 400,000 gradient steps and include 25 in-domain demonstrations for each of three representative tasks at a 5% mixture weight; the evaluation tasks test shifts beyond this co-training data.",
+          "assessment": "Supported training conditions and evaluation relationship. This correctly characterizes the comparison as generalization after local co-training.",
+          "source": "hejna25a.pdf, physical p. 6, section 4.1"
+        },
+        {
+          "claim": "full Bridge training shows similar performance under Re-Mix and uniform weighting on its two evaluated tasks.",
+          "assessment": "Supported by Figure 1's two task pairs and section 4.2. It is not a claim that reweighting universally improves Bridge.",
+          "source": "hejna25a.pdf, physical p. 6, Figure 1; p. 7, section 4.2"
+        },
+        {
+          "claim": "The subset ablations further report worse outcomes with continuous-action weight estimation or an overfit reference checkpoint",
+          "assessment": "Supported qualitative directions from section 4.5; all ablations use 25% subsets, and the continuous-action result concerns Bridge. The draft does not invent unobserved Figure 4 values or claim either design choice explains all improvements.",
+          "source": "hejna25a.pdf, physical p. 8, section 4.5"
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "results",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Learned scene weights and uniform sampling perform similarly on the full dataset's two evaluation tasks.",
+          "assessment": "Supported for Bridge: Figure 1 shows 0.9/1.0 on Carrot to Rack and 0.8/0.7 on Fork to Rack for Uniform/Re-Mix, with matching calculated two-task means. Section 4.2 explicitly calls their performance similar.",
+          "source": "hejna25a.pdf, physical p. 6, Figure 1; p. 7, section 4.2"
+        },
+        {
+          "claim": "Re-Mix averages 90% success across four tasks, compared with 50% for uniform subsetting and 22% for Self-Supervised Prototypes",
+          "assessment": "Supported in the stated 25%-retained Bridge setting. SSP promotes visual diversity using clustered trajectory-averaged CLIP embeddings; it is not an action-loss weighting method.",
+          "source": "hejna25a.pdf, physical p. 7, Figure 3; p. 8, section 4.4"
+        },
+        {
+          "claim": "The final diffusion policies use the same 400,000-step training budget and a 5% co-training mixture containing 25 in-domain demonstrations for each of three tasks.",
+          "assessment": "Supported, as is the preceding ten-physical-trials-per-task condition. These match downstream training budgets, not total computation including the two runs required to estimate Re-Mix weights.",
+          "source": "hejna25a.pdf, physical p. 6, section 4.1; p. 8, section 5, Computational Cost"
+        },
+        {
+          "claim": "Retention and training-time domain weights change together, so this tests their combined effect.",
+          "assessment": "Supported important comparison scope: after weighted subsetting and filling to the target size, training still uses the exact mixture weights. The experiment is not an isolated retention-only ablation.",
+          "source": "hejna25a.pdf, physical p. 8, section 4.4"
+        },
+        {
+          "claim": "RT-X similarly retains reported performance under Re-Mix subsetting while expert-weighted subsetting loses performance.",
+          "assessment": "Supported reported aggregate direction: Re-Mix is displayed at 0.80 in full and subset results, while Human moves from 0.48 to 0.33. The task sets differ, so this does not establish unchanged performance per task. The draft expressly identifies the non-paired Bridge task sets in its final sentence.",
+          "source": "hejna25a.pdf, physical p. 6, Figure 2; p. 7, Figure 3; p. 8, section 4.4"
+        }
+      ]
+    }
+  ]
+}

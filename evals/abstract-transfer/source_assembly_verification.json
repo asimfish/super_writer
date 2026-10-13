@@ -1,0 +1,38 @@
+[
+  {
+    "id": "A01",
+    "segments": 7,
+    "body_bytes": 29182,
+    "all_original_spans": true
+  },
+  {
+    "id": "A02",
+    "segments": 6,
+    "body_bytes": 32332,
+    "all_original_spans": true
+  },
+  {
+    "id": "A03",
+    "segments": 2,
+    "body_bytes": 20944,
+    "all_original_spans": true
+  },
+  {
+    "id": "A04",
+    "segments": 3,
+    "body_bytes": 26673,
+    "all_original_spans": true
+  },
+  {
+    "id": "A05",
+    "segments": 8,
+    "body_bytes": 73281,
+    "all_original_spans": true
+  },
+  {
+    "id": "A06",
+    "segments": 6,
+    "body_bytes": 24484,
+    "all_original_spans": true
+  }
+]

@@ -1,0 +1,364 @@
+{
+  "audits": [
+    {
+      "id": "D4_text_133",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Table 1 and Sec. 2.3 support the prose's 88.3% oracle, 56.1% closed-book reference, worse 20/30-document cases, and overlapping standard/16K curves on shared-window inputs. Sec. 4.2 supports 45.6% worst-case versus perfect 300-pair lookup and the weak QA response to query repetition. The reading recovers both the evidence-availability/use distinction and these task, model, and length boundaries."
+    },
+    {
+      "id": "D4_text_114",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Table 2 supports the prose's 7B ASQA citation and str-em comparisons; Sec. 4.3 specifies five shared ASQA passages. Sec. 5.2 and Figure 3(a) support the 50k/150-instance ablation, 18.1 versus 32.1, and combined-configuration qualification. Figure 3(b,c) and Sec. 5.2 support the fluency and retrieval tradeoffs. The reading explicitly retains attribution versus correctness and the ablation's non-isolation boundary."
+    },
+    {
+      "id": "D4_text_117",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 1,
+      "failure_types": [
+        "reader_inference"
+      ],
+      "reason": "P07 Sec. 4.2 supports the prose and reading's lookup/QA contrast; Secs. 2.3 and 4.1 support shared-window similarity and training-length dependence. However, prose says the 1.9-point spread occurs 'within' Flan-UL2's 2,048-token training window, whereas the reading says 'at 2,048 tokens.' Neither the prose nor locked Sec. 4.1 establishes that exact evaluated sequence length. This is reader-added specificity, not an established source numerical error."
+    },
+    {
+      "id": "D4_text_134",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Table 1 and Sec. 2.3 establish 88.3% answer-only accuracy, below-56.1% worst 20/30-document performance, and similar standard/16K curves for jointly fitting 10/20-document inputs. Sec. 4.2 establishes the 300-pair 45.6%-to-perfect contrast and largely unchanged QA pattern. Prose's 'in this evaluation' limits the inference; the reading retains available-evidence failure and all consequential comparison conditions."
+    },
+    {
+      "id": "D4_text_109",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Secs. 3.1-3.3 support offline critic supervision, generator-owned reflection, and probability-plus-critique sentence selection. Secs. 4.1/4.3 and Table 2 support zero-shot 7B/13B evaluation and the same-data PopQA 48.7%-to-54.9% comparison. Table 2 supports greater ASQA precision but lower recall/correctness than Ret-ChatGPT; Sec. 5.2 supports the support-weight/fluency tradeoff. Reading preserves adjustable predicted support and nonuniform quality gains."
+    },
+    {
+      "id": "D4_text_113",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Sec. 4.3 and Table 2 support shared ASQA passages, 150k training pairs, the 66.9/67.8 versus 5.0/7.5 citation scores, and 30.0 versus 31.0 str-em. Sec. 5.2 and Figure 3(a) support the smaller 50k/150-question ablation and 32.1 versus 18.1. The reading preserves the prose's combined-configuration qualification and the source-supported support/fluency and retrieval/accuracy tradeoffs, without inventing an isolated token effect."
+    },
+    {
+      "id": "D4_text_125",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Secs. 3.2-3.3 support GPT-4-distilled offline critique, joint next-token learning, and adjustable inference without a separate critic. Secs. 4.1/4.3 and Table 2 support six-task zero-shot Llama 2 7B/13B evaluation, shared five-passage ASQA inputs, and 66.9 versus 5.0 precision with lower str-em. Sec. 5.2 supports lower MAUVE under stronger support weighting. The reading recovers the relevance/support distinction and bounded attribution advantage."
+    },
+    {
+      "id": "D4_text_119",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1/3.1 support answer-preserving position and distractor changes, 2,655 paragraph-answer queries, and UUID lookup. Secs. 2.3/3.2 support edge-favored QA, some below-closed-book GPT performance, shared-window similarity, and the Claude lookup exception. Sec. 4.2 supports query repetition nearly solving lookup without repairing QA. The reading retains the prose's capacity/use distinction and task/model exceptions; the abstract need not enumerate every setup detail."
+    },
+    {
+      "id": "D4_text_118",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Sec. 4.2 supports 300-pair GPT-3.5-Turbo (16K) perfect lookup versus 45.6% worst case and the first-position-only QA improvement. Sec. 4.1 supports Flan-UL2's 1.9-point spread within its 2,048-token training window and middle degradation beyond it; Sec. 2.3 supports similar jointly fitting standard/16K profiles. Reading accurately preserves the lookup/evidence-use distinction and within-versus-beyond-training scope."
+    },
+    {
+      "id": "D4_text_130",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Sec. 3.2 supports the GPT-4-distilled Llama 2 critic, offline labels, joint next-token training, and passage-loss masking; Sec. 3.1's utility footnote makes utility passage-independent. Sec. 3.3, Eqs. 3-4, supports sentence-segment beam ranking with generation probability and within-category normalized critique scores. The reading recovers this assessment-to-selection mechanism and the prose's adjustable thresholds/weights without retraining or inference-time critic calls."
+    },
+    {
+      "id": "D4_text_141",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Sec. 4.3 and Table 2 support identical five-passage ASQA inputs and 13B/Ret-ChatGPT precision 70.3/65.1, recall 71.3/76.6, and str-em 31.7/40.7. Table 2 and Sec. 5.1 support 7B PopQA 54.9 versus same-data Llama2-FT 48.7. Sec. 5.2 supports the customization tradeoffs. Reading retains the prose's non-isolation qualification and does not turn a precision advantage into overall superiority."
+    },
+    {
+      "id": "D4_text_136",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Secs. 3.1-3.3 support offline distilled critique, generator reflection probabilities, and adjustable passage-conditioned sentence selection. Secs. 4.1/4.3 and Table 2 support six-task zero-shot 7B/13B comparisons, same-data PopQA gains, and the ASQA 13B precision/recall figures. Sec. 5.2 explicitly analyzes support weighting on 7B and its MAUVE cost. Reading preserves the mechanism, model-specific comparisons, and attribution-versus-coverage/fluency boundary."
+    },
+    {
+      "id": "D4_text_115",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Table 2 and Sec. 5.1 support all stated same-data 7B and Ret-ChatGPT/13B metric comparisons. Sec. 4.3 specifies common five-document ASQA inputs and SELF-RAG's zero ALCE retrieval threshold. Sec. 5.2 supports the 7B support-weight/MAUVE tradeoff and greater PopQA sensitivity to reduced retrieval. The reading recovers tunable, nonuniform evidence-use gains and the comparison settings; it does not establish a causal correctness loss from support weighting."
+    },
+    {
+      "id": "D4_text_124",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1/3.1 support answer-preserving diagnostics; Sec. 2.3 supports edge-favored QA and similar standard/extended variants when both fit. Secs. 4.1/4.2 support training-length-bounded encoder-decoder robustness and the lookup-only benefit of query repetition. Sec. 5 supports reader saturation before retriever recall. Reading preserves the prose's evaluated-systems limitation and distinguishes nominal capacity, evidence availability, and effective QA use without requiring every model exception in this abstract."
+    },
+    {
+      "id": "D4_text_144",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1/2.3 support the 2,655 paragraph-annotated queries, annotated-answer-filtered Wikipedia distractors, fixed-set reordering, 10/20/30-document contexts, and closed-book/oracle references. Secs. 3.1/3.2 support UUID JSON, 75/140/300 pairs, and 500 examples per setting; Secs. 2.1/2.2/3.1 support greedy decoding and inclusion scoring. Reading recovers both the position/length controls and these methodological boundaries."
+    },
+    {
+      "id": "D4_text_131",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Sec. 2.1 supports paragraph-answer query selection, filtered relevant distractors, and moving supported evidence without changing the target answer. Sec. 2.3 supports 10/20/30 documents and closed-book/oracle references. Secs. 3.1/2.2 support UUIDs, output inclusion, and greedy decoding; Sec. 4.2 supports the query-aware intervention. Reading accurately reconstructs the prose's position-versus-availability design and its task, data, and evaluation constraints."
+    },
+    {
+      "id": "D4_text_139",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Secs. 3.1/3.2 support offline GPT-4-distilled Llama 2 labels, passage-independent utility, joint text/reflection learning, and passage-loss exclusion. Sec. 3.3 and Eqs. 3-4 support weighted normalized favorable-token probabilities in segment beam search. Prose's 'it judges better grounded' correctly marks support as predicted, not guaranteed. Reading preserves that learned-grounding selection mechanism and adjustable retrieval/scoring without retraining or a separate inference-time critic."
+    },
+    {
+      "id": "D4_text_132",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1/2.3 support 2,655 paragraph-long-answer queries, relevance-ranked distractors excluding annotated answers, answer-preserving position/count changes, and no-document/answer-only references. Secs. 3.1/2.2 support unique random UUIDs, inclusion scoring, and greedy decoding. Sec. 4.2 supports earlier query availability via before-and-after placement. Reading preserves these controls and evaluation choices; neither prose nor reading claims all possible alternative answers were excluded."
+    },
+    {
+      "id": "D4_text_126",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Secs. 3.2-3.3 support offline critic training, joint prediction, and self-evaluation-guided continuation ranking with adjustable controls. Secs. 4.1/4.3 and Table 2 support six-task zero-shot 7B/13B evaluation, shared five-document ASQA inputs, same-data Llama2-FT comparison, 66.9 versus 5.0 precision, and 30.0 versus 31.0 str-em. Sec. 5.2 supports the MAUVE tradeoff. Reading recovers predicted-support selection and explicitly rejects uniform quality improvement."
+    },
+    {
+      "id": "D4_text_143",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Sec. 2.1 supports holding question and answer evidence fixed while reordering retrieved, annotated-answer-filtered documents. Sec. 2.3 supports 10/20/30-document settings and closed-book/oracle controls. Secs. 3.1/3.2 support serialized UUID JSON with 75/140/300 pairs and 500 examples per setting; Sec. 2.2 and both task setups support greedy output-inclusion scoring. Reading accurately recovers position isolation, added-context manipulation, and the minimal-language lookup boundary."
+    },
+    {
+      "id": "D4_text_138",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1/3.1 support answer-preserving position/length tests. Secs. 2.3/3.2 support QA middle degradation, occasional below-closed-book GPT performance, shared-window similarity, and nearly perfect Claude UUID retrieval. Sec. 4.2 supports repetition repairing lookup but not QA; Sec. 5 supports saturation despite improving recall. Reading retains the prose's evaluated-model/task scope and exceptions, rather than generalizing lookup success or extra documents into reliable QA."
+    },
+    {
+      "id": "D4_text_121",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Sec. 4.2 supports 300-pair GPT-3.5-Turbo (16K) 45.6%-to-perfect lookup and the weak QA response. Secs. 2.3/3.2 support Claude's contrasting QA/lookup behavior and some 20/30-document GPT cases below 56.1% closed-book accuracy. Sec. 5 supports marginal reader gains beyond 20 documents despite improving recall. Reading recovers the prose's lookup-versus-evidence-use relation, model exceptions, and task/length conditions."
+    },
+    {
+      "id": "D4_text_122",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Sec. 4.2 supports the stated GPT-3.5-Turbo (16K) 300-UUID-pair contrast and first-position-only QA benefit. Sec. 2.3 supports answer-bearing 20/30-document configurations falling below 56.1% closed-book accuracy. Sec. 5 supports a separate retrieval-pipeline study with marginal gains beyond 20 documents. Reading retains that separation and the prose's 'tested' qualification, correctly distinguishing lookup/recall improvements from effective answering."
+    },
+    {
+      "id": "D4_text_140",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Secs. 3.1/3.2 support offline GPT-4 reflection labels, a Llama 2 critic, passage-independent utility, joint next-token training, and loss masking. Sec. 3.3, Eqs. 3-4, supports favorable critique probabilities normalized by category, weighted segment-level beam ranking, and a normalized retrieval-token threshold. Reading recovers the prose's adjustable assessment-to-selection mechanism and does not treat model-predicted support as guaranteed factual support."
+    },
+    {
+      "id": "D4_text_142",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Table 2, Secs. 4.1/4.3, and Sec. 5.1 support all ASQA comparison values, common five passages, same-data PopQA 54.9 versus 48.7, and gold-answer inclusion scoring. Sec. 5.2 supports support-weight/MAUVE and retrieval/accuracy tradeoffs. Reading preserves the prose's combined-approach interpretation and explicitly notes reflection is not isolated; a citation precision advantage is not inflated into superior long-form answering overall."
+    },
+    {
+      "id": "D4_text_112",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1-2.3 support the paragraph-annotated 2,655 queries, Contriever-filtered distractors, fixed-set reordering, 10/20/30 documents, greedy decoding, and closed-book/oracle references. Secs. 3.1/3.2 support UUID sizes, 500 examples each, and output inclusion. Sec. 4.2 supports query placement enabling query-aware decoder-only contextualization. Reading recovers the position/context-length distinction and these constraints, without asserting the intervention must improve both tasks."
+    },
+    {
+      "id": "D4_text_110",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Secs. 3.1-3.3 support offline critic annotations and generator-owned evidence judgments influencing passage-conditioned sentence selection. Secs. 4.1/4.3 and Table 2 support six-task zero-shot 7B/13B evaluation, same-data PopQA 48.7%-to-54.9% gains, and ASQA 13B's precision advantage but recall/correctness disadvantage. Sec. 5.2 supports increased precision with lower MAUVE. Reading's 'separate inference-time evaluation' refers to the separate critic, consistent with prose; generator self-evaluation remains explicit."
+    },
+    {
+      "id": "D4_text_111",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Sec. 2.1 supports fixing question, answer, and distractors within each length condition, using 2,655 paragraph-answer queries and filtered Contriever passages. Sec. 2.3 supports document counts and closed-book/oracle controls. Secs. 3.1/3.2 support UUID JSON sizes and 500 examples per size; Secs. 2.1/2.2/3.1 support greedy decoding and containment rather than whole-response exact matching. Reading preserves the prose's evidence-position isolation and full consequential setup scope."
+    },
+    {
+      "id": "D4_text_116",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Sec. 5.1 and Table 2 support the same-data Llama2-FT baseline, 7B PopQA/ASQA figures, and 13B versus Ret-ChatGPT precision/recall/correctness directions. Sec. 4.3 supports the same five ASQA input documents; Sec. 5.2 supports support-weight/MAUVE and retrieval-frequency tradeoffs. Reading recovers the prose's task-specific, nonuniform benefits and the distinction between citation precision and coverage without adding an unsupported isolated mechanism claim."
+    },
+    {
+      "id": "D4_text_120",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1/3.1 support answer-preserving location and distractor diagnostics with 2,655 queries and random key-value lookup. Sec. 2.3 supports edge-favored QA, below-closed-book GPT cases, and jointly fitting standard/extended similarity. Secs. 3.2/4.2 support Claude's near-perfect lookup and query repetition's task-specific benefit. Reading recovers capacity versus effective use and preserves the evaluated-setting, model-exception, and shared-window boundaries."
+    },
+    {
+      "id": "D4_text_127",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Sec. 3.2 supports the GPT-4-supervised Llama 2-7B critic, offline annotations, joint next-token training, and passage-loss exclusion. Sec. 3.3 supports normalized retrieval thresholding and segment-level beam search combining generation probabilities with weighted favorable critique probabilities. Prose states 'predicted support,' correctly limiting the evidence claim. Reading recovers this support-aware selection relation and adjustable priorities without retraining or inference-time critic evaluations."
+    },
+    {
+      "id": "D4_text_135",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Secs. 3.2-3.3 support offline GPT-4-supervised critic labels, generator reflection, candidate ranking, and inference-time controls. Secs. 4.1/4.3 and Table 2 support six-task zero-shot 7B/13B evaluation and the shared-passage ASQA precision/recall comparison. Sec. 5.2 supports lower MAUVE under greater support weighting; Ethical Concerns denies complete grounding guarantees. Reading recovers operational evidence assessment and bounded attribution gains without requiring every caveat to be repeated verbatim."
+    },
+    {
+      "id": "D4_text_123",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1/3.1 support controlled answer-preserving tests; Sec. 2.3 supports QA middle degradation, some below-no-document outcomes, and shared-window similarity. Secs. 4.1/4.2 support training-length-dependent encoder-decoder robustness and query repetition's lookup/QA contrast. Sec. 5 supports reader saturation while recall rises. Reading retains the prose's evaluated-QA limitation and intervention/training boundaries, correctly locating the bottleneck in evidence use rather than nominal capacity."
+    },
+    {
+      "id": "D4_text_128",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Sec. 3.2 supports GPT-4-supervised Llama 2-7B offline critique, joint text/token prediction, and passage-loss masking. Sec. 3.3, Eqs. 3-4, supports retrieval probability thresholding and segment beam ranking with weighted normalized critique probabilities. Prose's predicted-support distinction avoids guaranteeing grounding merely from relevance. Reading preserves this claim-selection mechanism and adjustable controls without additional training or a separate inference-time critic."
+    },
+    {
+      "id": "D4_text_137",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P07 Secs. 2.1/3.1 support answer-preserving position/distractor controls. Secs. 2.3/3.2 support edge-favored QA, below-closed-book GPT worst cases, shared-window similarity, and Claude's lookup exception. Sec. 4.2 supports repetition largely repairing synthetic retrieval but not QA; Sec. 5 supports earlier reader saturation. Reading recovers the prose's insufficiency of capacity/lookup indicators and the evaluated-task, intervention, and jointly fitting comparison boundaries."
+    },
+    {
+      "id": "D4_text_129",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P08 Table 1 distinguishes relevance from support; Sec. 3.2 supports GPT-4-supervised Llama 2 offline labels, joint text/reflection prediction, and passage-loss exclusion. Sec. 3.3 and Eqs. 3-4 support weighted normalized critique scores in segment beam selection. Prose's 'can' correctly allows, rather than guarantees, lower scores for incompletely supported continuations. Reading preserves this pre-selection support mechanism and adjustable controls without retraining or a critic call."
+    }
+  ]
+}

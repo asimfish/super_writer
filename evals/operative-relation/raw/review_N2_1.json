@@ -1,0 +1,46 @@
+{
+  "reviews": [
+    {
+      "id": "N2_s2_results",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both correctly interpret Section 6.2, Table 2: residual weighting recovers coverage at a width cost, weighted fitting reverses that cost on ordered data, and permutation removes its width advantage. Both acknowledge below-target ordered coverage and explain why a potentially large Theorem 2b residual-distribution penalty precludes an arbitrary-drift guarantee. B explicitly identifies width 0.527 as below both alternatives and connects the control to the absence of a generally narrower weighted method. Its method labels are easier to follow than A's 'residual-weighted weighted least squares.' The preference is explanatory clarity, not a fidelity difference."
+    },
+    {
+      "id": "N2_s1_results",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both explain Table 2's controlled comparisons rather than merely listing results: calibration weighting improves coverage while widening intervals, fitting weighting narrows them without sacrificing that improvement, and the exchangeable control lacks the width advantage. Both distinguish observed undercoverage from the 90% target and correctly invoke Theorem 2b's small-penalty condition. A explicitly warns that temporal averages do not establish coverage at each time; B more directly compares the weighted-fit width with the unweighted baseline and identifies the original versus swapped residual-vector laws. These complementary advantages leave no decisive preference."
+    },
+    {
+      "id": "N2_s2_methods",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both faithfully trace Section 7.2, equations (24)-(31): positional tags stay fixed, unit test weight dominates calibration weights, the infinity cutoff implies high-residual membership, independence permits weighting over K, and total variation transfers probabilities to the original law. A correctly explains that moving test mass to infinity leaves rejection unchanged. B's definition of S(r) for every residual vector makes the mass bound's reuse under the original law especially transparent, and its 'weighted sum over K' is clearer than A's compressed 'averaging over K.' Both provide the essential proof; B presents it more cleanly."
+    },
+    {
+      "id": "N2_s1_abstract",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both accurately combine Theorem 2b, Sections 5.2-5.3, and Tables 2-3, separating exchangeable validity from small-discrepancy undercoverage control and empirical calibration gains from fitting gains. B explains that the candidate test point moves to a sampled position while tags remain positional; A names the randomized swap but does not describe that operation. This gives B a more substantive connection between tagged fitting and the high-residual argument. A's additional coverage numbers and jackknife+ baseline are correct, but do not outweigh that explanatory advantage for the stated full-conformal objective. A's omission is not false science."
+    },
+    {
+      "id": "N2_s2_abstract",
+      "preferred": "A",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 4, "language": 5},
+      "reason": "Both preserve Theorem 2b's residual-law penalty, Section 5.3's exchangeability distinction, and Tables 2-3's qualified empirical benefits. A specifies that the test observation is swapped with the sampled position before fitting; B gives the sampling probabilities but moves directly from naming a swap to asserting high-residual membership. A therefore explains the central randomized fitting operation more fully. B's concluding separation of theoretical guarantees from ordering-dependent benefits is particularly clear, and its prose is smoother than A's 'exchanges the test observation with an index.' A's mechanistic advantage determines preference; neither has a material fidelity error."
+    },
+    {
+      "id": "N2_s1_methods",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both explain Section 7.2, equations (25)-(31), including normalization, fixed positional tags, the infinity-cutoff comparison using weight dominance, the deterministic alpha mass bound, independent sampling, and the total-variation penalty without symmetry or stability assumptions. B explicitly states independence from the data and describes total variation as bounding a probability change between residual-vector distributions. A's 'their total-variation distance' after referring to event counterparts has a less precise antecedent, although the intended residual-law comparison is clear. The proof content is comparably complete; B's more precise presentation warrants the preference."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "P1/1/abstract": [
+    "baseline",
+    "candidate"
+  ],
+  "P1/1/results": [
+    "candidate",
+    "baseline"
+  ],
+  "P1/2/abstract": [
+    "candidate",
+    "baseline"
+  ],
+  "P1/2/results": [
+    "candidate",
+    "baseline"
+  ],
+  "P2/1/abstract": [
+    "candidate",
+    "baseline"
+  ],
+  "P2/1/results": [
+    "candidate",
+    "baseline"
+  ],
+  "P2/2/abstract": [
+    "candidate",
+    "baseline"
+  ],
+  "P2/2/results": [
+    "baseline",
+    "candidate"
+  ]
+}

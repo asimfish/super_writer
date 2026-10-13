@@ -1,0 +1,346 @@
+{
+  "reviews": [
+    {
+      "id": "P06_s2_methods",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both accurately describe P06 Algorithm 2 and Theorem 3.8. B's 'refresh therefore serves an operational purpose' connects the fixed-subspace guarantee to changing gradient directions, which P06 Sec. 4.1 explicitly distinguishes from overall performance. A supplies the assumptions accurately but as a list; B more fully explains why refreshing is necessary and why it has costs."
+    },
+    {
+      "id": "P05_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "A's 'gains need not come from a larger adaptation budget' and B's 'larger directional update budget' are both supported by P05 Table 1's half-rank result. Both keep the correlations descriptive (Sec. 4.1) and retain the video deficit (Table 3). Their different evidence orders do not produce a substantive difference in results-paragraph quality."
+    },
+    {
+      "id": "P05_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "A closes on the smaller-budget implication; B states the contribution immediately. Both connect the VL-BART observation to column normalization and independent magnitudes (P05 Sec. 4.1, Eq. 5), then report the same-rank and half-rank evidence accurately (Table 1). The 24.4% saving and 0.2-point decrement match Table 7. Neither ordering materially improves the abstract's function."
+    },
+    {
+      "id": "P06_s3_methods",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 4,
+        "argument": 4,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B specifies the m <= n projection, the r-by-n moment space, and the opposite side for m > n, making the storage mechanism reproducible; A leaves 'chosen from the matrix dimensions' unspecified. P06 Sec. 4.2 and Algorithm 2 support that rule. Both correctly restrict Theorem 3.8 to fixed-projection progress rather than refreshed Adam."
+    },
+    {
+      "id": "P05_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "'Normalization assigns scale' in A and 'removes the column-length change' in B explain the same separation in P05 Eq. 5. Both preserve zero-update initialization and distinguish the exact projected gradient (Eq. 6) from detached scaling (Eq. 11). A foregrounds the purpose; B explains the normalization operation more explicitly. Both are effective methods summaries."
+    },
+    {
+      "id": "P06_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A leads with 24 GB feasibility; B leads with the profiling setup. Both separate the 22.0 GB measurement (P06 Sec. 5.5) from the 64-A100 perplexity trial (Sec. 5.3, Table 3), and use the matched Table 11 throughput rows. Their shared conclusion, lower memory rather than faster training, is equally well supported."
+    },
+    {
+      "id": "P05_s2_results",
+      "winner": "A",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "A locates the remaining video gap in YC2C while showing that the other three tasks match or exceed full fine-tuning (P05 Table 3). This explains the aggregate more concretely than B's general 'full fine-tuning remains higher.' Both accurately report Table 15's nonmonotonic rank results and distinguish the mixed video score from percentage-point accuracy."
+    },
+    {
+      "id": "P05_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "P05 Table 1 supports both half-rank comparisons, including the modest 13B gain of 80.8 versus 80.5. Both connect Sec. 4.1's correlations to an update-pattern claim without making them causal, and retain Table 3's YC2C shortfall and Table 12's VQAv2/VQAT reversals. A highlights gain size; B supplies an explicit economic-adaptation conclusion. These are comparably effective results paragraphs."
+    },
+    {
+      "id": "P06_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "Both accurately place Adam's moments in r-by-n space (P06 Algorithm 2) and explain why refreshed projections avoid a fixed low-rank weight update (Sec. 4.1). Their 'progress within ... subspace' qualification matches Theorem 3.8 and Sec. 4.1's warning about overall performance. A states update scaling; B states the storage rationale more directly. Neither difference warrants a preference."
+    },
+    {
+      "id": "P05_s2_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'omits the norm derivative' and B's 'its derivative is omitted' both correctly distinguish the evaluated implementation from exact differentiation (P05 Sec. 4.3, Eq. 11). Both explain separate column-scale control and initialization from Eq. 5. B spells out the normalization steps; A makes the factor constraints explicit. These are equivalent strengths for a methods paragraph."
+    },
+    {
+      "id": "P05_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both explain the forward construction and unchanged initialization in P05 Eq. 5, then separate orthogonal projection in Eq. 6 from detached scaling in Eq. 11. A's 'preserves the forward decomposition' and B's final distinction between geometry and implementation make the same important point. B's added explanation does not materially strengthen A's already complete methods account."
+    },
+    {
+      "id": "P06_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "A includes conditional rank reduction; B explains how per-layer updates avoid retained gradients. Both give the same central mechanism and separate the distributed quality test from memory profiling (P06 Secs. 4.3, 5.3, 5.5). Their 'small aggregate gains over LoRA' wording matches Table 4's 85.89/85.94 versus 85.61/85.93. Both fulfill the abstract function with different, pertinent emphases."
+    },
+    {
+      "id": "P06_s3_abstract",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "B's 'comparisons test whether this compression preserves full-rank performance' gives the experiments a clear argumentative role; A's 'Experiments examine' mainly lists their scope. P06 Table 3 supports the close 7B perplexities, and Sec. 5.5 supports the separately measured 22.0 GB footprint. Both keep the fixed-projection analysis conditional and identify the measured throughput cost."
+    },
+    {
+      "id": "P06_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'favors gradient-state compression' and B's 'need not incur the larger perplexity penalties' interpret the same matched-rank results in P06 Table 2 and Sec. 5.1. Both explicitly distinguish component-memory estimates from measured footprints and the 64-GPU run from consumer-device feasibility (Secs. 5.3-5.5). The matched Table 11 throughput comparison supports both conclusions equally."
+    },
+    {
+      "id": "P05_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "A concludes with the tested 'accuracy-parameter tradeoff'; B with parameterization 'not only its rank.' Both follow from P05 Table 1's same-rank and half-rank comparisons and Eq. 5's separate magnitude vector. They also retain the learning-rate adjustment (Sec. 5.1), video deficit (Table 3), and detached-norm ablation (Table 7). Their abstract-level synthesis is substantively equivalent."
+    },
+    {
+      "id": "P06_s3_results",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B more precisely contrasts gradient compression with 'restricting learned changes to a single low-rank factorization,' matching P06 Sec. 5.1's LoRA definition W0 + BA. A's 'shrinking the model's parameterization' is less specific, though not a source contradiction. Both accurately separate Table 2's storage estimates from Table 11's measured memory-throughput tradeoff and Sec. 5.5's combined 7B footprint."
+    },
+    {
+      "id": "P06_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "Both summarize the memory mechanism, conditional theory (P06 Sec. 3.2, Theorem 3.8), and close Table 2-3 perplexities without equating profiling with a completed single-device run. B names LoRA's frozen initialization and explicitly excludes refreshed Adam from the guarantee; A specifies the profiling batch. These source-supported differences do not materially change the abstract's adequacy."
+    },
+    {
+      "id": "P05_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "A explicitly states normalization before column scaling; B connects the VL-BART observation to separate magnitude learning more directly. Both match P05 Eq. 5 and Table 1, retain the learning-rate adjustment, and report Table 7's 24.4% memory reduction with a 0.2-point decrement. Their final smaller-budget interpretations and Table 3 video limitation are equally defensible."
+    }
+  ]
+}

@@ -1,0 +1,3890 @@
+[
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 136,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 168,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 188,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 149,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 159,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 88,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 175,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 87,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 185,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 155,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 156,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 96,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 183,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 177,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 86,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 177,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 142,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 161,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 95,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 192,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 149,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 44,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 187,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 151,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 167,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 187,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 149,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 191,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 148,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 74,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 178,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 142,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 168,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 84,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 185,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 134,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 58,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 188,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 147,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 159,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 85,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 170,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 137,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 149,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 90,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 183,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 167,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 98,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 192,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 142,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 160,
+    "budget_pass": true
+  },
+  {
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 86,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 187,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 142,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 162,
+    "budget_pass": true
+  },
+  {
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 112,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 172,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 143,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 47,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 190,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 149,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 147,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 59,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 141,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 76,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 187,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 150,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 156,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 76,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 174,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 152,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 76,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 178,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 155,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 152,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 88,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 185,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 142,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 150,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 66,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 182,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 148,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 53,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 86,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 178,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 80,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 138,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 147,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 82,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 170,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 151,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 83,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 180,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 138,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 42,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 184,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 143,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 46,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 171,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 90,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 152,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 88,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 171,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 148,
+    "budget_pass": true
+  },
+  {
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 147,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 146,
+    "budget_pass": true
+  },
+  {
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 75,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 172,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 137,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 152,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 95,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 181,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 95,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 125,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 162,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 93,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 134,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 167,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 99,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 187,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 149,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 174,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 98,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 188,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 104,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 137,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 87,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 175,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 151,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 84,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 162,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 103,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 178,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 146,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 162,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 107,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 168,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 164,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 95,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 166,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 147,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 96,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 178,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 131,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 161,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 60,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 166,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 165,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 83,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 123,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 161,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 82,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 167,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 134,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 170,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 101,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 167,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 162,
+    "budget_pass": true
+  },
+  {
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 83,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 168,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 160,
+    "budget_pass": true
+  },
+  {
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 95,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 172,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 46,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 185,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 146,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 157,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 172,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 163,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 62,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 170,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 137,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 175,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 155,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 90,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 159,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 52,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 178,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 146,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 163,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 76,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 183,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 151,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 155,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 71,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 177,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 149,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 178,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 86,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 180,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 163,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 98,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 182,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 167,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 102,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 175,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 134,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 61,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 160,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 69,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 183,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 150,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 57,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 188,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 78,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 146,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 160,
+    "budget_pass": true
+  },
+  {
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 68,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 185,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 138,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 169,
+    "budget_pass": true
+  },
+  {
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 86,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 177,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 141,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 174,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 168,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 74,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 175,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 183,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 169,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 71,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 159,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 89,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 174,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 143,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 167,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 95,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 168,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 43,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 159,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 76,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 172,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 143,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 158,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 165,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 165,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 89,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 159,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 155,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 73,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 162,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 163,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 93,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 138,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 164,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 79,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 171,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 161,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 100,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 166,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 161,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 84,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 172,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 142,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 79,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 161,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 138,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 168,
+    "budget_pass": true
+  },
+  {
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 91,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 164,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 171,
+    "budget_pass": true
+  },
+  {
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 97,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 188,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 134,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 172,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 44,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 180,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 170,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 47,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 186,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 150,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 171,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 52,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 178,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 144,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 164,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 64,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 183,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 142,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 168,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 81,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 137,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 92,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 184,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 141,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 152,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 45,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 188,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 138,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 163,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 63,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 182,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 141,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 163,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 76,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 188,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 163,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 90,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 140,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 156,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 74,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 175,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 142,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 143,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 84,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 180,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 138,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 157,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 56,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 173,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 130,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "results",
+    "words": 162,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 70,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 181,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 157,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 77,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 169,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 130,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 152,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 79,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 174,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 155,
+    "budget_pass": true
+  },
+  {
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 74,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 169,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 139,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 152,
+    "budget_pass": true
+  },
+  {
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 87,
+    "budget_pass": true
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "task": "Write a conference-style English abstract communicating the distinctive contribution for robot-learning readers, and one Results paragraph. Explain the design and what an informative comparison establishes using only the supplied body material. Choose evidence by function, not a summary of every component or table. Do not invent missing facts, gaps, significance or guarantees. Put unresolved reporting questions in working notes, not generic abstract disclaimers.",
+  "abstract_words": [
+    150,
+    200
+  ],
+  "results_words": [
+    120,
+    180
+  ],
+  "cases": [
+    {
+      "id": "P1",
+      "body_file": "inputs/P1.txt",
+      "results_scope": "Simulation and physical-robot findings in section 5; select an informative comparison rather than enumerate the tables."
+    },
+    {
+      "id": "P2",
+      "body_file": "inputs/P2.txt",
+      "results_scope": "Experimental findings in section 4; select an informative comparison rather than enumerate the tables."
+    }
+  ],
+  "output_schema": {
+    "cases": [
+      {
+        "id": "P1",
+        "working_notes": "brief planning or author notes, at most 120 words",
+        "abstract": "text",
+        "results": "text"
+      }
+    ]
+  }
+}

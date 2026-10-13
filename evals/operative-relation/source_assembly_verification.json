@@ -1,0 +1,18 @@
+[
+  {
+    "id": "N1",
+    "segments": 3,
+    "raw_bytes": 36617,
+    "body_bytes": 22506,
+    "all_segments_original_bytes": true,
+    "declared_assembly_identical": true
+  },
+  {
+    "id": "N2",
+    "segments": 9,
+    "raw_bytes": 125975,
+    "body_bytes": 60542,
+    "all_segments_original_bytes": true,
+    "declared_assembly_identical": true
+  }
+]

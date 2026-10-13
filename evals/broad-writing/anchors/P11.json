@@ -1,0 +1,48 @@
+{
+  "id": "P11",
+  "anchor_policy": "Original editorial grounding aids, not an expected draft, an all-facts checklist, or a required comparison verdict.",
+  "units": {
+    "abstract": [
+      {
+        "role": "core",
+        "reader_question": "What relationship generalizes coverage calibration to broader performance losses?",
+        "expected_relation": "A finite-sample adjustment to empirical loss yields expected-risk control for bounded monotone losses, with split-conformal coverage as an indicator-loss case.",
+        "source_locator": { "pdf_pages": [3, 4], "sections": ["2.1", "2.2"], "items": ["Theorem 1", "indicator-loss specialization paragraph"] }
+      },
+      {
+        "role": "scope",
+        "reader_question": "What separates the general guarantee from its tightness and shift extensions?",
+        "expected_relation": "Exchangeability and monotonicity support expected-risk control; tightness needs stronger conditions, and extensions to shifted data require information about the shift.",
+        "source_locator": { "pdf_pages": [3, 4, 8, 9], "sections": ["2.1", "2.2", "4.1", "5 limitations sentences"] }
+      }
+    ],
+    "methods": [
+      {
+        "role": "core",
+        "reader_question": "How do the worked examples evaluate the calibrated procedure?",
+        "expected_relation": "Repeated calibration/validation splits connect the threshold rule with distributions of realized risk and output size across one thousand trials per application.",
+        "source_locator": { "pdf_pages": [4, 5, 6, 7], "sections": ["3", "3.1", "3.2", "3.3", "3.4"], "items": ["Figures 1-4"] }
+      },
+      {
+        "role": "scope",
+        "reader_question": "What is being tested across the four applications?",
+        "expected_relation": "Fixed pretrained models and task-specific nested outputs cover polyp segmentation, multilabel images, hierarchical labels, and question answering, with distinct calibration sizes, losses, and target levels.",
+        "source_locator": { "pdf_pages": [5, 6, 7], "sections": ["3.1", "3.2", "3.3", "3.4"] }
+      }
+    ],
+    "results": [
+      {
+        "role": "core",
+        "reader_question": "How do theory and the worked examples connect to the risk target?",
+        "expected_relation": "The upper bound and finite-sample tightness result explain why the reported mean risks lie near their application-specific targets, while output sizes convey the accompanying prediction scope.",
+        "source_locator": { "pdf_pages": [3, 4, 5, 6, 7], "sections": ["2.1", "2.2", "3.1", "3.2", "3.3", "3.4"], "items": ["Theorems 1-2", "Figures 1-4"] }
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which failure or qualification limits that interpretation?",
+        "expected_relation": "Non-monotone losses can defeat the unmodified rule, and restoring monotonicity may sacrifice usefulness; shifted-data results require additional shift information rather than following from the four examples alone.",
+        "source_locator": { "pdf_pages": [4, 8, 9], "sections": ["2.3", "4.1", "5 limitations sentences"], "items": ["Proposition 2", "Corollary 1"] }
+      }
+    ]
+  }
+}

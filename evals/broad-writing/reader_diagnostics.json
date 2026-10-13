@@ -1,0 +1,1730 @@
+[
+  {
+    "id": "D1_text_005",
+    "words": 72,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_033",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_035",
+    "words": 70,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_015",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_023",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 3,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_003",
+    "words": 72,
+    "budget_pass": true,
+    "witness_words": 3,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_021",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_019",
+    "words": 89,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_011",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_007",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_025",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_027",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 3,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_013",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_001",
+    "words": 85,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_017",
+    "words": 94,
+    "budget_pass": false,
+    "witness_words": 3,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_009",
+    "words": 91,
+    "budget_pass": false,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_029",
+    "words": 96,
+    "budget_pass": false,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_031",
+    "words": 84,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_008",
+    "words": 73,
+    "budget_pass": true,
+    "witness_words": 12,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_032",
+    "words": 78,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_022",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_010",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_002",
+    "words": 84,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_036",
+    "words": 78,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_026",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_034",
+    "words": 84,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_012",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_028",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_030",
+    "words": 91,
+    "budget_pass": false,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_024",
+    "words": 88,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_016",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_018",
+    "words": 91,
+    "budget_pass": false,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_006",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_020",
+    "words": 93,
+    "budget_pass": false,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_014",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D1_text_004",
+    "words": 85,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_065",
+    "words": 88,
+    "budget_pass": true,
+    "witness_words": 12,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_051",
+    "words": 93,
+    "budget_pass": false,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_049",
+    "words": 91,
+    "budget_pass": false,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_067",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_041",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_045",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_053",
+    "words": 91,
+    "budget_pass": false,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_039",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_043",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_047",
+    "words": 88,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_059",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_055",
+    "words": 92,
+    "budget_pass": false,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_037",
+    "words": 70,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_061",
+    "words": 91,
+    "budget_pass": false,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_069",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_063",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_071",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_057",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_044",
+    "words": 77,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_040",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_046",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_052",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_062",
+    "words": 89,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_056",
+    "words": 98,
+    "budget_pass": false,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_064",
+    "words": 89,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_068",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_038",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_054",
+    "words": 85,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_066",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_058",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_072",
+    "words": 85,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_048",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_060",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_050",
+    "words": 100,
+    "budget_pass": false,
+    "witness_words": 3,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_070",
+    "words": 92,
+    "budget_pass": false,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D2_text_042",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_091",
+    "words": 65,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_095",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_073",
+    "words": 76,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_079",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_105",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_101",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_089",
+    "words": 89,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_081",
+    "words": 77,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_099",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_077",
+    "words": 92,
+    "budget_pass": false,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_085",
+    "words": 89,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_075",
+    "words": 97,
+    "budget_pass": false,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_097",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 3,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_087",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_083",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 3,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_103",
+    "words": 102,
+    "budget_pass": false,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_093",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_107",
+    "words": 98,
+    "budget_pass": false,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_098",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_094",
+    "words": 70,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_092",
+    "words": 68,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_104",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_080",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_096",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 3,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_078",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_100",
+    "words": 88,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_086",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_102",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_074",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_076",
+    "words": 84,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_106",
+    "words": 85,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_088",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_082",
+    "words": 77,
+    "budget_pass": true,
+    "witness_words": 13,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_090",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_108",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D3_text_084",
+    "words": 92,
+    "budget_pass": false,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_113",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_137",
+    "words": 69,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_131",
+    "words": 70,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_133",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_141",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_143",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_117",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_135",
+    "words": 76,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_109",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_125",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_121",
+    "words": 72,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_123",
+    "words": 77,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_139",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 13,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_119",
+    "words": 71,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_115",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_127",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_111",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_129",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_138",
+    "words": 72,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_130",
+    "words": 73,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_144",
+    "words": 65,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_114",
+    "words": 87,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_136",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_122",
+    "words": 76,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_142",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_116",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_112",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_110",
+    "words": 77,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_128",
+    "words": 73,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_132",
+    "words": 78,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_126",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_118",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_124",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_120",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_134",
+    "words": 84,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D4_text_140",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_157",
+    "words": 71,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_167",
+    "words": 73,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_179",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_153",
+    "words": 71,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_161",
+    "words": 72,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_155",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_169",
+    "words": 76,
+    "budget_pass": true,
+    "witness_words": 12,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_149",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_173",
+    "words": 76,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_177",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_175",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_147",
+    "words": 89,
+    "budget_pass": true,
+    "witness_words": 14,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_151",
+    "words": 78,
+    "budget_pass": true,
+    "witness_words": 12,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_171",
+    "words": 76,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_159",
+    "words": 91,
+    "budget_pass": false,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_163",
+    "words": 77,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_165",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_145",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_154",
+    "words": 60,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_172",
+    "words": 72,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_148",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_150",
+    "words": 77,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_168",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": false
+  },
+  {
+    "id": "D5_text_162",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_146",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_180",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_166",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_164",
+    "words": 72,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_170",
+    "words": 66,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_160",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_158",
+    "words": 84,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_174",
+    "words": 78,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_178",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_176",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_152",
+    "words": 74,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D5_text_156",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_195",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_199",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_215",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_189",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_213",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_187",
+    "words": 89,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_197",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_209",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_193",
+    "words": 88,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_207",
+    "words": 92,
+    "budget_pass": false,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_185",
+    "words": 90,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_181",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 4,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_183",
+    "words": 86,
+    "budget_pass": true,
+    "witness_words": 12,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_191",
+    "words": 85,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_203",
+    "words": 100,
+    "budget_pass": false,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_201",
+    "words": 88,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_211",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 12,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_205",
+    "words": 88,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_190",
+    "words": 76,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_212",
+    "words": 76,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_188",
+    "words": 75,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_208",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_210",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_192",
+    "words": 82,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_182",
+    "words": 80,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_216",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_200",
+    "words": 85,
+    "budget_pass": true,
+    "witness_words": 8,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_198",
+    "words": 79,
+    "budget_pass": true,
+    "witness_words": 10,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_206",
+    "words": 88,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_196",
+    "words": 78,
+    "budget_pass": true,
+    "witness_words": 5,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_214",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_186",
+    "words": 81,
+    "budget_pass": true,
+    "witness_words": 9,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_194",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 11,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_184",
+    "words": 68,
+    "budget_pass": true,
+    "witness_words": 7,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_202",
+    "words": 78,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  },
+  {
+    "id": "D6_text_204",
+    "words": 83,
+    "budget_pass": true,
+    "witness_words": 6,
+    "witness_budget_pass": true,
+    "witness_literal_substring": true
+  }
+]

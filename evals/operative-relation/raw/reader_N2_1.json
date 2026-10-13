@@ -1,0 +1,52 @@
+{
+  "readings": [
+    {
+      "id": "N2_T01",
+      "core": "On ordered electricity data, calibration weighting raises coverage from 85.2% to 89.0% while widening intervals; adding weighted fitting retains 89.3% coverage and lowers width to 0.527, below both alternatives. This contrast supports separate calibration and fitting benefits, not universally narrower weighted intervals.",
+      "scope": "These are prediction-time averages at a 90% target, which neither weighted method reaches. Permuted data lose the width advantage; per-time and universal drift coverage are not established.",
+      "core_witness": "Adding weighted least-squares fitting (NexCP+WLS) retains higher coverage, 89.3%, while reducing width to 0.527, below both alternatives",
+      "scope_witness": "These averages across prediction times neither establish coverage at every time nor universal 90% coverage under drift",
+      "unclear": "none"
+    },
+    {
+      "id": "N2_T03",
+      "core": "Holding least-squares fitting fixed isolates residual weighting's coverage gain and width cost. Adding weighted fitting retains higher coverage while lowering width below the unweighted baseline, supporting the finding that fitting offsets calibration's width cost.",
+      "scope": "The comparison uses ordered electricity-transfer data and a permuted control where the width advantage disappears. Both weighted methods miss the 90% target; averages do not guarantee arbitrary-drift coverage, whose theoretical bound approaches nominal only with small residual-distribution discrepancy.",
+      "core_witness": "Thus calibration weighting improves coverage here at a width cost, while weighted fitting offsets that cost",
+      "scope_witness": "These time-averaged comparisons do not guarantee 90% coverage under arbitrary drift",
+      "unclear": "none"
+    },
+    {
+      "id": "N2_T05",
+      "core": "An independent weighted swap relocates the true-label test residual to index K. Test-weight dominance makes miscoverage imply membership in a high-residual set of mass at most alpha. Independence permits averaging over K; replacing swapped residual laws by the original adds at most their weighted total-variation penalty, yielding the stated miscoverage bound.",
+      "scope": "The event is miscoverage at the true label, with calibration weights in [0,1] and fixed tags chosen before data, normalized with unit test weight, and K independent of data.",
+      "core_witness": "The original-law sum is at most alpha, yielding miscoverage at most alpha plus the weighted residual-distribution penalty",
+      "scope_witness": "fixes calibration weights w_i in [0,1] and algorithm tags before observing data",
+      "unclear": "none"
+    },
+    {
+      "id": "N2_T07",
+      "core": "The extension separates calibration weights from tags for nonsymmetric fitting. A data-independent swap is said to place miscoverage in a high-residual set of weighted mass at most alpha; swapped-versus-original residual-law comparison then gives coverage at least 1-alpha minus weighted total variation.",
+      "scope": "Exchangeability eliminates the penalty; otherwise a small discrepancy bounds undercoverage, not exact validity. Overcoverage needs distinct residuals and small normalized test weight. Ordered-electricity width gains disappear under permutation; electricity and election coverage remain below target.",
+      "core_witness": "yields finite-sample coverage at least 1 - alpha minus their weighted total-variation discrepancy",
+      "scope_witness": "otherwise, a small discrepancy bounds undercoverage, not exact nominal validity",
+      "unclear": "Why the swap implies high-residual membership is not recoverable."
+    },
+    {
+      "id": "N2_T09",
+      "core": "Prespecified weights and fixed tags enable weighted, nonsymmetric fitting. A data-independent weighted swap is said to make miscoverage imply high-residual membership of mass at most alpha; comparing swapped and original residual laws yields coverage at least 1-alpha minus their weighted total-variation penalty.",
+      "scope": "Exchangeability removes the penalty; otherwise its size controls undercoverage. Overcoverage additionally requires distinct residuals and small normalized test weight. Electricity width gains depend on ordering; permutation removes them, and election coverage stays below 90%.",
+      "core_witness": "Comparing swapped and original residual distributions then gives finite-sample coverage at least 1-alpha minus their weighted total-variation distances",
+      "scope_witness": "with distinct residuals and small normalized test weight additionally limiting overcoverage",
+      "unclear": "Why the swap implies high-residual membership is not recoverable."
+    },
+    {
+      "id": "N2_T11",
+      "core": "Swapping places the true-response test residual at K; the infinity-based cutoff and test-weight dominance make miscoverage imply exceeding the swapped vector's weighted quantile. High-residual indices weigh at most alpha. Independence permits averaging over K, and total variation limits the swapped-to-original probability changes, yielding miscoverage at most alpha plus weighted discrepancy.",
+      "scope": "This bounds true-response miscoverage with prespecified calibration weights in [0,1], fixed-position tags, unit test weight normalized by 1+sum_i w_i, and data-independent K. Fitting symmetry and stability are not required.",
+      "core_witness": "yielding miscoverage at most alpha plus the weighted discrepancy, without fitting symmetry or stability",
+      "scope_witness": "At the true response, the test residual becomes entry K of the swapped-sequence residual vector",
+      "unclear": "none"
+    }
+  ]
+}

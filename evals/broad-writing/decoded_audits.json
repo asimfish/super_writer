@@ -1,0 +1,3675 @@
+[
+  {
+    "id": "D1_text_001",
+    "pair": "P01_s1_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "concern",
+    "core_recovery": 2,
+    "scope_recovery": 1,
+    "failure_types": [
+      "writer_error",
+      "text_ambiguous"
+    ],
+    "reason": "P01 III-C2/Fig. 5 (p.4) illustrates avoidance when the virtual pose has passed the next frame but not the farther target; larger k guards against overshoot, not every later-frame choice. Prose 'Targeting a later frame avoids' and reading 'Later targets avoid' omit this consequential condition, leaving mitigation versus guaranteed avoidance ambiguous. Synthetic-view/corrective-label coupling is recovered correctly. Tables II/V support the numerical claims, and matched cup inputs, finite trials, and the irreversible-spill boundary are otherwise adequately reconstructed."
+  },
+  {
+    "id": "D1_text_002",
+    "pair": "P01_s1_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C supports geometry-linked synthetic observations and later-pose corrective labels; IV-A4/Table II supports 24-demo task/play pushing results. IV-E/Table V supports the retrained diffusion-policy comparison with five held-out cups and identical rectified crops. Prose 'Recovery labels assume recoverable deviations' is explicitly recovered by the reading, including irreversible spills. Finite trial counts, tested tasks, and matched cup preprocessing adequately delimit the selected extension from low-data regression policies to a larger-data diffusion policy."
+  },
+  {
+    "id": "D1_text_003",
+    "pair": "P01_s3_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 IV-C and Table IV's footnote support 57-gram complete-transfer success, 49 task/16 play trajectories, and separate 80%-versus-0% and 70%-versus-30% comparisons. The selected limitations paragraph supports the spill boundary. Prose 'prevent reading ... as a controlled estimate' is recovered through the reading's separate-test scope and explicit nonrecoverability of a causal play benefit. Correction during rotation remains a source-supported interpretation, not an isolated causal finding; numerical and recovery scopes are adequate."
+  },
+  {
+    "id": "D1_text_004",
+    "pair": "P01_s3_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 IV-C and Table IV's footnote support 49 demonstrations/16 play trajectories, the two separately randomized pouring comparisons, positional drift, and possible lighting differences. The selected limitations paragraph supports spilled-bean irreversibility. The reading accurately recovers prose 'It does not isolate the value of play,' including why 80% versus 70% is not that estimate. Corrective execution remains an interpretation consistent with observed failures, while the separate-test and recoverability boundaries are fully recoverable from the prose."
+  },
+  {
+    "id": "D1_text_005",
+    "pair": "P13_s3_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 VI-A/B and Fig. 9 support 1% to 44% without temporal ensembling, 35.3% to 2% on human data without CVAE, and separately tuned ensembling gains of 3.3/four points with a VINN decrease. Prose 'do not support applying prediction averaging indiscriminately' matches the reading's selective-benefit reconstruction. Both retain simulated tasks, dataset contrasts, disabled ensembling for chunk tests, and separate tuning; this legitimate ablation relationship need not summarize hardware baselines."
+  },
+  {
+    "id": "D1_text_006",
+    "pair": "P13_s3_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 VI-A/B and Fig. 9 support all stated chunk-length, CVAE, and ensembling contrasts, including the 3.3/four-percentage-point gains. The reading recovers the prose's 'consistent with a tradeoff' interpretation rather than an ever-longer-chunk prescription. Its scope accurately identifies two simulated tasks, scripted/human datasets, disabled ensembling in chunk tests, and separately tuned ensembling with VINN harm. Those explicit conditions adequately support this ablation-centered relationship without requiring hardware-baseline coverage."
+  },
+  {
+    "id": "D1_text_007",
+    "pair": "P13_s3_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 IV-A/C supports absolute leader-joint targets and every-step aggregation of predictions for the same execution time; IV-B/Algorithm 1 supports training latent inference from demonstrated chunks and proprioception. Algorithm 2 supports discarded encoder/z=0 deployment. The reading reconstructs prose 'chunk prediction does not require withholding observations' without confusing chunking with compulsory open-loop execution. Four-view/follower-joint inputs and the distinct training/deployment latent roles provide adequate scope for this methods relationship."
+  },
+  {
+    "id": "D1_text_008",
+    "pair": "P13_s3_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 IV-A/C and Algorithm 2 support absolute joint-target chunks and weighted overlapping predictions for one target timestep. IV's leader/follower discussion and IV-B support controller offsets and variational training with discarded encoder/z=0 inference. The reading accurately recovers prose 'Combining predictions of the same target, rather than actions at neighboring times' and the four-camera/follower-joint input boundary. This suffices for the selected control mechanism; no neighboring-time smoothing or deployment access to demonstrations is inferred."
+  },
+  {
+    "id": "D1_text_009",
+    "pair": "P13_s1_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 III-IV supports affordable joint-space demonstrations and chunked, same-time ensembled control; V-B/C and Tables II-III support 88%/96% hardware results and 20% velcro threading. VI-C supports the separate six-person study's 33-to-20-second zip-tie result. Prose 'In a separate randomized study' and the reading distinguish human teleoperation from autonomous policy performance. The reader retains demonstration counts, hardware trials/seed, and limited threading success, adequately bounding the combined platform/policy claim."
+  },
+  {
+    "id": "D1_text_010",
+    "pair": "P13_s1_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 III-IV supports direct joint mapping, chunking, same-execution-time ensembling, and variational training. V-B/C and Tables II-III support the stated hardware final-stage results, demonstration counts, and 20% threading; VI-C supports the separate human study. The reading reconstructs the hardware-to-policy relationship and retains one seed/25 trials, task-dependent failure, and six-participant teleoperation scope. Prose 'difficult visual-localization problems unresolved' appropriately limits capability without equating teleoperation improvements with autonomous threading success."
+  },
+  {
+    "id": "D1_text_011",
+    "pair": "P01_s2_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 IV-A3/4 and Tables I-II support modest angular-error reduction alongside larger completion changes and pushing generator comparisons. IV-C/Table IV supports the two pouring contrasts and lighting caveat. Prose 'does not isolate that mechanism' and the reading's unclear field correctly withhold a causal error-accumulation finding and pouring play-data attribution. Trial counts, matched augmentation, separate comparisons, and the selected recoverability/spill limitation are text-supported and sufficient for this results relationship."
+  },
+  {
+    "id": "D1_text_012",
+    "pair": "P01_s2_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 Tables I-II support the jitter/flip angular-error contrast, ten-trial pushing rates, and task-only versus task/play generators. IV-C/Table IV explicitly separates the pouring A/B comparisons and possible condition differences. Prose 'do not establish a pouring advantage from play data' is correctly reconstructed by the reading, alongside the selected limitations paragraph's recoverable-departure boundary. Offline error and online completion remain different measures, and neither reader nor writer turns the pouring comparison into a controlled play-data effect."
+  },
+  {
+    "id": "D1_text_013",
+    "pair": "P13_s3_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 III-IV, V-B/C, Tables II-III, VI-C, and Appendix F support the platform/policy mechanism, demonstration counts, reported final-stage rates, study, and initial candy failure. Prose explicitly calls 88%/96% 'reported final-stage success rates'; the reading reconstructs the same bag-opening/battery-insertion events, not multiplied stage probabilities. Its scope retains 25-trial hardware tests and 20% threading/0-of-10 initial unwrapping. These observed outcomes adequately bound capability without implying repeatability across training seeds."
+  },
+  {
+    "id": "D1_text_014",
+    "pair": "P13_s3_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 III-IV, V-B/C/Tables II-III, VI-C, and Appendix F support the platform/policy mechanism, budget, demonstrations, reported outcomes, study, and limitations. 'Four comparison methods never progress beyond the first stage' is supported for the immediately named slider-bag and battery tasks, not asserted for every task. The reading retains that comparison, 25-trial hardware scope, 20% threading, and initial 0/10 candy failures. These bounded observations adequately support several tested behaviors without implying uniform success or cross-seed stability."
+  },
+  {
+    "id": "D1_text_015",
+    "pair": "P13_s2_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 IV and Algorithms 1-2 support leader-target labels, follower-joint/four-camera observations, same-timestep exponential aggregation, and training-only latent inference followed by z=0 deployment. Prose 'without mixing actions intended for adjacent times' is recovered precisely in the reading. The reader also retains the controller-offset rationale, Gaussian regularization, discarded encoder, and deterministic deployment. These are the consequential boundaries of the selected control/training mechanism, not a hardware-success guarantee."
+  },
+  {
+    "id": "D1_text_016",
+    "pair": "P13_s2_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 IV-A/B/C and Algorithms 1-2 support leader/follower force-producing offsets, four-camera observations, chunks that capture within-chunk pauses, and same-time exponential aggregation. Prose 'Predictions for the same execution time' is reconstructed directly by the reading. Its scope correctly states that actions/joints inform the training latent, while deployment discards that encoder and fixes z to zero. These training/control distinctions are adequate and do not rely on source-only future-action access or adjacent-time smoothing."
+  },
+  {
+    "id": "D1_text_017",
+    "pair": "P01_s3_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C, IV-A4/Table II, and IV-E/Table V support corrective view/label coupling, the stated pushing comparisons, and held-out cup results. Prose 'around recoverable deviations' and the spill sentence supply the limitation included in the permitted inputs. The reading recovers later-pose supervision, play-only adaptation for eight task demonstrations, five unseen cups/new laboratory, matched rectified crops, and irreversible-failure exclusions. This is adequate for a tested-shift claim; omitted large-dataset size is not credited or required."
+  },
+  {
+    "id": "D1_text_018",
+    "pair": "P01_s3_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C supports pose-linked synthesis and future-pose corrective labels. Table II/IV-A4 supports 10/10 versus 3/10 and play-only generation for eight-demo 80% versus 20%; IV-E/Table V supports 16/25 versus 4/25 with matched rectified crops. Prose 'provided deviations remain recoverable' and the reading retain the selected limitations paragraph's irreversible-spill boundary. Tested tasks, held-out cups/new laboratory, and small trial counts are recoverable from the prose, adequately limiting the robustness/transfer claim."
+  },
+  {
+    "id": "D1_text_019",
+    "pair": "P01_s2_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C supports pose-conditioned views and geometric future-pose labels. IV-A4/Table II supports pushing rates and the replicated SPARTN comparison; IV-E/Table V supports 1,447-demo cup augmentation with shared cropped/rectified inputs. Prose 'excludes reversing events such as spilled contents' matches the selected limitations paragraph and the reading's recovery boundary. The reader reconstructs correction beyond appearance augmentation and retains finite pushing tests and held-out cup/environment scope, rather than generalizing to arbitrary manipulation settings."
+  },
+  {
+    "id": "D1_text_020",
+    "pair": "P01_s2_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C supports synthetic recovery pairs and later-pose labels; IV-A4/Table II supports the ten-trial pushing, replicated NeRF, and low-demo comparisons. IV-E/Table V supports 1,447-demo diffusion-policy augmentation and matched rectified crops. The reading reconstructs prose 'provided deviations remain recoverable,' consistent with the selected limitations paragraph. Both retain task/play generator choices, held-out objects/environment, and finite measured outcomes, adequately bounding corrective augmentation beyond scarce-data training without promising recovery after spills."
+  },
+  {
+    "id": "D1_text_021",
+    "pair": "P13_s1_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 VI-A/B supports distinct chunking/CVAE effects and selective, separately tuned ensembling. V-B/C and Table III support 100 demonstrations, 92% lifting versus 20% threading, and the observed localization-related failures. Prose 'Physical threading exposes a different bottleneck' and the reading keep hardware outcomes separate from the two simulated-task ablations. The reconstruction includes disabled ensembling, dataset contrast, one hardware seed/25 trials, and perceptual difficulty without claiming the ablations establish hardware causality."
+  },
+  {
+    "id": "D1_text_022",
+    "pair": "P13_s1_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 VI-A/B supports the simulated chunking, CVAE, and separately tuned ensembling contrasts. VI-C/Appendix E supports six participants, 33-to-20-second human zip-tie threading, and 50 Hz follower commands despite 5 Hz leader sampling; V-B/C supports 20% autonomous velcro threading with 100 demonstrations. Prose 'hardware study separately tests leader-input frequency' and the reading separate teleoperation from autonomous results. These explicit protocol distinctions adequately bound the relationship without treating faster human input as proof of autonomous success."
+  },
+  {
+    "id": "D1_text_023",
+    "pair": "P13_s2_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 VI-A/B and Fig. 9 support chunking/CVAE contrasts and VINN's 37%-to-17% ensembling decrease; V-B/C/Table III supports physical threading. Appendix F explicitly distinguishes initial 0/10 candy attempts from 3/5 candies given ten attempts each. Prose 'changed retry budget' is recovered in the reading's scope and its refusal to infer comparable single-attempt improvement. Simulated ablations, separate tuning, physical stages, and retry units remain distinct, adequately supporting this component-benefit/remaining-limits relationship."
+  },
+  {
+    "id": "D1_text_024",
+    "pair": "P13_s2_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 VI-A/B/Fig. 9 supports 1%-to-44% chunking, 35.3%-to-2% human-data CVAE removal, and selectively beneficial ensembling; Table III/V-B/C supports 92% lifting and 20% insertion with 100 demonstrations. Appendix F supports both candy protocols. The reading reconstructs the prose's explicit retry-budget warning, simulated chunk tests without ensembling, and separately tuned comparisons. Those scope distinctions prevent hardware causality, universal averaging benefits, or single-attempt success from being inferred from the reported contrasts."
+  },
+  {
+    "id": "D1_text_025",
+    "pair": "P01_s3_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C supports fixed latent-image codebooks, locally displaced virtual views, and action labels toward later demonstration poses; IV-A3b supports the third-frame choice. Prose 'not merely back to the source image' is recovered by the reading's progress-directed relabeling account. The reading preserves pretrained adaptation and small random displacement scope. This paragraph selects how synthetic examples receive labels without additional expert actions, not a universal robustness claim, so unmentioned task protocols or irreversible failures need not be supplied from memory."
+  },
+  {
+    "id": "D1_text_026",
+    "pair": "P01_s3_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C supports fixed VQ-GAN codebooks, pose-conditioned views, and labels from virtual poses to later expert poses; IV-A3b supports the pushing lookahead plateau. Prose 'coupling correction with continued task progress' is reconstructed by the reading, including why simply reversing displacement is insufficient. Its scope accurately retains pushing-specific ablation evidence, mixed training pairs, and recoverable local deviations. No new expert corrections or universal recovery guarantee is inferred."
+  },
+  {
+    "id": "D1_text_027",
+    "pair": "P13_s2_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 III-IV supports the budget, 50 Hz joint-space platform, chunks, and variational training. V-B/C/Tables II-III support demonstration counts, bag/battery final stages, and 20% threading; VI and Appendix F support the separate study and initial 0/10 candy attempts. The reading recovers prose 'Performance remains uneven' alongside one seed/25 evaluations and the platform-to-policy mechanism. Initial failures are not presented as the later retry protocol, and human teleoperation remains distinct from learned autonomous performance."
+  },
+  {
+    "id": "D1_text_028",
+    "pair": "P13_s2_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 III-IV supports the budget, 50 Hz joint mapping, chunking, overlapping predictions, and variational training. V-B/C and Table II support demonstration counts and 88%/96% versus zero final-stage baseline results; VI-C and Appendix F support the human study and initial candy failures. The reading recovers the hardware-to-policy relationship and the explicitly stated one-seed/25-evaluation protocol, 20% threading, and initial 0/10 unwrapping. These finite outcomes adequately bound the abstract's capability claim."
+  },
+  {
+    "id": "D1_text_029",
+    "pair": "P01_s1_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 Tables I-II/IV-A3/4 support the offline and online pushing contrasts, including the separate play-data budget. IV-E/Table V supports 1,447-demo cup results with matched starts and rectified crops. Prose 'does not isolate that mechanism' is respected by the reading's unclear field rather than converted into causal proof. The reader also recovers the five-cup/new-lab boundary and irreversible-spill exclusion from the permitted limitations paragraph, adequately limiting the selected performance and transfer claims."
+  },
+  {
+    "id": "D1_text_030",
+    "pair": "P01_s1_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 Tables I-II and IV-A3/4 support 0.355-to-0.328-radian prediction error and the distinct 3/10-to-10/10 execution comparison. IV-A4b confirms eight task demonstrations exclude the play-trained generator's other input; IV-E/Table V confirms 1,447 demonstrations and 4/25-to-16/25 cup results. The reading recovers those distinctions and prose 'so that count excludes other training input.' Matched starts/preprocessing, five unseen cups/new lab, and nine remaining failures adequately bound the selected performance/transfer relationship."
+  },
+  {
+    "id": "D1_text_031",
+    "pair": "P01_s2_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-C2's equation confirms the inverse-displacement/future-pose label construction; III-B and IV-A3b support adaptation and the pushing lookahead tradeoff. Prose 'supervision for recoverable deviations' keeps the claim about labeled training examples, not unconditional execution recovery. The reading correctly reconstructs unchanged-label avoidance, future-pose targeting, local perturbations, the third-frame plateau, and terminal-frame exclusion. These method-specific boundaries are sufficient without requiring every task's scale or action-dimensionality setup."
+  },
+  {
+    "id": "D1_text_032",
+    "pair": "P01_s2_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C and IV-A3b support task/play adaptation, geometric labels toward future expert poses, and the pushing-specific third-frame plateau. Prose 'rather than relying on visual diversity alone' selects the synthesis-to-corrective-supervision relationship, which the reading recovers. Both restrict the procedure to local virtual wrist-camera deviations and a stated pushing ablation. The paragraph describes added training supervision, not guaranteed recovery from every physical failure; an unstated spill limitation is not credited as reader recovery."
+  },
+  {
+    "id": "D1_text_033",
+    "pair": "P13_s1_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 IV-A/B/C and Algorithms 1-2 support leader targets, follower-joint/four-view observations, chunked temporal modeling, exponential same-execution-time aggregation, and encoder removal/z=0 deployment. The reading reconstructs prose 'only when they target the same execution time,' preserving the distinction from adjacent-time smoothing. Training variation and Gaussian regularization are kept separate from deterministic inference. These text-supported control and latent-use boundaries are adequate; no success guarantee or test-time latent inference from future demonstrations is asserted."
+  },
+  {
+    "id": "D1_text_034",
+    "pair": "P13_s1_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P13 IV-A/B/C and Algorithms 1-2 support leader-target supervision, temporally dependent chunks, same-time exponential aggregation, and variational training versus zero-latent inference. Prose 'multiple estimates of one command rather than smoothing neighboring actions' is recovered accurately by the reading. It also retains four-view/follower-joint inputs and the discarded encoder. The intended-horizon and within-chunk pause wording appropriately limits temporal modeling; no universal non-Markovian solution or deployment use of demonstrated future actions is inferred."
+  },
+  {
+    "id": "D1_text_035",
+    "pair": "P01_s1_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-C2's equation on PDF p.4 confirms inverse-displacement composition with the source-to-future transform; Fig. 5 and IV-A3b support overshoot mitigation and the third-frame/terminal-frame tradeoff. Prose 'provided those states remain recoverable' supplies the necessary recovery boundary. The reading correctly reconstructs pose-consistent relabeling, later targets, mixed training pairs, and that assumption. It does not mistake image perturbation for unchanged-label augmentation or claim irreversible failures can be repaired."
+  },
+  {
+    "id": "D1_text_036",
+    "pair": "P01_s1_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P01 III-B/C, Fig. 5, and IV-A3b support pose-conditioned synthesis, virtual-to-future-pose labels, overshoot mitigation, and the k=3 plateau/terminal-frame tradeoff. Prose 'a command intended to resume progress' appropriately describes supervision rather than guaranteed recovery. The reading reconstructs that coupling and explicitly recovers original/generated training pairs and the recoverability assumption, supported by the selected limitations paragraph. Those boundaries suffice for this labeling-focused methods paragraph."
+  },
+  {
+    "id": "D2_text_037",
+    "pair": "P03_s2_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Algorithm 1 supports exp(old maximum-new maximum) rescaling of both accumulators and final normalization. Reading accurately recovers prose 'same exponential scale' as the reason deferred division preserves exact full-row softmax while reducing non-matrix work. Section 3.1.2/Algorithm 2 supports saved-logsumexp backward reconstruction; the correctness paragraph supports quadratic arithmetic and linear additional storage. Reading recovers nonmaterialization and both complexity boundaries. The selected normalization/storage mechanism is legitimate without the anchor's separate scheduling relationship."
+  },
+  {
+    "id": "D2_text_038",
+    "pair": "P03_s2_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Algorithm 1 (PDF p5) supports running maxima, sums/numerators rescaled by exp(old-new), and final-only division. Reading recovers the prose's selected relation between reduced repeated normalization and unchanged full-row softmax. Section 3.1.2/Algorithm 2 supports logsumexp-based backward probability reconstruction; the Section 3.1 correctness paragraph supports quadratic arithmetic and linear auxiliary storage. Both boundaries are explicitly recovered, adequately constraining this algorithm-focused paragraph without requiring scheduling or benchmark details."
+  },
+  {
+    "id": "D2_text_039",
+    "pair": "P03_s3_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Section 3.3 supports split-key partial-output exchanges versus warp-owned query rows; Section 2.2 supports row-wise softmax independence. Reading recovers the prose's causal explanation for eliminating forward inter-warp reductions, plus Section 3.2's small-batch/head occupancy relationship. Algorithm 1 and Section 3.1.2/Algorithm 2 support deferred normalization and logsumexp-based backward recomputation. The selected forward partitioning/exactness scope is adequately explicit; absent decoding and benchmark details are not required for this paragraph's function."
+  },
+  {
+    "id": "D2_text_040",
+    "pair": "P03_s3_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Sections 2.2 and 3.3 support independent row denominators and warp-owned outputs avoiding split-key reductions. Reading recovers this causal relation, specifically for the forward output calculation, not all synchronization. Section 3.2 supports small-batch/head occupancy; Algorithm 1 supports deferred division and rescaling. Section 3.1.2/Algorithm 2 and Section 3.3 support saved-logsumexp recomputation and remaining backward synchronization. Reading explicitly retains the latter boundary, making the selected forward/backward scope adequate."
+  },
+  {
+    "id": "D2_text_041",
+    "pair": "P03_s1_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Algorithm 1/Sections 3.1-3.3 support final normalization and independent query assignments; the correctness paragraph supports quadratic computation and linear auxiliary storage. Reading accurately reconstructs prose 'improves GPU use beyond reduced memory traffic.' Section 4/Section 4.1 supports the 1.7-3.0-fold range and reported 230 peak; Table 1 supports smaller, context-dependent training gains. Reading recovers A100 workload controls and eight-GPU model/context boundaries, adequately avoiding a uniform application-speed claim."
+  },
+  {
+    "id": "D2_text_042",
+    "pair": "P03_s1_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Sections 3.1-3.3 support postponed normalization, independent query-block/warp assignments, exactness, and quadratic arithmetic with linear auxiliary storage. Reading reconstructs these explicit mechanisms. Section 4/Section 4.1 supports the reported 230 peak and 1.7-3.0-fold kernel range; Table 1 supports smaller training gains and context dependence. Reading recovers the A100 shape controls and eight-GPU model/context boundaries, adequately preserving prose 'rather than the full kernel-level acceleration' as a bounded performance comparison."
+  },
+  {
+    "id": "D2_text_043",
+    "pair": "P03_s1_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Algorithm 1 (PDF p5) supports maximum-reference rescaling of sums and final division; Sections 3.2-3.3 support query-block occupancy and warp-owned forward outputs. Reading reconstructs prose 'without repeated normalization' as reduced non-matrix arithmetic without approximating softmax. Section 3.1.2/Algorithm 2 supports saved-logsumexp backward reconstruction. Reading also retains the prose's small-batch/head qualification and register/shared-memory limits from Section 3.3. These boundaries adequately constrain the selected algorithm/partitioning explanation."
+  },
+  {
+    "id": "D2_text_044",
+    "pair": "P03_s1_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Algorithm 1 supports rescaling both accumulated exponential sums and weighted outputs when the maximum rises, with final-only division. Reading reconstructs prose 'preserves the attention result while reducing scalar work' rather than inventing reduced quadratic complexity. Section 3.1.2/Algorithm 2 supports saved-logsumexp recomputation; Sections 3.2-3.3 support independent queries, forward warp partitioning, and tile-size resource limits. Reading recovers these qualifications, adequately bounding the selected mechanism without requiring unrelated experimental controls."
+  },
+  {
+    "id": "D2_text_045",
+    "pair": "P03_s1_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Table 1/Section 4.3 (PDF p9) confirms 189-to-196 versus 170-to-220 and 175-to-225, supporting larger gains at 8k. Reading recovers prose 'does not transfer uniformly' rather than equating kernel and training speedups. It also recovers eight-A100 per-GPU units and the unhalved causal model-FLOP convention. Section 4.1/Figure 4 supports the separate fixed-16k-token OOM comparison; Section 3.1 supports avoiding quadratic intermediates. Selected performance and memory scopes are adequately separated."
+  },
+  {
+    "id": "D2_text_046",
+    "pair": "P03_s1_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Table 1 (PDF p9) confirms both models' 2k/8k throughput changes. Reading faithfully recovers prose 'do not transfer proportionally' as larger long-context training gains, not identical kernel acceleration. Section 4.3 supports per-GPU units, eight-A100 setup, and unhalved causal-attention accounting. Section 4.1/Figure 4 supports fixed total tokens and PyTorch OOM at 16k while FlashAttention-2 runs. Reading maintains the separate training and kernel scopes, adequate for the selected context-dependent result."
+  },
+  {
+    "id": "D2_text_047",
+    "pair": "P03_s2_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Sections 3.1-3.3 support deferred normalization, query-block occupancy, warp-owned outputs, exactness, and linear auxiliary memory. Prose 'two workloads therefore require different partitions' is recovered through the reading's training-versus-KV-loading mechanism. Section 4, Table 1, and Figure 5 support quoted kernel gains, eight-A100 training throughput, context dependence, and multi-query decoding gains. Reading keeps these workload/performance levels separate, adequately bounding the selected execution relationship without transferring kernel gains to whole-model inference."
+  },
+  {
+    "id": "D2_text_048",
+    "pair": "P03_s2_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Sections 3.1-3.3 support normalization/scheduling improvements preserving exact attention and linear storage, with a distinct KV-loading bottleneck during decoding. Reading reconstructs both execution relationships from the prose. Section 4, Table 1, and Figure 5 confirm kernel ranges, context-specific 1.3B training values, and multi-query kernel gains. Reading maintains A100 hardware, eight-GPU per-GPU training units, and attention-only decoding scope, adequately preserving prose 'translate unevenly' without claiming whole-generation acceleration."
+  },
+  {
+    "id": "D2_text_049",
+    "pair": "P04_s2_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 2.3/Algorithm 1 supports ratio acceptance, residual replacement, first-rejection truncation, and the extra token after full acceptance. Reading recovers prose 'conditioning prefix no longer applies' and the exact-target relationship. Sections 3.1 and 3.3 support the geometric-sum yield and its runtime denominator. Reading explicitly preserves common-prefix/sampling adjustments, i.i.d. acceptance, long generations, relative draft latency, and one-target-step concurrent verification, adequately qualifying the selected analytical claim."
+  },
+  {
+    "id": "D2_text_050",
+    "pair": "P04_s2_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 2.3/Algorithm 1 confirms sequential drafts, concurrent verification, first-rejection residual sampling, and a target token after full acceptance. Reading recovers prose 'restores the target distribution even when the proposal is inaccurate' through the shared/residual-mass explanation. Sections 3.1 and 3.3 support the yield and speed model. Sampling-adjusted distributions, i.i.d. acceptance, proposal count, relative latency, long generations, and unchanged verification walltime are all recovered from the text, making scope adequate."
+  },
+  {
+    "id": "D2_text_051",
+    "pair": "P04_s3_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 2.3/Algorithm 1 supports shared accepted mass and rejection-weighted positive residual exactly recovering p, plus prefix truncation and correction/extra-token progress. Reading reconstructs this selected exact-sampling relationship. Section 3.1/Equation 1 supports the i.i.d. expected-yield formula, and Section 3.4 supports distinguishing serial-call reduction from computation savings. Reading recovers sampling-adjusted fixed-prefix distributions and that distinction. Since the prose claims token yield, not walltime speed, omitted timing assumptions are not necessary boundaries."
+  },
+  {
+    "id": "D2_text_052",
+    "pair": "P04_s3_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 2.3/Algorithm 1 supports accepted shared mass plus residual correction yielding p, prefix truncation, and guaranteed progress. Reading accurately reconstructs prose 'combined distribution is exactly p.' Equation 1 and Theorem 3.8 support the yield and walltime expressions. Reading recovers sampling adjustment, i.i.d. acceptance, gamma as proposal count, c as step-time ratio, sufficiently long outputs, and concurrency costing one target step. Those explicit conditions adequately bound the analytical relationship."
+  },
+  {
+    "id": "D2_text_053",
+    "pair": "P04_s1_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 2.3/Algorithm 1 and Section 3.6 support sequential proposals, parallel checking, residual correction/extra token, and exactness for any draft. Reading recovers that mechanism and the draft-cost/agreement tradeoff. Section 4.1/Table 2 confirms named T5 measurements and hardware/batch/model sizes; Sections 3.3-3.4 support timing assumptions and increased arithmetic. Scope adequately bounds this abstract's qualitative prediction and measured tests; no asymptotic speed formula is asserted for short outputs."
+  },
+  {
+    "id": "D2_text_054",
+    "pair": "P04_s1_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Sections 2.3 and 3.6 support exact sampling for any draft; Sections 3.3-3.4 support cost/agreement and concurrency versus arithmetic. Reading recovers the prose's probability-test/residual-correction mechanism and its separation of exactness from speed assumptions. Section 4.1/Table 2 confirms all named T5 speedups and hardware/checkpoint controls. Scope is adequate for this abstract's qualitative analysis and bounded measurements; it does not assert Theorem 3.8's asymptotic factor for arbitrary generation lengths."
+  },
+  {
+    "id": "D2_text_055",
+    "pair": "P04_s1_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 2.3/Algorithm 1 (PDF p3) supports shared accepted mass, positive-residual correction, gamma+1 parallel prefixes, and correction/extra-token outcomes. Prose 'independently of the assumptions used to predict speed' is accurately recovered as exactness separate from timing. Section 3.1/Equation 1 and Section 3.3/Theorem 3.8 support the formulas. Reading recovers sampling adjustment, i.i.d. acceptance, relative draft runtime, sufficiently long generations, and unchanged concurrent latency; these are adequate analysis boundaries."
+  },
+  {
+    "id": "D2_text_056",
+    "pair": "P04_s1_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 2.3/Algorithm 1 supports ratio acceptance, residual correction, retaining only the accepted prefix, and an additional token ensuring progress. Reading faithfully reconstructs prose 'recovering p exactly' and 'at least one token.' Equation 1 and Theorem 3.8 support the expected-yield and speed formulas. Both prose and reading distinguish sampling-adjusted distributions from the i.i.d., long-generation, relative-runtime, and constant verification-latency assumptions, adequately limiting the timing claim."
+  },
+  {
+    "id": "D2_text_057",
+    "pair": "P04_s2_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Table 2 (PDF p6) confirms sampled translation values 0.62/2.6 and 0.71/1.4 with seven versus three guesses. Prose 'complete decoding configurations rather than isolate proposal size' is explicitly recovered, preventing a confounded size-only interpretation. Reading also reproduces greedy/summarization comparisons and the named target, hardware, batch, and baseline. Sections 3.3-3.4 support its spare-capacity and wasted-arithmetic boundaries. Scope adequately qualifies the selected acceptance-versus-latency relationship."
+  },
+  {
+    "id": "D2_text_058",
+    "pair": "P04_s2_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 4.1/Table 2 (PDF p6) supports draft sizes, all quoted acceptance/speed values, and fixed guess counts. Prose cautiously calls the ordering 'consistent with proposal cost offsetting' agreement; reading preserves that interpretation rather than claiming an isolated causal experiment. Reading's T5-XXL, single-TPU-v4, batch-one, guess-count, and spare-compute boundaries are text-supported. Sections 3.3-3.4 support distinguishing latency from arithmetic savings. The selected comparison needs no broader model-survey reconstruction."
+  },
+  {
+    "id": "D2_text_059",
+    "pair": "P03_s3_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Table 1 confirms the context-specific training numbers; Section 4 supports the separate 1.7-3.0-fold kernel range. Reading reconstructs prose 'below' kernel gains without assuming proportional transfer. Section 4.1/Figure 4 supports PyTorch OOM versus tiled execution at 16k. Section 4.3/Table 1 supports the 72% model-FLOP figure and unhalved causal convention, explicitly recovered as accounting rather than executed-arithmetic counts. Hardware, per-GPU units, and performance-level distinctions adequately bound this result."
+  },
+  {
+    "id": "D2_text_060",
+    "pair": "P03_s3_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Table 1 supports the context-specific throughput values; Section 4 supports contrasting roughly 1.3-fold training gains with 1.7-3.0-fold kernels. Reading recovers prose 'does not imply equal gains for the whole model.' Section 4.1/Figure 4 supports the separate fixed-16k-token memory comparison. Section 4.3/Table 1 supports the 72% figure and unhalved causal convention, accurately recovered as accounting rather than executed arithmetic. These hardware, units, and workload distinctions adequately delimit the selected result."
+  },
+  {
+    "id": "D2_text_061",
+    "pair": "P04_s3_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Sections 2.3 and 3.6 support shared-mass acceptance plus residual correction preserving target sampling for any draft. Reading recovers this mechanism and prose 'improved agreement must compensate for proposal cost.' Section 4.1/Table 2 confirms all T5 measurements and T5X/model/hardware/batch controls. Reading explicitly retains Section 3.3's i.i.d., long-generation, unchanged verification-latency assumptions and Section 3.4/selected limitations' concurrency-versus-arithmetic and spare-compute boundary. These conditions adequately delimit the selected exactness and latency claims."
+  },
+  {
+    "id": "D2_text_062",
+    "pair": "P04_s3_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Sections 2.3, 3.6, and selected limitations support exact target sampling for any draft without retraining or architecture changes. Reading recovers shared-mass acceptance and residual correction from the prose. Section 4.1/Table 2 confirms the named T5 speedups and larger-draft tradeoff. Reading preserves i.i.d., long-generation, unchanged concurrent-latency assumptions from Section 3.3 and the explicit spare-compute/arithmetic qualification. Target/draft sizes, hardware, batch, and sampling distinctions adequately limit the measurements."
+  },
+  {
+    "id": "D2_text_063",
+    "pair": "P03_s3_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Sections 3.1-3.3 support independently normalized rows, deferred normalization, forward reduction removal, and decoding's KV-loading partition. Reading recovers these mechanisms and exactness/linear storage. Sections 4.1-4.3, Table 1, and Figure 5 support quoted shapes, kernel gains, training peak, and sevenfold multi-query kernel gain. Reading's 'smaller, context-dependent benefits' preserves the prose's separation of kernel and whole-model evidence; its hardware and model/context limits adequately bound the chosen relationship."
+  },
+  {
+    "id": "D2_text_064",
+    "pair": "P03_s3_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Sections 3.1-3.3 support exactness, deferred normalization, independent forward outputs, small-batch/head occupancy, and decoding's different KV-loading bottleneck. Reading reconstructs these mechanisms from the prose. Section 4.1, Table 1, and Figure 5 support the stated A100 shapes, kernel gains, eight-GPU training peak/context dependence, and multi-query kernel comparison. Reading maintains these distinct measured scopes and linear auxiliary-memory qualification, adequately bounding the selected hardware-execution account."
+  },
+  {
+    "id": "D2_text_065",
+    "pair": "P04_s2_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Sections 2.3 and 3.6 support probability-ratio acceptance, positive-residual correction, and any-draft exactness without target retraining. Reading recovers the mechanism and prose 'agreement ... weighed against the time spent drafting.' Section 3.3 supports i.i.d., long-generation, and no-extra-concurrent-latency assumptions, all explicitly recovered. Section 4.1/Table 2 confirms T5-small/T5-XXL sampled/greedy translation and summarization values on the named hardware/batch setup. Those controls adequately bound the selected exactness-versus-latency relationship."
+  },
+  {
+    "id": "D2_text_066",
+    "pair": "P04_s2_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Sections 2.3 and 3.6 support any-draft distribution preservation; Sections 3.3-3.4 support proposal-cost and rejected-computation tradeoffs. Reading reconstructs prose 'acceptance is therefore insufficient' through agreement versus evaluation cost. Section 4.1/Table 2 confirms all named T5 speedups and existing-checkpoint/batch/hardware controls. Reading recovers i.i.d., sufficiently long generations, and unchanged concurrent latency explicitly stated in the prose. These conditions adequately limit the selected speed analysis and distinguish it from unconditional sampling correctness."
+  },
+  {
+    "id": "D2_text_067",
+    "pair": "P04_s1_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 4.1/Table 2 confirms the fixed-seven greedy comparison and T5-small sampling/summarization changes. Prose 'runtime-acceptance balance rather than acceptance alone' is recovered in the reading's drafting-cost explanation. Reading preserves target, existing checkpoints, batch, hardware, and parallel-capacity/arithmetic limits supported by Sections 3.3-3.4. Its statement that GPT-like/LaMDA latency is not recoverable accurately reflects the prose's acceptance-only distinction and Section 4.2, not a missing timed result."
+  },
+  {
+    "id": "D2_text_068",
+    "pair": "P04_s1_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Table 2/Section 4.1 (PDF p6) confirms acceptance 0.82 versus 0.75, speedups 1.7 versus 3.4, and T5-small's seven translation/five summarization guesses. Prose 'cost-acceptance balance rather than agreement alone' is accurately reconstructed. Reading also recovers hardware, target, temperature-dependent gains, and the explicit rejection/spare-compute qualification supported by Sections 3.3-3.4 and the selected limitations. Scope is adequate for these named T5 comparisons, without implying universal acceleration."
+  },
+  {
+    "id": "D2_text_069",
+    "pair": "P04_s3_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 4.1/Table 2 (PDF p6) supports the seven-guess greedy comparison, sampling changes, and summarization gains. Prose 'Greater agreement therefore does not by itself offset' is recovered in the reading's cost-agreement comparison. Its batch-one, TPU-v4, T5X, and spare-compute boundaries match the prose and Sections 3.3-3.4. Reading correctly treats GPT-like/LaMDA latency as unestablished; Section 4.2 measures acceptance only. These boundaries adequately constrain the selected latency relationship."
+  },
+  {
+    "id": "D2_text_070",
+    "pair": "P04_s3_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P04 Section 4.1/Table 2 supports every quoted acceptance/speed pair and the fixed-seven greedy comparison. Reading recovers prose 'improved agreement does not offset its proposal cost' and the sampling-dependent payoff. It also preserves the batch-one TPU-v4/T5X scope and the explicit T5-walltime versus GPT-like/LaMDA-acceptance distinction supported by Section 4.2. Sections 3.3-3.4 support concurrency and rejection waste; reading does not convert latency gains into arithmetic savings. Selected scope is adequate."
+  },
+  {
+    "id": "D2_text_071",
+    "pair": "P03_s2_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Table 1 confirms all throughput values; Section 4.3's quadratic attention term supports the cautiously stated 'consistent with' greater long-context importance. Reading preserves that qualification. Sections 4.1 and 4.3 support differing causal FLOP accounting, explicitly recovered as noninterchangeable utilization. Figure 4 and Sections 2.3/3.1 support 16k feasibility as retained tiling storage benefits. Reading accurately recovers prose 'not a new memory advantage over FlashAttention,' adequately bounding both performance and memory comparisons."
+  },
+  {
+    "id": "D2_text_072",
+    "pair": "P03_s2_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P03 Table 1 confirms context-specific training gains and 225/72% peak. Section 4.3's FLOP formula supports the qualified 'consistent with' growing attention share, preserved by the reading. Sections 4.1 and 4.3 support kernel-versus-training causal accounting differences, also explicitly recovered. Figure 4 and Algorithm 1 support the separate 16k PyTorch OOM versus FlashAttention-2 feasibility statement. Reading keeps eight-GPU per-GPU training, accounting, and kernel-memory scopes distinct, adequately bounding this selected result."
+  },
+  {
+    "id": "D3_text_073",
+    "pair": "P06_s2_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Sec. 4.2/Algorithm 2 support left-sided projection, compact moments and scaled lifting; P^T G has r-by-n dimensions. Sec. 4.1 supports refresh and its cost/statistics tradeoff. Theorem 3.8 concerns conditional projected-gradient contraction with fixed projections and identity regularization. Prose explicitly denies a refreshed-Adam convergence guarantee; the reading recovers both the operational sequence and this adequate theorem/practice boundary."
+  },
+  {
+    "id": "D3_text_074",
+    "pair": "P06_s2_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Secs. 3.1/4.2 and Algorithm 2 support full-size Adam moments versus r-by-n projected moments and scaled lifting. Sec. 4.1 supports refresh's coverage/cost/statistics tradeoff. Theorem 3.8 provides the stated restricted gradient form, continuity, bounded weights, contraction condition and identity regularizer. Prose expressly denies a periodically refreshed Adam guarantee; the reading recovers the mechanism, refresh limits and adequate theoretical boundary rather than importing full-space convergence."
+  },
+  {
+    "id": "D3_text_075",
+    "pair": "P05_s3_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Sec. 5.1/Table 1 support equal-rank and half-rank accuracy/budget comparisons with imported LoRA and learning-rate adjustment. Table 3 supports narrowing, not eliminating, the video gap; Sec. 4.1/Figure 2 supports the correlation values. Prose's 'compares adaptation recipes' and 'does not establish the cause' adequately separate measured budget gains from diagnostic association. The reading reconstructs both the selected relationship and these consequential limits."
+  },
+  {
+    "id": "D3_text_076",
+    "pair": "P05_s3_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Table 1 supports 77.5/74.7 and 78.4 with the stated parameter budgets. Sec. 5.1 supports imported baselines and adjusted learning rates; Sec. 4.1/Figure 2 supplies the three correlations, and Table 3 supplies the remaining video gap. Prose's 'rather than isolate decomposition' and 'without establishing the cause' adequately delimit the selected budget/outcome relationship. The reading recovers those boundaries and does not turn diagnostic association into causation."
+  },
+  {
+    "id": "D3_text_077",
+    "pair": "P05_s3_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Secs. 3.2/4.1 support independent magnitudes, directional normalization and inference merging. Table 1/Sec. 5.1 support equal-rank and half-rank comparisons with published baselines and adjusted learning rates. Table 3 preserves the video gap; Table 7 supports the specifically identified detachment ablation. The reading recovers both the design/budget relationship and these boundaries, without treating the 0.2-point ablation difference as a subtraction from Table 1's 78.4."
+  },
+  {
+    "id": "D3_text_078",
+    "pair": "P05_s3_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Secs. 3.2/4.1 support diagnosis, normalization and separately learned magnitudes. Table 1/Sec. 5.1 support same/half-rank scores, budgets, baseline provenance and learning-rate adjustment. Table 3 bounds the multimodal claim by the remaining video gap. Table 7 independently supports 24.4% memory reduction and a 0.2-point ablation decrease. The reading reconstructs this parameter-efficiency relationship and the selected empirical limits without conflating inference merging with training cost."
+  },
+  {
+    "id": "D3_text_079",
+    "pair": "P06_s3_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Secs. 3.3/4.2 and Algorithm 2 support SVD-selected, dimension-dependent one-sided projection, compact Adam statistics and direct dense-weight updates. Sec. 4.1 supports periodic refresh without a separate adapter. Theorem 3.8/Eq. 11 ground the continuity, bounded-weight, curvature and fixed-projection restrictions. Prose contrasts designated-subspace progress with empirical switching Adam; reading recovers this adequate guarantee/practice distinction and the complete selected update sequence."
+  },
+  {
+    "id": "D3_text_080",
+    "pair": "P06_s3_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Sec. 4.2/Algorithm 2 support the projector dimensions, compact moments and dimension-dependent projection side; Sec. 4.1 supports refreshed update directions. Theorem 3.8/Eq. 11 support conditional contraction under fixed projections, identity regularization and a curvature/continuity threshold. Prose additionally requires a contraction-permitting learning rate and denies a refreshed-Adam guarantee. The reading recovers these selected operational and theoretical boundaries; omitted detailed assumptions are not reconstructed or credited."
+  },
+  {
+    "id": "D3_text_081",
+    "pair": "P05_s3_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Eq. 5/Sec. 4.1 support independent column magnitudes, normalized frozen-plus-low-rank directions, preserved initialization and inference merging. Sec. 4.3/Eqs. 6-7/11 support detached recomputed norms, unchanged magnitude gradient and removal of exact directional projection. Prose's distinction between the forward representation and 'full normalization derivative' adequately bounds the selected implementation account. Reading reconstructs both the mechanism and the backward-computation change, not an unsupported claim of unchanged exact optimization."
+  },
+  {
+    "id": "D3_text_082",
+    "pair": "P05_s3_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Eq. 5/Sec. 4.1 support learned column magnitudes, frozen pretrained columns, zero initial updates and inference merging. Sec. 4.3/Eqs. 6-7/11 support detachment preserving forward parameterization and magnitude gradients while changing scaled orthogonal projection to scaling alone. Prose makes this backward-computation difference explicit, supplying the necessary scope for its methods function. Reading accurately recovers the selected scale/direction relationship, initialization and implementation boundary."
+  },
+  {
+    "id": "D3_text_083",
+    "pair": "P06_s2_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Sec. 5.5/Figure 4 support 22.0 GB, reported 63.3%/52.3% reductions and combined projection/per-layer savings. Sec. 5.3/Table 3 supports the separate single-trial 64-A100 quality comparison. Original Table 11 confirms that both quoted throughput rows enable per-layer updates at 256 tokens. Prose's 'not statistical equivalence' and denial of completed consumer-GPU pretraining adequately bound feasibility and quality; the reading recovers them without extrapolating the measured throughput cost."
+  },
+  {
+    "id": "D3_text_084",
+    "pair": "P06_s2_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Sec. 5.5/Figure 4 support the profiling batch, footprint and reported baseline reductions, including combined projection/per-layer contributions. Sec. 5.3/Table 3 locates quality in a separate single distributed trial. Original Table 11 verifies matching per-layer 1B throughput rows. Prose explicitly excludes statistical equivalence and completed consumer-GPU pretraining; reading recovers these adequate boundaries and the selected memory-versus-throughput tradeoff without attributing the whole saving to projection."
+  },
+  {
+    "id": "D3_text_085",
+    "pair": "P05_s2_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Table 15 supports rank-8 scores/budgets, comparison to rank-32 LoRA, and DoRA's nonmonotonic rank results. Table 3 supports the video averages, FT tie/wins on TVQA/How2QA/TVC and YC2C deficit; Sec. 5.2 identifies mixed question-answering/captioning tasks. Prose's 'under the reported training recipes' and 'not a percentage-point accuracy gain' adequately bound the selected relationships. Reading recovers both rank sensitivity and the metric/full-tuning limits."
+  },
+  {
+    "id": "D3_text_086",
+    "pair": "P05_s2_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Table 15 supports all quoted ranks, accuracies and parameter fractions; Sec. 5.1/Table 8 support learning-rate differences under reported recipes. Table 3/Sec. 5.2 support the video average gap and mixed question-answering/captioning metrics. Prose limits its conclusion to these comparisons and explicitly retains rank sensitivity and the full-tuning gap. Reading recovers both the economical-adaptation relationship and these adequate limits without inferring monotonic rank benefits or uniform task gains."
+  },
+  {
+    "id": "D3_text_087",
+    "pair": "P05_s1_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Table 1 supports half-rank 7B/13B scores and budgets, including the 80.8/80.5 comparison despite adjacent narrative claiming a larger gain. Sec. 5.1 supplies learning-rate/provenance limits; Sec. 4.1 supplies query correlations. Tables 3/12 support YC2C's largest FT shortfall and LLaVA losses on VQAv2/VQAT. The reading recovers the selected economical-adaptation relationship and causal/task-level limits, adequately preventing correlation resemblance or average gains from becoming uniform superiority."
+  },
+  {
+    "id": "D3_text_088",
+    "pair": "P05_s1_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Table 1 supports the half-rank 7B/13B values and budgets; Sec. 5.1 supports baseline provenance and learning-rate adjustment. Sec. 4.1 supports correlations, while Tables 3/12 verify the video gap and VQAv2/VQAT exceptions. Prose explicitly concludes 'not uniform task superiority' and does not isolate decomposition as the sole cause. Reading recovers the economical-adaptation relationship with those adequate task and causal boundaries, rather than importing a general full-tuning equivalence."
+  },
+  {
+    "id": "D3_text_089",
+    "pair": "P06_s1_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Sec. 4.2/Algorithm 2 support one-sided SVD projection, compact Adam moments and scaled lifting. Sec. 4.1 supports successive subspaces. Theorem 3.8/Eq. 11 state the structured-gradient, continuity, bounded-weight, fixed-projection and identity-regularizer restrictions. Prose describes contraction of the projected gradient, explicitly not a refreshed-Adam full-space optimum guarantee. The reading recovers the selected mechanism and these adequate theoretical boundaries directly from the text."
+  },
+  {
+    "id": "D3_text_090",
+    "pair": "P06_s1_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Sec. 4.2/Algorithm 2 support left projection for m <= n, r-by-n moments and lifting to full-dimensional weights; Sec. 4.1 supports changing subspaces. Theorem 3.8/Eq. 11 support the stated structured continuity, bounded-weight, fixed-projection, nonadaptive and curvature restrictions. Prose's 'progress within one subspace' explicitly limits the guarantee; reading recovers that scope and does not infer a full-space optimum for refreshed Adam."
+  },
+  {
+    "id": "D3_text_091",
+    "pair": "P05_s2_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Secs. 3.1/4.1 and Eq. 5 support frozen pretrained columns, trainable magnitudes/factors, pretrained-norm initialization and zero B. Eq. 6 supports the exact orthogonal projection; Sec. 4.3/Eq. 11 support recomputation with the norm derivative omitted. Prose's 'preserving the forward parameterization' and 'scaled gradient' supply the necessary implementation boundary. The reading recovers that distinction and initialization, with no unsupported claim that detachment preserves the exact directional derivative."
+  },
+  {
+    "id": "D3_text_092",
+    "pair": "P05_s2_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Eq. 5/Sec. 4.1 support columnwise normalization, learned magnitudes, frozen W0 and initialization. Eqs. 6/11 and Sec. 4.3 support the exact scaled perpendicular gradient versus recomputed, detached denominator used in experiments. Prose's 'keeps the forward separation' but replaces the projected gradient states the necessary boundary between representation and backward computation. The reading recovers this mechanism and boundary directly; no benchmark comparison is required for this selected methods function."
+  },
+  {
+    "id": "D3_text_093",
+    "pair": "P05_s1_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Sec. 4.1/Eq. 5 support the frozen matrix, zero initial BA, pretrained magnitudes and normalized directional factors. Eq. 6 supports removing the parallel gradient component before detachment; Sec. 4.3/Eq. 11 supports the implemented scaled gradient with norms recomputed as constants for backpropagation. Prose explicitly calls this an approximation preserving only the forward decomposition and magnitude learning. Reading recovers that adequate representation/derivative boundary and the initialization relation."
+  },
+  {
+    "id": "D3_text_094",
+    "pair": "P05_s1_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Eq. 5/Sec. 4.1 support frozen W0, trainable magnitudes/factors and initialization preserving W0. Eqs. 6-7 support exact scaled orthogonal projection; Sec. 4.3/Eq. 11 support recomputed but detached norms and unchanged magnitude learning. Prose's 'scaled rather than projected' makes the analyzed/evaluated gradient distinction explicit. The reading reconstructs that distinction and initialization; these are adequate boundaries for the selected implementation explanation, without requiring unrelated benchmark details."
+  },
+  {
+    "id": "D3_text_095",
+    "pair": "P06_s1_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Secs. 3.3-4.3 support projected moments, refresh and per-layer gradient-storage savings. Sec. 5.3/Table 3 supports the explicitly untuned distributed trial; Sec. 5.5/Figure 4, Table 4 and Table 11 support separate profiling, near-full GLUE averages and lower throughput. Reading recovers the empirical/theoretical separation. Its uncertainty about exact assumptions is appropriate: none are supplied as recovered facts, while the abstract's conditional fixed-projection boundary is adequate for its limited claim."
+  },
+  {
+    "id": "D3_text_096",
+    "pair": "P06_s1_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Secs. 3.3-4.2 support projected statistics, dense weights and refreshed subspaces. Sec. 5.3/Table 3 support the untuned distributed quality run; Sec. 5.5/Figure 4 and Appendix E/Table 11 support separate memory profiling and lower throughput. Table 4 supports small aggregate GLUE gains. Prose's 'Separately' and 'not faster training' supply adequate experimental boundaries, which the reading recovers alongside the mechanism and conditional theory."
+  },
+  {
+    "id": "D3_text_097",
+    "pair": "P06_s3_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Secs. 3.3-4.2 support compression and changing subspaces. Sec. 5.3/Table 3 and Sec. 5.5/Figure 4 support the separately identified distributed 7B quality run and small-batch 22.0 GB profiling; Table 11 supports lower 1B throughput. Reading recovers these consequential boundaries. Its uncertainty about specific structured-gradient assumptions does not erase the text-supported conditional, fixed-projection, nonadaptive restriction appropriate to this abstract; missing details are not credited."
+  },
+  {
+    "id": "D3_text_098",
+    "pair": "P06_s3_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Secs. 3.2-4.2 support conditional analysis and dense-weight learning through refreshed compact updates. Sec. 5.3/Table 3 support the untuned 64-A100 19.7B-token quality result; Sec. 5.5/Figure 4 support separate 256-token device profiling without checkpointing/offloading. Table 11 supports the limited 1B throughput statement. Reading reconstructs the central mechanism and these adequate quality/feasibility/theory distinctions directly from prose, without adding an end-to-end consumer-GPU run."
+  },
+  {
+    "id": "D3_text_099",
+    "pair": "P06_s1_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Table 2/Sec. 5.1 and Appendix C support scores, estimated weight/state memory, matched ranks/search budgets and no ReLoRA warmup. Secs. 5.3/5.5 support the separate distributed quality trial and small-batch device feasibility. Original Table 11 verifies the matching per-layer throughput rows. Prose explicitly excludes gradients/activations from estimates and a consumer-GPU quality run from profiling; reading recovers this adequate lower-memory, near-baseline-quality scope without a speedup implication."
+  },
+  {
+    "id": "D3_text_100",
+    "pair": "P06_s1_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Table 2/Sec. 5.1 and Appendix C support 1B scores, weight-plus-state estimates, matched ranks/search budgets and no ReLoRA warmup. Secs. 5.3/5.5 separate distributed 7B quality from device feasibility. Original Table 11 places 1019.63 and 1205.31 in matching per-layer-update rows. Prose explicitly excludes activations/gradients from estimates and consumer-GPU completion from the profiling claim; the reading recovers this adequate storage-quality-throughput scope."
+  },
+  {
+    "id": "D3_text_101",
+    "pair": "P05_s2_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Secs. 3.2/4.1 support diagnosis-driven separate magnitudes and directions. Sec. 5.1/Table 1 ground pooled-task training, published LoRA, retained/halved ranks, adjusted learning rate and the quoted budgets/scores. Table 3 and Sec. 4.3/Table 7 support the retained video gap and detachment savings relative to unmodified DoRA. Reading recovers why parameterization matters beyond rank within these tested settings; this empirical, nonuniversal scope is adequate."
+  },
+  {
+    "id": "D3_text_102",
+    "pair": "P05_s2_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Secs. 3.2/4.1 connect the VL-BART diagnosis to separate magnitudes and normalized low-rank directions. Sec. 5.1/Table 1 support pooled training, imported LoRA, adjusted learning rate, scores and parameter fractions; Table 3 preserves the video/full-tuning gap. Sec. 4.3/Table 7 support detachment savings relative to unmodified DoRA. Reading's 'tested accuracy-parameter tradeoff' stays within the prose's adequately bounded comparisons rather than claiming isolated causation or universal superiority."
+  },
+  {
+    "id": "D3_text_103",
+    "pair": "P06_s3_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Table 2 supports the 1B rank/token setting, scores and explicitly estimated weight/state storage. Secs. 4.2/5.5 support dense weights and combined 7B memory-saving techniques. Original Table 11 verifies the matched 1B per-layer-update memory/throughput pairs. Prose's 'in this setting,' 'not a projection-only saving' and 'not faster training' provide adequate boundaries for this selected tradeoff. The reading recovers them without converting device profiling into a completed quality run."
+  },
+  {
+    "id": "D3_text_104",
+    "pair": "P06_s3_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Table 2 supports rank 512, 13.1B tokens, perplexities and estimated weight/state storage. Sec. 5.5/Figure 4 supports separately bounded 7B profiling with 8-bit states, per-layer updates and small batches. Original Table 11 confirms paired per-layer rows for 6.93/5.63 GB and 1205.31/1019.63 tokens/s. The reading recovers the selected storage-quality tradeoff and its throughput cost; neither prose nor reading claims a 7B quality run on that single-device budget."
+  },
+  {
+    "id": "D3_text_105",
+    "pair": "P06_s2_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Secs. 3.2-4.2 support statistic compression, refresh and the fixed-projection identity-regularizer restriction. Table 2/Sec. 5.1 support rank-matched 1B comparisons and equal search budgets; Secs. 5.3/5.5 distinguish distributed quality from small-batch profiling. The reading reconstructs these distinctions. Its 'Stable-rank conditions are not recoverable' correctly identifies omitted detail, not a consequential abstract-level scope failure; those unprovided assumptions receive no recovery credit."
+  },
+  {
+    "id": "D3_text_106",
+    "pair": "P06_s2_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P06 Secs. 3.2-4.2 support compact gradient statistics, refreshed bases and conditional fixed-projection identity-regularizer analysis. Table 2/Sec. 5.1 support equal-budget 1B comparisons; Sec. 5.3/Table 3 supports the untuned distributed 7B result. Sec. 5.5/Figure 4 and Table 11 support separate 256-token profiling and lower 1B throughput. Reading reconstructs these selected boundaries, adequately distinguishing memory feasibility from quality evidence and compression from weight factorization."
+  },
+  {
+    "id": "D3_text_107",
+    "pair": "P05_s1_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Secs. 3.2/4.1 ground the case-study motivation and magnitude/direction mechanism. Sec. 5.1/Table 1 support the published-baseline, adjusted-learning-rate and half-rank comparisons; Table 3 bounds the multimodal aggregate claim. Table 7 supports the explicitly separate memory ablation. Reading recovers this evidence for reallocating adaptation capacity, including the remaining video gap and training/inference distinction. Scope is adequate because gains remain tied to evaluated settings rather than isolated causation or uniform task superiority."
+  },
+  {
+    "id": "D3_text_108",
+    "pair": "P05_s1_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P05 Secs. 3.2/4.1 support the diagnosis and normalized sum with separately learned magnitudes. Table 1/Sec. 5.1 support the published-baseline, learning-rate-adjusted and half-rank comparisons. Table 7 supports the expressly separate detachment ablation; Table 3 preserves the video aggregate gap. Reading recovers the selected alternative-to-larger-rank relationship and these adequate limits, without treating inference merging as absence of training overhead or aggregate improvement as universal task superiority."
+  },
+  {
+    "id": "D4_text_109",
+    "pair": "P08_s1_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.1-3.3 support offline critic supervision and generator-scored selection; Table 2 and section 5.2 support the PopQA and ASQA tradeoffs. Prose calls support 'predicted' and rejects improvement in every answer dimension. Reading recovers this mechanism and the zero-shot 7B/13B, same-data 7B, and metric-specific comparison boundaries. Both ASQA model rows support the unnumbered precision/recall/correctness contrast; no complete-grounding guarantee is asserted."
+  },
+  {
+    "id": "D4_text_110",
+    "pair": "P08_s1_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.1-3.3 support offline reflection supervision and generator-owned selection; Table 2 and section 5.2 support PopQA gains and ASQA metric tradeoffs. Prose identifies the 7B same-data and 13B ChatGPT comparisons and calls support 'predicted.' Reading recovers these boundaries and adjustable attribution/quality priorities. Its replacement of 'separate inference-time evaluation' denotes the separate critic, not the absence of generator self-evaluation."
+  },
+  {
+    "id": "D4_text_111",
+    "pair": "P07_s3_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.1-2.3 and 3.1-3.2 support fixed distractors within length conditions, annotated-paragraph queries, Contriever filtering, controls, UUID JSON sizes, and answer containment. Prose explicitly distinguishes containment from whole-response exact match. Reading recovers the controlled position/length relationship and all consequential dataset, synthetic-task, sample-count, and decoding boundaries. It does not upgrade annotated-answer screening into a guarantee against alternative reasonable answers."
+  },
+  {
+    "id": "D4_text_112",
+    "pair": "P07_s3_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.1-2.3, 3.1-3.2, and 4.2 support reordering, Contriever distractors, UUID sizes, reference conditions, and advance-query contextualization. Prose explicitly limits distractor filtering to annotated answers and describes output inclusion rather than exact-response equality. Reading recovers the fixed-position design, sample sizes, decoding/scoring choices, and cross-task probe. These are adequate experimental boundaries; no guarantee that all distractors lack plausible answers is introduced."
+  },
+  {
+    "id": "D4_text_113",
+    "pair": "P08_s2_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 4.2-4.3, Table 2, and section 5.2/Figure 3 support the matched-data attribution comparison, lower str-em, and separate ablation. Prose states five ASQA passages, 150,000 main-training pairs, and the smaller 50,000-example/150-question study. Reading retains these conditions and task-dependent retrieval costs. 'Not an isolated effect of one token' correctly bounds the ablation; the reader's non-isolation observation is not an error."
+  },
+  {
+    "id": "D4_text_114",
+    "pair": "P08_s2_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 Table 2, section 4.3, and section 5.2/Figure 3 support the five-passage attribution/correctness comparison and customization tradeoffs. Prose explicitly separates the 50,000-example, 150-question ablation and says it changes passage handling as well as reflection. Reading recovers these boundaries and the precision/fluency cost. Its inability to isolate critique tokens follows the paragraph's legitimate combined-configuration claim, not a recovery failure."
+  },
+  {
+    "id": "D4_text_115",
+    "pair": "P08_s1_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 Table 2 confirms all paired values; section 4.3 establishes five ASQA documents and threshold zero for ALCE, while section 5.2 supplies the 7B support/MAUVE analysis and retrieval tradeoff. Prose distinguishes 7B same-data and 13B ChatGPT comparisons. Reading preserves both and the zero-threshold condition. Citation gains coexisting with correctness, recall, or fluency losses is source- and text-supported, with no uniform-improvement implication."
+  },
+  {
+    "id": "D4_text_116",
+    "pair": "P08_s1_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 4.2-4.3, Table 2, and section 5.2 support baseline training differences, paired PopQA/ASQA values, equal ASQA documents, and customization costs. Prose expressly distinguishes 7B same-data gains from 13B versus ChatGPT and states that precision does not establish coverage. Reading preserves those comparisons and the training/inference boundary. This adequately supports task- and metric-dependent benefits without implying that attribution gains improve all answer content."
+  },
+  {
+    "id": "D4_text_117",
+    "pair": "P07_s1_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 4.1-4.2/Figures 8-9 and section 2.3 support the lookup/QA contrast, 1.9-point within-window spread, and overlapping shared-input GPT curves. Prose specifies 300 UUID pairs, the 2,048-token training window, and 10/20-document comparisons. Reading recovers the task distinction and degradation beyond training length. Its 2,048-token reference is read as the stated training-window boundary, not evidence of an exact test-sequence length."
+  },
+  {
+    "id": "D4_text_118",
+    "pair": "P07_s1_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 section 4.2 establishes perfect 300-pair GPT-3.5-Turbo (16K) lookup versus 45.6 worst-case and the contrary QA response; section 4.1 supplies the 1.9-point training-window qualification. Section 2.3 supports shared-input GPT profiles. Reading preserves these conditions and the selected lookup-versus-evidence-use relation. Prose's 'alone cannot establish' conclusion is appropriately bounded, not a universal claim that larger windows never help."
+  },
+  {
+    "id": "D4_text_119",
+    "pair": "P07_s3_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.1/2.3, 3.1-3.2, and 4.2 support position-controlled QA, UUID lookup, Claude exceptions, and differing intervention effects. Prose restricts comparisons to inputs fitting both windows and conclusions to 'evaluated contexts.' Reading recovers the capacity/use distinction, 2,655-query setting, Claude exception, and shared-window qualification. The selected abstract diagnosis does not require importing every experimental configuration from the anchor."
+  },
+  {
+    "id": "D4_text_120",
+    "pair": "P07_s3_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.1/2.3, 3.1-3.2, and 4.2 support answer-preserving position changes, random lookup, shared-window comparisons, and intervention differences. Prose qualifies the model trend with 'generally' and names nearly perfect Claude lookup. Reading recovers these exceptions, the 2,655-query setting, and the jointly fitting-input condition. 'In the evaluated setting' adequately limits the selected capacity-versus-evidence-use conclusion without universalizing positional failure."
+  },
+  {
+    "id": "D4_text_121",
+    "pair": "P07_s2_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 section 4.2 supports 100 versus 45.6 at 300 pairs and differing QA effects; sections 2.3/3.2 support Claude's cross-task contrast and below-closed-book GPT settings. Section 5 supports marginal gains beyond 20 documents. Prose distinguishes these experiments, and reading retains their model, pair-count, placement, and pipeline boundaries. 'Does not ensure a benefit' correctly limits the availability claim rather than asserting that evidence always hurts."
+  },
+  {
+    "id": "D4_text_122",
+    "pair": "P07_s2_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 4.2, 2.3, and 5 substantiate the intervention, closed-book comparison, and separate retrieval-pipeline result. Prose explicitly says 'tested,' 'some' 20/30-document settings, and 'separate' pipeline study. Reading recovers the lookup/QA dissociation, 300-pair worst-position baseline, and marginal gains beyond 20 documents. The selected conclusion concerns insufficiency of lookup and recall alone, not universal failure of retrieval or contextual answering."
+  },
+  {
+    "id": "D4_text_123",
+    "pair": "P07_s2_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.3, 4.1-4.2, and 5 support the position, window, query-repetition, training-length, and recall/reader contrasts. Prose confines its bottleneck claim to evaluated QA settings and uses 'some' for below-closed-book results. Reading recovers the central access/use distinction and within-versus-beyond-training boundary, with shared-input comparisons in its core account. The selected synthesis need not reproduce every anchor exception to avoid universal claims."
+  },
+  {
+    "id": "D4_text_124",
+    "pair": "P07_s2_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.3, 4.1-4.2, and 5 support middle-position QA degradation, shared-window similarity, training-length dependence, and reader saturation before recall. Prose limits failures to 'some' configurations and 'evaluated' systems while separating lookup from natural-language evidence use. Reading recovers these relationships and consequential shared-input/training-window boundaries. Claude's lookup exception need not be listed because this paragraph does not claim universal synthetic failure."
+  },
+  {
+    "id": "D4_text_125",
+    "pair": "P08_s2_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 Table 1 and sections 3.2-3.3 support distinct relevance/support judgments, offline GPT-4-derived supervision, and adjustable decoding without the critic. Table 2 and section 5.2 confirm 66.9 versus 5.0 precision, lower correctness, and the MAUVE cost. Reading recovers these relations and the explicit zero-shot six-task, 7B/13B, matched-data/five-document boundaries. 'Rather than a uniform gain' adequately limits the selected attribution claim."
+  },
+  {
+    "id": "D4_text_126",
+    "pair": "P08_s2_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.2-3.3 support reflection-trained selection and adjustable inference; sections 4.1/4.3, Table 2, and section 5.2 support the six-task and ASQA evidence. Prose reports the 7B, same-data, same-five-document comparison and calls selection 'judged better supported.' Reading recovers both mechanism and precision/correctness/MAUVE tradeoffs. These explicit empirical and predicted-judgment boundaries avoid implying uniform gains or verified grounding."
+  },
+  {
+    "id": "D4_text_127",
+    "pair": "P08_s1_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.2-3.3 and equations 2-4 support the 7B GPT-4-trained critic, masked passage loss, thresholded retrieval, and weighted critique-guided segment selection. Prose's 'predicted evidence support' makes the epistemic boundary explicit. Reading recovers the offline-to-generator mechanism and adjustable priorities without inference-time critic evaluation. This method-focused scope is adequate; no specific beam width, evaluation result, or guaranteed grounding is claimed."
+  },
+  {
+    "id": "D4_text_128",
+    "pair": "P08_s1_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.2-3.3 and equations 2-4 support the 7B critic, masked passages, thresholded retrieval, and normalized weighted critique ranking. Prose explains that predicted support 'can ... influence' selection; reading recovers this learned-judgment relationship and offline/no-retraining boundaries. The retrieval-threshold description is high-level, not an assertion of a competing raw-probability formula. These limits adequately support the selected method without guaranteeing the chosen claim's truth or support."
+  },
+  {
+    "id": "D4_text_129",
+    "pair": "P08_s3_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 Table 1, sections 3.2-3.3, and equations 2-4 establish separate relevance/support judgments and normalized critique-guided selection after offline training. Prose says a partially supported continuation 'can' score lower, appropriately avoiding a deterministic penalty or grounding guarantee. Reading recovers this selection relation, masked passage loss, and adjustable controls without the critic. Those are adequate boundaries for the chosen evidence-assessment method rather than the anchor's broader experimental settings."
+  },
+  {
+    "id": "D4_text_130",
+    "pair": "P08_s3_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.1-3.3, Table 1, and equations 2-4 support offline annotation, passage-loss masking, passage-independent utility, and normalized weighted candidate scores. Prose's 'judged relationship ... affects selection' is recovered by the reader's beam-search explanation. Reading also preserves adjustable controls and no inference-time critic. These are adequate boundaries for the selected training-to-decoding method; it makes no task-wide accuracy or grounding guarantee."
+  },
+  {
+    "id": "D4_text_131",
+    "pair": "P07_s2_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.1-2.3, 3.1, and 4.2 support moving fixed evidence, varying distractors, reference controls, UUID lookup, and query repetition. Prose specifies paragraph-answer queries, annotated-answer filtering, greedy decoding, and output inclusion. Reading recovers the controlled availability/use relation and those boundaries. Omitting UUID sample counts is adequate for this selected diagnostic-method explanation, which makes no sample-size-dependent quantitative result claim."
+  },
+  {
+    "id": "D4_text_132",
+    "pair": "P07_s2_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.1-2.3, 3.1, and 4.2 support the fixed-document position manipulation, ranked annotated-answer-filtered distractors, reference controls, and query-aware probe. Prose specifies paragraph long answers, 10/20/30 documents, greedy decoding, and containment scoring. Reading recovers these boundaries and the position-versus-added-context distinction. Its account does not mistake fixed availability within position conditions for an unchanged distractor count across length conditions."
+  },
+  {
+    "id": "D4_text_133",
+    "pair": "P07_s3_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "reader_inference"
+    ],
+    "reason": "P07 Table 1, sections 2.3 and 4.2 support 88.3/56.1, shared-window comparisons, and the 300-pair intervention. Prose limits capacity claims to 'these conditions' and contrasts lookup with QA. Reading recovers worst-case placements and shared 10/20-document inputs. It adds 'UUID,' absent from this paragraph; that source-supported detail is not credited as prose recovery. Explicit task, model, and placement boundaries suffice for the selected contrast."
+  },
+  {
+    "id": "D4_text_134",
+    "pair": "P07_s3_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "reader_inference"
+    ],
+    "reason": "P07 Table 1 and sections 2.3/4.2 substantiate the answer-only and closed-book controls, shared-window profiles, and lookup intervention. Prose bounds the conclusion with 'in this evaluation'; reading preserves worst 20/30-document settings, shared 10/20-document inputs, and the 300-pair comparison. Reading adds 'UUID,' which the paragraph does not specify. Recovery rests on its explicit exact-lookup versus QA conditions, not that added identifier type."
+  },
+  {
+    "id": "D4_text_135",
+    "pair": "P08_s3_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.2-3.3, Table 2, and section 5.2 support generator-scored selection, the 13B ASQA precision/recall comparison, and support/MAUVE customization. Ethical Concerns explicitly rejects complete citation support. Prose uses the same five passages and concludes gains do not imply 'complete grounding'; reading recovers these boundaries and zero-shot 7B/13B scope. The customization statement reports the observed tradeoff without asserting that the 13B comparison itself varied support weights."
+  },
+  {
+    "id": "D4_text_136",
+    "pair": "P08_s3_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.2-3.3 support generator-owned reflection scoring and adjustable controls; Table 2 and section 5.2 support the empirical contrasts. Prose separates the 13B ASQA comparison from customization 'on the 7B model.' Reading retains those model/task boundaries, zero-shot six-task scope, and lack of an inference-time critic. The final attribution-versus-coverage/fluency conclusion is narrower than uniform superiority or guaranteed support."
+  },
+  {
+    "id": "D4_text_137",
+    "pair": "P07_s1_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.3, 3.2, 4.2, and 5 support shared-window similarity, Claude's lookup exception, query-repetition effects, and reader saturation before recall. Prose limits the conclusion to evaluated QA settings and describes the lookup weakness in 'several models.' Reading recovers the selected capacity/use relation plus jointly fitting inputs, distinct tasks, and the exception. Its scope is adequate without importing unmentioned numerical thresholds or architecture experiments."
+  },
+  {
+    "id": "D4_text_138",
+    "pair": "P07_s1_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.3, 3.2, 4.2, and 5 support all four contrasts: position, shared-window capacity, lookup intervention, and recall versus reader gains. Prose uses 'generally,' 'several,' and 'necessarily' and names the Claude exception. Reading recovers the evidence-use relation and explicit evaluated-model, shared-length, and task distinctions. These qualifiers adequately bound the selected abstract conclusion without requiring all numerical configurations."
+  },
+  {
+    "id": "D4_text_139",
+    "pair": "P08_s2_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 sections 3.2-3.3 and equations 2-4 support critic-derived supervision, masked passage loss, and generation-plus-normalized-critique beam scoring. Prose says decoding prefers continuations 'it judges better grounded,' not that judgments certify support. Reading recovers the offline-to-online mechanism, separate support scoring, and adjustable controls without a critic call. Those method-specific boundaries are adequate without importing evaluation tasks or defaults absent from this paragraph."
+  },
+  {
+    "id": "D4_text_140",
+    "pair": "P08_s2_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 Table 1, sections 3.2-3.3, and equations 2-4 support passage-independent utility, loss masking, normalized retrieval thresholding, and weighted favorable-token beam scores. Prose contrasts candidate ranking with simply accepting the top passage. Reading recovers that mechanism and the offline critic/no-retraining boundaries. The paragraph describes learned assessments as selection criteria, not certified grounding; evaluation settings are unnecessary to this selected method claim."
+  },
+  {
+    "id": "D4_text_141",
+    "pair": "P08_s3_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 Table 2 verifies the 13B ASQA precision/recall/str-em and separate 7B PopQA numbers; sections 4.2-4.3 and 5.2 support matched inputs and customization costs. Prose identifies the 7B analysis and explicitly says the same-data comparison changes training and reflection together. Reading recovers these distinct comparisons and non-isolation boundary. Its 'separate ... effects ... not recoverable' correctly describes the claim's limits, not missing recovery of the selected relationship."
+  },
+  {
+    "id": "D4_text_142",
+    "pair": "P08_s3_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P08 Table 2 and sections 4.1-4.3/5.2 support all reported values, PopQA gold-answer inclusion, equal ASQA passages, and customization costs. Prose separates the 13B ChatGPT comparison from the 7B same-data comparison and rejects isolating reflection from retrieval-aware training. Reading recovers both relations and their conditions. Its uncertainty about reflection alone is appropriate because the paragraph deliberately claims only the combined approach's benefit."
+  },
+  {
+    "id": "D4_text_143",
+    "pair": "P07_s1_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.1-2.3 and 3.1-3.2 support paragraph-selected NaturalQuestions queries, answer-filtered distractors, controls, UUID JSON sizes, and containment evaluation. Prose's opening fixes question and answer evidence while reordering; its later length manipulation is separate. Reading recovers that design and the 2,655-query, 500-example, greedy-decoding boundaries. The synthetic task is explicitly minimal-language matching, adequately limiting the method's semantic generalization."
+  },
+  {
+    "id": "D4_text_144",
+    "pair": "P07_s1_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P07 sections 2.1-2.3 and 3.1-3.2 establish the fixed-answer reordering design, paragraph-selected queries, document/pair counts, controls, greedy decoding, and containment scoring. Prose expressly holds the document set fixed only for reordering and changes distractors separately. Reading recovers that separation and all consequential sample/task/scoring boundaries. 'Excluding annotated answers' preserves the source's filtering criterion without falsely guaranteeing absence of every reasonable alternative answer."
+  },
+  {
+    "id": "D5_text_145",
+    "pair": "P09_s2_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.3-2.6 support depthwise spatial filtering before fourfold pointwise expansion, simplified blocks, and downsampling divergence repaired by normalization. Sections 2-2.1 support fixed training, approximate FLOPs, and three-seed small-regime averages. Prose 'successive combined designs' and 'does not independently isolate' are recovered by the reading. The chosen cost relationship and common-training boundary are sufficient; neither prose nor reading treats these as independent factorial ablations."
+  },
+  {
+    "id": "D5_text_146",
+    "pair": "P09_s2_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.3-2.6 and Figure 4 ground the narrow-width depthwise filter, fourfold pointwise expansion, simplified block, and normalization repair. Sections 2-2.1 ground the sequential fixed 300-epoch recipe, approximate FLOPs, and small-regime three-seed averages. Prose 'conditional on earlier modifications' is recovered by the reading. Its inability to recover independent effects is the stated experimental limit, not failed recovery of the selected mechanism or scope."
+  },
+  {
+    "id": "D5_text_147",
+    "pair": "P10_s2_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Sections 3-6 support the coupled Gaussian, density-control, and rasterization mechanism. Table 1 and Section 7.2 support 30K real-dataset averages, native resolutions, A6000, training range, and mixed Mip-NeRF360 metrics; Section 7.4 supports storage and artifact limits. Prose 'not uniformly better' and the reading preserve metric dependence. Static capture, iteration budget, resource cost, and poor coverage adequately bound the claimed interactive reconstruction."
+  },
+  {
+    "id": "D5_text_148",
+    "pair": "P10_s2_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Sections 3-6 ground explicit anisotropic primitives, adaptive allocation, shared sorting, and uncapped blended-contributor gradients. Table 1 and Sections 7.2/7.4 ground the real-dataset runtime range, metric dependence, storage, coverage, and popping limits. Prose specifies native resolutions; the reading recovers the central coupling and consequential static-scene, A6000, budget, metric, and resource boundaries. Its shorter scope summary makes no fixed-resolution or portable-speed inference, so selected scope remains adequate."
+  },
+  {
+    "id": "D5_text_149",
+    "pair": "P10_s3_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Sections 3-6 support SfM-initialized Gaussians without normals, density refinement, shared ordering, and reverse opacity recovery. Table 1 confirms 30K dataset-average rates/training times and higher SSIM/lower LPIPS across all three real datasets, with lower PSNR on Mip-NeRF360. Prose 'held-out views' and the reading preserve the real-scene aggregate scope, A6000, budget, storage, and artifact limits. No per-scene superiority or exact-visibility guarantee is inferred."
+  },
+  {
+    "id": "D5_text_150",
+    "pair": "P10_s3_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Sections 3-6 support opacity/SH Gaussians, no normal estimation, adaptive refinement, and shared-sort rendering without a fixed contributor cutoff. Table 1 and Section 7.2 support held-out real-dataset 30K rates, A6000, times, and the SSIM/PSNR contrast; Section 7.4 supports storage and artifacts. Prose 'metric-dependent ... rather than uniform superiority' is recovered by the reading. Named datasets, static capture, budget, resources, and visibility limitations sufficiently scope the conclusion."
+  },
+  {
+    "id": "D5_text_151",
+    "pair": "P09_s1_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.3-2.6 and Figure 4 support narrow-width 7 x 7 depthwise filtering before fourfold pointwise expansion, one LayerNorm/GELU, and normalized downsampling. Sections 2-2.1 support fixed 300-epoch AdamW, approximate FLOPs, and three-seed smaller-regime averages. Prose 'unequal intermediate costs limit attribution' and the reading preserve the sequential experiment's boundary. This adequately grounds the selected spatial-cost relationship without crediting independent component effects."
+  },
+  {
+    "id": "D5_text_152",
+    "pair": "P09_s1_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.3-2.6 and Figure 4 support depthwise-before-pointwise ordering, fourfold expansion, one GELU/LayerNorm, and normalized separate downsampling. Section 2.1 and the roadmap support fixed training, three-seed small-regime averages, and varying intermediate FLOPs. Prose 'do not isolate independent component effects' is recovered by the reading. Its 'unclear' statement repeats this explicit attribution limit, not a misunderstanding; the chosen cost/mechanism and experimental scope are recoverable."
+  },
+  {
+    "id": "D5_text_153",
+    "pair": "P10_s3_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Section 6 supports one tile/depth radix sort, saturation-based forward blending, reverse traversal, final-opacity reconstruction, and constant extra per-pixel storage. Section 5 supports L1/D-SSIM supervision and positional-gradient cloning/splitting. Prose 'every blended primitive' limits the uncapped-gradient statement to actual contributors. The reading recovers the sorting/storage relationship plus tile size, saturation, and approximate visibility; this selected method scope does not require benchmark protocols."
+  },
+  {
+    "id": "D5_text_154",
+    "pair": "P10_s3_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Sections 4-6 support projected covariances, tile/depth sorting, reverse recovery of opacity factors, image-loss updates, and gradient-guided cloning/splitting. Prose 'until opacity saturation' and 'shared order approximates visibility' qualify the no-fixed-count statement. The reading recovers the efficiency/gradient relationship and both algorithmic boundaries. Its concise scope omits no consequential benchmark condition because the paragraph selects the rendering mechanism, not a numerical evaluation claim."
+  },
+  {
+    "id": "D5_text_155",
+    "pair": "P10_s1_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Sections 3-6 support anisotropic representation, density adaptation, and tile rasterization with uncapped contributor gradients. Table 1 supports 30K real-dataset rates, native resolutions, A6000, training range, and aggregate quality relative to fast baselines; Section 7.4 supports storage/artifact limits. Prose 'rather than uniform metric superiority' and the reading preserve the Mip-NeRF360 PSNR exception. Static capture and measured resource conditions adequately constrain interactive-quality claims."
+  },
+  {
+    "id": "D5_text_156",
+    "pair": "P10_s1_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Sections 3-6 support the representation/optimization/rasterization coupling. Table 1 verifies real-dataset 30K rates and training times, better aggregate quality than tested fast baselines, larger storage, and lower Mip-NeRF360-dataset PSNR. Prose 'respective native resolutions' and the reading preserve hardware/budget specificity and metric dependence. The quality statement concerns the reported aggregate configurations, not every synthetic object or individual view; static capture and artifact limits adequately bound the conclusion."
+  },
+  {
+    "id": "D5_text_157",
+    "pair": "P09_s2_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2-4 and Table 1 support fixed-recipe modernization, narrow-width spatial filtering, the 384-resolution B comparison, and IN-22K-pretrained XL's 87.8. Prose names classification, COCO, ADE20K, and 'both training scales'; the reading recovers training plus architecture and those evaluation boundaries. 'Competitive recognition' is confined to these workloads, not all vision or multimodal tasks, so omitted alternative-task limitations do not undermine the selected abstract claim."
+  },
+  {
+    "id": "D5_text_158",
+    "pair": "P09_s2_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.1, 2.3-2.6, and 3-4 support training-first redesign, spatial/channel separation, scale-up, and downstream competitiveness; Table 1 verifies all numbers and V100 measurement. Prose 'for the evaluated recognition tasks' explicitly limits the conclusion. The reading recovers fixed training, approximate cost control, model/data scales, and named downstream datasets. This is sufficient scope for the selected attention-free alternative, without requiring the abstract to enumerate unevaluated task types."
+  },
+  {
+    "id": "D5_text_159",
+    "pair": "P10_s2_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Table 1 supports the Mip-NeRF360 metric/storage contrast and Tanks & Temples 7K/30K PSNR/FPS tradeoff. Table 3 and Section 7.3 support the separate Truck gradient-cap result. Prose 'in that setting' prevents generalizing the ablation to every cutoff or scene; the reading preserves this local support and residual artifacts. The named datasets, budgets, A6000 measurement, and distinct ablation sufficiently bound the selected tradeoff."
+  },
+  {
+    "id": "D5_text_160",
+    "pair": "P10_s2_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Table 1 supports the published-reference mixed metrics, 134 A6000 FPS, training time, and 734 versus 8.6 MB stored parameters. Table 3's Truck-30K column and Section 7.3 support the ten-frontmost cutoff's 24.81-to-13.84 PSNR reduction. Prose 'separate Truck ablation' and the reading keep this local quality test distinct from main-table results. Metric dependence, storage, dataset/budget, and coverage/popping limits adequately constrain the interactive-rendering claim."
+  },
+  {
+    "id": "D5_text_161",
+    "pair": "P09_s1_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Tables 1 and 3 ground the IN-1K 384/V100 classification comparison and both IN-22K-pretrained COCO backbones under Cascade Mask R-CNN 3x. Sections 2.5-2.6 ground neutral GELU, kernel saturation, and normalization-repaired downsampling. Prose 'combined design' and the reading reject universal component benefit while retaining the normalization condition. The selected task, model, pretraining, head, and measurement boundaries are adequate."
+  },
+  {
+    "id": "D5_text_162",
+    "pair": "P09_s1_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Tables 1 and 3 support the quoted B-model accuracy, V100 throughput, and IN-22K COCO AP; Sections 2.5-2.6 support the neutral GELU, kernel saturation, and downsampling instability. Prose 'evaluated combination' limits component attribution. The reading recovers both practical competitiveness and that boundary, retaining 384 resolution, pretraining, head, and schedule. These conditions adequately bound the selected comparisons without implying every borrowed component helps."
+  },
+  {
+    "id": "D5_text_163",
+    "pair": "P10_s2_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Section 6 supports tile/depth radix sorting, reverse traversal, saved final opacity, and gradients without a fixed contributor-count limit; Sections 4-5 support parameter and density updates. Prose 'until saturation' and 'blending remains approximate' bound the guarantee. The reading recovers the sorting/storage mechanism and both boundaries, not a guarantee of exact visibility or gradients for every scene primitive. The selected algorithmic scope is adequate."
+  },
+  {
+    "id": "D5_text_164",
+    "pair": "P10_s2_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Section 6 supports overlapping tiles, tile/depth keys, one radix sort, saturation stopping, and reverse opacity reconstruction; Sections 4-5 support parameter optimization and density changes. Prose 'all blended contributors' and 'visibility-aware blending is approximate' delimit the gradient and visibility claims. The reading recovers shared-list efficiency and both qualifications, without extending gradients to culled or unblended primitives. The selected algorithmic scope is adequate."
+  },
+  {
+    "id": "D5_text_165",
+    "pair": "P09_s1_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2-4 and Table 1 support training-first modernization, attention-free spatial/channel separation, B-model accuracy/12.5% V100 throughput advantage, and XL's 87.8 after IN-22K pretraining. Tables 3-4 support overall box/mask AP and mIoU competitiveness, not every AP submetric. Prose's multimodal/structured-output caveat is grounded in Section F and recovered by the reading. Named recognition workloads and unresolved alternative tasks adequately bound the conclusion."
+  },
+  {
+    "id": "D5_text_166",
+    "pair": "P09_s1_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Section 2.1 supports the baseline training gain and fixed-recipe architecture comparison; Sections 2.3-2.6 support spatial/channel separation. Table 1 verifies accuracy, 12.5% V100 throughput advantage, and XL scaling; Tables 3-4 support overall downstream competitiveness. Prose 'across these recognition tasks' is recovered through the reading's named datasets and training scales. The claim concerns evaluated Swin-style modules, not attention's necessity for unevaluated multimodal or structured-output tasks."
+  },
+  {
+    "id": "D5_text_167",
+    "pair": "P09_s2_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Tables 1, 3, and 4 support all classification, COCO AP, and ADE20K mIoU comparisons, including EfficientNetV2-L's higher score at different resolution. Prose 'prediction quality rather than the classification speed benefit' separates downstream quality from classification throughput; the reading explicitly recovers that limit. IN-1K versus IN-22K, V100, resolution, heads, and multi-scale testing adequately bound these selected comparisons without requiring every training hyperparameter."
+  },
+  {
+    "id": "D5_text_168",
+    "pair": "P09_s2_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Table 1 confirms B-model accuracy/throughput/FLOPs and EfficientNetV2-L's higher 85.7 at 480 resolution; Tables 3-4 confirm the IN-22K AP and 640-crop mIoU comparisons. Prose 'not the best accuracy' blocks a universal ranking. The reading recovers that exception and the separate downstream protocols. Omitting the COCO schedule does not change this selected, head/pretraining-specific quality comparison; no downstream speed gain is asserted."
+  },
+  {
+    "id": "D5_text_169",
+    "pair": "P10_s1_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Section 6 supports overlapping 16 x 16 tiles, one radix sort, shared-memory batches, reverse recovery of opacity, and constant additional per-pixel storage. Prose 'no predetermined splat-count cap' concerns blended contributors, while saturation and approximate ordering remain explicit. The reading recovers these qualifications alongside the visibility/storage relationship. No claim of constant total scene memory or exact large-splat visibility is made; this algorithmic scope is sufficient."
+  },
+  {
+    "id": "D5_text_170",
+    "pair": "P10_s1_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Section 6 grounds duplicated overlapping-tile instances, GPU sorting, shared-memory blending, reverse traversal, and recovered opacity rather than per-pixel histories. Prose limits gradients to 'contributing' splats and retains opacity saturation and approximate large-splat ordering. The reading recovers the shared visibility/storage mechanism and these qualifications. The paragraph asserts reduced overhead without a count cap, not exact visibility or bounded total scene memory, so its selected scope is adequate."
+  },
+  {
+    "id": "D5_text_171",
+    "pair": "P10_s1_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Table 1 verifies the published-reference metric contrast and 7K/30K time, FPS, and stored-parameter tradeoff. Table 3's Truck-30K column and Section 7.3 support 24.81 versus 13.84 with the ten-frontmost gradient cap; Section 7.4 supports popping. Prose 'separate' ablation and the reading keep that experiment distinct from dataset averages. Dataset, budget, A6000, storage, and metric qualifications adequately scope the selected result; no matched-GPU baseline training speedup is claimed."
+  },
+  {
+    "id": "D5_text_172",
+    "pair": "P10_s1_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Table 1 verifies copied-reference metrics and the Mip-NeRF360-dataset 7K/30K time, A6000 FPS, and stored-parameter contrast; Section 7.2 supports native resolutions. Table 3's Truck-30K column/caption and Section 7.3 support the separately prepared gradient-cap ablation. Prose 'tested optimization' and the reading preserve the local inference, resource costs, and coverage/order artifacts. The selected result's dataset, budget, measurement, and ablation boundaries are adequate."
+  },
+  {
+    "id": "D5_text_173",
+    "pair": "P09_s3_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2-4 and Figure 4 support progressive fixed-training convolutional redesign, 7 x 7 filtering before fourfold expansion, and competitive recognition. Table 1 supports the B-model and XL numbers, resolution, and V100 throughput. Prose 'in these workloads' and 'rather than ... an isolated cause' limit task scope and causation; the reading recovers both. The selected recognition alternative is supported without asserting attention removal independently caused the gains."
+  },
+  {
+    "id": "D5_text_174",
+    "pair": "P09_s3_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.1-2.6 ground enhanced training, stage redesign, narrow-width depthwise filtering, and stabilized transitions; Table 1 grounds the B and XL measurements. Sections 4 and Tables 3-4 ground downstream competitiveness. Prose concludes about 'recognition backbones,' and the reading retains specified datasets, resolution, hardware, and pretraining scales. This task-limited demonstration does not claim all Transformer functions or an independently measured benefit from removing attention, so scope is adequate."
+  },
+  {
+    "id": "D5_text_175",
+    "pair": "P09_s3_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.1 and 2.6 support 76.1-to-78.8 training improvement, neutral GELU at 80.6, fewer activations at 81.3, and normalized downsampling at 82.0 versus 81.3. Table 3 supports the IN-22K COCO B-model AP comparison. Prose 'conditional on preceding modifications' and the reading preserve sequential attribution rather than independent causation. Dataset, head, pretraining, and schedule adequately bound the selected transfer comparison."
+  },
+  {
+    "id": "D5_text_176",
+    "pair": "P09_s3_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.1 and 2.6 support the training gain, neutral activation substitution, beneficial activation reduction, and normalization-repaired downsampling at 82.0. Table 3 supports the IN-22K Cascade Mask R-CNN 3x COCO comparison. Prose 'conditional on preceding redesigns' and the reading retain the sequential attribution boundary, distinguishing roadmap and transfer evidence. Named pretraining, head, schedule, and metrics sufficiently constrain the selected coordinated-design result."
+  },
+  {
+    "id": "D5_text_177",
+    "pair": "P09_s3_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Figure 4 and Sections 2.2-2.6 confirm depthwise-before-expansion ordering, LayerNorm placement, one GELU, fourfold width, patchify stem, and normalized downsampling. Sections 2-2.1 confirm ImageNet-1K, fixed 300-epoch AdamW, approximate FLOPs, and three-seed small-regime averages. Prose 'conditional on the preceding architecture' is explicitly recovered by the reading. These conditions adequately support the chosen spatial-cost relationship without independent-component attribution."
+  },
+  {
+    "id": "D5_text_178",
+    "pair": "P09_s3_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P09 Sections 2.2-2.6 and Figure 4 support narrow-width spatial filtering, LayerNorm, fourfold pointwise expansion, and the normalized hierarchy. Sections 2-2.1 support the fixed ImageNet-1K recipe, approximate FLOPs, and ResNet-50 three-seed averages. Prose 'depend on the configuration already reached' is recovered by the reading. Its 'unclear' remark about independent effects correctly recognizes this explicit boundary; the selected mechanism and experimental scope are fully recoverable."
+  },
+  {
+    "id": "D5_text_179",
+    "pair": "P10_s3_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Table 1 supports the within-method Mip-NeRF360-dataset budget/quality/FPS/storage changes and mixed baseline metrics. Table 3's Average-30K column, caption, and Section 7.3 support 19.19 versus 26.05 on manually downsampled Truck/Garden/Bicycle with unstable capped gradients. Prose 'in these scenes' and the reading preserve local ablation scope. Hardware is unnamed, but no portable FPS guarantee or cross-hardware speedup is asserted; dataset-specific directional tradeoffs remain adequately bounded."
+  },
+  {
+    "id": "D5_text_180",
+    "pair": "P10_s3_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P10 Table 1 supports the budget, metric, FPS, and storage changes; Section 7.2 footnote 2 identifies four A100s for 12 hours, unlike A6000. Table 3 Average-30K and Section 7.3 support the three-scene ten-frontmost cap result. Prose 'not ... a matched-GPU speedup' and the reading correctly preserve this exception and local ablation scope. Missing preprocessing detail does not imply comparison with differently prepared main-table images."
+  },
+  {
+    "id": "D6_text_181",
+    "pair": "P12_s1_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2), Section 4.1 and Theorem 4.2 support the update, bounded trajectory, telescoping identity and separately conditional marginal-error analysis. Prose distinguishes target alpha from alpha_t, specifies initialization and non-decreasing full/empty quantile extensions, and lists stationary hidden Markov/fixed-function/Lipschitz/interior-root assumptions. The reading recovers the feedback-to-accumulated-error relationship and these boundaries. It does not mistake the stronger marginal result for an assumption-free guarantee."
+  },
+  {
+    "id": "D6_text_182",
+    "pair": "P12_s1_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2), Lemma 4.1 and Proposition 4.1 support the update, telescoping identity and bounded-feedback argument. Sections 4.2.1 and 4.2.3 give the separately stated stationary hidden Markov, fixed-function, Lipschitz and interior-root conditions. Prose 'rather than certifying individual predictions' and the full/empty-set initialization conditions adequately delimit the selected method. The reading recovers both this pathwise relationship and the stronger theory's distinct scope."
+  },
+  {
+    "id": "D6_text_183",
+    "pair": "P11_s3_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Section 2.1 gives the stated criterion, fallback and comparison with the full-sample oracle. Prose 'reserves room for an unseen loss' explains why the correction enables expected-risk control. The reading recovers that mechanism; its core supplies non-increasing losses while its scope supplies the upper bound, safe maximum, exchangeability and right-continuity. The selected proof scope is adequate, without promising calibration-conditional control."
+  },
+  {
+    "id": "D6_text_184",
+    "pair": "P11_s3_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Section 2.1 supports reserving B, oracle ordering and the exchangeable conditional-average argument. Prose explicitly supplies nonincreasing losses, right-continuity and a safe endpoint; 'finite-sample expectation guarantee' correctly distinguishes the claim from calibrated model probabilities. The reading recovers the selected proof mechanism and these conditions. The absence of experimental details is not a defect for this legitimate methods function."
+  },
+  {
+    "id": "D6_text_185",
+    "pair": "P11_s1_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Theorems 1-2 and Section 2.3 support the corrected expected-risk guarantee, stronger tightness conditions and envelope conservatism. Sections 3 and 4.1-4.3 support the application, quantile, multiple-risk and specified-weighting summaries. Prose explicitly restricts shift accommodation to 'specified weighting information'; the reading preserves that requirement while acknowledging it cannot reconstruct exact weights. Scope is adequate for the overview, which neither asserts unrestricted shift protection nor substitutes boundedness for monotonicity."
+  },
+  {
+    "id": "D6_text_186",
+    "pair": "P11_s1_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 2.1-2.3 support the corrected expected-loss guarantee, sharp 2B/(n+1) shortfall under stronger conditions and conservative envelope repair. Section 3 supports near-target means over 1,000 splits in four applications. Prose lists exchangeability, non-increasing/right-continuous losses and a safe terminal, then separately states tightness assumptions. The reading recovers this selected generalization and its structural scope, rather than treating boundedness or the examples as sufficient for arbitrary losses."
+  },
+  {
+    "id": "D6_text_187",
+    "pair": "P11_s2_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 2.1-2.3 support the expected-risk correction, sharp lower bound under stronger conditions and non-monotone counterexample; Sections 3.1-3.4 support the four repeated-split examples. Prose 'averaging over both calibration and test data' and the separate lower-bound assumptions are recovered by the reading. Its uncertainty about exact shift conditions is appropriate: the paragraph only summarizes specified-shift extensions and explicitly requires shift information, rather than asserting unrestricted robustness."
+  },
+  {
+    "id": "D6_text_188",
+    "pair": "P11_s2_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Theorems 1-2, Proposition 1, Proposition 2 and Sections 3.1-3.4 support graded expected-risk calibration, stronger sharp-lower-bound assumptions, non-monotone failure and repeated application means. Prose 'rather than applying to each realized split' and the distinct i.i.d./nonnegative/no-fixed-jump conditions adequately delimit the guarantees. The reading recovers this generalization, averaging scope and monotonicity boundary. The selected abstract does not need every extension or repair mechanism to remain faithful."
+  },
+  {
+    "id": "D6_text_189",
+    "pair": "P11_s2_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 3.1-3.3 give all stated means, standard deviations, targets and calibration sizes; Section 3.3 explicitly reports almost-always leaf predictions. Section 2.3 supports non-monotone failure and conservative envelope repair. Prose 'not control within every split' and the calibration-size caveat delimit the empirical interpretation. The reading recovers near-target risk without indiscriminate coarsening and these qualifications. This selected relationship need not include the omitted QA result."
+  },
+  {
+    "id": "D6_text_190",
+    "pair": "P11_s2_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 3.1-3.3 and Figures 1-3 support the stated statistics, split count, differing calibration sizes and almost-always leaf resolution; Section 2.3 supports failure and envelope repair. Prose 'individual splits can exceed the target' and 'under the other required conditions' prevent per-split or unconditional repair readings. The reading recovers graded-risk calibration without uniform coarsening and the confounded dispersion comparison. Its acknowledged inability to enumerate repair conditions is appropriate to this explicitly qualified empirical summary."
+  },
+  {
+    "id": "D6_text_191",
+    "pair": "P12_s1_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2), Proposition 4.1, Section 4.2 and Sections 2.1-2.2, 5-7 support feedback, general long-run control, conditional sharper bounds, score dependence and immediate outcomes. Prose 'not coverage at every time' and 'constructed east-to-west ordering' adequately limit theory and experiments. The reading recovers these distinctions and the step-size tradeoff. Additional regularity remains acknowledged rather than reconstructed; the paragraph does not promise the stronger bounds without it."
+  },
+  {
+    "id": "D6_text_192",
+    "pair": "P12_s1_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Proposition 4.1 supports the order 1/(gamma T) frequency bound with the stated initialization and endpoint conventions. Sections 4.2, 2.2, 5 and 6 support the separate conditional theory, normalized-score comparisons and constructed county drift. Prose 'not coverage at every time' and 'additional regularity' avoid an unconditional local guarantee. The reading recovers the feedback relationship, long-run/pointwise distinction, score dependence and step-size tradeoff; no detailed regularity theorem is claimed recoverable."
+  },
+  {
+    "id": "D6_text_193",
+    "pair": "P12_s1_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Sections 2.1-2.2 and 5 support the rolling GARCH setup, step/window sizes, selected stock failures, normalization ablation and larger-step tradeoff. Prose 'difficult cases rather than an average comparative advantage' correctly limits selection, and distinguishes empirical local coverage from long-run frequency theory. The reading recovers normalized adaptation's benefit and its failure to offset the alternative score's drift, with all consequential selected-case conditions preserved. No election comparison is required for this stock-focused result."
+  },
+  {
+    "id": "D6_text_194",
+    "pair": "P12_s1_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Section 2.2 and Equation (4) support shared 1,250-day GARCH refitting and centered 500-day coverage; Sections 2.1 and 5 support the step-size tradeoff and normalization ablation. Prose 'difficult cases rather than estimate an average advantage' preserves the four-of-twelve selection condition. The reading recovers feedback beyond refitting and wider unnormalized swings, with empirical local stability distinguished from cumulative frequency control. The stock-only selected result is legitimate."
+  },
+  {
+    "id": "D6_text_195",
+    "pair": "P12_s3_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "concern",
+    "core_recovery": 2,
+    "scope_recovery": 1,
+    "failure_types": [
+      "text_missing"
+    ],
+    "reason": "P12 Equation (2) and Proposition 4.1 support the update and telescoping mechanism, which the reading recovers. However, Section 4.1 explicitly assumes alpha_1 in [0,1] before Lemma 4.1's interval guarantee. Prose 'keeps alpha_t between -gamma and 1 + gamma' omits that initialization condition; the reading also lacks it. Extreme sets and short-window limits are recovered, but the exact trajectory-bound scope is incomplete. This is a missing condition, not an invented numerical formula."
+  },
+  {
+    "id": "D6_text_196",
+    "pair": "P12_s3_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2), Section 4.1, Lemma 4.1 and Proposition 4.1 support the update, telescoping identity and parameter interval. Prose specifies initialization, positive step size and non-decreasing quantiles extended to full/empty sets, then says 'short-window coverage need not follow.' The reading recovers both the bounded-feedback mechanism and these boundaries, including permitted extreme sets. No shift model or pointwise guarantee is inferred."
+  },
+  {
+    "id": "D6_text_197",
+    "pair": "P11_s2_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Section 2.1, Theorem 1's proof, supplies the infimum criterion, fallback and symmetric oracle comparison. Prose 'over calibration and test randomness' establishes the expectation's scope, while non-increasing losses, exchangeability and right-continuity explain transfer of the bound. The reading recovers that proof and includes the safe maximum in its core. Not requiring the unseen test outcome is supported by the implementable criterion, not invented model calibration."
+  },
+  {
+    "id": "D6_text_198",
+    "pair": "P11_s2_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Section 2.1, Theorem 1 and its proof support the corrected criterion, safe fallback, oracle ordering and exchangeability argument. Prose 'averaged over calibration and test randomness' explicitly locates the guarantee. The reading recovers this proof relationship and the boundedness, monotonicity, right-continuity and safe-endpoint conditions. This legitimate methods focus need not reproduce the experimental-split anchor."
+  },
+  {
+    "id": "D6_text_199",
+    "pair": "P12_s3_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2), Proposition 4.1, Section 4.2 and Figures 1-3 support feedback, long-run control, conditional sharper bounds and the empirical contrasts. Prose 'not coverage at every time point' and its full/empty-set convention delimit the general claim; fixed functions and stationary hidden Markov initialization delimit stronger theory. The reading recovers these distinctions and immediate feedback. Unspecified additional regularity is acknowledged, not treated as an unconditional sharper guarantee."
+  },
+  {
+    "id": "D6_text_200",
+    "pair": "P12_s3_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2) and Proposition 4.1 support the bounded-feedback explanation; Section 4.2 supports the separately conditional sharper theory, and Sections 2.2, 5-7 support the experiments and feedback limitation. Prose 'not coverage at every time point' and fixed-function/stationary assumptions adequately bound this overview. The reading recovers accumulated rather than pointwise control and score sensitivity. Its acknowledged inability to enumerate additional regularity does not convert the explicitly qualified summary into an unconditional theorem."
+  },
+  {
+    "id": "D6_text_201",
+    "pair": "P12_s2_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Sections 2.1-2.2, 5 and 6 support the numerical settings, feedback comparison, score ablation and constructed county ordering. The retained Section 2.2 itself reports favorable adaptation in all twelve cases; excluded appendix plots are unnecessary grounding. Prose 'not consequences of the unrestricted long-run frequency guarantee' separates empirical local gains from theory. The reading recovers that distinction, selection bias, shared refitting and the two window sizes."
+  },
+  {
+    "id": "D6_text_202",
+    "pair": "P12_s2_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Sections 2.2, 5 and 6 support 500-day and 300-county coverage comparisons, shared 1,250-day refitting, selected stock failures and normalization sensitivity. Section 2.2 directly reports favorable performance for all twelve. Prose 'constructed geographic drift, not a reconstruction of election-night performance' accurately bounds the county finding. The reading recovers the empirical relationship and selected/constructed evaluation scope without turning these trajectories into a general local-coverage guarantee."
+  },
+  {
+    "id": "D6_text_203",
+    "pair": "P11_s1_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 3.1-3.2 give the stated numerical results and split/count conditions; Section 2.3 supports the counterexample and upper-envelope conservatism. Prose 'the theorem does not cap risk separately for every split' correctly interprets Section 2.1's expected-risk guarantee. The reading recovers this mean-versus-dispersion relationship, preserves task/model confounding, and does not generalize the monotone experiments to arbitrary bounded losses. These are adequate boundaries for the selected two-task result."
+  },
+  {
+    "id": "D6_text_204",
+    "pair": "P11_s1_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 3.1-3.2 and Figures 1-2 support the reported counts, targets, means and between-split deviations. Section 2.1 gives an expectation guarantee, while Section 2.3 supplies bounded non-monotone failure and conservative envelope repair. Prose 'not the sufficiency of boundedness alone' and the task/model confounding caveat delimit the comparison. The reading recovers near-target means, non-splitwise control and the structural monotonicity boundary; no missing application is needed for this selected function."
+  },
+  {
+    "id": "D6_text_205",
+    "pair": "P12_s2_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2), Proposition 4.1 and Section 4.2 support quantile-level feedback, general long-run frequency control and conditional sharper bounds. Sections 2.2, 5-7 support local comparisons, normalization sensitivity and immediate outcomes. Prose correctly increases the quantile level after a miss, not the miscoverage parameter, and says 'does not establish coverage at every time.' The reading recovers this relationship and the fixed-step/extreme-set versus stationary hidden Markov scope; unspecified regularity remains explicitly qualified."
+  },
+  {
+    "id": "D6_text_206",
+    "pair": "P12_s2_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2) and Proposition 4.1 support distribution-free long-run feedback control; Section 4.2 supports stronger bounds only with the identified joint stationarity and fixed functions. Sections 2.2 and 5-7 support local empirical gains, score sensitivity and per-step feedback. Prose 'does not establish coverage at each time' bounds the general promise. The reading recovers these distinctions and the positive fixed step/full-empty conventions, while correctly leaving unspecified additional regularity unreconstructed."
+  },
+  {
+    "id": "D6_text_207",
+    "pair": "P11_s3_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 2.1-2.3 support unseen-loss correction, the sharp lower bound under additional assumptions and non-monotone failure/repair; Section 3 supports the four nonbinary applications and split count. Prose 'rather than certifying risk for every fitted set' and its separately stated tightness conditions adequately delimit the guarantee. The reading recovers graded expected-loss calibration, the monotonicity link and conservative envelope repair without claiming individual-set or unconditional tightness guarantees."
+  },
+  {
+    "id": "D6_text_208",
+    "pair": "P11_s3_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Theorems 1-2, Proposition 1, Proposition 2 and Corollary 1 support the upper guarantee, sharp conditional lower bound and upper-envelope repair. Sections 3.1-3.4 support the application/split summary. Prose 'rather than holding for each fitted set' and 'can sacrifice informativeness' delimit the claims. The reading recovers the graded-loss relationship, stronger tightness conditions, averaging scope and conservative repair, without importing omitted source facts."
+  },
+  {
+    "id": "D6_text_209",
+    "pair": "P11_s3_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 3.1-3.2 support near-target means, deviations and split/count settings, while Theorem 1 supports averaging over calibration/test data and Proposition 2 supports the non-monotone boundary. Prose 'rather than constraining every split or image' and inability to isolate dispersion causes are explicit. The reading recovers near-target rather than substantial undershooting, the confounded comparison and tested-monotone scope. No claim that empirical examples establish tightness for all losses is made."
+  },
+  {
+    "id": "D6_text_210",
+    "pair": "P11_s3_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Sections 3.1-3.2 support the means, deviations, targets, counts and repeated splits. Section 2.1 supports the distinction from per-split/image guarantees; Proposition 2 supports expected loss near B without monotonicity. Prose 'cannot justify removing that assumption' states the structural boundary, and its different-task/calibration-size caveat prevents causal attribution of dispersion. The reading recovers this empirical mean-versus-variation relationship and both qualifications. Omitting envelope repair does not weaken the selected claim."
+  },
+  {
+    "id": "D6_text_211",
+    "pair": "P11_s1_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Section 2.1 supports the corrected calibration rule and safe maximum, oracle ordering, non-increasing-loss comparison and exchangeability/right-continuity steps. Prose 'finite-sample expected-risk guarantee' accurately states the conclusion. The reading recovers the correction-to-oracle relationship, and its combined core/scope includes the necessary loss and endpoint conditions. It does not mistake conditioning on the unordered full sample within the proof for a guarantee conditional on a fitted calibration sample."
+  },
+  {
+    "id": "D6_text_212",
+    "pair": "P11_s1_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P11 Section 2.1 supports the infimum criterion, safe terminal fallback and full-sample oracle argument. Prose 'rather than conditioning on a particular calibration sample' accurately identifies the expectation's scope. The reading recovers the correction-to-oracle relationship and all stated structural requirements, including exchangeability and right-continuity. Its selected relationship is the calibration proof, legitimately different from the experimental methods anchor."
+  },
+  {
+    "id": "D6_text_213",
+    "pair": "P12_s2_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Equation (2), Lemma 4.1 and Proposition 4.1 give the stated feedback, telescoping identity, interval and exact absolute-deviation bound; original PDF page 6 confirms the gamma denominator. Prose specifies initialization, positive step, extreme-set conventions and fixed-function comparison for enlargement. The reading recovers the bounded-feedback mechanism and 'not marginal coverage at every time' boundary. This is a legitimate theoretical methods selection, not an incomplete empirical-comparison paragraph."
+  },
+  {
+    "id": "D6_text_214",
+    "pair": "P12_s2_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Sections 2 and 4.1 support simultaneous score/quantile updates, error-feedback calibration, the telescoping cumulative identity and exact finite-horizon frequency bound. Prose states positive step, initialization and whole-space/empty-set conventions, then says the result does not ensure every short window. The reading recovers the selected feedback mechanism and these conditions, without importing fixed-function restrictions from Section 4.2 into the general long-run guarantee."
+  },
+  {
+    "id": "D6_text_215",
+    "pair": "P12_s3_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Sections 2.1-2.2, 5 and 6 support the 0.005 step, rolling histories, two window sizes, stock-failure selection and randomized within-zone order. Prose 'feedback alone therefore did not stabilize local coverage' appropriately limits the normalized-score success using Figure 2. The reading recovers adaptation's empirical benefit and score sensitivity, while retaining selected-case and constructed-order limits. It does not claim average superiority or actual election-night replay."
+  },
+  {
+    "id": "D6_text_216",
+    "pair": "P12_s3_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline",
+    "fidelity": "pass",
+    "core_recovery": 2,
+    "scope_recovery": 2,
+    "failure_types": [
+      "none"
+    ],
+    "reason": "P12 Sections 2.1-2.2 and Figures 1-3 support the step size, rolling histories, window sizes, crisis comparison and score sensitivity; Section 6 gives the constructed county order. Prose identifies the four selected failures and says 'not guaranteed pointwise coverage or shorter intervals.' The reading recovers feedback beyond shared refitting, normalization sensitivity and constructed-drift limits. Scope is adequate for these empirical comparisons, not a universal performance claim."
+  }
+]

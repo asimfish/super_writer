@@ -1,0 +1,346 @@
+{
+  "reviews": [
+    {
+      "id": "P01_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'generator trained on task and play data' matches the 10/10 pushing condition in P01 IV-A4d/Table IIc; B's 'matched starts' matches IV-E1. Both clearly connect view synthesis, geometric labels, and transfer, with accurate recoverability limits. A is more explicit about generator training, B about evaluation controls; neither has a material abstract-level advantage."
+    },
+    {
+      "id": "P01_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'coordination during rotation' and B's 'positional drift' both match P01 IV-C2's baseline failure description. Both correctly retain the separate 80/0 and 70/30 comparisons and avoid treating them as isolating play's effect, consistent with Table IV's note. A's task-specific framing and B's explicit test-condition explanation provide comparable results interpretation."
+    },
+    {
+      "id": "P13_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'variability-aware training' and B's 'modeling human variability' both interpret P13 VI-A/B, Fig. 9 correctly: chunking benefits two baselines, CVAE gains concentrate on human data, and separately tuned ensembling hurts VINN. B's opening is slightly smoother, but both explain these relationships and limits equally well; the stylistic difference is too small to break the tie."
+    },
+    {
+      "id": "P13_s3_methods",
+      "winner": "A",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "concern",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "B's 'effective prediction horizon' is ambiguous: P13 IV-A shortens the task's effective horizon, while the forecast spans k actions. This is a fidelity concern, not an incorrect algorithm description. A uses the task-horizon framing and supplies variational-encoder inputs (IV-B). Both preserve leader-target force offsets and same-timestep ensembling; A is more technically precise."
+    },
+    {
+      "id": "P13_s1_abstract",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 4,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B's 'Autonomous velcro threading' and 'zip-tie threading' distinguish policy evaluation from human teleoperation. P13 V-B/C and Table III report 100 demonstrations and 20% for velcro; VI-C reports 33-to-20-second zip-tie times. A's repeated unqualified 'threading' blurs that distinction. Both accurately present the hardware-policy contribution and main task results; B communicates the two experiments more precisely."
+    },
+    {
+      "id": "P01_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'even when conventional image augmentation is already present' and B's 'modest offline error reduction' frame the same supported contrast (P01 Table I, IV-A4a). Both distinguish within-test augmentation gains from the unisolated effect of play in separate pouring tests (Table IV). Their evidence-to-claim links are equally strong; B's additional mechanism qualification does not create a material advantage."
+    },
+    {
+      "id": "P13_s3_abstract",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B links direct joint mapping to avoiding inverse kinematics near singularities, the design rationale in P13 III, instead of A's hardware-component list. Its 'leader updates' also identifies the manipulated frequency variable (Appendix E). Both match Table II/III outcomes and initial candy failures in Appendix F. B explains the platform's contribution more clearly."
+    },
+    {
+      "id": "P13_s2_methods",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B's 'pauses within a chunk' connects sequence prediction to the non-Markovian demonstrations discussed in P13 IV-A. A explains horizon reduction and deterministic deployment well but leaves that relationship unstated. Both accurately preserve leader-target force offsets, same-timestep exponential ensembling, and zero-latent inference (IV, IV-B). B better explains why chunking suits the demonstration behavior."
+    },
+    {
+      "id": "P01_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both center corrective supervision around recoverable deviations, consistent with P01 III-C2. Their ten-trial and play-trained eight-demo results match Table IIa/IV-A4b, and cup-arrangement outcomes match IV-E. B adds the 24-demo condition; A's 'matched rectified, center-cropped inputs' states the same shared preprocessing as B. These are comparable abstracts, not grounds for preferring additional numerical detail."
+    },
+    {
+      "id": "P01_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A emphasizes 'rather than relying on appearance augmentation alone'; B explicitly states joint training on real and generated pairs. Both are central operations in P01 III-A/C. Their selected pushing and large-data cup-arrangement results agree with Tables II and V, and neither presents recovery as reversing spills. These complementary emphases leave a near tie."
+    },
+    {
+      "id": "P13_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A includes the independently tested leader-update frequency effect (P13 VI-C, Appendix E); B's 'different bottleneck' develops autonomous threading through 92%-to-20% stage outcomes (Table III, V-C). Both correctly scope chunking and CVAE ablations to simulation and qualify ensembling by separate tuning. The broader hardware coverage and tighter policy focus are comparably effective results selections."
+    },
+    {
+      "id": "P13_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both distinguish transferable chunking from human-data-specific variational gains and restrict ensembling to separately tuned comparisons (P13 VI-A/B, Fig. 9). A's 'changed retry budget' and B's 'single-attempt improvement' correctly distinguish 0/10 attempts from 3/5 candies given retries (Appendix F). Their interpretation and evidence selection are effectively equivalent."
+    },
+    {
+      "id": "P01_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'continued task progress' explains why labeling must do more than reverse displacement; B explains why generated views need their own labels. Both trace the same pose-to-label mechanism (P01 III-B/C), preserve the fixed codebook, and use the supported third-frame choice (IV-A3b, Fig. 8). A makes recoverability explicit; B's leaner account remains comparably effective."
+    },
+    {
+      "id": "P13_s2_abstract",
+      "winner": "A",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "A identifies the successful task as a 'slider bag' and explains joint-space design through inverse-kinematics failures, supported by P13 III and Table II. B's 'bag-opening stage' is less specific given Appendix F's failed flat-bag task. Both faithfully summarize chunking, variational training, evaluations, and limits; A makes the hardware rationale and main successes more interpretable."
+    },
+    {
+      "id": "P01_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B closes on 'Nine trials still fail,' directly reflecting P01 Table V's 16/25 successes. A states that the deployment contrast 'does not isolate that mechanism' and closes on recoverability, supported by IV-E's final limitation paragraph. Both correctly distinguish offline error, online success, play-data input, and tested transfer. These different interpretive emphases remain comparably useful."
+    },
+    {
+      "id": "P01_s2_methods",
+      "winner": "A",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A makes label computation explicit through the 'inverse displacement' and explains why farther targets are not preferred: they exclude terminal frames. Both details are supported by P01 III-C2 and IV-A3b. B states the recovery mechanism clearly but omits that implementation tradeoff. A gives the more complete methods rationale without extraneous evidence."
+    },
+    {
+      "id": "P13_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A highlights 'pauses within a chunk' and distinguishes one-command averaging from adjacent-action smoothing; B makes the transformer and two-arm prediction framing explicit. Both match P13 IV-A/B and Algorithm 2: leader targets preserve force offsets, overlapping predictions share a timestep, and inference fixes the latent to zero. B is slightly more compact, but the explanation is not materially stronger."
+    },
+    {
+      "id": "P01_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B explicitly names 'inverse displacement' composition, while A explains how the virtual-pose target resumes progress. Both faithfully describe P01 III-B/C's geometry and joint data training. Their identical third-frame rationale is supported by IV-A3b and Fig. 8, including lost terminal frames for larger offsets. Neither offers a substantive advantage as a methods paragraph."
+    }
+  ]
+}

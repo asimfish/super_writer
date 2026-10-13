@@ -1,0 +1,172 @@
+{
+  "audits": [
+    {
+      "id": "T001",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence specifies sequential drafting followed by concurrent verification in one target round. Prose's 'drafts five tokens sequentially' and 'checks all five prefix positions concurrently in one round' expose that scheduling relationship, which reading.core reproduces. Prose and reading.scope restrict the timings and accepted yield to a toy token schedule, not application latency. The supplied correction rule supports the retention statement; its unexplained derivation does not invalidate this scheduling explanation."
+    },
+    {
+      "id": "T002",
+      "fidelity": "pass",
+      "core_recovery": 1,
+      "scope_recovery": 2,
+      "reason": "The expressed component, timing, yield and retention claims agree with evidence. However, prose's 'target evaluates the proposed prefix positions' does not specify concurrent verification in one round, the evidence's central scheduling relationship. Reading.core recovers predecessor-conditioned proposals and target evaluation but not how they reduce serial expensive rounds. That missing explanation is not false science. Reading.scope accurately recovers the toy workload, distinct measurements and absence of complete application latency; correction-rule internals are not necessary for this paragraph's scheduling scope."
+    },
+    {
+      "id": "T003",
+      "fidelity": "fail",
+      "core_recovery": 0,
+      "scope_recovery": 1,
+      "reason": "Evidence assigns seven versus five successes to final-state attainment, but four versus three to uninterrupted all-stage completion. Prose's opening 'seven uninterrupted three-stage completions' and later 'trajectory-completion rate' materially misattribute the measured events. Reading.core adopts the wrong completion comparison. Reading.scope notices earlier failures/resets and recovers descriptive counts and the significance/deployment limitations, but still calls the comparison uninterrupted and cannot identify the alternate tally. Those correct limitations provide only partial consequential-scope recovery."
+    },
+    {
+      "id": "T004",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence separates final-state attainment, seven versus five, from uninterrupted all-stage completion, four versus three. Prose explicitly names both events and explains that three final-state successes followed failure and reset. Reading.core preserves the two comparisons, and reading.scope preserves their event distinction, matched starts/time budgets and descriptive, non-deployment limits. Both the central comparison and its consequential counting boundary are recoverable from the prose."
+    },
+    {
+      "id": "T005",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence's allocation relationship appears in prose's nonadjacent logical-to-physical mapping, allocation when the current block is exhausted, and incremental storage instead of maximum-length contiguous reservation. Reading.core recovers that relationship and the batch comparison of 64 versus 40 at the same 100 ms cap. Reading.scope correctly limits the result to the evaluated toy allocation scheme and retains the lack of isolated allocator-overhead or arbitrary-hardware evidence."
+    },
+    {
+      "id": "T006",
+      "fidelity": "pass",
+      "core_recovery": 1,
+      "scope_recovery": 2,
+      "reason": "Prose's batch 64 versus 40 at a matched latency cap and its stated evaluation limits are supported. Its position-map description omits the evidence's nonadjacent storage and exhaustion-triggered allocation relationship. Reading.core recovers the measured batch benefit but expressly cannot recover the operations explaining it; the allocation explanation is therefore only partially recovered, not materially false. Reading.scope accurately preserves the toy-workload boundary, unisolated allocator overhead and lack of arbitrary-hardware or other-workload evaluation."
+    },
+    {
+      "id": "T007",
+      "fidelity": "fail",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence halves optimizer-state storage, not total allocation. Prose's 'halves total training allocation' and 'twofold reduction' of the complete footprint contradict its own 16-to-12 GB totals. Reading.core explicitly rejects that attribution using the prose's state and total numbers, correctly recovering state halving and a 4 GB total saving without importing missing facts. Reading.scope preserves batch eight, matched device/model/precision, unchanged other allocations, checkpoint losses and the absence of established quality equivalence."
+    },
+    {
+      "id": "T008",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose correctly relates optimizer-state storage falling from 8 to 4 GB to total allocation falling from 16 to 12 GB with other allocations unchanged. Reading.core recovers both quantities and explicitly distinguishes their reductions, as evidence requires. Reading.scope retains the measured resource boundary, batch eight and matched configuration, observed checkpoint losses and lack of established quality equivalence or other-batch evidence."
+    },
+    {
+      "id": "T009",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence supports both lower allocation and the recorded losses without giving either exclusive priority. Prose reports 16 versus 24 GB alongside checkpoint losses 2.1 versus 2.2, and reading.core recovers that observational comparison. Reading.scope retains batch four, one device, one run per method, absent significance analysis and no transfer or production evidence. Missing internal update operations do not impair this paragraph's selected resource-and-loss reporting function."
+    },
+    {
+      "id": "T010",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "The prose's smaller allocation and associated checkpoint losses match evidence: 16 versus 24 GB and 2.1 versus 2.2. Reading.core recovers both findings without treating them as equivalence or statistical superiority. Reading.scope correctly confines inference to batch four, one device and one run per method, with no significance, transfer, production or cross-device evaluation. A reduction mechanism is not required for this selected observational comparison."
+    },
+    {
+      "id": "T011",
+      "fidelity": "concern",
+      "core_recovery": 2,
+      "scope_recovery": 1,
+      "reason": "Evidence conditions the interval invariant on initialization in [0,1]. Prose's 'keeps every iterate in [0,1]' omits that condition; its logged start at 0.8 cannot establish an arbitrary-start guarantee. Reading.core recovers the halving operation and preservation for an already in-interval iterate. Reading.scope correctly identifies exact arithmetic and the illustrative run but says general starting-value conditions are unrecoverable. The missing initialization boundary is consequential and cannot be credited merely because evidence supplies it."
+    },
+    {
+      "id": "T012",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose explicitly conditions interval preservation on initialization in [0,1] and explains how halving preserves nonnegativity and the upper bound. Its start-three counterexample and illustrative 0.8 run match evidence. Reading.core recovers the preservation relationship, while reading.scope retains the initial-value condition, exact-arithmetic boundary and distinction between illustration and arbitrary-start validity. Missing inexact-arithmetic behavior does not weaken the stated exact-arithmetic claim."
+    },
+    {
+      "id": "T013",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence and prose distinguish a kernel reduction from 16 to 8 ms from complete-request latency falling from 112 to 104 ms. Reading.core recovers the 8 ms end-to-end saving and why it is not a twofold overall acceleration. Reading.scope preserves the request's preprocessing/transfer/postprocessing boundary, matched batch/device/outputs and absence of concurrent-user throughput or other-device evidence. The selected component-versus-request explanation is fully supported and recovered."
+    },
+    {
+      "id": "T014",
+      "fidelity": "fail",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose's 'doubles complete-request inference speed' and 'twofold end-to-end acceleration' materially transfer the kernel's factor of two to the wrong timing boundary. Evidence and the prose's own request timings show only 112 to 104 ms. Reading.core identifies that inconsistency and recovers halved kernel time versus a smaller request reduction directly from the text. Reading.scope accurately separates timing boundaries and retains configuration, throughput and cross-device/batch limitations. Reader recovery does not repair prose fidelity."
+    },
+    {
+      "id": "T015",
+      "fidelity": "concern",
+      "core_recovery": 2,
+      "scope_recovery": 1,
+      "reason": "Evidence supplies at least 90% marginal future coverage under exchangeability. Prose and reading.core recover the marginal future-coverage statement, and reading.scope correctly separates the 89/100 illustration from proof or contradiction. However, neither prose nor reading states exchangeability. Correctly declining conditional coverage and noting absent shift experiments recovers some consequential limits, but empirical distribution restrictions do not supply the missing theoretical condition. This is a missing-condition concern, not a failure for omitting interval construction or a derivation."
+    },
+    {
+      "id": "T016",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose's 'when calibration and future observations are exchangeable' explicitly bounds the supplied at-least-90% marginal guarantee. Reading.core recovers that conditional guarantee and distinguishes the 89/100 realization from proof or contradiction. Reading.scope retains exchangeability, lack of conditional or arbitrary-shift guarantees, the calibration-distribution toy evaluation and absent shift experiments. The fictional guarantee needs no additional external theorem or construction to support this paragraph's selected function."
+    },
+    {
+      "id": "T017",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence and prose pair a higher exact-match count, 89 versus 85 of 100, with slower median query time, 150 versus 120 ms. Reading.core correctly recovers this accuracy-time tradeoff rather than uniform improvement. Reading.scope preserves the fixed dataset, one device, absent sampling uncertainty and production evaluation, and lack of deployment guarantees. No unreported indexing mechanism is necessary for this selected results comparison."
+    },
+    {
+      "id": "T018",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "The prose's 89-versus-85 exact-match comparison and 150-versus-120 ms median timing match evidence. Reading.core recovers the higher-match/slower-query relationship and rejects uniform improvement. Reading.scope accurately retains one fixed dataset and one device, no sampling uncertainty or production evaluation, and no guarantee about deployment. Both requested recovery dimensions are supported by the prose rather than inferred from missing implementation facts."
+    },
+    {
+      "id": "T019",
+      "fidelity": "pass",
+      "core_recovery": 1,
+      "scope_recovery": 2,
+      "reason": "Prose's 80%/52%/78% comparisons and limited-task, limited-length interpretation are supported. Reading.core recovers the score pattern, but neither prose nor reading explains the evidence's within-question control: identical answer documents and distractors, fixed distractor order, only placement changed. Thus the relationship explaining why the contrast diagnoses placement rather than changed evidence is only partially recovered. No unsupported internal-mechanism or causal-isolation claim is made. Reading.scope correctly retains the fixed question set and task/length and mechanism limits."
+    },
+    {
+      "id": "T020",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose states the controlled intervention: unchanged answer-bearing document and distractors, fixed distractor order, only answer-document placement moved. Its conclusion excluding changed content or distractor selection matches evidence. Reading.core recovers both the 80%/52%/78% contrast and that explanatory relationship. Reading.scope retains the placement-diagnostic, not internal-mechanism, interpretation and the tested task/length boundary. Missing numerical document length or neural mechanism is not necessary for this selected diagnostic explanation."
+    },
+    {
+      "id": "T021",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence's exact-gradient proof and approximate-gradient implementation remain distinct in prose: the latter 'is not covered by that supplied monotonicity proof.' Reading.core identifies the exact-gradient, convex, stipulated-step-size conditions and approximate implementation; reading.scope explicitly denies theorem transfer and restricts observed decreases to three recorded toy trajectories. Missing update formulas or proof derivation do not prevent recovery of the selected proof-versus-implementation relationship or its consequential applicability boundary."
+    },
+    {
+      "id": "T022",
+      "fidelity": "fail",
+      "core_recovery": 0,
+      "scope_recovery": 1,
+      "reason": "Evidence supplies monotonicity only for exact-gradient updates, with no proof transfer to approximate gradients. Prose instead says the approximate implementation maintains non-increasing values 'under the supplied proof' and calls theory and observations descriptions of the same procedure. Reading.core repeats this materially false proof attribution and never recovers the exact/approximate distinction. Reading.scope correctly bounds empirical observations to three toy problems and excludes convergence-rate/nonconvex claims, but misidentifies the theorem's applicability, so consequential scope is only partially recovered."
+    },
+    {
+      "id": "T023",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose and evidence connect logical-key lookup to nonadjacent physical blocks and sequence extension without copying earlier blocks into contiguous storage. Reading.core recovers that operation, including map-based access despite separation. Reading.scope correctly limits the claim to the storage relationship and rejects a measured speed advantage because no comparison exists. Omitting library version and serial logging is appropriate to the selected operational explanation, not a missing consequential condition."
+    },
+    {
+      "id": "T024",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose's key-to-block map, nonadjacent storage and extension without recopying earlier blocks match evidence, and reading.core recovers their relationship. Reading.scope preserves the fixed pool and lack of a measured speed claim, correctly treating library version 2.4 and serial logging as identifying metadata rather than the cause of separated storage. Unspecified pool-exhaustion or allocation details do not change the scope of this paragraph's selected mapping-and-extension explanation."
+    }
+  ]
+}

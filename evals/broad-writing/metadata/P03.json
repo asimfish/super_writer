@@ -1,0 +1,92 @@
+{
+  "id": "P03",
+  "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+  "authors": ["Tri Dao"],
+  "domain": "efficient_inference",
+  "venue": "International Conference on Learning Representations 2024 (ICLR 2024)",
+  "year": 2024,
+  "metadata_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/98ed250b203d1ac6b24bbcf263e3d4a7-Abstract-Conference.html",
+  "requested_metadata_url": "https://openreview.net/forum?id=mZn2Xyh9Ec",
+  "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf",
+  "pdf_sha256": "bc43c98e82d353f344d8a6bdc1ff7931e09fb43e27309f2039c587d164da511f",
+  "extracted_sha256": "4268bcf65c38b403a75e1e78f1e90d3528d455a8c5542c13aadc57495c569eb3",
+  "body_sha256": "59a8286e2557b81cad28eea7c571378ee1579a30fa8de3794ffaeae855e54c09",
+  "source_version": "Official ICLR 2024 proceedings PDF, pinned by SHA-256; not an arXiv fallback or an unverified author copy.",
+  "retrieved_date": "2026-10-11",
+  "prior_family_overlap": "Overlaps previously studied FlashAttention family, as specified by the requester; no prior history was inspected.",
+  "pages": {
+    "numbering": "1-based physical PDF pages; printed page numbers also run 1-14",
+    "pdf_total": 14,
+    "main_body": [2, 9],
+    "separately_selected_scope": [9, 9],
+    "referenced_supporting_appendices": [12, 14],
+    "selected_ranges": [[2, 9], [12, 14]]
+  },
+  "pdf_path": "sources/P03.pdf",
+  "extracted_path": "sources/P03.extracted.txt",
+  "body_path": "inputs/P03.txt",
+  "recipe_path": "sources/P03.extract.mjs",
+  "anchors_path": "anchors/P03.json",
+  "extraction_command": "pdftotext -raw sources/P03.pdf sources/P03.extracted.txt",
+  "selection_command": "node sources/P03.extract.mjs",
+  "extraction_tool": "Poppler pdftotext 26.03.0",
+  "extraction_segments": [
+    {
+      "order": 1,
+      "label": "Complete main-body Sections 2-4: attention background, methods, and empirical validation",
+      "start": "2 BACKGROUND\n",
+      "end": "5 DISCUSSION AND FUTURE DIRECTIONS\n",
+      "start_inclusive": true,
+      "end_inclusive": false,
+      "pdf_pages": [2, 9],
+      "raw_utf8_byte_range": [5858, 30432]
+    },
+    {
+      "order": 2,
+      "label": "Separately located device, data-type, and programmability scope; excludes Section 5 summary paragraph",
+      "start": "Inthenearfuture,weplantocollaboratewithresearchersandengineerstomakeFlashAttentionwidely\n",
+      "end": "9\fACKNOWLEDGMENTS\n",
+      "start_inclusive": true,
+      "end_inclusive": false,
+      "pdf_pages": [9, 9],
+      "raw_utf8_byte_range": [30875, 31505]
+    },
+    {
+      "order": 3,
+      "label": "Complete referenced supporting Appendices A-B: Algorithm 2 and all panels of Figures 6-8",
+      "start": "A FLASHATTENTION-2 BACKWARD PASS\n",
+      "end": "Figure 8: Attention forward + backward speed on H100 GPU\n14\f",
+      "start_inclusive": true,
+      "end_inclusive": true,
+      "pdf_pages": [12, 14],
+      "raw_utf8_byte_range": [36412, 42179]
+    }
+  ],
+  "segment_join": "Original UTF-8 byte slices concatenated in source order, without inserted labels, separators, cleanup, or repaired text; byte ranges are zero-based, half-open.",
+  "body_words_whitespace": 3985,
+  "body_bytes": 30971,
+  "extracted_bytes": 42179,
+  "selection_scope": "Complete Sections 2-4, including exact-attention background needed for the method, all benchmark conditions and Table 1 rows. The separately selected non-summary paragraph of Section 5 locates future device/data-type scope. Complete referenced Appendices A-B retain Algorithm 2 and all A100/H100 benchmark panels rather than selected comparisons.",
+  "limitations_locations": [
+    {"section": "3.3: block-size and register/shared-memory constraints; manual tuning", "pdf_pages": [7, 7], "substring": "TuningblocksizesIncreasingblocksizes"},
+    {"section": "4.1: H100 instructions not exploited", "pdf_pages": [8, 8], "substring": "Just running the same implementation on H100 GPUs"},
+    {"section": "4.3: end-to-end attention FLOP convention", "pdf_pages": [9, 9], "substring": "We choose to follow the formula from the literature"},
+    {"section": "5: device/data-type extensions and programmability remain future work", "pdf_pages": [9, 9], "segment_order": 2}
+  ],
+  "excluded_sections": ["Abstract", "Introduction", "Section 5 opening summary paragraph", "Acknowledgments", "References"],
+  "pdf_fetch_operations": [
+    {"order": 1, "method": "curl", "url": "https://openreview.net/pdf?id=mZn2Xyh9Ec", "connect_timeout_seconds": 15, "max_time_seconds": 90, "max_redirects": 3, "http_status": 403, "result": "No PDF saved"},
+    {"order": 2, "method": "web PDF inspection through the official proceedings Paper link", "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf", "result": "Official PDF accessible; no local file persisted by this inspection"},
+    {"order": 3, "method": "curl", "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf", "connect_timeout_seconds": 15, "max_time_seconds": 90, "max_redirects": 3, "http_status": 200, "download_bytes": 1197098, "result": "Official PDF saved"}
+  ],
+  "source_warnings": [
+    "The supplied OpenReview forum showed a browser-verification challenge; the public notes API and PDF endpoint returned HTTP 403. The accessible official ICLR proceedings page verified title and venue, and its linked PDF was used. No credentials were supplied.",
+    "Both curl PDF requests had bounded timeouts and no retries. Counting the separate official-PDF web inspection conservatively, there were three PDF fetch operations; no arXiv fallback was attempted."
+  ],
+  "extraction_warnings": [
+    "Poppler -raw produces many merged words, line-end hyphenation, fragmented mathematical expressions, and some control/glyph artifacts in this PDF. These defects are preserved without rewriting or repair; whitespace word count understates words merged together.",
+    "Raw text preserves extracted table rows, plot labels/numbers, all comparison series and OOM labels, but does not reconstruct diagrams, graphical marks, or reliable plotted-point alignment. The official PDF remains the graphical source of truth.",
+    "The source has no standalone Limitations section. Constraints within complete Methods/Experiments remain in place, while the non-summary future-scope paragraph is separately located; it is not relabeled as an author-written limitations heading.",
+    "The input explicitly extends beyond the main body to complete referenced Appendices A-B so the backward-pass algorithm and forward/backward/H100 benchmark evidence are not omitted. No unrelated appendix or reference text is selected."
+  ]
+}

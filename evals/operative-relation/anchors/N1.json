@@ -1,0 +1,19 @@
+{
+  "units": {
+    "abstract": {
+      "question": "In a 150-200 word full abstract, how does combining single-GPU simulation and PPO learning with an adaptive terrain curriculum enable rapid training of a terrain-aware locomotion policy, and what do the ANYmal training and deployment experiments establish about that contribution? Keep the claim bounded by the reported training setup, the need for adequate per-robot rollout lengths, and the limitation of imperfect terrain maps on hardware.",
+      "source_locator": "Sections 2-3, physical pages 2-6 (printed pages 2-6); Section 4.2 and training-hardware footnote 2, physical page 7; Section 4.3, physical page 8.",
+      "relation": "independent editorial paraphrase"
+    },
+    "methods": {
+      "question": "In 110-160 words, why does this PPO setup distinguish time-limit resets from failures or goal completion, and how is the critic target handled for a time-out when episode time is absent from observations and an episode spans multiple short rollout batches?",
+      "source_locator": "Section 2.2.2, physical pages 3-4 (printed pages 3-4); Section 2.2.1, physical page 3, for the distinction between rollout length and the 20-second episode limit; footnote 1, physical page 4.",
+      "relation": "independent editorial paraphrase"
+    },
+    "results": {
+      "question": "In 120-180 words, what does Figure 4 show about the reward-versus-training-time trade-off as parallel robot count increases at a fixed batch size, and why is the task-specific choice of about 2,048-4,096 robots not evidence that unlimited parallelism improves learning? Interpret the comparison under its stated conditions: a simplified task without the curriculum, 1,500 policy updates, and fewer rollout steps per robot as robot count rises.",
+      "source_locator": "Section 4.1 and Figure 4 with its five-run caption, physical pages 6-7 (printed pages 6-7); Section 2.2.1, physical page 3, for the batch-size and per-robot rollout relationship.",
+      "relation": "independent editorial paraphrase"
+    }
+  }
+}

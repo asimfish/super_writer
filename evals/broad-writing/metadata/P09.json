@@ -1,0 +1,196 @@
+{
+  "id": "P09",
+  "title": "A ConvNet for the 2020s",
+  "domain": "vision_graphics",
+  "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+  "year": 2022,
+  "metadata_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.html",
+  "pdf_url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.pdf",
+  "pdf_path": "sources/P09.pdf",
+  "pdf_sha256": "a44372dee86112a63133aece66be864116e8cdba89e1bdd9462a8e6c5a48d101",
+  "extracted_path": "sources/P09.extracted.txt",
+  "extracted_sha256": "596a2897b36a94ceca87112d599c68f8ff090107dfbd9fab512b9d42a39d2eed",
+  "body_path": "inputs/P09.txt",
+  "body_sha256": "d0219804f4fca3cb7a48cb2759dc1b4882affa736886b4337217f6bcaf9e6da3",
+  "pages": {
+    "numbering": "1-based physical PDF pages; ranges are inclusive",
+    "main_pdf": {
+      "total": 11,
+      "selected_ranges": [
+        [
+          2,
+          8
+        ]
+      ],
+      "printed_proceedings_range": [
+        11976,
+        11986
+      ]
+    },
+    "supplement_pdf": {
+      "total": 4,
+      "selected_ranges": [
+        [
+          4,
+          4
+        ]
+      ]
+    }
+  },
+  "extraction_command": "python3 sources/P09.extract.py",
+  "poppler_commands": [
+    "pdftotext -raw sources/P09.pdf sources/P09.extracted.txt",
+    "pdftotext -raw sources/P09.supplement.pdf sources/P09.supplement.extracted.txt"
+  ],
+  "poppler_version": "26.03.0",
+  "anchors_path": "anchors/P09.json",
+  "body_word_count_method": "Number of UTF-8 decoded str.split() tokens; source text is not normalized",
+  "ordered_extraction_segments": [
+    {
+      "order": 1,
+      "kind": "methods_analysis",
+      "label": "Complete Section 2",
+      "pdf_path": "sources/P09.pdf",
+      "source_text_path": "sources/P09.extracted.txt",
+      "pdf_pages": [
+        2,
+        6
+      ],
+      "start": "2. Modernizing a ConvNet: a Roadmap\n",
+      "end": "3. Empirical Evaluations on ImageNet\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "source_byte_range": [
+        9272,
+        27865
+      ],
+      "body_byte_range": [
+        0,
+        18593
+      ],
+      "word_count": 2940
+    },
+    {
+      "order": 2,
+      "kind": "experiments",
+      "label": "Complete Section 3 including Tables 1-2",
+      "pdf_path": "sources/P09.pdf",
+      "source_text_path": "sources/P09.extracted.txt",
+      "pdf_pages": [
+        6,
+        7
+      ],
+      "start": "3. Empirical Evaluations on ImageNet\n",
+      "end": "4. Empirical Evaluation on Downstream Tasks\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "source_byte_range": [
+        27865,
+        34776
+      ],
+      "body_byte_range": [
+        18593,
+        25504
+      ],
+      "word_count": 1032
+    },
+    {
+      "order": 3,
+      "kind": "experiments",
+      "label": "Complete Section 4 including Tables 3-4",
+      "pdf_path": "sources/P09.pdf",
+      "source_text_path": "sources/P09.extracted.txt",
+      "pdf_pages": [
+        7,
+        8
+      ],
+      "start": "4. Empirical Evaluation on Downstream Tasks\n",
+      "end": "5. Related Work\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "source_byte_range": [
+        34776,
+        39032
+      ],
+      "body_byte_range": [
+        25504,
+        29760
+      ],
+      "word_count": 657
+    },
+    {
+      "order": 4,
+      "kind": "limitations",
+      "label": "Complete official supplement Section F",
+      "pdf_path": "sources/P09.supplement.pdf",
+      "source_text_path": "sources/P09.supplement.extracted.txt",
+      "pdf_pages": [
+        4,
+        4
+      ],
+      "start": "F. Limitations\n",
+      "end": "G. Societal Impact\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "source_byte_range": [
+        13020,
+        13835
+      ],
+      "body_byte_range": [
+        29760,
+        30575
+      ],
+      "word_count": 123
+    }
+  ],
+  "segment_join": "Direct concatenation of exact UTF-8 byte slices; no added text or cleanup",
+  "source_version": {
+    "type": "official_cvf_open_access_proceedings_accepted_version",
+    "host": "Computer Vision Foundation official CVPR 2022 repository",
+    "description": "CVF identifies its open-access papers as identical to accepted versions except for the watermark; this is not claimed to be the IEEE Xplore final-published file."
+  },
+  "supplement": {
+    "pdf_url": "https://openaccess.thecvf.com/content/CVPR2022/supplemental/Liu_A_ConvNet_for_CVPR_2022_supplemental.pdf",
+    "pdf_path": "sources/P09.supplement.pdf",
+    "pdf_sha256": "ff40dd4d942ce6b6d05333ac0d6c701ff127a49df6479ef4fcb94c761f3a21ad",
+    "extracted_path": "sources/P09.supplement.extracted.txt",
+    "extracted_sha256": "a59b40ca4e66fd5089266258855155900740bd5e99f86694b7ae5c8b2a145e2b",
+    "source_version": "official_cvf_proceedings_supplement"
+  },
+  "prior_family_overlap": "unassessed",
+  "download_policy": {
+    "maximum_attempts_per_paper": 3,
+    "pdf_attempts_used": 2,
+    "connect_timeout_seconds": 15,
+    "total_timeout_seconds": 90,
+    "curl_retries": 0
+  },
+  "download_attempts": [
+    {
+      "attempt": 1,
+      "url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.pdf",
+      "http_status": 200,
+      "result": "saved official main PDF",
+      "bytes": 803600
+    },
+    {
+      "attempt": 2,
+      "url": "https://openaccess.thecvf.com/content/CVPR2022/supplemental/Liu_A_ConvNet_for_CVPR_2022_supplemental.pdf",
+      "http_status": 200,
+      "result": "saved official supplement to locate limitations",
+      "bytes": 276073
+    }
+  ],
+  "source_warnings": [
+    "The metadata HTML returned 403 on direct browser retrieval; its indexed official CVF record and the downloaded PDF metadata establish title and venue.",
+    "Limitations are not a standalone main-paper section; the complete Section F is selected from the official supplement. Other supplementary sections are outside the requested main-body scope."
+  ],
+  "extraction_warnings": [
+    "Poppler raw text retains original line breaks, form feeds, page numbers, hard hyphenation, merged words, glyph substitutions, and imperfect equation/table reading order; none are repaired.",
+    "Tables 1-4 and their captions, all rows, measurement conditions, and mixed findings are retained as extracted text. Bitmap/plot content cannot be represented by pdftotext; consult the saved PDF for visual marks and images.",
+    "The within-method Closing remarks paragraph is retained as part of complete Section 2; the separate summary Conclusions Section 6 is excluded.",
+    "Abstract, Introduction, Related Work, summary Conclusions, acknowledgments, references, and supplement sections other than F are excluded."
+  ],
+  "status": "source_preparation_complete",
+  "body_word_count": 4752
+}

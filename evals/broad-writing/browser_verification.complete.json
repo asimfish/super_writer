@@ -1,0 +1,34 @@
+[
+  {
+    "html": "comparison-complete.html",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "checked": [
+      "108 pairs, all 324 displayed prose strings match raw",
+      "paper/unit/sample filters",
+      "details",
+      "source-concern filter",
+      "no text or viewport overflow",
+      "no overlaps",
+      "no page errors"
+    ]
+  },
+  {
+    "html": "comparison-complete.html",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "checked": [
+      "108 pairs, all 324 displayed prose strings match raw",
+      "paper/unit/sample filters",
+      "details",
+      "source-concern filter",
+      "no text or viewport overflow",
+      "no overlaps",
+      "no page errors"
+    ]
+  }
+]

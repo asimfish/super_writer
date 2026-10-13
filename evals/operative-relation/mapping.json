@@ -1,0 +1,266 @@
+[
+  {
+    "id": "N1_s1_results",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "N1_T01",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "N1_T02",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "N1_s1_abstract",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "N1_T03",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "N1_T04",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "N1_s2_methods",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "N1_T05",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "N1_T06",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "N1_s2_abstract",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "N1_T07",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "N1_T08",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "N1_s2_results",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "N1_T09",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "N1_T10",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "N1_s1_methods",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "N1_T11",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "N1_T12",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "N2_s2_results",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "N2_T01",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "N2_T02",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "N2_s1_results",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "N2_T03",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "N2_T04",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "N2_s2_methods",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "N2_T05",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "N2_T06",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "N2_s1_abstract",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "N2_T07",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "N2_T08",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "N2_s2_abstract",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "N2_T09",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "N2_T10",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "N2_s1_methods",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "N2_T11",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "N2_T12",
+      "condition": "baseline"
+    }
+  }
+]

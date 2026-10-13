@@ -1,0 +1,12 @@
+{
+  "baseline/argument-transfer.md": "d04c5c900b274185782723901eb9d60fd1979abe3ba239c996a18f7359a18f3c",
+  "candidate/argument-transfer.md": "4c35d011648b33be9dd72440f409fc9aa801cf19c4f634cf60c458e73ad0310d",
+  "shared/abstract-decisions.md": "453a43957c5ac9d58707df81bfdce72ac25895f88296f4f4a6bf598194825848",
+  "shared/abstract-preflight.md": "fcaa62a180166c5a81da963ab9575be01438484aa28c1842cb2c50a17da2c107",
+  "shared/writing-protocols.md": "56586ceda2ec9f19a049eaf09befbdab2f118e2b1c6bb21c580562f527a9e8b8",
+  "shared/results-validation.md": "546b81cf1677a584cbe7d58847d510006575f5dced1b2215553af204baf3d62f",
+  "PROTOCOL.md": "b6496dc00be054ba3ecb56a63255fd64f912555495a26bb468b78e5a84c8dc27",
+  "papers.json": "e2092e480b2a689939c083d50b6620012bf7043fa83712e872e6bb174924e193",
+  "selection.json": "28e6489be75c48498b425553c43bb9ceba3fa2f52d4d27612d4784c9b4155960",
+  "freeze_guides.py": "c15957b2a8086d0cb80d74b81810969d13ca35d8e12dacbca487640fd9b4ae85"
+}

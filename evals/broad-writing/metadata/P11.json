@@ -1,0 +1,124 @@
+{
+  "id": "P11",
+  "title": "Conformal Risk Control",
+  "domain": "uncertainty_theory",
+  "venue": "International Conference on Learning Representations 2024 (ICLR 2024), Conference",
+  "year": 2024,
+  "metadata_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/f3549ef9b5ff520a7e41ff3cc306ab2b-Abstract-Conference.html",
+  "requested_metadata_url": "https://openreview.net/forum?id=33XGfHLtZg",
+  "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f3549ef9b5ff520a7e41ff3cc306ab2b-Paper-Conference.pdf",
+  "pdf_sha256": "0fff32a0254a47f06a399522b83ba463d0ca62f71e3a0e094985d80cba166c0c",
+  "body_sha256": "0df339d1fe67f190d4c93bf0e03adca9b943f4d989570bf19af3ae81fdbe586c",
+  "extracted_sha256": "bd7f446ece0d0652d6a53ea1d5eba44a9e0af3bba52259e20b54cfbfb7b8deeb",
+  "pages": {
+    "pdf_total": 21,
+    "selected_pdf_range": [3, 9],
+    "selected_pdf_pages": [3, 4, 5, 6, 7, 8, 9],
+    "numbering": "One-based physical PDF pages, matching printed page numbers. Partial first/last pages and conclusion exclusions use exact substrings."
+  },
+  "extraction_command": "pdftotext -raw sources/P11.pdf sources/P11.extracted.txt && node sources/P11.extract.mjs",
+  "command_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+  "extractor": "Poppler pdftotext 26.03.0, -raw, default UTF-8 and page breaks",
+  "extraction_segments": [
+    {
+      "order": 1,
+      "label": "Complete Sections 2-4: theory including failure case, all four worked experiments, and all extensions",
+      "pdf_pages": [3, 9],
+      "start": "2 THEORY\n",
+      "end": "5 CONCLUSION\n",
+      "start_inclusive": true,
+      "end_inclusive": false
+    },
+    {
+      "order": 2,
+      "label": "Separately located limitations sentences inside Section 5, excluding both surrounding summary statements",
+      "pdf_pages": [9, 9],
+      "start": "Still, two primary limitations of our technique remain: firstly, the requirement of a\n",
+      "end": "Finally, the mathematical tools developed in\n",
+      "start_inclusive": true,
+      "end_inclusive": false
+    }
+  ],
+  "limitations_locator": {
+    "pdf_pages": [9, 9],
+    "section": "5 CONCLUSION (limitations sentences only)",
+    "extraction_segment_order": 2
+  },
+  "selection_policy": "Concatenate the two unchanged raw byte slices in paper order without adding separators. Include every main-body theorem, assumption, negative case, extension, experimental condition, caption, and numerical result in Sections 2-4. Exclude Abstract, Introduction (including 1.1 and 1.2), summary conclusion prose, reproducibility statement, references, and appendices. Limitations embedded in Section 5 are separately retained without summary prose.",
+  "body_word_count": 3629,
+  "word_count_method": "Whitespace-separated tokens in the selected raw text; mathematical tokens and figure labels are included.",
+  "source_version": {
+    "kind": "official_proceedings_pdf",
+    "publisher_host": "proceedings.iclr.cc",
+    "proceedings_year": 2024,
+    "arxiv_pdf_used": false,
+    "identity_verified_against": [
+      "https://proceedings.iclr.cc/paper_files/paper/2024/hash/f3549ef9b5ff520a7e41ff3cc306ab2b-Abstract-Conference.html",
+      "https://arxiv.org/abs/2208.02814"
+    ],
+    "retrieval_date": "2026-10-11"
+  },
+  "prior_family_overlap": "unassessed",
+  "download_attempts": [
+    {
+      "attempt": 1,
+      "url": "https://openreview.net/pdf?id=33XGfHLtZg",
+      "http_status": 403,
+      "bytes": 0,
+      "result": "Official OpenReview PDF blocked",
+      "bounds": "curl --retry 0 --connect-timeout 20 --max-time 120"
+    },
+    {
+      "attempt": 2,
+      "url": "https://arxiv.org/pdf/2208.02814v4",
+      "source_kind": "pinned_author_arxiv_candidate_not_proceedings",
+      "result": "Received author-version PDF data; superseded by the official proceedings response and not retained as the source",
+      "bounds": "curl --retry 0 --connect-timeout 20 --max-time 120"
+    },
+    {
+      "attempt": 3,
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f3549ef9b5ff520a7e41ff3cc306ab2b-Paper-Conference.pdf",
+      "http_status": 200,
+      "bytes": 1468508,
+      "result": "Saved official proceedings response, finalized to its declared byte length",
+      "bounds": "curl --retry 0 --connect-timeout 20 --max-time 120"
+    }
+  ],
+  "download_finalization": {
+    "recipe": "node sources/P11.finalize-download.mjs",
+    "reason": "The earlier author-version transfer overlapped the later proceedings transfer to the same path, leaving an earlier-response remainder after the completed proceedings response.",
+    "observed_file_bytes_before_finalization": 1623636,
+    "proceedings_response_bytes": 1468508,
+    "discarded_trailing_bytes": 155128,
+    "checks": "The response's linearized PDF header declares /L 1468508 and its EOF ends at exactly byte 1468508. Only bytes after that boundary were discarded; no byte within the proceedings response was rewritten. Final pdfinfo and pdftotext completed without diagnostics.",
+    "no_additional_download": true
+  },
+  "source_warnings": [
+    "The requested OpenReview forum presents browser verification; its PDF and public metadata API returned HTTP 403. Title and venue were instead verified against the official ICLR proceedings page.",
+    "A pinned arXiv v4 fallback candidate was fetched before the proceedings location was found. It is a later author revision, not a verified proceedings copy, and is not used in the saved source.",
+    "An overlapping-download trailing remainder was removed using the documented response-length recipe; the final PDF is the complete official proceedings response, not a reconstructed manuscript. No fourth download was attempted.",
+    "Appendices A-E are excluded by the main-body scope. In particular, Appendix B's RCPS/LTT comparisons and Appendix D's additional covariate-shift experiment are not in the permitted input; they remain accessible in the saved complete PDF. No subset of main-body tasks or findings was selected."
+  ],
+  "extraction_warnings": [
+    "Raw extraction contains compressed words, reordered mathematical tokens, control characters, and font-encoding artifacts. No OCR, normalization, equation repair, or source rewriting was performed.",
+    "Figures 1-4 are preserved through all extractable labels and captions; the illustrations and plotted curves remain in the PDF. No main-body tables were found.",
+    "The original algorithm definition, Equation (4), is in Section 1.1 inside Introduction and is excluded under the requested rule; its criterion also appears in the retained Theorem 1 proof. Later cross-references remain unchanged.",
+    "The main-body non-monotone failure case, its conservatism caveat, and the unresolved CVaR statement are all retained.",
+    "Incidental page headers, page numbers, and form feeds inside selected slices are unchanged. The limitations-only final slice ends with the original space preceding the excluded summary sentence."
+  ],
+  "verification": {
+    "pdfinfo": "Passed without diagnostics: 21 pages, 1468508 bytes",
+    "all_page_render_command": "pdftoppm -r 10 sources/P11.pdf | shasum -a 256",
+    "all_page_render_sha256": "6f1f9a5697bfdbb1ce4c39eae4246e3405233ddf4b562e9ad5fec55b90b5eb85",
+    "all_page_render_diagnostics": "None",
+    "repeat_raw_extraction_sha256_matches": true,
+    "body_is_exact_ordered_raw_byte_slices": true,
+    "segment_boundaries_unique_and_page_ranges_verified": true,
+    "pdf_raw_body_checksums_verified": true,
+    "anchor_counts": { "abstract": 2, "methods": 2, "results": 2 },
+    "each_unit_has_one_core_and_one_scope_anchor": true,
+    "anchor_locator_pages_within_selected_body": true,
+    "generation_performed": false
+  },
+  "status": "prepared"
+}

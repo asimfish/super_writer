@@ -1,0 +1,242 @@
+{
+  "source_preparation_contexts": 2,
+  "writing_contexts": 12,
+  "assessment_contexts": 12,
+  "model": "inherited same family, no override",
+  "fork_context": false,
+  "unblinding": "After every planned response was saved; no quality selection or assessment replacement",
+  "raw_repaired": false,
+  "quality_retries": 0,
+  "jobs": [
+    {
+      "agent_id": "01a12ae5-57d3-7c81-b038-0a49fe535bb0",
+      "nickname": "Wegener the 2nd",
+      "paper": "N1",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12ae5-5809-7390-a366-cd2859a923a5",
+      "nickname": "Socrates the 2nd",
+      "paper": "N2",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af1-bc77-7160-8c2d-f5413989c01f",
+      "nickname": "Zeno the 2nd",
+      "phase": "initial",
+      "paper": "N1",
+      "sample": 1,
+      "output": "raw/initial_N1_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af1-bca1-7f10-b7ec-97c5b6fd84dd",
+      "nickname": "Peirce the 2nd",
+      "phase": "initial",
+      "paper": "N1",
+      "sample": 2,
+      "output": "raw/initial_N1_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af1-bcc5-7dd1-aac4-47f2f3717675",
+      "nickname": "Confucius the 2nd",
+      "phase": "initial",
+      "paper": "N2",
+      "sample": 1,
+      "output": "raw/initial_N2_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af1-bcea-7a10-b0ef-7554327bc1cd",
+      "nickname": "Banach the 2nd",
+      "phase": "initial",
+      "paper": "N2",
+      "sample": 2,
+      "output": "raw/initial_N2_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af4-7d6b-71d3-8baf-d57d86b3b568",
+      "nickname": "McClintock the 2nd",
+      "phase": "baseline",
+      "paper": "N1",
+      "sample": 1,
+      "output": "raw/baseline_N1_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af4-7db2-7062-9ccf-15634caf5abd",
+      "nickname": "Lorentz the 2nd",
+      "phase": "candidate",
+      "paper": "N1",
+      "sample": 1,
+      "output": "raw/candidate_N1_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af4-7dd6-7010-bb80-1623cfcf8320",
+      "nickname": "Bacon the 2nd",
+      "phase": "baseline",
+      "paper": "N1",
+      "sample": 2,
+      "output": "raw/baseline_N1_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af4-7e01-7bc1-a6ac-0d9c47e697c5",
+      "nickname": "Heisenberg the 2nd",
+      "phase": "candidate",
+      "paper": "N1",
+      "sample": 2,
+      "output": "raw/candidate_N1_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af4-7e81-7712-85c5-07b19b0c5320",
+      "nickname": "Kepler the 2nd",
+      "phase": "baseline",
+      "paper": "N2",
+      "sample": 1,
+      "output": "raw/baseline_N2_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af4-7ea6-7560-908e-5516776371b2",
+      "nickname": "Franklin the 2nd",
+      "phase": "candidate",
+      "paper": "N2",
+      "sample": 1,
+      "output": "raw/candidate_N2_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af7-1806-7bb2-ae16-b714aaf19851",
+      "nickname": "Fermat the 2nd",
+      "phase": "baseline",
+      "paper": "N2",
+      "sample": 2,
+      "output": "raw/baseline_N2_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12af7-e59a-7402-a45c-cb05e69ab76e",
+      "nickname": "Pauli the 2nd",
+      "phase": "candidate",
+      "paper": "N2",
+      "sample": 2,
+      "output": "raw/candidate_N2_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12afb-5618-7911-8b8b-9c28d6c9b429",
+      "nickname": "James the 2nd",
+      "phase": "review",
+      "paper": "N1",
+      "number": 1,
+      "output": "raw/review_N1_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12afb-5642-7173-a5c6-c4f697562d7c",
+      "nickname": "Ampere the 2nd",
+      "phase": "review",
+      "paper": "N1",
+      "number": 2,
+      "output": "raw/review_N1_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12afb-566e-7071-afc0-d5eb460059a1",
+      "nickname": "Mill the 2nd",
+      "phase": "reader",
+      "paper": "N1",
+      "number": 1,
+      "output": "raw/reader_N1_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12afb-5695-7060-bf54-931227dc0a7e",
+      "nickname": "Euclid the 2nd",
+      "phase": "reader",
+      "paper": "N1",
+      "number": 2,
+      "output": "raw/reader_N1_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12afb-56c3-7f22-8cd5-2e5bd17cb77c",
+      "nickname": "Poincare the 2nd",
+      "phase": "review",
+      "paper": "N2",
+      "number": 1,
+      "output": "raw/review_N2_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12afb-56f4-7301-9691-7b947176a158",
+      "nickname": "Planck the 2nd",
+      "phase": "review",
+      "paper": "N2",
+      "number": 2,
+      "output": "raw/review_N2_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12afd-5043-7681-a2a8-d92621533032",
+      "nickname": "Hegel the 2nd",
+      "phase": "reader",
+      "paper": "N2",
+      "number": 1,
+      "output": "raw/reader_N2_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12afd-fad0-73f3-bb71-07fe1365e1e7",
+      "nickname": "Sartre the 2nd",
+      "phase": "reader",
+      "paper": "N2",
+      "number": 2,
+      "output": "raw/reader_N2_2.json",
+      "status": "closed",
+      "operational_problems": "Initial JSON selector failed; corrected read succeeded. No behavioral response repair reported."
+    },
+    {
+      "agent_id": "01a12b00-7fd3-74e2-a4a5-bdf6a6574157",
+      "nickname": "Goodall the 2nd",
+      "phase": "audit",
+      "paper": "N1",
+      "number": 1,
+      "output": "raw/audit_N1_1.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12b00-8010-7c52-97e4-0fa079e6aab2",
+      "nickname": "Rawls the 2nd",
+      "phase": "audit",
+      "paper": "N1",
+      "number": 2,
+      "output": "raw/audit_N1_2.json",
+      "status": "closed"
+    },
+    {
+      "agent_id": "01a12b00-8044-7802-a494-26b1b9db1730",
+      "nickname": "Singer the 2nd",
+      "phase": "audit",
+      "paper": "N2",
+      "number": 1,
+      "output": "raw/audit_N2_1.json",
+      "status": "closed",
+      "operational_problems": "Initial terminal output truncation resolved with bounded reads; no behavioral response repair reported."
+    },
+    {
+      "agent_id": "01a12b00-808a-7f33-a667-7b042fde00b1",
+      "nickname": "Avicenna the 2nd",
+      "phase": "audit",
+      "paper": "N2",
+      "number": 2,
+      "output": "raw/audit_N2_2.json",
+      "status": "closed"
+    }
+  ]
+}

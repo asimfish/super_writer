@@ -1,0 +1,697 @@
+{
+  "primary_count": 216,
+  "text_only_count": 216,
+  "primary": {
+    "baseline": {
+      "fidelity": {
+        "concern": 1,
+        "pass": 107
+      },
+      "core_recovery": {
+        "mean": 2,
+        "counts": {
+          "2": 108
+        }
+      },
+      "scope_recovery": {
+        "mean": 1.9907407407407407,
+        "counts": {
+          "1": 1,
+          "2": 107
+        }
+      }
+    },
+    "candidate": {
+      "fidelity": {
+        "pass": 107,
+        "concern": 1
+      },
+      "core_recovery": {
+        "mean": 2,
+        "counts": {
+          "2": 108
+        }
+      },
+      "scope_recovery": {
+        "mean": 1.9907407407407407,
+        "counts": {
+          "2": 107,
+          "1": 1
+        }
+      }
+    }
+  },
+  "text_only": {
+    "baseline": {
+      "fidelity": {
+        "pass": 107,
+        "concern": 1
+      },
+      "core_recovery": {
+        "mean": 2,
+        "counts": {
+          "2": 108
+        }
+      },
+      "scope_recovery": {
+        "mean": 1.9814814814814814,
+        "counts": {
+          "2": 106,
+          "1": 2
+        }
+      }
+    },
+    "candidate": {
+      "fidelity": {
+        "pass": 107,
+        "concern": 1
+      },
+      "core_recovery": {
+        "mean": 1.9907407407407407,
+        "counts": {
+          "2": 107,
+          "1": 1
+        }
+      },
+      "scope_recovery": {
+        "mean": 1.9907407407407407,
+        "counts": {
+          "2": 107,
+          "1": 1
+        }
+      }
+    }
+  },
+  "agreement": {
+    "fidelity": 214,
+    "core_recovery": 215,
+    "scope_recovery": 213
+  },
+  "differences": [
+    {
+      "id": "D1_text_001",
+      "pair": "P01_s1_abstract",
+      "domain": "D1",
+      "condition": "baseline",
+      "changed_fields": [
+        "fidelity",
+        "scope_recovery",
+        "failure_types"
+      ],
+      "primary": {
+        "id": "D1_text_001",
+        "pair": "P01_s1_abstract",
+        "domain": "D1",
+        "paper": "P01",
+        "sample": 1,
+        "unit": "abstract",
+        "reader": 1,
+        "condition": "baseline",
+        "fidelity": "concern",
+        "core_recovery": 2,
+        "scope_recovery": 1,
+        "failure_types": [
+          "writer_error",
+          "text_ambiguous"
+        ],
+        "reason": "P01 III-C2/Fig. 5 (p.4) illustrates avoidance when the virtual pose has passed the next frame but not the farther target; larger k guards against overshoot, not every later-frame choice. Prose 'Targeting a later frame avoids' and reading 'Later targets avoid' omit this consequential condition, leaving mitigation versus guaranteed avoidance ambiguous. Synthetic-view/corrective-label coupling is recovered correctly. Tables II/V support the numerical claims, and matched cup inputs, finite trials, and the irreversible-spill boundary are otherwise adequately reconstructed."
+      },
+      "text_only": {
+        "id": "D1_text_001",
+        "pair": "P01_s1_abstract",
+        "domain": "D1",
+        "paper": "P01",
+        "sample": 1,
+        "unit": "abstract",
+        "reader": 1,
+        "condition": "baseline",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 2,
+        "failure_types": [
+          "none"
+        ],
+        "reason": "P01 III.B-C/Fig. 5 supports synthetic wrist views with corrective future-pose labels and the described overshoot remedy. IV.A4/Table II and IV.E/Table V support the pushing/cup results, demonstration counts, unseen cups/new lab, and matched starts/preprocessing. Prose 'cannot reverse spilled contents' matches the final limitations paragraph. The reader recovers the augmentation relation and these explicit boundaries, without adding unstated generator-budget details."
+      }
+    },
+    {
+      "id": "D3_text_083",
+      "pair": "P06_s2_results",
+      "domain": "D3",
+      "condition": "baseline",
+      "changed_fields": [
+        "fidelity",
+        "scope_recovery"
+      ],
+      "primary": {
+        "id": "D3_text_083",
+        "pair": "P06_s2_results",
+        "domain": "D3",
+        "paper": "P06",
+        "sample": 2,
+        "unit": "results",
+        "reader": 1,
+        "condition": "baseline",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 2,
+        "failure_types": [
+          "none"
+        ],
+        "reason": "P06 Sec. 5.5/Figure 4 support 22.0 GB, reported 63.3%/52.3% reductions and combined projection/per-layer savings. Sec. 5.3/Table 3 supports the separate single-trial 64-A100 quality comparison. Original Table 11 confirms that both quoted throughput rows enable per-layer updates at 256 tokens. Prose's 'not statistical equivalence' and denial of completed consumer-GPU pretraining adequately bound feasibility and quality; the reading recovers them without extrapolating the measured throughput cost."
+      },
+      "text_only": {
+        "id": "D3_text_083",
+        "pair": "P06_s2_results",
+        "domain": "D3",
+        "paper": "P06",
+        "sample": 2,
+        "unit": "results",
+        "reader": 1,
+        "condition": "baseline",
+        "fidelity": "concern",
+        "core_recovery": 2,
+        "scope_recovery": 1,
+        "failure_types": [
+          "none"
+        ],
+        "reason": "P06 Sections 5.3-5.5 support the separate 7B quality/profile results, memory reductions, and GaLore throughput cost. Table 11 contains the quoted 1B numbers, but its 'Layer Wise' entries are extracted as '8' and '4' without a usable legend. Both prose and reader explicitly say both optimizers use per-layer updates; Adam's status cannot be verified from this locked layout. No numerical error is established, but that protocol detail prevents fully source-supported scope recovery."
+      }
+    },
+    {
+      "id": "D4_text_117",
+      "pair": "P07_s1_results",
+      "domain": "D4",
+      "condition": "baseline",
+      "changed_fields": [
+        "scope_recovery",
+        "failure_types"
+      ],
+      "primary": {
+        "id": "D4_text_117",
+        "pair": "P07_s1_results",
+        "domain": "D4",
+        "paper": "P07",
+        "sample": 1,
+        "unit": "results",
+        "reader": 1,
+        "condition": "baseline",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 2,
+        "failure_types": [
+          "none"
+        ],
+        "reason": "P07 sections 4.1-4.2/Figures 8-9 and section 2.3 support the lookup/QA contrast, 1.9-point within-window spread, and overlapping shared-input GPT curves. Prose specifies 300 UUID pairs, the 2,048-token training window, and 10/20-document comparisons. Reading recovers the task distinction and degradation beyond training length. Its 2,048-token reference is read as the stated training-window boundary, not evidence of an exact test-sequence length."
+      },
+      "text_only": {
+        "id": "D4_text_117",
+        "pair": "P07_s1_results",
+        "domain": "D4",
+        "paper": "P07",
+        "sample": 1,
+        "unit": "results",
+        "reader": 1,
+        "condition": "baseline",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 1,
+        "failure_types": [
+          "reader_inference"
+        ],
+        "reason": "P07 Sec. 4.2 supports the prose and reading's lookup/QA contrast; Secs. 2.3 and 4.1 support shared-window similarity and training-length dependence. However, prose says the 1.9-point spread occurs 'within' Flan-UL2's 2,048-token training window, whereas the reading says 'at 2,048 tokens.' Neither the prose nor locked Sec. 4.1 establishes that exact evaluated sequence length. This is reader-added specificity, not an established source numerical error."
+      }
+    },
+    {
+      "id": "D4_text_133",
+      "pair": "P07_s3_results",
+      "domain": "D4",
+      "condition": "baseline",
+      "changed_fields": [
+        "failure_types"
+      ],
+      "primary": {
+        "id": "D4_text_133",
+        "pair": "P07_s3_results",
+        "domain": "D4",
+        "paper": "P07",
+        "sample": 3,
+        "unit": "results",
+        "reader": 1,
+        "condition": "baseline",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 2,
+        "failure_types": [
+          "reader_inference"
+        ],
+        "reason": "P07 Table 1, sections 2.3 and 4.2 support 88.3/56.1, shared-window comparisons, and the 300-pair intervention. Prose limits capacity claims to 'these conditions' and contrasts lookup with QA. Reading recovers worst-case placements and shared 10/20-document inputs. It adds 'UUID,' absent from this paragraph; that source-supported detail is not credited as prose recovery. Explicit task, model, and placement boundaries suffice for the selected contrast."
+      },
+      "text_only": {
+        "id": "D4_text_133",
+        "pair": "P07_s3_results",
+        "domain": "D4",
+        "paper": "P07",
+        "sample": 3,
+        "unit": "results",
+        "reader": 1,
+        "condition": "baseline",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 2,
+        "failure_types": [
+          "none"
+        ],
+        "reason": "P07 Table 1 and Sec. 2.3 support the prose's 88.3% oracle, 56.1% closed-book reference, worse 20/30-document cases, and overlapping standard/16K curves on shared-window inputs. Sec. 4.2 supports 45.6% worst-case versus perfect 300-pair lookup and the weak QA response to query repetition. The reading recovers both the evidence-availability/use distinction and these task, model, and length boundaries."
+      }
+    },
+    {
+      "id": "D4_text_134",
+      "pair": "P07_s3_results",
+      "domain": "D4",
+      "condition": "candidate",
+      "changed_fields": [
+        "failure_types"
+      ],
+      "primary": {
+        "id": "D4_text_134",
+        "pair": "P07_s3_results",
+        "domain": "D4",
+        "paper": "P07",
+        "sample": 3,
+        "unit": "results",
+        "reader": 2,
+        "condition": "candidate",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 2,
+        "failure_types": [
+          "reader_inference"
+        ],
+        "reason": "P07 Table 1 and sections 2.3/4.2 substantiate the answer-only and closed-book controls, shared-window profiles, and lookup intervention. Prose bounds the conclusion with 'in this evaluation'; reading preserves worst 20/30-document settings, shared 10/20-document inputs, and the 300-pair comparison. Reading adds 'UUID,' which the paragraph does not specify. Recovery rests on its explicit exact-lookup versus QA conditions, not that added identifier type."
+      },
+      "text_only": {
+        "id": "D4_text_134",
+        "pair": "P07_s3_results",
+        "domain": "D4",
+        "paper": "P07",
+        "sample": 3,
+        "unit": "results",
+        "reader": 2,
+        "condition": "candidate",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 2,
+        "failure_types": [
+          "none"
+        ],
+        "reason": "P07 Table 1 and Sec. 2.3 establish 88.3% answer-only accuracy, below-56.1% worst 20/30-document performance, and similar standard/16K curves for jointly fitting 10/20-document inputs. Sec. 4.2 establishes the 300-pair 45.6%-to-perfect contrast and largely unchanged QA pattern. Prose's 'in this evaluation' limits the inference; the reading retains available-evidence failure and all consequential comparison conditions."
+      }
+    },
+    {
+      "id": "D5_text_150",
+      "pair": "P10_s3_abstract",
+      "domain": "D5",
+      "condition": "candidate",
+      "changed_fields": [
+        "core_recovery",
+        "failure_types"
+      ],
+      "primary": {
+        "id": "D5_text_150",
+        "pair": "P10_s3_abstract",
+        "domain": "D5",
+        "paper": "P10",
+        "sample": 3,
+        "unit": "abstract",
+        "reader": 2,
+        "condition": "candidate",
+        "fidelity": "pass",
+        "core_recovery": 2,
+        "scope_recovery": 2,
+        "failure_types": [
+          "none"
+        ],
+        "reason": "P10 Sections 3-6 support opacity/SH Gaussians, no normal estimation, adaptive refinement, and shared-sort rendering without a fixed contributor cutoff. Table 1 and Section 7.2 support held-out real-dataset 30K rates, A6000, times, and the SSIM/PSNR contrast; Section 7.4 supports storage and artifacts. Prose 'metric-dependent ... rather than uniform superiority' is recovered by the reading. Named datasets, static capture, budget, resources, and visibility limitations sufficiently scope the conclusion."
+      },
+      "text_only": {
+        "id": "D5_text_150",
+        "pair": "P10_s3_abstract",
+        "domain": "D5",
+        "paper": "P10",
+        "sample": 3,
+        "unit": "abstract",
+        "reader": 2,
+        "condition": "candidate",
+        "fidelity": "pass",
+        "core_recovery": 1,
+        "scope_recovery": 2,
+        "failure_types": [
+          "reader_error"
+        ],
+        "reason": "P10 Sections 3-6, Table 1, and Sections 7.2/7.4 support the prose's Gaussian/rasterizer mechanism, metric comparisons, and resource/artifact boundaries. The reader recovers much of that mechanism but calls it 'real-time reconstruction'; the prose claims real-time rendering, with fitting taking 27-42 minutes, not real-time fitting. Its scope correctly retains that training budget, rendering rates, hardware, datasets, storage, and artifacts, so the temporal conflation is reader-side."
+      }
+    }
+  ],
+  "by_domain": {
+    "D1": {
+      "baseline": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      }
+    },
+    "D2": {
+      "baseline": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      }
+    },
+    "D3": {
+      "baseline": {
+        "fidelity": {
+          "pass": 17,
+          "concern": 1
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 1.9444444444444444,
+          "counts": {
+            "2": 17,
+            "1": 1
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      }
+    },
+    "D4": {
+      "baseline": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 1.9444444444444444,
+          "counts": {
+            "2": 17,
+            "1": 1
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      }
+    },
+    "D5": {
+      "baseline": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 1.9444444444444444,
+          "counts": {
+            "2": 17,
+            "1": 1
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      }
+    },
+    "D6": {
+      "baseline": {
+        "fidelity": {
+          "pass": 18
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 17,
+          "concern": 1
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 18
+          }
+        },
+        "scope_recovery": {
+          "mean": 1.9444444444444444,
+          "counts": {
+            "2": 17,
+            "1": 1
+          }
+        }
+      }
+    }
+  },
+  "by_unit": {
+    "abstract": {
+      "baseline": {
+        "fidelity": {
+          "pass": 36
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 36
+        },
+        "core_recovery": {
+          "mean": 1.9722222222222223,
+          "counts": {
+            "2": 35,
+            "1": 1
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        }
+      }
+    },
+    "methods": {
+      "baseline": {
+        "fidelity": {
+          "pass": 36
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 35,
+          "concern": 1
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        },
+        "scope_recovery": {
+          "mean": 1.9722222222222223,
+          "counts": {
+            "2": 35,
+            "1": 1
+          }
+        }
+      }
+    },
+    "results": {
+      "baseline": {
+        "fidelity": {
+          "pass": 35,
+          "concern": 1
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        },
+        "scope_recovery": {
+          "mean": 1.9444444444444444,
+          "counts": {
+            "2": 34,
+            "1": 2
+          }
+        }
+      },
+      "candidate": {
+        "fidelity": {
+          "pass": 36
+        },
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        },
+        "scope_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 36
+          }
+        }
+      }
+    }
+  },
+  "budget_violations": [],
+  "interpretation": "Separate supplementary source-access robustness pass, not a replacement or pooled independent evidence. Variation can reflect assessor variation and lack of layout, not only primary exposure."
+}

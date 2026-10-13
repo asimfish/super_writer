@@ -1,0 +1,87 @@
+{
+  "id": "P04",
+  "title": "Fast Inference from Transformers via Speculative Decoding",
+  "authors": ["Yaniv Leviathan", "Matan Kalman", "Yossi Matias"],
+  "domain": "efficient_inference",
+  "venue": "Proceedings of the 40th International Conference on Machine Learning (ICML 2023), Proceedings of Machine Learning Research 202:19274-19286",
+  "year": 2023,
+  "metadata_url": "https://proceedings.mlr.press/v202/leviathan23a.html",
+  "pdf_url": "https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf",
+  "pdf_sha256": "b287adca11d8126e86dfd6facf162f74f2f6dcfefdef9130af7dde35b08e1d1d",
+  "extracted_sha256": "7de45a03dd56f318214ffef68e3db40149dc048ec5a84f5440df66104751bc33",
+  "body_sha256": "fcee95bf17863b704e06e442219df129de7a25bc03efda9f05372a58174322cc",
+  "source_version": "Official ICML 2023 proceedings PDF hosted by PMLR, volume 202, pinned by SHA-256; not an arXiv fallback or an unverified author copy.",
+  "retrieved_date": "2026-10-11",
+  "prior_family_overlap": "unassessed",
+  "pages": {
+    "numbering": "1-based physical PDF pages; PDF prints 1-13, distinct from proceedings bibliographic pages 19274-19286",
+    "pdf_total": 13,
+    "main_body": [2, 7],
+    "displaced_experimental_table": [7, 7],
+    "separately_selected_limitations": [8, 8],
+    "selected_ranges": [[2, 8]]
+  },
+  "pdf_path": "sources/P04.pdf",
+  "extracted_path": "sources/P04.extracted.txt",
+  "body_path": "inputs/P04.txt",
+  "recipe_path": "sources/P04.extract.mjs",
+  "anchors_path": "anchors/P04.json",
+  "extraction_command": "pdftotext -raw sources/P04.pdf sources/P04.extracted.txt",
+  "selection_command": "node sources/P04.extract.mjs",
+  "extraction_tool": "Poppler pdftotext 26.03.0",
+  "extraction_segments": [
+    {
+      "order": 1,
+      "label": "Complete main-body Sections 2-4: speculative decoding, analysis, and experiments",
+      "start": "2. Speculative Decoding\n",
+      "end": "5. Related work\n",
+      "start_inclusive": true,
+      "end_inclusive": false,
+      "pdf_pages": [2, 7],
+      "raw_utf8_byte_range": [6913, 25855]
+    },
+    {
+      "order": 2,
+      "label": "Complete experimental Table 3 displaced into Related Work by raw PDF reading order",
+      "start": "Table 3. Empirical \u03b1 values for various target models Mp, approx-\n",
+      "end": "re-training of existing models. They usually also change the\n",
+      "start_inclusive": true,
+      "end_inclusive": false,
+      "pdf_pages": [7, 7],
+      "raw_utf8_byte_range": [27300, 28525]
+    },
+    {
+      "order": 3,
+      "label": "Separately located limitations and untested scope, including the displaced Table 3 sampling footnote",
+      "start": "One limitation of speculative execution in general, and of\n",
+      "end": "Finally, we note that stochastic speculative execution and\n",
+      "start_inclusive": true,
+      "end_inclusive": false,
+      "pdf_pages": [8, 8],
+      "raw_utf8_byte_range": [30387, 32762]
+    }
+  ],
+  "segment_join": "Original UTF-8 byte slices concatenated in source order, without inserted labels, separators, cleanup, or repaired text; byte ranges are zero-based, half-open.",
+  "body_words_whitespace": 3857,
+  "body_bytes": 22542,
+  "extracted_bytes": 47562,
+  "selection_scope": "Complete Sections 2-4, including the algorithm, all analysis subsections and assumptions, arithmetic-operation trade-offs, approximation choices, all experimental conditions, and Tables 1-2. The full displaced Table 3 is selected separately. Section 6's limitation and follow-up scope paragraphs are retained, with the introductory summary and closing cross-domain speculation excluded. No appendix is added.",
+  "limitations_locations": [
+    {"section": "3.1: independent acceptance-rate simplifying assumption", "pdf_pages": [3, 3], "substring": "If we make the simplifying assumption that the"},
+    {"section": "3.4: rejected guesses increase arithmetic work", "pdf_pages": [4, 4], "substring": "If \u03b1 is low, the increase in the number of arithmetic oper-"},
+    {"section": "3.6: tested approximation architectures and standardization", "pdf_pages": [5, 5], "substring": "Further, we only tested approximation models of"},
+    {"section": "6: resource limitation and untested or fixed scope", "pdf_pages": [8, 8], "segment_order": 3}
+  ],
+  "excluded_sections": ["Abstract", "Introduction", "Related Work prose", "Section 6 opening summary paragraph", "Section 6 closing cross-domain speculation", "Acknowledgments", "References", "Appendix"],
+  "pdf_fetch_operations": [
+    {"order": 1, "method": "curl", "url": "https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf", "connect_timeout_seconds": 15, "max_time_seconds": 90, "max_redirects": 3, "http_status": 200, "download_bytes": 479566, "result": "Official PDF saved"}
+  ],
+  "source_warnings": [],
+  "extraction_warnings": [
+    "Poppler -raw preserves PDF reading order, line-end hyphenation, fragmented mathematical expressions and figure labels, not reconstructed mathematical layout or graphics. No extracted source text was repaired or rewritten.",
+    "The two-column PDF places experimental Table 3 within raw Related Work text. A separate exact-boundary segment retains its complete caption and all 32 rows while excluding surrounding Related Work prose.",
+    "Table 3's footnote 6, including the LaMDA Top40 sampling condition, appears inside the selected Section 6 scope paragraph in raw reading order. Its original position and the interrupted sentence are preserved rather than moved or repaired.",
+    "The task-name spelling in the extracted setup is preserved as printed, even where it differs from the table's dataset label. Raw running headers and page numbers within selected spans are also retained.",
+    "Main-body walltime trials and acceptance-only measurements remain distinct in the selection; appendix experiments, extensions and implementation-discrepancy details are outside the stated main-body scope and remain available in the full raw extraction."
+  ]
+}

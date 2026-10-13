@@ -1,0 +1,60 @@
+{
+  "audits": [
+    {
+      "id": "G2_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A03 3.2-3.3 (lines 51-64, 115-137) support 'rare-token identifier with the subject's class' and frozen-model class-image regularization. Prose 'less class collapse and greater diversity ... slightly lower subject fidelity' matches 4.3/Table 3 (252-285: lower PRES, higher DIV, lower DINO/CLIP-I). Tables 1-2 (165-176) verify the stated quantitative and preference gains. Reading's class-linked, collapse-countering core and Stable Diffusion/Textual Inversion scope are explicitly stated, not supplied from source knowledge."
+    },
+    {
+      "id": "G2_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A03 3.2 (lines 51-64) supports 'pairing a rare-token identifier with a class descriptor'; 3.3 (115-137) supports frozen-model class rehearsal. Prose 'reduces class collapse and increases diversity while slightly lowering subject fidelity' captures the Imagen tradeoff in 4.3/Table 3 (252-285). Tables 1-2 and 4.1 (165-210) support the evaluation claims and DINO rationale. Reading's 'subject-retaining, prompt-responsive' core is stated through the class mechanism and joint metrics; its baseline scope is explicit in 'over Textual Inversion.'"
+    },
+    {
+      "id": "G2_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A04 2 (lines 29-34, 50-71, 88-107) supports prose 'lower next-token loss relative to both no call and a call without its result' followed by fine-tuning. 4.2/Table 3 (183-226) verifies first-number ASDiv 40.4%/14.8% and single-call, call-encouraging evaluation (196-200); Tables 4-5 support the mixed outcomes. Prose's final sentence states the chain/interaction boundary in 6 (367-376). Reading's prediction-improvement core and single-call, first-number ASDiv scope are explicit in prose."
+    },
+    {
+      "id": "G2_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A04 2 (lines 50-71, 88-107) supports 'reduce prediction loss relative to both no call and a call without its result' and augmented-text fine-tuning. 4.2 (196-200) verifies the top-ten call trigger and single-call restriction; Table 3 (189-195) verifies ASDiv 40.4%, 14.8%, 14.0%. Mixed QA/translation outcomes match Tables 4-5; 'Chained and interactive tool use remain unsupported' matches 6 (367-376). Reading's loss-supervision core and enabled-versus-disabled single-call scope are directly stated."
+    },
+    {
+      "id": "G2_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A04 2 (lines 50-71, 88-107) supports prose's 'both no-call and call-only alternatives' and subsequent augmented-text learning. 4.2/Table 3 (189-226) verifies ASDiv 40.4%, 9.6%, 14.8%, 14.0% in prompted zero-shot, single-call evaluation; other task qualifications agree with Tables 4-5. The final sentence accurately reflects independent-call and interaction limitations (367-376). Reading's prediction-improvement core and ASDiv baseline comparison appear explicitly in prose. Omitting the first-number scoring detail does not contradict 'accuracy' or leave the frozen mechanism/boundary question unanswered."
+    },
+    {
+      "id": "G2_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A04 2 (lines 50-71, 88-107) supports 'improve subsequent token prediction over both no-call and call-only alternatives' and self-feedback supervision. Table 3 (189-195) verifies the ASDiv enabled/text-only/disabled values; 4.2 (196-200) supports encouraged, single-call decoding. 4.3-4.4 (334-364) substantiate perplexity and qualified scaling claims; 6 (367-376) supports the final limitation. Reading's core and single-call ASDiv baseline scope are explicitly stated. Unspecified first-number scoring is an optional omission, not false science."
+    },
+    {
+      "id": "G2_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A03 3.2-3.3 (lines 51-64, 115-137) substantiate prose's class-linked identifier and original-model class-image regularization. Its 'reduces class collapse and increases diversity, but slightly lowers subject fidelity' reproduces the tradeoff in 4.3/Table 3 (252-285), not an unqualified benefit. Tables 1-2 (165-176) and majority voting (241-246) verify the evaluation claims; 4.5 (350-370) supports the limitations. Reading's collapse-countering core and dual identity/alignment advantage 'relative to Textual Inversion' are stated in the prose itself."
+    },
+    {
+      "id": "G2_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A03 3.2 (lines 51-64) supports prose 'drawing on the class prior'; 3.3 (115-137) supports class-only prompts and original-model generated regularization images. The Imagen ablation sentence matches 4.3/Table 3 (252-285): reduced collapse, greater diversity, slightly lower subject fidelity. Tables 1-2 (165-176) and 4.2 (241-246) substantiate both Stable Diffusion comparisons and majority-vote preferences. Reading's prior-preserving core and 'Stable Diffusion exceeds Textual Inversion' scope are explicitly grounded in these sentences."
+    }
+  ]
+}

@@ -15,7 +15,11 @@ Learning is not copying phrases and not loosely "sounding academic." It is extra
 | Sentence architecture | sentence roles and slots, not copied sentences | skeleton bank |
 | Reader contract | what the paper assumes, explains, and omits | audience rule |
 
-The output of learning is `style_profile.md` plus `section_blueprints.md`. If these artifacts do not exist, no deep imitation has happened.
+For a full-paper pass, record decisions in `style_profile.md` and
+`section_blueprints.md`. For a bounded edit, brief notes in the existing plan
+suffice. Follow [argument transfer](argument-transfer.md) to connect a located
+source choice to the author's evidence and final prose. Artifact presence alone
+does not prove that learning happened.
 
 ## Three-Table Method
 
@@ -28,7 +32,9 @@ For each target section, create three tables.
 |---|---|---|---|---|---|---|
 ```
 
-Fill this from 3-6 exemplar papers. Use exact quotations only inside analysis notes. Convert them into abstract patterns before rewriting.
+Fill this from a few matched exemplar passages; 3-6 papers can support a
+full-paper pass. Record source locations and reading scope, then convert the
+observed choices into applicable decisions before rewriting.
 
 ### Table 2: User Draft Move Table
 
@@ -64,7 +70,8 @@ Allowed operations:
 - `ADD`: new connective or explanatory text is added from existing evidence.
 - `KEEP`: paragraph is retained nearly as-is, with explicit justification.
 
-`KEEP` should be rare in style imitation. `ADD` should be secondary.
+Choose operations from the diagnosed defect. A sound paragraph can be kept;
+an important missing relation can be added without gratuitously rewriting it.
 
 ## Closed-Book Section Rewrite
 
@@ -81,18 +88,19 @@ This prevents the common failure mode where the model simply edits one sentence,
 
 ## Minimum Rewrite Standards
 
-For substantive revision, the output should usually satisfy:
+For substantive revision, inspect these diagnostics:
 
 | Metric | Target |
 |---|---|
-| Near-identical paragraph ratio | below 35% for revised sections |
-| Dominant operation | not `ADD` |
-| `KEEP` rows | below 25% unless the user requested minor polish |
+| Near-identical paragraph ratio | Review unchanged units with a diagnosed structural defect; no universal threshold |
+| Dominant operation | Check whether the operation actually fixes the diagnosed relation |
+| `KEEP` rows | Require a reason when the planned defect remains unresolved |
 | Missing obligatory moves | 0 |
 | Unsupported new claims | 0 |
 | Numbers without source | 0 |
 
-These are not universal quality metrics, but they catch shallow revision.
+Text-change ratios are diagnostics, not learning scores. The decisive test is
+whether final prose implements the intended argument while preserving evidence.
 
 ## Section Blueprint Requirements
 

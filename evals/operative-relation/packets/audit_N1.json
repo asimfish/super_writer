@@ -1,0 +1,170 @@
+[
+  {
+    "id": "N1_T01",
+    "unit": "results",
+    "text": "Figure 4 supports a task-specific reward-time trade-off rather than unlimited scaling. To prevent curriculum-driven difficulty changes from confounding reward, the experiment reduces maximum stair and obstacle heights and trains without the curriculum. It reports total episode reward as mean and standard deviation over five runs after 1,500 policy updates. At fixed batch size, more robots mean fewer consecutive steps per robot: training time decreases, but reward drops sharply at excessive parallelism, consistent with inadequate temporal information for advantage estimation. Throughput gains also slow beyond roughly 4,000 robots. With fewer robots, reward declines more gradually; the authors suggest this reflects less diverse, correlated samples from longer trajectories. Larger batches yield higher reward and delay the high-parallelism drop, while increasing training time. The 20,000-robot baseline uses 50 steps per robot and one million samples per update; it achieves the highest reward at greater training cost, not under a matched sample budget. Thus, about 2,048-4,096 robots with approximately 100,000-200,000 samples per batch balance reward and time for this simplified task, subject to temporal-data requirements and throughput saturation.",
+    "reading": {
+      "id": "N1_T01",
+      "core": "At fixed batch size, more robots shorten trajectories: training accelerates, but excessive parallelism lowers reward, attributed to inadequate temporal information. Throughput saturation and larger batches' reward-versus-time cost support a bounded reward-time balance rather than unlimited scaling.",
+      "scope": "The comparison uses reduced stair/obstacle heights, no curriculum, five runs, and rewards after 1,500 updates. The suggested balance is 2,048-4,096 robots and 100,000-200,000 samples; the 20,000-robot baseline has a different sample budget.",
+      "core_witness": "training time decreases, but reward drops sharply at excessive parallelism",
+      "scope_witness": "mean and standard deviation over five runs after 1,500 policy updates",
+      "unclear": "Causal confirmation of the temporal-information and sample-diversity explanations is not recoverable."
+    },
+    "critical_question": "In 120-180 words, what does Figure 4 show about the reward-versus-training-time trade-off as parallel robot count increases at a fixed batch size, and why is the task-specific choice of about 2,048-4,096 robots not evidence that unlimited parallelism improves learning? Interpret the comparison under its stated conditions: a simplified task without the curriculum, 1,500 policy updates, and fewer rollout steps per robot as robot count rises."
+  },
+  {
+    "id": "N1_T02",
+    "unit": "results",
+    "text": "Figure 4 shows a task-specific compromise between episode reward and training time, not a monotonic learning benefit from more robots. The simplified task reduces maximum stair and obstacle heights and removes the curriculum so improving policies are not assigned harder terrain. Rewards are reported as means and standard deviations over five runs after 1,500 policy updates. At fixed batch size, increasing robot count shortens each robot's rollout and training time, but reward drops sharply at excessive counts. The authors link this decline to insufficient temporal information for generalized advantage estimation; throughput gains also slow beyond roughly 4,000 robots. With fewer robots, reward decreases gradually, which the authors suggest reflects less diverse, correlated samples. Larger batches improve reward and postpone the decline but take longer to train. The 20,000-robot, million-sample baseline yields the highest reported reward at greater training cost, not under a matched batch budget. About 2,048-4,096 robots with roughly 100,000-200,000 samples per batch offer the reported balance for this task, reflecting temporal-data requirements and slowing throughput gains.",
+    "reading": {
+      "id": "N1_T02",
+      "core": "At fixed batch size, more robots shorten rollouts and training but sharply reduce reward at excessive counts. The authors attribute this to insufficient temporal information and tentatively link low-count losses to correlated samples. These limits and slowing throughput support the reported 2,048-4,096-robot, 100,000-200,000-sample compromise; larger batches improve reward at greater cost.",
+      "scope": "Reduced stair/obstacle heights, no curriculum; reward means and standard deviations over five runs after 1,500 updates. The highest-reward 20,000-robot, million-sample baseline is not batch-budget matched.",
+      "core_witness": "increasing robot count shortens each robot's rollout and training time, but reward drops sharply at excessive counts.",
+      "scope_witness": "The simplified task reduces maximum stair and obstacle heights and removes the curriculum",
+      "unclear": "Causal verification of the proposed explanations is not recoverable."
+    },
+    "critical_question": "In 120-180 words, what does Figure 4 show about the reward-versus-training-time trade-off as parallel robot count increases at a fixed batch size, and why is the task-specific choice of about 2,048-4,096 robots not evidence that unlimited parallelism improves learning? Interpret the comparison under its stated conditions: a simplified task without the curriculum, 1,500 policy updates, and fewer rollout steps per robot as robot count rises."
+  },
+  {
+    "id": "N1_T03",
+    "unit": "abstract",
+    "text": "Rapid terrain-aware locomotion training must accelerate experience collection without sacrificing coherent trajectories. Keeping simulation, data collection, and proximal policy optimization (PPO) on one GPU reduces CPU-GPU transfers. Because the shared mesh cannot readily change at resets, an adaptive curriculum relocates robots among tiled terrains, advancing successful robots and lowering difficulty after insufficient progress without regenerating terrain. Large minibatches and time-out bootstrapping adapt PPO to this setting, but adequate per-robot rollout lengths constrain useful parallelism. The policy uses proprioception and local terrain heights; friction randomization, observation noise, pushes, and actuator modeling prepare it for transfer. With 4,096 ANYmal C robots, 98,304 samples per batch, and 1,500 updates, training took under 20 minutes on an NVIDIA RTX A6000 workstation. In simulation, stair crossings without base contact achieved nearly 100% success for steps up to 0.2 m, but obstacle success declined with difficulty and uphill traversal failed beyond 25 degrees. The fixed policy negotiated stairs and obstacles on physical ANYmal C, establishing hardware deployment under this setup, although imperfect lidar-derived terrain maps reduced robustness and prompted limiting velocity commands to 0.6 m/s.",
+    "reading": {
+      "id": "N1_T03",
+      "core": "GPU-local simulation, collection, and PPO reduce transfers; relocating robots adapts difficulty without regenerating terrain. Adequate rollout lengths constrain parallelism. Reported training time and physical traversal support rapid training and hardware deployment, while imperfect terrain maps reduce robustness and prompt a speed cap.",
+      "scope": "The run uses 4,096 ANYmal C robots, 98,304 samples per batch, 1,500 updates, and an RTX A6000: under 20 minutes. Simulation stair success concerns crossings without base contact up to 0.2 m; uphill traversal fails beyond 25 degrees. Hardware commands are limited to 0.6 m/s.",
+      "core_witness": "Keeping simulation, data collection, and proximal policy optimization (PPO) on one GPU reduces CPU-GPU transfers.",
+      "scope_witness": "With 4,096 ANYmal C robots, 98,304 samples per batch, and 1,500 updates",
+      "unclear": "How large minibatches and time-out bootstrapping adapt PPO is not recoverable."
+    },
+    "critical_question": "In a 150-200 word full abstract, how does combining single-GPU simulation and PPO learning with an adaptive terrain curriculum enable rapid training of a terrain-aware locomotion policy, and what do the ANYmal training and deployment experiments establish about that contribution? Keep the claim bounded by the reported training setup, the need for adequate per-robot rollout lengths, and the limitation of imperfect terrain maps on hardware."
+  },
+  {
+    "id": "N1_T04",
+    "unit": "abstract",
+    "text": "Terrain-aware locomotion training requires fast simulation without sacrificing temporal experience. We keep Isaac Gym simulation and proximal policy optimization (PPO) on one GPU, reducing data transfers while collecting experience from thousands of robots. An adaptive curriculum promotes or demotes each robot according to traversal performance by relocating it among tiled terrain levels, changing difficulty without regenerating the shared mesh. The policy uses proprioception and local terrain heights; training incorporates friction randomization, observation noise, pushes, and actuator modeling for transfer. PPO uses large minibatches and time-out bootstrapping, but increasing robot count at fixed batch size shortens rollouts and can impair learning. On an i9-11900k workstation with an NVIDIA RTX A6000, ANYmal C training with 4,096 robots, 98,304 samples per batch, and 1,500 updates took under 20 minutes. Simulated crossings without base contact achieved nearly 100% success for stair steps up to 0.2 m; obstacle success declined with difficulty, and slope climbing failed beyond 25 degrees. The fixed policy traversed stairs and obstacles on physical ANYmal C, but imperfect lidar-derived terrain maps reduced robustness, prompting a 0.6 m/s linear-velocity command limit. These experiments support rapid training and deployment under the tested temporal, terrain, and sensing conditions.",
+    "reading": {
+      "id": "N1_T04",
+      "core": "One-GPU simulation and PPO reduce transfers; traversal-based relocation adjusts difficulty without rebuilding terrain. Together with the reported training time and physical traversals, this supports rapid training and deployment, bounded by rollout duration and sensing quality.",
+      "scope": "ANYmal C: 4,096 robots, 98,304 samples/batch, 1,500 updates, i9-11900k/RTX A6000, under 20 minutes. Simulated success excludes base contact: nearly 100% for stairs up to 0.2 m, declining for obstacles, failure beyond 25-degree slopes. Physical stairs/obstacles were traversed; imperfect lidar maps prompted a 0.6 m/s command limit.",
+      "core_witness": "reducing data transfers while collecting experience from thousands of robots.",
+      "scope_witness": "Simulated crossings without base contact achieved nearly 100% success for stair steps up to 0.2 m",
+      "unclear": "Physical success rates and isolated contributions to training speed are not recoverable."
+    },
+    "critical_question": "In a 150-200 word full abstract, how does combining single-GPU simulation and PPO learning with an adaptive terrain curriculum enable rapid training of a terrain-aware locomotion policy, and what do the ANYmal training and deployment experiments establish about that contribution? Keep the claim bounded by the reported training setup, the need for adequate per-robot rollout lengths, and the limitation of imperfect terrain maps on hardware."
+  },
+  {
+    "id": "N1_T05",
+    "unit": "methods",
+    "text": "PPO's critic predicts an infinite-horizon discounted return, but a reset does not always mean that future return is zero. Failure or goal completion ends the task trajectory and can be anticipated by the critic; a time limit instead interrupts a continuing trajectory. Because episode time is absent from observations, the critic cannot anticipate that interruption. Treating it as terminal would remove continuation value for a reason unavailable to the critic. The environment therefore distinguishes time-outs and augments their rewards with the critic's discounted prediction of future return, bootstrapping the target for the interrupted trajectory rather than the episode begun after reset. This distinction remains necessary with short rollouts: the 20-second episode limit is independent of the number of steps collected per policy update, and environments are not reset after every update. Episodes can consequently span multiple batches, so time-outs cannot be assumed absent or restricted to the final collection step.",
+    "reading": {
+      "id": "N1_T05",
+      "core": "Time limits interrupt continuing trajectories without observable episode time, so the critic cannot anticipate them. Treating these resets as terminal would discard continuation value. Separating time-outs and adding the critic's discounted future-return prediction preserves that value for the interrupted trajectory, not the newly reset episode.",
+      "scope": "This distinction concerns time-outs versus failure or goal completion. The 20-second limit is independent of rollout length; updates do not reset environments, so episodes span batches and time-outs need not occur only at a batch's final step.",
+      "core_witness": "augments their rewards with the critic's discounted prediction of future return",
+      "scope_witness": "the 20-second episode limit is independent of the number of steps collected per policy update",
+      "unclear": "none"
+    },
+    "critical_question": "In 110-160 words, why does this PPO setup distinguish time-limit resets from failures or goal completion, and how is the critic target handled for a time-out when episode time is absent from observations and an episode spans multiple short rollout batches?"
+  },
+  {
+    "id": "N1_T06",
+    "unit": "methods",
+    "text": "Proximal policy optimization (PPO) uses a critic to estimate an infinite-horizon discounted return, so failure or goal completion and time-limit resets require different treatment. Failures and completed goals can be anticipated from the state; a time-out cannot, because observations omit episode time. Treating a time-out as terminal would therefore remove continuation value for a reason the critic cannot observe, truncating its target rather than reflecting task completion. The environment flags time-outs separately and augments their rewards with the critic's own discounted prediction of future return, bootstrapping the interrupted trajectory's target instead of assigning zero continuation value. This prediction concerns the trajectory cut short, not the episode started after reset. Episodes last up to 20 seconds and span multiple short rollout batches because environments are not reset after each policy update. Time-outs can consequently occur inside a batch and must be handled wherever they occur, not merely at collection boundaries.",
+    "reading": {
+      "id": "N1_T06",
+      "core": "Time-outs are separately flagged and their rewards receive the critic's discounted future-return prediction for the interrupted trajectory. Because episode time is unobserved, terminal treatment would erase continuation value for an unobservable interruption; bootstrapping retains that value rather than treating interruption as task completion.",
+      "scope": "Time-limit resets differ from state-anticipatable failures or completed goals. Episodes last up to 20 seconds, span short rollout batches, and persist across policy updates; time-outs therefore require handling anywhere within a batch, not just collection boundaries.",
+      "core_witness": "bootstrapping the interrupted trajectory's target instead of assigning zero continuation value.",
+      "scope_witness": "Time-outs can consequently occur inside a batch and must be handled wherever they occur",
+      "unclear": "none"
+    },
+    "critical_question": "In 110-160 words, why does this PPO setup distinguish time-limit resets from failures or goal completion, and how is the critic target handled for a time-out when episode time is absent from observations and an episode spans multiple short rollout batches?"
+  },
+  {
+    "id": "N1_T07",
+    "unit": "abstract",
+    "text": "Rapid training of terrain-aware locomotion requires both high simulation throughput and trajectories that remain informative for learning. Keeping Isaac Gym simulation, policy inference, observations, rewards, and proximal policy optimization on one GPU reduces CPU-GPU transfers. A performance-adaptive curriculum raises difficulty after successful traversal and lowers it after insufficient progress by relocating robots among prebuilt terrain tiles, avoiding regeneration. A single policy uses proprioception and local terrain heights to follow motion commands. With 4,096 robots, 98,304 samples per batch, and 1,500 policy updates, an ANYmal C policy trains in under 20 minutes on an i9-11900k/RTX A6000 workstation. This speed depends on retaining adequate consecutive rollout steps per robot: increasing parallelism at fixed batch size eventually shortens trajectories enough to impair learning. Simulation tests show nearly complete traversal success without base contact on stairs up to 0.2 m, declining success on randomized obstacles, and failed climbing beyond 25-degree slopes. The fixed policy also negotiates stairs and obstacles on hardware, but imperfect elevation maps reduce robustness, prompting a 0.6 m/s command limit. Together, these results establish rapid training and physical deployment under the reported configuration, bounded by rollout duration and terrain sensing.",
+    "reading": {
+      "id": "N1_T07",
+      "core": "GPU-local processing reduces transfers, and relocating robots adapts terrain difficulty without regeneration. Training time and hardware traversal establish rapid training and physical deployment. This result is bounded: excessive parallelism shortens informative trajectories and impairs learning, while imperfect elevation maps reduce hardware robustness.",
+      "scope": "The ANYmal C run uses 4,096 robots, 98,304 samples per batch, 1,500 updates, and an i9-11900k/RTX A6000, taking under 20 minutes. Simulation tests measure traversal without base contact: stairs up to 0.2 m, declining obstacle success, and failed slopes beyond 25 degrees. Hardware commands are capped at 0.6 m/s.",
+      "core_witness": "This speed depends on retaining adequate consecutive rollout steps per robot",
+      "scope_witness": "With 4,096 robots, 98,304 samples per batch, and 1,500 policy updates",
+      "unclear": "none"
+    },
+    "critical_question": "In a 150-200 word full abstract, how does combining single-GPU simulation and PPO learning with an adaptive terrain curriculum enable rapid training of a terrain-aware locomotion policy, and what do the ANYmal training and deployment experiments establish about that contribution? Keep the claim bounded by the reported training setup, the need for adequate per-robot rollout lengths, and the limitation of imperfect terrain maps on hardware."
+  },
+  {
+    "id": "N1_T08",
+    "unit": "abstract",
+    "text": "Rapid terrain-aware locomotion training must accelerate data collection without sacrificing the experience needed for learning. We keep Isaac Gym simulation, observation and reward computation, and proximal policy optimization on one GPU to reduce CPU-GPU transfers. An adaptive curriculum relocates robots among prebuilt terrain tiles according to traversal progress, raising difficulty after success and lowering it after insufficient progress. This combines parallel collection with progressively challenging experience without regenerating terrain. A single policy follows motion commands using proprioception and local terrain heights. With 4,096 robots, 98,304 samples per batch, and 1,500 policy updates, an ANYmal C policy trains in under 20 minutes on an i9-11900k/RTX A6000 workstation. However, increasing robot count at fixed batch size shortens individual rollouts, and inadequate consecutive steps can undermine learning. Simulation traversal without base contact is nearly always successful on stairs up to 0.2 m, but success declines on randomized obstacles and climbing fails beyond 25-degree slopes. The fixed policy also traverses stairs and obstacles on hardware, where imperfect elevation maps reduce robustness and prompt a maximum linear-velocity command of 0.6 m/s. The reported configuration therefore supports rapid training and physical deployment, constrained by rollout duration and terrain sensing.",
+    "reading": {
+      "id": "N1_T08",
+      "core": "One-GPU simulation, observation/reward computation, and optimization reduce transfers. Progress-based relocation supplies harder terrain experience without regeneration. The reported configuration enables under-20-minute training and physical stairs/obstacles traversal; shortened rollouts can undermine learning, while imperfect elevation maps constrain deployment.",
+      "scope": "ANYmal C, i9-11900k/RTX A6000, 4,096 robots, 98,304 samples/batch, 1,500 updates. Simulated success requires traversal without base contact: nearly always successful stairs up to 0.2 m, declining success on randomized obstacles, failure beyond 25-degree slopes. Hardware linear-velocity commands are capped at 0.6 m/s.",
+      "core_witness": "This combines parallel collection with progressively challenging experience without regenerating terrain.",
+      "scope_witness": "Simulation traversal without base contact is nearly always successful on stairs up to 0.2 m",
+      "unclear": "Physical success rate and the isolated GPU-placement speedup are not recoverable."
+    },
+    "critical_question": "In a 150-200 word full abstract, how does combining single-GPU simulation and PPO learning with an adaptive terrain curriculum enable rapid training of a terrain-aware locomotion policy, and what do the ANYmal training and deployment experiments establish about that contribution? Keep the claim bounded by the reported training setup, the need for adequate per-robot rollout lengths, and the limitation of imperfect terrain maps on hardware."
+  },
+  {
+    "id": "N1_T09",
+    "unit": "results",
+    "text": "Figure 4 shows that faster collection does not necessarily produce a better policy. On a simplified task without the curriculum and with reduced stair and obstacle difficulty, it compares mean episode reward and standard deviation over five runs after 1,500 policy updates. At fixed batch size, increasing robot count reduces training time but shortens each robot's rollout. Reward drops sharply at excessive counts, which the authors explain by inadequate temporal information for generalized advantage estimation. Conversely, they hypothesize that the gradual reward decline at small counts reflects less diverse samples from longer individual trajectories. Throughput scales nearly linearly up to about 4,000 robots before gains slow. Larger batches improve reward and permit more robots before deterioration, but take longer to train; the 20,000-robot, million-sample baseline attains the highest reward at a longer training duration. Thus, about 2,048-4,096 robots with roughly 100,000-200,000 samples per batch balance reward and training time for this task, rather than supporting unlimited parallelism.",
+    "reading": {
+      "id": "N1_T09",
+      "core": "More robots at fixed batch size accelerate training but shorten rollouts, with excessive counts sharply reducing reward. The text attributes this to inadequate temporal information. Slowing throughput gains and larger batches' additional time cost support a limited reward-time balance, not unlimited parallelism.",
+      "scope": "The comparison measures mean episode reward and standard deviation over five runs after 1,500 updates, using reduced terrain difficulty without curriculum. The suggested balance is 2,048-4,096 robots and 100,000-200,000 samples. The highest-reward baseline uses 20,000 robots and one million samples, taking longer.",
+      "core_witness": "increasing robot count reduces training time but shortens each robot's rollout",
+      "scope_witness": "mean episode reward and standard deviation over five runs after 1,500 policy updates",
+      "unclear": "Causal verification of the temporal-information and sample-diversity explanations is not recoverable."
+    },
+    "critical_question": "In 120-180 words, what does Figure 4 show about the reward-versus-training-time trade-off as parallel robot count increases at a fixed batch size, and why is the task-specific choice of about 2,048-4,096 robots not evidence that unlimited parallelism improves learning? Interpret the comparison under its stated conditions: a simplified task without the curriculum, 1,500 policy updates, and fewer rollout steps per robot as robot count rises."
+  },
+  {
+    "id": "N1_T10",
+    "unit": "results",
+    "text": "Figure 4 shows that faster data collection improves the reward-time trade-off only while per-robot trajectories remain long enough for learning. The comparison removes the curriculum, reduces maximum stair and obstacle difficulty, and reports mean episode reward and standard deviation over five runs after 1,500 policy updates. At fixed batch size, more robots mean fewer consecutive steps per robot: training becomes faster, but reward drops sharply at excessive parallelism. The authors explain this drop through insufficient temporal information for advantage estimation; they tentatively attribute the smaller reward decline at low robot counts to reduced sample diversity. Throughput scales nearly linearly to about 4,000 robots before gains slow. Larger batches increase reward and permit more robots before deterioration, at greater training cost. The million-sample, 20,000-robot baseline attains the highest reward but takes longer to train. Thus, about 2,048-4,096 robots with roughly 100,000-200,000 samples per batch offer the reported compromise on this simplified task, balancing trajectory length, diversity, and throughput rather than licensing unlimited parallelism.",
+    "reading": {
+      "id": "N1_T10",
+      "core": "At fixed batch size, more robots shorten trajectories and training, but excessive parallelism reduces reward. The authors invoke insufficient temporal information and tentatively reduced sample diversity at low counts. Slowing throughput and larger batches' extra cost support a bounded 2,048-4,096-robot compromise, not unlimited parallelism.",
+      "scope": "No curriculum, reduced maximum stair/obstacle difficulty; mean episode reward and standard deviation over five runs after 1,500 updates. The compromise uses roughly 100,000-200,000 samples/batch. The 20,000-robot, million-sample baseline has the highest reward but trains longer.",
+      "core_witness": "training becomes faster, but reward drops sharply at excessive parallelism.",
+      "scope_witness": "The comparison removes the curriculum, reduces maximum stair and obstacle difficulty",
+      "unclear": "Causal verification of the proposed explanations is not recoverable."
+    },
+    "critical_question": "In 120-180 words, what does Figure 4 show about the reward-versus-training-time trade-off as parallel robot count increases at a fixed batch size, and why is the task-specific choice of about 2,048-4,096 robots not evidence that unlimited parallelism improves learning? Interpret the comparison under its stated conditions: a simplified task without the curriculum, 1,500 policy updates, and fewer rollout steps per robot as robot count rises."
+  },
+  {
+    "id": "N1_T11",
+    "unit": "methods",
+    "text": "Proximal policy optimization (PPO) uses a critic to estimate an infinite-horizon sum of discounted future rewards, but resets can truncate that return. Failures and goal completion are predictable task endings. Time limits are different: episode time is absent from observations, so the critic cannot anticipate when an otherwise continuing trajectory will be interrupted. Treating that interruption as terminal would discard its predicted future return. The modified environment interface therefore reports time-outs separately, and the reward at a time-out is augmented with the critic's discounted estimate of the remaining return. The critic target thus includes continuation value rather than treating the reset as task completion. Episodes last up to 20 seconds and span multiple short rollout batches, so time-outs can occur within a batch, not just at its final step. A policy update does not itself reset the environments.",
+    "reading": {
+      "id": "N1_T11",
+      "core": "Unlike predictable task endings, time limits interrupt continuing trajectories without observable episode time. Treating them as terminal discards predicted future return. Reporting time-outs separately and augmenting their reward with the critic's discounted remaining-return estimate keeps continuation value in the target instead of equating reset with completion.",
+      "scope": "The distinction is between failure/goal completion and time-limit resets. Episodes last up to 20 seconds and span multiple short batches; policy updates do not reset environments, so time-outs may occur within a batch rather than only at its final step.",
+      "core_witness": "the reward at a time-out is augmented with the critic's discounted estimate of the remaining return",
+      "scope_witness": "Episodes last up to 20 seconds and span multiple short rollout batches",
+      "unclear": "none"
+    },
+    "critical_question": "In 110-160 words, why does this PPO setup distinguish time-limit resets from failures or goal completion, and how is the critic target handled for a time-out when episode time is absent from observations and an episode spans multiple short rollout batches?"
+  },
+  {
+    "id": "N1_T12",
+    "unit": "methods",
+    "text": "In proximal policy optimization (PPO), the critic estimates an infinite-horizon discounted return. A failure or goal completion is a task termination the critic can anticipate. A time limit, however, interrupts a continuing task without an observable warning: episode time is absent from the observations. Treating this reset like a failure would remove the continuation value from the target, even though the task did not end for a predictable reason. The modified environment interface therefore identifies time-outs separately. For these transitions, the reward is augmented with the critic's discounted estimate of remaining return, bootstrapping its target rather than assigning zero future return. This handling cannot assume that time-outs occur only at batch boundaries: episodes last up to 20 seconds and span multiple short rollout batches. Completing a collection batch does not reset the environment; time-limit resets must be detected wherever they occur.",
+    "reading": {
+      "id": "N1_T12",
+      "core": "Separately identifying time-outs lets rewards include the critic's discounted remaining-return estimate, preserving continuation value that terminal treatment would remove. The reason is that episode time is unobserved: a time limit interrupts a continuing task rather than a state-predictable failure or goal completion.",
+      "scope": "This concerns time-limit transitions, not failures/goals. Episodes last up to 20 seconds and span multiple short rollout batches; completing a batch does not reset the environment, so timeout detection must cover every occurrence rather than only batch boundaries.",
+      "core_witness": "bootstrapping its target rather than assigning zero future return.",
+      "scope_witness": "Completing a collection batch does not reset the environment",
+      "unclear": "The state used to estimate remaining return is not recoverable."
+    },
+    "critical_question": "In 110-160 words, why does this PPO setup distinguish time-limit resets from failures or goal completion, and how is the critic target handled for a time-out when episode time is absent from observations and an episode spans multiple short rollout batches?"
+  }
+]

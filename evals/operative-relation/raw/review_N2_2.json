@@ -1,0 +1,46 @@
+{
+  "reviews": [
+    {
+      "id": "N2_s2_results",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both accurately interpret Table 2: calibration weighting improves ordered-data coverage at a width cost, while weighted fitting reverses that width cost without reaching 90%. Both contrast this with the exchangeable permuted control, where the width advantage disappears and variability increases. Their temporal-average caveats and potentially large swapped-residual total-variation penalty agree with Sections 5.1 and 6.2. The explanations are substantively equivalent and equally clear."
+    },
+    {
+      "id": "N2_s1_results",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both faithfully separate the two weighting roles in Table 2, recognize ordered-data undercoverage relative to 90%, and explain why permutation removes the weighted-fitting width advantage. Both correctly condition near-nominal theoretical coverage on a small swapped-residual discrepancy. B is slightly preferable because it explicitly distinguishes temporal averages from coverage at every time point and identifies the randomized construction when invoking the bound. A's shorter explanation remains complete on the core objective."
+    },
+    {
+      "id": "N2_s2_methods",
+      "preferred": "A",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both correctly explain Section 7.2's chain: fixed positional tags and independent weighted sampling, test residual at the swapped index, the infinity-cutoff comparison using test-weight dominance, and total-variation comparison with the original law. Both obtain alpha plus weighted distances without assuming residual exchangeability. A is slightly preferable because its explicit 'for any residual vector' mass bound makes especially clear why the original-law weighted sum is bounded by alpha after the distribution comparison. B's account is also sound and coherent."
+    },
+    {
+      "id": "N2_s1_abstract",
+      "preferred": "A",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 4, "language": 5},
+      "reason": "Both agree with Theorem 2b and Sections 5.2, 5.3, and 6: the residual-distribution penalty vanishes under exchangeability, small penalties limit undercoverage, and ordered-electricity gains do not reach 90%. A better explains the central construction by moving the candidate test point before fitting while retaining tags at their positions. B states that the swap links miscoverage to high-residual indices but leaves that fitting mechanism unspecified. This is an explanatory omission, not false science; B's jackknife+ baseline is accurate but less central to this objective."
+    },
+    {
+      "id": "N2_s2_abstract",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both connect prespecified weighting and tagged fitting to independent weighted swapping, bounded high-residual mass, and Theorem 2b's residual total-variation penalty. Both distinguish exchangeable validity from conditional robustness and accurately describe the electricity width contrast and election undercoverage in Section 6. A more explicitly connects tags to regression weights; B more explicitly describes swapping the test observation before fitting and distinguishes the jackknife+ baseline. These complementary details do not establish a meaningful overall preference."
+    },
+    {
+      "id": "N2_s1_methods",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both explain the actual proof in Section 7.2, equations (24)-(31): tags remain positional, independent sampling locates the test residual at K, replacing test mass by infinity and weight dominance establish the rejection implication, and high-residual indices have mass at most alpha for every vector. Both then average over K and charge weighted total-variation distances when replacing swapped laws by the original law. Their different presentation order does not change completeness, fidelity, or clarity."
+    }
+  ]
+}

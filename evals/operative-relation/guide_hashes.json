@@ -1,0 +1,9 @@
+{
+  "PROTOCOL.md": "56572670b73089a88640e91082e68b260b40a390b08173dbae08492ca6b4943e",
+  "baseline/argument-transfer.md": "d04c5c900b274185782723901eb9d60fd1979abe3ba239c996a18f7359a18f3c",
+  "candidate/argument-transfer.md": "4c35d011648b33be9dd72440f409fc9aa801cf19c4f634cf60c458e73ad0310d",
+  "shared/abstract-decisions.md": "453a43957c5ac9d58707df81bfdce72ac25895f88296f4f4a6bf598194825848",
+  "shared/abstract-preflight.md": "fcaa62a180166c5a81da963ab9575be01438484aa28c1842cb2c50a17da2c107",
+  "shared/results-validation.md": "546b81cf1677a584cbe7d58847d510006575f5dced1b2215553af204baf3d62f",
+  "shared/writing-protocols.md": "56586ceda2ec9f19a049eaf09befbdab2f118e2b1c6bb21c580562f527a9e8b8"
+}

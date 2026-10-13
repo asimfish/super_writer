@@ -1,0 +1,55 @@
+{
+  "id": "P02",
+  "title": "ScrewMimic: Bimanual Imitation from Human Videos with Screw Space Projection",
+  "domain": "robotics",
+  "venue": "Proceedings of Robotics: Science and Systems XX",
+  "year": 2024,
+  "metadata_url": "https://www.roboticsproceedings.org/rss20/p078.html",
+  "pdf_url": "https://www.roboticsproceedings.org/rss20/p078.pdf",
+  "doi": "10.15607/RSS.2024.XX.078",
+  "pdf_sha256": null,
+  "body_sha256": null,
+  "pages": null,
+  "extraction_command": "pdftotext -raw sources/P02.pdf sources/P02.extracted.txt",
+  "extraction_command_status": "Required command recorded for reproducibility; no complete PDF was available for extraction.",
+  "extraction_completed": false,
+  "ordered_extraction_segments": [],
+  "source_version": {
+    "type": "unavailable_official_proceedings_pdf",
+    "full_pdf_available": false,
+    "verified_title_venue_year": true,
+    "verification": "Exact title, venue, year, and DOI verified from the official proceedings landing page only. Final partial PDF failed pdfinfo validation; no complete proceedings or author-arXiv PDF was obtained.",
+    "retrieved_date": "2026-10-11",
+    "fallback_used": false
+  },
+  "prior_family_overlap": "unassessed",
+  "pdf_download_attempt_count": 3,
+  "download_attempts": [
+    {"resource": "metadata_html", "url": "https://www.roboticsproceedings.org/rss20/p078.html", "attempt": 1, "max_time_seconds": 60, "http_status": 200, "curl_exit_code": 0, "bytes": 8600},
+    {"resource": "pdf", "url": "https://www.roboticsproceedings.org/rss20/p078.pdf", "attempt": 1, "max_time_seconds": 90, "http_status": 200, "curl_exit_code": 18, "bytes": 7581625, "outcome": "Server ended a partial transfer; replaced by attempt 2."},
+    {"resource": "pdf", "url": "https://www.roboticsproceedings.org/rss20/p078.pdf", "attempt": 2, "max_time_seconds": 240, "http_status": 200, "curl_exit_code": 28, "bytes": 20623918, "outcome": "Timed out; partial prefix retained for final byte-range request."},
+    {"resource": "pdf", "url": "https://www.roboticsproceedings.org/rss20/p078.pdf", "attempt": 3, "max_time_seconds": 300, "http_status": 206, "curl_exit_code": 56, "bytes": 3711856, "resume_byte_offset": 20623918, "expected_total_bytes": 34279542, "content_range": "bytes 20623918-34279541/34279542", "outcome": "Connection reset by peer before the remaining bytes completed. PDF download attempt limit exhausted."}
+  ],
+  "source_warnings": [
+    "The landing page's citation_pdf_url uses HTTP; the official relative PDF link was resolved over HTTPS.",
+    "All three bounded PDF attempts failed: partial transfer (curl 18), 240-second timeout (curl 28), and connection reset during the final resumed transfer (curl 56). No fourth PDF attempt or author-arXiv fallback download was made.",
+    "The retained 24,335,774-byte partial file is smaller than the server's expected 34,279,542 bytes. It was renamed with a .partial suffix and must not be consumed as a proceedings PDF.",
+    "Final pdfinfo validation failed with missing trailer dictionary and unreadable xref table. PDF identity/content, total pages, and main-body boundaries could not be verified."
+  ],
+  "extraction_warnings": ["No usable raw extraction, permitted body, page/section selection, extraction script, or editorial anchors were created for P02. These would require a complete validated source; missing content and locators were not invented."],
+  "partial_download": {
+    "path": "sources/P02.pdf.partial",
+    "sha256": "eb0955e80e9e10688356fe7545edaa280f2351a553eca12b651f56fc06e92643",
+    "bytes": 24335774,
+    "expected_total_bytes": 34279542,
+    "missing_bytes": 9943768,
+    "usable_as_source": false
+  },
+  "artifacts": {
+    "metadata_html": "sources/P02.proceedings.html",
+    "partial_download_not_a_source": "sources/P02.pdf.partial",
+    "resume_response_headers": "sources/P02.download3.headers"
+  },
+  "unavailable_artifacts": ["sources/P02.pdf", "sources/P02.extracted.txt", "sources/P02.extract.py", "inputs/P02.txt", "anchors/P02.json"],
+  "status": "source_unavailable_after_bounded_attempts"
+}

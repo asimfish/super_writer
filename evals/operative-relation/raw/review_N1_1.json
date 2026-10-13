@@ -1,0 +1,46 @@
+{
+  "reviews": [
+    {
+      "id": "N1_s1_results",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "N1 Section 4.1 and Figure 4 support both accounts. Each explains why removing the curriculum makes reward interpretable, fixes the comparison at 1,500 updates, and connects increased robot count at fixed batch size to shorter rollouts and eventual reward loss. Both distinguish slowing throughput gains from learning quality, qualify the low-count diversity explanation, and identify the larger-budget baseline. Their task-specific conclusions follow from the stated mechanisms; neither treats more robots as an unlimited benefit. The wording differences offer no material explanatory or readability advantage."
+    },
+    {
+      "id": "N1_s1_abstract",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "N1 Sections 2, 3.1, 4.2, and 4.3 support the mechanisms and bounded results in both abstracts. Each connects GPU-local computation to reduced transfers and curriculum relocation to changing difficulty without terrain regeneration, while preserving the rollout-length constraint. Both identify the reported training configuration and separate simulation success from hardware deployment limited by imperfect maps. A explains the shared-mesh constraint explicitly; B closes with an explicit scope statement. Both already supply the requested explanation, and neither difference warrants a preference or fidelity penalty."
+    },
+    {
+      "id": "N1_s2_methods",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "N1 Sections 2.2.1-2.2.2 support both explanations. Each contrasts predictable failure or goal termination with a time-out hidden by the absence of episode time, explains the erroneous loss of continuation value, and describes reward augmentation using the critic's prediction. Both explicitly associate that prediction with the interrupted trajectory rather than the reset episode. Each then explains why episodes spanning short batches require handling time-outs beyond collection boundaries. B starts with an intuitive return distinction; A presents the same causal account just as clearly."
+    },
+    {
+      "id": "N1_s2_abstract",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "N1 Sections 2, 3.1, 4.2, and 4.3 substantiate both abstracts. Each explains how GPU computation reduces transfers and performance-based relocation combines terrain progression with avoiding regeneration. Both connect fixed-batch parallelism to shorter trajectories and impaired learning, rather than asserting unconstrained acceleration. Their simulation and hardware findings remain attached to the reported setup and terrain-map limitation. A explicitly describes progressively challenging experience; B integrates the rollout qualification more tightly with the speed claim. These are comparably effective explanations, not a meaningful quality gap."
+    },
+    {
+      "id": "N1_s2_results",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "N1 Section 4.1 and Figure 4 support both responses. Each states the simplified, curriculum-free comparison after 1,500 updates and explains the fixed-batch chain from more robots to shorter rollouts, faster training, and eventual reward deterioration. Both qualify the diversity explanation at low counts and distinguish larger-batch reward gains from their training cost. A links reduced diversity explicitly to longer trajectories; B makes trajectory length, diversity, and throughput explicit in its conclusion. Both justify the bounded compromise rather than unlimited parallelism with equally clear arguments."
+    },
+    {
+      "id": "N1_s1_methods",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "N1 Sections 2.2.1-2.2.2 support both responses. Each explains that the critic can anticipate task endings but not a time limit absent from observations, and that terminal treatment would wrongly discard continuation value. Both describe separately flagged time-outs and reward augmentation with the critic's discounted remaining-return estimate. Each also separates episode duration from rollout collection and explains why time-outs must be detected inside batches. Neither merely names bootstrapping: both explain its purpose and the target correction. Their organization and language are comparably clear."
+    }
+  ]
+}

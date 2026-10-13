@@ -1,0 +1,292 @@
+{
+  "audits": [
+    {
+      "id": "D3_text_096",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Secs. 3.3-4.2 support projected statistics, dense weights and refreshed subspaces. Sec. 5.3/Table 3 support the untuned distributed quality run; Sec. 5.5/Figure 4 and Appendix E/Table 11 support separate memory profiling and lower throughput. Table 4 supports small aggregate GLUE gains. Prose's 'Separately' and 'not faster training' supply adequate experimental boundaries, which the reading recovers alongside the mechanism and conditional theory."
+    },
+    {
+      "id": "D3_text_105",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Secs. 3.2-4.2 support statistic compression, refresh and the fixed-projection identity-regularizer restriction. Table 2/Sec. 5.1 support rank-matched 1B comparisons and equal search budgets; Secs. 5.3/5.5 distinguish distributed quality from small-batch profiling. The reading reconstructs these distinctions. Its 'Stable-rank conditions are not recoverable' correctly identifies omitted detail, not a consequential abstract-level scope failure; those unprovided assumptions receive no recovery credit."
+    },
+    {
+      "id": "D3_text_102",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Secs. 3.2/4.1 connect the VL-BART diagnosis to separate magnitudes and normalized low-rank directions. Sec. 5.1/Table 1 support pooled training, imported LoRA, adjusted learning rate, scores and parameter fractions; Table 3 preserves the video/full-tuning gap. Sec. 4.3/Table 7 support detachment savings relative to unmodified DoRA. Reading's 'tested accuracy-parameter tradeoff' stays within the prose's adequately bounded comparisons rather than claiming isolated causation or universal superiority."
+    },
+    {
+      "id": "D3_text_073",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Sec. 4.2/Algorithm 2 support left-sided projection, compact moments and scaled lifting; P^T G has r-by-n dimensions. Sec. 4.1 supports refresh and its cost/statistics tradeoff. Theorem 3.8 concerns conditional projected-gradient contraction with fixed projections and identity regularization. Prose explicitly denies a refreshed-Adam convergence guarantee; the reading recovers both the operational sequence and this adequate theorem/practice boundary."
+    },
+    {
+      "id": "D3_text_097",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Secs. 3.3-4.2 support compression and changing subspaces. Sec. 5.3/Table 3 and Sec. 5.5/Figure 4 support the separately identified distributed 7B quality run and small-batch 22.0 GB profiling; Table 11 supports lower 1B throughput. Reading recovers these consequential boundaries. Its uncertainty about specific structured-gradient assumptions does not erase the text-supported conditional, fixed-projection, nonadaptive restriction appropriate to this abstract; missing details are not credited."
+    },
+    {
+      "id": "D3_text_078",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Secs. 3.2/4.1 support diagnosis, normalization and separately learned magnitudes. Table 1/Sec. 5.1 support same/half-rank scores, budgets, baseline provenance and learning-rate adjustment. Table 3 bounds the multimodal claim by the remaining video gap. Table 7 independently supports 24.4% memory reduction and a 0.2-point ablation decrease. The reading reconstructs this parameter-efficiency relationship and the selected empirical limits without conflating inference merging with training cost."
+    },
+    {
+      "id": "D3_text_076",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Table 1 supports 77.5/74.7 and 78.4 with the stated parameter budgets. Sec. 5.1 supports imported baselines and adjusted learning rates; Sec. 4.1/Figure 2 supplies the three correlations, and Table 3 supplies the remaining video gap. Prose's 'rather than isolate decomposition' and 'without establishing the cause' adequately delimit the selected budget/outcome relationship. The reading recovers those boundaries and does not turn diagnostic association into causation."
+    },
+    {
+      "id": "D3_text_094",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Eq. 5/Sec. 4.1 support frozen W0, trainable magnitudes/factors and initialization preserving W0. Eqs. 6-7 support exact scaled orthogonal projection; Sec. 4.3/Eq. 11 support recomputed but detached norms and unchanged magnitude learning. Prose's 'scaled rather than projected' makes the analyzed/evaluated gradient distinction explicit. The reading reconstructs that distinction and initialization; these are adequate boundaries for the selected implementation explanation, without requiring unrelated benchmark details."
+    },
+    {
+      "id": "D3_text_100",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Table 2/Sec. 5.1 and Appendix C support 1B scores, weight-plus-state estimates, matched ranks/search budgets and no ReLoRA warmup. Secs. 5.3/5.5 separate distributed 7B quality from device feasibility. Original Table 11 places 1019.63 and 1205.31 in matching per-layer-update rows. Prose explicitly excludes activations/gradients from estimates and consumer-GPU completion from the profiling claim; the reading recovers this adequate storage-quality-throughput scope."
+    },
+    {
+      "id": "D3_text_089",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Sec. 4.2/Algorithm 2 support one-sided SVD projection, compact Adam moments and scaled lifting. Sec. 4.1 supports successive subspaces. Theorem 3.8/Eq. 11 state the structured-gradient, continuity, bounded-weight, fixed-projection and identity-regularizer restrictions. Prose describes contraction of the projected gradient, explicitly not a refreshed-Adam full-space optimum guarantee. The reading recovers the selected mechanism and these adequate theoretical boundaries directly from the text."
+    },
+    {
+      "id": "D3_text_077",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Secs. 3.2/4.1 support independent magnitudes, directional normalization and inference merging. Table 1/Sec. 5.1 support equal-rank and half-rank comparisons with published baselines and adjusted learning rates. Table 3 preserves the video gap; Table 7 supports the specifically identified detachment ablation. The reading recovers both the design/budget relationship and these boundaries, without treating the 0.2-point ablation difference as a subtraction from Table 1's 78.4."
+    },
+    {
+      "id": "D3_text_104",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Table 2 supports rank 512, 13.1B tokens, perplexities and estimated weight/state storage. Sec. 5.5/Figure 4 supports separately bounded 7B profiling with 8-bit states, per-layer updates and small batches. Original Table 11 confirms paired per-layer rows for 6.93/5.63 GB and 1205.31/1019.63 tokens/s. The reading recovers the selected storage-quality tradeoff and its throughput cost; neither prose nor reading claims a 7B quality run on that single-device budget."
+    },
+    {
+      "id": "D3_text_107",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Secs. 3.2/4.1 ground the case-study motivation and magnitude/direction mechanism. Sec. 5.1/Table 1 support the published-baseline, adjusted-learning-rate and half-rank comparisons; Table 3 bounds the multimodal aggregate claim. Table 7 supports the explicitly separate memory ablation. Reading recovers this evidence for reallocating adaptation capacity, including the remaining video gap and training/inference distinction. Scope is adequate because gains remain tied to evaluated settings rather than isolated causation or uniform task superiority."
+    },
+    {
+      "id": "D3_text_083",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Sec. 5.5/Figure 4 support 22.0 GB, reported 63.3%/52.3% reductions and combined projection/per-layer savings. Sec. 5.3/Table 3 supports the separate single-trial 64-A100 quality comparison. Original Table 11 confirms that both quoted throughput rows enable per-layer updates at 256 tokens. Prose's 'not statistical equivalence' and denial of completed consumer-GPU pretraining adequately bound feasibility and quality; the reading recovers them without extrapolating the measured throughput cost."
+    },
+    {
+      "id": "D3_text_085",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Table 15 supports rank-8 scores/budgets, comparison to rank-32 LoRA, and DoRA's nonmonotonic rank results. Table 3 supports the video averages, FT tie/wins on TVQA/How2QA/TVC and YC2C deficit; Sec. 5.2 identifies mixed question-answering/captioning tasks. Prose's 'under the reported training recipes' and 'not a percentage-point accuracy gain' adequately bound the selected relationships. Reading recovers both rank sensitivity and the metric/full-tuning limits."
+    },
+    {
+      "id": "D3_text_087",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Table 1 supports half-rank 7B/13B scores and budgets, including the 80.8/80.5 comparison despite adjacent narrative claiming a larger gain. Sec. 5.1 supplies learning-rate/provenance limits; Sec. 4.1 supplies query correlations. Tables 3/12 support YC2C's largest FT shortfall and LLaVA losses on VQAv2/VQAT. The reading recovers the selected economical-adaptation relationship and causal/task-level limits, adequately preventing correlation resemblance or average gains from becoming uniform superiority."
+    },
+    {
+      "id": "D3_text_075",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Sec. 5.1/Table 1 support equal-rank and half-rank accuracy/budget comparisons with imported LoRA and learning-rate adjustment. Table 3 supports narrowing, not eliminating, the video gap; Sec. 4.1/Figure 2 supports the correlation values. Prose's 'compares adaptation recipes' and 'does not establish the cause' adequately separate measured budget gains from diagnostic association. The reading reconstructs both the selected relationship and these consequential limits."
+    },
+    {
+      "id": "D3_text_103",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Table 2 supports the 1B rank/token setting, scores and explicitly estimated weight/state storage. Secs. 4.2/5.5 support dense weights and combined 7B memory-saving techniques. Original Table 11 verifies the matched 1B per-layer-update memory/throughput pairs. Prose's 'in this setting,' 'not a projection-only saving' and 'not faster training' provide adequate boundaries for this selected tradeoff. The reading recovers them without converting device profiling into a completed quality run."
+    },
+    {
+      "id": "D3_text_091",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Secs. 3.1/4.1 and Eq. 5 support frozen pretrained columns, trainable magnitudes/factors, pretrained-norm initialization and zero B. Eq. 6 supports the exact orthogonal projection; Sec. 4.3/Eq. 11 support recomputation with the norm derivative omitted. Prose's 'preserving the forward parameterization' and 'scaled gradient' supply the necessary implementation boundary. The reading recovers that distinction and initialization, with no unsupported claim that detachment preserves the exact directional derivative."
+    },
+    {
+      "id": "D3_text_088",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Table 1 supports the half-rank 7B/13B values and budgets; Sec. 5.1 supports baseline provenance and learning-rate adjustment. Sec. 4.1 supports correlations, while Tables 3/12 verify the video gap and VQAv2/VQAT exceptions. Prose explicitly concludes 'not uniform task superiority' and does not isolate decomposition as the sole cause. Reading recovers the economical-adaptation relationship with those adequate task and causal boundaries, rather than importing a general full-tuning equivalence."
+    },
+    {
+      "id": "D3_text_092",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Eq. 5/Sec. 4.1 support columnwise normalization, learned magnitudes, frozen W0 and initialization. Eqs. 6/11 and Sec. 4.3 support the exact scaled perpendicular gradient versus recomputed, detached denominator used in experiments. Prose's 'keeps the forward separation' but replaces the projected gradient states the necessary boundary between representation and backward computation. The reading recovers this mechanism and boundary directly; no benchmark comparison is required for this selected methods function."
+    },
+    {
+      "id": "D3_text_106",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Secs. 3.2-4.2 support compact gradient statistics, refreshed bases and conditional fixed-projection identity-regularizer analysis. Table 2/Sec. 5.1 support equal-budget 1B comparisons; Sec. 5.3/Table 3 supports the untuned distributed 7B result. Sec. 5.5/Figure 4 and Table 11 support separate 256-token profiling and lower 1B throughput. Reading reconstructs these selected boundaries, adequately distinguishing memory feasibility from quality evidence and compression from weight factorization."
+    },
+    {
+      "id": "D3_text_095",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Secs. 3.3-4.3 support projected moments, refresh and per-layer gradient-storage savings. Sec. 5.3/Table 3 supports the explicitly untuned distributed trial; Sec. 5.5/Figure 4, Table 4 and Table 11 support separate profiling, near-full GLUE averages and lower throughput. Reading recovers the empirical/theoretical separation. Its uncertainty about exact assumptions is appropriate: none are supplied as recovered facts, while the abstract's conditional fixed-projection boundary is adequate for its limited claim."
+    },
+    {
+      "id": "D3_text_084",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Sec. 5.5/Figure 4 support the profiling batch, footprint and reported baseline reductions, including combined projection/per-layer contributions. Sec. 5.3/Table 3 locates quality in a separate single distributed trial. Original Table 11 verifies matching per-layer 1B throughput rows. Prose explicitly excludes statistical equivalence and completed consumer-GPU pretraining; reading recovers these adequate boundaries and the selected memory-versus-throughput tradeoff without attributing the whole saving to projection."
+    },
+    {
+      "id": "D3_text_090",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Sec. 4.2/Algorithm 2 support left projection for m <= n, r-by-n moments and lifting to full-dimensional weights; Sec. 4.1 supports changing subspaces. Theorem 3.8/Eq. 11 support the stated structured continuity, bounded-weight, fixed-projection, nonadaptive and curvature restrictions. Prose's 'progress within one subspace' explicitly limits the guarantee; reading recovers that scope and does not infer a full-space optimum for refreshed Adam."
+    },
+    {
+      "id": "D3_text_081",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Eq. 5/Sec. 4.1 support independent column magnitudes, normalized frozen-plus-low-rank directions, preserved initialization and inference merging. Sec. 4.3/Eqs. 6-7/11 support detached recomputed norms, unchanged magnitude gradient and removal of exact directional projection. Prose's distinction between the forward representation and 'full normalization derivative' adequately bounds the selected implementation account. Reading reconstructs both the mechanism and the backward-computation change, not an unsupported claim of unchanged exact optimization."
+    },
+    {
+      "id": "D3_text_093",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Sec. 4.1/Eq. 5 support the frozen matrix, zero initial BA, pretrained magnitudes and normalized directional factors. Eq. 6 supports removing the parallel gradient component before detachment; Sec. 4.3/Eq. 11 supports the implemented scaled gradient with norms recomputed as constants for backpropagation. Prose explicitly calls this an approximation preserving only the forward decomposition and magnitude learning. Reading recovers that adequate representation/derivative boundary and the initialization relation."
+    },
+    {
+      "id": "D3_text_108",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Secs. 3.2/4.1 support the diagnosis and normalized sum with separately learned magnitudes. Table 1/Sec. 5.1 support the published-baseline, learning-rate-adjusted and half-rank comparisons. Table 7 supports the expressly separate detachment ablation; Table 3 preserves the video aggregate gap. Reading recovers the selected alternative-to-larger-rank relationship and these adequate limits, without treating inference merging as absence of training overhead or aggregate improvement as universal task superiority."
+    },
+    {
+      "id": "D3_text_080",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Sec. 4.2/Algorithm 2 support the projector dimensions, compact moments and dimension-dependent projection side; Sec. 4.1 supports refreshed update directions. Theorem 3.8/Eq. 11 support conditional contraction under fixed projections, identity regularization and a curvature/continuity threshold. Prose additionally requires a contraction-permitting learning rate and denies a refreshed-Adam guarantee. The reading recovers these selected operational and theoretical boundaries; omitted detailed assumptions are not reconstructed or credited."
+    },
+    {
+      "id": "D3_text_079",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Secs. 3.3/4.2 and Algorithm 2 support SVD-selected, dimension-dependent one-sided projection, compact Adam statistics and direct dense-weight updates. Sec. 4.1 supports periodic refresh without a separate adapter. Theorem 3.8/Eq. 11 ground the continuity, bounded-weight, curvature and fixed-projection restrictions. Prose contrasts designated-subspace progress with empirical switching Adam; reading recovers this adequate guarantee/practice distinction and the complete selected update sequence."
+    },
+    {
+      "id": "D3_text_101",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Secs. 3.2/4.1 support diagnosis-driven separate magnitudes and directions. Sec. 5.1/Table 1 ground pooled-task training, published LoRA, retained/halved ranks, adjusted learning rate and the quoted budgets/scores. Table 3 and Sec. 4.3/Table 7 support the retained video gap and detachment savings relative to unmodified DoRA. Reading recovers why parameterization matters beyond rank within these tested settings; this empirical, nonuniversal scope is adequate."
+    },
+    {
+      "id": "D3_text_074",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Secs. 3.1/4.2 and Algorithm 2 support full-size Adam moments versus r-by-n projected moments and scaled lifting. Sec. 4.1 supports refresh's coverage/cost/statistics tradeoff. Theorem 3.8 provides the stated restricted gradient form, continuity, bounded weights, contraction condition and identity regularizer. Prose expressly denies a periodically refreshed Adam guarantee; the reading recovers the mechanism, refresh limits and adequate theoretical boundary rather than importing full-space convergence."
+    },
+    {
+      "id": "D3_text_098",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Secs. 3.2-4.2 support conditional analysis and dense-weight learning through refreshed compact updates. Sec. 5.3/Table 3 support the untuned 64-A100 19.7B-token quality result; Sec. 5.5/Figure 4 support separate 256-token device profiling without checkpointing/offloading. Table 11 supports the limited 1B throughput statement. Reading reconstructs the central mechanism and these adequate quality/feasibility/theory distinctions directly from prose, without adding an end-to-end consumer-GPU run."
+    },
+    {
+      "id": "D3_text_086",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Table 15 supports all quoted ranks, accuracies and parameter fractions; Sec. 5.1/Table 8 support learning-rate differences under reported recipes. Table 3/Sec. 5.2 support the video average gap and mixed question-answering/captioning metrics. Prose limits its conclusion to these comparisons and explicitly retains rank sensitivity and the full-tuning gap. Reading recovers both the economical-adaptation relationship and these adequate limits without inferring monotonic rank benefits or uniform task gains."
+    },
+    {
+      "id": "D3_text_082",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P05 Eq. 5/Sec. 4.1 support learned column magnitudes, frozen pretrained columns, zero initial updates and inference merging. Sec. 4.3/Eqs. 6-7/11 support detachment preserving forward parameterization and magnitude gradients while changing scaled orthogonal projection to scaling alone. Prose makes this backward-computation difference explicit, supplying the necessary scope for its methods function. Reading accurately recovers the selected scale/direction relationship, initialization and implementation boundary."
+    },
+    {
+      "id": "D3_text_099",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P06 Table 2/Sec. 5.1 and Appendix C support scores, estimated weight/state memory, matched ranks/search budgets and no ReLoRA warmup. Secs. 5.3/5.5 support the separate distributed quality trial and small-batch device feasibility. Original Table 11 verifies the matching per-layer throughput rows. Prose explicitly excludes gradients/activations from estimates and a consumer-GPU quality run from profiling; reading recovers this adequate lower-memory, near-baseline-quality scope without a speedup implication."
+    }
+  ]
+}

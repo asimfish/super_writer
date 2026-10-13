@@ -6,6 +6,16 @@ Use this when the user asks the skill to learn from excellent papers. The dossie
 
 Explain why selected papers are well written and how their writing logic should transfer to the user's manuscript.
 
+Follow [argument transfer](argument-transfer.md) to record located decisions,
+applicability and final-prose checks. For a bounded section, analyze only its
+relevant passages and use the existing plan; the full dossier and all templates
+below are for full-paper work. A filled artifact does not by itself prove learning.
+
+For a user-supplied overview or system description, use the bounded
+[organization-learning branch](style-learning-workflow.md#explain-a-system-or-synthesize-a-rule-set)
+to distinguish structure, operations, conditional guidance and verification;
+do not infer unseen sections or require the full dossier for one example.
+
 Do not merely summarize each paper. The dossier must answer:
 
 - How does the paper make the reader care?
@@ -30,7 +40,7 @@ Save as `paper_rewriting_output/exemplar_learning_dossier.md`.
 
 ## What Makes These Papers Good
 
-| Dimension | Observed Pattern | Why It Works | Transfer Rule for Our Paper |
+| Dimension | Source Location and Observed Pattern | Reader Question and Why It Works | Our Evidence and Transfer Rule |
 |---|---|---|---|
 | Motivation | | | |
 | Gap construction | | | |
@@ -90,7 +100,7 @@ The dossier explains the papers; the templates convert that explanation into reu
 
 For each exemplar:
 
-1. Read the abstract and identify the five moves.
+1. Read the abstract and identify its contribution-bearing moves, without requiring five or a fixed order.
 2. Map each Introduction paragraph to a rhetorical job.
 3. Identify the first sentence and last sentence of each major section.
 4. In Methods, mark where the paper explains why a design choice is needed.
@@ -163,7 +173,7 @@ For each Results subsection in the user's manuscript, the later rewrite matrix m
 
 The dossier is incomplete if it cannot tell the writer:
 
-- how many paragraphs the Introduction should have,
+- how Introduction space is allocated to the argument, including a provisional paragraph plan,
 - what each paragraph should do,
 - which Results subsection should come first and why,
 - what the first Discussion paragraph must resolve,

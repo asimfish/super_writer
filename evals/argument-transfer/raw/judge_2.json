@@ -1,0 +1,184 @@
+{
+  "reviews": [
+    {
+      "case": "C1",
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The latest-completed-frame rule, unchanged policy weights, matched evaluation, 96/62/41 ms timings, 61/62/74% successes, and 18% frame loss match the packet. The timing sentence excludes command-to-motion time, and the final sentence explicitly limits attribution to the scheduling change as a whole."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The scheduler description and all evaluation figures match the packet. 'Higher observed success on this workload' stays descriptive, and the final sentence rules out identifying freshness alone as the cause; neither statistical significance nor motion latency is claimed."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "Tie",
+      "reason": "A explicitly interprets the decoder comparator in 'does not reproduce the scheduler's observed task outcome'; B explicitly connects frame loss to the retention-versus-timeliness tradeoff. Both explain the scheduling mechanism, preserve timing and task evidence, and bound causal attribution. These complementary explanations give neither a decisive advantage."
+    },
+    {
+      "case": "C1",
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The opening timing and success comparisons reproduce the supplied values and correctly identify the measurement boundary. The matched runs, retained weights, and 18% frame loss are accurate; the closing sentence does not attribute the gains to freshness alone."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The 41/96/62 ms and 74/61/62% comparisons, execution counts, GPU/data controls, retained weights, and frame-loss figure match the packet. 'Observed tradeoff' is scoped to the evaluated scheduler, with an explicit freshness-confounding limitation."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both retain the evidence needed to judge the benefit and cost: command timing, task success, the decoder comparator, matched conditions, and dropped frames. A's 'configuration as evaluated' and B's 'observed tradeoff' make the same substantive inference while rejecting a freshness-only explanation; neither supplies a stronger evidential connection."
+    },
+    {
+      "case": "C2",
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The family-level scores and both weighted aggregates match the packet. 'Replaying the same recorded outputs' and 'not retraining or a new policy' preserve the diagnostic contribution; the final sentence does not claim a deployed-safety improvement."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The 9:1 and equal-weight calculations, unchanged behavior, existing-evaluation report, and absence of retraining all match the source. The closing safety statement reports no measured effect rather than claiming a benefit, and no significance claim is made."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both use the opposing route-family strengths and unchanged recorded outputs to identify weighting, not policy improvement, as the source of the reversal, and both connect the paired-score report to that diagnosis. A's 'limitation of aggregate-only comparisons' is crisper than B's repeated diagnosis in the final sentence, but this modest language difference does not create a decisive substantive advantage."
+    },
+    {
+      "case": "C2",
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The two aggregate pairs and the 90/40% versus 75/70% family scores are accurate. 'Changing only the aggregation rule' is supported by the same-output replay, and the report is not presented as a behavioral or safety improvement."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The aggregate scores, family-level comparisons, unchanged outputs, and absence of retraining match the packet. The explanation of the two rankings follows from the supplied weighted means, and 'descriptive comparisons' does not introduce unsupported significance or safety claims."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "Tie",
+      "reason": "A explains the reversal through U's opposing short- and long-route performance; B explicitly maps those strengths to each weighting rule's winner. Both provide the underlying scores, rule-specific aggregates, and unchanged-output control, so both make the weighting diagnosis inspectable rather than merely announcing a reversal."
+    },
+    {
+      "case": "C3",
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The six mounts, 2,400 episodes, three-versus-three mount split, shared objects/instructions, 84/57/72% outcomes, and 30 target demonstrations match the packet. 'Existing baseline' avoids claiming a new architecture, and the adaptation and transfer-scope sentences correctly retain the target-data dependency."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The resource, split, baseline results, fine-tuning data, and original-validation model selection are accurately reported. The final sentence confines evaluation to camera mounting positions and explicitly excludes unseen objects/tasks, new robots, and learning without training."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4
+        }
+      },
+      "preferred": "Tie",
+      "reason": "A's 'gap that fixed-mount evaluation cannot measure' and B's controlled 'viewpoint shift while keeping objects and task instructions shared' both explain why this benchmark answers the transfer question. Both prioritize the held-out gap and data-dependent adaptation over dataset size. B's repeated release statement and awkward 'learning without training' are minor language weaknesses, not a decisive difference in the argument."
+    },
+    {
+      "case": "C3",
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The 84-to-57% transfer comparison and 57-to-72% adaptation result are accurate; the stated 15-percentage-point gain is correct. Shared objects/instructions, target-mount demonstrations, and original-validation model selection are preserved. 'Partial recovery' is justified by 72% remaining below 84%, without a universal guarantee."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The 27-percentage-point transfer gap and 15-point adaptation gain correctly derive from 84%, 57%, and 72%. The mount split, episode-disjoint training/validation, extra target data, and model-selection split match the source, and the closing sentence does not extend evaluation to unseen objects, tasks, or robots."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "Tie",
+      "reason": "A directly links shared objects/instructions to the interpretation of camera-mount transfer; B makes the mount separation explicit and quantifies the same gap. Both connect held-out degradation and incomplete, target-data-dependent recovery to what the benchmark measures. B's extra gap calculation adds convenience, but not a different or stronger evidential conclusion."
+    }
+  ]
+}

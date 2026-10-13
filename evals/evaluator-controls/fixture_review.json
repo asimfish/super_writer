@@ -1,0 +1,84 @@
+{
+  "cases": [
+    {
+      "id": "C01",
+      "valid": true,
+      "issues": [],
+      "reason": "All v1 claims follow from the premises, including serial conditional drafting, concurrent prefix checks in one target round, distribution preservation, and the limited timing boundary. v2 retains true component and measurement statements but never says that target checks share a concurrent round; conditioning on predecessors alone cannot supply that schedule. The omission is consequential for the standalone question. v1 preference, pass fidelity for both, and supported/missing question-support labels are defensible."
+    },
+    {
+      "id": "C02",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 accurately explains nonadjacent physical blocks, allocation when the current block is exhausted, and replacement of advance contiguous reservation; its measured comparison and limitations are supported. v2 names the map and blocks without stating either nonadjacency or incremental allocation, so it cannot answer how reservation is avoided. Its remaining claims describe the supplied comparison without contradicting it. The v1 preference, two pass labels, and supported/missing distinction are defensible."
+    },
+    {
+      "id": "C03",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 correctly states the fixed questions, answer documents, distractor identities and order, the placement-only intervention, all scores, and the limited inference. v2's numerical summary, including the two-percentage-point endpoint difference, is true, but a fixed question set does not by itself establish fixed documents or distractor selection. The omitted control is necessary to answer the alternative-explanation question. The permitted preference, fidelity, and support labels are defensible."
+    },
+    {
+      "id": "C04",
+      "valid": true,
+      "issues": [],
+      "reason": "Every v1 count and event definition is supported: seven final-state attainments include three reset-assisted outcomes, leaving four uninterrupted completions; baseline counts are five and three. v2 intentionally calls the seven and five final-state counts uninterrupted completions and contradicts its own reset statement. That corruption directly answers the question incorrectly, even though the correct counts remain visible. v1 preference, v1 pass, v2 fail/concern, and supported/contradicted labels are defensible."
+    },
+    {
+      "id": "C05",
+      "valid": false,
+      "issues": [
+        "v1 says that the study does not evaluate another device, but the premises only specify that the reported measurements use the same device. Matched measurements do not establish the absence of other device experiments. This is an unsupported study-wide scope assertion, not part of the intended timing corruption.",
+        "v2 additionally says that the study does not evaluate another batch size or another device; neither absence is supplied. State that the reported results do not establish performance for other devices or batch sizes, or explicitly add these fictional scope premises. Until then, v1's unrestricted pass label is not justified for every claim."
+      ],
+      "reason": "v1 correctly distinguishes the twofold kernel acceleration from the request reduction of 112 to 104 ms, but its negative claim about other device experiments does not follow from the premises. v2's intended twofold complete-request claim is clearly contradicted and consequential for the question. The v1 preference and timing-specific supported/contradicted labels are defensible; the extra scope assertions prevent an unqualified clean fixture."
+    },
+    {
+      "id": "C06",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 faithfully distinguishes optimizer state, 8 to 4 GB, from total measured allocation, 16 to 12 GB, and reports the 2.2 versus 2.3 checkpoint losses without asserting equivalence. v2 deliberately calls the total reduction twofold despite retaining totals that refute it. This directly corrupts the requested resource boundary. Preference for v1, pass for v1, fail/concern for v2, and supported/contradicted labels are defensible."
+    },
+    {
+      "id": "C07",
+      "valid": false,
+      "issues": [
+        "v2 does more than omit an initialization condition: it asserts that the rule keeps every iterate in [0,1] and that the bound describes every step. The supplied x_0=3, x_1=1.5 counterexample explicitly refutes that unrestricted claim.",
+        "The sole v2 support label, missing, is ambiguous unless support is explicitly restricted to whether an initialization answer is present, separately from the truth of the stated invariant. Under a whole-text or implied-answer reading, contradicted is warranted. Define that question-local labeling convention, permit contradicted, or rewrite v2 so that omission does not assert the false unrestricted invariant."
+      ],
+      "reason": "All v1 claims are supported, including preservation from an initial value in [0,1] and the counterexample to arbitrary starts. v2's condition removal is consequential, and v1 preference plus v2 fail/concern fidelity are justified. However, the source explicitly disproves v2's general claim while the oracle permits only missing support; the fixture does not specify a label convention resolving that conflict."
+    },
+    {
+      "id": "C08",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 correctly states the supplied exchangeability premise, marginal guarantee, lack of conditional or shift guarantees, and the distinction between a realized 89/100 count and a coverage probability. That count need not contradict a 90% marginal guarantee. v2 omits exchangeability, and an empirical no-shift-experiment caveat does not restore the theoretical premise. Unlike C07, the premises supply no counterexample disproving the broadened guarantee. v1 preference, v1 pass, v2 concern, and supported/missing question-support labels are defensible."
+    },
+    {
+      "id": "C09",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 accurately restricts the proof to exact gradients, convex objectives and the stipulated step size, and separates that result from three observed approximate-gradient trajectories. v2 explicitly attributes the supplied proof to approximate updates and calls the theorem and implementation the same procedure, contradicting the stated proof boundary. Its empirical caveats cannot repair that attribution. The intended corruption is consequential, and all permitted preference, fidelity, and support labels are defensible."
+    },
+    {
+      "id": "C10",
+      "valid": true,
+      "issues": [],
+      "reason": "Both versions are identical and all their claims follow from the supplied counts, median times, fixed dataset/device, and absence of uncertainty or production evaluation. Both answer the observed accuracy-time tradeoff and deny a production guarantee. There is no omission or corruption and no textual basis for a directional preference. Tie-only preference, two pass labels, and two supported labels are defensible."
+    },
+    {
+      "id": "C11",
+      "valid": true,
+      "issues": [
+        "Nonblocking rationale wording: the oracle calls the measurements a tradeoff, although both allocation and recorded loss decrease. The premises supply no observed resource-versus-loss sacrifice. Calling this a measured comparison or profile would be more accurate; this wording does not invalidate the permitted labels."
+      ],
+      "reason": "Both versions support every factual claim and preserve the 24 to 16 GB comparison, losses of 2.2 versus 2.1, one run per method, and lack of equivalence, significance, transfer or production evidence. Neither version contains a consequential omission or corruption. A justified stylistic preference for either version or a tie is legitimate, and both pass and supported labels are defensible."
+    },
+    {
+      "id": "C12",
+      "valid": true,
+      "issues": [],
+      "reason": "Both versions correctly connect logical-to-physical lookup, nonadjacent storage and extension without relocating earlier blocks, while avoiding an unsupported speed advantage. v1's version and logging details are supplied; v2 omits only metadata explicitly declared unnecessary for the requested operation. This is a legitimate nonessential omission, not a loss of answer support. Either stylistic preference or a tie, pass for both, and supported for both are defensible."
+    }
+  ]
+}

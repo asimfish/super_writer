@@ -1,0 +1,130 @@
+{
+  "readings": [
+    {
+      "id": "D4_text_138",
+      "core_relation": "Position-controlled question answering and UUID retrieval distinguish accepting context from using evidence: middle-position evidence often lowers accuracy, longer windows offer little advantage on shared-length inputs, and query repetition fixes lookup without fixing question answering. Better retrieval recall also need not improve reader accuracy.",
+      "scope": "Evaluated models and tasks only; some GPT-3.5-Turbo document conditions underperform closed-book answers; both evaluated Claude variants retrieve UUIDs nearly perfectly.",
+      "witness": "distinguish input capacity from effective evidence use",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_130",
+      "core_relation": "Offline critic labels train the generator to predict reflection tokens; during inference, segment-level beam search combines generation probabilities with normalized relevance, support, and utility scores to select passage-conditioned sentence continuations. Evidence judgments thereby affect selection, with thresholds and weights adjustable without retraining or an inference-time critic.",
+      "scope": "Llama 2 critic distilled from GPT-4 annotations; retrieved passage text is loss-masked; utility is judged independently of passages.",
+      "witness": "its judged relationship to the response affects selection",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_144",
+      "core_relation": "Relocating answer-bearing paragraphs while fixing the question, document set, and answer isolates evidence-position sensitivity; changing distractor counts tests additional context. Closed-book and answer-only prompts provide baselines, while UUID lookup reduces linguistic confounders.",
+      "scope": "2,655 NaturalQuestions-Open queries; 10, 20, or 30 documents; 75, 140, or 300 UUID pairs with 500 examples per setting; greedy decoding and output-inclusion scoring.",
+      "witness": "Reordering tests position at a fixed length",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_114",
+      "core_relation": "With identical five-passage inputs, SELF-RAG 7B greatly improves ASQA citation precision and recall over Llama2-FT 7B but slightly lowers correctness. The ablation favors the combined configuration; stronger support weighting costs MAUVE fluency, and reduced retrieval harms PopQA more than PubHealth.",
+      "scope": "Citation precision/recall: 66.9%/67.8% versus 5.0%/7.5%; str-em: 30.0 versus 31.0. Ablation: 50,000 training examples, 150 ASQA questions; passage handling and reflection supervision both change.",
+      "witness": "not interchangeable improvements in overall answer quality",
+      "unclear": "Critique tokens' isolated effect is not recoverable."
+    },
+    {
+      "id": "D4_text_136",
+      "core_relation": "Self-RAG learns retrieval decisions and evidence judgments as reflection tokens, then uses their probabilities to rank passage-conditioned sentences without a separate inference-time critic. This enables adjustable evidence-aware generation, but improved attribution does not ensure coverage or fluency.",
+      "scope": "Zero-shot 7B/13B evaluation on six tasks; PopQA improves over a same-data baseline. ASQA 13B precision is 70.3 versus 65.1, recall 71.3 versus 76.6; 7B support weighting trades precision for MAUVE.",
+      "witness": "allow behavior to change without retraining",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_122",
+      "core_relation": "Repeating queries fixes synthetic lookup but leaves question-answering positional weaknesses; supplied answer evidence among distractors can perform worse than no documents. Beyond 20 retrieved documents, reader gains remain marginal despite rising recall, separating lookup and retrieval success from effective answering.",
+      "scope": "GPT-3.5-Turbo (16K), 300 UUID pairs: 100% with repetition versus 45.6% worst-position accuracy without it. Some 20/30-document GPT-3.5-Turbo settings fall below the 56.1% closed-book baseline.",
+      "witness": "does not provide a general remedy",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_142",
+      "core_relation": "Self-RAG 13B improves ASQA citation precision over retrieval-augmented ChatGPT but lowers recall and correctness, so attribution gains do not establish better overall answering. Self-RAG 7B improves same-data PopQA accuracy. More support weighting costs MAUVE; less retrieval hurts PopQA more than PubHealth.",
+      "scope": "Same five ASQA passages: precision 70.3 versus 65.1, recall 71.3 versus 76.6, str-em 31.7 versus 40.7. PopQA accuracy: 54.9% versus 48.7%.",
+      "witness": "without isolating reflection from retrieval-aware training",
+      "unclear": "Reflection's isolated contribution is not recoverable."
+    },
+    {
+      "id": "D4_text_116",
+      "core_relation": "Against a same-data baseline, Self-RAG 7B improves PopQA accuracy and ASQA citation precision but slightly lowers ASQA correctness. Against retrieval-augmented ChatGPT, 13B improves precision while lowering recall and correctness. Selective retrieval and critique therefore require task-specific output-quality priorities.",
+      "scope": "Baseline lacks training passages/reflection and receives test-time retrieval. ASQA uses identical five documents; stronger support weighting lowers MAUVE, and reduced retrieval harms PopQA more than PubHealth.",
+      "witness": "Its stronger precision does not establish broader evidence coverage",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_112",
+      "core_relation": "Reordering the answer passage within unchanged document sets isolates position sensitivity; adding distractors tests context-length effects. UUID retrieval limits semantic confounds, while repeating the query on both sides tests whether advance query access helps lookup and question answering.",
+      "scope": "2,655 NaturalQuestions-Open queries; Contriever Wikipedia distractors exclude annotated answers; 10/20/30 documents. UUID sizes: 75/140/300, 500 examples each. Greedy-decoded outputs are scored by answer inclusion; no-document and answer-only references.",
+      "witness": "tests position without changing which passage supplies the answer",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_110",
+      "core_relation": "Self-RAG trains retrieval decisions and evidence judgments alongside text, then selects passage-conditioned sentences using predicted support, relevance, and generation scores. Offline critic supervision replaces separate inference-time evaluation, making attribution-versus-quality tradeoffs adjustable without retraining.",
+      "scope": "Zero-shot 7B/13B evaluation across six tasks; 7B PopQA accuracy rises from 48.7% to 54.9% over a same-data baseline. ASQA 13B precision improves but recall/correctness decline; stronger support weighting lowers MAUVE.",
+      "witness": "trade-offs between attribution and other aspects of answer quality",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_128",
+      "core_relation": "A GPT-4-supervised critic annotates retrieval and critique tokens offline; next-token training teaches the generator to produce them. At inference, a retrieval-probability threshold requests passages, and beam search combines generation scores with normalized critique probabilities to select candidate sentences. Predicted support thus affects claim selection without an inference-time critic.",
+      "scope": "Llama 2-7B critic; retrieved passages are masked from training loss. Support weights and retrieval thresholds are adjustable without retraining.",
+      "witness": "rather than support being presumed",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_132",
+      "core_relation": "Moving an answer passage while fixing questions and available documents tests position-dependent evidence use; changing distractor counts tests added context without changing the answer. Closed-book and answer-only controls separate evidence availability from distractor competition; UUID lookup reduces linguistic confounds, and query repetition probes advance query contextualization.",
+      "scope": "2,655 NaturalQuestions-Open queries with paragraph long answers; 10/20/30 documents; distractors exclude annotated answers. Greedy decoding is evaluated by correct-answer/value inclusion.",
+      "witness": "holding the question and available documents fixed",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_126",
+      "core_relation": "SELF-RAG learns retrieval decisions and evidence evaluations through offline critic annotations, then ranks passage-conditioned continuations by generation probabilities and self-evaluations. Support thereby influences output selection, with retrieval/support adjustment possible without retraining, but citation improvements come with correctness and fluency tradeoffs.",
+      "scope": "Zero-shot Llama 2 7B/13B on six tasks; same-data ASQA 7B comparison uses identical five documents: precision 66.9% versus 5.0%, str-em 30.0% versus 31.0%. Higher support weighting reduces MAUVE.",
+      "witness": "a tradeoff rather than uniform improvement",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_118",
+      "core_relation": "Query repetition gives GPT-3.5-Turbo (16K) perfect UUID retrieval but leaves question-answering positional weaknesses, distinguishing lookup success from natural-language evidence use. Flan-UL2's middle-position disadvantage emerges beyond its training window; similar standard/16K profiles on shared-length inputs show that nominal capacity does not establish robust answering.",
+      "scope": "300 UUID pairs: 100% versus worst-position 45.6%. Flan-UL2 has only a 1.9-point best-to-worst gap within 2,048 training tokens; repetition slightly helps first-document QA and hurts elsewhere.",
+      "witness": "without resolving the question-answering failure",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_124",
+      "core_relation": "Position-controlled question answering and synthetic lookup distinguish usable evidence from nominal context capacity. Middle-position QA degradation persists despite query repetition fixing lookup; larger supported windows and higher retrieval recall do not necessarily improve answering.",
+      "scope": "Evaluated systems only; some document-rich configurations underperform closed-book answering. Extended/short-context counterparts behave similarly when both fit inputs; encoder-decoder models are relatively position-insensitive within training lengths, degrading beyond them. Reader accuracy saturates before retrieval recall.",
+      "witness": "rather than nominal context capacity or evidence availability alone",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_120",
+      "core_relation": "Changing evidence position and distractor count shows that context capacity and exact retrieval do not guarantee usable answer evidence. Question answering generally favors context ends over the middle; query repetition nearly perfects lookup without correcting that answering pattern.",
+      "scope": "2,655 NaturalQuestions-Open queries plus random key-value lookup; tested models only. GPT-3.5-Turbo sometimes underperforms closed-book answering; standard/extended variants perform similarly on shared-fitting inputs; Claude-1.3 variants achieve nearly perfect synthetic retrieval.",
+      "witness": "not how consistently it uses the evidence provided",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_134",
+      "core_relation": "GPT-3.5-Turbo can fall below closed-book accuracy despite an answer passage remaining present, showing ineffective evidence use rather than unavailable information. Standard/16K variants share positional weaknesses on jointly fitting inputs; query repetition fixes UUID lookup but largely preserves question-answering weakness.",
+      "scope": "Answer-only accuracy: 88.3%; worst 20/30-document configurations below 56.1%. Shared-window comparison uses 10/20 documents. With 300 key-value pairs, 16K retrieval rises from worst-case 45.6% to perfect; QA declines slightly except with first-position evidence.",
+      "witness": "failure to exploit available evidence",
+      "unclear": "none"
+    },
+    {
+      "id": "D4_text_140",
+      "core_relation": "Offline critic labels teach the generator evidence judgments alongside text. At inference, segment-level beam search combines generation probability with normalized favorable relevance, support, and utility probabilities to rank passage-conditioned sentences; a normalized retrieval-probability threshold controls evidence requests. Learned assessments become adjustable selection criteria without retraining or an inference-time critic.",
+      "scope": "Llama 2 critic trained on GPT-4 reflection labels; passage tokens are excluded from loss; utility is passage-independent; support weights can change selected continuations.",
+      "witness": "rather than simply accepting the top retrieved passage",
+      "unclear": "none"
+    }
+  ]
+}

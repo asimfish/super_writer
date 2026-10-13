@@ -1,0 +1,45 @@
+{
+  "id": "P07",
+  "abstract": [
+    {
+      "role": "core",
+      "reader_question": "Does accepting a long context mean using its contents reliably?",
+      "expected_relation": "Access to relevant evidence depends on its position, not merely on the available context window.",
+      "source_locator": {"section": "2.3 Results and Discussion", "pdf_pages": [5, 6], "figure": "5"}
+    },
+    {
+      "role": "scope",
+      "reader_question": "Which tasks and model exceptions bound that relationship?",
+      "expected_relation": "The diagnostics cover document QA and UUID lookup; strong lookup performance does not establish equally robust QA.",
+      "source_locator": {"section": "3.2 Results and Discussion", "pdf_pages": [7, 7], "figure": "7"}
+    }
+  ],
+  "methods": [
+    {
+      "role": "core",
+      "reader_question": "How are position and context length separated from the target answer?",
+      "expected_relation": "Move the answer-bearing item or vary distractor count while retaining the same required answer, then measure answer-containing accuracy.",
+      "source_locator": {"section": "2.1 and 3.1 Experimental Setup", "pdf_pages": [3, 7], "figures": ["3", "4", "6"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "What evaluation choices constrain generalization?",
+      "expected_relation": "QA uses paragraph-answer NaturalQuestions examples and retrieved distractors; UUID lookup is synthetic, and evaluated models use greedy decoding.",
+      "source_locator": {"section": "2.1, 2.2, and 3.1", "pdf_pages": [3, 6]}
+    }
+  ],
+  "results": [
+    {
+      "role": "core",
+      "reader_question": "How does evidence access change across positions and added retrieval?",
+      "expected_relation": "Many models lose QA accuracy away from context edges, while extra retrieved documents improve recall more than reader accuracy.",
+      "source_locator": {"section": "2.3 and 5", "pdf_pages": [5, 10], "figures": ["5", "11"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "Which interventions or exceptions prevent a universal failure claim?",
+      "expected_relation": "Query-aware prompting nearly solves UUID lookup but not document QA; encoder-decoder positional robustness depends on staying within training lengths.",
+      "source_locator": {"section": "4.1 and 4.2", "pdf_pages": [7, 9], "figures": ["8", "9"]}
+    }
+  ]
+}

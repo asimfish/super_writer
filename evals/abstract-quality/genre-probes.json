@@ -1,0 +1,28 @@
+{
+  "scope": "Original synthetic diagnostic for genre and claim-scope decisions, not a real-paper holdout",
+  "facts": [
+    {"id": "F1", "text": "Synthetic Method Q uses adaptive action segments for simulated manipulation. On two fixed tasks at the same training budget it succeeds in 72 and 65 of 100 executions, versus 60 and 58 for fixed-length segments. No independent-training-run uncertainty is provided."},
+    {"id": "F2", "text": "On the measured workstation, Method Q requires 108 ms per action chunk versus 96 ms for the comparison policy. No physical-robot or new-environment policy evaluations have been performed."},
+    {"id": "F3", "text": "The author plans to release a reusable encoder and assess its encoding fidelity on excluded simulators without refitting. Release and excluded-simulator evaluation have not occurred; no result for either is available."}
+  ],
+  "cases": [
+    {
+      "id": "completed-findings-only",
+      "request": "Write an abstract for a completed-results paper. Include only established findings, not future work or proposed contributions. I care about the future reusable encoder too, but keep its current status and what I need to validate in separate author notes.",
+      "extra_facts": [],
+      "oracle": {"manuscript": "Observed simulation success-latency tradeoff; no proposed release or future transfer", "notes": "Missing release and encoding-fidelity evaluation, not a mandatory policy-success test"}
+    },
+    {
+      "id": "proposal-with-preliminary-results",
+      "request": "Write a research-proposal abstract. Use the completed results as preliminary evidence and explicitly present the planned reusable encoder and excluded-simulator encoding-fidelity study as the next objective. Do not pretend that the planned work is complete.",
+      "extra_facts": [],
+      "oracle": {"manuscript": "Preliminary simulation findings and explicitly planned encoding study; release and transfer not completed", "notes": "Validation supports encoding reuse, not an invented downstream policy guarantee"}
+    },
+    {
+      "id": "encoding-not-policy-transfer",
+      "request": "Write a completed-results abstract covering the policy result and the separate encoding-reuse experiment. The new fact updates the earlier planned status. My reuse claim concerns compressed encoding at comparable reconstruction error, not success of policies in the excluded simulators. Keep any remaining questions in notes.",
+      "extra_facts": [{"id": "F4", "text": "Updated status: the encoder checkpoint is now publicly released. With fixed encoder parameters and no refitting on two excluded simulators, it uses 31 and 34 tokens per action chunk versus 70 and 75 for the baseline at comparable reconstruction error. These are encoding tests; no excluded-simulator policy-success results exist."}],
+      "oracle": {"manuscript": "Updated release and measured encoding reuse retained; no policy-success transfer inferred", "notes": "Do not treat absent policy-success tests as invalidating the narrower encoding claim"}
+    }
+  ]
+}

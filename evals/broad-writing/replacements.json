@@ -1,0 +1,16 @@
+[
+  {
+    "excluded_id": "P02",
+    "replacement_id": "P13",
+    "domain": "D1",
+    "reason": "ScrewMimic official PDF remained incomplete after all three bounded attempts; no body or anchors were available.",
+    "failure_receipt": "exclusions/P02.json",
+    "replacement_title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "metadata_url": "https://www.roboticsproceedings.org/rss19/p016.html",
+    "timing": "Before any initial or revision generation; source availability only, not observed prose quality.",
+    "original_registry": "domains.initial.json",
+    "original_prompt_plan": "prompts.generation.initial.json",
+    "protocol_counts_changed": false,
+    "documented_family_note": "Repository writing-library.json includes the different paper Reinforcement Learning with Action Chunking (NeurIPS 2025); disclose related concept exposure, not exact-paper holdout certainty."
+  }
+]

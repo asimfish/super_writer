@@ -1,0 +1,12 @@
+{
+  "baseline/abstract-decisions.md": "453a43957c5ac9d58707df81bfdce72ac25895f88296f4f4a6bf598194825848",
+  "baseline/abstract-preflight.md": "d573f9261cbf45644434335f2111bbcd5b87bd6d87ff3aaa7c4c282da431d345",
+  "baseline/argument-transfer.md": "56d917608751479209aa8478ab44d4be1622fb6ac5c18a5d3f64be5c31f51383",
+  "baseline/results-validation.md": "6f79e90026627cf0d18a3fddef99c6c04176ba62591a49a1cd75a0643a35d790",
+  "baseline/writing-protocols.md": "56586ceda2ec9f19a049eaf09befbdab2f118e2b1c6bb21c580562f527a9e8b8",
+  "candidate/abstract-preflight.md": "fcaa62a180166c5a81da963ab9575be01438484aa28c1842cb2c50a17da2c107",
+  "candidate/argument-transfer.md": "d04c5c900b274185782723901eb9d60fd1979abe3ba239c996a18f7359a18f3c",
+  "candidate/results-validation.md": "546b81cf1677a584cbe7d58847d510006575f5dced1b2215553af204baf3d62f",
+  "PROTOCOL.md": "f0eac9a1aeb385237932b00b2f4f8db228f166907c0223329d8e100d48cfb861",
+  "domains.json": "190c8991c44c19b8ac5ad9b7583915ecaa3774b5de06f18e500818a9cade0ad1"
+}

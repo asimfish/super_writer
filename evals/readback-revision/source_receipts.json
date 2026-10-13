@@ -1,0 +1,28 @@
+{
+  "P1": {
+    "title": "Behavior Generation with Latent Actions (VQ-BeT)",
+    "venue": "ICML 2024",
+    "official_pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/lee24y/lee24y.pdf",
+    "pdf_sha256": "b3e7e50a1069cd4b4a3c946d90e1005a30241592ee027042bdab2961721507fd",
+    "body_sha256": "0f8a18f4780678c1fcbf1517d8b4191c44139e56113b1e61e044d92d247cc011",
+    "extraction": "pdftotext -raw -f 3 -l 9; select declared boundaries without repairing text",
+    "start": "3. Vector-Quantized Behavior Transformers",
+    "stop": "5. Related Works",
+    "limitation_start": null,
+    "limitation_stop": null,
+    "body_words_approx": 4383
+  },
+  "P2": {
+    "title": "Imitation Bootstrapped Reinforcement Learning (IBRL)",
+    "venue": "RSS 2024",
+    "official_pdf_url": "https://roboticsproceedings.org/rss20/p056.pdf",
+    "pdf_sha256": "dfcb7b6627490009402da94302b0a46a64fbea1d4502b4950c83bb79c5f74092",
+    "body_sha256": "a2120a260b438f1222b8efbba9858302e0138d2153e93454c648edab56d7bb59",
+    "extraction": "pdftotext -raw -f 2 -l 10; select declared boundaries without repairing text",
+    "start": "IV. IMITATION BOOTSTRAPPED RL",
+    "stop": "VII. DISCUSSION",
+    "limitation_start": "Limitations and Future Work.",
+    "limitation_stop": "VIII. ACKNOWLEDGMENTS",
+    "body_words_approx": 5432
+  }
+}

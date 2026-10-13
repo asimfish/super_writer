@@ -1,0 +1,21 @@
+{
+  "timing": "Before any anonymous behavioral assessment or final input freeze",
+  "changes": [
+    {
+      "case": "C05",
+      "change": "Replace unsupported absence-of-other-device/batch-experiments with the narrower claim that this profile does not establish their performance."
+    },
+    {
+      "case": "C07",
+      "change": "Record the counterexample-refuted whole-text invariant as contradicted; admission still detects missing or contradicted rather than requiring one wording."
+    },
+    {
+      "case": "C11",
+      "change": "Describe two improved point measurements as a comparison, not a measured resource-quality sacrifice."
+    }
+  ],
+  "initial": "cases.initial.json",
+  "initial_review": "fixture_review.json",
+  "final_review": "fixture_review.final.json",
+  "behavioral_raw_repaired": false
+}

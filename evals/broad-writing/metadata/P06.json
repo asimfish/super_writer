@@ -1,0 +1,160 @@
+{
+  "id": "P06",
+  "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+  "domain": "adaptation_training",
+  "venue": "Proceedings of the 41st International Conference on Machine Learning",
+  "year": 2024,
+  "publisher": "PMLR",
+  "volume": 235,
+  "proceedings_pages": "61121-61143",
+  "metadata_url": "https://proceedings.mlr.press/v235/zhao24s.html",
+  "provided_metadata_url": "https://arxiv.org/abs/2403.03507",
+  "verification_date": "2026-10-11",
+  "pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/zhao24s/zhao24s.pdf",
+  "pdf_sha256": "53b0a2155d1844cbf1e14630f01e11836ad02e04908a9c664a1ec6d6e7246c50",
+  "body_sha256": "0ad6de7f91674de71eaa2b4fe19d9842cb67979c48279142468d5318b7ded4fd",
+  "extracted_sha256": "5a5e7edc5a0b1dc914d866544dc13430e631c3fd13e4781f5ce8256e26952798",
+  "pages": {
+    "numbering": "1-based PDF pages, matching printed paper pages",
+    "total_pdf_pages": 23,
+    "main_body_range": [3, 9],
+    "supplementary_ranges": [[20, 23]],
+    "selected_pdf_pages": [3, 4, 5, 6, 7, 8, 9, 20, 21, 22, 23]
+  },
+  "extraction_command": "pdftotext -raw sources/P06.pdf sources/P06.extracted.txt",
+  "selection_command": "node sources/P06.extract.mjs",
+  "command_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+  "extraction_tool": "Poppler pdftotext 26.03.0",
+  "selection_semantics": "Ordered, nonoverlapping, unchanged UTF-8 byte slices; start inclusive and end exclusive. Full-page segments include the terminal form feed. No source repair, trimming, or synthetic separators.",
+  "ordered_extraction_segments": [
+    {
+      "name": "main_theory_and_projection_section_3",
+      "mode": "boundary_strings",
+      "pdf_page_range": [3, 5],
+      "start_string": "3. GaLore: Gradient Low-Rank Projection\n",
+      "end_string": "4. GaLore for Memory-Efficient Training\n"
+    },
+    {
+      "name": "main_training_method_section_4",
+      "mode": "boundary_strings",
+      "pdf_page_range": [5, 6],
+      "start_string": "4. GaLore for Memory-Efficient Training\n",
+      "end_string": "5. Experiments\n"
+    },
+    {
+      "name": "main_experiments_section_5",
+      "mode": "boundary_strings",
+      "pdf_page_range": [6, 9],
+      "start_string": "5. Experiments\n",
+      "end_string": "6. Ablation Study\n"
+    },
+    {
+      "name": "main_ablation_section_6",
+      "mode": "boundary_strings",
+      "pdf_page_range": [9, 9],
+      "start_string": "6. Ablation Study\n",
+      "end_string": "7. Conclusion\n"
+    },
+    {
+      "name": "supporting_appendices_C_D_E",
+      "mode": "full_pdf_pages",
+      "pdf_page_range": [20, 23],
+      "scope_note": "Complete experimental details, all supplementary fine-tuning comparisons, and memory/throughput measurements. Tables 5-11 retain all rows; no supplemental task comparator is cherry-picked."
+    }
+  ],
+  "source_version": {
+    "kind": "official_proceedings_pdf",
+    "label": "ICML 2024, PMLR volume 235, zhao24s",
+    "provenance": "Downloaded from the PMLR proceedings page's Download PDF link in the publisher-managed mlresearch/v235 repository.",
+    "pdf_creation_date": "2024-06-03T08:49:18+08:00",
+    "arxiv_fallback_used": false,
+    "pinning": "Saved PDF bytes pinned by pdf_sha256; upstream URL uses a mutable main branch."
+  },
+  "download_attempts": [
+    {
+      "attempt": 1,
+      "url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/zhao24s/zhao24s.pdf",
+      "http_status": 200,
+      "bytes": 749048,
+      "result": "success",
+      "connect_timeout_seconds": 20,
+      "max_time_seconds": 120,
+      "automatic_retries": 0
+    }
+  ],
+  "prior_family_overlap": "unassessed",
+  "main_body_word_count": 4707,
+  "body_word_count": 5873,
+  "word_count_method": "Count nonempty tokens split by Unicode whitespace in unchanged selected text.",
+  "limitations": {
+    "standalone_limitations_section_present": false,
+    "locations": [
+      {
+        "pdf_pages": [3, 4, 5],
+        "section": "3.2-3.3; Lemma 3.3 and Theorem 3.8",
+        "locator_string": "OnerarefailurecaseofLemma3.3",
+        "topic": "Restricted gradient form, stationarity/continuity conditions, and a degenerate case for the stable-rank analysis.",
+        "included_in_body": true
+      },
+      {
+        "pdf_pages": [5],
+        "section": "4.1",
+        "locator_string": "Averyfrequentsubspacechange",
+        "topic": "Projection refresh trades optimizer-state fidelity and overhead against restricted-subspace progress; the theorem alone is not an overall-performance guarantee.",
+        "included_in_body": true
+      },
+      {
+        "pdf_pages": [8],
+        "section": "5.3",
+        "locator_string": "Due to computational constraints",
+        "topic": "The 7B quality comparison uses a single trial without hyperparameter tuning on 64 A100 GPUs.",
+        "included_in_body": true
+      },
+      {
+        "pdf_pages": [8, 9, 23],
+        "section": "5.5; Appendix E Table 11",
+        "locator_string": "Throughput overhead of GaLore.",
+        "topic": "Single-device memory feasibility uses a small token batch; memory savings and throughput depend on per-layer updates and optimizer choice.",
+        "included_in_body": true
+      },
+      {
+        "pdf_pages": [9],
+        "section": "6. Ablation Study",
+        "topic": "Rank, refresh frequency, and training length create a memory/computation/convergence trade-off.",
+        "included_in_body": true
+      },
+      {
+        "pdf_pages": [9],
+        "section": "7. Conclusion, open-problems paragraph",
+        "locator_string": "We identify several open problems",
+        "topic": "Other model families, lower-memory projectors, and elastic consumer-hardware training remain open scope.",
+        "included_in_body": false,
+        "exclusion_reason": "Located for scope auditing only; the entire summary conclusion is excluded."
+      }
+    ]
+  },
+  "excluded_scope": [
+    "Abstract, Introduction (including the floated overview Algorithm 1 and Figure 1), and Related Works",
+    "7. Conclusion, Impact Statement, Acknowledgments, and References",
+    "Appendix A Additional Related Works and Appendix B proofs; the complete main-body statements and their conditions are retained"
+  ],
+  "source_warnings": [
+    "No download failure or arXiv fallback. The supplied arXiv identifier is not the PDF version used.",
+    "No standalone limitations section; limitations and open-problems scope are separately located in this metadata.",
+    "Training-token amounts for smaller models differ between main-body Table 2 and appendix Table 5; both are retained without reconciliation.",
+    "The long 7B quality run and the single-device memory-feasibility measurement are separate experimental settings, not interchangeable evidence."
+  ],
+  "extraction_warnings": [
+    "Raw Poppler output retains running titles, page numbers, form feeds, line-wrap hyphens, fused words, mathematical control characters, and flattened table layout. Check/cross symbols in Table 1 are extracted as glyph-dependent numerals and are not repaired.",
+    "Plot curves and visual geometry are not recoverable with pdftotext; extracted captions and labels are retained and the PDF remains the visual source.",
+    "Complete main-body sections 3-6 are selected. Complete experimental appendices C-E are explicitly supplemental rather than silently treated as main body.",
+    "All rows in Tables 2-4 and 5-11 are retained, including comparisons with worse or near-equal scores and throughput costs."
+  ],
+  "artifacts": {
+    "pdf": "sources/P06.pdf",
+    "raw_extraction": "sources/P06.extracted.txt",
+    "selection_script": "sources/P06.extract.mjs",
+    "body": "inputs/P06.txt",
+    "anchors": "anchors/P06.json"
+  }
+}

@@ -1,0 +1,458 @@
+[
+  {
+    "pair": "A02_s2",
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "reason": "Both explain neighborhood-loss minimization, the conditional bound, the two-gradient approximation, and the controlled CIFAR comparison. A supplies clearer problem framing and explicitly separates curvature diagnostics from causation; B more directly explains why independent subset maximizations change the objective and scopes the 0.30% finetuning result to additional pretraining. Both retain label-noise and SVHN limits. Their complementary strengths do not establish a material preference."
+  },
+  {
+    "pair": "A02_s1",
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both faithfully distinguish theoretical motivation from approximate updates and scope the curvature, transfer, label-noise, and SVHN evidence. B makes the controlled CIFAR improvement concrete with the supported 2.2% to 1.6% comparison, then explicitly connects separate subset maximizations and their outcomes to the significance of subset size. A also gives a coherent, sufficient account; B's evidence-to-contribution connection earns a narrow preference, not a fidelity advantage."
+  },
+  {
+    "pair": "A01_s1",
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both accurately cover grounded spatial objectives, replanning, real-world success, uneven task-level transfer, and the separate online-learning contribution. B better explains the operative links: attractive and repulsive voxel values become planning objectives, while local waypoint perturbations focus exploration when zero-shot trajectories fail. Its success and interaction-time comparisons match the source and support this dual role without claiming universal generalization. A is faithful and well written but leaves these mechanisms less explicit."
+  },
+  {
+    "pair": "A01_s2",
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both preserve the real-world comparison, category-level rather than uniform simulated gains, trajectory-guided dynamics learning, and manual prompting and end-effector limitations. B explains what voxel values do and how scoring trajectories combines targets with constraints; A names composed maps without making their operative meaning equally clear. B also ties the interaction-time contrast directly to focused exploration and acknowledges environment-dynamics limitations. The preference rests on supported explanation, not missing equations or an exhaustive result inventory."
+  },
+  {
+    "pair": "A02_s2",
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both accurately describe the neighborhood objective, approximate two-gradient update, conditional bound, CIFAR comparison, and restricted noise/subset findings. B connects the problem of equally low-loss minima to the objective and explains why the doubled-epoch comparison matters, then integrates the geometric diagnostics with the empirical claims. A's correctly contextualized 0.30% result adds evidence but its progression is more enumerative. B's explicit noncausal reading of the diagnostics is warranted by the reported analyses."
+  },
+  {
+    "pair": "A02_s1",
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both capture the main contribution, the two-gradient mechanism, the conditional bound, gains across training regimes, and the substantive subset-size finding. A supplies a representative CIFAR effect size and explains why subset size is consequential; B more directly states the worst-neighborhood-loss objective and connects doubled-epoch controls to the optimization claim. These are comparably useful choices, with neither making unsupported guarantees or universal robustness claims. B's lack of an error percentage does not outweigh its explanatory clarity."
+  },
+  {
+    "pair": "A01_s1",
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both faithfully explain perception-grounded value maps, joint spatial planning, observation-based replanning, and trajectory-guided dynamics learning. Their success rates, simulation qualifications, and contact-task interaction times match the source. B more clearly connects the disturbed-execution comparison to replanning and explains how a trajectory that fails zero-shot completion can remain a useful exploration prior. A is slightly denser, though its explicit local waypoint perturbation is helpful. B's more continuous argument earns a narrow preference, not a fidelity distinction."
+  },
+  {
+    "pair": "A01_s2",
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "reviewer": 2,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 5
+    },
+    "reason": "Both preserve the zero-shot planning and optional contact-task learning contributions, accurately scope the simulated transfer results, and report the disturbance and interaction-time comparisons. A explains what voxel values do and how trajectory scoring joins targets with constraints, giving a more operative account than B's reference to composing maps. Its environment-dynamics limitation is also directly supported by the source. B remains faithful and clearly explains the exploration prior; omitting the contact-task success percentages is not itself a defect in either abstract."
+  },
+  {
+    "pair": "A03_s2",
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "reviewer": 1,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both faithfully explain class-conditioned personalization and generated-image prior preservation, report the matched Stable Diffusion comparison, and retain the ablation's fidelity-diversity tradeoff and limitations. A has a narrow explanatory edge: its opening identifies the risk of reproducing only reference views, and it explains why DINO is needed when text-aligned embeddings overlook differences between subjects. B is slightly leaner and clearly interprets the joint comparisons, but gives less motivation for this evaluation contribution. Neither turns qualitative applications into an unrestricted preservation guarantee."
+  },
+  {
+    "pair": "A04_s2",
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both accurately explain loss-based filtering against no-call and call-only alternatives, isolate inference-time benefit with the ASDiv disabled control, and bound evaluation, perplexity, scaling, and interactive use. B better connects predictive utility to learned tool selection and explains calendar access as the operative source of DATESET improvement, which the source explicitly supports. A devotes more space to API enumeration, the exact decoding threshold, and another baseline number. Those details are correct, but B's evidence-to-explanation connections make the full contribution easier to follow without overstating superiority to GPT-3 or original GPT-J."
+  },
+  {
+    "pair": "A04_s1",
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both give the operative filtering rule, explain what augmented training teaches, and use content-matched and disabled-call controls to distinguish tool access from further training. Both preserve the QA, translation, perplexity, and noninteractive limitations. A usefully states that decoding encourages calls; B adds the source-supported arithmetic comparison with GPT-3 and explicitly confines the scaling sweep to three tools. These are complementary strengths, not a decisive overall difference. Their ASDiv figures match the source's numerical-answer evaluation, and neither claims general mathematical reasoning or universal superiority."
+  },
+  {
+    "pair": "A03_s1",
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both capture the personalization mechanism, public evaluation contribution, joint subject/prompt evidence, human preferences, and prior-preservation tradeoff without claiming perfect identity retention. B has a small explanatory advantage: it connects the class prior to variations beyond observed views and states why DINO distinguishes individuals within a class. It also explicitly identifies the shared Stable Diffusion backbone, clarifying the comparison. A's explanation of why both metrics matter is equally sound, and its omissions are not fidelity defects. B's additional causal and evaluation clarity gives it the narrow preference."
+  },
+  {
+    "pair": "A03_s2",
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both accurately describe rare-token/class conditioning, frozen-model prior rehearsal, the Stable Diffusion comparison and the fidelity/diversity tradeoff. B better connects the few-reference-view problem to class-prior reuse and explains why DINO distinguishes subjects that CLIP image embeddings may conflate (Section 4.1). Its paired DINO/CLIP-T results and human preferences support identity retention plus prompt responsiveness without promising universal preservation. A supplies the same decisive evidence but gives less rationale for the metric."
+  },
+  {
+    "pair": "A04_s2",
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "reason": "Both explain prediction-loss filtering against no-call and unanswered-call controls, then use the ASDiv enabled/disabled contrast to establish inference-time utility. Both preserve the single-call evaluation, mixed translation results, QA shortfall, disabled-call perplexity qualification and restricted scaling evidence. B's explicit tool list, top-ten trigger and GPT-3 comparator add specificity; A explains the calendar's role in DATESET more directly. Neither has a decisive advantage in contribution, mechanism, evidence or scope."
+  },
+  {
+    "pair": "A04_s1",
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "B more clearly links prediction-loss filtering to supervision for selection, arguments and incorporation, then uses both ASDiv controls to isolate tool access. Both match Table 3 and correctly qualify QA, translation, perplexity, scaling and unlearned chaining. B also states that decoding encourages calls, an important boundary on the prompted zero-shot results in Section 4.2. A's additional GPT-3 comparison and explicit three-tool sweep are supported, but do not outweigh B's clearer explanation and evaluation framing."
+  },
+  {
+    "pair": "A03_s1",
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both explain identifier/class binding and frozen-model prior preservation, support personalization with matched-backbone DINO/CLIP-T comparisons and majority-vote preferences, and retain Table 3's tradeoff and observed failure modes. A explains DINO's within-class rationale; B more explicitly explains why joint identity and prompt metrics matter. These are comparable explanatory strengths. Neither omission changes the contribution or necessary scope, and neither implies reliable novel-view preservation beyond the qualified qualitative evidence."
+  },
+  {
+    "pair": "A06_s1",
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "reason": "Both connect continuous dynamics to adjoint memory savings, trace-based density evolution, and irregular-time latent prediction. MNIST supports fewer parameters, not improved accuracy; the spiral RMSE comparison is appropriately confined to synthetic sparse observations. Both scope density-update cost per function evaluation and acknowledge reconstruction error. B explains reverse reconstruction earlier, while A more explicitly describes the latent initial state and reconstruction/extrapolation evidence. These modest trade-offs do not establish a substantive advantage in contribution, decisive evidence, or prose."
+  },
+  {
+    "pair": "A05_s2",
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "reason": "B more directly explains why cache offloading improves on weight-only offloading and places the compressed throughput result beside its operative cause: avoiding disk swapping. This clarifies the contribution beyond merely fitting OPT-175B. Both faithfully separate dummy-weight throughput from real-weight quality, delimit the twice-optimal result to idealized weight I/O, and distinguish decoding from total-generation scaling. A presents essentially the same supported evidence, but its compression-first ordering links mechanism and measured gain less tightly. B earns a narrow argumentative preference, not a different fidelity judgment."
+  },
+  {
+    "pair": "A05_s1",
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "reason": "Both explain the central throughput mechanism: cache offloading enlarges batches and layer reuse amortizes weight I/O. The dummy-weight comparison, compression avoiding disk transfers, separate real-weight quality tests, and HELM completion provide complementary evidence. Both retain host-memory and long-completion-time scope and distinguish decoding scaling from overall throughput. B explicitly relates measured gains to effective batching; A more explicitly identifies HELM as evidence beyond synthetic tests. These differences are too small to justify a preference. The idealized weight-I/O qualification is sufficient without reproducing every analytical assumption."
+  },
+  {
+    "pair": "A06_s2",
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "reason": "B pairs continuous-depth learning with MNIST, trace-based flows with density experiments, and the latent model with spiral prediction. A introduces flow and latent mechanisms before returning to classification evidence, making the argument less continuous. Both faithfully describe adjoint reconstruction, the trace theorem, observation-time modeling, and numerical limitations; neither turns comparable MNIST accuracy into an accuracy improvement. The synthetic spiral comparison supports the stated extrapolation claim. B's mechanism-to-evidence progression earns a narrow preference; additional numerical details or a theorem proof are unnecessary."
+  },
+  {
+    "pair": "A06_s1",
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "reason": "Both explain the source's three contributions: memory-saving reverse-time adjoints, trace-based continuous flows, and continuous latent trajectories for irregular observations. They correctly interpret MNIST as parameter efficiency, restrict the spiral advantage to the synthetic setting, scope linear density-update cost per function evaluation, and acknowledge reconstruction error. B states the latent initial condition more explicitly; A foregrounds state reconstruction in the adjoint mechanism. These modest differences do not establish a material advantage in argument or readability."
+  },
+  {
+    "pair": "A05_s2",
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Sections 4-6 and Appendix A support both accounts of weight reuse, cache-enabled batching, policy search, compression, and conditional scaling. B gives a more coherent mechanism-to-evidence progression: compression reduces transfers before the paired throughput results, whose dummy-weight status is stated immediately. A introduces that qualification afterward and uses the less informative phrase 'beyond model fitting.' Both appropriately separate real-weight quality evidence, qualify the weight-I/O bound, reject a uniform compression benefit, and limit the throughput claim to substantial host memory and bulk workloads."
+  },
+  {
+    "pair": "A05_s1",
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both faithfully connect cache offloading and block-wise weight reuse to batching, distinguish dummy-weight throughput from real-weight quality, and retain the compression and scaling limitations. Their idealized asymptotic claim is specifically about weight I/O, not runtime optimality. B avoids A's repetitive post-benchmark batching explanation and more clearly identifies the seven-scenario HELM run as end-to-end evidence beyond synthetic measurements. Its closing host-capacity and storage-bandwidth conditions are supported by Appendix A.4. The advantage is explanatory organization, not additional numerical detail."
+  },
+  {
+    "pair": "A06_s2",
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "reviewer": 2,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 4
+    },
+    "reason": "A couples each application to its decisive evidence: MNIST follows continuous-depth training, and spiral RMSE follows the latent-trajectory mechanism. B postpones MNIST until after observation-time modeling, weakening that argumentative progression. Both correctly explain trace additivity, interpret classification as comparable performance with fewer parameters, confine time-series evidence to synthetic spirals, and acknowledge numerical reconstruction error. B more explicitly marks Poisson timing as optional; A's description remains supported by the demonstrated model extension and does not attribute the spiral result to that likelihood."
+  }
+]

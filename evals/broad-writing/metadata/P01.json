@@ -1,0 +1,103 @@
+{
+  "id": "P01",
+  "title": "Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning",
+  "domain": "robotics",
+  "venue": "Proceedings of Robotics: Science and Systems XX",
+  "year": 2024,
+  "metadata_url": "https://www.roboticsproceedings.org/rss20/p048.html",
+  "pdf_url": "https://www.roboticsproceedings.org/rss20/p048.pdf",
+  "doi": "10.15607/RSS.2024.XX.048",
+  "pdf_sha256": "ed238382f622d94d8b858237a94feffecd9f3f806f943dcbba915a9a95bc45d7",
+  "body_sha256": "1867925ddbd361df41e9a47a4033b95ea2721ee44356579ccb0cd118436af192",
+  "extracted_sha256": "b1de8566396479414ff4f9e234356ca0157e18c39d580bf3d59fef4ad0b157bd",
+  "pages": {
+    "numbering": "1-based physical PDF pages, not printed page labels",
+    "pdf_total": 14,
+    "selected_page_range": [2, 10],
+    "methods": [2, 4],
+    "experiments": [4, 10],
+    "limitations": [10, 10],
+    "boundary_pages_are_partial": true
+  },
+  "extraction_command": "pdftotext -raw sources/P01.pdf sources/P01.extracted.txt",
+  "selection_command": "python3 sources/P01.extract.py",
+  "extractor": "Poppler pdftotext 26.03.0",
+  "ordered_extraction_segments": [
+    {
+      "order": 1,
+      "name": "methods",
+      "section": "III. APPROACH (complete)",
+      "pdf_pages": [2, 4],
+      "start_string": "III. APPROACH\n",
+      "end_string": "IV. EXPERIMENTS\n",
+      "start_inclusive": true,
+      "end_inclusive": false,
+      "start_byte": 10830,
+      "end_byte_exclusive": 20285,
+      "word_count": 1568
+    },
+    {
+      "order": 2,
+      "name": "experiments",
+      "section": "IV. EXPERIMENTS (complete, A-E)",
+      "pdf_pages": [4, 10],
+      "start_string": "IV. EXPERIMENTS\n",
+      "end_string": "V. DISCUSSION\n",
+      "start_inclusive": true,
+      "end_inclusive": false,
+      "start_byte": 20285,
+      "end_byte_exclusive": 43998,
+      "word_count": 3941
+    },
+    {
+      "order": 3,
+      "name": "limitations",
+      "section": "V. DISCUSSION: separately located limitations paragraph only",
+      "pdf_pages": [10, 10],
+      "start_string": "DMD also has several limitations. DMD assumes that the\n",
+      "end_string": "Possible future directions include: learning diffusion mod-\n",
+      "start_inclusive": true,
+      "end_inclusive": false,
+      "start_byte": 46103,
+      "end_byte_exclusive": 46526,
+      "word_count": 70
+    }
+  ],
+  "segment_concatenation": "Original selected byte slices concatenated in source order, without inserted headings, rewritten text, or normalization.",
+  "body_word_count": 5579,
+  "word_count_method": "UTF-8 decode then whitespace split; raw mathematical tokens count as words.",
+  "source_version": {
+    "type": "official_proceedings_pdf",
+    "publisher": "Robotics: Science and Systems",
+    "verified_title_venue_year": true,
+    "verification": "Proceedings landing-page title and BibTeX; PDF first page confirms title and Robotics: Science and Systems 2024 in Delft, July 15-19.",
+    "retrieved_date": "2026-10-11",
+    "fallback_used": false
+  },
+  "prior_family_overlap": "unassessed",
+  "pdf_download_attempt_count": 1,
+  "download_attempts": [
+    {"resource": "metadata_html", "url": "https://www.roboticsproceedings.org/rss20/p048.html", "attempt": 1, "max_time_seconds": 60, "http_status": 200, "curl_exit_code": 0, "bytes": 8642},
+    {"resource": "pdf", "url": "https://www.roboticsproceedings.org/rss20/p048.pdf", "attempt": 1, "max_time_seconds": 90, "http_status": 200, "curl_exit_code": 0, "bytes": 23323502}
+  ],
+  "scope": "Complete main-body approach and all experiments, preserving Tables I-V, captions, task conditions, ablations, both pouring comparisons, failures, and novel-environment evaluation; separately selected recoverability limitation.",
+  "excluded": ["Abstract", "I. INTRODUCTION", "II. RELATED WORK", "V. DISCUSSION summary paragraphs", "Future directions", "ACKNOWLEDGMENTS", "REFERENCES"],
+  "source_warnings": [
+    "The landing page's citation_pdf_url uses HTTP; the same official relative PDF link was resolved and downloaded over HTTPS.",
+    "Internal PDF title and author metadata are blank and the creation timestamp is nonpublication data; identity and year use proceedings HTML and the PDF first page."
+  ],
+  "extraction_warnings": [
+    "Poppler -raw preserves original line-wrap hyphenation, mathematical fragments, Unicode glyphs, page form feeds, and interleaved figure/caption text; none was repaired.",
+    "Tables I-V are preserved in raw text order, which flattens their visual row/column layout; visual interpretation remains grounded in the saved PDF.",
+    "Summary discussion and future directions are not body input; the recoverability limitation is a separately located noncontiguous segment."
+  ],
+  "artifacts": {
+    "pdf": "sources/P01.pdf",
+    "metadata_html": "sources/P01.proceedings.html",
+    "raw_extraction": "sources/P01.extracted.txt",
+    "body": "inputs/P01.txt",
+    "extraction_script": "sources/P01.extract.py",
+    "anchors": "anchors/P01.json"
+  },
+  "status": "source_prepared"
+}

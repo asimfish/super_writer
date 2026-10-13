@@ -1,0 +1,130 @@
+{
+  "readings": [
+    {
+      "id": "D5_text_154",
+      "core_relation": "One GPU sort of tile-and-depth keys supplies shared splat lists for forward blending and reverse backpropagation. Reconstructing opacity from final accumulations avoids per-pixel histories and fixed gradient-count limits; image losses and gradient-guided cloning/splitting refine the representation.",
+      "scope": "16 x 16 tiles; blending stops at opacity saturation. Shared sorting only approximates visibility.",
+      "witness": "reconstructs intermediate opacity factors from saved final accumulations",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_172",
+      "core_relation": "At 30,000 iterations, Gaussian splatting improves SSIM/LPIPS over the published reference but lowers PSNR. Increasing from 7,000 iterations improves PSNR at increased training/storage costs and reduced frame rate; a ten-splat gradient cap severely degrades Truck reconstruction, supporting uncapped gradients.",
+      "scope": "Mip-NeRF360, A6000, native test resolutions: 134 fps, 734 MB versus 8.6 MB. Truck uses manually downsampled inputs. Poor-coverage and ordering artifacts remain.",
+      "witness": "Competitive quality is therefore metric-dependent.",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_148",
+      "core_relation": "Anisotropic 3D Gaussians unify scene optimization and fast rasterization; adaptive density changes and a shared-sort differentiable tile renderer enable interactive viewing without a fixed gradient-contributor limit. Quality is competitive with Mip-NeRF360 but metric-dependent.",
+      "scope": "Static scenes; sparse structure-from-motion initialization for photographs. Thirteen real scenes and bounded synthetic scenes; 30,000 iterations yield 134-154 fps on A6000 after 27-42 minutes. Larger storage, poor-coverage artifacts, and popping remain.",
+      "witness": "SSIM and LPIPS improve while PSNR remains lower",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_150",
+      "core_relation": "Opacity-bearing Gaussians with spherical-harmonic appearance combine differentiable optimization and fast rendering without surface-normal estimation. Cloning/splitting and shared tile sorting enable real-time reconstruction with uncapped contributor gradients.",
+      "scope": "Static scenes initialized from sparse structure-from-motion. Held-out Mip-NeRF360, Tanks & Temples, Deep Blending: 30,000 iterations, 134-154 fps on A6000, 27-42 minutes training. SSIM exceeds Mip-NeRF360 across datasets, but PSNR is lower on its dataset. Hundreds-of-megabytes storage, poor-coverage artifacts, and popping remain.",
+      "witness": "competitive, metric-dependent reconstruction quality rather than uniform superiority",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_168",
+      "core_relation": "ConvNeXt-B exceeds Swin-B in classification accuracy and throughput with fewer FLOPs; detection and segmentation also improve. Convolutions remain competitive, but EfficientNetV2-L retains higher classification accuracy.",
+      "scope": "ImageNet-1K, 384 x 384, V100: 85.1% versus 84.5%, 95.7 versus 85.1 images/second. EfficientNetV2-L uses 480 x 480 and 53.0 GFLOPs. Downstream uses ImageNet-22K pretraining, Cascade Mask R-CNN, and UperNet; ADE20K uses 640 x 640 crops and multi-scale testing.",
+      "witness": "the gains against Swin therefore extend to localization and dense prediction",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_162",
+      "core_relation": "ConvNeXt-B beats Swin-B in accuracy and measured throughput, and ImageNet-22K-pretrained COCO detection/segmentation. Mixed architectural ablations support the evaluated combination, not independent credit to borrowed Transformer conventions.",
+      "scope": "ImageNet-1K at 384 x 384 on V100: 85.1%/95.7 images per second versus 84.5%/85.1. COCO uses Cascade Mask R-CNN, 3x schedule. GELU alone is neutral; kernels above 7 x 7 add no gain; separate downsampling requires normalization for stability.",
+      "witness": "rather than treating any borrowed component as independently responsible",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_146",
+      "core_relation": "Applying a 7 x 7 depthwise convolution before fourfold channel expansion keeps spatial mixing affordable; pointwise layers provide channel capacity. Normalization at resolution transitions stabilizes otherwise divergent separate downsampling.",
+      "scope": "Residual blocks retain one GELU and one layer normalization. Sequential ResNet modifications use a fixed 300-epoch AdamW recipe, unchanged hyperparameters, approximately controlled FLOPs, and three-seed small-model averages. Comparisons depend on prior modifications.",
+      "witness": "each comparison remains conditional on earlier modifications",
+      "unclear": "Independent component effects are not recoverable."
+    },
+    {
+      "id": "D5_text_180",
+      "core_relation": "Increasing optimization from 7,000 to 30,000 iterations improves PSNR/LPIPS but reduces rendering throughput and increases storage. Against Mip-NeRF360, SSIM/LPIPS improve while PSNR falls; truncating gradients to ten frontmost Gaussians substantially harms reconstruction.",
+      "scope": "Mip-NeRF360: 134 fps, 734 MB at 30,000 iterations. A6000 training versus four A100s does not establish matched-GPU speedup. Ablation averages Truck, Garden, Bicycle: PSNR 26.05 to 19.19 dB. Poor-coverage artifacts and popping persist.",
+      "witness": "the quality advantage depends on the metric",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_166",
+      "core_relation": "ConvNeXt modernizes convolutional training and architecture without attention, separating narrow-width depthwise spatial filtering from pointwise channel mixing. Competitive classification and downstream recognition show that evaluated Swin-style attention modules are not required.",
+      "scope": "Training alone raises ResNet-50 from 76.1% to 78.8%; architectural comparisons fix that recipe. ImageNet-1K, 384 x 384: ConvNeXt-B 85.1% versus Swin-B 84.5%, 12.5% higher V100 throughput. ImageNet-22K-pretrained XL reaches 87.8%; downstream covers COCO and ADE20K.",
+      "witness": "without shifted-window attention or relative position biases",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_164",
+      "core_relation": "A single GPU tile/depth sort supplies shared lists for front-to-back blending and reverse backpropagation. Recovering intermediate opacity from final accumulation avoids per-pixel histories while allowing every blended contributor to receive gradients; rendering losses and gradient-guided cloning/splitting update the Gaussian representation.",
+      "scope": "16 x 16 tiles; forward blending stops at opacity saturation, not a fixed count. Tile-shared depth order makes visibility approximate.",
+      "witness": "reconstructing intermediate opacity values from the stored final accumulation",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_170",
+      "core_relation": "Duplicating projected Gaussians into overlapping tiles and sorting once shares visibility work across pixels. Forward blending and reverse traversal reconstruct blending quantities from accumulated opacity, reducing repeated sorting and per-pixel storage while retaining gradients for every contributor.",
+      "scope": "16 x 16 tiles; shared-memory splat loading; blending ends at each pixel's opacity saturation. Shared depth order approximates visibility, particularly for large splats.",
+      "witness": "without a predetermined count limit",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_160",
+      "core_relation": "Gaussian splatting trades much larger storage for interactive rendering at metric-dependent competitive quality: SSIM/LPIPS beat Mip-NeRF360, but PSNR is lower. A Truck ablation's ten-frontmost-splat gradient cutoff collapses PSNR, supporting gradients through the blended sequence.",
+      "scope": "30,000 iterations on Mip-NeRF360: 134 fps on A6000, average training 41 minutes 33 seconds, 734 MB versus 8.6 MB. Truck PSNR falls 24.81 to 13.84 dB; poor view coverage and popping remain.",
+      "witness": "interactive display at competitive quality, purchased with substantially greater storage",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_158",
+      "core_relation": "ConvNeXt strengthens ResNet training, then modernizes its convolutional architecture without attention. Narrow-width depthwise spatial kernels before pointwise expansion make broader filtering affordable; classification and downstream results support an alternative to Swin for evaluated recognition tasks.",
+      "scope": "Architectural steps fix training and approximately control cost. ImageNet-1K, 384 x 384: B achieves 85.1% versus Swin-B 84.5%, V100 throughput 95.7 versus 85.1 images/second. XL reaches 87.8% with ImageNet-22K pretraining; downstream covers COCO and ADE20K.",
+      "witness": "without shifted-window attention or relative position biases",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_174",
+      "core_relation": "Progressive ResNet redesign into attention-free ConvNeXt separates narrow-feature depthwise spatial mixing from pointwise channel mixing, allowing larger kernels; normalized stage transitions stabilize training. Competitive classification, detection, and segmentation support Transformer-style organization without self-attention.",
+      "scope": "Strengthened training recipe; ImageNet-1K, 384 x 384: B achieves 85.1% versus Swin-B 84.5%, V100 throughput 95.7 versus 85.1 images/second. XL reaches 87.8% after ImageNet-22K pretraining and ImageNet-1K fine-tuning; downstream tests cover COCO and ADE20K.",
+      "witness": "without relying on self-attention",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_178",
+      "core_relation": "Placing 7 x 7 depthwise convolution before fourfold pointwise expansion preserves inexpensive spatial processing while reserving expanded features for dense channel mixing. Layer normalization, one GELU, residuals, a nonoverlapping stem, and normalized downsampling complete the hierarchy.",
+      "scope": "Sequential ImageNet-1K evaluation fixes a 300-epoch AdamW recipe, roughly controls FLOPs, and averages three seeds in the ResNet-50 regime. Each measured change depends on the existing configuration.",
+      "witness": "keeping the spatial operation inexpensive",
+      "unclear": "Independent component effects are not recoverable."
+    },
+    {
+      "id": "D5_text_176",
+      "core_relation": "Stronger training raises ResNet-50 accuracy; within the fixed recipe, GELU substitution is neutral but fewer activations help. Normalization repairs divergent separate downsampling. Completed ConvNeXt exceeds Swin-T classification accuracy, and pretrained ConvNeXt-B exceeds Swin-B COCO detection/segmentation, supporting transfer and effective combinations.",
+      "scope": "Training: 76.1% to 78.8%; activation reduction: 80.6% to 81.3%; completed roadmap: 82.0% versus 81.3%. Effects depend on preceding redesigns. COCO uses ImageNet-22K pretraining, Cascade Mask R-CNN, 3x schedule.",
+      "witness": "These gains remain conditional on preceding redesigns",
+      "unclear": "none"
+    },
+    {
+      "id": "D5_text_152",
+      "core_relation": "A 7 x 7 depthwise filter before fourfold pointwise expansion separates spatial/channel mixing, enlarging the receptive field at limited spatial cost. One GELU and LayerNorm simplify blocks; normalization stabilizes otherwise divergent stride-two stage downsampling.",
+      "scope": "Sequential development uses a fixed 300-epoch AdamW recipe, roughly controlled FLOPs, and three-seed averages in the ResNet-50 regime. Intermediate FLOPs vary, and changes depend on previous configurations.",
+      "witness": "do not isolate independent component effects",
+      "unclear": "Independent component effects are not recoverable."
+    },
+    {
+      "id": "D5_text_156",
+      "core_relation": "Anisotropic 3D Gaussians with adaptive density and shared-sort differentiable rasterization unify reconstruction and interactive novel-view rendering without a gradient-contributor cap. Quality exceeds evaluated InstantNGP/Plenoxels configurations and competes with Mip-NeRF360, which retains higher PSNR on its dataset.",
+      "scope": "Static scenes initialized from sparse structure-from-motion. Thirteen real and bounded synthetic scenes; 30,000 iterations yield 134-154 fps on A6000 at native resolutions after 27-42 minutes. Models exceed InstantNGP/Mip-NeRF360 storage; sparse coverage and changing splat order produce artifacts.",
+      "witness": "blends splats in approximate depth order",
+      "unclear": "none"
+    }
+  ]
+}

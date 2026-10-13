@@ -1,0 +1,86 @@
+[
+  {
+    "sample": 1,
+    "case": "P1",
+    "unit": "abstract",
+    "words": 184,
+    "budget_pass": true
+  },
+  {
+    "sample": 1,
+    "case": "P1",
+    "unit": "results",
+    "words": 135,
+    "budget_pass": true
+  },
+  {
+    "sample": 1,
+    "case": "P1",
+    "unit": "working_notes",
+    "words": 88,
+    "budget_pass": true
+  },
+  {
+    "sample": 1,
+    "case": "P2",
+    "unit": "abstract",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "sample": 1,
+    "case": "P2",
+    "unit": "results",
+    "words": 145,
+    "budget_pass": true
+  },
+  {
+    "sample": 1,
+    "case": "P2",
+    "unit": "working_notes",
+    "words": 97,
+    "budget_pass": true
+  },
+  {
+    "sample": 2,
+    "case": "P1",
+    "unit": "abstract",
+    "words": 167,
+    "budget_pass": true
+  },
+  {
+    "sample": 2,
+    "case": "P1",
+    "unit": "results",
+    "words": 146,
+    "budget_pass": true
+  },
+  {
+    "sample": 2,
+    "case": "P1",
+    "unit": "working_notes",
+    "words": 67,
+    "budget_pass": true
+  },
+  {
+    "sample": 2,
+    "case": "P2",
+    "unit": "abstract",
+    "words": 160,
+    "budget_pass": true
+  },
+  {
+    "sample": 2,
+    "case": "P2",
+    "unit": "results",
+    "words": 124,
+    "budget_pass": true
+  },
+  {
+    "sample": 2,
+    "case": "P2",
+    "unit": "working_notes",
+    "words": 88,
+    "budget_pass": true
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "completed_local_date": "2026-10-12",
+  "local_software_checks": "pass with one unavailable-PowerShell skip; not a release verdict",
+  "writing_continuation_gate": "failed; A06_s2 unanimously favors baseline",
+  "default_writing_guide_promoted": false,
+  "tests": {
+    "repository": {
+      "total": 185,
+      "passed": 184,
+      "skipped": 1,
+      "skip_reason": "PowerShell unavailable",
+      "python": "3.14"
+    },
+    "cli_smoke": {
+      "passed": 11,
+      "failed": 0
+    },
+    "new_helper": {
+      "passed": 14,
+      "fixture_only": true
+    },
+    "new_archive_and_link_tests": {
+      "passed": 5
+    },
+    "previous_helper_suites": {
+      "controls": 10,
+      "operative_relation": 10,
+      "broad": 13
+    }
+  },
+  "integrity": {
+    "raw_response_files": 36,
+    "byte_identical_copied_files": 96,
+    "full_local_pin_entries_checked": 134,
+    "all_frozen_generation_assessment_and_raw_inputs_unchanged": true,
+    "public_only_verifier": "Checks copies/raw hashes/declared source hash consistency; omitted publisher source bytes NOT verified."
+  },
+  "source_assembly": {
+    "papers": 6,
+    "spans": 32,
+    "selected_bytes": 206896,
+    "separator": "two LF bytes",
+    "unrepaired": true
+  },
+  "static": {
+    "skill_frontmatter": true,
+    "new_python_compilation": true,
+    "browser_javascript_syntax": true,
+    "diff_whitespace": true
+  },
+  "browser": {
+    "viewports": [
+      1440,
+      390
+    ],
+    "displayed_raw_strings": 36,
+    "every_pair_layout": true,
+    "filters_and_details": true,
+    "no_overlap_or_overflow": true,
+    "screenshots_inspected": true
+  },
+  "public_scan": {
+    "entry_points": 14,
+    "local_file_destinations": 192,
+    "local_directory_destinations": 8,
+    "archive_files_scanned": 102,
+    "credential_pattern_matches": 0,
+    "pdfs": 0,
+    "scope": "Bounded local links and credential patterns, not remote availability/fragments or a security proof."
+  },
+  "infrastructure_correction": {
+    "file": "verify_public.py",
+    "failure": "Eight legitimate existing directory links falsely rejected by file-only check.",
+    "red_test": "Existing directory/file fixture fails; absent directory remains rejected.",
+    "green_test": "Both fixtures and full 185-test suite pass after separating file/directory checks.",
+    "original_sha256": "480b6e9ac6a291b3a26ee06927562a64eb9cf9434f9e6913bb25927c7ef23d66",
+    "corrected_sha256": "bdcb5d7e2dfb7e118a33297251af96bb0b3765db4de39cd25b3bf9c73e8b2411",
+    "archive_hash_change": "Only this non-generation helper's copied-file hash updated to final local/public bytes. No scientific response or frozen evaluation input changed."
+  },
+  "all_39_contexts_closed": true,
+  "not_performed": [
+    "human review",
+    "remote CI",
+    "new Windows verification",
+    "official-template compilation",
+    "Word-client visual check",
+    "performance benchmarking",
+    "commit",
+    "push",
+    "global installation",
+    "skill version change",
+    "model-weight training"
+  ],
+  "receipt_scope": "Derived receipt outside 96 copied-file hashes; software checks do not establish prose quality."
+}

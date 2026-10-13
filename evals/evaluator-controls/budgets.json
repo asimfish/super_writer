@@ -1,0 +1,986 @@
+[
+  {
+    "phase": "review",
+    "id": "Q01",
+    "replicate": 1,
+    "words": 74,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q02",
+    "replicate": 1,
+    "words": 74,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q03",
+    "replicate": 1,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q04",
+    "replicate": 1,
+    "words": 83,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q05",
+    "replicate": 1,
+    "words": 72,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q06",
+    "replicate": 1,
+    "words": 79,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q07",
+    "replicate": 1,
+    "words": 73,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q08",
+    "replicate": 1,
+    "words": 74,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q09",
+    "replicate": 1,
+    "words": 59,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q10",
+    "replicate": 1,
+    "words": 78,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q11",
+    "replicate": 1,
+    "words": 78,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q12",
+    "replicate": 1,
+    "words": 76,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q01",
+    "replicate": 2,
+    "words": 72,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q02",
+    "replicate": 2,
+    "words": 63,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q03",
+    "replicate": 2,
+    "words": 72,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q04",
+    "replicate": 2,
+    "words": 66,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q05",
+    "replicate": 2,
+    "words": 67,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q06",
+    "replicate": 2,
+    "words": 76,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q07",
+    "replicate": 2,
+    "words": 66,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q08",
+    "replicate": 2,
+    "words": 71,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q09",
+    "replicate": 2,
+    "words": 50,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q10",
+    "replicate": 2,
+    "words": 72,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q11",
+    "replicate": 2,
+    "words": 67,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "Q12",
+    "replicate": 2,
+    "words": 69,
+    "limit": 110
+  },
+  {
+    "phase": "reader",
+    "id": "T001",
+    "words": 103,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T003",
+    "words": 117,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T005",
+    "words": 99,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T007",
+    "words": 111,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T009",
+    "words": 108,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T011",
+    "words": 94,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T002",
+    "words": 114,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T004",
+    "words": 110,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T006",
+    "words": 116,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T008",
+    "words": 110,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T010",
+    "words": 111,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T012",
+    "words": 95,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T013",
+    "words": 94,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T015",
+    "words": 119,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T017",
+    "words": 95,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T019",
+    "words": 104,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T021",
+    "words": 106,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T023",
+    "words": 93,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T014",
+    "words": 106,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T016",
+    "words": 92,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T018",
+    "words": 82,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T020",
+    "words": 107,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T022",
+    "words": 112,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "T024",
+    "words": 100,
+    "limit": 140
+  },
+  {
+    "phase": "coarse",
+    "id": "T001",
+    "replicate": 1,
+    "words": 60,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T002",
+    "replicate": 1,
+    "words": 65,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T003",
+    "replicate": 1,
+    "words": 65,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T004",
+    "replicate": 1,
+    "words": 53,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T005",
+    "replicate": 1,
+    "words": 56,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T006",
+    "replicate": 1,
+    "words": 62,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T007",
+    "replicate": 1,
+    "words": 66,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T008",
+    "replicate": 1,
+    "words": 61,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T009",
+    "replicate": 1,
+    "words": 66,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T010",
+    "replicate": 1,
+    "words": 62,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T011",
+    "replicate": 1,
+    "words": 80,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T012",
+    "replicate": 1,
+    "words": 60,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T013",
+    "replicate": 1,
+    "words": 56,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T014",
+    "replicate": 1,
+    "words": 65,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T015",
+    "replicate": 1,
+    "words": 78,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T016",
+    "replicate": 1,
+    "words": 57,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T017",
+    "replicate": 1,
+    "words": 60,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T018",
+    "replicate": 1,
+    "words": 59,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T019",
+    "replicate": 1,
+    "words": 68,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T020",
+    "replicate": 1,
+    "words": 63,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T021",
+    "replicate": 1,
+    "words": 64,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T022",
+    "replicate": 1,
+    "words": 67,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T023",
+    "replicate": 1,
+    "words": 64,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T024",
+    "replicate": 1,
+    "words": 63,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T001",
+    "replicate": 2,
+    "words": 70,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T002",
+    "replicate": 2,
+    "words": 80,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T003",
+    "replicate": 2,
+    "words": 74,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T004",
+    "replicate": 2,
+    "words": 64,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T005",
+    "replicate": 2,
+    "words": 65,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T006",
+    "replicate": 2,
+    "words": 72,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T007",
+    "replicate": 2,
+    "words": 73,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T008",
+    "replicate": 2,
+    "words": 61,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T009",
+    "replicate": 2,
+    "words": 68,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T010",
+    "replicate": 2,
+    "words": 67,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T011",
+    "replicate": 2,
+    "words": 76,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T012",
+    "replicate": 2,
+    "words": 62,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T013",
+    "replicate": 2,
+    "words": 68,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T014",
+    "replicate": 2,
+    "words": 74,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T015",
+    "replicate": 2,
+    "words": 78,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T016",
+    "replicate": 2,
+    "words": 65,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T017",
+    "replicate": 2,
+    "words": 63,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T018",
+    "replicate": 2,
+    "words": 60,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T019",
+    "replicate": 2,
+    "words": 77,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T020",
+    "replicate": 2,
+    "words": 69,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T021",
+    "replicate": 2,
+    "words": 66,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T022",
+    "replicate": 2,
+    "words": 79,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T023",
+    "replicate": 2,
+    "words": 68,
+    "limit": 110
+  },
+  {
+    "phase": "coarse",
+    "id": "T024",
+    "replicate": 2,
+    "words": 67,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T001",
+    "replicate": 1,
+    "words": 51,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T002",
+    "replicate": 1,
+    "words": 61,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T003",
+    "replicate": 1,
+    "words": 56,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T004",
+    "replicate": 1,
+    "words": 49,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T005",
+    "replicate": 1,
+    "words": 61,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T006",
+    "replicate": 1,
+    "words": 61,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T007",
+    "replicate": 1,
+    "words": 55,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T008",
+    "replicate": 1,
+    "words": 54,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T009",
+    "replicate": 1,
+    "words": 58,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T010",
+    "replicate": 1,
+    "words": 58,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T011",
+    "replicate": 1,
+    "words": 66,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T012",
+    "replicate": 1,
+    "words": 51,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T013",
+    "replicate": 1,
+    "words": 53,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T014",
+    "replicate": 1,
+    "words": 54,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T015",
+    "replicate": 1,
+    "words": 63,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T016",
+    "replicate": 1,
+    "words": 53,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T017",
+    "replicate": 1,
+    "words": 50,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T018",
+    "replicate": 1,
+    "words": 56,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T019",
+    "replicate": 1,
+    "words": 66,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T020",
+    "replicate": 1,
+    "words": 55,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T021",
+    "replicate": 1,
+    "words": 57,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T022",
+    "replicate": 1,
+    "words": 55,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T023",
+    "replicate": 1,
+    "words": 57,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T024",
+    "replicate": 1,
+    "words": 55,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T001",
+    "replicate": 2,
+    "words": 61,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T002",
+    "replicate": 2,
+    "words": 70,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T003",
+    "replicate": 2,
+    "words": 73,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T004",
+    "replicate": 2,
+    "words": 54,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T005",
+    "replicate": 2,
+    "words": 66,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T006",
+    "replicate": 2,
+    "words": 72,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T007",
+    "replicate": 2,
+    "words": 72,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T008",
+    "replicate": 2,
+    "words": 61,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T009",
+    "replicate": 2,
+    "words": 69,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T010",
+    "replicate": 2,
+    "words": 67,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T011",
+    "replicate": 2,
+    "words": 87,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T012",
+    "replicate": 2,
+    "words": 63,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T013",
+    "replicate": 2,
+    "words": 67,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T014",
+    "replicate": 2,
+    "words": 71,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T015",
+    "replicate": 2,
+    "words": 84,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T016",
+    "replicate": 2,
+    "words": 60,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T017",
+    "replicate": 2,
+    "words": 63,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T018",
+    "replicate": 2,
+    "words": 62,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T019",
+    "replicate": 2,
+    "words": 75,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T020",
+    "replicate": 2,
+    "words": 71,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T021",
+    "replicate": 2,
+    "words": 64,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T022",
+    "replicate": 2,
+    "words": 69,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T023",
+    "replicate": 2,
+    "words": 68,
+    "limit": 110
+  },
+  {
+    "phase": "fine",
+    "id": "T024",
+    "replicate": 2,
+    "words": 71,
+    "limit": 110
+  }
+]

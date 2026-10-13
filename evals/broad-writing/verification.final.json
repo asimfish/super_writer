@@ -1,0 +1,142 @@
+{
+  "type": "coordinator_recorded_terminal_verification",
+  "scope": "Completed broad experiment archive and software infrastructure only; not a writing-superiority, protocol-perfect-compliance or release certification.",
+  "verdict": "PASS",
+  "writing_gain": "not demonstrated",
+  "criterion_evidence": [
+    {
+      "criterion": "Planned primary and supplementary work retained in full",
+      "status": "pass",
+      "evidence": [
+        "execution.completed.json",
+        "execution.supplemental.json",
+        "summary.json",
+        "supplemental/summary.json"
+      ],
+      "primary_outputs": 84,
+      "supplementary_outputs": 6
+    },
+    {
+      "criterion": "Frozen source, guide and raw responses unmodified",
+      "status": "pass",
+      "local_hash_comparisons": 258,
+      "public_hash_comparisons": 277,
+      "evidence": [
+        "frozen_hashes.json",
+        "source_hashes.json",
+        "all_raw_hashes.json",
+        "archive_hashes.json",
+        "supplemental/hashes.json"
+      ]
+    },
+    {
+      "criterion": "Generation budgets and raw schema",
+      "status": "pass",
+      "prose_and_note_fields": 432,
+      "evidence": [
+        "word_counts.json"
+      ]
+    },
+    {
+      "criterion": "Assessment deviations disclosed without repairs or favorable substitution",
+      "status": "pass",
+      "reader_budget_violations": 22,
+      "reader_literal_witness_violations": 1,
+      "reviewer_reason_budget_violations": 3,
+      "primary_excluded_pdf_visibility_reports": [
+        "D2",
+        "D4",
+        "D6"
+      ],
+      "evidence": [
+        "verification.json",
+        "execution.completed.json",
+        "supplemental/PROTOCOL.md"
+      ]
+    },
+    {
+      "criterion": "Repository regressions",
+      "status": "pass",
+      "command": "/opt/homebrew/bin/python3.14 -m unittest discover -s tests -v",
+      "total": 174,
+      "passed": 173,
+      "skipped": 1,
+      "skip_reason": "PowerShell unavailable",
+      "exit_code": 0
+    },
+    {
+      "criterion": "Experiment helper tests",
+      "status": "pass",
+      "command": "/opt/homebrew/bin/python3.14 -m unittest discover -s evals/broad-writing -p 'test_*.py' -v",
+      "passed": 13,
+      "exit_code": 0
+    },
+    {
+      "criterion": "CLI smoke tests",
+      "status": "pass",
+      "command": "/opt/homebrew/bin/python3.14 scripts/smoke_test.py",
+      "passed": 11,
+      "exit_code": 0
+    },
+    {
+      "criterion": "Syntax, frontmatter and whitespace",
+      "status": "pass",
+      "commands": [
+        "/opt/homebrew/bin/python3.14 -m compileall -q evals/broad-writing",
+        "node --check evals/broad-writing/browser_smoke.mjs",
+        "python3 <installed skill-creator>/scripts/quick_validate.py <repo>",
+        "git diff --check"
+      ]
+    },
+    {
+      "criterion": "Comparison display",
+      "status": "pass",
+      "evidence": [
+        "browser_verification.complete.json"
+      ],
+      "viewports": [
+        [
+          1440,
+          1000
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "raw_prose_strings": 324,
+      "supplementary_audit_entries": 216,
+      "checked": [
+        "paper/unit/sample and concern filters",
+        "details",
+        "no text/viewport overflow or incoherent column overlap",
+        "no page errors"
+      ]
+    },
+    {
+      "criterion": "Documentation and public-source boundary",
+      "status": "pass",
+      "checked_local_links": 125,
+      "located_case_anchors": 5,
+      "public_paper_pdfs": 0,
+      "public_paper_text_files": 0,
+      "credential_pattern_matches": 0,
+      "evidence": [
+        "README.md",
+        "../../docs/broad-writing-evaluation.md",
+        "MANIFEST.json"
+      ]
+    }
+  ],
+  "not_evaluated": [
+    "independent human writing quality",
+    "full multi-stage manuscript workflow",
+    "isolated guidance effects",
+    "other operating systems for the new archive helpers",
+    "new official-template compilation",
+    "remote CI for this uncommitted state",
+    "installation or release publication"
+  ],
+  "raw_outputs_repaired": false,
+  "external_publication": false
+}

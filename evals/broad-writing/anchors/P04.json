@@ -1,0 +1,47 @@
+{
+  "id": "P04",
+  "units": {
+    "abstract": [
+      {
+        "role": "core",
+        "reader_question": "How can parallel verification accelerate generation without changing its distribution?",
+        "expected_relation": "Draft proposals allow several tokens per target iteration, while accept-reject correction preserves sampling from the target distribution.",
+        "source_locator": {"pdf_pages": [2, 3], "section": "2.1-2.3", "substring": "2.3. Speculative Sampling"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "When does the latency argument apply, and what was actually timed?",
+        "expected_relation": "The predicted benefit depends on draft agreement, draft cost and spare compute; measured T5 latency is narrower evidence than acceptance measurements on other models.",
+        "source_locator": {"pdf_pages": [4, 8], "section": "3.3, 4.1-4.2 and 6", "substring": "One limitation of speculative execution in general, and of"}
+      }
+    ],
+    "methods": [
+      {
+        "role": "core",
+        "reader_question": "What links exact sampling to the speed model?",
+        "expected_relation": "Probability correction preserves the target law, while proposal acceptance and relative draft cost determine expected tokens and walltime per iteration.",
+        "source_locator": {"pdf_pages": [3, 4], "section": "2.3 and 3.1-3.3", "substring": "3.3. Walltime Improvement"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "How do the timing trials differ from the wider model survey?",
+        "expected_relation": "Batch-one T5 trials on a single TPU-v4 measure walltime; the wider model survey estimates acceptance from target-generated tokens instead of measuring deployed speed.",
+        "source_locator": {"pdf_pages": [6, 7], "section": "4.1-4.2", "substring": "4.2. Empirical"}
+      }
+    ],
+    "results": [
+      {
+        "role": "core",
+        "reader_question": "Why might proposal agreement and latency gains vary differently?",
+        "expected_relation": "Acceptance must be interpreted together with draft-model cost and guess count; greater agreement alone does not determine the walltime gain.",
+        "source_locator": {"pdf_pages": [4, 6], "section": "3.3 and 4.1, Table 2", "substring": "Table 2. Empirical results"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which findings are measured speedups rather than projected opportunities?",
+        "expected_relation": "Keep timed T5 results distinct from other models' acceptance estimates and negligible-cost projections, with sampling filters and compute limits qualifying the evidence.",
+        "source_locator": {"pdf_pages": [5, 8], "section": "3.6, 4.1-4.2 and 6, Tables 2-3", "substring": "Table 3. Empirical"}
+      }
+    ]
+  }
+}

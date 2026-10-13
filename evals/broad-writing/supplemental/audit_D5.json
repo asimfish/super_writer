@@ -1,0 +1,364 @@
+{
+  "audits": [
+    {
+      "id": "D5_text_162",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Table 1 supports the 384-resolution accuracy/throughput comparison; Table 3 supports the pretrained COCO AP values. Sections 2.5-2.6 support kernel saturation, neutral GELU substitution, and downsampling divergence. The prose's 'evaluated combination' and the reader's corresponding witness preserve conditional attribution rather than assigning independent credit. The reader retains V100, pretraining, detector, and schedule boundaries."
+    },
+    {
+      "id": "D5_text_163",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Section 6 describes 16 x 16 tiles, one tile/depth radix sort, opacity-saturation stopping, and reverse traversal recovering blending information without per-pixel histories or a fixed gradient-count cap. Section 5 supports parameter optimization and gradient-guided densification. The reader accurately recovers the prose's optimization rationale and explicitly retains approximate shared ordering."
+    },
+    {
+      "id": "D5_text_152",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2.3-2.6 and Figure 4 support narrow-width depthwise filtering, fourfold pointwise expansion, one GELU/LayerNorm, and normalized separate downsampling. Sections 2-2.1 establish fixed 300-epoch AdamW training, roughly controlled FLOPs, and three-seed smaller-regime averages. The reader recovers both the cost mechanism and the prose's limitation on independent component attribution."
+    },
+    {
+      "id": "D5_text_169",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Section 6 supports tile duplication, shared-memory loading, saturation stopping, reverse traversal, and constant additional per-pixel storage without a predetermined gradient cap. Its shared-order approximation becomes negligible for pixel-sized splats. The reader's 'extra per-pixel' interpretation correctly limits the prose's storage claim; both recover the connection between visibility efficiency and optimization through varying depth complexity."
+    },
+    {
+      "id": "D5_text_175",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2.1 and 2.6 explicitly give 76.1%-78.8%, neutral GELU at 80.6%, activation reduction to 81.3%, and the normalized roadmap endpoint of 82.0%. Table 3 supports the COCO AP comparison. The prose's 'conditional on preceding modifications' is recovered by the reader alongside pretraining and detector/schedule qualifications; the roadmap value is directly supported by the body."
+    },
+    {
+      "id": "D5_text_157",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2-2.6 support modern training followed by fixed-recipe convolutional redesign and separated spatial/channel mixing. Table 1 gives the stated B accuracy/throughput and pretrained XL 87.8%; Section 4 supports downstream competitiveness. The reader recovers training plus design, not operator substitution alone, and preserves the prose's specified tasks, resolution, hardware, and training scales."
+    },
+    {
+      "id": "D5_text_168",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Table 1 supports ConvNeXt-B/Swin-B accuracy, V100 throughput, FLOPs, and EfficientNetV2-L's higher score at a different resolution/cost. Tables 3-4 support the pretrained COCO AP and ADE20K mIoU comparisons. The reader preserves the prose's simultaneous accuracy/throughput gain against Swin without promoting it to best overall accuracy, and retains downstream head and testing conditions."
+    },
+    {
+      "id": "D5_text_158",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09's modernization body supports strengthened training, fixed-recipe sequential changes, and affordable depthwise filtering before expansion. Table 1 supports both numerical classification examples; Section 4 supports competitive COCO/ADE20K results. The prose limits its conclusion to 'evaluated recognition tasks.' The reader recovers that boundary and the training, scale, resolution, and V100 qualifications."
+    },
+    {
+      "id": "D5_text_147",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Sections 3-6 support static-scene Gaussians, SH appearance, adaptive allocation, and approximate tile rendering without fixed contributor limits. Table 1 supports 134-154 FPS, roughly 27-42 minutes, and the mixed Mip-NeRF360 metrics; Section 7.2 supplies native resolutions/A6000, and Section 7.4 supplies storage/artifact limits. The reader accurately recovers the joint efficiency mechanism and these qualifications."
+    },
+    {
+      "id": "D5_text_146",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2.3-2.6 support depthwise filtering before fourfold expansion, separated mixing, simplified blocks, and normalization-stabilized downsampling. Sections 2-2.1 support fixed hyperparameters, 300 epochs, AdamW, approximate compute control, and three-seed smaller-regime averages. The reader's conditional-attribution witness follows the prose and source sequence; it does not invent independent component evidence."
+    },
+    {
+      "id": "D5_text_171",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Table 1 supports all stated Mip-NeRF360 quality, time, FPS, and storage values. Table 3's Truck-30K Full/Limited-BW entries are 24.81/13.84; Section 7.3 reports unstable capped-gradient optimization. Section 7.4 links visibility-order changes and large Gaussians to popping. The reader preserves metric dependence, budget/storage tradeoffs, and the scene-specific gradient evidence rather than a universal quality ordering."
+    },
+    {
+      "id": "D5_text_159",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Table 1 supports mixed Mip-NeRF360 metrics, 134 FPS/41m33s/734 MB, and Tanks&Temples' 21.20-23.14 PSNR with 197-154 FPS. Table 3 supports Truck's 24.81-13.84 capped-gradient comparison; Section 7.4 supports persistent artifacts. The reader accurately retains the prose's 'in that setting' limitation and connects longer fitting to quality, rendering speed, and storage."
+    },
+    {
+      "id": "D5_text_148",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Sections 3-6 ground the shared representation, density adaptation, approximate shared-sort renderer, and unrestricted contributor count. Sections 7.2-7.4 and Table 1 ground the scene coverage, native-resolution A6000 rates/times, metric-dependent quality, storage, and artifacts. The reader follows the prose's SSIM/LPIPS-versus-PSNR distinction and does not infer uniformly superior reconstruction."
+    },
+    {
+      "id": "D5_text_156",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Sections 3-6 support parameter learning, adaptive density, direct projection, and approximate blending without fixed gradient-count limits. Table 1's 30K rows outperform the evaluated InstantNGP/Plenoxels quality metrics, while Mip-NeRF360 retains higher PSNR on its dataset. Sections 7.2/7.4 support timing/hardware and limitations. The reader retains these configuration-specific comparisons and distinguishes interactive rendering from fitting costs."
+    },
+    {
+      "id": "D5_text_177",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Figure 4 and Sections 2.2-2.6 support the stated operation order, fourfold expansion, single GELU, LayerNorm, patchify stem, and normalized downsampling. Sections 2-2.1 support sequential ImageNet evaluation, fixed 300-epoch AdamW training, approximate FLOP control, and three-seed smaller-regime averages. The reader recovers both separated mixing's cost rationale and the prose's explicitly conditional component comparisons."
+    },
+    {
+      "id": "D5_text_179",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Table 1 supports the 7K/30K PSNR, LPIPS, FPS, and storage changes and mixed reference comparison. Table 3 explicitly gives Average-30K 19.19 for Limited-BW and 26.05 for Full, with manually downsampled inputs. Section 7.3 supports instability and Section 7.4 supports artifacts. The reader preserves the three-scene boundary and the prose's quality/deployment-cost relationship."
+    },
+    {
+      "id": "D5_text_153",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Section 6 grounds one tile/depth radix sort, approximate shared visibility, saturation stopping, reverse traversal, constant extra per-pixel storage, and uncapped contributor gradients. Sections 5.1-5.2 ground L1 plus D-SSIM and gradient-selected cloning/splitting. The reader directly recovers the prose's storage/gradient mechanism and the approximation boundary; no evaluation-protocol details are needed for this rasterizer-focused paragraph."
+    },
+    {
+      "id": "D5_text_176",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2.1/2.6 support the strengthened baseline, neutral GELU, activation-layout gain, and 82.0% roadmap result after added normalization at stem, transitions, and pooling. Table 3 supports the pretrained COCO AP comparison. The reader preserves the prose's distinction between training gains, conditional redesign effects, and transfer evidence, retaining pretraining, detector, and schedule rather than attributing every improvement to a substitution."
+    },
+    {
+      "id": "D5_text_178",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2.4-2.6 and Figure 4 support narrow-width depthwise filtering, subsequent LayerNorm/pointwise expansion/GELU/projection, and normalized stage transitions; Section 2.2 supports the stem. Sections 2-2.1 support fixed training and smaller-regime seed averaging. The reader recovers the cost/ordering relation and conditional sequential evaluation. Its statement that independent effects are not recoverable is warranted by the prose's configuration-dependence qualification."
+    },
+    {
+      "id": "D5_text_164",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Section 6 supports tile/depth keys, one radix sort, saturation rather than count stopping, and reverse recovery of intermediate opacity from final accumulation. Section 5 supports loss-driven parameter changes interleaved with gradient-guided cloning/splitting. The reader follows the prose's replacement of per-pixel histories while preserving all blended contributors, and retains approximate visibility as the consequential boundary."
+    },
+    {
+      "id": "D5_text_165",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2-2.6 support training improvement followed by convolutional redesign. Table 1 supports 85.1% versus 84.5%, 12.5% greater V100 throughput, and pretrained XL 87.8%. Section 4 supports standard downstream competitiveness; F leaves multimodal/structured-output applicability open. The reader accurately recovers modern training plus design and explicitly retains the prose's task-specific conclusion and unsettled attention-use boundary."
+    },
+    {
+      "id": "D5_text_145",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2.3-2.6 support large depthwise kernels before expansion, fourfold pointwise width changes, simplified blocks, and normalization resolving observed downsampling divergence. Sections 2-2.1 ground fixed 300-epoch AdamW training, roughly controlled FLOPs, and three-seed smaller-regime averages. The reader preserves the prose's successive-combined-design interpretation and does not turn the trajectory into independently isolated component effects."
+    },
+    {
+      "id": "D5_text_155",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Sections 3-6 support anisotropic Gaussians, density refinement/pruning, and differentiable shared-sort rendering without fixed contributor limits. Table 1 and Section 7.2 support the stated quality, FPS, timing, resolution, and hardware comparisons; Section 7.4 supports storage and artifact limits. The reader correctly follows the prose's competitive-but-not-uniformly-superior reconstruction claim and its static-scene/resource qualifications."
+    },
+    {
+      "id": "D5_text_154",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Sections 4/6 support projected covariances, shared 16 x 16 tile/depth sorting, saturation stopping, approximate visibility, and reverse opacity reconstruction without variable-length pixel histories. Sections 5.1-5.2 support combined image loss and gradient-selected densification. The reader recovers both the renderer's efficiency/gradient relation and the prose's explicit approximation boundary."
+    },
+    {
+      "id": "D5_text_180",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Table 1 supports the iteration-dependent quality/FPS/storage changes and mixed reference metrics. Section 7.2's footnote specifies four A100s for 12 hours, whereas the Gaussian evaluation uses A6000; the prose correctly declines a matched-GPU speedup claim. Table 3 supports the three-scene average gradient-cap loss. The reader recovers all three relationships and preserves the hardware and scene boundaries."
+    },
+    {
+      "id": "D5_text_173",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2-2.6 support transferring design choices under fixed modern training and narrow-width 7 x 7 filtering before fourfold expansion. Table 1 supports the B and pretrained XL results; Section 4 supports competitive standard-head downstream evaluation. The reader recovers the prose's convolutional alternative for these workloads and explicitly rejects isolated causal attribution to attention removal."
+    },
+    {
+      "id": "D5_text_172",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Table 1 supports all stated mixed reference metrics and 7K/30K time, FPS, and storage values; Section 7.2 supplies A6000/native-resolution conditions. Table 3 supports the manually downsampled Truck 24.81/13.84 comparison, and Section 7.3 supplies instability. The reader follows the prose's tested-gradient-cap conclusion and retains storage, poor-coverage, and ordering-artifact qualifications from Section 7.4."
+    },
+    {
+      "id": "D5_text_167",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Table 1 grounds simultaneous accuracy/throughput gains against Swin and the higher EfficientNetV2-L score at different resolution/cost. Tables 3-4 ground the pretrained downstream AP/mIoU values. The prose separates these prediction-quality comparisons from its classification speed claim; the reader correctly retains that distinction, hardware, resolution, pretraining, heads, and multi-scale testing without inventing downstream speed evidence from this paragraph."
+    },
+    {
+      "id": "D5_text_170",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Section 6 supports duplication into overlapping tiles, one GPU sort, shared-memory batches, saturation stopping, reverse traversal, and opacity recovery without fixed gradient-count truncation. It explicitly acknowledges approximate ordering, increasingly negligible for small splats. The reader directly recovers the prose's reduction of repeated visibility work and pixel-history storage while retaining variable-depth contributor updates and the large-splat qualification."
+    },
+    {
+      "id": "D5_text_174",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2-2.6 support strengthened training, stage redesign, separated spatial/channel mixing, and normalized transitions. Table 1 supports both 384-resolution classification examples and V100 throughput; Section 4 supports COCO/ADE20K competitiveness. The reader recovers the prose's claim about Transformer-style organization without self-attention and keeps the conclusion tied to evaluated recognition tasks and specified training scales."
+    },
+    {
+      "id": "D5_text_166",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Section 2.1 supports the baseline training gain and fixed recipe; subsequent sections support separated mixing and simplified convolutional blocks. Table 1 supports the accuracy/throughput and pretrained XL figures. Section 4 supports comparable-or-better standard downstream results. The reader retains the prose's evaluated-task scope and identifies combined training/design rather than claiming that attention is unnecessary for every task."
+    },
+    {
+      "id": "D5_text_149",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Sections 3-6 support static SfM-initialized Gaussians without normals, density refinement, and tile rendering/backpropagation. Table 1 verifies higher SSIM and lower LPIPS on each of the three datasets, with lower PSNR only on Mip-NeRF360; Section 7.2 supplies held-out testing/A6000 timing. The reader preserves the prose's joint mechanism, metric dependence, storage cost, and Section 7.4 artifact boundaries."
+    },
+    {
+      "id": "D5_text_160",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P10 Table 1 supports the mixed Mip-NeRF360 metrics, 134 FPS, 41m33s fitting, and 734 versus 8.6 MB storage. Table 3 supports Truck-30K Full/Limited-BW 24.81/13.84; Section 7.3 explains the gradient-cap experiment. The reader accurately recovers the prose's interactive-display/storage tradeoff and tested cutoff failure, retaining poor-coverage and popping limits supported by Section 7.4."
+    },
+    {
+      "id": "D5_text_161",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Tables 1/3 support the classification accuracy/throughput and pretrained COCO AP comparisons. Sections 2.5-2.6 support kernel saturation, neutral GELU, and observed divergence resolved by added normalization. The reader follows the prose's combined-design conclusion and interprets required normalization within the reported downsampling configuration, preserving classification hardware/resolution and downstream pretraining/head/schedule boundaries."
+    },
+    {
+      "id": "D5_text_150",
+      "fidelity": "pass",
+      "core_recovery": 1,
+      "scope_recovery": 2,
+      "failure_types": [
+        "reader_error"
+      ],
+      "reason": "P10 Sections 3-6, Table 1, and Sections 7.2/7.4 support the prose's Gaussian/rasterizer mechanism, metric comparisons, and resource/artifact boundaries. The reader recovers much of that mechanism but calls it 'real-time reconstruction'; the prose claims real-time rendering, with fitting taking 27-42 minutes, not real-time fitting. Its scope correctly retains that training budget, rendering rates, hardware, datasets, storage, and artifacts, so the temporal conflation is reader-side."
+    },
+    {
+      "id": "D5_text_151",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P09 Sections 2.3-2.6 support depthwise spatial filtering before fourfold pointwise expansion, reduced spatial-operation channel count, one GELU/LayerNorm, and normalized separate downsampling. Sections 2-2.1 ground fixed 300-epoch AdamW training, approximate FLOP control, and three-seed smaller-regime averages. The reader accurately recovers the prose's separation of initial training gains from conditional architectural effects, including unequal intermediate costs."
+    }
+  ]
+}

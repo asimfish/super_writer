@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "id": "A03_s2",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both accurately describe rare-token/class conditioning, frozen-model prior rehearsal, the Stable Diffusion comparison and the fidelity/diversity tradeoff. B better connects the few-reference-view problem to class-prior reuse and explains why DINO distinguishes subjects that CLIP image embeddings may conflate (Section 4.1). Its paired DINO/CLIP-T results and human preferences support identity retention plus prompt responsiveness without promising universal preservation. A supplies the same decisive evidence but gives less rationale for the metric."
+    },
+    {
+      "id": "A04_s2",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 4},
+      "reason": "Both explain prediction-loss filtering against no-call and unanswered-call controls, then use the ASDiv enabled/disabled contrast to establish inference-time utility. Both preserve the single-call evaluation, mixed translation results, QA shortfall, disabled-call perplexity qualification and restricted scaling evidence. B's explicit tool list, top-ten trigger and GPT-3 comparator add specificity; A explains the calendar's role in DATESET more directly. Neither has a decisive advantage in contribution, mechanism, evidence or scope."
+    },
+    {
+      "id": "A04_s1",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "B more clearly links prediction-loss filtering to supervision for selection, arguments and incorporation, then uses both ASDiv controls to isolate tool access. Both match Table 3 and correctly qualify QA, translation, perplexity, scaling and unlearned chaining. B also states that decoding encourages calls, an important boundary on the prompted zero-shot results in Section 4.2. A's additional GPT-3 comparison and explicit three-tool sweep are supported, but do not outweigh B's clearer explanation and evaluation framing."
+    },
+    {
+      "id": "A03_s1",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both explain identifier/class binding and frozen-model prior preservation, support personalization with matched-backbone DINO/CLIP-T comparisons and majority-vote preferences, and retain Table 3's tradeoff and observed failure modes. A explains DINO's within-class rationale; B more explicitly explains why joint identity and prompt metrics matter. These are comparable explanatory strengths. Neither omission changes the contribution or necessary scope, and neither implies reliable novel-view preservation beyond the qualified qualitative evidence."
+    }
+  ]
+}

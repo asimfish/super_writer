@@ -1,0 +1,56 @@
+[
+  {
+    "id": "T012",
+    "unit": "methods",
+    "questions": [
+      "How does computation proceed, and why does that operation permit the stated consequence?",
+      "What conditions bound the main claim, and what remains unestablished?"
+    ],
+    "text": "The exact update halves the current scalar at every step. If initialization lies in [0,1], halving preserves nonnegativity and cannot take an iterate above one, so the same interval contains every subsequent iterate. That invariant is conditional on the initial value, not a property of arbitrary starts. The ten logged updates beginning at 0.8 illustrate the shrinking sequence within the interval. They do not replace the initialization condition: a start at three gives a next value of 1.5, outside the claimed interval. The explanation concerns this exact arithmetic rule."
+  },
+  {
+    "id": "T006",
+    "unit": "abstract",
+    "questions": [
+      "What does the work establish, and what relation explains its contribution?",
+      "Which empirical or theoretical boundaries are explicit?"
+    ],
+    "text": "A block-based cache combines fixed-size storage blocks, logical sequence positions and a physical block pool. The serving system maintains a position map and processes arriving tokens within this configuration. On the toy workload, it supports a batch of 64 rather than 40 for a contiguous-reservation baseline at the same 100 ms latency cap. Batch size and latency describe distinct aspects of the measured serving configuration. The comparison concerns the evaluated allocation scheme; it does not isolate allocator overhead, establish a benefit on arbitrary hardware or evaluate another workload."
+  },
+  {
+    "id": "T010",
+    "unit": "abstract",
+    "questions": [
+      "What does the work establish, and what relation explains its contribution?",
+      "Which empirical or theoretical boundaries are explicit?"
+    ],
+    "text": "At batch four on one device, a reduced-state update uses 16 GB rather than the baseline's 24 GB. Its recorded checkpoint loss is 2.1, versus 2.2 for the baseline. These measurements document a smaller allocation and the associated observed losses; they do not establish equivalence or statistical superiority. With one run per method and no significance analysis, the inference stays within the tested configuration. Neither transfer, production behavior nor performance across devices is evaluated."
+  },
+  {
+    "id": "T008",
+    "unit": "results",
+    "questions": [
+      "What finding supports the conclusion, and against which comparator?",
+      "What exactly was measured, and which conditions limit the inference?"
+    ],
+    "text": "Projection halves optimizer-state storage from 8 to 4 GB at batch eight, while the other measured allocations remain 8 GB. Total training allocation consequently falls from 16 to 12 GB, not by half, on the same device, model and precision. The memory saving is attributable to the state-storage boundary measured here rather than every training resource. At the recorded checkpoint, loss is 2.3 for projection and 2.2 for the baseline. The profile documents lower allocation with this observed loss difference; it does not establish quality equivalence or characterize another batch size."
+  },
+  {
+    "id": "T002",
+    "unit": "methods",
+    "questions": [
+      "How does computation proceed, and why does that operation permit the stated consequence?",
+      "What conditions bound the main claim, and what remains unestablished?"
+    ],
+    "text": "The procedure combines a small proposer, an expensive target and a supplied correction rule. A proposal contains five candidate tokens, with each guess conditioned on its predecessors, and the target evaluates the proposed prefix positions. The correction rule retains the target distribution. On the toy workload, proposal work takes 4 ms, a target round takes 20 ms, and accepted yield averages three tokens. Proposal length, target-round cost and accepted yield therefore provide distinct descriptions of the evaluated configuration. These measurements characterize token processing rather than complete application latency, which the study does not measure."
+  },
+  {
+    "id": "T004",
+    "unit": "results",
+    "questions": [
+      "What finding supports the conclusion, and against which comparator?",
+      "What exactly was measured, and which conditions limit the inference?"
+    ],
+    "text": "The policy reaches the specified final-stage state in seven of ten physical executions, compared with five of ten for the baseline under matched starts and time budgets. This is a final-state measurement, not uninterrupted completion of all three stages: three of those seven successes follow an earlier failure and reset. Joint all-stage completion is four of ten for the policy and three of ten for the baseline. The two events therefore support different descriptions of the comparison. These small counts are descriptive and do not establish statistical significance or general deployment reliability."
+  }
+]

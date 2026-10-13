@@ -1,0 +1,13 @@
+{
+  "copied_files": 96,
+  "raw_response_files": 36,
+  "source_preparation_contexts": 3,
+  "writing_contexts": 18,
+  "assessment_contexts": 18,
+  "all_copied_bytes_identical": true,
+  "withheld": "PDFs, full extraction, selected publisher body, full metadata and extraction recipes remain local.",
+  "prompt_transformation": "Workspace string values replaced with {WORKSPACE}; no saved response changed.",
+  "receipt_transformation": "Selected structured metadata/version warnings and hashes; source spans omitted.",
+  "rerun": "Helpers invoke no model. Fresh runs require a runner, declared source versions and independently checked body packets. Original source hash analysis requires omitted local inputs.",
+  "claim_boundary": "Purposive same-family abstract transfer confirmation, not human review, statistical significance or runtime promotion."
+}

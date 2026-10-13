@@ -64,6 +64,13 @@ should explain how the unit uses all major anchors whenever possible:
 Generic reasons such as "improve clarity", "make academic", "polish wording",
 or "add detail" do not pass.
 
+For exemplar-informed rows, use [argument transfer](argument-transfer.md): put
+the source location and reader question in `Reference/SOTA Pattern Learned`,
+its applicability in the evidence column, and the actual writing operation in
+`Planned Change/Text Move`. Final checks locate how the prose resolves the
+question. Keep the existing columns; citing a paper or reproducing its sentence
+count alone does not show transfer.
+
 Minimum depth requirement:
 
 - Use at least 8 rows for ordinary manuscripts/reports. Longer manuscripts
@@ -104,6 +111,32 @@ After drafting, update the `Final Text Check` column. The value must start with
 Examples: `PASS: Section 2 paragraph 3 now states the claim after citation C12.`
 or `FAIL: no verified citation yet for this mechanism claim.` Values that only
 say a location, "done", or a vague note do not pass audit.
+
+For a claim-bearing row, apply the
+[prose-only read-back](argument-transfer.md#read-back-the-claim-before-checking-the-plan)
+before consulting the planned move. Record what relationship survives in the
+located final text and the evidence that licenses it, not just the presence of
+the planned terms. A syntactically valid `PASS` is not a semantic verification.
+
+When transferring an explanation, check that compression retained the actual
+operation, not only a label such as "different transformation rules" or
+"accounts for the structure". Can the reader explain what transforms, cancels,
+is shared, or is compared? Do not add mathematical detail unrelated to the unit's
+purpose; preserve the relationship selected in the plan.
+
+For a result interpretation, inspect the comparator's task population and what
+changes together. Equal retained-data fractions do not isolate data selection
+when training-time sampling weights also change. A full-data average and a
+subset average over different task sets are not a paired before/after result.
+Clarify the actual comparison in the claim, rather than append generic caution.
+
+For an abstract row, make the planned contribution allocation explicit and check
+its retained meaning in final prose, following
+[contribution priorities](contribution.md#contribution-priorities-and-compression).
+Distinguish deliberate omissions from accidental losses. A core throughline may
+connect multiple independent contributions; the example below does not require
+demoting them to engineering details. Do not invent separate contributions just
+to fill a plan. Existing columns and artifact schemas stay unchanged.
 
 ## Detail Standard
 

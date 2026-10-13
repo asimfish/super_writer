@@ -1,0 +1,292 @@
+{
+  "audits": [
+    {
+      "id": "D6_text_198",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Section 2.1, Theorem 1 and its proof support the corrected criterion, safe fallback, oracle ordering and exchangeability argument. Prose 'averaged over calibration and test randomness' explicitly locates the guarantee. The reading recovers this proof relationship and the boundedness, monotonicity, right-continuity and safe-endpoint conditions. This legitimate methods focus need not reproduce the experimental-split anchor."
+    },
+    {
+      "id": "D6_text_183",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Section 2.1 gives the stated criterion, fallback and comparison with the full-sample oracle. Prose 'reserves room for an unseen loss' explains why the correction enables expected-risk control. The reading recovers that mechanism; its core supplies non-increasing losses while its scope supplies the upper bound, safe maximum, exchangeability and right-continuity. The selected proof scope is adequate, without promising calibration-conditional control."
+    },
+    {
+      "id": "D6_text_196",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2), Section 4.1, Lemma 4.1 and Proposition 4.1 support the update, telescoping identity and parameter interval. Prose specifies initialization, positive step size and non-decreasing quantiles extended to full/empty sets, then says 'short-window coverage need not follow.' The reading recovers both the bounded-feedback mechanism and these boundaries, including permitted extreme sets. No shift model or pointwise guarantee is inferred."
+    },
+    {
+      "id": "D6_text_187",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 2.1-2.3 support the expected-risk correction, sharp lower bound under stronger conditions and non-monotone counterexample; Sections 3.1-3.4 support the four repeated-split examples. Prose 'averaging over both calibration and test data' and the separate lower-bound assumptions are recovered by the reading. Its uncertainty about exact shift conditions is appropriate: the paragraph only summarizes specified-shift extensions and explicitly requires shift information, rather than asserting unrestricted robustness."
+    },
+    {
+      "id": "D6_text_216",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Sections 2.1-2.2 and Figures 1-3 support the step size, rolling histories, window sizes, crisis comparison and score sensitivity; Section 6 gives the constructed county order. Prose identifies the four selected failures and says 'not guaranteed pointwise coverage or shorter intervals.' The reading recovers feedback beyond shared refitting, normalization sensitivity and constructed-drift limits. Scope is adequate for these empirical comparisons, not a universal performance claim."
+    },
+    {
+      "id": "D6_text_212",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Section 2.1 supports the infimum criterion, safe terminal fallback and full-sample oracle argument. Prose 'rather than conditioning on a particular calibration sample' accurately identifies the expectation's scope. The reading recovers the correction-to-oracle relationship and all stated structural requirements, including exchangeability and right-continuity. Its selected relationship is the calibration proof, legitimately different from the experimental methods anchor."
+    },
+    {
+      "id": "D6_text_184",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Section 2.1 supports reserving B, oracle ordering and the exchangeable conditional-average argument. Prose explicitly supplies nonincreasing losses, right-continuity and a safe endpoint; 'finite-sample expectation guarantee' correctly distinguishes the claim from calibrated model probabilities. The reading recovers the selected proof mechanism and these conditions. The absence of experimental details is not a defect for this legitimate methods function."
+    },
+    {
+      "id": "D6_text_208",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Theorems 1-2, Proposition 1, Proposition 2 and Corollary 1 support the upper guarantee, sharp conditional lower bound and upper-envelope repair. Sections 3.1-3.4 support the application/split summary. Prose 'rather than holding for each fitted set' and 'can sacrifice informativeness' delimit the claims. The reading recovers the graded-loss relationship, stronger tightness conditions, averaging scope and conservative repair, without importing omitted source facts."
+    },
+    {
+      "id": "D6_text_201",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Sections 2.1-2.2, 5 and 6 support the numerical settings, feedback comparison, score ablation and constructed county ordering. The retained Section 2.2 itself reports favorable adaptation in all twelve cases; excluded appendix plots are unnecessary grounding. Prose 'not consequences of the unrestricted long-run frequency guarantee' separates empirical local gains from theory. The reading recovers that distinction, selection bias, shared refitting and the two window sizes."
+    },
+    {
+      "id": "D6_text_199",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2), Proposition 4.1, Section 4.2 and Figures 1-3 support feedback, long-run control, conditional sharper bounds and the empirical contrasts. Prose 'not coverage at every time point' and its full/empty-set convention delimit the general claim; fixed functions and stationary hidden Markov initialization delimit stronger theory. The reading recovers these distinctions and immediate feedback. Unspecified additional regularity is acknowledged, not treated as an unconditional sharper guarantee."
+    },
+    {
+      "id": "D6_text_202",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Sections 2.2, 5 and 6 support 500-day and 300-county coverage comparisons, shared 1,250-day refitting, selected stock failures and normalization sensitivity. Section 2.2 directly reports favorable performance for all twelve. Prose 'constructed geographic drift, not a reconstruction of election-night performance' accurately bounds the county finding. The reading recovers the empirical relationship and selected/constructed evaluation scope without turning these trajectories into a general local-coverage guarantee."
+    },
+    {
+      "id": "D6_text_189",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 3.1-3.3 give all stated means, standard deviations, targets and calibration sizes; Section 3.3 explicitly reports almost-always leaf predictions. Section 2.3 supports non-monotone failure and conservative envelope repair. Prose 'not control within every split' and the calibration-size caveat delimit the empirical interpretation. The reading recovers near-target risk without indiscriminate coarsening and these qualifications. This selected relationship need not include the omitted QA result."
+    },
+    {
+      "id": "D6_text_200",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2) and Proposition 4.1 support the bounded-feedback explanation; Section 4.2 supports the separately conditional sharper theory, and Sections 2.2, 5-7 support the experiments and feedback limitation. Prose 'not coverage at every time point' and fixed-function/stationary assumptions adequately bound this overview. The reading recovers accumulated rather than pointwise control and score sensitivity. Its acknowledged inability to enumerate additional regularity does not convert the explicitly qualified summary into an unconditional theorem."
+    },
+    {
+      "id": "D6_text_186",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 2.1-2.3 support the corrected expected-loss guarantee, sharp 2B/(n+1) shortfall under stronger conditions and conservative envelope repair. Section 3 supports near-target means over 1,000 splits in four applications. Prose lists exchangeability, non-increasing/right-continuous losses and a safe terminal, then separately states tightness assumptions. The reading recovers this selected generalization and its structural scope, rather than treating boundedness or the examples as sufficient for arbitrary losses."
+    },
+    {
+      "id": "D6_text_197",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Section 2.1, Theorem 1's proof, supplies the infimum criterion, fallback and symmetric oracle comparison. Prose 'over calibration and test randomness' establishes the expectation's scope, while non-increasing losses, exchangeability and right-continuity explain transfer of the bound. The reading recovers that proof and includes the safe maximum in its core. Not requiring the unseen test outcome is supported by the implementable criterion, not invented model calibration."
+    },
+    {
+      "id": "D6_text_211",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Section 2.1 supports the corrected calibration rule and safe maximum, oracle ordering, non-increasing-loss comparison and exchangeability/right-continuity steps. Prose 'finite-sample expected-risk guarantee' accurately states the conclusion. The reading recovers the correction-to-oracle relationship, and its combined core/scope includes the necessary loss and endpoint conditions. It does not mistake conditioning on the unordered full sample within the proof for a guarantee conditional on a fitted calibration sample."
+    },
+    {
+      "id": "D6_text_215",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Sections 2.1-2.2, 5 and 6 support the 0.005 step, rolling histories, two window sizes, stock-failure selection and randomized within-zone order. Prose 'feedback alone therefore did not stabilize local coverage' appropriately limits the normalized-score success using Figure 2. The reading recovers adaptation's empirical benefit and score sensitivity, while retaining selected-case and constructed-order limits. It does not claim average superiority or actual election-night replay."
+    },
+    {
+      "id": "D6_text_185",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Theorems 1-2 and Section 2.3 support the corrected expected-risk guarantee, stronger tightness conditions and envelope conservatism. Sections 3 and 4.1-4.3 support the application, quantile, multiple-risk and specified-weighting summaries. Prose explicitly restricts shift accommodation to 'specified weighting information'; the reading preserves that requirement while acknowledging it cannot reconstruct exact weights. Scope is adequate for the overview, which neither asserts unrestricted shift protection nor substitutes boundedness for monotonicity."
+    },
+    {
+      "id": "D6_text_182",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2), Lemma 4.1 and Proposition 4.1 support the update, telescoping identity and bounded-feedback argument. Sections 4.2.1 and 4.2.3 give the separately stated stationary hidden Markov, fixed-function, Lipschitz and interior-root conditions. Prose 'rather than certifying individual predictions' and the full/empty-set initialization conditions adequately delimit the selected method. The reading recovers both this pathwise relationship and the stronger theory's distinct scope."
+    },
+    {
+      "id": "D6_text_194",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Section 2.2 and Equation (4) support shared 1,250-day GARCH refitting and centered 500-day coverage; Sections 2.1 and 5 support the step-size tradeoff and normalization ablation. Prose 'difficult cases rather than estimate an average advantage' preserves the four-of-twelve selection condition. The reading recovers feedback beyond refitting and wider unnormalized swings, with empirical local stability distinguished from cumulative frequency control. The stock-only selected result is legitimate."
+    },
+    {
+      "id": "D6_text_204",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 3.1-3.2 and Figures 1-2 support the reported counts, targets, means and between-split deviations. Section 2.1 gives an expectation guarantee, while Section 2.3 supplies bounded non-monotone failure and conservative envelope repair. Prose 'not the sufficiency of boundedness alone' and the task/model confounding caveat delimit the comparison. The reading recovers near-target means, non-splitwise control and the structural monotonicity boundary; no missing application is needed for this selected function."
+    },
+    {
+      "id": "D6_text_203",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 3.1-3.2 give the stated numerical results and split/count conditions; Section 2.3 supports the counterexample and upper-envelope conservatism. Prose 'the theorem does not cap risk separately for every split' correctly interprets Section 2.1's expected-risk guarantee. The reading recovers this mean-versus-dispersion relationship, preserves task/model confounding, and does not generalize the monotone experiments to arbitrary bounded losses. These are adequate boundaries for the selected two-task result."
+    },
+    {
+      "id": "D6_text_207",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 2.1-2.3 support unseen-loss correction, the sharp lower bound under additional assumptions and non-monotone failure/repair; Section 3 supports the four nonbinary applications and split count. Prose 'rather than certifying risk for every fitted set' and its separately stated tightness conditions adequately delimit the guarantee. The reading recovers graded expected-loss calibration, the monotonicity link and conservative envelope repair without claiming individual-set or unconditional tightness guarantees."
+    },
+    {
+      "id": "D6_text_205",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2), Proposition 4.1 and Section 4.2 support quantile-level feedback, general long-run frequency control and conditional sharper bounds. Sections 2.2, 5-7 support local comparisons, normalization sensitivity and immediate outcomes. Prose correctly increases the quantile level after a miss, not the miscoverage parameter, and says 'does not establish coverage at every time.' The reading recovers this relationship and the fixed-step/extreme-set versus stationary hidden Markov scope; unspecified regularity remains explicitly qualified."
+    },
+    {
+      "id": "D6_text_192",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Proposition 4.1 supports the order 1/(gamma T) frequency bound with the stated initialization and endpoint conventions. Sections 4.2, 2.2, 5 and 6 support the separate conditional theory, normalized-score comparisons and constructed county drift. Prose 'not coverage at every time' and 'additional regularity' avoid an unconditional local guarantee. The reading recovers the feedback relationship, long-run/pointwise distinction, score dependence and step-size tradeoff; no detailed regularity theorem is claimed recoverable."
+    },
+    {
+      "id": "D6_text_206",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2) and Proposition 4.1 support distribution-free long-run feedback control; Section 4.2 supports stronger bounds only with the identified joint stationarity and fixed functions. Sections 2.2 and 5-7 support local empirical gains, score sensitivity and per-step feedback. Prose 'does not establish coverage at each time' bounds the general promise. The reading recovers these distinctions and the positive fixed step/full-empty conventions, while correctly leaving unspecified additional regularity unreconstructed."
+    },
+    {
+      "id": "D6_text_213",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2), Lemma 4.1 and Proposition 4.1 give the stated feedback, telescoping identity, interval and exact absolute-deviation bound; original PDF page 6 confirms the gamma denominator. Prose specifies initialization, positive step, extreme-set conventions and fixed-function comparison for enlargement. The reading recovers the bounded-feedback mechanism and 'not marginal coverage at every time' boundary. This is a legitimate theoretical methods selection, not an incomplete empirical-comparison paragraph."
+    },
+    {
+      "id": "D6_text_181",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2), Section 4.1 and Theorem 4.2 support the update, bounded trajectory, telescoping identity and separately conditional marginal-error analysis. Prose distinguishes target alpha from alpha_t, specifies initialization and non-decreasing full/empty quantile extensions, and lists stationary hidden Markov/fixed-function/Lipschitz/interior-root assumptions. The reading recovers the feedback-to-accumulated-error relationship and these boundaries. It does not mistake the stronger marginal result for an assumption-free guarantee."
+    },
+    {
+      "id": "D6_text_195",
+      "fidelity": "concern",
+      "core_recovery": 2,
+      "scope_recovery": 1,
+      "failure_types": ["text_missing"],
+      "reason": "P12 Equation (2) and Proposition 4.1 support the update and telescoping mechanism, which the reading recovers. However, Section 4.1 explicitly assumes alpha_1 in [0,1] before Lemma 4.1's interval guarantee. Prose 'keeps alpha_t between -gamma and 1 + gamma' omits that initialization condition; the reading also lacks it. Extreme sets and short-window limits are recovered, but the exact trajectory-bound scope is incomplete. This is a missing condition, not an invented numerical formula."
+    },
+    {
+      "id": "D6_text_210",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 3.1-3.2 support the means, deviations, targets, counts and repeated splits. Section 2.1 supports the distinction from per-split/image guarantees; Proposition 2 supports expected loss near B without monotonicity. Prose 'cannot justify removing that assumption' states the structural boundary, and its different-task/calibration-size caveat prevents causal attribution of dispersion. The reading recovers this empirical mean-versus-variation relationship and both qualifications. Omitting envelope repair does not weaken the selected claim."
+    },
+    {
+      "id": "D6_text_193",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Sections 2.1-2.2 and 5 support the rolling GARCH setup, step/window sizes, selected stock failures, normalization ablation and larger-step tradeoff. Prose 'difficult cases rather than an average comparative advantage' correctly limits selection, and distinguishes empirical local coverage from long-run frequency theory. The reading recovers normalized adaptation's benefit and its failure to offset the alternative score's drift, with all consequential selected-case conditions preserved. No election comparison is required for this stock-focused result."
+    },
+    {
+      "id": "D6_text_190",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 3.1-3.3 and Figures 1-3 support the stated statistics, split count, differing calibration sizes and almost-always leaf resolution; Section 2.3 supports failure and envelope repair. Prose 'individual splits can exceed the target' and 'under the other required conditions' prevent per-split or unconditional repair readings. The reading recovers graded-risk calibration without uniform coarsening and the confounded dispersion comparison. Its acknowledged inability to enumerate repair conditions is appropriate to this explicitly qualified empirical summary."
+    },
+    {
+      "id": "D6_text_214",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Sections 2 and 4.1 support simultaneous score/quantile updates, error-feedback calibration, the telescoping cumulative identity and exact finite-horizon frequency bound. Prose states positive step, initialization and whole-space/empty-set conventions, then says the result does not ensure every short window. The reading recovers the selected feedback mechanism and these conditions, without importing fixed-function restrictions from Section 4.2 into the general long-run guarantee."
+    },
+    {
+      "id": "D6_text_191",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P12 Equation (2), Proposition 4.1, Section 4.2 and Sections 2.1-2.2, 5-7 support feedback, general long-run control, conditional sharper bounds, score dependence and immediate outcomes. Prose 'not coverage at every time' and 'constructed east-to-west ordering' adequately limit theory and experiments. The reading recovers these distinctions and the step-size tradeoff. Additional regularity remains acknowledged rather than reconstructed; the paragraph does not promise the stronger bounds without it."
+    },
+    {
+      "id": "D6_text_209",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Sections 3.1-3.2 support near-target means, deviations and split/count settings, while Theorem 1 supports averaging over calibration/test data and Proposition 2 supports the non-monotone boundary. Prose 'rather than constraining every split or image' and inability to isolate dispersion causes are explicit. The reading recovers near-target rather than substantial undershooting, the confounded comparison and tested-monotone scope. No claim that empirical examples establish tightness for all losses is made."
+    },
+    {
+      "id": "D6_text_188",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P11 Theorems 1-2, Proposition 1, Proposition 2 and Sections 3.1-3.4 support graded expected-risk calibration, stronger sharp-lower-bound assumptions, non-monotone failure and repeated application means. Prose 'rather than applying to each realized split' and the distinct i.i.d./nonnegative/no-fixed-jump conditions adequately delimit the guarantees. The reading recovers this generalization, averaging scope and monotonicity boundary. The selected abstract does not need every extension or repair mechanism to remain faithful."
+    }
+  ]
+}

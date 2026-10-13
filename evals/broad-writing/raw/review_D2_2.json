@@ -1,0 +1,346 @@
+{
+  "reviews": [
+    {
+      "id": "P03_s2_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both make maximum-change rescaling and final-only division intelligible: A's 'same exponential scale' and B's 'full-row softmax' explain the same invariant. P03 Sec. 3.1.1, Algorithm 1 (steps 9-13), and its correctness paragraph support exact output, saved logsumexp, quadratic arithmetic, and linear auxiliary storage. Their ordering differences do not materially affect the methods function."
+    },
+    {
+      "id": "P03_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'each warp its own query rows' and B's row-specific denominator explain the same row independence and removal of forward reductions. P03 Secs. 3.2-3.3 support both warp and thread-block partitioning; Sec. 3.1.1 supports deferred normalization and logsumexp storage. B's backward-synchronization qualification is accurate, but neither version materially improves the explanation over the other."
+    },
+    {
+      "id": "P03_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both link unchanged exact attention to reduced normalization work and query-row parallelism, then distinguish kernel gains from smaller training gains. P03 Secs. 3.1-3.3, 4.1, and Table 1 support those relationships and figures. B's 'uniform application-level speedup' is slightly clearer than A's 'full kernel-level acceleration,' but this wording difference is a near tie."
+    },
+    {
+      "id": "P03_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both explain rescaled accumulators, final normalization, backward recomputation, and query-row ownership accurately (P03 Algorithm 1; Secs. 3.2-3.3). The concluding register-spilling and capacity limits also match Sec. 3.3. B's 'shared-memory traffic' is slightly more precise than A's 'transfers,' but their mechanisms, evidence selection, and overall methods exposition remain equivalent."
+    },
+    {
+      "id": "P03_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'different benefits' and B's 'do not transfer proportionally' correctly distinguish training throughput from kernel speed and memory feasibility. P03 Sec. 4.3, Table 1 supports the larger 8k gains and the unhalved FLOPs convention; Sec. 4.1, Fig. 4 supports PyTorch OOM at 16k with fixed total tokens. B's additional 2.7B comparison is pertinent but not decisive."
+    },
+    {
+      "id": "P03_s2_abstract",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B's 'smaller, context-dependent gains' connects the kernel results to an interpretable training comparison (170 to 220 versus 189 to 196), supported by P03 Sec. 4.3, Table 1. A's absolute 225-TFLOPs/s peak is accurate but leaves the training effect less clear. Both correctly distinguish training's execution costs from decoding's KV-cache bottleneck (Secs. 3.2, 4.2)."
+    },
+    {
+      "id": "P04_s2_methods",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B explicitly connects 'guesses sequentially' with target verification 'concurrently,' explaining the execution schedule behind the gamma*c cost term. A accurately explains correction but leaves that central scheduling step implicit. P04 Sec. 2.1 and Algorithm 1 support the staged schedule; Secs. 3.1 and 3.3 support both yield and timing formulas. Both preserve the target distribution."
+    },
+    {
+      "id": "P04_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A makes rejection-weighted residual mass explicit; B gives the same exactness argument and additionally connects token yield to walltime. P04 Sec. 2.3 and Algorithm 1 support both prefix-handling accounts; Secs. 3.1, 3.3-3.4 support yield, conditional speedup, and the distinction from arithmetic savings. These are comparably effective methods paragraphs with different, well-supported closing emphases."
+    },
+    {
+      "id": "P04_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'without substituting' and B's 'preserving' both clearly distinguish exact target sampling from draft quality. P04 Secs. 2.1-2.3 and 3.3 support their mechanisms and timing assumptions; Sec. 4.1, Table 2 supports the TPU-v4 setup and all four T5 speedups. B foregrounds spare hardware capacity; A identifies T5X and English-to-German explicitly. Neither advantage is decisive."
+    },
+    {
+      "id": "P04_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A separates distributional correctness from speed assumptions; B makes the extra timing conditions explicit at its close. Both correctly use 'normalized positive part' correction and accepted-prefix retention (P04 Sec. 2.3, Algorithm 1). Their expected-yield and speedup formulas match Secs. 3.1 and 3.3, including i.i.d. acceptance, long generations, and unchanged concurrent target latency. This is a near tie."
+    },
+    {
+      "id": "P04_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A uses the matched-seven-guess greedy comparison; B uses standard-sampling configurations and explicitly notes their differing guess counts. P04 Sec. 4.1, Table 2 supports both routes to the conclusion that acceptance alone is insufficient. Secs. 3.3-3.4 support the cost tradeoff and wasted arithmetic. Their different evidence selections serve their stated results claims equally well."
+    },
+    {
+      "id": "P03_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both distinguish roughly 1.3-fold training gains from 1.7-3.0-fold kernel gains and interpret the reported 72% using its FLOPs convention (P03 Sec. 4.3, Table 1). Their PyTorch-versus-tiled memory comparison matches Sec. 4.1, Fig. 4. B names the fixed-16k-token setting explicitly; A locates the result in the separate benchmarks. The overall results interpretation is effectively equivalent."
+    },
+    {
+      "id": "P04_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both explain probability-mass correction, separate exactness from conditional acceleration, and bound the measured gains to batch-one T5 tests. P04 Secs. 2.3, 3.3-3.6, and 4.1, Table 2 support these claims. A's 'improved agreement must compensate for proposal cost' and B's 'tradeoff between agreement and proposal cost' draw the same justified inference. Neither offers a material abstract-level advantage."
+    },
+    {
+      "id": "P03_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both organize the contribution around independent query rows and distinguish training from KV-cache-limited decoding. P03 Secs. 3.1-3.3 support the mechanisms; Secs. 4.1-4.3 support the kernel, training, and FasterTransformer comparisons. B states the 8k-versus-2k pattern directly, while A concludes with smaller, context-dependent whole-model gains. Both faithfully summarize the same contribution without a decisive difference."
+    },
+    {
+      "id": "P04_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A explains the residual's role in restoring target mass; B more compactly names acceptance and residual resampling while foregrounding the guess-cost tradeoff. Both are supported by P04 Secs. 2.3 and 3.3-3.4. Sec. 4.1, Table 2 supports their matched setup and speedup figures. Their differing mechanism detail and tradeoff emphasis are equally appropriate for an abstract."
+    },
+    {
+      "id": "P04_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both use the fixed-seven-proposal greedy comparison to show that higher acceptance need not produce lower latency (P04 Sec. 4.1, Table 2). A distinguishes GPT-like/LaMDA acceptance measurements from T5 walltime results, matching Sec. 4.2; B identifies unchanged proposal counts across sampling comparisons. Both selections are pertinent, and both correctly connect rejected work and spare compute to Sec. 3.4."
+    },
+    {
+      "id": "P04_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'does not offset its proposal cost' and B's 'does not by itself offset' interpret the same fixed-length greedy comparison appropriately. P04 Sec. 4.1, Table 2 supports acceptance and speedup figures; Sec. 4.2 confirms that GPT-like/LaMDA tests measured acceptance only. Both explain sampling dependence and rejected computation without extending the demonstrated latency gains beyond T5. Their differences are minor."
+    },
+    {
+      "id": "P03_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both infer context dependence from the 2k/8k comparisons and distinguish training FLOPs accounting from causally masked kernel accounting (P03 Secs. 4.1, 4.3, Table 1). B's 'not a new memory advantage over FlashAttention' explicitly identifies the memory comparison's scope; A also names PyTorch as the baseline. Both match Fig. 4's 16k OOM result. These are comparably effective results paragraphs."
+    }
+  ]
+}

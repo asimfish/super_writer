@@ -1,0 +1,2924 @@
+{
+  "window": 21,
+  "passages": 324,
+  "records": [
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P01",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P13",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P03",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P04",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P05",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P06",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P07",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P08",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P09",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P10",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P11",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "initial",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "baseline",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 1,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 2,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "abstract",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "methods",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    },
+    {
+      "paper": "P12",
+      "condition": "candidate",
+      "sample": 3,
+      "unit": "results",
+      "long_match_words": 0,
+      "generated_token_offset": null,
+      "source_token_offset": null
+    }
+  ],
+  "flagged": [],
+  "scope": "Lowercased English/numeric token matches against each full saved PDF extraction, including author abstract; no source text is exported. Raw extraction defects can hide matches; shorter phrases, translated overlap and other sources are not assessed. Flags require contextual review, not automatic prose rescoring."
+}

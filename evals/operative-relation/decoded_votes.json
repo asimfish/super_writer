@@ -1,0 +1,458 @@
+[
+  {
+    "pair": "N1_s1_results",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "N1 Section 4.1 and Figure 4 support both accounts. Each explains why removing the curriculum makes reward interpretable, fixes the comparison at 1,500 updates, and connects increased robot count at fixed batch size to shorter rollouts and eventual reward loss. Both distinguish slowing throughput gains from learning quality, qualify the low-count diversity explanation, and identify the larger-budget baseline. Their task-specific conclusions follow from the stated mechanisms; neither treats more robots as an unlimited benefit. The wording differences offer no material explanatory or readability advantage."
+  },
+  {
+    "pair": "N1_s1_abstract",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "N1 Sections 2, 3.1, 4.2, and 4.3 support the mechanisms and bounded results in both abstracts. Each connects GPU-local computation to reduced transfers and curriculum relocation to changing difficulty without terrain regeneration, while preserving the rollout-length constraint. Both identify the reported training configuration and separate simulation success from hardware deployment limited by imperfect maps. A explains the shared-mesh constraint explicitly; B closes with an explicit scope statement. Both already supply the requested explanation, and neither difference warrants a preference or fidelity penalty."
+  },
+  {
+    "pair": "N1_s2_methods",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "N1 Sections 2.2.1-2.2.2 support both explanations. Each contrasts predictable failure or goal termination with a time-out hidden by the absence of episode time, explains the erroneous loss of continuation value, and describes reward augmentation using the critic's prediction. Both explicitly associate that prediction with the interrupted trajectory rather than the reset episode. Each then explains why episodes spanning short batches require handling time-outs beyond collection boundaries. B starts with an intuitive return distinction; A presents the same causal account just as clearly."
+  },
+  {
+    "pair": "N1_s2_abstract",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "N1 Sections 2, 3.1, 4.2, and 4.3 substantiate both abstracts. Each explains how GPU computation reduces transfers and performance-based relocation combines terrain progression with avoiding regeneration. Both connect fixed-batch parallelism to shorter trajectories and impaired learning, rather than asserting unconstrained acceleration. Their simulation and hardware findings remain attached to the reported setup and terrain-map limitation. A explicitly describes progressively challenging experience; B integrates the rollout qualification more tightly with the speed claim. These are comparably effective explanations, not a meaningful quality gap."
+  },
+  {
+    "pair": "N1_s2_results",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "N1 Section 4.1 and Figure 4 support both responses. Each states the simplified, curriculum-free comparison after 1,500 updates and explains the fixed-batch chain from more robots to shorter rollouts, faster training, and eventual reward deterioration. Both qualify the diversity explanation at low counts and distinguish larger-batch reward gains from their training cost. A links reduced diversity explicitly to longer trajectories; B makes trajectory length, diversity, and throughput explicit in its conclusion. Both justify the bounded compromise rather than unlimited parallelism with equally clear arguments."
+  },
+  {
+    "pair": "N1_s1_methods",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "N1 Sections 2.2.1-2.2.2 support both responses. Each explains that the critic can anticipate task endings but not a time limit absent from observations, and that terminal treatment would wrongly discard continuation value. Both describe separately flagged time-outs and reward augmentation with the critic's discounted remaining-return estimate. Each also separates episode duration from rollout collection and explains why time-outs must be detected inside batches. Neither merely names bootstrapping: both explain its purpose and the target correction. Their organization and language are comparably clear."
+  },
+  {
+    "pair": "N1_s1_results",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both explain the fixed-batch chain from more robots to shorter rollouts, faster training, and eventual reward loss, matching Sections 2.2.1 and 4.1/Figure 4. Both preserve the simplified, curriculum-free comparison and distinguish the million-sample baseline from matched-batch scaling. A more explicitly connects low-count sample correlation to longer trajectories; B more concretely explains why curriculum-driven difficulty changes undermine reward comparison. These small strengths balance. Neither turns the task-specific compromise into an unlimited-scaling claim, and both are clear within the requested length."
+  },
+  {
+    "pair": "N1_s1_abstract",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both connect GPU residency to reduced transfers, describe performance-adaptive terrain relocation, and bound the training and deployment findings by rollout length and imperfect maps, consistent with Sections 2-4. B's 'Because the shared mesh cannot readily change at resets' gives an explicit problem-to-remedy explanation for relocation, whereas A states its operation and regeneration benefit without that motivating constraint. B therefore has a slight explanatory advantage, not a fidelity advantage. Both present the measured training speed and hardware transfer without claiming universal robustness; both are fluent full abstracts."
+  },
+  {
+    "pair": "N1_s2_methods",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both reproduce the reasoning in Sections 2.2.1-2.2.2: an unobserved time limit cannot be anticipated like task termination, so zero continuation would wrongly truncate the critic target. Both explicitly describe reward augmentation with the critic's discounted prediction for the interrupted trajectory, not the newly reset episode. A stresses that episode duration and collection length are independent; B directly states the resulting need to handle time-outs inside batches. Both actually explain this consequence rather than merely naming bootstrapping, with equally clear prose and no material distinction."
+  },
+  {
+    "pair": "N1_s2_abstract",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both explain reduced CPU-GPU transfers and adaptive relocation without terrain regeneration, matching Sections 2.1-2.2 and 3.1. B adds an explicit synthesis about parallel collection and progressively challenging experience, but A already conveys those mechanisms through performance-based difficulty changes and GPU execution. Both connect fixed-batch parallelism to shortened trajectories and learning impairment, and use Sections 4.2-4.3 to bound training speed, terrain traversal, and hardware deployment. Their map-related robustness limitation and final conclusions are substantively equivalent. Neither has a meaningful explanatory or language deficit."
+  },
+  {
+    "pair": "N1_s2_results",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both satisfy the central objective: under the stated Figure 4 conditions, fixed-batch scaling shortens rollouts, eventually damaging advantage estimation despite faster collection. Both retain the tentative status of the low-count diversity explanation and the larger-batch time cost, consistent with Section 4.1. B slightly strengthens the explanation by connecting less diverse samples specifically to 'longer individual trajectories'; A names reduced diversity without developing that connection. Both reject unlimited parallelism and clearly distinguish the high-reward baseline from the practical compromise. This supports a narrow preference without a coarse score difference."
+  },
+  {
+    "pair": "N1_s1_methods",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both explain the observation-dependent distinction between predictable task endings and unpredictable time-limit interruption in Section 2.2.2. They describe the actual remedy, separately detecting time-outs and adding the critic's discounted remaining-return prediction, and explain why continuation belongs in the target. Both then connect episodes spanning short batches to time-outs occurring away from collection boundaries, consistent with Section 2.2.1. A ends with the absence of update-triggered resets; B integrates that fact into its final handling requirement. These are equivalent explanations, not merely equivalent terminology, and both read clearly."
+  },
+  {
+    "pair": "N2_s2_results",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both correctly interpret Section 6.2, Table 2: residual weighting recovers coverage at a width cost, weighted fitting reverses that cost on ordered data, and permutation removes its width advantage. Both acknowledge below-target ordered coverage and explain why a potentially large Theorem 2b residual-distribution penalty precludes an arbitrary-drift guarantee. B explicitly identifies width 0.527 as below both alternatives and connects the control to the absence of a generally narrower weighted method. Its method labels are easier to follow than A's 'residual-weighted weighted least squares.' The preference is explanatory clarity, not a fidelity difference."
+  },
+  {
+    "pair": "N2_s1_results",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both explain Table 2's controlled comparisons rather than merely listing results: calibration weighting improves coverage while widening intervals, fitting weighting narrows them without sacrificing that improvement, and the exchangeable control lacks the width advantage. Both distinguish observed undercoverage from the 90% target and correctly invoke Theorem 2b's small-penalty condition. A explicitly warns that temporal averages do not establish coverage at each time; B more directly compares the weighted-fit width with the unweighted baseline and identifies the original versus swapped residual-vector laws. These complementary advantages leave no decisive preference."
+  },
+  {
+    "pair": "N2_s2_methods",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both faithfully trace Section 7.2, equations (24)-(31): positional tags stay fixed, unit test weight dominates calibration weights, the infinity cutoff implies high-residual membership, independence permits weighting over K, and total variation transfers probabilities to the original law. A correctly explains that moving test mass to infinity leaves rejection unchanged. B's definition of S(r) for every residual vector makes the mass bound's reuse under the original law especially transparent, and its 'weighted sum over K' is clearer than A's compressed 'averaging over K.' Both provide the essential proof; B presents it more cleanly."
+  },
+  {
+    "pair": "N2_s1_abstract",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both accurately combine Theorem 2b, Sections 5.2-5.3, and Tables 2-3, separating exchangeable validity from small-discrepancy undercoverage control and empirical calibration gains from fitting gains. B explains that the candidate test point moves to a sampled position while tags remain positional; A names the randomized swap but does not describe that operation. This gives B a more substantive connection between tagged fitting and the high-residual argument. A's additional coverage numbers and jackknife+ baseline are correct, but do not outweigh that explanatory advantage for the stated full-conformal objective. A's omission is not false science."
+  },
+  {
+    "pair": "N2_s2_abstract",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 5
+    },
+    "reason": "Both preserve Theorem 2b's residual-law penalty, Section 5.3's exchangeability distinction, and Tables 2-3's qualified empirical benefits. A specifies that the test observation is swapped with the sampled position before fitting; B gives the sampling probabilities but moves directly from naming a swap to asserting high-residual membership. A therefore explains the central randomized fitting operation more fully. B's concluding separation of theoretical guarantees from ordering-dependent benefits is particularly clear, and its prose is smoother than A's 'exchanges the test observation with an index.' A's mechanistic advantage determines preference; neither has a material fidelity error."
+  },
+  {
+    "pair": "N2_s1_methods",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both explain Section 7.2, equations (25)-(31), including normalization, fixed positional tags, the infinity-cutoff comparison using weight dominance, the deterministic alpha mass bound, independent sampling, and the total-variation penalty without symmetry or stability assumptions. B explicitly states independence from the data and describes total variation as bounding a probability change between residual-vector distributions. A's 'their total-variation distance' after referring to event counterparts has a less precise antecedent, although the intended residual-law comparison is clear. The proof content is comparably complete; B's more precise presentation warrants the preference."
+  },
+  {
+    "pair": "N2_s2_results",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both accurately interpret Table 2: calibration weighting improves ordered-data coverage at a width cost, while weighted fitting reverses that width cost without reaching 90%. Both contrast this with the exchangeable permuted control, where the width advantage disappears and variability increases. Their temporal-average caveats and potentially large swapped-residual total-variation penalty agree with Sections 5.1 and 6.2. The explanations are substantively equivalent and equally clear."
+  },
+  {
+    "pair": "N2_s1_results",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both faithfully separate the two weighting roles in Table 2, recognize ordered-data undercoverage relative to 90%, and explain why permutation removes the weighted-fitting width advantage. Both correctly condition near-nominal theoretical coverage on a small swapped-residual discrepancy. B is slightly preferable because it explicitly distinguishes temporal averages from coverage at every time point and identifies the randomized construction when invoking the bound. A's shorter explanation remains complete on the core objective."
+  },
+  {
+    "pair": "N2_s2_methods",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both correctly explain Section 7.2's chain: fixed positional tags and independent weighted sampling, test residual at the swapped index, the infinity-cutoff comparison using test-weight dominance, and total-variation comparison with the original law. Both obtain alpha plus weighted distances without assuming residual exchangeability. A is slightly preferable because its explicit 'for any residual vector' mass bound makes especially clear why the original-law weighted sum is bounded by alpha after the distribution comparison. B's account is also sound and coherent."
+  },
+  {
+    "pair": "N2_s1_abstract",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 4,
+      "language": 5
+    },
+    "reason": "Both agree with Theorem 2b and Sections 5.2, 5.3, and 6: the residual-distribution penalty vanishes under exchangeability, small penalties limit undercoverage, and ordered-electricity gains do not reach 90%. A better explains the central construction by moving the candidate test point before fitting while retaining tags at their positions. B states that the swap links miscoverage to high-residual indices but leaves that fitting mechanism unspecified. This is an explanatory omission, not false science; B's jackknife+ baseline is accurate but less central to this objective."
+  },
+  {
+    "pair": "N2_s2_abstract",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both connect prespecified weighting and tagged fitting to independent weighted swapping, bounded high-residual mass, and Theorem 2b's residual total-variation penalty. Both distinguish exchangeable validity from conditional robustness and accurately describe the electricity width contrast and election undercoverage in Section 6. A more explicitly connects tags to regression weights; B more explicitly describes swapping the test observation before fitting and distinguishes the jackknife+ baseline. These complementary details do not establish a meaningful overall preference."
+  },
+  {
+    "pair": "N2_s1_methods",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "argument": 5,
+      "language": 5
+    },
+    "reason": "Both explain the actual proof in Section 7.2, equations (24)-(31): tags remain positional, independent sampling locates the test residual at K, replacing test mass by infinity and weight dominance establish the rejection implication, and high-residual indices have mass at most alpha for every vector. Both then average over K and charge weighted total-variation distances when replacing swapped laws by the original law. Their different presentation order does not change completeness, fidelity, or clarity."
+  }
+]

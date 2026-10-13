@@ -1,0 +1,338 @@
+[
+  {
+    "id": "T001",
+    "unit": "methods",
+    "evidence": "Original synthetic inference study. A small proposer generates five candidate tokens sequentially, conditioning each on its predecessors. The expensive target evaluates all five proposed prefix positions concurrently in one target round. Correction retains the target distribution under the supplied acceptance rule. The scheduling, not a faster target kernel, reduces serial expensive rounds. The measured target round costs 20 ms; proposing all five costs 4 ms. Accepted yield averages three tokens on a fixed toy workload. The author prioritizes explaining how sequential drafting and concurrent verification interact. There is no full application latency measurement.",
+    "text": "The procedure separates cheap proposal work from expensive target evaluation. A small proposer drafts five tokens sequentially, with each guess conditioned on its predecessors. The target then checks all five prefix positions concurrently in one round, so drafting still has a serial cost but target evaluation no longer requires a separate round for every position. A supplied correction rule retains the target distribution. On the toy workload, proposal work takes 4 ms, a target round takes 20 ms, and accepted yield averages three tokens. These measurements describe the evaluated token schedule rather than complete application latency.",
+    "reading": {
+      "id": "T001",
+      "core": "A small proposer sequentially drafts five predecessor-conditioned tokens. The target checks five prefix positions concurrently in one round, removing per-position target rounds while retaining serial drafting cost. A supplied correction rule retains the target distribution, but its operation is not recoverable.",
+      "scope": "Measurements concern a toy token schedule: 4 ms proposal work, 20 ms target round, three accepted tokens on average. Complete application latency is unestablished; distribution-retention conditions are not recoverable.",
+      "core_witness": "The target then checks all five prefix positions concurrently in one round",
+      "scope_witness": "These measurements describe the evaluated token schedule rather than complete application latency.",
+      "unclear": "Correction-rule operations and conditions for distribution retention are unspecified."
+    }
+  },
+  {
+    "id": "T002",
+    "unit": "methods",
+    "evidence": "Original synthetic inference study. A small proposer generates five candidate tokens sequentially, conditioning each on its predecessors. The expensive target evaluates all five proposed prefix positions concurrently in one target round. Correction retains the target distribution under the supplied acceptance rule. The scheduling, not a faster target kernel, reduces serial expensive rounds. The measured target round costs 20 ms; proposing all five costs 4 ms. Accepted yield averages three tokens on a fixed toy workload. The author prioritizes explaining how sequential drafting and concurrent verification interact. There is no full application latency measurement.",
+    "text": "The procedure combines a small proposer, an expensive target and a supplied correction rule. A proposal contains five candidate tokens, with each guess conditioned on its predecessors, and the target evaluates the proposed prefix positions. The correction rule retains the target distribution. On the toy workload, proposal work takes 4 ms, a target round takes 20 ms, and accepted yield averages three tokens. Proposal length, target-round cost and accepted yield therefore provide distinct descriptions of the evaluated configuration. These measurements characterize token processing rather than complete application latency, which the study does not measure.",
+    "reading": {
+      "id": "T002",
+      "core": "The small proposer produces five candidate tokens, each conditioned on predecessors; the expensive target evaluates proposed prefix positions. A supplied correction rule retains the target distribution. Its operations and why they ensure retention are not recoverable.",
+      "scope": "The toy workload records 4 ms proposal work, 20 ms per target round and average accepted yield of three tokens. Proposal length, round cost and yield are distinct. These characterize token processing, not unmeasured complete application latency. Broader retention conditions are not recoverable.",
+      "core_witness": "The correction rule retains the target distribution.",
+      "scope_witness": "These measurements characterize token processing rather than complete application latency, which the study does not measure.",
+      "unclear": "The correction rule's implementation, retention justification and applicability conditions are not recoverable."
+    }
+  },
+  {
+    "id": "T003",
+    "unit": "results",
+    "evidence": "Original synthetic three-stage robot evaluation. Ten physical executions are logged. Seven reach the specified final-stage state, but only four complete all three stages without an earlier failure. Three of the seven final-state successes previously failed a stage and were reset before continuing. The baseline reaches the final state in five of ten executions and completes all stages in three of ten. The measured final-state event is not joint uninterrupted trajectory completion. Starting configurations and time budgets are matched. No significance analysis or general deployment claim is available.",
+    "text": "The policy achieves seven uninterrupted three-stage completions in ten physical executions, compared with five of ten for the baseline under matched starts and time budgets. The final-stage state supplies the completion criterion for this comparison. Three of the seven successes follow an earlier failure and reset, while another recorded tally gives four of ten for the policy and three of ten for the baseline. The reported seven-of-ten result is the trajectory-completion rate used here. These small counts are descriptive and do not establish statistical significance or general deployment reliability.",
+    "reading": {
+      "id": "T003",
+      "core": "The reported trajectory-completion rate is seven of ten for the policy versus five of ten for the baseline, with matched starts and time budgets. Final-stage state defines completion.",
+      "scope": "The reported comparison measures uninterrupted three-stage completions in ten physical executions. Three successes follow earlier failure/reset; another tally is four versus three. Reset handling and that tally's relation to seven versus five are not recoverable. Small counts establish neither significance nor general deployment reliability.",
+      "core_witness": "seven uninterrupted three-stage completions in ten physical executions, compared with five of ten for the baseline",
+      "scope_witness": "These small counts are descriptive and do not establish statistical significance or general deployment reliability.",
+      "unclear": "How earlier failures/resets affect execution counting, and what the alternate tally measures."
+    }
+  },
+  {
+    "id": "T004",
+    "unit": "results",
+    "evidence": "Original synthetic three-stage robot evaluation. Ten physical executions are logged. Seven reach the specified final-stage state, but only four complete all three stages without an earlier failure. Three of the seven final-state successes previously failed a stage and were reset before continuing. The baseline reaches the final state in five of ten executions and completes all stages in three of ten. The measured final-state event is not joint uninterrupted trajectory completion. Starting configurations and time budgets are matched. No significance analysis or general deployment claim is available.",
+    "text": "The policy reaches the specified final-stage state in seven of ten physical executions, compared with five of ten for the baseline under matched starts and time budgets. This is a final-state measurement, not uninterrupted completion of all three stages: three of those seven successes follow an earlier failure and reset. Joint all-stage completion is four of ten for the policy and three of ten for the baseline. The two events therefore support different descriptions of the comparison. These small counts are descriptive and do not establish statistical significance or general deployment reliability.",
+    "reading": {
+      "id": "T004",
+      "core": "The policy reaches the final-stage state in 7/10 physical executions versus the baseline's 5/10. Joint all-stage completion is 4/10 versus 3/10. These different success events support different descriptions of the comparison.",
+      "scope": "Final-state attainment and joint completion were counted under matched starts and time budgets. Three of the policy's seven final-state successes followed an earlier failure and reset, so final-state attainment is not uninterrupted three-stage completion. Small descriptive counts establish neither statistical significance nor general deployment reliability.",
+      "core_witness": "in seven of ten physical executions, compared with five of ten for the baseline",
+      "scope_witness": "These small counts are descriptive and do not establish statistical significance or general deployment reliability.",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T005",
+    "unit": "abstract",
+    "evidence": "Original synthetic serving study. A token cache is partitioned into fixed-size blocks. Logical sequence positions are mapped to physical blocks, which need not be adjacent. A new physical block is allocated only when an arriving token exhausts the current block. This permits incremental growth rather than reserving one contiguous maximum-length region. At a fixed 100 ms latency cap, batch size is 64 rather than 40 for the contiguous-reservation baseline on a supplied toy workload. No comparison isolates allocator overhead. The author prioritizes the allocation relationship; this is not a general hardware claim.",
+    "text": "A block-based cache changes how serving memory follows sequence growth. Logical token positions map to physical blocks that need not be adjacent, and another block is allocated only when an arriving token exhausts the current one. This permits incremental storage instead of reserving a contiguous region for the maximum sequence length. On the toy workload, the system supports a batch of 64 rather than 40 for contiguous reservation at the same 100 ms latency cap. That comparison concerns the evaluated allocation scheme; it does not isolate allocator overhead or establish a benefit on arbitrary hardware.",
+    "reading": {
+      "id": "T005",
+      "core": "Logical token positions map to potentially nonadjacent physical blocks; another block is allocated only when an arriving token exhausts the current one. This enables incremental storage instead of maximum-length contiguous reservation. The toy comparison supports batch 64 versus 40 for contiguous reservation at the same 100 ms latency cap.",
+      "scope": "Limited to the evaluated allocation scheme and toy workload. Allocator overhead is not isolated, and benefit on arbitrary hardware is unestablished.",
+      "core_witness": "This permits incremental storage instead of reserving a contiguous region for the maximum sequence length.",
+      "scope_witness": "it does not isolate allocator overhead or establish a benefit on arbitrary hardware.",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T006",
+    "unit": "abstract",
+    "evidence": "Original synthetic serving study. A token cache is partitioned into fixed-size blocks. Logical sequence positions are mapped to physical blocks, which need not be adjacent. A new physical block is allocated only when an arriving token exhausts the current block. This permits incremental growth rather than reserving one contiguous maximum-length region. At a fixed 100 ms latency cap, batch size is 64 rather than 40 for the contiguous-reservation baseline on a supplied toy workload. No comparison isolates allocator overhead. The author prioritizes the allocation relationship; this is not a general hardware claim.",
+    "text": "A block-based cache combines fixed-size storage blocks, logical sequence positions and a physical block pool. The serving system maintains a position map and processes arriving tokens within this configuration. On the toy workload, it supports a batch of 64 rather than 40 for a contiguous-reservation baseline at the same 100 ms latency cap. Batch size and latency describe distinct aspects of the measured serving configuration. The comparison concerns the evaluated allocation scheme; it does not isolate allocator overhead, establish a benefit on arbitrary hardware or evaluate another workload.",
+    "reading": {
+      "id": "T006",
+      "core": "On the toy workload, the block-based configuration supports batch 64 versus 40 for the contiguous-reservation baseline at the same 100 ms latency cap. Its contribution is larger batch support at matched latency; the operations explaining that increase are not recoverable.",
+      "scope": "The comparison is restricted to the evaluated allocation scheme and toy workload. Allocator overhead is not isolated; benefits on arbitrary hardware and another workload are unestablished. Batch size and latency are distinct measurements.",
+      "core_witness": "it supports a batch of 64 rather than 40 for a contiguous-reservation baseline",
+      "scope_witness": "does not isolate allocator overhead, establish a benefit on arbitrary hardware or evaluate another workload.",
+      "unclear": "The position map's operations and their causal connection to larger batch support are not recoverable."
+    }
+  },
+  {
+    "id": "T007",
+    "unit": "results",
+    "evidence": "Original synthetic training-memory profile. At batch eight, optimizer-state storage is 8 GB for the baseline and 4 GB for the projected update. Other measured allocations total 8 GB for both. Peak training allocation is 16 GB baseline and 12 GB projected. The measurements use the same device, model and precision. Loss at the recorded checkpoint is 2.2 baseline and 2.3 projected; no equivalence test is performed. Projection halves optimizer-state storage, not total training allocation. The author prioritizes the resource boundary and measured tradeoff.",
+    "text": "Projection halves total training allocation on the same device, model and precision at batch eight. Optimizer-state storage falls from 8 to 4 GB, while the other measured allocations remain 8 GB; total allocation is recorded as 12 GB rather than 16 GB. The reported twofold reduction characterizes the complete measured training-memory footprint. At the recorded checkpoint, loss is 2.3 for projection and 2.2 for the baseline. The profile documents a memory saving with this observed loss difference; it does not establish quality equivalence or characterize another batch size.",
+    "reading": {
+      "id": "T007",
+      "core": "The measured comparison records total allocation of 12 versus 16 GB and optimizer-state storage of 4 versus 8 GB. These support a total saving of 4 GB, not the stated halving of the complete footprint; only optimizer-state storage halves.",
+      "scope": "Same device, model, precision, batch eight; other allocations remain 8 GB. Checkpoint loss is 2.3 versus baseline 2.2. Quality equivalence and other batch sizes are unestablished. Reconciling the twofold-total claim with 12 versus 16 GB is not recoverable.",
+      "core_witness": "total allocation is recorded as 12 GB rather than 16 GB.",
+      "scope_witness": "on the same device, model and precision at batch eight.",
+      "unclear": "The asserted halving of total allocation conflicts with the reported totals."
+    }
+  },
+  {
+    "id": "T008",
+    "unit": "results",
+    "evidence": "Original synthetic training-memory profile. At batch eight, optimizer-state storage is 8 GB for the baseline and 4 GB for the projected update. Other measured allocations total 8 GB for both. Peak training allocation is 16 GB baseline and 12 GB projected. The measurements use the same device, model and precision. Loss at the recorded checkpoint is 2.2 baseline and 2.3 projected; no equivalence test is performed. Projection halves optimizer-state storage, not total training allocation. The author prioritizes the resource boundary and measured tradeoff.",
+    "text": "Projection halves optimizer-state storage from 8 to 4 GB at batch eight, while the other measured allocations remain 8 GB. Total training allocation consequently falls from 16 to 12 GB, not by half, on the same device, model and precision. The memory saving is attributable to the state-storage boundary measured here rather than every training resource. At the recorded checkpoint, loss is 2.3 for projection and 2.2 for the baseline. The profile documents lower allocation with this observed loss difference; it does not establish quality equivalence or characterize another batch size.",
+    "reading": {
+      "id": "T008",
+      "core": "Against the baseline, projection reduces optimizer-state storage from 8 to 4 GB while other measured allocations remain 8 GB. Consequently, total training allocation falls from 16 to 12 GB, not by half. Checkpoint losses are 2.3 for projection and 2.2 for the baseline.",
+      "scope": "Measured quantities are optimizer-state storage, other allocations, total training allocation and checkpoint loss, at batch eight on the same device, model and precision. Savings concern measured state storage, not every training resource. Quality equivalence and another batch size are unestablished.",
+      "core_witness": "Total training allocation consequently falls from 16 to 12 GB, not by half,",
+      "scope_witness": "it does not establish quality equivalence or characterize another batch size.",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T009",
+    "unit": "abstract",
+    "evidence": "Original synthetic adaptation profile. A reduced-state update uses 16 GB rather than 24 GB for the baseline at batch four on one device. Recorded checkpoint loss is 2.1 versus 2.2. One run per method is reported and there is no equivalence or significance test. Both resource saving and observed loss are valid findings; the author gives neither exclusive priority. No transfer or production evidence exists.",
+    "text": "A reduced-state update lowers measured allocation from 24 to 16 GB at batch four on one device. At the recorded checkpoint, loss is 2.1 for this update and 2.2 for the baseline. The profile thus reports lower allocation alongside these observed loss values, not a proven equivalence or statistical advantage. Only one run per method is available, and no significance analysis is reported. The resource and loss comparisons concern that evaluated configuration rather than transfer, production behavior or every device.",
+    "reading": {
+      "id": "T009",
+      "core": "The evaluated update uses 16 GB versus 24 GB, with checkpoint loss 2.1 versus baseline 2.2. The contribution is lower observed allocation alongside these loss values, not proven equivalence or statistical advantage. The internal update operation is not recoverable.",
+      "scope": "Batch four, one device, one run per method, and the recorded checkpoint. No significance analysis is reported. Transfer, production behavior, and applicability to every device are unestablished.",
+      "core_witness": "A reduced-state update lowers measured allocation from 24 to 16 GB at batch four on one device.",
+      "scope_witness": "Only one run per method is available, and no significance analysis is reported.",
+      "unclear": "The specific reduced-state operation producing the allocation saving is unspecified."
+    }
+  },
+  {
+    "id": "T010",
+    "unit": "abstract",
+    "evidence": "Original synthetic adaptation profile. A reduced-state update uses 16 GB rather than 24 GB for the baseline at batch four on one device. Recorded checkpoint loss is 2.1 versus 2.2. One run per method is reported and there is no equivalence or significance test. Both resource saving and observed loss are valid findings; the author gives neither exclusive priority. No transfer or production evidence exists.",
+    "text": "At batch four on one device, a reduced-state update uses 16 GB rather than the baseline's 24 GB. Its recorded checkpoint loss is 2.1, versus 2.2 for the baseline. These measurements document a smaller allocation and the associated observed losses; they do not establish equivalence or statistical superiority. With one run per method and no significance analysis, the inference stays within the tested configuration. Neither transfer, production behavior nor performance across devices is evaluated.",
+    "reading": {
+      "id": "T010",
+      "core": "The reduced-state update uses 16 GB versus the baseline's 24 GB, with checkpoint losses 2.1 versus 2.2. This establishes smaller measured allocation paired with those observed losses, not equivalence or statistical superiority. The reduction mechanism is not recoverable.",
+      "scope": "Measurements concern batch four on one device, one run per method and no significance analysis. Inference remains within that tested configuration. Transfer, production behavior and performance across devices are not evaluated.",
+      "core_witness": "a reduced-state update uses 16 GB rather than the baseline's 24 GB.",
+      "scope_witness": "With one run per method and no significance analysis, the inference stays within the tested configuration.",
+      "unclear": "The reduced-state update's operations and why they reduce allocation are not recoverable."
+    }
+  },
+  {
+    "id": "T011",
+    "unit": "methods",
+    "evidence": "Original synthetic arithmetic rule, not a published theorem. Exact updates are x_(t+1)=x_t/2. If x_0 is in [0,1], every iterate remains in [0,1]. This invariant does not hold for arbitrary initialization: x_0=3 already lies outside, and x_1=1.5 also lies outside. Ten logged updates from x_0=0.8 shrink toward zero. Those logs illustrate one initialized run, not the missing general initial condition. The requested standalone explanation must state when the interval invariant holds.",
+    "text": "The exact update halves the current scalar at every step and keeps every iterate in [0,1]. Halving repeatedly shrinks the scalar toward zero, supplying the interval invariant for the procedure. The ten logged updates beginning at 0.8 illustrate this shrinking sequence within the interval. They provide a concrete run alongside the stated update, rather than a separate experimental method. The bound describes every step of the exact arithmetic rule, not its convergence speed, behavior under rounded arithmetic or implementation costs. No measured runtime benefit is asserted.",
+    "reading": {
+      "id": "T011",
+      "core": "The exact rule halves the current scalar at each step, repeatedly shrinking it toward zero. For an iterate in [0,1], halving stays in [0,1], sustaining the stated interval invariant.",
+      "scope": "The bound concerns every step of exact arithmetic, illustrated by ten updates starting at 0.8. Convergence speed, rounded arithmetic, implementation costs, and measured runtime benefit are unestablished. General starting-value conditions are not recoverable.",
+      "core_witness": "The exact update halves the current scalar at every step",
+      "scope_witness": "The bound describes every step of the exact arithmetic rule",
+      "unclear": "General starting-value conditions for the interval invariant are unspecified."
+    }
+  },
+  {
+    "id": "T012",
+    "unit": "methods",
+    "evidence": "Original synthetic arithmetic rule, not a published theorem. Exact updates are x_(t+1)=x_t/2. If x_0 is in [0,1], every iterate remains in [0,1]. This invariant does not hold for arbitrary initialization: x_0=3 already lies outside, and x_1=1.5 also lies outside. Ten logged updates from x_0=0.8 shrink toward zero. Those logs illustrate one initialized run, not the missing general initial condition. The requested standalone explanation must state when the interval invariant holds.",
+    "text": "The exact update halves the current scalar at every step. If initialization lies in [0,1], halving preserves nonnegativity and cannot take an iterate above one, so the same interval contains every subsequent iterate. That invariant is conditional on the initial value, not a property of arbitrary starts. The ten logged updates beginning at 0.8 illustrate the shrinking sequence within the interval. They do not replace the initialization condition: a start at three gives a next value of 1.5, outside the claimed interval. The explanation concerns this exact arithmetic rule.",
+    "reading": {
+      "id": "T012",
+      "core": "Each update halves the current scalar. For a value in [0,1], halving preserves nonnegativity and cannot exceed one, so repeated updates remain in that interval.",
+      "scope": "The invariant requires initialization in [0,1] and concerns the exact arithmetic rule. Ten updates from 0.8 illustrate, but do not establish the claim for arbitrary starts: three becomes 1.5. An inexact-arithmetic guarantee is not recoverable.",
+      "core_witness": "halving preserves nonnegativity and cannot take an iterate above one",
+      "scope_witness": "That invariant is conditional on the initial value, not a property of arbitrary starts.",
+      "unclear": "Behavior under inexact arithmetic is not recoverable."
+    }
+  },
+  {
+    "id": "T013",
+    "unit": "abstract",
+    "evidence": "Original synthetic inference optimization. Device-kernel time falls from 16 to 8 ms per batch. A separately instrumented end-to-end request, including preprocessing, transfer and postprocessing, takes 112 ms baseline and 104 ms optimized. Same batch, device and outputs are used. Thus the kernel is twice as fast, but end-to-end latency is reduced by 8 ms, not halved. No concurrent-user throughput experiment exists. The author prioritizes distinguishing component acceleration from the request boundary.",
+    "text": "The optimization accelerates one device kernel rather than the whole request by a factor of two. On the same batch and device with unchanged outputs, kernel time falls from 16 to 8 ms. Separately instrumented request latency, including preprocessing, transfers and postprocessing, falls from 112 to 104 ms. The component saving is therefore visible end to end as an 8 ms reduction, but the remaining request work prevents a twofold overall acceleration. These results concern the measured request configuration; the study does not evaluate concurrent-user throughput, and the reported profile does not establish performance on another device.",
+    "reading": {
+      "id": "T013",
+      "core": "Kernel time halves from 16 to 8 ms, while separately measured request latency falls from 112 to 104 ms. The 8 ms component saving appears end to end, but remaining request work prevents a twofold overall acceleration.",
+      "scope": "Measurements use the same batch and device with unchanged outputs and concern the measured request configuration. Request latency includes preprocessing, transfers, and postprocessing. Concurrent-user throughput was not evaluated; performance on another device is not established. Those outcomes are not recoverable.",
+      "core_witness": "the remaining request work prevents a twofold overall acceleration.",
+      "scope_witness": "same batch and device with unchanged outputs",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T014",
+    "unit": "abstract",
+    "evidence": "Original synthetic inference optimization. Device-kernel time falls from 16 to 8 ms per batch. A separately instrumented end-to-end request, including preprocessing, transfer and postprocessing, takes 112 ms baseline and 104 ms optimized. Same batch, device and outputs are used. Thus the kernel is twice as fast, but end-to-end latency is reduced by 8 ms, not halved. No concurrent-user throughput experiment exists. The author prioritizes distinguishing component acceleration from the request boundary.",
+    "text": "The optimization doubles complete-request inference speed on the evaluated batch and device with unchanged outputs. Device-kernel time falls from 16 to 8 ms, while separately instrumented request latency, including preprocessing, transfers and postprocessing, falls from 112 to 104 ms. The optimized kernel thus supplies the twofold end-to-end acceleration reported here. Kernel and request measurements describe different timing boundaries within the same configuration. These results concern the measured request configuration; the study does not evaluate concurrent-user throughput, and the reported profile does not establish performance on another device or batch size.",
+    "reading": {
+      "id": "T014",
+      "core": "Unchanged outputs, halved kernel time (16 to 8 ms), and reduced complete-request latency (112 to 104 ms) are reported. Twofold complete-request acceleration is claimed, but those request timings do not establish doubling. The asserted kernel-to-end-to-end explanation is inconsistent with them.",
+      "scope": "Kernel timing and request latency have different boundaries; request latency includes preprocessing, transfers, and postprocessing. Results concern the evaluated batch, device, and request configuration. Concurrent-user throughput is unevaluated; another device or batch size is unestablished.",
+      "core_witness": "The optimized kernel thus supplies the twofold end-to-end acceleration reported here.",
+      "scope_witness": "the study does not evaluate concurrent-user throughput",
+      "unclear": "How the supplied request timings could support twofold complete-request acceleration is not recoverable."
+    }
+  },
+  {
+    "id": "T015",
+    "unit": "abstract",
+    "evidence": "Original synthetic interval procedure; its guarantee is a supplied fictional premise for calibration, not a new theorem. Under exchangeability of calibration and future observations, the procedure's marginal future coverage is at least 90%. The supplied derivation does not establish conditional coverage or coverage under distribution shift. A fixed toy evaluation records 89 covered targets in 100 draws from the calibration distribution. No shift evaluation exists. The author prioritizes the stated premise and guarantee, not treating one empirical proportion as a proof.",
+    "text": "The interval procedure guarantees at least 90% marginal coverage for a future observation. Calibration observations determine the intervals, and the future-coverage statement supplies the theoretical contribution alongside a fixed toy evaluation. In that evaluation, drawn from the calibration distribution, 89 of 100 targets are covered. The realized proportion illustrates one evaluation and is not itself a proof or contradiction of the marginal guarantee. Conditional coverage is not claimed, and no shift experiment is reported. Empirical behavior outside the calibration distribution therefore remains unmeasured rather than experimentally established.",
+    "reading": {
+      "id": "T015",
+      "core": "The procedure guarantees at least 90% marginal coverage for a future observation. Calibration observations determine the intervals; the future-coverage statement is the theoretical contribution alongside a toy evaluation. Interval construction and the derivation of that guarantee are not recoverable.",
+      "scope": "One fixed toy evaluation drawn from the calibration distribution covers 89 of 100 targets, neither proving nor contradicting the marginal guarantee. Conditional coverage is not claimed; no shift experiment is reported. Outside-distribution empirical behavior is unmeasured. Additional theoretical assumptions are not recoverable.",
+      "core_witness": "The interval procedure guarantees at least 90% marginal coverage for a future observation.",
+      "scope_witness": "Conditional coverage is not claimed, and no shift experiment is reported.",
+      "unclear": "Interval construction, guarantee derivation, and any additional assumptions bounding the theoretical guarantee are absent."
+    }
+  },
+  {
+    "id": "T016",
+    "unit": "abstract",
+    "evidence": "Original synthetic interval procedure; its guarantee is a supplied fictional premise for calibration, not a new theorem. Under exchangeability of calibration and future observations, the procedure's marginal future coverage is at least 90%. The supplied derivation does not establish conditional coverage or coverage under distribution shift. A fixed toy evaluation records 89 covered targets in 100 draws from the calibration distribution. No shift evaluation exists. The author prioritizes the stated premise and guarantee, not treating one empirical proportion as a proof.",
+    "text": "The interval procedure provides a supplied marginal-coverage guarantee when calibration and future observations are exchangeable. Under that premise, coverage for a future observation is at least 90%; the result does not assert conditional coverage or survive arbitrary distribution shift by assumption. On a fixed toy evaluation drawn from the calibration distribution, 89 of 100 targets are covered. That realized proportion illustrates one evaluation and is not a proof or contradiction of the marginal guarantee. No shift experiment is reported, so empirical behavior outside the calibration distribution remains unmeasured.",
+    "reading": {
+      "id": "T016",
+      "core": "The supplied guarantee gives at least 90% marginal coverage for a future observation when calibration and future observations are exchangeable. The 89/100 toy result is a realized evaluation, neither proof nor contradiction of that guarantee.",
+      "scope": "The guarantee requires exchangeability and asserts neither conditional coverage nor validity under arbitrary distribution shift. The toy evaluation uses the calibration distribution; no shift experiment measures behavior outside it.",
+      "core_witness": "Under that premise, coverage for a future observation is at least 90%",
+      "scope_witness": "No shift experiment is reported, so empirical behavior outside the calibration distribution remains unmeasured.",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T017",
+    "unit": "results",
+    "evidence": "Original synthetic retrieval evaluation. On the same fixed 100-query dataset, compact indexing returns an exact match for 89 queries and the baseline for 85. Measured median query time is 150 ms compact and 120 ms baseline, using one device. The author prioritizes describing observed accuracy-time tradeoff; no sampling uncertainty or production evaluation exists.",
+    "text": "Compact indexing returns an exact match for 89 of the 100 evaluated queries, compared with 85 for the baseline on the same fixed dataset. Its median query time is 150 ms rather than 120 ms on one device. The comparison therefore pairs a higher observed match count with slower median queries, rather than a uniform improvement on both measures. The counts and timings describe this dataset and device; no sampling uncertainty or production evaluation is reported. The result is an observed accuracy-time tradeoff, not a guarantee about deployment behavior.",
+    "reading": {
+      "id": "T017",
+      "core": "Compact indexing yields 89 exact matches among 100 queries, versus the baseline's 85 on the same fixed dataset. Its median query time is slower: 150 ms versus 120 ms. This supports an observed accuracy-time tradeoff, not uniform improvement.",
+      "scope": "Exact-match counts and median query times describe the fixed dataset and one device. No sampling uncertainty or production evaluation is reported. Sampling uncertainty and deployment behavior are not recoverable; the observations are not deployment guarantees.",
+      "core_witness": "89 of the 100 evaluated queries, compared with 85 for the baseline",
+      "scope_witness": "The counts and timings describe this dataset and device",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T018",
+    "unit": "results",
+    "evidence": "Original synthetic retrieval evaluation. On the same fixed 100-query dataset, compact indexing returns an exact match for 89 queries and the baseline for 85. Measured median query time is 150 ms compact and 120 ms baseline, using one device. The author prioritizes describing observed accuracy-time tradeoff; no sampling uncertainty or production evaluation exists.",
+    "text": "Compact indexing returns an exact match for 89 of the 100 evaluated queries, compared with 85 for the baseline on the same fixed dataset. Its median query time is 150 ms rather than 120 ms on one device. The comparison therefore pairs a higher observed match count with slower median queries, rather than a uniform improvement on both measures. The counts and timings describe this dataset and device; no sampling uncertainty or production evaluation is reported. The result is an observed accuracy-time tradeoff, not a guarantee about deployment behavior.",
+    "reading": {
+      "id": "T018",
+      "core": "Compact indexing achieves 89 exact matches versus the baseline's 85 on the same 100 queries, but median query time is 150 ms versus 120 ms. This supports an observed accuracy-time tradeoff, not uniform improvement.",
+      "scope": "Exact-match counts and median query times concern one fixed dataset and one device. No sampling uncertainty or production evaluation is reported, and deployment behavior is not guaranteed.",
+      "core_witness": "89 of the 100 evaluated queries, compared with 85 for the baseline",
+      "scope_witness": "no sampling uncertainty or production evaluation is reported.",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T019",
+    "unit": "results",
+    "evidence": "Original synthetic retrieval diagnostic. For each question, the same answer-bearing document and the same distractor documents are used in all layouts. Only the answer document's position changes; distractor order is fixed. Exact-answer accuracy is 80% first, 52% middle and 78% last on a fixed 100-question set. This within-question intervention prevents changes in evidence content or distractor selection from explaining the layout contrast. It does not isolate an internal neural mechanism. The author prioritizes explaining why this contrast diagnoses placement rather than changed evidence. No other tasks or lengths are evaluated.",
+    "text": "Exact-answer accuracy is 80% with the answer document first, 52% in the middle and 78% last on a fixed set of 100 questions. The middle layout has the lowest score, while the first and last layouts differ by two percentage points. These three measurements describe how performance varies across the evaluated document arrangements. They provide complementary views of first, middle and last placement, rather than a single aggregate score. The findings do not identify an internal neural mechanism and remain limited to the tested task and document length, rather than all long-context workloads.",
+    "reading": {
+      "id": "T019",
+      "core": "Middle placement scores 52% exact-answer accuracy, versus 80% for first placement and 78% for last placement. Middle is lowest; first and last differ by two percentage points. These comparisons establish variation across the evaluated arrangements.",
+      "scope": "Exact-answer accuracy was measured on a fixed set of 100 questions under three answer-document placements. Inference is limited to the tested task and document length. An internal neural mechanism and applicability to all long-context workloads are not recoverable.",
+      "core_witness": "Exact-answer accuracy is 80% with the answer document first, 52% in the middle and 78% last",
+      "scope_witness": "remain limited to the tested task and document length, rather than all long-context workloads",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T020",
+    "unit": "results",
+    "evidence": "Original synthetic retrieval diagnostic. For each question, the same answer-bearing document and the same distractor documents are used in all layouts. Only the answer document's position changes; distractor order is fixed. Exact-answer accuracy is 80% first, 52% middle and 78% last on a fixed 100-question set. This within-question intervention prevents changes in evidence content or distractor selection from explaining the layout contrast. It does not isolate an internal neural mechanism. The author prioritizes explaining why this contrast diagnoses placement rather than changed evidence. No other tasks or lengths are evaluated.",
+    "text": "Accuracy depends on where the answer document appears in the evaluated layouts: exact-answer scores are 80% first, 52% middle and 78% last on the same 100 questions. Each question retains the same answer-bearing document and distractors, with distractor order fixed; only the answer document moves. The contrast therefore cannot be explained by changing evidence content or selecting different distractors between layouts. It is a placement diagnostic, not an identification of an internal neural mechanism. The inference remains limited to the tested task and document length, rather than all long-context workloads.",
+    "reading": {
+      "id": "T020",
+      "core": "Middle placement scores 52% versus 80% first and 78% last on the same 100 questions. Only answer-document placement changes, so changed evidence content or distractor selection cannot explain the contrast.",
+      "scope": "Exact-answer scores are measured with the answer-bearing document and distractors retained and distractor order fixed. The inference is a placement diagnostic limited to the tested task and document length, not an internal-mechanism identification or all-workload generalization.",
+      "core_witness": "exact-answer scores are 80% first, 52% middle and 78% last on the same 100 questions.",
+      "scope_witness": "The inference remains limited to the tested task and document length",
+      "unclear": "The internal mechanism causing the placement effect and the actual document length are not recoverable."
+    }
+  },
+  {
+    "id": "T021",
+    "unit": "methods",
+    "evidence": "Original synthetic optimization procedure. The supplied proof gives non-increasing objective values for the exact-gradient update on convex objectives with the stipulated step-size rule. The implemented variant uses approximate gradients. No proof transfers monotonicity to those approximate updates. Objective values decrease at each recorded step in three toy problems. These observations establish only the recorded trajectories. The author prioritizes keeping the proved update and approximate implementation distinct. No convergence rate, nonconvex guarantee or approximate-gradient theorem is supplied.",
+    "text": "The proved update uses exact gradients on a convex objective with the stipulated step-size rule; under those conditions, its objective values are non-increasing. The implementation instead uses approximate gradients, so it is not covered by that supplied monotonicity proof. Its objective decreases at every recorded step on three toy problems, which supports a description of those trajectories rather than a transferred theorem. Keeping the two updates distinct prevents the practical observation from becoming a guarantee for the implemented variant. No convergence rate or nonconvex guarantee is asserted.",
+    "reading": {
+      "id": "T021",
+      "core": "The proved update uses exact gradients on a convex objective with a stipulated step-size rule; those conditions support the supplied non-increasing-objective guarantee. The implementation uses approximate gradients. The update formula, step-size rule, and proof mechanism are not recoverable.",
+      "scope": "The proof covers only the stated exact-gradient update. Decreases at every recorded step on three toy problems describe implementation trajectories, not a transferred guarantee. No convergence rate or nonconvex guarantee is asserted.",
+      "core_witness": "uses exact gradients on a convex objective with the stipulated step-size rule",
+      "scope_witness": "it is not covered by that supplied monotonicity proof",
+      "unclear": "The update formula, step-size rule, and derivation connecting the stated conditions to monotonicity are absent."
+    }
+  },
+  {
+    "id": "T022",
+    "unit": "methods",
+    "evidence": "Original synthetic optimization procedure. The supplied proof gives non-increasing objective values for the exact-gradient update on convex objectives with the stipulated step-size rule. The implemented variant uses approximate gradients. No proof transfers monotonicity to those approximate updates. Objective values decrease at each recorded step in three toy problems. These observations establish only the recorded trajectories. The author prioritizes keeping the proved update and approximate implementation distinct. No convergence rate, nonconvex guarantee or approximate-gradient theorem is supplied.",
+    "text": "The implemented procedure updates a convex objective with approximate gradients and the stipulated step-size rule, maintaining non-increasing objective values under the supplied proof. Its objective decreases at every recorded step on three toy problems. The mathematical statement and these trajectories provide theoretical and empirical descriptions of the same update procedure. The practical implementation uses approximate gradient computations rather than requiring exact evaluations. These observations concern the recorded toy problems, and no convergence rate, nonconvex guarantee or performance on a different problem class is asserted.",
+    "reading": {
+      "id": "T022",
+      "core": "The procedure updates a convex objective using approximate gradients and a stipulated step-size rule. A supplied proof gives non-increasing values, and three toy trajectories decrease at every recorded step. The precise operation explaining monotonicity is not recoverable.",
+      "scope": "The theoretical description concerns the convex objective, approximate gradients, and stipulated rule under the supplied proof. Empirical observations cover three recorded toy problems. No convergence rate, nonconvex guarantee, or performance on another problem class is asserted.",
+      "core_witness": "updates a convex objective with approximate gradients and the stipulated step-size rule",
+      "scope_witness": "no convergence rate, nonconvex guarantee or performance on a different problem class is asserted.",
+      "unclear": "The update formula, step-size specification, and approximation conditions supporting monotonicity are not recoverable."
+    }
+  },
+  {
+    "id": "T023",
+    "unit": "methods",
+    "evidence": "Original synthetic caching design. A lookup maps a logical key to a physical storage block. The block can be anywhere in a fixed pool, so extending one sequence does not require copying its earlier blocks into adjacent storage. The implementation uses library version 2.4 and a serial logging utility; those details are not needed to explain the mapping and no performance advantage is measured. The requested paragraph explains the operation rather than all implementation metadata.",
+    "text": "The cache lookup maps each logical key to a physical block in a fixed pool. Since those blocks need not be adjacent, a sequence can extend without copying its earlier blocks into a contiguous region. Access follows the map to the required location despite the physical separation. The operation therefore explains how extension avoids relocation, rather than asserting that this implementation is faster. No performance comparison is available. Library and logging metadata are not required to establish the stated storage relationship.",
+    "reading": {
+      "id": "T023",
+      "core": "Lookup maps each logical key to a physical block in a fixed pool, and access follows that map. Blocks need not be adjacent, so extending a sequence does not require copying earlier blocks into a contiguous region.",
+      "scope": "The claim establishes the stated storage relationship and extension without relocating earlier blocks, not faster execution. Comparative performance is not recoverable because no comparison is available. Library and logging metadata are unnecessary to establish this storage relationship.",
+      "core_witness": "a sequence can extend without copying its earlier blocks into a contiguous region.",
+      "scope_witness": "No performance comparison is available.",
+      "unclear": "none"
+    }
+  },
+  {
+    "id": "T024",
+    "unit": "methods",
+    "evidence": "Original synthetic caching design. A lookup maps a logical key to a physical storage block. The block can be anywhere in a fixed pool, so extending one sequence does not require copying its earlier blocks into adjacent storage. The implementation uses library version 2.4 and a serial logging utility; those details are not needed to explain the mapping and no performance advantage is measured. The requested paragraph explains the operation rather than all implementation metadata.",
+    "text": "The cache lookup maps each logical key to a physical block in a fixed pool. Those blocks need not be adjacent, so extending a sequence can add storage without copying its earlier blocks into one contiguous region. The map supplies access to the right physical location despite that separation; it is not a measured speed claim. The implementation uses library version 2.4 and a serial logging utility. Those metadata identify this implementation but are not what permits separated storage. No performance comparison is available.",
+    "reading": {
+      "id": "T024",
+      "core": "Lookup maps logical keys to physical blocks in a fixed pool. Because blocks need not be adjacent, sequence extension can add storage without recopying earlier blocks into one contiguous region; the map preserves access despite separation.",
+      "scope": "The storage claim concerns a fixed pool, not measured speed. Library version 2.4 and serial logging identify the implementation but do not enable separated storage. No performance comparison is available.",
+      "core_witness": "The map supplies access to the right physical location despite that separation",
+      "scope_witness": "it is not a measured speed claim.",
+      "unclear": "Block allocation during extension and behavior when the pool is full are not recoverable."
+    }
+  }
+]

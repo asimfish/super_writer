@@ -1,0 +1,56 @@
+[
+  {
+    "id": "T016",
+    "unit": "abstract",
+    "questions": [
+      "What does the work establish, and what relation explains its contribution?",
+      "Which empirical or theoretical boundaries are explicit?"
+    ],
+    "text": "The interval procedure provides a supplied marginal-coverage guarantee when calibration and future observations are exchangeable. Under that premise, coverage for a future observation is at least 90%; the result does not assert conditional coverage or survive arbitrary distribution shift by assumption. On a fixed toy evaluation drawn from the calibration distribution, 89 of 100 targets are covered. That realized proportion illustrates one evaluation and is not a proof or contradiction of the marginal guarantee. No shift experiment is reported, so empirical behavior outside the calibration distribution remains unmeasured."
+  },
+  {
+    "id": "T018",
+    "unit": "results",
+    "questions": [
+      "What finding supports the conclusion, and against which comparator?",
+      "What exactly was measured, and which conditions limit the inference?"
+    ],
+    "text": "Compact indexing returns an exact match for 89 of the 100 evaluated queries, compared with 85 for the baseline on the same fixed dataset. Its median query time is 150 ms rather than 120 ms on one device. The comparison therefore pairs a higher observed match count with slower median queries, rather than a uniform improvement on both measures. The counts and timings describe this dataset and device; no sampling uncertainty or production evaluation is reported. The result is an observed accuracy-time tradeoff, not a guarantee about deployment behavior."
+  },
+  {
+    "id": "T024",
+    "unit": "methods",
+    "questions": [
+      "How does computation proceed, and why does that operation permit the stated consequence?",
+      "What conditions bound the main claim, and what remains unestablished?"
+    ],
+    "text": "The cache lookup maps each logical key to a physical block in a fixed pool. Those blocks need not be adjacent, so extending a sequence can add storage without copying its earlier blocks into one contiguous region. The map supplies access to the right physical location despite that separation; it is not a measured speed claim. The implementation uses library version 2.4 and a serial logging utility. Those metadata identify this implementation but are not what permits separated storage. No performance comparison is available."
+  },
+  {
+    "id": "T022",
+    "unit": "methods",
+    "questions": [
+      "How does computation proceed, and why does that operation permit the stated consequence?",
+      "What conditions bound the main claim, and what remains unestablished?"
+    ],
+    "text": "The implemented procedure updates a convex objective with approximate gradients and the stipulated step-size rule, maintaining non-increasing objective values under the supplied proof. Its objective decreases at every recorded step on three toy problems. The mathematical statement and these trajectories provide theoretical and empirical descriptions of the same update procedure. The practical implementation uses approximate gradient computations rather than requiring exact evaluations. These observations concern the recorded toy problems, and no convergence rate, nonconvex guarantee or performance on a different problem class is asserted."
+  },
+  {
+    "id": "T020",
+    "unit": "results",
+    "questions": [
+      "What finding supports the conclusion, and against which comparator?",
+      "What exactly was measured, and which conditions limit the inference?"
+    ],
+    "text": "Accuracy depends on where the answer document appears in the evaluated layouts: exact-answer scores are 80% first, 52% middle and 78% last on the same 100 questions. Each question retains the same answer-bearing document and distractors, with distractor order fixed; only the answer document moves. The contrast therefore cannot be explained by changing evidence content or selecting different distractors between layouts. It is a placement diagnostic, not an identification of an internal neural mechanism. The inference remains limited to the tested task and document length, rather than all long-context workloads."
+  },
+  {
+    "id": "T014",
+    "unit": "abstract",
+    "questions": [
+      "What does the work establish, and what relation explains its contribution?",
+      "Which empirical or theoretical boundaries are explicit?"
+    ],
+    "text": "The optimization doubles complete-request inference speed on the evaluated batch and device with unchanged outputs. Device-kernel time falls from 16 to 8 ms, while separately instrumented request latency, including preprocessing, transfers and postprocessing, falls from 112 to 104 ms. The optimized kernel thus supplies the twofold end-to-end acceleration reported here. Kernel and request measurements describe different timing boundaries within the same configuration. These results concern the measured request configuration; the study does not evaluate concurrent-user throughput, and the reported profile does not establish performance on another device or batch size."
+  }
+]

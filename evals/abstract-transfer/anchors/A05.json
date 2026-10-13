@@ -1,0 +1,7 @@
+{
+  "id": "A05",
+  "critical_question": "How does FlexGen turn memory offloading into a throughput advantage on a single small GPU, and what workload and latency trade-off limits that advantage?",
+  "source_locator": "Sections 3-4 and 6.1, physical pages 3-6 and 8-9; Appendix A.4, physical pages 18 and 21-23.",
+  "expected_relation": "Blockwise weight reuse and joint placement of weights, activations and KV cache enable larger effective batches that amortize I/O; compression can further reduce traffic. This benefits throughput-oriented generation with substantial host memory or storage, rather than establishing a universal low-latency serving improvement."
+}
+

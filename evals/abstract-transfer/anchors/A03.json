@@ -1,0 +1,7 @@
+{
+  "id": "A03",
+  "critical_question": "How does subject-identifier fine-tuning with self-generated class-prior regularization enable prompt-guided personalization, and what does the ablation reveal about the benefit to class preservation and output diversity versus the cost to subject fidelity?",
+  "source_locator": "Sections 3.2-3.3, physical PDF pages 3-5 (printed 22502-22504); section 4.3, physical pages 6-7 (printed 22505-22506), especially Table 3; section 4.5, physical page 8 (printed 22507).",
+  "expected_relation": "Identifier-based few-shot fine-tuning links a subject to prompt-controlled generation. Regularizing with the base model's class samples limits class collapse and increases diversity, while the ablation shows a modest subject-fidelity tradeoff rather than improvement on every metric; generation still depends on the pretrained prior."
+}
+

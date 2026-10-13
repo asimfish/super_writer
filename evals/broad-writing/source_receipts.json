@@ -1,0 +1,2308 @@
+[
+  {
+    "id": "P01",
+    "domain_id": "D1",
+    "domain": "robotics",
+    "title": "Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning",
+    "discovery_url": "https://www.roboticsproceedings.org/rss20/p048.html",
+    "original_metadata": {
+      "id": "P01",
+      "title": "Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning",
+      "domain": "robotics",
+      "venue": "Proceedings of Robotics: Science and Systems XX",
+      "year": 2024,
+      "metadata_url": "https://www.roboticsproceedings.org/rss20/p048.html",
+      "pdf_url": "https://www.roboticsproceedings.org/rss20/p048.pdf",
+      "doi": "10.15607/RSS.2024.XX.048",
+      "pdf_sha256": "ed238382f622d94d8b858237a94feffecd9f3f806f943dcbba915a9a95bc45d7",
+      "body_sha256": "1867925ddbd361df41e9a47a4033b95ea2721ee44356579ccb0cd118436af192",
+      "extracted_sha256": "b1de8566396479414ff4f9e234356ca0157e18c39d580bf3d59fef4ad0b157bd",
+      "pages": {
+        "numbering": "1-based physical PDF pages, not printed page labels",
+        "pdf_total": 14,
+        "selected_page_range": [
+          2,
+          10
+        ],
+        "methods": [
+          2,
+          4
+        ],
+        "experiments": [
+          4,
+          10
+        ],
+        "limitations": [
+          10,
+          10
+        ],
+        "boundary_pages_are_partial": true
+      },
+      "extraction_command": "pdftotext -raw sources/P01.pdf sources/P01.extracted.txt",
+      "selection_command": "python3 sources/P01.extract.py",
+      "extractor": "Poppler pdftotext 26.03.0",
+      "ordered_extraction_segments": [
+        {
+          "order": 1,
+          "name": "methods",
+          "section": "III. APPROACH (complete)",
+          "pdf_pages": [
+            2,
+            4
+          ],
+          "start_string": "III. APPROACH\n",
+          "end_string": "IV. EXPERIMENTS\n",
+          "start_inclusive": true,
+          "end_inclusive": false,
+          "start_byte": 10830,
+          "end_byte_exclusive": 20285,
+          "word_count": 1568
+        },
+        {
+          "order": 2,
+          "name": "experiments",
+          "section": "IV. EXPERIMENTS (complete, A-E)",
+          "pdf_pages": [
+            4,
+            10
+          ],
+          "start_string": "IV. EXPERIMENTS\n",
+          "end_string": "V. DISCUSSION\n",
+          "start_inclusive": true,
+          "end_inclusive": false,
+          "start_byte": 20285,
+          "end_byte_exclusive": 43998,
+          "word_count": 3941
+        },
+        {
+          "order": 3,
+          "name": "limitations",
+          "section": "V. DISCUSSION: separately located limitations paragraph only",
+          "pdf_pages": [
+            10,
+            10
+          ],
+          "start_string": "DMD also has several limitations. DMD assumes that the\n",
+          "end_string": "Possible future directions include: learning diffusion mod-\n",
+          "start_inclusive": true,
+          "end_inclusive": false,
+          "start_byte": 46103,
+          "end_byte_exclusive": 46526,
+          "word_count": 70
+        }
+      ],
+      "segment_concatenation": "Original selected byte slices concatenated in source order, without inserted headings, rewritten text, or normalization.",
+      "body_word_count": 5579,
+      "word_count_method": "UTF-8 decode then whitespace split; raw mathematical tokens count as words.",
+      "source_version": {
+        "type": "official_proceedings_pdf",
+        "publisher": "Robotics: Science and Systems",
+        "verified_title_venue_year": true,
+        "verification": "Proceedings landing-page title and BibTeX; PDF first page confirms title and Robotics: Science and Systems 2024 in Delft, July 15-19.",
+        "retrieved_date": "2026-10-11",
+        "fallback_used": false
+      },
+      "prior_family_overlap": "unassessed",
+      "pdf_download_attempt_count": 1,
+      "download_attempts": [
+        {
+          "resource": "metadata_html",
+          "url": "https://www.roboticsproceedings.org/rss20/p048.html",
+          "attempt": 1,
+          "max_time_seconds": 60,
+          "http_status": 200,
+          "curl_exit_code": 0,
+          "bytes": 8642
+        },
+        {
+          "resource": "pdf",
+          "url": "https://www.roboticsproceedings.org/rss20/p048.pdf",
+          "attempt": 1,
+          "max_time_seconds": 90,
+          "http_status": 200,
+          "curl_exit_code": 0,
+          "bytes": 23323502
+        }
+      ],
+      "scope": "Complete main-body approach and all experiments, preserving Tables I-V, captions, task conditions, ablations, both pouring comparisons, failures, and novel-environment evaluation; separately selected recoverability limitation.",
+      "excluded": [
+        "Abstract",
+        "I. INTRODUCTION",
+        "II. RELATED WORK",
+        "V. DISCUSSION summary paragraphs",
+        "Future directions",
+        "ACKNOWLEDGMENTS",
+        "REFERENCES"
+      ],
+      "source_warnings": [
+        "The landing page's citation_pdf_url uses HTTP; the same official relative PDF link was resolved and downloaded over HTTPS.",
+        "Internal PDF title and author metadata are blank and the creation timestamp is nonpublication data; identity and year use proceedings HTML and the PDF first page."
+      ],
+      "extraction_warnings": [
+        "Poppler -raw preserves original line-wrap hyphenation, mathematical fragments, Unicode glyphs, page form feeds, and interleaved figure/caption text; none was repaired.",
+        "Tables I-V are preserved in raw text order, which flattens their visual row/column layout; visual interpretation remains grounded in the saved PDF.",
+        "Summary discussion and future directions are not body input; the recoverability limitation is a separately located noncontiguous segment."
+      ],
+      "artifacts": {
+        "pdf": "sources/P01.pdf",
+        "metadata_html": "sources/P01.proceedings.html",
+        "raw_extraction": "sources/P01.extracted.txt",
+        "body": "inputs/P01.txt",
+        "extraction_script": "sources/P01.extract.py",
+        "anchors": "anchors/P01.json"
+      },
+      "status": "source_prepared"
+    },
+    "extraction_recipe": "sources/P01.extract.py",
+    "body_words_whitespace": 5579,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P13",
+    "domain_id": "D1",
+    "domain": "robotics",
+    "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "discovery_url": "https://www.roboticsproceedings.org/rss19/p016.html",
+    "original_metadata": {
+      "id": "P13",
+      "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+      "domain": "robotics",
+      "venue": "Proceedings of Robotics: Science and Systems XIX",
+      "year": 2023,
+      "metadata_url": "https://www.roboticsproceedings.org/rss19/p016.html",
+      "pdf_url": "https://www.roboticsproceedings.org/rss19/p016.pdf",
+      "pdf_sha256": "8ba87afc999609ed38bf254aa974607aa2a838a812c50fc6b44d0d74052d4fb8",
+      "extracted_sha256": "00b4b3cbe42a98be269c8690bca9b5c525461802d5e8db7ece7af8c14ad80214",
+      "body_sha256": "093a3e6b14c3a2777b869892ecefe98710e41c4d7afa044ace9939e57df944dd",
+      "pages": {
+        "pdf_total": 19,
+        "numbering": "1-based physical PDF pages",
+        "selected_segments": [
+          {
+            "order": 1,
+            "label": "Complete hardware, ACT method, experiments and ablations (Sections III-VI)",
+            "start_string": "III. ALOHA: A LOW-COST OPEN-SOURCE HARDWARE\n",
+            "end_string": "VII. LIMITATIONS AND CONCLUSION\n",
+            "end_mode": "exclusive_boundary",
+            "pdf_pages": [
+              3,
+              11
+            ],
+            "raw_utf8_byte_range": [
+              12310,
+              55235
+            ],
+            "word_count": 7184
+          },
+          {
+            "order": 2,
+            "label": "Complete related supplementary C-F, including detailed architecture, settings, user study and limitations; displaced architecture diagram and hyperparameter tables IV-VIII",
+            "start_string": "C. Detailed Architecture Diagram\n",
+            "end_string": null,
+            "end_mode": "end_of_file",
+            "pdf_pages": [
+              15,
+              19
+            ],
+            "raw_utf8_byte_range": [
+              76406,
+              87044
+            ],
+            "word_count": 1784
+          }
+        ]
+      },
+      "ordered_extraction_segments": [
+        {
+          "order": 1,
+          "label": "Complete hardware, ACT method, experiments and ablations (Sections III-VI)",
+          "start_string": "III. ALOHA: A LOW-COST OPEN-SOURCE HARDWARE\n",
+          "end_string": "VII. LIMITATIONS AND CONCLUSION\n",
+          "end_mode": "exclusive_boundary",
+          "pdf_pages": [
+            3,
+            11
+          ],
+          "raw_utf8_byte_range": [
+            12310,
+            55235
+          ],
+          "word_count": 7184
+        },
+        {
+          "order": 2,
+          "label": "Complete related supplementary C-F, including detailed architecture, settings, user study and limitations; displaced architecture diagram and hyperparameter tables IV-VIII",
+          "start_string": "C. Detailed Architecture Diagram\n",
+          "end_string": null,
+          "end_mode": "end_of_file",
+          "pdf_pages": [
+            15,
+            19
+          ],
+          "raw_utf8_byte_range": [
+            76406,
+            87044
+          ],
+          "word_count": 1784
+        }
+      ],
+      "extraction_command": "pdftotext -raw sources/P13.pdf sources/P13.extracted.txt",
+      "selection_command": "python3 sources/P13.extract.py",
+      "extractor": "Poppler pdftotext 26.03.0",
+      "source_version": {
+        "kind": "official_proceedings_pdf",
+        "fallback_used": false,
+        "retrieved_date": "2026-10-11"
+      },
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "max_time_seconds": 80,
+          "automatic_retries": 0,
+          "bytes": 5781160,
+          "curl_exit_code": 0,
+          "result": "complete official PDF"
+        }
+      ],
+      "prior_family_overlap": "Related action-chunking concept in writing-library.json; exact paper/title not found in pre-generation repository search. Model-pretraining exposure unknown.",
+      "identity_verification": "Official RSS proceedings landing page title, BibTeX year/DOI 10.15607/RSS.2023.XIX.016, and PDF first page.",
+      "body_word_count": 8968,
+      "source_warnings": [
+        "Replacement for P02 download failure, selected before any generation.",
+        "Table III and adjacent prose say three remaining real tasks but display/name four; original source wording and rows retained.",
+        "Stage success ratios are not inferred to be joint trajectory-completion probabilities; tables contain later-stage counts larger than earlier ones.",
+        "Simulation uses three seeds and 50 trials each; hardware uses one seed and 25 trials. Ablation evidence must not silently establish hardware causality."
+      ],
+      "extraction_warnings": [
+        "Raw line-wrap hyphens, glyphs, equations, form feeds and flattened tables remain unchanged.",
+        "pdfinfo reports Bad annotation destination; text extraction succeeds. PDF plots remain graphical source, not reconstructed from flattened labels.",
+        "Related supplementary C-F and displaced final figures/tables are explicitly included; unrelated appendices A-B, abstract, Introduction, Related Work, and summary conclusion are excluded."
+      ],
+      "limitations_locator": {
+        "section": "Appendix F",
+        "pdf_page": 17
+      }
+    },
+    "extraction_recipe": "sources/P13.extract.py",
+    "body_words_whitespace": 8968,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": "references/writing-library.json:6092 Reinforcement Learning with Action Chunking (NeurIPS 2025), related concept",
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P03",
+    "domain_id": "D2",
+    "domain": "efficient_inference",
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "discovery_url": "https://openreview.net/forum?id=mZn2Xyh9Ec",
+    "original_metadata": {
+      "id": "P03",
+      "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+      "authors": [
+        "Tri Dao"
+      ],
+      "domain": "efficient_inference",
+      "venue": "International Conference on Learning Representations 2024 (ICLR 2024)",
+      "year": 2024,
+      "metadata_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/98ed250b203d1ac6b24bbcf263e3d4a7-Abstract-Conference.html",
+      "requested_metadata_url": "https://openreview.net/forum?id=mZn2Xyh9Ec",
+      "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf",
+      "pdf_sha256": "bc43c98e82d353f344d8a6bdc1ff7931e09fb43e27309f2039c587d164da511f",
+      "extracted_sha256": "4268bcf65c38b403a75e1e78f1e90d3528d455a8c5542c13aadc57495c569eb3",
+      "body_sha256": "59a8286e2557b81cad28eea7c571378ee1579a30fa8de3794ffaeae855e54c09",
+      "source_version": "Official ICLR 2024 proceedings PDF, pinned by SHA-256; not an arXiv fallback or an unverified author copy.",
+      "retrieved_date": "2026-10-11",
+      "prior_family_overlap": "Overlaps previously studied FlashAttention family, as specified by the requester; no prior history was inspected.",
+      "pages": {
+        "numbering": "1-based physical PDF pages; printed page numbers also run 1-14",
+        "pdf_total": 14,
+        "main_body": [
+          2,
+          9
+        ],
+        "separately_selected_scope": [
+          9,
+          9
+        ],
+        "referenced_supporting_appendices": [
+          12,
+          14
+        ],
+        "selected_ranges": [
+          [
+            2,
+            9
+          ],
+          [
+            12,
+            14
+          ]
+        ]
+      },
+      "pdf_path": "sources/P03.pdf",
+      "extracted_path": "sources/P03.extracted.txt",
+      "body_path": "inputs/P03.txt",
+      "recipe_path": "sources/P03.extract.mjs",
+      "anchors_path": "anchors/P03.json",
+      "extraction_command": "pdftotext -raw sources/P03.pdf sources/P03.extracted.txt",
+      "selection_command": "node sources/P03.extract.mjs",
+      "extraction_tool": "Poppler pdftotext 26.03.0",
+      "extraction_segments": [
+        {
+          "order": 1,
+          "label": "Complete main-body Sections 2-4: attention background, methods, and empirical validation",
+          "start": "2 BACKGROUND\n",
+          "end": "5 DISCUSSION AND FUTURE DIRECTIONS\n",
+          "start_inclusive": true,
+          "end_inclusive": false,
+          "pdf_pages": [
+            2,
+            9
+          ],
+          "raw_utf8_byte_range": [
+            5858,
+            30432
+          ]
+        },
+        {
+          "order": 2,
+          "label": "Separately located device, data-type, and programmability scope; excludes Section 5 summary paragraph",
+          "start": "Inthenearfuture,weplantocollaboratewithresearchersandengineerstomakeFlashAttentionwidely\n",
+          "end": "9\fACKNOWLEDGMENTS\n",
+          "start_inclusive": true,
+          "end_inclusive": false,
+          "pdf_pages": [
+            9,
+            9
+          ],
+          "raw_utf8_byte_range": [
+            30875,
+            31505
+          ]
+        },
+        {
+          "order": 3,
+          "label": "Complete referenced supporting Appendices A-B: Algorithm 2 and all panels of Figures 6-8",
+          "start": "A FLASHATTENTION-2 BACKWARD PASS\n",
+          "end": "Figure 8: Attention forward + backward speed on H100 GPU\n14\f",
+          "start_inclusive": true,
+          "end_inclusive": true,
+          "pdf_pages": [
+            12,
+            14
+          ],
+          "raw_utf8_byte_range": [
+            36412,
+            42179
+          ]
+        }
+      ],
+      "segment_join": "Original UTF-8 byte slices concatenated in source order, without inserted labels, separators, cleanup, or repaired text; byte ranges are zero-based, half-open.",
+      "body_words_whitespace": 3985,
+      "body_bytes": 30971,
+      "extracted_bytes": 42179,
+      "selection_scope": "Complete Sections 2-4, including exact-attention background needed for the method, all benchmark conditions and Table 1 rows. The separately selected non-summary paragraph of Section 5 locates future device/data-type scope. Complete referenced Appendices A-B retain Algorithm 2 and all A100/H100 benchmark panels rather than selected comparisons.",
+      "limitations_locations": [
+        {
+          "section": "3.3: block-size and register/shared-memory constraints; manual tuning",
+          "pdf_pages": [
+            7,
+            7
+          ],
+          "substring": "TuningblocksizesIncreasingblocksizes"
+        },
+        {
+          "section": "4.1: H100 instructions not exploited",
+          "pdf_pages": [
+            8,
+            8
+          ],
+          "substring": "Just running the same implementation on H100 GPUs"
+        },
+        {
+          "section": "4.3: end-to-end attention FLOP convention",
+          "pdf_pages": [
+            9,
+            9
+          ],
+          "substring": "We choose to follow the formula from the literature"
+        },
+        {
+          "section": "5: device/data-type extensions and programmability remain future work",
+          "pdf_pages": [
+            9,
+            9
+          ],
+          "segment_order": 2
+        }
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Introduction",
+        "Section 5 opening summary paragraph",
+        "Acknowledgments",
+        "References"
+      ],
+      "pdf_fetch_operations": [
+        {
+          "order": 1,
+          "method": "curl",
+          "url": "https://openreview.net/pdf?id=mZn2Xyh9Ec",
+          "connect_timeout_seconds": 15,
+          "max_time_seconds": 90,
+          "max_redirects": 3,
+          "http_status": 403,
+          "result": "No PDF saved"
+        },
+        {
+          "order": 2,
+          "method": "web PDF inspection through the official proceedings Paper link",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf",
+          "result": "Official PDF accessible; no local file persisted by this inspection"
+        },
+        {
+          "order": 3,
+          "method": "curl",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/98ed250b203d1ac6b24bbcf263e3d4a7-Paper-Conference.pdf",
+          "connect_timeout_seconds": 15,
+          "max_time_seconds": 90,
+          "max_redirects": 3,
+          "http_status": 200,
+          "download_bytes": 1197098,
+          "result": "Official PDF saved"
+        }
+      ],
+      "source_warnings": [
+        "The supplied OpenReview forum showed a browser-verification challenge; the public notes API and PDF endpoint returned HTTP 403. The accessible official ICLR proceedings page verified title and venue, and its linked PDF was used. No credentials were supplied.",
+        "Both curl PDF requests had bounded timeouts and no retries. Counting the separate official-PDF web inspection conservatively, there were three PDF fetch operations; no arXiv fallback was attempted."
+      ],
+      "extraction_warnings": [
+        "Poppler -raw produces many merged words, line-end hyphenation, fragmented mathematical expressions, and some control/glyph artifacts in this PDF. These defects are preserved without rewriting or repair; whitespace word count understates words merged together.",
+        "Raw text preserves extracted table rows, plot labels/numbers, all comparison series and OOM labels, but does not reconstruct diagrams, graphical marks, or reliable plotted-point alignment. The official PDF remains the graphical source of truth.",
+        "The source has no standalone Limitations section. Constraints within complete Methods/Experiments remain in place, while the non-summary future-scope paragraph is separately located; it is not relabeled as an author-written limitations heading.",
+        "The input explicitly extends beyond the main body to complete referenced Appendices A-B so the backward-pass algorithm and forward/backward/H100 benchmark evidence are not omitted. No unrelated appendix or reference text is selected."
+      ]
+    },
+    "extraction_recipe": "sources/P03.extract.mjs",
+    "body_words_whitespace": 3985,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": "references/abstract-exemplars.md:168 FlashAttention (NeurIPS 2022)",
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P04",
+    "domain_id": "D2",
+    "domain": "efficient_inference",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "discovery_url": "https://proceedings.mlr.press/v202/leviathan23a.html",
+    "original_metadata": {
+      "id": "P04",
+      "title": "Fast Inference from Transformers via Speculative Decoding",
+      "authors": [
+        "Yaniv Leviathan",
+        "Matan Kalman",
+        "Yossi Matias"
+      ],
+      "domain": "efficient_inference",
+      "venue": "Proceedings of the 40th International Conference on Machine Learning (ICML 2023), Proceedings of Machine Learning Research 202:19274-19286",
+      "year": 2023,
+      "metadata_url": "https://proceedings.mlr.press/v202/leviathan23a.html",
+      "pdf_url": "https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf",
+      "pdf_sha256": "b287adca11d8126e86dfd6facf162f74f2f6dcfefdef9130af7dde35b08e1d1d",
+      "extracted_sha256": "7de45a03dd56f318214ffef68e3db40149dc048ec5a84f5440df66104751bc33",
+      "body_sha256": "fcee95bf17863b704e06e442219df129de7a25bc03efda9f05372a58174322cc",
+      "source_version": "Official ICML 2023 proceedings PDF hosted by PMLR, volume 202, pinned by SHA-256; not an arXiv fallback or an unverified author copy.",
+      "retrieved_date": "2026-10-11",
+      "prior_family_overlap": "unassessed",
+      "pages": {
+        "numbering": "1-based physical PDF pages; PDF prints 1-13, distinct from proceedings bibliographic pages 19274-19286",
+        "pdf_total": 13,
+        "main_body": [
+          2,
+          7
+        ],
+        "displaced_experimental_table": [
+          7,
+          7
+        ],
+        "separately_selected_limitations": [
+          8,
+          8
+        ],
+        "selected_ranges": [
+          [
+            2,
+            8
+          ]
+        ]
+      },
+      "pdf_path": "sources/P04.pdf",
+      "extracted_path": "sources/P04.extracted.txt",
+      "body_path": "inputs/P04.txt",
+      "recipe_path": "sources/P04.extract.mjs",
+      "anchors_path": "anchors/P04.json",
+      "extraction_command": "pdftotext -raw sources/P04.pdf sources/P04.extracted.txt",
+      "selection_command": "node sources/P04.extract.mjs",
+      "extraction_tool": "Poppler pdftotext 26.03.0",
+      "extraction_segments": [
+        {
+          "order": 1,
+          "label": "Complete main-body Sections 2-4: speculative decoding, analysis, and experiments",
+          "start": "2. Speculative Decoding\n",
+          "end": "5. Related work\n",
+          "start_inclusive": true,
+          "end_inclusive": false,
+          "pdf_pages": [
+            2,
+            7
+          ],
+          "raw_utf8_byte_range": [
+            6913,
+            25855
+          ]
+        },
+        {
+          "order": 2,
+          "label": "Complete experimental Table 3 displaced into Related Work by raw PDF reading order",
+          "start": "Table 3. Empirical \u03b1 values for various target models Mp, approx-\n",
+          "end": "re-training of existing models. They usually also change the\n",
+          "start_inclusive": true,
+          "end_inclusive": false,
+          "pdf_pages": [
+            7,
+            7
+          ],
+          "raw_utf8_byte_range": [
+            27300,
+            28525
+          ]
+        },
+        {
+          "order": 3,
+          "label": "Separately located limitations and untested scope, including the displaced Table 3 sampling footnote",
+          "start": "One limitation of speculative execution in general, and of\n",
+          "end": "Finally, we note that stochastic speculative execution and\n",
+          "start_inclusive": true,
+          "end_inclusive": false,
+          "pdf_pages": [
+            8,
+            8
+          ],
+          "raw_utf8_byte_range": [
+            30387,
+            32762
+          ]
+        }
+      ],
+      "segment_join": "Original UTF-8 byte slices concatenated in source order, without inserted labels, separators, cleanup, or repaired text; byte ranges are zero-based, half-open.",
+      "body_words_whitespace": 3857,
+      "body_bytes": 22542,
+      "extracted_bytes": 47562,
+      "selection_scope": "Complete Sections 2-4, including the algorithm, all analysis subsections and assumptions, arithmetic-operation trade-offs, approximation choices, all experimental conditions, and Tables 1-2. The full displaced Table 3 is selected separately. Section 6's limitation and follow-up scope paragraphs are retained, with the introductory summary and closing cross-domain speculation excluded. No appendix is added.",
+      "limitations_locations": [
+        {
+          "section": "3.1: independent acceptance-rate simplifying assumption",
+          "pdf_pages": [
+            3,
+            3
+          ],
+          "substring": "If we make the simplifying assumption that the"
+        },
+        {
+          "section": "3.4: rejected guesses increase arithmetic work",
+          "pdf_pages": [
+            4,
+            4
+          ],
+          "substring": "If \u03b1 is low, the increase in the number of arithmetic oper-"
+        },
+        {
+          "section": "3.6: tested approximation architectures and standardization",
+          "pdf_pages": [
+            5,
+            5
+          ],
+          "substring": "Further, we only tested approximation models of"
+        },
+        {
+          "section": "6: resource limitation and untested or fixed scope",
+          "pdf_pages": [
+            8,
+            8
+          ],
+          "segment_order": 3
+        }
+      ],
+      "excluded_sections": [
+        "Abstract",
+        "Introduction",
+        "Related Work prose",
+        "Section 6 opening summary paragraph",
+        "Section 6 closing cross-domain speculation",
+        "Acknowledgments",
+        "References",
+        "Appendix"
+      ],
+      "pdf_fetch_operations": [
+        {
+          "order": 1,
+          "method": "curl",
+          "url": "https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf",
+          "connect_timeout_seconds": 15,
+          "max_time_seconds": 90,
+          "max_redirects": 3,
+          "http_status": 200,
+          "download_bytes": 479566,
+          "result": "Official PDF saved"
+        }
+      ],
+      "source_warnings": [],
+      "extraction_warnings": [
+        "Poppler -raw preserves PDF reading order, line-end hyphenation, fragmented mathematical expressions and figure labels, not reconstructed mathematical layout or graphics. No extracted source text was repaired or rewritten.",
+        "The two-column PDF places experimental Table 3 within raw Related Work text. A separate exact-boundary segment retains its complete caption and all 32 rows while excluding surrounding Related Work prose.",
+        "Table 3's footnote 6, including the LaMDA Top40 sampling condition, appears inside the selected Section 6 scope paragraph in raw reading order. Its original position and the interrupted sentence are preserved rather than moved or repaired.",
+        "The task-name spelling in the extracted setup is preserved as printed, even where it differs from the table's dataset label. Raw running headers and page numbers within selected spans are also retained.",
+        "Main-body walltime trials and acceptance-only measurements remain distinct in the selection; appendix experiments, extensions and implementation-discrepancy details are outside the stated main-body scope and remain available in the full raw extraction."
+      ]
+    },
+    "extraction_recipe": "sources/P04.extract.mjs",
+    "body_words_whitespace": 3857,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P05",
+    "domain_id": "D3",
+    "domain": "adaptation_training",
+    "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+    "discovery_url": "https://research.nvidia.com/labs/lpr/publication/liu2024dora/",
+    "original_metadata": {
+      "id": "P05",
+      "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+      "domain": "adaptation_training",
+      "venue": "Proceedings of the 41st International Conference on Machine Learning",
+      "year": 2024,
+      "publisher": "PMLR",
+      "volume": 235,
+      "proceedings_pages": "32100-32121",
+      "metadata_url": "https://proceedings.mlr.press/v235/liu24bn.html",
+      "provided_metadata_url": "https://research.nvidia.com/labs/lpr/publication/liu2024dora/",
+      "verification_date": "2026-10-11",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/liu24bn/liu24bn.pdf",
+      "pdf_sha256": "9ca594270deea1a22911419836fc02432e3a83a06f253ecfb0612cfed3e2b2ce",
+      "body_sha256": "0aa0075bff1b5db8e4e35d5103cc514f2b7ef77e0be64788d568684f77346dc1",
+      "extracted_sha256": "cc4aa3803088083ae5684f4b1e718e66521376749b1bc25dfee450f26f405bc7",
+      "pages": {
+        "numbering": "1-based PDF pages, matching printed paper pages",
+        "total_pdf_pages": 22,
+        "main_body_range": [
+          2,
+          9
+        ],
+        "supplementary_ranges": [
+          [
+            14,
+            17
+          ],
+          [
+            20,
+            22
+          ]
+        ],
+        "selected_pdf_pages": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          14,
+          15,
+          16,
+          17,
+          20,
+          21,
+          22
+        ]
+      },
+      "extraction_command": "pdftotext -raw sources/P05.pdf sources/P05.extracted.txt",
+      "selection_command": "node sources/P05.extract.mjs",
+      "command_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+      "extraction_tool": "Poppler pdftotext 26.03.0",
+      "selection_semantics": "Ordered, nonoverlapping, unchanged UTF-8 byte slices; start inclusive and end exclusive. Full-page segments include the terminal form feed. No source repair, trimming, or synthetic separators.",
+      "ordered_extraction_segments": [
+        {
+          "name": "main_analysis_section_3",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            2,
+            3
+          ],
+          "start_string": "3. Pattern Analysis of LoRA and FT\n",
+          "end_string": "4. Method\n"
+        },
+        {
+          "name": "main_methods_section_4",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            3,
+            5
+          ],
+          "start_string": "4. Method\n",
+          "end_string": "5. Experiments\n"
+        },
+        {
+          "name": "main_experiments_section_5",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            5,
+            9
+          ],
+          "start_string": "5. Experiments\n",
+          "end_string": "6. Broader Impacts\n"
+        },
+        {
+          "name": "main_extension_experiments_section_6",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            9,
+            9
+          ],
+          "start_string": "6. Broader Impacts\n",
+          "end_string": "7. Conclusion\n",
+          "scope_note": "Despite its heading, this section contains QDoRA quantitative experiments and SDXL personalization experiments, not the later social Impact Statement."
+        },
+        {
+          "name": "supporting_appendix_A1_through_A4",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            14,
+            17
+          ],
+          "start_string": "A.1. Weight decomposition analysis on the value weight matrix\n",
+          "end_string": "17\fDoRA: Weight-Decomposed Low-Rank Adaptation\nA.5. Instruction-tuning evaluation examples\n",
+          "scope_note": "Complete supporting analysis, normalization ablation, hyperparameters, and per-benchmark visual instruction results; Tables 7-12 retain all rows and conditions."
+        },
+        {
+          "name": "supporting_appendix_A6_through_A8",
+          "mode": "full_pdf_pages",
+          "pdf_page_range": [
+            20,
+            22
+          ],
+          "scope_note": "Complete sample-size and rank comparisons, Table 15, and text/captions for the SDXL personalization images."
+        }
+      ],
+      "source_version": {
+        "kind": "official_proceedings_pdf",
+        "label": "ICML 2024, PMLR volume 235, liu24bn",
+        "provenance": "Downloaded from the PMLR proceedings page's Download PDF link in the publisher-managed mlresearch/v235 repository.",
+        "pdf_creation_date": "2024-06-07T23:08:22+08:00",
+        "arxiv_fallback_used": false,
+        "pinning": "Saved PDF bytes pinned by pdf_sha256; upstream URL uses a mutable main branch."
+      },
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/liu24bn/liu24bn.pdf",
+          "http_status": 200,
+          "bytes": 5177308,
+          "result": "success",
+          "connect_timeout_seconds": 20,
+          "max_time_seconds": 120,
+          "automatic_retries": 0
+        }
+      ],
+      "prior_family_overlap": "unassessed",
+      "main_body_word_count": 5535,
+      "body_word_count": 6658,
+      "word_count_method": "Count nonempty tokens split by Unicode whitespace in unchanged selected text.",
+      "limitations": {
+        "standalone_limitations_section_present": false,
+        "locations": [
+          {
+            "pdf_pages": [
+              5
+            ],
+            "section": "4.3",
+            "locator_string": "This divergence necessitates extra memory",
+            "topic": "Training-memory cost and the changed gradient from detaching normalization.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              6,
+              7
+            ],
+            "section": "5.2; Tables 2-3",
+            "topic": "Comparison with full tuning differs across image and video tasks.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              7
+            ],
+            "section": "5.3",
+            "locator_string": "From Table 4, we can observe",
+            "topic": "Full tuning does not lead the visual instruction comparison; the authors discuss possible overfitting and a smaller expected improvement.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              17,
+              21
+            ],
+            "section": "A.4 Table 12; A.7 Table 15",
+            "topic": "Per-task and per-rank mixed outcomes remain visible beneath averages.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              9
+            ],
+            "section": "7. Conclusion, final sentence",
+            "locator_string": "For future work, we wish",
+            "topic": "Audio and other domains remain future-work scope.",
+            "included_in_body": false,
+            "exclusion_reason": "Located for scope auditing only; the entire summary conclusion is excluded."
+          }
+        ]
+      },
+      "excluded_scope": [
+        "Abstract, Introduction (including its overview figure), and Related Works",
+        "7. Conclusion, Acknowledgements, Impact Statement, and References",
+        "A.5 qualitative instruction-tuning response examples and GPT-4 comments (Tables 13-14); no generated responses are added to the body"
+      ],
+      "source_warnings": [
+        "No download failure or arXiv fallback. The proceedings record, not the differently capitalized NVIDIA page heading, determines the exact title.",
+        "No standalone limitations section; limitations and future-work scope are separately located in this metadata.",
+        "Repeated results are not fully identical across Tables 1 and 6 or adjacent narrative; all reported values are retained without reconciliation."
+      ],
+      "extraction_warnings": [
+        "Raw Poppler output retains running titles, page numbers, form feeds, line-wrap hyphens, fused words, mathematical control characters, and flattened table layout.",
+        "Graph curves, markers, and raster example images cannot be faithfully represented by pdftotext; labels and captions are preserved, with the PDF remaining the visual source.",
+        "Complete main-body sections 3-6 are selected. Supporting appendices A.1-A.4 and A.6-A.8 are explicitly supplemental rather than silently treated as main body.",
+        "All selected table rows and comparators are retained. Table 12 and Table 15 are included to avoid hiding task-level or rank-level exceptions behind main-body averages."
+      ],
+      "artifacts": {
+        "pdf": "sources/P05.pdf",
+        "raw_extraction": "sources/P05.extracted.txt",
+        "selection_script": "sources/P05.extract.mjs",
+        "body": "inputs/P05.txt",
+        "anchors": "anchors/P05.json"
+      }
+    },
+    "extraction_recipe": "sources/P05.extract.mjs",
+    "body_words_whitespace": 6658,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P06",
+    "domain_id": "D3",
+    "domain": "adaptation_training",
+    "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+    "discovery_url": "https://arxiv.org/abs/2403.03507",
+    "original_metadata": {
+      "id": "P06",
+      "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+      "domain": "adaptation_training",
+      "venue": "Proceedings of the 41st International Conference on Machine Learning",
+      "year": 2024,
+      "publisher": "PMLR",
+      "volume": 235,
+      "proceedings_pages": "61121-61143",
+      "metadata_url": "https://proceedings.mlr.press/v235/zhao24s.html",
+      "provided_metadata_url": "https://arxiv.org/abs/2403.03507",
+      "verification_date": "2026-10-11",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/zhao24s/zhao24s.pdf",
+      "pdf_sha256": "53b0a2155d1844cbf1e14630f01e11836ad02e04908a9c664a1ec6d6e7246c50",
+      "body_sha256": "0ad6de7f91674de71eaa2b4fe19d9842cb67979c48279142468d5318b7ded4fd",
+      "extracted_sha256": "5a5e7edc5a0b1dc914d866544dc13430e631c3fd13e4781f5ce8256e26952798",
+      "pages": {
+        "numbering": "1-based PDF pages, matching printed paper pages",
+        "total_pdf_pages": 23,
+        "main_body_range": [
+          3,
+          9
+        ],
+        "supplementary_ranges": [
+          [
+            20,
+            23
+          ]
+        ],
+        "selected_pdf_pages": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      "extraction_command": "pdftotext -raw sources/P06.pdf sources/P06.extracted.txt",
+      "selection_command": "node sources/P06.extract.mjs",
+      "command_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+      "extraction_tool": "Poppler pdftotext 26.03.0",
+      "selection_semantics": "Ordered, nonoverlapping, unchanged UTF-8 byte slices; start inclusive and end exclusive. Full-page segments include the terminal form feed. No source repair, trimming, or synthetic separators.",
+      "ordered_extraction_segments": [
+        {
+          "name": "main_theory_and_projection_section_3",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            3,
+            5
+          ],
+          "start_string": "3. GaLore: Gradient Low-Rank Projection\n",
+          "end_string": "4. GaLore for Memory-Efficient Training\n"
+        },
+        {
+          "name": "main_training_method_section_4",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            5,
+            6
+          ],
+          "start_string": "4. GaLore for Memory-Efficient Training\n",
+          "end_string": "5. Experiments\n"
+        },
+        {
+          "name": "main_experiments_section_5",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            6,
+            9
+          ],
+          "start_string": "5. Experiments\n",
+          "end_string": "6. Ablation Study\n"
+        },
+        {
+          "name": "main_ablation_section_6",
+          "mode": "boundary_strings",
+          "pdf_page_range": [
+            9,
+            9
+          ],
+          "start_string": "6. Ablation Study\n",
+          "end_string": "7. Conclusion\n"
+        },
+        {
+          "name": "supporting_appendices_C_D_E",
+          "mode": "full_pdf_pages",
+          "pdf_page_range": [
+            20,
+            23
+          ],
+          "scope_note": "Complete experimental details, all supplementary fine-tuning comparisons, and memory/throughput measurements. Tables 5-11 retain all rows; no supplemental task comparator is cherry-picked."
+        }
+      ],
+      "source_version": {
+        "kind": "official_proceedings_pdf",
+        "label": "ICML 2024, PMLR volume 235, zhao24s",
+        "provenance": "Downloaded from the PMLR proceedings page's Download PDF link in the publisher-managed mlresearch/v235 repository.",
+        "pdf_creation_date": "2024-06-03T08:49:18+08:00",
+        "arxiv_fallback_used": false,
+        "pinning": "Saved PDF bytes pinned by pdf_sha256; upstream URL uses a mutable main branch."
+      },
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/zhao24s/zhao24s.pdf",
+          "http_status": 200,
+          "bytes": 749048,
+          "result": "success",
+          "connect_timeout_seconds": 20,
+          "max_time_seconds": 120,
+          "automatic_retries": 0
+        }
+      ],
+      "prior_family_overlap": "unassessed",
+      "main_body_word_count": 4707,
+      "body_word_count": 5873,
+      "word_count_method": "Count nonempty tokens split by Unicode whitespace in unchanged selected text.",
+      "limitations": {
+        "standalone_limitations_section_present": false,
+        "locations": [
+          {
+            "pdf_pages": [
+              3,
+              4,
+              5
+            ],
+            "section": "3.2-3.3; Lemma 3.3 and Theorem 3.8",
+            "locator_string": "OnerarefailurecaseofLemma3.3",
+            "topic": "Restricted gradient form, stationarity/continuity conditions, and a degenerate case for the stable-rank analysis.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              5
+            ],
+            "section": "4.1",
+            "locator_string": "Averyfrequentsubspacechange",
+            "topic": "Projection refresh trades optimizer-state fidelity and overhead against restricted-subspace progress; the theorem alone is not an overall-performance guarantee.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              8
+            ],
+            "section": "5.3",
+            "locator_string": "Due to computational constraints",
+            "topic": "The 7B quality comparison uses a single trial without hyperparameter tuning on 64 A100 GPUs.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              8,
+              9,
+              23
+            ],
+            "section": "5.5; Appendix E Table 11",
+            "locator_string": "Throughput overhead of GaLore.",
+            "topic": "Single-device memory feasibility uses a small token batch; memory savings and throughput depend on per-layer updates and optimizer choice.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              9
+            ],
+            "section": "6. Ablation Study",
+            "topic": "Rank, refresh frequency, and training length create a memory/computation/convergence trade-off.",
+            "included_in_body": true
+          },
+          {
+            "pdf_pages": [
+              9
+            ],
+            "section": "7. Conclusion, open-problems paragraph",
+            "locator_string": "We identify several open problems",
+            "topic": "Other model families, lower-memory projectors, and elastic consumer-hardware training remain open scope.",
+            "included_in_body": false,
+            "exclusion_reason": "Located for scope auditing only; the entire summary conclusion is excluded."
+          }
+        ]
+      },
+      "excluded_scope": [
+        "Abstract, Introduction (including the floated overview Algorithm 1 and Figure 1), and Related Works",
+        "7. Conclusion, Impact Statement, Acknowledgments, and References",
+        "Appendix A Additional Related Works and Appendix B proofs; the complete main-body statements and their conditions are retained"
+      ],
+      "source_warnings": [
+        "No download failure or arXiv fallback. The supplied arXiv identifier is not the PDF version used.",
+        "No standalone limitations section; limitations and open-problems scope are separately located in this metadata.",
+        "Training-token amounts for smaller models differ between main-body Table 2 and appendix Table 5; both are retained without reconciliation.",
+        "The long 7B quality run and the single-device memory-feasibility measurement are separate experimental settings, not interchangeable evidence."
+      ],
+      "extraction_warnings": [
+        "Raw Poppler output retains running titles, page numbers, form feeds, line-wrap hyphens, fused words, mathematical control characters, and flattened table layout. Check/cross symbols in Table 1 are extracted as glyph-dependent numerals and are not repaired.",
+        "Plot curves and visual geometry are not recoverable with pdftotext; extracted captions and labels are retained and the PDF remains the visual source.",
+        "Complete main-body sections 3-6 are selected. Complete experimental appendices C-E are explicitly supplemental rather than silently treated as main body.",
+        "All rows in Tables 2-4 and 5-11 are retained, including comparisons with worse or near-equal scores and throughput costs."
+      ],
+      "artifacts": {
+        "pdf": "sources/P06.pdf",
+        "raw_extraction": "sources/P06.extracted.txt",
+        "selection_script": "sources/P06.extract.mjs",
+        "body": "inputs/P06.txt",
+        "anchors": "anchors/P06.json"
+      }
+    },
+    "extraction_recipe": "sources/P06.extract.mjs",
+    "body_words_whitespace": 5871,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P07",
+    "domain_id": "D4",
+    "domain": "language_evaluation_retrieval",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "discovery_url": "https://aclanthology.org/2024.tacl-1.9/",
+    "original_metadata": {
+      "id": "P07",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "domain": "language_evaluation_retrieval",
+      "venue": "Transactions of the Association for Computational Linguistics",
+      "year": 2024,
+      "volume": 12,
+      "publisher": "MIT Press",
+      "doi": "10.1162/tacl_a_00638",
+      "metadata_url": "https://aclanthology.org/2024.tacl-1.9/",
+      "pdf_url": "https://aclanthology.org/2024.tacl-1.9.pdf",
+      "pdf_sha256": "f37f6fabe0fe0d8c73b67579cd115dbf14e282cfb7b7af655ae8109638402c9b",
+      "extracted_sha256": "93537569229d185255971ae0d15bb949c741c5181f7625bdf8dcf7e764c0fe50",
+      "body_sha256": "5ce624f1b8baca7eb35d9d8543e2f9c9be33a0f1600584bb276beab9311e6f70",
+      "pages": {
+        "numbering": "1-based physical PDF pages",
+        "total_pdf": 17,
+        "article_printed_range": [
+          157,
+          173
+        ],
+        "selected_pdf_ranges": [
+          [
+            3,
+            10
+          ]
+        ],
+        "selected_printed_ranges": [
+          [
+            159,
+            166
+          ]
+        ],
+        "limitations_pdf_pages": [
+          3,
+          5,
+          10
+        ]
+      },
+      "extraction_command": "python3 sources/P07.extract.py",
+      "extraction_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+      "pdftotext_command": "pdftotext -raw sources/P07.pdf sources/P07.extracted.txt",
+      "pdftotext_version": "26.03.0",
+      "body_word_count_whitespace": 3541,
+      "extraction_segments": [
+        {
+          "section": "2 Multi-Document Question Answering (opening)",
+          "start": "2 Multi-Document Question Answering\n",
+          "end": "1\nnelsonliu.me/papers/lost-in-the-middle.\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            3,
+            3
+          ],
+          "byte_range": [
+            10053,
+            10183
+          ]
+        },
+        {
+          "section": "2 Multi-Document Question Answering (continuation and 2.1-2.3)",
+          "start": "analyze model performance on multi-document\nquestionanswering,",
+          "end": "3 How Well Can Language Models\nRetrieve From Input Contexts?\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            3,
+            6
+          ],
+          "byte_range": [
+            10225,
+            19535
+          ]
+        },
+        {
+          "section": "3 How Well Can Language Models Retrieve From Input Contexts?",
+          "start": "3 How Well Can Language Models\nRetrieve From Input Contexts?\n",
+          "end": "4 Why Are Language Models Not\nRobust to Changes in the Position of\nRelevant Information?\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            6,
+            7
+          ],
+          "byte_range": [
+            19535,
+            23144
+          ]
+        },
+        {
+          "section": "4 Why Are Language Models Not Robust to Changes in the Position of Relevant Information?",
+          "start": "4 Why Are Language Models Not\nRobust to Changes in the Position of\nRelevant Information?\n",
+          "end": "5 Is More Context Is Always Better?\nA Case Study With Open-Domain QA\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            7,
+            10
+          ],
+          "byte_range": [
+            23144,
+            31907
+          ]
+        },
+        {
+          "section": "5 Is More Context Is Always Better? A Case Study With Open-Domain QA",
+          "start": "5 Is More Context Is Always Better?\nA Case Study With Open-Domain QA\n",
+          "end": "6 Related Work\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            10,
+            10
+          ],
+          "byte_range": [
+            31907,
+            34530
+          ]
+        }
+      ],
+      "limitations_locators": [
+        {
+          "section": "2.1 Experimental Setup, footnote 2",
+          "pdf_pages": [
+            3,
+            3
+          ],
+          "start": "AmbiguityinNaturalQuestions-Openmeansthatasmall\n",
+          "end": "3\nWealsoexploredusingrandomdocumentsasdistractors,\n",
+          "end_exclusive": true,
+          "included_in_body": true,
+          "issue": "Some retrieved distractors can contain reasonable answers; the paper reports an unambiguous-subset check."
+        },
+        {
+          "section": "2.2 Models, decoding choice",
+          "pdf_pages": [
+            5,
+            5
+          ],
+          "start": "when generating outputs and leave exploration of\n",
+          "end": "Open Models. We experiment with MPT-\n",
+          "end_exclusive": true,
+          "included_in_body": true,
+          "issue": "Decoding is greedy; other decoding methods are deferred."
+        },
+        {
+          "section": "2.2 Models, footnote 6",
+          "pdf_pages": [
+            5,
+            5
+          ],
+          "start": "We also evaluate GPT-4 (8K) on a subset of\n",
+          "end": "Model Closed-Book Oracle\n",
+          "end_exclusive": true,
+          "included_in_body": true,
+          "issue": "Cost restricts GPT-4 evaluation to a QA subset rather than the full diagnostics."
+        },
+        {
+          "section": "5 Is More Context Is Always Better? A Case Study With Open-Domain QA",
+          "pdf_pages": [
+            10,
+            10
+          ],
+          "start": "answer to this question is ultimately downstream\n",
+          "end": "We use language models in a standard\n",
+          "end_exclusive": true,
+          "included_in_body": true,
+          "issue": "The value of added context is task-dependent; the practical case study uses paragraph-answer NaturalQuestions-Open."
+        }
+      ],
+      "source_version": "Official TACL 2024 journal PDF hosted by ACL Anthology; not an arXiv fallback or conference proceedings edition.",
+      "prior_family_overlap": "unassessed",
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "url": "https://aclanthology.org/2024.tacl-1.9.pdf",
+          "http_status": 200,
+          "curl_exit_code": 0,
+          "bytes": 2609413
+        }
+      ],
+      "download_policy": {
+        "max_pdf_attempts": 3,
+        "used_pdf_attempts": 1,
+        "connect_timeout_seconds": 15,
+        "max_time_seconds_per_attempt": 90,
+        "automatic_retries": 0
+      },
+      "source_warnings": [
+        "There is no standalone Limitations section. Inline limitations are separately located above; no limitations prose is invented.",
+        "The complete selected main-body Sections 2-5 are retained. Related work, Abstract, Introduction, Conclusion, acknowledgments, references, and supplementary experiments are excluded."
+      ],
+      "extraction_warnings": [
+        "Poppler raw reading order interleaves the Introduction's footnote 1 with the opening of Section 2. Only that exact orphaned footnote is excluded using two byte slices.",
+        "Raw extraction contains original line breaks, hyphenation, joined words, glyph artifacts, and printed page numbers. No repair, rewriting, or whitespace normalization is performed.",
+        "Table 1's comparison rows and all available figure captions are retained. Plot graphics and some example artwork are not recoverable as text; consult the saved PDF for graphical values and layout.",
+        "Main-body reports of exceptions, limited gains, and unfavorable interventions are retained alongside positive findings. Referenced appendix experiments are not silently added or treated as fully extracted.",
+        "The body has 3541 whitespace-delimited words; joined words in the source extraction make this count approximate."
+      ]
+    },
+    "extraction_recipe": "sources/P07.extract.py",
+    "body_words_whitespace": 3541,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P08",
+    "domain_id": "D4",
+    "domain": "language_evaluation_retrieval",
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "discovery_url": "https://openreview.net/forum?id=hSyW5go0v8",
+    "original_metadata": {
+      "id": "P08",
+      "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "domain": "language_evaluation_retrieval",
+      "venue": "International Conference on Learning Representations (ICLR 2024)",
+      "year": 2024,
+      "metadata_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/25f7be9694d7b32d5cc670927b8091e1-Abstract-Conference.html",
+      "requested_metadata_url": "https://openreview.net/forum?id=hSyW5go0v8",
+      "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/25f7be9694d7b32d5cc670927b8091e1-Paper-Conference.pdf",
+      "pdf_sha256": "b1b57b5d9c1e71ebbebc2a18b625889c467e3f6bced88d049b6ee29067666e7e",
+      "extracted_sha256": "e84e96638618357dfacb376ad7378ff48ce0532f0a597f696f417d5a35892f88",
+      "body_sha256": "28d256d4f59b2821b011d951e5f39c05b626398bb9d83dd38e14a081a095fb85",
+      "pages": {
+        "numbering": "1-based physical PDF pages; printed numbers agree",
+        "total_pdf": 30,
+        "selected_pdf_ranges": [
+          [
+            3,
+            10
+          ],
+          [
+            17,
+            17
+          ]
+        ],
+        "main_body_pdf_range": [
+          3,
+          9
+        ],
+        "limitations_pdf_pages": [
+          9,
+          10,
+          17
+        ]
+      },
+      "extraction_command": "python3 sources/P08.extract.py",
+      "extraction_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+      "pdftotext_command": "pdftotext -raw sources/P08.pdf sources/P08.extracted.txt",
+      "pdftotext_version": "26.03.0",
+      "body_word_count_whitespace": 4455,
+      "extraction_segments": [
+        {
+          "section": "Table 1: reflection-token definitions (float before Section 3)",
+          "start": "Type Input Output Definitions\n",
+          "end": "of retrieved passages prepended to input, or pre-train a retriever and LM jointly, followed by few-\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            3,
+            3
+          ],
+          "byte_range": [
+            8922,
+            9590
+          ]
+        },
+        {
+          "section": "3 Self-RAG: Learning to Retrieve, Generate and Critique (3.1-3.3)",
+          "start": "3 SELF-RAG: LEARNING TO RETRIEVE, GENERATE AND CRITIQUE\n",
+          "end": "4 EXPERIMENTS\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            3,
+            6
+          ],
+          "byte_range": [
+            11199,
+            24004
+          ]
+        },
+        {
+          "section": "4 Experiments (4.1-4.3)",
+          "start": "4 EXPERIMENTS\n",
+          "end": "5 RESULTS AND ANALYSIS\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            6,
+            7
+          ],
+          "byte_range": [
+            24004,
+            29367
+          ]
+        },
+        {
+          "section": "5 Results and Analysis (5.1-5.2, complete Table 2 and Figure 3)",
+          "start": "5 RESULTS AND ANALYSIS\n",
+          "end": "6 CONCLUSION\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            7,
+            9
+          ],
+          "byte_range": [
+            29367,
+            38392
+          ]
+        },
+        {
+          "section": "Ethical Concerns: separately located citation limitation",
+          "start": "ETHICAL CONCERNS\n",
+          "end": "ACKNOWLEDGMENTS\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            10,
+            10
+          ],
+          "byte_range": [
+            39126,
+            39661
+          ]
+        },
+        {
+          "section": "A.2: separately located submission-time API limitation",
+          "start": "Note that at the time\n",
+          "end": "A.3 SELF-RAG TRAINING\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "pdf_pages": [
+            17,
+            17
+          ],
+          "byte_range": [
+            62495,
+            62778
+          ]
+        }
+      ],
+      "limitations_locators": [
+        {
+          "section": "5.2 Analysis: ablation scope",
+          "pdf_pages": [
+            9,
+            9
+          ],
+          "start": "In this\nablation experiment, we use a training instance size of 50k",
+          "end": "We show in Table 3a the ablation results.",
+          "end_exclusive": true,
+          "included_in_body": true,
+          "issue": "Ablations use 50k training instances; ASQA uses 150 sampled examples and excludes adaptive/no-retrieval variants."
+        },
+        {
+          "section": "5.2 Analysis: support-fluency trade-off",
+          "pdf_pages": [
+            9,
+            9
+          ],
+          "start": "On the\ncontrary, a larger weight results in lower MAUVE scores:",
+          "end": "Our framework lets practitioners choose and customize models",
+          "end_exclusive": true,
+          "included_in_body": true,
+          "issue": "Increasing evidence-support weighting has a reported fluency cost."
+        },
+        {
+          "section": "Ethical Concerns",
+          "pdf_pages": [
+            10,
+            10
+          ],
+          "start": "ETHICAL CONCERNS\n",
+          "end": "ACKNOWLEDGMENTS\n",
+          "end_exclusive": true,
+          "included_in_body": true,
+          "issue": "Generated output can remain unsupported by citations despite the improvements."
+        },
+        {
+          "section": "A.2 Advantages of Learning-based Methods, submission-time API limitation",
+          "pdf_pages": [
+            17,
+            17
+          ],
+          "start": "Note that at the time\n",
+          "end": "A.3 SELF-RAG TRAINING\n",
+          "end_exclusive": true,
+          "included_in_body": true,
+          "issue": "The authors state that missing token-probability access prevented applying their algorithm to ChatGPT/GPT-4 at submission time; this is not presented as a current API claim."
+        }
+      ],
+      "source_version": "Official ICLR 2024 conference proceedings PDF hosted at proceedings.iclr.cc and linked from its paper record; not an arXiv fallback.",
+      "prior_family_overlap": "unassessed",
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "url": "https://openreview.net/pdf?id=hSyW5go0v8",
+          "http_status": 403,
+          "curl_exit_code": 56,
+          "bytes": 0
+        },
+        {
+          "attempt": 2,
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/25f7be9694d7b32d5cc670927b8091e1-Paper-Conference.pdf",
+          "http_status": 200,
+          "curl_exit_code": 0,
+          "bytes": 1244749
+        }
+      ],
+      "download_policy": {
+        "max_pdf_attempts": 3,
+        "used_pdf_attempts": 2,
+        "connect_timeout_seconds": 15,
+        "max_time_seconds_per_attempt": 90,
+        "automatic_retries": 0
+      },
+      "source_warnings": [
+        "The supplied OpenReview forum URL displayed a browser verification challenge, and the OpenReview PDF attempt returned HTTP 403. Exact title and venue were verified using the official ICLR proceedings record and the downloaded PDF.",
+        "There is no standalone Limitations heading. The Ethical Concerns section and a complete submission-time API caveat in Appendix A.2 are separately selected; inline design restrictions and trade-offs are located above.",
+        "The proceedings record uses Avi Sil while the PDF uses Avirup Sil. This name-form difference is recorded without changing the extracted text.",
+        "Complete main-body Sections 3-5 and the floated Table 1 are retained. Abstract, Introduction, Related Work, Conclusion, acknowledgments, references, and the remaining appendix are excluded; only the explicitly identified appendix limitation is added."
+      ],
+      "extraction_warnings": [
+        "Table 1 is floated before Section 3 among Related Work text. Its entire definition table and caption are selected separately without including the surrounding Related Work prose.",
+        "Table 2 retains every comparison row, metric column, missing-value mark, and reported-result qualifier. Figure 3's ablation values, graph text, captions, and the full mixed-outcome analysis are retained in raw order.",
+        "Raw extraction retains original page headers, numbers, line breaks, glyph artifacts, and fragmented mathematical notation. No repair, rewriting, whitespace cleanup, or reordered table cells are performed.",
+        "Graphical curves, bold/gray emphasis, and some diagram layout are not represented by plain text; the saved official PDF remains the authority for those details.",
+        "The Figure 2 caption's left/right wording and the main text's Table 3a reference are retained as printed, not corrected or reconciled with their figure layout.",
+        "The body has 4455 whitespace-delimited words. All selected sections are kept without a length cap."
+      ]
+    },
+    "extraction_recipe": "sources/P08.extract.py",
+    "body_words_whitespace": 4455,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P09",
+    "domain_id": "D5",
+    "domain": "vision_graphics",
+    "title": "A ConvNet for the 2020s",
+    "discovery_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.html",
+    "original_metadata": {
+      "id": "P09",
+      "title": "A ConvNet for the 2020s",
+      "domain": "vision_graphics",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+      "year": 2022,
+      "metadata_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.html",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.pdf",
+      "pdf_path": "sources/P09.pdf",
+      "pdf_sha256": "a44372dee86112a63133aece66be864116e8cdba89e1bdd9462a8e6c5a48d101",
+      "extracted_path": "sources/P09.extracted.txt",
+      "extracted_sha256": "596a2897b36a94ceca87112d599c68f8ff090107dfbd9fab512b9d42a39d2eed",
+      "body_path": "inputs/P09.txt",
+      "body_sha256": "d0219804f4fca3cb7a48cb2759dc1b4882affa736886b4337217f6bcaf9e6da3",
+      "pages": {
+        "numbering": "1-based physical PDF pages; ranges are inclusive",
+        "main_pdf": {
+          "total": 11,
+          "selected_ranges": [
+            [
+              2,
+              8
+            ]
+          ],
+          "printed_proceedings_range": [
+            11976,
+            11986
+          ]
+        },
+        "supplement_pdf": {
+          "total": 4,
+          "selected_ranges": [
+            [
+              4,
+              4
+            ]
+          ]
+        }
+      },
+      "extraction_command": "python3 sources/P09.extract.py",
+      "poppler_commands": [
+        "pdftotext -raw sources/P09.pdf sources/P09.extracted.txt",
+        "pdftotext -raw sources/P09.supplement.pdf sources/P09.supplement.extracted.txt"
+      ],
+      "poppler_version": "26.03.0",
+      "anchors_path": "anchors/P09.json",
+      "body_word_count_method": "Number of UTF-8 decoded str.split() tokens; source text is not normalized",
+      "ordered_extraction_segments": [
+        {
+          "order": 1,
+          "kind": "methods_analysis",
+          "label": "Complete Section 2",
+          "pdf_path": "sources/P09.pdf",
+          "source_text_path": "sources/P09.extracted.txt",
+          "pdf_pages": [
+            2,
+            6
+          ],
+          "start": "2. Modernizing a ConvNet: a Roadmap\n",
+          "end": "3. Empirical Evaluations on ImageNet\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "source_byte_range": [
+            9272,
+            27865
+          ],
+          "body_byte_range": [
+            0,
+            18593
+          ],
+          "word_count": 2940
+        },
+        {
+          "order": 2,
+          "kind": "experiments",
+          "label": "Complete Section 3 including Tables 1-2",
+          "pdf_path": "sources/P09.pdf",
+          "source_text_path": "sources/P09.extracted.txt",
+          "pdf_pages": [
+            6,
+            7
+          ],
+          "start": "3. Empirical Evaluations on ImageNet\n",
+          "end": "4. Empirical Evaluation on Downstream Tasks\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "source_byte_range": [
+            27865,
+            34776
+          ],
+          "body_byte_range": [
+            18593,
+            25504
+          ],
+          "word_count": 1032
+        },
+        {
+          "order": 3,
+          "kind": "experiments",
+          "label": "Complete Section 4 including Tables 3-4",
+          "pdf_path": "sources/P09.pdf",
+          "source_text_path": "sources/P09.extracted.txt",
+          "pdf_pages": [
+            7,
+            8
+          ],
+          "start": "4. Empirical Evaluation on Downstream Tasks\n",
+          "end": "5. Related Work\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "source_byte_range": [
+            34776,
+            39032
+          ],
+          "body_byte_range": [
+            25504,
+            29760
+          ],
+          "word_count": 657
+        },
+        {
+          "order": 4,
+          "kind": "limitations",
+          "label": "Complete official supplement Section F",
+          "pdf_path": "sources/P09.supplement.pdf",
+          "source_text_path": "sources/P09.supplement.extracted.txt",
+          "pdf_pages": [
+            4,
+            4
+          ],
+          "start": "F. Limitations\n",
+          "end": "G. Societal Impact\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "source_byte_range": [
+            13020,
+            13835
+          ],
+          "body_byte_range": [
+            29760,
+            30575
+          ],
+          "word_count": 123
+        }
+      ],
+      "segment_join": "Direct concatenation of exact UTF-8 byte slices; no added text or cleanup",
+      "source_version": {
+        "type": "official_cvf_open_access_proceedings_accepted_version",
+        "host": "Computer Vision Foundation official CVPR 2022 repository",
+        "description": "CVF identifies its open-access papers as identical to accepted versions except for the watermark; this is not claimed to be the IEEE Xplore final-published file."
+      },
+      "supplement": {
+        "pdf_url": "https://openaccess.thecvf.com/content/CVPR2022/supplemental/Liu_A_ConvNet_for_CVPR_2022_supplemental.pdf",
+        "pdf_path": "sources/P09.supplement.pdf",
+        "pdf_sha256": "ff40dd4d942ce6b6d05333ac0d6c701ff127a49df6479ef4fcb94c761f3a21ad",
+        "extracted_path": "sources/P09.supplement.extracted.txt",
+        "extracted_sha256": "a59b40ca4e66fd5089266258855155900740bd5e99f86694b7ae5c8b2a145e2b",
+        "source_version": "official_cvf_proceedings_supplement"
+      },
+      "prior_family_overlap": "unassessed",
+      "download_policy": {
+        "maximum_attempts_per_paper": 3,
+        "pdf_attempts_used": 2,
+        "connect_timeout_seconds": 15,
+        "total_timeout_seconds": 90,
+        "curl_retries": 0
+      },
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.pdf",
+          "http_status": 200,
+          "result": "saved official main PDF",
+          "bytes": 803600
+        },
+        {
+          "attempt": 2,
+          "url": "https://openaccess.thecvf.com/content/CVPR2022/supplemental/Liu_A_ConvNet_for_CVPR_2022_supplemental.pdf",
+          "http_status": 200,
+          "result": "saved official supplement to locate limitations",
+          "bytes": 276073
+        }
+      ],
+      "source_warnings": [
+        "The metadata HTML returned 403 on direct browser retrieval; its indexed official CVF record and the downloaded PDF metadata establish title and venue.",
+        "Limitations are not a standalone main-paper section; the complete Section F is selected from the official supplement. Other supplementary sections are outside the requested main-body scope."
+      ],
+      "extraction_warnings": [
+        "Poppler raw text retains original line breaks, form feeds, page numbers, hard hyphenation, merged words, glyph substitutions, and imperfect equation/table reading order; none are repaired.",
+        "Tables 1-4 and their captions, all rows, measurement conditions, and mixed findings are retained as extracted text. Bitmap/plot content cannot be represented by pdftotext; consult the saved PDF for visual marks and images.",
+        "The within-method Closing remarks paragraph is retained as part of complete Section 2; the separate summary Conclusions Section 6 is excluded.",
+        "Abstract, Introduction, Related Work, summary Conclusions, acknowledgments, references, and supplement sections other than F are excluded."
+      ],
+      "status": "source_preparation_complete",
+      "body_word_count": 4752
+    },
+    "extraction_recipe": "sources/P09.extract.py",
+    "body_words_whitespace": 4752,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P10",
+    "domain_id": "D5",
+    "domain": "vision_graphics",
+    "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+    "discovery_url": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+    "original_metadata": {
+      "id": "P10",
+      "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+      "domain": "vision_graphics",
+      "venue": "ACM Transactions on Graphics (SIGGRAPH 2023 Conference Proceedings)",
+      "year": 2023,
+      "metadata_url": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+      "metadata_verification_urls": [
+        "https://www-sop.inria.fr/reves/Basilic/2023/KKLD23/",
+        "https://arxiv.org/abs/2308.04079v1"
+      ],
+      "journal_volume": 42,
+      "journal_issue": 4,
+      "publication_month_in_primary_metadata": "July",
+      "publisher_doi": "10.1145/3592433",
+      "publisher_pdf_url_attempted": "https://dl.acm.org/doi/pdf/10.1145/3592433",
+      "pdf_url": "https://arxiv.org/pdf/2308.04079v1",
+      "pdf_path": "sources/P10.pdf",
+      "pdf_sha256": "f4c0c9f27e2d02b0265017f66049d471eb66cb50203bc918f51ba07d20cbbe11",
+      "extracted_path": "sources/P10.extracted.txt",
+      "extracted_sha256": "6cb2c2207ffa5d50ceff0355e865a3edb9cf8069ccf9a252efb5742b2303bbca",
+      "body_path": "inputs/P10.txt",
+      "body_sha256": "9ce9f898fbc4f27f16a3f06fdb65d5c1eedb4242167b398204580066dd37ca3c",
+      "pages": {
+        "numbering": "1-based physical PDF pages; ranges are inclusive",
+        "main_pdf": {
+          "total": 14,
+          "selected_ranges": [
+            [
+              4,
+              11
+            ]
+          ],
+          "limitations_range": [
+            10,
+            11
+          ]
+        }
+      },
+      "extraction_command": "python3 sources/P10.extract.py",
+      "poppler_commands": [
+        "pdftotext -raw sources/P10.pdf sources/P10.extracted.txt"
+      ],
+      "poppler_version": "26.03.0",
+      "anchors_path": "anchors/P10.json",
+      "body_word_count_method": "Number of UTF-8 decoded str.split() tokens; source text is not normalized",
+      "ordered_extraction_segments": [
+        {
+          "order": 1,
+          "kind": "methods_analysis",
+          "label": "Complete Sections 3-6",
+          "pdf_path": "sources/P10.pdf",
+          "source_text_path": "sources/P10.extracted.txt",
+          "pdf_pages": [
+            4,
+            6
+          ],
+          "start": "3 OVERVIEW\n",
+          "end": "7 IMPLEMENTATION, RESULTS AND EVALUATION\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "source_byte_range": [
+            20165,
+            36794
+          ],
+          "body_byte_range": [
+            0,
+            16629
+          ],
+          "word_count": 2519
+        },
+        {
+          "order": 2,
+          "kind": "experiments",
+          "label": "Complete Section 7 through 7.3 including implementation, Tables 1-3, and ablations",
+          "pdf_path": "sources/P10.pdf",
+          "source_text_path": "sources/P10.extracted.txt",
+          "pdf_pages": [
+            6,
+            10
+          ],
+          "start": "7 IMPLEMENTATION, RESULTS AND EVALUATION\n",
+          "end": "7.4 Limitations\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "source_byte_range": [
+            36794,
+            51708
+          ],
+          "body_byte_range": [
+            16629,
+            31543
+          ],
+          "word_count": 2273
+        },
+        {
+          "order": 3,
+          "kind": "limitations",
+          "label": "Complete Section 7.4 with continued text and floating figure captions",
+          "pdf_path": "sources/P10.pdf",
+          "source_text_path": "sources/P10.extracted.txt",
+          "pdf_pages": [
+            10,
+            11
+          ],
+          "start": "7.4 Limitations\n",
+          "end": "8 DISCUSSION AND CONCLUSIONS\n",
+          "start_inclusive": true,
+          "end_exclusive": true,
+          "source_byte_range": [
+            51708,
+            54887
+          ],
+          "body_byte_range": [
+            31543,
+            34722
+          ],
+          "word_count": 474
+        }
+      ],
+      "segment_join": "Direct concatenation of exact UTF-8 byte slices; no added text or cleanup",
+      "source_version": {
+        "type": "pinned_author_arxiv_fallback_not_publisher_pdf",
+        "arxiv_id": "2308.04079",
+        "arxiv_version": "v1",
+        "submission_date_utc": "2023-08-08T06:37:06Z",
+        "description": "Author-submitted arXiv v1. Publisher retrieval returned HTTP 403. ACM-style typesetting in this file does not establish identity with the final proceedings PDF."
+      },
+      "prior_family_overlap": "unassessed",
+      "download_policy": {
+        "maximum_attempts_per_paper": 3,
+        "pdf_attempts_used": 2,
+        "connect_timeout_seconds": 15,
+        "total_timeout_seconds": 90,
+        "curl_retries": 0
+      },
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3592433",
+          "http_status": 403,
+          "curl_exit_code": 56,
+          "result": "publisher PDF unavailable; no PDF bytes saved",
+          "bytes": 0
+        },
+        {
+          "attempt": 2,
+          "url": "https://arxiv.org/pdf/2308.04079v1",
+          "http_status": 200,
+          "result": "saved pinned author arXiv fallback",
+          "bytes": 35829709
+        }
+      ],
+      "source_warnings": [
+        "The official ACM publisher PDF was unavailable (HTTP 403); the saved file is explicitly the pinned author arXiv v1 fallback.",
+        "Project-page PDF link resolution failed in the browser. No author-project PDF is used and no equality with that file is assumed.",
+        "The project and institutional publication records and arXiv journal reference identify TOG 42(4), July 2023; the fallback PDF footer instead says Article 1 and publication date August 2023. These fallback imprint fields are not treated as final publisher bibliographic data.",
+        "The project-page abstract uses a different real-time threshold from the pinned arXiv record; the abstract is excluded and no wording or threshold is imported from it into the body."
+      ],
+      "extraction_warnings": [
+        "Poppler raw text retains original line breaks, form feeds, running headers, hard hyphenation, merged words, mathematical glyphs, and imperfect equation/table reading order; none are repaired.",
+        "Tables 1-3 and their captions, all methods and metric columns, hardware exceptions, copied-versus-rerun baseline conditions, mixed findings, and all ablations are retained. Bitmap figures are not reconstructible from pdftotext; consult the saved PDF for imagery.",
+        "Figure 10 is an ablation figure floating into the Section 7.4 raw-text span before continued memory limitations on PDF page 11; it is retained in place, not removed or relocated. Failure Figure 11-12 captions are also retained.",
+        "Abstract, Introduction, Related Work, Section 8 Discussion and Conclusions, acknowledgments, references, and appendices are excluded; selected main-body sections are complete."
+      ],
+      "status": "source_preparation_complete",
+      "body_word_count": 5266
+    },
+    "extraction_recipe": "sources/P10.extract.py",
+    "body_words_whitespace": 5266,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P11",
+    "domain_id": "D6",
+    "domain": "uncertainty_theory",
+    "title": "Conformal Risk Control",
+    "discovery_url": "https://openreview.net/forum?id=33XGfHLtZg",
+    "original_metadata": {
+      "id": "P11",
+      "title": "Conformal Risk Control",
+      "domain": "uncertainty_theory",
+      "venue": "International Conference on Learning Representations 2024 (ICLR 2024), Conference",
+      "year": 2024,
+      "metadata_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/f3549ef9b5ff520a7e41ff3cc306ab2b-Abstract-Conference.html",
+      "requested_metadata_url": "https://openreview.net/forum?id=33XGfHLtZg",
+      "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f3549ef9b5ff520a7e41ff3cc306ab2b-Paper-Conference.pdf",
+      "pdf_sha256": "0fff32a0254a47f06a399522b83ba463d0ca62f71e3a0e094985d80cba166c0c",
+      "body_sha256": "0df339d1fe67f190d4c93bf0e03adca9b943f4d989570bf19af3ae81fdbe586c",
+      "extracted_sha256": "bd7f446ece0d0652d6a53ea1d5eba44a9e0af3bba52259e20b54cfbfb7b8deeb",
+      "pages": {
+        "pdf_total": 21,
+        "selected_pdf_range": [
+          3,
+          9
+        ],
+        "selected_pdf_pages": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "numbering": "One-based physical PDF pages, matching printed page numbers. Partial first/last pages and conclusion exclusions use exact substrings."
+      },
+      "extraction_command": "pdftotext -raw sources/P11.pdf sources/P11.extracted.txt && node sources/P11.extract.mjs",
+      "command_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+      "extractor": "Poppler pdftotext 26.03.0, -raw, default UTF-8 and page breaks",
+      "extraction_segments": [
+        {
+          "order": 1,
+          "label": "Complete Sections 2-4: theory including failure case, all four worked experiments, and all extensions",
+          "pdf_pages": [
+            3,
+            9
+          ],
+          "start": "2 THEORY\n",
+          "end": "5 CONCLUSION\n",
+          "start_inclusive": true,
+          "end_inclusive": false
+        },
+        {
+          "order": 2,
+          "label": "Separately located limitations sentences inside Section 5, excluding both surrounding summary statements",
+          "pdf_pages": [
+            9,
+            9
+          ],
+          "start": "Still, two primary limitations of our technique remain: firstly, the requirement of a\n",
+          "end": "Finally, the mathematical tools developed in\n",
+          "start_inclusive": true,
+          "end_inclusive": false
+        }
+      ],
+      "limitations_locator": {
+        "pdf_pages": [
+          9,
+          9
+        ],
+        "section": "5 CONCLUSION (limitations sentences only)",
+        "extraction_segment_order": 2
+      },
+      "selection_policy": "Concatenate the two unchanged raw byte slices in paper order without adding separators. Include every main-body theorem, assumption, negative case, extension, experimental condition, caption, and numerical result in Sections 2-4. Exclude Abstract, Introduction (including 1.1 and 1.2), summary conclusion prose, reproducibility statement, references, and appendices. Limitations embedded in Section 5 are separately retained without summary prose.",
+      "body_word_count": 3629,
+      "word_count_method": "Whitespace-separated tokens in the selected raw text; mathematical tokens and figure labels are included.",
+      "source_version": {
+        "kind": "official_proceedings_pdf",
+        "publisher_host": "proceedings.iclr.cc",
+        "proceedings_year": 2024,
+        "arxiv_pdf_used": false,
+        "identity_verified_against": [
+          "https://proceedings.iclr.cc/paper_files/paper/2024/hash/f3549ef9b5ff520a7e41ff3cc306ab2b-Abstract-Conference.html",
+          "https://arxiv.org/abs/2208.02814"
+        ],
+        "retrieval_date": "2026-10-11"
+      },
+      "prior_family_overlap": "unassessed",
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "url": "https://openreview.net/pdf?id=33XGfHLtZg",
+          "http_status": 403,
+          "bytes": 0,
+          "result": "Official OpenReview PDF blocked",
+          "bounds": "curl --retry 0 --connect-timeout 20 --max-time 120"
+        },
+        {
+          "attempt": 2,
+          "url": "https://arxiv.org/pdf/2208.02814v4",
+          "source_kind": "pinned_author_arxiv_candidate_not_proceedings",
+          "result": "Received author-version PDF data; superseded by the official proceedings response and not retained as the source",
+          "bounds": "curl --retry 0 --connect-timeout 20 --max-time 120"
+        },
+        {
+          "attempt": 3,
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/f3549ef9b5ff520a7e41ff3cc306ab2b-Paper-Conference.pdf",
+          "http_status": 200,
+          "bytes": 1468508,
+          "result": "Saved official proceedings response, finalized to its declared byte length",
+          "bounds": "curl --retry 0 --connect-timeout 20 --max-time 120"
+        }
+      ],
+      "download_finalization": {
+        "recipe": "node sources/P11.finalize-download.mjs",
+        "reason": "The earlier author-version transfer overlapped the later proceedings transfer to the same path, leaving an earlier-response remainder after the completed proceedings response.",
+        "observed_file_bytes_before_finalization": 1623636,
+        "proceedings_response_bytes": 1468508,
+        "discarded_trailing_bytes": 155128,
+        "checks": "The response's linearized PDF header declares /L 1468508 and its EOF ends at exactly byte 1468508. Only bytes after that boundary were discarded; no byte within the proceedings response was rewritten. Final pdfinfo and pdftotext completed without diagnostics.",
+        "no_additional_download": true
+      },
+      "source_warnings": [
+        "The requested OpenReview forum presents browser verification; its PDF and public metadata API returned HTTP 403. Title and venue were instead verified against the official ICLR proceedings page.",
+        "A pinned arXiv v4 fallback candidate was fetched before the proceedings location was found. It is a later author revision, not a verified proceedings copy, and is not used in the saved source.",
+        "An overlapping-download trailing remainder was removed using the documented response-length recipe; the final PDF is the complete official proceedings response, not a reconstructed manuscript. No fourth download was attempted.",
+        "Appendices A-E are excluded by the main-body scope. In particular, Appendix B's RCPS/LTT comparisons and Appendix D's additional covariate-shift experiment are not in the permitted input; they remain accessible in the saved complete PDF. No subset of main-body tasks or findings was selected."
+      ],
+      "extraction_warnings": [
+        "Raw extraction contains compressed words, reordered mathematical tokens, control characters, and font-encoding artifacts. No OCR, normalization, equation repair, or source rewriting was performed.",
+        "Figures 1-4 are preserved through all extractable labels and captions; the illustrations and plotted curves remain in the PDF. No main-body tables were found.",
+        "The original algorithm definition, Equation (4), is in Section 1.1 inside Introduction and is excluded under the requested rule; its criterion also appears in the retained Theorem 1 proof. Later cross-references remain unchanged.",
+        "The main-body non-monotone failure case, its conservatism caveat, and the unresolved CVaR statement are all retained.",
+        "Incidental page headers, page numbers, and form feeds inside selected slices are unchanged. The limitations-only final slice ends with the original space preceding the excluded summary sentence."
+      ],
+      "verification": {
+        "pdfinfo": "Passed without diagnostics: 21 pages, 1468508 bytes",
+        "all_page_render_command": "pdftoppm -r 10 sources/P11.pdf | shasum -a 256",
+        "all_page_render_sha256": "6f1f9a5697bfdbb1ce4c39eae4246e3405233ddf4b562e9ad5fec55b90b5eb85",
+        "all_page_render_diagnostics": "None",
+        "repeat_raw_extraction_sha256_matches": true,
+        "body_is_exact_ordered_raw_byte_slices": true,
+        "segment_boundaries_unique_and_page_ranges_verified": true,
+        "pdf_raw_body_checksums_verified": true,
+        "anchor_counts": {
+          "abstract": 2,
+          "methods": 2,
+          "results": 2
+        },
+        "each_unit_has_one_core_and_one_scope_anchor": true,
+        "anchor_locator_pages_within_selected_body": true,
+        "generation_performed": false
+      },
+      "status": "prepared"
+    },
+    "extraction_recipe": "sources/P11.extract.mjs",
+    "body_words_whitespace": 3629,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  },
+  {
+    "id": "P12",
+    "domain_id": "D6",
+    "domain": "uncertainty_theory",
+    "title": "Adaptive Conformal Inference Under Distribution Shift",
+    "discovery_url": "https://arxiv.org/abs/2106.00170",
+    "original_metadata": {
+      "id": "P12",
+      "title": "Adaptive Conformal Inference Under Distribution Shift",
+      "domain": "uncertainty_theory",
+      "venue": "Advances in Neural Information Processing Systems 34 (NeurIPS 2021)",
+      "year": 2021,
+      "metadata_url": "https://proceedings.neurips.cc/paper/2021/hash/0d441de75945e5acbc865406fc9a2559-Abstract.html",
+      "requested_metadata_url": "https://arxiv.org/abs/2106.00170",
+      "pdf_url": "https://proceedings.neurips.cc/paper/2021/file/0d441de75945e5acbc865406fc9a2559-Paper.pdf",
+      "pdf_sha256": "09bafbdf509e985fd5add45f13a93f426d9083814dec3e78721711aac4ec035a",
+      "body_sha256": "75c8513a43cda2081866e8acbace7540288773b78bfeb52ebe3af450c6b2f3b8",
+      "extracted_sha256": "b51824dbf4f8ef93447ab4132df57b8980797502599197da10766dc7d7120cfd",
+      "pages": {
+        "pdf_total": 13,
+        "selected_pdf_range": [
+          2,
+          10
+        ],
+        "selected_pdf_pages": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "numbering": "One-based physical PDF pages, matching printed page numbers. Partial first/last pages and section exclusions use exact substrings."
+      },
+      "extraction_command": "pdftotext -raw sources/P12.pdf sources/P12.extracted.txt && node sources/P12.extract.mjs",
+      "command_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+      "extractor": "Poppler pdftotext 26.03.0, -raw, default UTF-8 and page breaks",
+      "extraction_segments": [
+        {
+          "order": 1,
+          "label": "Complete Section 2: method, step-size choice, and market-volatility experiment",
+          "pdf_pages": [
+            2,
+            5
+          ],
+          "start": "2 Adapting conformal inference to distribution shifts\n",
+          "end": "3 Related Work\n",
+          "start_inclusive": true,
+          "end_inclusive": false
+        },
+        {
+          "order": 2,
+          "label": "Complete Sections 4-6: coverage analysis, score-design sensitivity, and election experiment",
+          "pdf_pages": [
+            6,
+            10
+          ],
+          "start": "4 Coverage guarantees\n",
+          "end": "7 Discussion\n",
+          "start_inclusive": true,
+          "end_inclusive": false
+        },
+        {
+          "order": 3,
+          "label": "Separately located limitations: entire Section 7 (limitations-only discussion)",
+          "pdf_pages": [
+            10,
+            10
+          ],
+          "start": "7 Discussion\n",
+          "end": "\n10\f8 Acknowledgements\n",
+          "start_inclusive": true,
+          "end_inclusive": false
+        }
+      ],
+      "limitations_locator": {
+        "pdf_pages": [
+          10,
+          10
+        ],
+        "section": "7 Discussion",
+        "extraction_segment_order": 3
+      },
+      "selection_policy": "Concatenate the three unchanged raw byte slices in paper order without adding separators. Include all main-body analysis, experiments, captions, footnotes, assumptions, comparisons, and negative/sensitivity findings. Exclude Abstract, Introduction (including 1.1), Related Work, acknowledgements, and references. Section 7 contains limitations rather than a summary conclusion and is retained in full.",
+      "body_word_count": 4604,
+      "word_count_method": "Whitespace-separated tokens in the selected raw text; mathematical tokens and figure labels are included.",
+      "source_version": {
+        "kind": "official_proceedings_pdf",
+        "publisher_host": "proceedings.neurips.cc",
+        "proceedings_year": 2021,
+        "arxiv_pdf_used": false,
+        "identity_verified_against": [
+          "https://proceedings.neurips.cc/paper/2021/hash/0d441de75945e5acbc865406fc9a2559-Abstract.html",
+          "https://arxiv.org/abs/2106.00170"
+        ],
+        "retrieval_date": "2026-10-11"
+      },
+      "prior_family_overlap": "unassessed",
+      "download_attempts": [
+        {
+          "attempt": 1,
+          "url": "https://proceedings.neurips.cc/paper/2021/file/0d441de75945e5acbc865406fc9a2559-Paper.pdf",
+          "http_status": 200,
+          "bytes": 845022,
+          "result": "Saved official proceedings PDF",
+          "bounds": "curl --retry 0 --connect-timeout 20 --max-time 120"
+        }
+      ],
+      "source_warnings": [
+        "The proceedings PDF contains 13 pages; separately linked supplementary material is not part of this saved PDF and was not downloaded or included.",
+        "Section 2.2 explicitly states that four displayed stocks were chosen from twelve because the fixed-alpha comparator clearly failed; the complete statement is retained.",
+        "The election experiment replicates drift through time-zone ordering and random order within zones, rather than claiming to replay the actual reporting sequence; the full design is retained."
+      ],
+      "extraction_warnings": [
+        "Raw extraction contains font-encoding artifacts, missing mathematical operators/step-size glyphs, misplaced mathematical tokens, and compressed spacing. No OCR, normalization, equation repair, or source rewriting was performed.",
+        "Figures 1-3 are preserved through all extractable labels and captions; raster/visual curves are available only in the saved PDF. No main-body tables were found.",
+        "Section 1.1 and its Equation (1), although relevant background for CQR, are excluded because they are inside Introduction; later references to that setup remain unchanged.",
+        "The input retains incidental page numbers and form feeds inside selected slices. The last page footer and acknowledgements are excluded by the exact final boundary."
+      ],
+      "verification": {
+        "pdfinfo": "Passed without diagnostics: 13 pages, 845022 bytes",
+        "all_page_render_command": "pdftoppm -r 10 sources/P12.pdf | shasum -a 256",
+        "all_page_render_sha256": "0e1a953ff6776cf993269c2716043b34320d350c19830e6034eaad6ab5fafe2d",
+        "all_page_render_diagnostics": "None",
+        "repeat_raw_extraction_sha256_matches": true,
+        "body_is_exact_ordered_raw_byte_slices": true,
+        "segment_boundaries_unique_and_page_ranges_verified": true,
+        "pdf_raw_body_checksums_verified": true,
+        "anchor_counts": {
+          "abstract": 2,
+          "methods": 2,
+          "results": 2
+        },
+        "each_unit_has_one_core_and_one_scope_anchor": true,
+        "anchor_locator_pages_within_selected_body": true,
+        "generation_performed": false
+      },
+      "status": "prepared"
+    },
+    "extraction_recipe": "sources/P12.extract.mjs",
+    "body_words_whitespace": 4604,
+    "documented_exposure": {
+      "searched": "super_writer references, docs, evals, examples before archiving this round",
+      "exact_title_or_registered_alias_hit": false,
+      "prior_family_hit": null,
+      "model_pretraining_exposure": "unknown, not claimed unseen"
+    }
+  }
+]

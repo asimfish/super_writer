@@ -1,0 +1,292 @@
+{
+  "audits": [
+    {
+      "id": "D4_text_133",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["reader_inference"],
+      "reason": "P07 Table 1, sections 2.3 and 4.2 support 88.3/56.1, shared-window comparisons, and the 300-pair intervention. Prose limits capacity claims to 'these conditions' and contrasts lookup with QA. Reading recovers worst-case placements and shared 10/20-document inputs. It adds 'UUID,' absent from this paragraph; that source-supported detail is not credited as prose recovery. Explicit task, model, and placement boundaries suffice for the selected contrast."
+    },
+    {
+      "id": "D4_text_114",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 Table 2, section 4.3, and section 5.2/Figure 3 support the five-passage attribution/correctness comparison and customization tradeoffs. Prose explicitly separates the 50,000-example, 150-question ablation and says it changes passage handling as well as reflection. Reading recovers these boundaries and the precision/fluency cost. Its inability to isolate critique tokens follows the paragraph's legitimate combined-configuration claim, not a recovery failure."
+    },
+    {
+      "id": "D4_text_117",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 4.1-4.2/Figures 8-9 and section 2.3 support the lookup/QA contrast, 1.9-point within-window spread, and overlapping shared-input GPT curves. Prose specifies 300 UUID pairs, the 2,048-token training window, and 10/20-document comparisons. Reading recovers the task distinction and degradation beyond training length. Its 2,048-token reference is read as the stated training-window boundary, not evidence of an exact test-sequence length."
+    },
+    {
+      "id": "D4_text_134",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["reader_inference"],
+      "reason": "P07 Table 1 and sections 2.3/4.2 substantiate the answer-only and closed-book controls, shared-window profiles, and lookup intervention. Prose bounds the conclusion with 'in this evaluation'; reading preserves worst 20/30-document settings, shared 10/20-document inputs, and the 300-pair comparison. Reading adds 'UUID,' which the paragraph does not specify. Recovery rests on its explicit exact-lookup versus QA conditions, not that added identifier type."
+    },
+    {
+      "id": "D4_text_109",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.1-3.3 support offline critic supervision and generator-scored selection; Table 2 and section 5.2 support the PopQA and ASQA tradeoffs. Prose calls support 'predicted' and rejects improvement in every answer dimension. Reading recovers this mechanism and the zero-shot 7B/13B, same-data 7B, and metric-specific comparison boundaries. Both ASQA model rows support the unnumbered precision/recall/correctness contrast; no complete-grounding guarantee is asserted."
+    },
+    {
+      "id": "D4_text_113",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 4.2-4.3, Table 2, and section 5.2/Figure 3 support the matched-data attribution comparison, lower str-em, and separate ablation. Prose states five ASQA passages, 150,000 main-training pairs, and the smaller 50,000-example/150-question study. Reading retains these conditions and task-dependent retrieval costs. 'Not an isolated effect of one token' correctly bounds the ablation; the reader's non-isolation observation is not an error."
+    },
+    {
+      "id": "D4_text_125",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 Table 1 and sections 3.2-3.3 support distinct relevance/support judgments, offline GPT-4-derived supervision, and adjustable decoding without the critic. Table 2 and section 5.2 confirm 66.9 versus 5.0 precision, lower correctness, and the MAUVE cost. Reading recovers these relations and the explicit zero-shot six-task, 7B/13B, matched-data/five-document boundaries. 'Rather than a uniform gain' adequately limits the selected attribution claim."
+    },
+    {
+      "id": "D4_text_119",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.1/2.3, 3.1-3.2, and 4.2 support position-controlled QA, UUID lookup, Claude exceptions, and differing intervention effects. Prose restricts comparisons to inputs fitting both windows and conclusions to 'evaluated contexts.' Reading recovers the capacity/use distinction, 2,655-query setting, Claude exception, and shared-window qualification. The selected abstract diagnosis does not require importing every experimental configuration from the anchor."
+    },
+    {
+      "id": "D4_text_118",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 section 4.2 establishes perfect 300-pair GPT-3.5-Turbo (16K) lookup versus 45.6 worst-case and the contrary QA response; section 4.1 supplies the 1.9-point training-window qualification. Section 2.3 supports shared-input GPT profiles. Reading preserves these conditions and the selected lookup-versus-evidence-use relation. Prose's 'alone cannot establish' conclusion is appropriately bounded, not a universal claim that larger windows never help."
+    },
+    {
+      "id": "D4_text_130",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.1-3.3, Table 1, and equations 2-4 support offline annotation, passage-loss masking, passage-independent utility, and normalized weighted candidate scores. Prose's 'judged relationship ... affects selection' is recovered by the reader's beam-search explanation. Reading also preserves adjustable controls and no inference-time critic. These are adequate boundaries for the selected training-to-decoding method; it makes no task-wide accuracy or grounding guarantee."
+    },
+    {
+      "id": "D4_text_141",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 Table 2 verifies the 13B ASQA precision/recall/str-em and separate 7B PopQA numbers; sections 4.2-4.3 and 5.2 support matched inputs and customization costs. Prose identifies the 7B analysis and explicitly says the same-data comparison changes training and reflection together. Reading recovers these distinct comparisons and non-isolation boundary. Its 'separate ... effects ... not recoverable' correctly describes the claim's limits, not missing recovery of the selected relationship."
+    },
+    {
+      "id": "D4_text_136",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.2-3.3 support generator-owned reflection scoring and adjustable controls; Table 2 and section 5.2 support the empirical contrasts. Prose separates the 13B ASQA comparison from customization 'on the 7B model.' Reading retains those model/task boundaries, zero-shot six-task scope, and lack of an inference-time critic. The final attribution-versus-coverage/fluency conclusion is narrower than uniform superiority or guaranteed support."
+    },
+    {
+      "id": "D4_text_115",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 Table 2 confirms all paired values; section 4.3 establishes five ASQA documents and threshold zero for ALCE, while section 5.2 supplies the 7B support/MAUVE analysis and retrieval tradeoff. Prose distinguishes 7B same-data and 13B ChatGPT comparisons. Reading preserves both and the zero-threshold condition. Citation gains coexisting with correctness, recall, or fluency losses is source- and text-supported, with no uniform-improvement implication."
+    },
+    {
+      "id": "D4_text_124",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.3, 4.1-4.2, and 5 support middle-position QA degradation, shared-window similarity, training-length dependence, and reader saturation before recall. Prose limits failures to 'some' configurations and 'evaluated' systems while separating lookup from natural-language evidence use. Reading recovers these relationships and consequential shared-input/training-window boundaries. Claude's lookup exception need not be listed because this paragraph does not claim universal synthetic failure."
+    },
+    {
+      "id": "D4_text_144",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.1-2.3 and 3.1-3.2 establish the fixed-answer reordering design, paragraph-selected queries, document/pair counts, controls, greedy decoding, and containment scoring. Prose expressly holds the document set fixed only for reordering and changes distractors separately. Reading recovers that separation and all consequential sample/task/scoring boundaries. 'Excluding annotated answers' preserves the source's filtering criterion without falsely guaranteeing absence of every reasonable alternative answer."
+    },
+    {
+      "id": "D4_text_131",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.1-2.3, 3.1, and 4.2 support moving fixed evidence, varying distractors, reference controls, UUID lookup, and query repetition. Prose specifies paragraph-answer queries, annotated-answer filtering, greedy decoding, and output inclusion. Reading recovers the controlled availability/use relation and those boundaries. Omitting UUID sample counts is adequate for this selected diagnostic-method explanation, which makes no sample-size-dependent quantitative result claim."
+    },
+    {
+      "id": "D4_text_139",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.2-3.3 and equations 2-4 support critic-derived supervision, masked passage loss, and generation-plus-normalized-critique beam scoring. Prose says decoding prefers continuations 'it judges better grounded,' not that judgments certify support. Reading recovers the offline-to-online mechanism, separate support scoring, and adjustable controls without a critic call. Those method-specific boundaries are adequate without importing evaluation tasks or defaults absent from this paragraph."
+    },
+    {
+      "id": "D4_text_132",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.1-2.3, 3.1, and 4.2 support the fixed-document position manipulation, ranked annotated-answer-filtered distractors, reference controls, and query-aware probe. Prose specifies paragraph long answers, 10/20/30 documents, greedy decoding, and containment scoring. Reading recovers these boundaries and the position-versus-added-context distinction. Its account does not mistake fixed availability within position conditions for an unchanged distractor count across length conditions."
+    },
+    {
+      "id": "D4_text_126",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.2-3.3 support reflection-trained selection and adjustable inference; sections 4.1/4.3, Table 2, and section 5.2 support the six-task and ASQA evidence. Prose reports the 7B, same-data, same-five-document comparison and calls selection 'judged better supported.' Reading recovers both mechanism and precision/correctness/MAUVE tradeoffs. These explicit empirical and predicted-judgment boundaries avoid implying uniform gains or verified grounding."
+    },
+    {
+      "id": "D4_text_143",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.1-2.3 and 3.1-3.2 support paragraph-selected NaturalQuestions queries, answer-filtered distractors, controls, UUID JSON sizes, and containment evaluation. Prose's opening fixes question and answer evidence while reordering; its later length manipulation is separate. Reading recovers that design and the 2,655-query, 500-example, greedy-decoding boundaries. The synthetic task is explicitly minimal-language matching, adequately limiting the method's semantic generalization."
+    },
+    {
+      "id": "D4_text_138",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.3, 3.2, 4.2, and 5 support all four contrasts: position, shared-window capacity, lookup intervention, and recall versus reader gains. Prose uses 'generally,' 'several,' and 'necessarily' and names the Claude exception. Reading recovers the evidence-use relation and explicit evaluated-model, shared-length, and task distinctions. These qualifiers adequately bound the selected abstract conclusion without requiring all numerical configurations."
+    },
+    {
+      "id": "D4_text_121",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 section 4.2 supports 100 versus 45.6 at 300 pairs and differing QA effects; sections 2.3/3.2 support Claude's cross-task contrast and below-closed-book GPT settings. Section 5 supports marginal gains beyond 20 documents. Prose distinguishes these experiments, and reading retains their model, pair-count, placement, and pipeline boundaries. 'Does not ensure a benefit' correctly limits the availability claim rather than asserting that evidence always hurts."
+    },
+    {
+      "id": "D4_text_122",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 4.2, 2.3, and 5 substantiate the intervention, closed-book comparison, and separate retrieval-pipeline result. Prose explicitly says 'tested,' 'some' 20/30-document settings, and 'separate' pipeline study. Reading recovers the lookup/QA dissociation, 300-pair worst-position baseline, and marginal gains beyond 20 documents. The selected conclusion concerns insufficiency of lookup and recall alone, not universal failure of retrieval or contextual answering."
+    },
+    {
+      "id": "D4_text_140",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 Table 1, sections 3.2-3.3, and equations 2-4 support passage-independent utility, loss masking, normalized retrieval thresholding, and weighted favorable-token beam scores. Prose contrasts candidate ranking with simply accepting the top passage. Reading recovers that mechanism and the offline critic/no-retraining boundaries. The paragraph describes learned assessments as selection criteria, not certified grounding; evaluation settings are unnecessary to this selected method claim."
+    },
+    {
+      "id": "D4_text_142",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 Table 2 and sections 4.1-4.3/5.2 support all reported values, PopQA gold-answer inclusion, equal ASQA passages, and customization costs. Prose separates the 13B ChatGPT comparison from the 7B same-data comparison and rejects isolating reflection from retrieval-aware training. Reading recovers both relations and their conditions. Its uncertainty about reflection alone is appropriate because the paragraph deliberately claims only the combined approach's benefit."
+    },
+    {
+      "id": "D4_text_112",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.1-2.3, 3.1-3.2, and 4.2 support reordering, Contriever distractors, UUID sizes, reference conditions, and advance-query contextualization. Prose explicitly limits distractor filtering to annotated answers and describes output inclusion rather than exact-response equality. Reading recovers the fixed-position design, sample sizes, decoding/scoring choices, and cross-task probe. These are adequate experimental boundaries; no guarantee that all distractors lack plausible answers is introduced."
+    },
+    {
+      "id": "D4_text_110",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.1-3.3 support offline reflection supervision and generator-owned selection; Table 2 and section 5.2 support PopQA gains and ASQA metric tradeoffs. Prose identifies the 7B same-data and 13B ChatGPT comparisons and calls support 'predicted.' Reading recovers these boundaries and adjustable attribution/quality priorities. Its replacement of 'separate inference-time evaluation' denotes the separate critic, not the absence of generator self-evaluation."
+    },
+    {
+      "id": "D4_text_111",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.1-2.3 and 3.1-3.2 support fixed distractors within length conditions, annotated-paragraph queries, Contriever filtering, controls, UUID JSON sizes, and answer containment. Prose explicitly distinguishes containment from whole-response exact match. Reading recovers the controlled position/length relationship and all consequential dataset, synthetic-task, sample-count, and decoding boundaries. It does not upgrade annotated-answer screening into a guarantee against alternative reasonable answers."
+    },
+    {
+      "id": "D4_text_116",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 4.2-4.3, Table 2, and section 5.2 support baseline training differences, paired PopQA/ASQA values, equal ASQA documents, and customization costs. Prose expressly distinguishes 7B same-data gains from 13B versus ChatGPT and states that precision does not establish coverage. Reading preserves those comparisons and the training/inference boundary. This adequately supports task- and metric-dependent benefits without implying that attribution gains improve all answer content."
+    },
+    {
+      "id": "D4_text_120",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.1/2.3, 3.1-3.2, and 4.2 support answer-preserving position changes, random lookup, shared-window comparisons, and intervention differences. Prose qualifies the model trend with 'generally' and names nearly perfect Claude lookup. Reading recovers these exceptions, the 2,655-query setting, and the jointly fitting-input condition. 'In the evaluated setting' adequately limits the selected capacity-versus-evidence-use conclusion without universalizing positional failure."
+    },
+    {
+      "id": "D4_text_127",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.2-3.3 and equations 2-4 support the 7B GPT-4-trained critic, masked passage loss, thresholded retrieval, and weighted critique-guided segment selection. Prose's 'predicted evidence support' makes the epistemic boundary explicit. Reading recovers the offline-to-generator mechanism and adjustable priorities without inference-time critic evaluation. This method-focused scope is adequate; no specific beam width, evaluation result, or guaranteed grounding is claimed."
+    },
+    {
+      "id": "D4_text_135",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.2-3.3, Table 2, and section 5.2 support generator-scored selection, the 13B ASQA precision/recall comparison, and support/MAUVE customization. Ethical Concerns explicitly rejects complete citation support. Prose uses the same five passages and concludes gains do not imply 'complete grounding'; reading recovers these boundaries and zero-shot 7B/13B scope. The customization statement reports the observed tradeoff without asserting that the 13B comparison itself varied support weights."
+    },
+    {
+      "id": "D4_text_123",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.3, 4.1-4.2, and 5 support the position, window, query-repetition, training-length, and recall/reader contrasts. Prose confines its bottleneck claim to evaluated QA settings and uses 'some' for below-closed-book results. Reading recovers the central access/use distinction and within-versus-beyond-training boundary, with shared-input comparisons in its core account. The selected synthesis need not reproduce every anchor exception to avoid universal claims."
+    },
+    {
+      "id": "D4_text_128",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 sections 3.2-3.3 and equations 2-4 support the 7B critic, masked passages, thresholded retrieval, and normalized weighted critique ranking. Prose explains that predicted support 'can ... influence' selection; reading recovers this learned-judgment relationship and offline/no-retraining boundaries. The retrieval-threshold description is high-level, not an assertion of a competing raw-probability formula. These limits adequately support the selected method without guaranteeing the chosen claim's truth or support."
+    },
+    {
+      "id": "D4_text_137",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P07 sections 2.3, 3.2, 4.2, and 5 support shared-window similarity, Claude's lookup exception, query-repetition effects, and reader saturation before recall. Prose limits the conclusion to evaluated QA settings and describes the lookup weakness in 'several models.' Reading recovers the selected capacity/use relation plus jointly fitting inputs, distinct tasks, and the exception. Its scope is adequate without importing unmentioned numerical thresholds or architecture experiments."
+    },
+    {
+      "id": "D4_text_129",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P08 Table 1, sections 3.2-3.3, and equations 2-4 establish separate relevance/support judgments and normalized critique-guided selection after offline training. Prose says a partially supported continuation 'can' score lower, appropriately avoiding a deterministic penalty or grounding guarantee. Reading recovers this selection relation, masked passage loss, and adjustable controls without the critic. Those are adequate boundaries for the chosen evidence-assessment method rather than the anchor's broader experimental settings."
+    }
+  ]
+}

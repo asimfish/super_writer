@@ -1,0 +1,88 @@
+{
+  "audits": [
+    {
+      "id": "N1_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source N1.txt 4.1, lines 165-184, Figure 4 caption 186-191, and 198-210 establish simplified/no-curriculum conditions, fixed-batch shortening, reward decline, throughput limits and the task-specific compromise. Prose 'At fixed batch size' through 'Thus' explicitly connects these, retaining 1,500 updates and distinguishing the million-sample baseline. Reading.core's 'excessive parallelism lowers reward' and reading.scope's 'different sample budget' are prose-grounded. Reading.unclear appropriately withholds causal confirmation rather than upgrading the authors' explanations to verified mechanisms."
+    },
+    {
+      "id": "N1_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source lines 165-184, 186-191 and 198-210 support the comparison conditions, shortening rollouts, nonmonotonic reward, slower throughput gains and bounded robot/batch choice. Prose 'not a monotonic learning benefit' and 'At fixed batch size' explain why faster training does not license unlimited parallelism; its five-run/1,500-update statement supplies the evaluation conditions. Reading.core preserves the tentative low-count explanation, while reading.scope's 'not batch-budget matched' follows the prose's explicit baseline qualification. Its causal-verification caveat correctly identifies an explanation not independently established here."
+    },
+    {
+      "id": "N1_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source lines 14-24, 28-29, 42-51 and 95-121 support GPU-local processing, relocation-based curriculum and temporal limits; 212-224, 232 and 247-254 support training, simulation and hardware bounds. Prose 'reduces CPU-GPU transfers,' 'without regenerating terrain' and 'adequate per-robot rollout lengths' provide the mechanism and constraint, followed by measured training and deployment. Reading.core and reading.scope retain those claims, including 'uphill traversal fails.' Reading.unclear correctly notes that the prose names minibatches and bootstrapping without explaining them; those details are not required to answer this bounded abstract objective."
+    },
+    {
+      "id": "N1_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "ambiguous",
+      "reason": "Source lines 14-24, 38-51, 95-121, 212-224, 232 and 247-254 support the mechanisms, setup and limitations. Prose 'reducing data transfers,' 'without regenerating the shared mesh' and its final bounded conclusion answer the objective; shortened rollouts and imperfect maps are explicit. Reading.core is grounded, and its physical-rate/isolated-speedup caveat is appropriate. However, reading.scope's 'failure beyond 25-degree slopes' leaves direction unspecified: prose says 'slope climbing failed,' while source 223-224 permits some downhill success. That reader scope is ambiguous, not a prose fidelity failure."
+    },
+    {
+      "id": "N1_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source lines 49-51, 60-64 and 69-78 distinguish predictable failure/goal resets from unobserved time limits, prescribe critic bootstrapping and reject final-batch-only handling. Prose 'remove continuation value,' 'bootstrapping the target for the interrupted trajectory' and 'Episodes can consequently span multiple batches' explain both the reason and target treatment. Its contrast with the newly reset episode is a legitimate explanation of continuation, not an unsupported implementation formula. Reading.core repeats that distinction, and reading.scope grounds the independent 20-second limit and persistence across updates in explicit prose."
+    },
+    {
+      "id": "N1_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source lines 49-51, 60-64 and 69-78 support absent episode time, separately detected time-outs, reward augmentation with the critic's prediction and episodes crossing short batches. Prose 'truncating its target rather than reflecting task completion' explains the distinction; 'bootstrapping the interrupted trajectory's target' supplies the handling. 'Time-outs can consequently occur inside a batch' connects episode duration to detection requirements. Reading.core's retained continuation value and reading.scope's 'not just collection boundaries' are explicitly grounded, without importing an unstated numerical formula or requiring extra target-state detail."
+    },
+    {
+      "id": "N1_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "ambiguous",
+      "reason": "Source lines 14-29, 38-51, 95-121, 212-224, 232 and 247-254 support the GPU/curriculum mechanism, rollout constraint and measured deployment. Prose 'avoiding regeneration,' 'adequate consecutive rollout steps' and 'bounded by rollout duration and terrain sensing' answer the objective with the reported setup. Reading.core is grounded. Reading.scope's 'failed slopes beyond 25 degrees,' however, does not identify direction; prose specifically says 'failed climbing,' and source 223-224 retains moderate downhill success. The reader's slope bound is ambiguous; the prose remains faithful and explanatory without needing additional sim-to-real details."
+    },
+    {
+      "id": "N1_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "ambiguous",
+      "reason": "Source lines 14-29, 38-51, 95-121, 212-224, 232 and 247-254 support GPU locality, adaptive difficulty, the training configuration and sensing limitations. Prose 'parallel collection with progressively challenging experience without regenerating terrain' explains the combination, while shortened rollouts and the hardware speed cap bound deployment. Reading.core and its unavailable physical-rate/isolated-speedup caveat are grounded. Reading.scope's 'failure beyond 25-degree slopes' lacks the prose's 'climbing fails' qualification; source 223-224 allows some downhill success. This is ambiguous reader scope, separate from the prose's supported objective and fidelity pass."
+    },
+    {
+      "id": "N1_T09",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source lines 165-184, 186-191 and 198-210 establish the simplified comparison, fixed-batch horizon reduction, high-count reward loss, throughput slowdown and batch/time compromise. Prose 'faster collection does not necessarily produce a better policy,' the five-run/1,500-update conditions and 'rather than supporting unlimited parallelism' answer the objective. Reading.core's 'accelerate training but shorten rollouts' and reading.scope's separate million-sample baseline follow explicit prose. The baseline need not use the exact phrase 'unmatched budget': its stated million samples distinguish it from the recommended batches. Causal verification is appropriately left unrecovered."
+    },
+    {
+      "id": "N1_T10",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source lines 165-184, 186-191 and 198-210 support fixed-batch shortening, reward/time effects, evaluation conditions and the task-specific optimum. Prose 'training becomes faster, but reward drops sharply at excessive parallelism' and 'balancing trajectory length, diversity, and throughput' explain the bounded trade-off. It explicitly removes curriculum, reduces difficulty and states 1,500 updates. Reading.core preserves the tentative diversity explanation; reading.scope grounds the batch range and higher-cost baseline in prose. Its causal-verification caveat appropriately separates reported patterns and proposed mechanisms from isolated causal proof."
+    },
+    {
+      "id": "N1_T11",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source lines 49-51, 60-64 and 69-78 establish unobservable time limits, predictable task endings, critic-based reward augmentation and episodes spanning batches. Prose 'discard its predicted future return' explains the error, and 'target thus includes continuation value' answers target handling. 'A policy update does not itself reset the environments' supplies the short-batch condition. Reading.core's distinction between interruption and completion and reading.scope's within-batch time-outs are explicitly grounded. The objective is answered without naming a precise bootstrap state or contrasting it explicitly with the newly reset episode."
+    },
+    {
+      "id": "N1_T12",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source lines 49-51, 60-64 and 69-78 support the time-limit distinction, separate detection, critic bootstrapping and cross-batch episodes. Prose 'episode time is absent,' 'rather than assigning zero future return' and 'Completing a collection batch does not reset the environment' explain why and how time-outs require continuation targets wherever they occur. Reading.core and reading.scope restate explicit prose. Reading.unclear correctly notes that the prediction state is unspecified; neither source nor prose supplies an exact state-selection rule, and that omission does not prevent answering the bounded objective."
+    }
+  ]
+}

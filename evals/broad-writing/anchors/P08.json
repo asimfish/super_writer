@@ -1,0 +1,45 @@
+{
+  "id": "P08",
+  "abstract": [
+    {
+      "role": "core",
+      "reader_question": "How can a language model decide when to retrieve and whether to trust its continuation?",
+      "expected_relation": "Learned reflection tokens couple on-demand retrieval to relevance, evidence support, and response utility, enabling inference-time control.",
+      "source_locator": {"section": "3.1 and 3.3", "pdf_pages": [3, 6], "table": "1"}
+    },
+    {
+      "role": "scope",
+      "reader_question": "What evidence bounds the claims about improved generation?",
+      "expected_relation": "The evidence covers 7B and 13B models on six tasks with task-specific metrics; citation improvements neither imply uniform dominance nor guarantee supported output.",
+      "source_locator": {"section": "5.1 and Ethical Concerns", "pdf_pages": [7, 10], "table": "2"}
+    }
+  ],
+  "methods": [
+    {
+      "role": "core",
+      "reader_question": "How does offline critique become a generator's own inference behavior?",
+      "expected_relation": "A distilled critic annotates training outputs with reflection tokens; next-token training then lets the generator retrieve, critique, and rank continuations without that critic at inference.",
+      "source_locator": {"section": "3.2 and 3.3", "pdf_pages": [4, 6], "equations": ["1", "2", "3", "4"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "Which experimental settings govern the comparisons?",
+      "expected_relation": "Zero-shot evaluation separates closed-set, short-form, and long-form metrics; retrieval sources and thresholds vary by task, and ablations use a smaller training set.",
+      "source_locator": {"section": "4.1, 4.3, and 5.2", "pdf_pages": [6, 9]}
+    }
+  ],
+  "results": [
+    {
+      "role": "core",
+      "reader_question": "What links reflection-guided retrieval to the reported task outcomes?",
+      "expected_relation": "Task comparisons and component ablations associate reflection-guided retrieval with accuracy and attribution gains, while retaining the same-data fine-tuning comparison.",
+      "source_locator": {"section": "5.1 and 5.2", "pdf_pages": [7, 9], "table": "2", "figure": "3(a)"}
+    },
+    {
+      "role": "scope",
+      "reader_question": "What is sacrificed when inference settings change?",
+      "expected_relation": "Stronger support weighting improves citation precision at a fluency cost; reducing retrieval harms PopQA more than PubHealth, and gains vary across comparison metrics.",
+      "source_locator": {"section": "5.1 and 5.2", "pdf_pages": [8, 9], "table": "2", "figures": ["3(b)", "3(c)"]}
+    }
+  ]
+}

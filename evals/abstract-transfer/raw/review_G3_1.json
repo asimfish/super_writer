@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "id": "A06_s1",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 4},
+      "reason": "Both connect continuous dynamics to adjoint memory savings, trace-based density evolution, and irregular-time latent prediction. MNIST supports fewer parameters, not improved accuracy; the spiral RMSE comparison is appropriately confined to synthetic sparse observations. Both scope density-update cost per function evaluation and acknowledge reconstruction error. B explains reverse reconstruction earlier, while A more explicitly describes the latent initial state and reconstruction/extrapolation evidence. These modest trade-offs do not establish a substantive advantage in contribution, decisive evidence, or prose."
+    },
+    {
+      "id": "A05_s2",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 4},
+      "reason": "B more directly explains why cache offloading improves on weight-only offloading and places the compressed throughput result beside its operative cause: avoiding disk swapping. This clarifies the contribution beyond merely fitting OPT-175B. Both faithfully separate dummy-weight throughput from real-weight quality, delimit the twice-optimal result to idealized weight I/O, and distinguish decoding from total-generation scaling. A presents essentially the same supported evidence, but its compression-first ordering links mechanism and measured gain less tightly. B earns a narrow argumentative preference, not a different fidelity judgment."
+    },
+    {
+      "id": "A05_s1",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 4},
+      "reason": "Both explain the central throughput mechanism: cache offloading enlarges batches and layer reuse amortizes weight I/O. The dummy-weight comparison, compression avoiding disk transfers, separate real-weight quality tests, and HELM completion provide complementary evidence. Both retain host-memory and long-completion-time scope and distinguish decoding scaling from overall throughput. B explicitly relates measured gains to effective batching; A more explicitly identifies HELM as evidence beyond synthetic tests. These differences are too small to justify a preference. The idealized weight-I/O qualification is sufficient without reproducing every analytical assumption."
+    },
+    {
+      "id": "A06_s2",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 4},
+      "reason": "B pairs continuous-depth learning with MNIST, trace-based flows with density experiments, and the latent model with spiral prediction. A introduces flow and latent mechanisms before returning to classification evidence, making the argument less continuous. Both faithfully describe adjoint reconstruction, the trace theorem, observation-time modeling, and numerical limitations; neither turns comparable MNIST accuracy into an accuracy improvement. The synthetic spiral comparison supports the stated extrapolation claim. B's mechanism-to-evidence progression earns a narrow preference; additional numerical details or a theorem proof are unnecessary."
+    }
+  ]
+}

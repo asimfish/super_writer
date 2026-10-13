@@ -1,0 +1,236 @@
+{
+  "reviews": [
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "abstract",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "fidelity_notes": {
+        "A": "Sections 3.2-3.4 support residual action tokenization, decoding with an offset, and optional goals. Sections 4.2-4.3 support the simulation summary and named exceptions. Tables 5 and 7 support the success totals and onboard CPU latencies; Section 4.7 supports the controller-noise rationale. No causal link from faster inference to higher success is asserted.",
+        "B": "The method, simulation exceptions, aggregate single-phase and two-phase successes, and onboard CPU timings agree with Sections 3-4 and Tables 5 and 7. The larger sequential advantage is an aggregate comparison, not a claim of superiority on every task. The per-step feedback condition is supported by Section 4.7."
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both connect learned residual action tokens and continuous refinement to single-pass generation, then distinguish similar standalone success from the larger two-phase gain. Both make onboard latency consequential through per-step feedback. A's explicit embedding reconstruction and B's more compressed coarse/fine description offer different detail without a decisive difference in the supported contribution or comparative argument."
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "results",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "fidelity_notes": {
+        "A": "Tables 5-7 support the aggregate counts, at-least-threefold final success on each longer task, and onboard CPU latencies. Section 4.7 supports both closing orders and the closed-loop protocol. The opening advantage is supported at the aggregate level; the paragraph does not explicitly claim a win on every two-phase task.",
+        "B": "The aggregate counts, ten trials per task, closing-both-doors exception (6/10 versus 5/10), longer-sequence comparison, and onboard timing all match Tables 5-7. The paragraph correctly separates observed order diversity from task-specific superiority and treats faster prediction as accompanying, not causing, higher aggregate success."
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 4,
+          "argument": 5,
+          "selection": 5,
+          "language": 4
+        }
+      },
+      "preferred": "B",
+      "reason": "B's closing-both-doors comparison locates the limit of the aggregate advantage in the very task used to demonstrate alternative orders. This makes clear that behavioral diversity and task superiority are different findings. Its ending also confines the joint success/latency result to the evaluated closed-loop protocol. The extra comparison earns its place by changing the interpretation, not by adding numbers."
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "abstract",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "fidelity_notes": {
+        "A": "The opening diversity/precision rationale is supported by Sections 4.3 and 4.6, and the method and performance claims agree with the body. Tables 5-6 support the sequential comparisons. The RTX A4000 values match Table 7's workstation measurements; they are not onboard CPU or end-to-end execution timings, and the draft does not label them as such.",
+        "B": "Sections 3-4 and Tables 5-7 support the algorithm, named simulation exceptions, real-robot counts, and GPU latencies. The RTX A4000 timing is a workstation measurement, distinct from the robot's onboard CPU timing. The closing sentence associates completion and action-generation time without asserting that lower latency caused higher success."
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "A",
+      "reason": "A's opening gives the residual codes and continuous offset a shared purpose: representing alternatives while preserving control precision. Its sentence explaining receding-horizon failure then establishes why per-action inference cost matters on this robot. B reports substantially the same supported findings but leaves these two explanatory relationships less explicit. This is a narrow preference, not a reward for a particular opening or more measurements."
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "results",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "fidelity_notes": {
+        "A": "Tables 5-6 support all success counts and the ten-trial longer-task evaluations; Section 4.7 supports closed-loop execution and both closing orders. The GPU values correctly match Table 7's RTX A4000 workstation column. The paragraph reports observed diversity and lower prediction latency alongside success, without claiming either caused the completion advantage.",
+        "B": "The aggregate success contrasts, four longer-task outcomes, closing orders, and controller limitation match Section 4.7 and Tables 5-6. Table 7 supports the explicitly named RTX A4000 timings, which are workstation rather than onboard measurements. The association between completion and prediction time does not introduce a causal performance claim."
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "Tie",
+      "reason": "A's 'similar isolated-task competence does not translate into similar sequence completion' and B's 'larger sequence-completion gap' interpret the same informative contrast. Both support it with longer-task results, preserve the observed alternative orders, and connect prediction cost to the controller-imposed feedback protocol. Ending on diversity versus latency changes emphasis, but neither establishes a substantively stronger account."
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "abstract",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "fidelity_notes": {
+        "A": "Section IV supports separate policies, proposals in interaction and TD targets, and the absence of BC regularization on the RL actor. Sections V-C/V-D support architecture preferences, dropout, relative benchmark performance, and proposal ablations. Table I supports the Hang comparison; manual resets and the tested-budget qualification are accurately retained.",
+        "B": "Section IV supports target-critic proposal selection in greedy and soft variants and consistency between interaction and bootstrap selection. The Robomimic architecture and dropout comparisons are supported by Section V-D, and the benchmark summary by V-C. Table I and Section VI support the Hang budget, scores, manual resets, and 20 evaluations per method."
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "B",
+      "reason": "B's 'bootstrap target therefore evaluates the same hybrid selection rule' explains why imitation enters value learning, rather than merely reporting its use twice. It also ties policy separation to the observed architecture contrast and identifies dropout's benefit to fine-tuning before distinguishing the proposal mechanisms. These relationships make the primary contribution and supported co-contributions more intelligible than A's largely successive descriptions."
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "results",
+      "fidelity": {
+        "A": "concern",
+        "B": "pass"
+      },
+      "fidelity_notes": {
+        "A": "The Hang figures, budgets, evaluation conditions, and Square ablation findings match Table I and Sections V-D/VI. However, 'Robomimic Square ablations distinguish this benefit from actor regularization alone' can attribute the preceding Hang gain to mechanisms only ablated in Square. The supplied body contains no corresponding hardware ablation. This is a cross-setting attribution concern, not a numerical mismatch.",
+        "B": "The paragraph correctly assigns the 30,000-step budget to RL methods and the 65% reference to demonstration-trained cloning. Table I and Section VI support the common initial conditions, 20 evaluations, sparse rewards, and manual resets. Square ablations are explicitly complementary evidence for the mechanisms, kept distinct from Hang's measured policy improvement."
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 4,
+          "argument": 5,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "B",
+      "reason": "B's final sentence assigns separate evidentiary roles: Square supports the proposal mechanisms beyond regularization, while Hang documents improvement within the hardware budget. A's 'distinguish this benefit' blurs that boundary and risks transferring a causal explanation to Hang without a hardware ablation. B also clearly distinguishes the RL interaction budget from the demonstration-trained reference."
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "abstract",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "fidelity_notes": {
+        "A": "The policy separation, dual proposal mechanism, actor dropout, and ViT-based critic are supported by Section IV. Section V supports the benchmark contrast, pixel Square budget and baseline ceiling, and proposal ablations with dropout retained. Table I supports every Hang score and evaluation count; sparse rewards and manual resets are accurately scoped to hardware learning.",
+        "B": "The higher-valued selection describes the greedy IBRL used in the cited pixel Square and hardware experiments; the body separately provides a soft variant for state-based learning. Sections IV-V support the architecture, dropout, comparative results, and ablation claims. Section VI and Table I support the Hang budget, scores, evaluation count, and manual-reset conditions."
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "B",
+      "reason": "B's 'selects the higher-valued imitation or RL action' specifies what the hybrid policy actually does and immediately connects that choice to TD bootstrapping. A says the critic 'compares' proposals before invoking a shared selection rule without specifying the choice. The empirical evidence and supported co-contributions are otherwise equivalent, making this a narrow preference for explanatory precision."
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "results",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "fidelity_notes": {
+        "A": "Table I supports Hang's 30 demonstrations, 30,000-step budget, all four scores, and Drawer's 10,000-step checkpoint scores. Section VI supports 20 evaluations with shared initial conditions, sparse binary rewards, and manual training resets. The paragraph correctly uses the early-checkpoint evaluation rather than conflating it with an online training-curve success rate.",
+        "B": "All Hang and early-stop Drawer values match Table I, including the matched demonstration counts and checkpoint budgets. The common evaluation conditions and manual-reset sparse-reward protocol match Section VI. The conclusions are limited to policy improvement and interaction efficiency demonstrated in these tasks, with no autonomous-reset or general deployment claim."
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both use Hang's comparison with cloning to establish improvement beyond preserving demonstrated competence, then give Drawer a different function: performance at a matched early interaction budget. Both retain the shared evaluation conditions and manual-reset scope. A's explicit 'complementary comparison' and B's final synthesis convey the same supported argument; neither offers a decisive substantive advantage."
+    }
+  ]
+}

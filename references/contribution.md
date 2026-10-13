@@ -1,16 +1,22 @@
 # Contribution-First
 
-This is the keystone of PaperSpine V4. A paper is accepted or rejected on its **contribution** — the one defensible thing it adds to the field — not on how polished its prose is. Motivation explains *why a reader should care*; contribution states *what this paper actually delivers and is willing to be judged on*. The two are not the same, and V4 refuses to let motivation quietly stand in for a contribution.
+Contribution states what the paper adds and what evidence makes that addition
+defensible; motivation explains why it matters. Polished prose does not establish
+either. A paper can have a central argument and multiple distinct contributions.
+This workflow supports their articulation, not a prediction of acceptance.
 
 ## The Contribution-First Hard Rule
 
 > **No `confirmed_contribution.md`, no substantive writing. Motivation supports the contribution, not replaces it.**
 
-Concretely:
+For full-paper workflows:
 
 - `paper_rewriting_output/confirmed_contribution.md` must exist and pass `contribution_check.py` **before** any section drafting, blueprinting, or rewriting begins.
 - `confirmed_motivation.md` answers "why does this problem matter?"; `confirmed_contribution.md` answers "what does *this paper* establish that did not exist before, and how strongly can we claim it?" A motivation with no contribution is a literature review; a contribution with no motivation is a result nobody asked for. You need both, and the contribution governs.
-- Every later artifact (section blueprints, writing-rationale matrix, the manuscript itself) must trace back to the single Core contribution statement here. If a paragraph does not advance, support, or bound that statement, it does not belong.
+- Later artifacts trace to the Core contribution and any author-prioritized
+  co-contributions. A common argument does not make every additional result an
+  implementation detail; retain distinct contributions when their evidence and
+  intended reader payoff justify them.
 
 WHY this is a hard gate: the most common failure mode in generated papers is fluent text that improves every sentence while never committing to a claim a reviewer can accept or reject. Forcing the contribution to be written, typed, and bounded *first* makes the whole paper answerable to one testable promise.
 
@@ -25,7 +31,7 @@ Save at `paper_rewriting_output/confirmed_contribution.md`. It has **four requir
 
 | Field | Content |
 |---|---|
-| Main contribution statement | The single sentence the whole paper defends. One claim, specific, falsifiable. |
+| Main contribution statement | A concise, specific statement of the central addition, with distinct co-contributions identified when needed. |
 | Contribution type | new method / new dataset / new theory / new empirical finding / new system / new analysis-or-benchmark / new application. Pick the dominant one. |
 | One-sentence reviewer payoff | If the reviewer remembers one thing, it is this. Phrase as the value to the field, not the activity performed. |
 
@@ -60,6 +66,36 @@ Save at `paper_rewriting_output/confirmed_contribution.md`. It has **four requir
 WHY four sections in this order: a contribution is only real if it is **needed** (section 2), **answered with evidence** (section 3), and **bounded so it does not over-claim** (section 4). Section 1 is the promise; 2-4 are what make the promise survive review. The `Evidence missing` and `Claim boundary` fields are the parts authors skip and reviewers punish — V4 makes them mandatory.
 
 ---
+
+## Contribution Priorities and Compression
+
+Use the existing contribution record to distinguish the central addition,
+independently valuable co-contributions, and supporting details. Reuse the
+author's explicit priorities; do not infer importance from result magnitude,
+source order or the ease of explaining a mechanism. If priorities are unclear
+and competing choices materially change the paper, ask one focused question or
+label the allocation provisional. Priority never licenses an unsupported claim.
+Distinguish a confirmed contribution from a desired result awaiting evidence.
+Check the capability actually claimed before proposing validation: release
+availability, encoding fidelity without refitting, and downstream policy success
+are separate questions. Ask about the intended capability when ambiguous; do
+not prescribe policy-success experiments as a prerequisite for an encoding-only
+claim. Follow the requested genre when deciding whether an unestablished aim
+belongs in the manuscript or only in author notes.
+
+For an abstract, record the intended retained meaning and evidence anchor in
+the existing writing-rationale row. In its final-text check, point to the phrase
+that still communicates each prioritized contribution and its consequential
+boundary. Naming a released tool without its distinct utility, or describing
+that utility only in author notes, does not preserve the contribution in prose.
+When a contribution disappears, first trade redundant mechanism or table detail;
+do not merely append every result and exceed the requested budget. A lower
+priority result can be omitted deliberately without being called a factual error.
+
+These are decisions within existing artifacts, not new required table columns,
+files or approval gates. A bounded abstract request can use supplied author
+decisions and brief working notes without creating a full-paper artifact tree.
+See [abstract decisions](abstract-decisions.md) for contribution-specific choices.
 
 ## Per-Section Writing Checklists
 
@@ -115,14 +151,17 @@ Discussion converts results into *understanding*. A weak discussion restates num
 - [ ] State limitations from `Evidence missing` / `Claim boundary` without dissolving the central claim.
 - [ ] Close on `Significance risk` answered: the field-level implication, not a generic "this is useful".
 
-### CHECKLIST — Abstract contribution contract (5 steps)
+### CHECKLIST — Abstract contribution contract
 
-The abstract is a contract: it promises exactly the contribution the paper delivers, in order. Five sentences, five jobs.
+The abstract promises what the evidence supports. The functions below are
+options, not five required sentences or a fixed order. Combine, reorder or omit
+them according to the contribution, venue and available budget; use
+[abstract decisions](abstract-decisions.md) for the governing allocation.
 
 1. **Problem + stakes** — the field problem and why it matters (`Field problem`).
 2. **Gap** — the specific unresolved gap (`Specific gap` + why prior work falls short).
-3. **Contribution** — the Core contribution as the response (`Main contribution statement` + `Design response`).
-4. **Evidence** — the strongest supporting result (`Evidence available`), stated at allowed strength.
+3. **Contribution** — the central addition and prioritized co-contributions (`Main contribution statement` + `Design response`), not a list of implementation modules.
+4. **Evidence** — evidence relevant to those contributions (`Evidence available`), with distinct comparison scopes preserved rather than only the largest result.
 5. **Payoff** — the reviewer payoff / field implication (`One-sentence reviewer payoff`), bounded so it does not over-claim.
 
 WHY a contract: if the abstract promises more than `Strong claims allowed`, the paper is already over-claiming on line one. The abstract must be checkable against `confirmed_contribution.md` field by field.

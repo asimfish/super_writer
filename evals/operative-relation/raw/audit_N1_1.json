@@ -1,0 +1,88 @@
+{
+  "audits": [
+    {
+      "id": "N1_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 38-47, 165-190 and 198-210 establish shortened rollouts, simplified/no-curriculum conditions, 1,500 updates and the bounded trade-off. Prose sentences 2-4 supply those conditions and the faster-training/sharp-reward-drop mechanism; sentences 5-9 explain slowing throughput, batch costs and the task-specific choice. Reading.core_witness directly locates the trade-off; reading.scope_witness locates the measurement conditions. Its unmatched-baseline statement is explicit in sentence 8, and its causal-confirmation reservation respects the prose's explanatory rather than experimental-causal claims. No fidelity discrepancy or critical explanation gap."
+    },
+    {
+      "id": "N1_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 38-47, 165-190 and 198-210 support the fixed-batch temporal limit and reward/time compromise. Prose sentences 2-5 state reduced terrain, no curriculum, five runs, 1,500 updates, shortened rollouts and excessive-count reward loss; sentences 7-9 bound the larger-batch and baseline comparisons. Reading.core follows sentences 4-9, including the tentative low-count diversity explanation; reading.scope and its witnesses directly follow sentences 2-3 and 8. Missing causal verification is appropriately reserved, not supplied from the source. The bounded objective is answered without requiring an exact rollout threshold."
+    },
+    {
+      "id": "N1_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 14-24, 29-57, 98-105, 147-158, 212-224, 232 and 247-254 support the GPU/curriculum mechanism, setup, tests and hardware limitation. Prose sentences 2-4 explain reduced transfers, performance-based relocation without regeneration and adequate-rollout constraints; sentences 6-8 establish under-20-minute training and bounded physical deployment. Reading.core_witness locates the GPU mechanism; reading.scope_witness and scope directly track the stated configuration and outcomes. Reading.unclear correctly notes unexplained minibatch/bootstrapping details. Those ancillary omissions do not leave the critical GPU/curriculum and deployment explanation missing."
+    },
+    {
+      "id": "N1_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 14-24, 29-57, 98-105, 147-158, 212-224, 232 and 247-254 support the mechanisms, training configuration and sensing-bounded deployment. Prose sentences 2-3 connect GPU-local collection/learning and adaptive relocation; sentence 5 supplies the fixed-batch rollout limit, and sentences 6-9 give training and deployment evidence with hardware caveats. Reading.core_witness locates collection/transfer benefits; reading.scope_witness locates the success definition. The scope's slope shorthand refers to sentence 7's climbing failure, not an assertion about descent. Unreported physical rates and isolated speed contributions remain appropriately unrecoverable."
+    },
+    {
+      "id": "N1_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 48-50, 59-64 and 69-78 distinguish predictable endings from unobserved time-outs, prescribe reward augmentation/critic bootstrapping and reject batch-boundary assumptions. Prose sentences 2-5 explain the distinction and continuation-value target, explicitly separating the interrupted trajectory from the reset episode; sentences 6-7 explain independent episode/rollout lengths and cross-batch persistence. Reading.core_witness locates the reward augmentation, and reading.scope_witness locates the independent 20-second limit. Reading.core and scope are recoverable directly from these sentences, without importing implementation-state details or source-only facts."
+    },
+    {
+      "id": "N1_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 48-50, 59-64 and 69-78 support separately detected time-outs, the critic's own prediction and episodes spanning updates. Prose sentences 2-5 explain absent episode time, why terminal treatment loses continuation value, and bootstrapping the interrupted rather than newly reset trajectory; sentences 6-7 require handling time-outs inside batches. Reading.core_witness directly locates the target treatment; reading.scope_witness directly locates the non-boundary handling. Its explanation and scope rest on explicit prose, not source supplementation. The conceptual target account answers the objective without needing a numerical discount or state-index formula."
+    },
+    {
+      "id": "N1_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 5-24, 29-47, 98-105, 212-224, 232 and 247-254 establish GPU-local processing, curriculum relocation, temporal limits and bounded deployment. Prose sentences 2-3 explain how the components combine; sentences 5-8 give the exact training configuration, rollout constraint, simulation outcomes and sensing-limited hardware traversal. Reading.core_witness locates the adequate-step condition; reading.scope_witness locates the training setup. Reading.core's contribution and limits are explicit, and scope's failed-slope shorthand follows sentence 7's climbing failure. No prose gap is filled by source knowledge, and no unlimited-scaling or universal-transfer claim is made."
+    },
+    {
+      "id": "N1_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 14-24, 29-47, 98-105, 212-224, 232 and 247-254 support the combined mechanism and experimental bounds. Prose sentences 2-4 explicitly combine GPU-local collection/learning with progressively challenging relocation without regeneration; sentences 6-10 state training setup, shortened-rollout risk, simulation results and map-limited hardware deployment. Reading.core_witness locates the combined explanation, and reading.scope_witness locates the base-contact success criterion. Scope's slope-failure shorthand follows sentence 8's climbing qualification. Reading.unclear properly reserves physical success rates and isolated GPU speedup, neither claimed quantitatively in the prose nor necessary to answer the objective."
+    },
+    {
+      "id": "N1_T09",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 38-47, 165-190 and 198-210 support the simplified comparison and task-specific reward/time balance. Prose sentence 2 gives no curriculum, reduced difficulty, five runs and 1,500 updates; sentences 3-7 explain shortened rollouts, excessive-count losses, tentative diversity effects, slowing throughput and larger-batch costs. Sentence 8 explicitly rejects unlimited parallelism. Reading.core_witness and scope_witness directly locate the mechanism and measurement conditions; its baseline account is stated in sentence 7. Although no explicit matched-budget disclaimer appears, the different million-sample baseline is identified, and the bounded objective is fully explained."
+    },
+    {
+      "id": "N1_T10",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 38-47, 165-190 and 198-210 establish temporal requirements, experimental conditions and the favorable finite range. Prose sentences 2-4 explicitly state simplified/no-curriculum testing, 1,500 updates, fewer consecutive steps and sharp reward deterioration; sentences 5-8 explain slowing throughput, batch costs, the different baseline and the bounded compromise. Reading.core_witness directly identifies the faster-training/reward-loss relation, and reading.scope_witness identifies the task conditions. Reading.core preserves the tentative low-count diversity explanation and scope states the separate million-sample baseline. Both are grounded without assuming experimentally isolated causal proof."
+    },
+    {
+      "id": "N1_T11",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 48-50, 59-64 and 69-78 support the time-out distinction, reward augmentation and cross-batch episode handling. Prose sentences 2-6 explain predictable endings versus unobservable interruption, lost future return and continuation-preserving critic targets; sentences 7-8 explicitly allow within-batch time-outs and deny update-triggered resets. Reading.core_witness locates the critic's remaining-return augmentation, while reading.scope_witness locates multi-batch episodes. Its core and scope repeat explicit explanation. The account legitimately answers the target-handling objective without specifying an implementation state index or separately naming the post-reset episode."
+    },
+    {
+      "id": "N1_T12",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N1.txt lines 48-50, 59-64 and 69-78 distinguish time-outs, bootstrap critic targets and reject last-step-only assumptions. Prose sentences 2-6 explain unobserved episode time, removal of continuation value under terminal treatment, separate identification and remaining-return bootstrapping; sentences 7-8 explain multiple short batches and detection wherever interruption occurs. Reading.core_witness directly locates nonzero continuation treatment, and reading.scope_witness locates persistent environments. Reading.unclear correctly notes that the estimation state is unspecified. That implementation detail is not supplied from the source and does not negate the prose's sufficient conceptual answer to the bounded objective."
+    }
+  ]
+}

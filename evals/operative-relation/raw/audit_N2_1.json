@@ -1,0 +1,88 @@
+{
+  "audits": [
+    {
+      "id": "N2_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Table 2, lines 1173-1184, gives both sets of coverage/width averages and permuted-data variability; Theorem 2b, lines 583-596, supplies the residual-TV penalty. Prose: 'Weighting only calibration residuals' improves coverage while widening intervals; 'Adding weighted least-squares fitting' gives 89.3%/0.527. The exchangeable control, both weighted averages below 90%, and potentially large penalty explicitly bound the conclusion. Reading: core repeats the fitting comparison and scope repeats the averages/permutation/arbitrary-drift limitations. No source fact is needed to complete its account."
+    },
+    {
+      "id": "N2_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Table 2, lines 1173-1184, and Theorem 2b support the numbers, variability, and nonexchangeable coverage limitation. Prose: 'keeping least squares fixed' isolates calibration weighting's coverage gain and width cost; retained calibration weighting plus weighted fitting gives 89.3%/0.527. 'Both weighted methods remain below target,' the exchangeable permuted comparison, and the arbitrary-drift TV explanation answer every bounded component. Reading: core describes these complementary roles; scope directly follows the below-target, permutation, temporal-average, and universal-coverage qualifications. It does not infer an unstated mechanism."
+    },
+    {
+      "id": "N2_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Table 2, lines 1173-1184, confirms all averages and the lost permuted width advantage; Theorem 2b gives the weighted residual-distribution discrepancy. Prose: 'calibration weighting improves coverage here at a width cost, while weighted fitting offsets that cost' explains the comparison, explicitly below 90%. The exchangeable control and final small-discrepancy lower-bound qualification reject universal drift validity. Reading: core's isolation/offset interpretation is directly expressed, and scope repeats the control and conditional theoretical bound. The theoretical qualification is already in the prose, not imported from the source."
+    },
+    {
+      "id": "N2_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt lines 1160 and 1173-1184 establish the exchangeable control and coverage/width comparisons; Theorem 2b states the randomized coverage bound. Prose: 'calibration weighting moves coverage toward the 90% target at a width cost' contrasts with narrower weighted-fit intervals, and 'Neither weighted method reaches the target.' The control removes that advantage; the closing sentences distinguish temporal averages and a small residual-TV penalty from arbitrary-drift validity. Reading: core and scope preserve precisely these comparisons and limitations, including the randomized lower bound. No fidelity issue or required explanatory gap."
+    },
+    {
+      "id": "N2_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Secs.3.1-3.2 fix weights/tags and independently draw K; Sec.7.2, equations (24)-(31), establishes relocation, cutoff dominance, strange-set mass, independence, and TV comparison. Prose: 'the test weight dominates every calibration weight' explains the miscoverage implication; 'Replacing each swapped residual law by the original' explains the penalty. The final original-law mass bound completes the argument. Reading: core follows this chain and scope cites fixed weights/tags, unit test weight, and independence. These are explicit prose witnesses, not source-supplied proof steps."
+    },
+    {
+      "id": "N2_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Sec.7.2, equations (24)-(31), supports the true-label relocation, infinity-threshold equivalence, dominance, mass bound, and weighted TV comparison; Sec.3.2 fixes positional tags. Prose: 'The rejection test is unchanged' with test mass at infinity and 'because w_i <= 1' give the essential cutoff justification. 'Independence permits averaging over K' and the original-law mass complete the bound. Reading: core and scope accurately reproduce these stated steps and assumptions. The nonsymmetric obstruction is contextualized by the usual exchangeable-residual argument, not a claim that the swap restores residual exchangeability."
+    },
+    {
+      "id": "N2_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Secs.3.1-3.2, Theorems 2b/3, and Tables 2/3 support the mechanism, bounds, and empirical qualifications. Prose: 'fixed calibration weights' versus 'fixed algorithm tags,' swapped/original residual-law comparison, exchangeability's vanishing penalty, and the ordered/permuted width contrast connect the central contribution to the tradeoff. 'Not exact nominal validity' limits the nonexchangeable claim. Reading: core and scope track these statements; unclear identifies the absent cutoff derivation without supplying it. That derivation is not required by this contribution objective. Its omission is not a fidelity error."
+    },
+    {
+      "id": "N2_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Secs.3.1-3.2, Theorems 2b/2c/3, and Tables 2/3 support the construction, distinct baselines, and experiments. Prose: weights emphasize comparable observations, tags permit order-sensitive fitting, and the independent swap links miscoverage to mass-at-most-alpha indices before residual-law comparison. Exchangeability removes the penalty; small nonexchangeable discrepancy limits undercoverage. The ordered-data widening/narrowing contrast, below-target averages, and lost permuted advantage complete the bounded objective. Reading: core and scope directly summarize these statements. 'Unclear: none' need not imply that this abstract supplies the full cutoff proof."
+    },
+    {
+      "id": "N2_T09",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Secs.3.1-3.2, Theorems 2b/3, and Tables 2/3 substantiate the roles, coverage distinction, and empirical tradeoff. Prose: prespecified calibration weights reduce reliance on less comparable observations, fixed tags enable order/regression-weight use, and the independent weighted swap precedes the residual-TV lower bound. The ordered-electricity width contrast and its disappearance under permutation connect theory with bounded empirical benefits. Reading: core and scope are explicit paraphrases; unclear correctly notes the unstated cutoff derivation. This contribution objective requires the connection, not every proof step, so the acknowledged gap does not defeat support or fidelity."
+    },
+    {
+      "id": "N2_T10",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Secs.3.1-3.2, Theorems 2b/2c/3, Tables 1-3, and Sec.5.3 support the separate roles, bounds, and limited experiments. Prose: 'separating calibration weighting from tagged model fitting' leads through an independent normalized-weight swap and high-residual mass bound to the residual-TV guarantee. It distinguishes exchangeable validity, small-penalty nonexchangeable undercoverage, and jackknife+'s 1-2alpha baseline. Widening versus shortening, the permuted control, and below-target election coverage connect the empirical tradeoff without universalizing it. Reading: core and scope repeat these located claims; no absent proof detail is supplied."
+    },
+    {
+      "id": "N2_T11",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Secs.3.1-3.2 and Sec.7.2, equations (24)-(31), supply normalization, fixed positional tags, true-response relocation, dominance, mass, and TV steps. Prose: 'Replacing the test residual by infinity' together with 'test weight's dominance' explains the crucial miscoverage implication; 'for every vector' states the deterministic mass bound. Independence and probability comparison then yield alpha plus weighted discrepancy. Reading: core tracks each stated step, while scope preserves the true-response event and fixed-weight/tag assumptions. The no-symmetry/no-stability conclusion also appears explicitly and matches Sec.3.2."
+    },
+    {
+      "id": "N2_T12",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: N2.txt Sec.3.2 and Sec.7.2, equations (24)-(31), establish fixed tags, independent weighted swapping, cutoff dominance, strange-set mass, and the residual-TV comparison. Prose: 'keeping tags at their positions' preserves the nonsymmetric fit; 'replacing the test residual by infinity' and calibration weights at most the test weight justify the implication. The universal residual-vector mass bound and independent averaging finish the alpha-plus-discrepancy argument. Reading: core and scope reproduce these explicit steps and conditions, without assuming residual exchangeability or importing a missing justification. The bounded proof objective is fully addressed."
+    }
+  ]
+}

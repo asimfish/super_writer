@@ -1,0 +1,1946 @@
+[
+  {
+    "id": "P01_s1_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "concern",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 1
+  },
+  {
+    "id": "P01_s1_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P01_s1_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s1_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s1_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s1_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P01_s2_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P01_s2_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P01_s2_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s2_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s2_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s2_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P01_s3_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "candidate",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P01_s3_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P01_s3_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s3_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s3_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P13_s3_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s1_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s1_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "candidate",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s1_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s1_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s1_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "baseline",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s1_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s2_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s2_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s2_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s2_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "candidate",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s2_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "baseline",
+      "baseline"
+    ],
+    "outcome": "unanimous_baseline",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s2_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "candidate",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s3_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s3_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P03_s3_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s3_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s3_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P04_s3_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s1_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s1_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s1_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s1_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "baseline",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s1_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s1_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s2_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s2_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s2_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s2_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s2_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "baseline",
+      "baseline"
+    ],
+    "outcome": "unanimous_baseline",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s2_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s3_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s3_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P05_s3_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s3_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s3_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "baseline",
+      "baseline"
+    ],
+    "outcome": "unanimous_baseline",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P06_s3_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s1_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s1_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s1_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s1_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s1_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s1_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s2_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s2_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s2_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s2_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s2_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s2_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s3_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s3_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P07_s3_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s3_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s3_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P08_s3_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s1_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s1_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s1_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s1_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s1_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s1_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s2_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s2_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s2_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s2_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s2_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "candidate",
+      "candidate"
+    ],
+    "outcome": "unanimous_candidate",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s2_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s3_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s3_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P09_s3_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s3_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s3_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P10_s3_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s1_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "baseline",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s1_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s1_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P12_s1_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P12_s1_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P12_s1_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s2_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s2_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "baseline",
+      "tie"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s2_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P12_s2_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P12_s2_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P12_s2_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s3_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "outcome": "disagreement",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s3_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "baseline": "pass",
+      "candidate": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P11_s3_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P12_s3_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "abstract",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  },
+  {
+    "id": "P12_s3_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "methods",
+    "winners": [
+      "baseline",
+      "baseline"
+    ],
+    "outcome": "unanimous_baseline",
+    "fidelity": {
+      "candidate": "concern",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": -1
+  },
+  {
+    "id": "P12_s3_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "results",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "outcome": "unanimous_tie",
+    "fidelity": {
+      "candidate": "pass",
+      "baseline": "pass"
+    },
+    "core_delta": 0,
+    "scope_delta": 0
+  }
+]

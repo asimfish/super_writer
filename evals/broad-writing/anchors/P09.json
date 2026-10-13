@@ -1,0 +1,46 @@
+{
+  "id": "P09",
+  "purpose": "Original editorial grounding aids, not required fact lists or preferred verdicts.",
+  "abstract": [
+    {
+      "role": "core",
+      "reader_question": "What links a convolution-only backbone to the performance gap usually associated with attention?",
+      "expected_relation": "Training practice and architectural choices jointly shape the observed gap; the study examines their combination rather than changing the operator alone.",
+      "source_locator": {"pdf": "sources/P09.pdf", "pdf_pages": [2, 6], "sections": ["2. Modernizing a ConvNet: a Roadmap"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "For which tasks and scales is that relationship examined?",
+      "expected_relation": "The evidence spans specified visual-recognition tasks and training scales, while the stated limitations leave other task structures open.",
+      "source_locator": {"pdf": "sources/P09.supplement.pdf", "pdf_pages": [4, 4], "sections": ["F. Limitations"]}
+    }
+  ],
+  "methods": [
+    {
+      "role": "core",
+      "reader_question": "How are design changes related to measured performance?",
+      "expected_relation": "A sequential modernization of ResNet is evaluated under a fixed training recipe with roughly comparable computational budgets.",
+      "source_locator": {"pdf": "sources/P09.pdf", "pdf_pages": [2, 3], "sections": ["2. Modernizing a ConvNet: a Roadmap", "2.1. Training Techniques"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "What conditions bound attribution in the modernization experiment?",
+      "expected_relation": "The two compute regimes, intermediate FLOP changes, and three-seed averaging in the smaller regime qualify how individual steps can be interpreted.",
+      "source_locator": {"pdf": "sources/P09.pdf", "pdf_pages": [2, 3], "sections": ["2. Modernizing a ConvNet: a Roadmap", "Figure 2", "2.1. Training Techniques"]}
+    }
+  ],
+  "results": [
+    {
+      "role": "core",
+      "reader_question": "How do predictive metrics relate to practical model cost?",
+      "expected_relation": "Accuracy, detection and segmentation metrics are paired with throughput, FLOPs, or memory under the corresponding evaluation protocols.",
+      "source_locator": {"pdf": "sources/P09.pdf", "pdf_pages": [6, 8], "sections": ["3. Empirical Evaluations on ImageNet", "4. Empirical Evaluation on Downstream Tasks", "Tables 1-4"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "Are the reported relationships uniform across model and task comparisons?",
+      "expected_relation": "Advantages, parity, and lower entries remain conditional on model size, pre-training, resolution, metric, and measurement hardware.",
+      "source_locator": {"pdf": "sources/P09.pdf", "pdf_pages": [7, 8], "sections": ["Tables 1-4", "3.2. Isotropic ConvNeXt vs. ViT"]}
+    }
+  ]
+}

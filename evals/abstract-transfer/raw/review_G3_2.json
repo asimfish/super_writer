@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "id": "A06_s1",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 4},
+      "reason": "Both explain the source's three contributions: memory-saving reverse-time adjoints, trace-based continuous flows, and continuous latent trajectories for irregular observations. They correctly interpret MNIST as parameter efficiency, restrict the spiral advantage to the synthetic setting, scope linear density-update cost per function evaluation, and acknowledge reconstruction error. B states the latent initial condition more explicitly; A foregrounds state reconstruction in the adjoint mechanism. These modest differences do not establish a material advantage in argument or readability."
+    },
+    {
+      "id": "A05_s2",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Sections 4-6 and Appendix A support both accounts of weight reuse, cache-enabled batching, policy search, compression, and conditional scaling. B gives a more coherent mechanism-to-evidence progression: compression reduces transfers before the paired throughput results, whose dummy-weight status is stated immediately. A introduces that qualification afterward and uses the less informative phrase 'beyond model fitting.' Both appropriately separate real-weight quality evidence, qualify the weight-I/O bound, reject a uniform compression benefit, and limit the throughput claim to substantial host memory and bulk workloads."
+    },
+    {
+      "id": "A05_s1",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both faithfully connect cache offloading and block-wise weight reuse to batching, distinguish dummy-weight throughput from real-weight quality, and retain the compression and scaling limitations. Their idealized asymptotic claim is specifically about weight I/O, not runtime optimality. B avoids A's repetitive post-benchmark batching explanation and more clearly identifies the seven-scenario HELM run as end-to-end evidence beyond synthetic measurements. Its closing host-capacity and storage-bandwidth conditions are supported by Appendix A.4. The advantage is explanatory organization, not additional numerical detail."
+    },
+    {
+      "id": "A06_s2",
+      "preferred": "A",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 4, "language": 4},
+      "reason": "A couples each application to its decisive evidence: MNIST follows continuous-depth training, and spiral RMSE follows the latent-trajectory mechanism. B postpones MNIST until after observation-time modeling, weakening that argumentative progression. Both correctly explain trace additivity, interpret classification as comparable performance with fewer parameters, confine time-series evidence to synthetic spirals, and acknowledge numerical reconstruction error. B more explicitly marks Poisson timing as optional; A's description remains supported by the demonstrated model extension and does not attribute the spiral result to that likelihood."
+    }
+  ]
+}

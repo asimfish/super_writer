@@ -1,0 +1,52 @@
+{
+  "readings": [
+    {
+      "id": "N1_T01",
+      "core": "At fixed batch size, more robots shorten trajectories: training accelerates, but excessive parallelism lowers reward, attributed to inadequate temporal information. Throughput saturation and larger batches' reward-versus-time cost support a bounded reward-time balance rather than unlimited scaling.",
+      "scope": "The comparison uses reduced stair/obstacle heights, no curriculum, five runs, and rewards after 1,500 updates. The suggested balance is 2,048-4,096 robots and 100,000-200,000 samples; the 20,000-robot baseline has a different sample budget.",
+      "core_witness": "training time decreases, but reward drops sharply at excessive parallelism",
+      "scope_witness": "mean and standard deviation over five runs after 1,500 policy updates",
+      "unclear": "Causal confirmation of the temporal-information and sample-diversity explanations is not recoverable."
+    },
+    {
+      "id": "N1_T03",
+      "core": "GPU-local simulation, collection, and PPO reduce transfers; relocating robots adapts difficulty without regenerating terrain. Adequate rollout lengths constrain parallelism. Reported training time and physical traversal support rapid training and hardware deployment, while imperfect terrain maps reduce robustness and prompt a speed cap.",
+      "scope": "The run uses 4,096 ANYmal C robots, 98,304 samples per batch, 1,500 updates, and an RTX A6000: under 20 minutes. Simulation stair success concerns crossings without base contact up to 0.2 m; uphill traversal fails beyond 25 degrees. Hardware commands are limited to 0.6 m/s.",
+      "core_witness": "Keeping simulation, data collection, and proximal policy optimization (PPO) on one GPU reduces CPU-GPU transfers.",
+      "scope_witness": "With 4,096 ANYmal C robots, 98,304 samples per batch, and 1,500 updates",
+      "unclear": "How large minibatches and time-out bootstrapping adapt PPO is not recoverable."
+    },
+    {
+      "id": "N1_T05",
+      "core": "Time limits interrupt continuing trajectories without observable episode time, so the critic cannot anticipate them. Treating these resets as terminal would discard continuation value. Separating time-outs and adding the critic's discounted future-return prediction preserves that value for the interrupted trajectory, not the newly reset episode.",
+      "scope": "This distinction concerns time-outs versus failure or goal completion. The 20-second limit is independent of rollout length; updates do not reset environments, so episodes span batches and time-outs need not occur only at a batch's final step.",
+      "core_witness": "augments their rewards with the critic's discounted prediction of future return",
+      "scope_witness": "the 20-second episode limit is independent of the number of steps collected per policy update",
+      "unclear": "none"
+    },
+    {
+      "id": "N1_T07",
+      "core": "GPU-local processing reduces transfers, and relocating robots adapts terrain difficulty without regeneration. Training time and hardware traversal establish rapid training and physical deployment. This result is bounded: excessive parallelism shortens informative trajectories and impairs learning, while imperfect elevation maps reduce hardware robustness.",
+      "scope": "The ANYmal C run uses 4,096 robots, 98,304 samples per batch, 1,500 updates, and an i9-11900k/RTX A6000, taking under 20 minutes. Simulation tests measure traversal without base contact: stairs up to 0.2 m, declining obstacle success, and failed slopes beyond 25 degrees. Hardware commands are capped at 0.6 m/s.",
+      "core_witness": "This speed depends on retaining adequate consecutive rollout steps per robot",
+      "scope_witness": "With 4,096 robots, 98,304 samples per batch, and 1,500 policy updates",
+      "unclear": "none"
+    },
+    {
+      "id": "N1_T09",
+      "core": "More robots at fixed batch size accelerate training but shorten rollouts, with excessive counts sharply reducing reward. The text attributes this to inadequate temporal information. Slowing throughput gains and larger batches' additional time cost support a limited reward-time balance, not unlimited parallelism.",
+      "scope": "The comparison measures mean episode reward and standard deviation over five runs after 1,500 updates, using reduced terrain difficulty without curriculum. The suggested balance is 2,048-4,096 robots and 100,000-200,000 samples. The highest-reward baseline uses 20,000 robots and one million samples, taking longer.",
+      "core_witness": "increasing robot count reduces training time but shortens each robot's rollout",
+      "scope_witness": "mean episode reward and standard deviation over five runs after 1,500 policy updates",
+      "unclear": "Causal verification of the temporal-information and sample-diversity explanations is not recoverable."
+    },
+    {
+      "id": "N1_T11",
+      "core": "Unlike predictable task endings, time limits interrupt continuing trajectories without observable episode time. Treating them as terminal discards predicted future return. Reporting time-outs separately and augmenting their reward with the critic's discounted remaining-return estimate keeps continuation value in the target instead of equating reset with completion.",
+      "scope": "The distinction is between failure/goal completion and time-limit resets. Episodes last up to 20 seconds and span multiple short batches; policy updates do not reset environments, so time-outs may occur within a batch rather than only at its final step.",
+      "core_witness": "the reward at a time-out is augmented with the critic's discounted estimate of the remaining return",
+      "scope_witness": "Episodes last up to 20 seconds and span multiple short rollout batches",
+      "unclear": "none"
+    }
+  ]
+}

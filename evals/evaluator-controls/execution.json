@@ -1,0 +1,115 @@
+{
+  "fixture_review_contexts": 2,
+  "fixture_reviews": [
+    {
+      "id": "01a12ad4-0b61-7fb3-a5c1-8bb43ad4569e",
+      "output": "fixture_review.json"
+    },
+    {
+      "id": "01a12ad9-d165-7bf3-a8da-04f2b9798684",
+      "output": "fixture_review.final.json"
+    }
+  ],
+  "anonymous_contexts": 10,
+  "model": "inherited same family, no override",
+  "fork_context": false,
+  "unblinding": "After all two preference, four reader, two coarse and two fine responses were saved",
+  "raw_repaired": false,
+  "quality_retries": 0,
+  "jobs": [
+    {
+      "agent_id": "01a12adc-4c6d-7761-b0b1-2fb3a2480c9a",
+      "nickname": "Mencius",
+      "phase": "review",
+      "number": 1,
+      "output": "raw/review_1.json",
+      "status": "completed",
+      "final": "/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/review_1.json"
+    },
+    {
+      "agent_id": "01a12adc-4ca7-7910-9607-3cd31ee1d82c",
+      "nickname": "Plato",
+      "phase": "review",
+      "number": 2,
+      "output": "raw/review_2.json",
+      "status": "completed",
+      "final": "[review_2.json](/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/review_2.json)\n\nOperational problems: none."
+    },
+    {
+      "agent_id": "01a12adc-4ce2-78a1-af2d-6fc78901cc6b",
+      "nickname": "Lovelace",
+      "phase": "reader",
+      "number": 1,
+      "output": "raw/reader_1.json",
+      "status": "completed",
+      "final": "`/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/reader_1.json`\n\nOperational problems: none."
+    },
+    {
+      "agent_id": "01a12adc-4d24-72d3-8e64-9661157d27ab",
+      "nickname": "Kierkegaard the 2nd",
+      "phase": "reader",
+      "number": 2,
+      "output": "raw/reader_2.json",
+      "status": "completed",
+      "final": "/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/reader_2.json"
+    },
+    {
+      "agent_id": "01a12adc-4d64-76d3-9020-4ce38d1e8744",
+      "nickname": "Gibbs the 2nd",
+      "phase": "reader",
+      "number": 3,
+      "output": "raw/reader_3.json",
+      "status": "completed",
+      "final": "/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/reader_3.json"
+    },
+    {
+      "agent_id": "01a12adc-4db1-7d51-a349-1b2ebf0abaf8",
+      "nickname": "Carver the 2nd",
+      "phase": "reader",
+      "number": 4,
+      "output": "raw/reader_4.json",
+      "status": "completed",
+      "final": "/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/reader_4.json"
+    },
+    {
+      "agent_id": "01a12ade-374e-75a0-b14d-d12b7cb6827e",
+      "nickname": "Ptolemy the 2nd",
+      "phase": "coarse",
+      "number": 1,
+      "output": "raw/coarse_1.json",
+      "status": "completed",
+      "final": "/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/coarse_1.json"
+    },
+    {
+      "agent_id": "01a12ade-3781-7362-bfdf-83265f9d192e",
+      "nickname": "Locke the 2nd",
+      "phase": "coarse",
+      "number": 2,
+      "output": "raw/coarse_2.json",
+      "status": "completed",
+      "final": "[coarse_2.json](/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/coarse_2.json)\n\nOperational problems: initial output truncation, resolved with smaller source reads."
+    },
+    {
+      "agent_id": "01a12ade-37a8-7560-85d4-d9f6bed6b2e8",
+      "nickname": "Chandrasekhar the 2nd",
+      "phase": "fine",
+      "number": 1,
+      "output": "raw/fine_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/fine_1.json"
+      }
+    },
+    {
+      "agent_id": "01a12ade-37cb-7112-9b42-7da5c5439a54",
+      "nickname": "Godel the 2nd",
+      "phase": "fine",
+      "number": 2,
+      "output": "raw/fine_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "[/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/fine_2.json](/Users/liyufeng/Desktop/research/super_writer_control_eval_20261011/raw/fine_2.json)\n\nOperational problems: none."
+      }
+    }
+  ]
+}

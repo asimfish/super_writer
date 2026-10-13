@@ -1,0 +1,2162 @@
+[
+  {
+    "id": "D1_text_001",
+    "pair": "P01_s1_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_002",
+    "pair": "P01_s1_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_003",
+    "pair": "P01_s3_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_004",
+    "pair": "P01_s3_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_005",
+    "pair": "P13_s3_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_006",
+    "pair": "P13_s3_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_007",
+    "pair": "P13_s3_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_008",
+    "pair": "P13_s3_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_009",
+    "pair": "P13_s1_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_010",
+    "pair": "P13_s1_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_011",
+    "pair": "P01_s2_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_012",
+    "pair": "P01_s2_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_013",
+    "pair": "P13_s3_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_014",
+    "pair": "P13_s3_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_015",
+    "pair": "P13_s2_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_016",
+    "pair": "P13_s2_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_017",
+    "pair": "P01_s3_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_018",
+    "pair": "P01_s3_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_019",
+    "pair": "P01_s2_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_020",
+    "pair": "P01_s2_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_021",
+    "pair": "P13_s1_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_022",
+    "pair": "P13_s1_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_023",
+    "pair": "P13_s2_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_024",
+    "pair": "P13_s2_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_025",
+    "pair": "P01_s3_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_026",
+    "pair": "P01_s3_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_027",
+    "pair": "P13_s2_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_028",
+    "pair": "P13_s2_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_029",
+    "pair": "P01_s1_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_030",
+    "pair": "P01_s1_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_031",
+    "pair": "P01_s2_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_032",
+    "pair": "P01_s2_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_033",
+    "pair": "P13_s1_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_034",
+    "pair": "P13_s1_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D1_text_035",
+    "pair": "P01_s1_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D1_text_036",
+    "pair": "P01_s1_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_037",
+    "pair": "P03_s2_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_038",
+    "pair": "P03_s2_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_039",
+    "pair": "P03_s3_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_040",
+    "pair": "P03_s3_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_041",
+    "pair": "P03_s1_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_042",
+    "pair": "P03_s1_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_043",
+    "pair": "P03_s1_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_044",
+    "pair": "P03_s1_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_045",
+    "pair": "P03_s1_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_046",
+    "pair": "P03_s1_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_047",
+    "pair": "P03_s2_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_048",
+    "pair": "P03_s2_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_049",
+    "pair": "P04_s2_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_050",
+    "pair": "P04_s2_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_051",
+    "pair": "P04_s3_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_052",
+    "pair": "P04_s3_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_053",
+    "pair": "P04_s1_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_054",
+    "pair": "P04_s1_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_055",
+    "pair": "P04_s1_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_056",
+    "pair": "P04_s1_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_057",
+    "pair": "P04_s2_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_058",
+    "pair": "P04_s2_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_059",
+    "pair": "P03_s3_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_060",
+    "pair": "P03_s3_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_061",
+    "pair": "P04_s3_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_062",
+    "pair": "P04_s3_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_063",
+    "pair": "P03_s3_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_064",
+    "pair": "P03_s3_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_065",
+    "pair": "P04_s2_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_066",
+    "pair": "P04_s2_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_067",
+    "pair": "P04_s1_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_068",
+    "pair": "P04_s1_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_069",
+    "pair": "P04_s3_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_070",
+    "pair": "P04_s3_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D2_text_071",
+    "pair": "P03_s2_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D2_text_072",
+    "pair": "P03_s2_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_073",
+    "pair": "P06_s2_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_074",
+    "pair": "P06_s2_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_075",
+    "pair": "P05_s3_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_076",
+    "pair": "P05_s3_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_077",
+    "pair": "P05_s3_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_078",
+    "pair": "P05_s3_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_079",
+    "pair": "P06_s3_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_080",
+    "pair": "P06_s3_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_081",
+    "pair": "P05_s3_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_082",
+    "pair": "P05_s3_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_083",
+    "pair": "P06_s2_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_084",
+    "pair": "P06_s2_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_085",
+    "pair": "P05_s2_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_086",
+    "pair": "P05_s2_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_087",
+    "pair": "P05_s1_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_088",
+    "pair": "P05_s1_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_089",
+    "pair": "P06_s1_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_090",
+    "pair": "P06_s1_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_091",
+    "pair": "P05_s2_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_092",
+    "pair": "P05_s2_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_093",
+    "pair": "P05_s1_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_094",
+    "pair": "P05_s1_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_095",
+    "pair": "P06_s1_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_096",
+    "pair": "P06_s1_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_097",
+    "pair": "P06_s3_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_098",
+    "pair": "P06_s3_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_099",
+    "pair": "P06_s1_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_100",
+    "pair": "P06_s1_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_101",
+    "pair": "P05_s2_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_102",
+    "pair": "P05_s2_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_103",
+    "pair": "P06_s3_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_104",
+    "pair": "P06_s3_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_105",
+    "pair": "P06_s2_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_106",
+    "pair": "P06_s2_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D3_text_107",
+    "pair": "P05_s1_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D3_text_108",
+    "pair": "P05_s1_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_109",
+    "pair": "P08_s1_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_110",
+    "pair": "P08_s1_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_111",
+    "pair": "P07_s3_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_112",
+    "pair": "P07_s3_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_113",
+    "pair": "P08_s2_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_114",
+    "pair": "P08_s2_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_115",
+    "pair": "P08_s1_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_116",
+    "pair": "P08_s1_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_117",
+    "pair": "P07_s1_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_118",
+    "pair": "P07_s1_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_119",
+    "pair": "P07_s3_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_120",
+    "pair": "P07_s3_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_121",
+    "pair": "P07_s2_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_122",
+    "pair": "P07_s2_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_123",
+    "pair": "P07_s2_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_124",
+    "pair": "P07_s2_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_125",
+    "pair": "P08_s2_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_126",
+    "pair": "P08_s2_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_127",
+    "pair": "P08_s1_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_128",
+    "pair": "P08_s1_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_129",
+    "pair": "P08_s3_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_130",
+    "pair": "P08_s3_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_131",
+    "pair": "P07_s2_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_132",
+    "pair": "P07_s2_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_133",
+    "pair": "P07_s3_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_134",
+    "pair": "P07_s3_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_135",
+    "pair": "P08_s3_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_136",
+    "pair": "P08_s3_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_137",
+    "pair": "P07_s1_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_138",
+    "pair": "P07_s1_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_139",
+    "pair": "P08_s2_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_140",
+    "pair": "P08_s2_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_141",
+    "pair": "P08_s3_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D4_text_142",
+    "pair": "P08_s3_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_143",
+    "pair": "P07_s1_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D4_text_144",
+    "pair": "P07_s1_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_145",
+    "pair": "P09_s2_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_146",
+    "pair": "P09_s2_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_147",
+    "pair": "P10_s2_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_148",
+    "pair": "P10_s2_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_149",
+    "pair": "P10_s3_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_150",
+    "pair": "P10_s3_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_151",
+    "pair": "P09_s1_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_152",
+    "pair": "P09_s1_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_153",
+    "pair": "P10_s3_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_154",
+    "pair": "P10_s3_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_155",
+    "pair": "P10_s1_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_156",
+    "pair": "P10_s1_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_157",
+    "pair": "P09_s2_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_158",
+    "pair": "P09_s2_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_159",
+    "pair": "P10_s2_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_160",
+    "pair": "P10_s2_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_161",
+    "pair": "P09_s1_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_162",
+    "pair": "P09_s1_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_163",
+    "pair": "P10_s2_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_164",
+    "pair": "P10_s2_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_165",
+    "pair": "P09_s1_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_166",
+    "pair": "P09_s1_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_167",
+    "pair": "P09_s2_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_168",
+    "pair": "P09_s2_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_169",
+    "pair": "P10_s1_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_170",
+    "pair": "P10_s1_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_171",
+    "pair": "P10_s1_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_172",
+    "pair": "P10_s1_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_173",
+    "pair": "P09_s3_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_174",
+    "pair": "P09_s3_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_175",
+    "pair": "P09_s3_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_176",
+    "pair": "P09_s3_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_177",
+    "pair": "P09_s3_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_178",
+    "pair": "P09_s3_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D5_text_179",
+    "pair": "P10_s3_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D5_text_180",
+    "pair": "P10_s3_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_181",
+    "pair": "P12_s1_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_182",
+    "pair": "P12_s1_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_183",
+    "pair": "P11_s3_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_184",
+    "pair": "P11_s3_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_185",
+    "pair": "P11_s1_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_186",
+    "pair": "P11_s1_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_187",
+    "pair": "P11_s2_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_188",
+    "pair": "P11_s2_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_189",
+    "pair": "P11_s2_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_190",
+    "pair": "P11_s2_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_191",
+    "pair": "P12_s1_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_192",
+    "pair": "P12_s1_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_193",
+    "pair": "P12_s1_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_194",
+    "pair": "P12_s1_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_195",
+    "pair": "P12_s3_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_196",
+    "pair": "P12_s3_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_197",
+    "pair": "P11_s2_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_198",
+    "pair": "P11_s2_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_199",
+    "pair": "P12_s3_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_200",
+    "pair": "P12_s3_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_201",
+    "pair": "P12_s2_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_202",
+    "pair": "P12_s2_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_203",
+    "pair": "P11_s1_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "results",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_204",
+    "pair": "P11_s1_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "results",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_205",
+    "pair": "P12_s2_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_206",
+    "pair": "P12_s2_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_207",
+    "pair": "P11_s3_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_208",
+    "pair": "P11_s3_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "abstract",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_209",
+    "pair": "P11_s3_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_210",
+    "pair": "P11_s3_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_211",
+    "pair": "P11_s1_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_212",
+    "pair": "P11_s1_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_213",
+    "pair": "P12_s2_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_214",
+    "pair": "P12_s2_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "methods",
+    "reader": 2,
+    "condition": "baseline"
+  },
+  {
+    "id": "D6_text_215",
+    "pair": "P12_s3_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "results",
+    "reader": 1,
+    "condition": "candidate"
+  },
+  {
+    "id": "D6_text_216",
+    "pair": "P12_s3_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "results",
+    "reader": 2,
+    "condition": "baseline"
+  }
+]

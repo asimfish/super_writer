@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "id": "A02_s2",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both accurately describe the neighborhood objective, approximate two-gradient update, conditional bound, CIFAR comparison, and restricted noise/subset findings. B connects the problem of equally low-loss minima to the objective and explains why the doubled-epoch comparison matters, then integrates the geometric diagnostics with the empirical claims. A's correctly contextualized 0.30% result adds evidence but its progression is more enumerative. B's explicit noncausal reading of the diagnostics is warranted by the reported analyses."
+    },
+    {
+      "id": "A02_s1",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both capture the main contribution, the two-gradient mechanism, the conditional bound, gains across training regimes, and the substantive subset-size finding. A supplies a representative CIFAR effect size and explains why subset size is consequential; B more directly states the worst-neighborhood-loss objective and connects doubled-epoch controls to the optimization claim. These are comparably useful choices, with neither making unsupported guarantees or universal robustness claims. B's lack of an error percentage does not outweigh its explanatory clarity."
+    },
+    {
+      "id": "A01_s1",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both faithfully explain perception-grounded value maps, joint spatial planning, observation-based replanning, and trajectory-guided dynamics learning. Their success rates, simulation qualifications, and contact-task interaction times match the source. B more clearly connects the disturbed-execution comparison to replanning and explains how a trajectory that fails zero-shot completion can remain a useful exploration prior. A is slightly denser, though its explicit local waypoint perturbation is helpful. B's more continuous argument earns a narrow preference, not a fidelity distinction."
+    },
+    {
+      "id": "A01_s2",
+      "preferred": "A",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 4, "language": 5},
+      "reason": "Both preserve the zero-shot planning and optional contact-task learning contributions, accurately scope the simulated transfer results, and report the disturbance and interaction-time comparisons. A explains what voxel values do and how trajectory scoring joins targets with constraints, giving a more operative account than B's reference to composing maps. Its environment-dynamics limitation is also directly supported by the source. B remains faithful and clearly explains the exploration prior; omitting the contact-task success percentages is not itself a defect in either abstract."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "hashes": 168,
+    "reversed_pairs": 108,
+    "counterpart_separation": 108,
+    "raw_outputs": 84,
+    "reader_reconstructions": 216
+  },
+  "reader_budget_violations": 22,
+  "reader_witness_violations": 1,
+  "assessment_budget_violations": 3,
+  "prose_repaired": false
+}

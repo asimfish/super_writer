@@ -1,0 +1,15 @@
+[
+  {
+    "id": "N1",
+    "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
+    "metadata": "https://proceedings.mlr.press/v164/rudin22a.html",
+    "pdf": "https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf"
+  },
+  {
+    "id": "N2",
+    "title": "Conformal Prediction Beyond Exchangeability",
+    "metadata": "https://projecteuclid.org/journals/annals-of-statistics/volume-51/issue-2/Conformal-prediction-beyond-exchangeability/10.1214/23-AOS2276.full",
+    "pdf": "https://projecteuclid.org/journals/annals-of-statistics/volume-51/issue-2/Conformal-prediction-beyond-exchangeability/10.1214/23-AOS2276.pdf",
+    "fallback": "https://www.stat.cmu.edu/~ryantibs/papers/nexcp.pdf"
+  }
+]

@@ -1,0 +1,222 @@
+{
+  "completed": {
+    "cases": 12,
+    "texts": 24,
+    "preference_votes": 24,
+    "reader_reconstructions": 24,
+    "coarse_judgments": 48,
+    "fine_judgments": 48
+  },
+  "admission": {
+    "pass": true,
+    "criteria": [
+      {
+        "name": "preference_relation",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_detect_relation",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_fidelity_relation",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_false_flags_relation",
+        "observed": 0,
+        "total": 6,
+        "required_maximum": 1,
+        "pass": true
+      },
+      {
+        "name": "fine_faithful_fidelity_relation",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "preference_metric",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_detect_metric",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_fidelity_metric",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_false_flags_metric",
+        "observed": 0,
+        "total": 6,
+        "required_maximum": 1,
+        "pass": true
+      },
+      {
+        "name": "fine_faithful_fidelity_metric",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "preference_condition",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_detect_condition",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_fidelity_condition",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "fine_false_flags_condition",
+        "observed": 0,
+        "total": 6,
+        "required_maximum": 1,
+        "pass": true
+      },
+      {
+        "name": "fine_faithful_fidelity_condition",
+        "observed": 6,
+        "total": 6,
+        "required_minimum": 5,
+        "pass": true
+      },
+      {
+        "name": "identical_ties",
+        "observed": 2,
+        "total": 2,
+        "required_minimum": 2,
+        "pass": true
+      },
+      {
+        "name": "fine_false_flags_neutral",
+        "observed": 0,
+        "total": 12,
+        "required_maximum": 1,
+        "pass": true
+      },
+      {
+        "name": "fine_neutral_fidelity",
+        "observed": 12,
+        "total": 12,
+        "required_minimum": 11,
+        "pass": true
+      }
+    ]
+  },
+  "by_rubric": {
+    "coarse": {
+      "relation": {
+        "defective_flagged": 6,
+        "defective_total": 6,
+        "faithful_flagged": 0,
+        "faithful_total": 6
+      },
+      "metric": {
+        "defective_flagged": 2,
+        "defective_total": 6,
+        "faithful_flagged": 0,
+        "faithful_total": 6
+      },
+      "condition": {
+        "defective_flagged": 6,
+        "defective_total": 6,
+        "faithful_flagged": 0,
+        "faithful_total": 6
+      },
+      "neutral_identical": {
+        "defective_flagged": 0,
+        "defective_total": 0,
+        "faithful_flagged": 0,
+        "faithful_total": 4
+      },
+      "neutral_paraphrase": {
+        "defective_flagged": 0,
+        "defective_total": 0,
+        "faithful_flagged": 0,
+        "faithful_total": 4
+      },
+      "neutral_omission": {
+        "defective_flagged": 0,
+        "defective_total": 0,
+        "faithful_flagged": 0,
+        "faithful_total": 4
+      }
+    },
+    "fine": {
+      "relation": {
+        "defective_flagged": 6,
+        "defective_total": 6,
+        "faithful_flagged": 0,
+        "faithful_total": 6
+      },
+      "metric": {
+        "defective_flagged": 6,
+        "defective_total": 6,
+        "faithful_flagged": 0,
+        "faithful_total": 6
+      },
+      "condition": {
+        "defective_flagged": 6,
+        "defective_total": 6,
+        "faithful_flagged": 0,
+        "faithful_total": 6
+      },
+      "neutral_identical": {
+        "defective_flagged": 0,
+        "defective_total": 0,
+        "faithful_flagged": 0,
+        "faithful_total": 4
+      },
+      "neutral_paraphrase": {
+        "defective_flagged": 0,
+        "defective_total": 0,
+        "faithful_flagged": 0,
+        "faithful_total": 4
+      },
+      "neutral_omission": {
+        "defective_flagged": 0,
+        "defective_total": 0,
+        "faithful_flagged": 0,
+        "faithful_total": 4
+      }
+    }
+  },
+  "budget_violations": [],
+  "witness_violations": [],
+  "interpretation": "Original synthetic calibration only. Not improved writing, human validity, independent trials or a fine-rubric causal effect."
+}

@@ -1,0 +1,172 @@
+{
+  "audits": [
+    {
+      "id": "T001",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence supports sequential predecessor-conditioned drafting followed by concurrent target checks in one round. Prose explicitly connects these operations to avoiding per-position target rounds, and the reading recovers that relation while retaining serial drafting cost. It also recovers the toy-workload measurements and absence of complete application latency. Missing correction-rule mechanics do not invalidate this scheduling explanation or its supplied distribution-retention claim."
+    },
+    {
+      "id": "T002",
+      "fidelity": "pass",
+      "core_recovery": 1,
+      "scope_recovery": 2,
+      "reason": "Prose makes supported claims about five predecessor-conditioned proposals, target evaluation, correction and measured costs. However, 'evaluates the proposed prefix positions' does not convey concurrent verification in one round or its interaction with serial drafting. The reading recovers the components but not that central scheduling relation. Its toy-workload and unmeasured application-latency boundaries are source-supported and explicit in the prose. Unexplained correction mechanics are not false science."
+    },
+    {
+      "id": "T003",
+      "fidelity": "fail",
+      "core_recovery": 0,
+      "scope_recovery": 1,
+      "reason": "Evidence assigns seven versus five to final-state attainment and four versus three to uninterrupted all-stage completion. Prose instead calls seven successes 'uninterrupted three-stage completions' and reiterates that false trajectory label. The reading adopts the mislabeled central comparison. It does notice earlier failures/resets and recover the descriptive, non-significance and non-deployment limits, but cannot identify the alternate tally or recover the decisive distinction between success events."
+    },
+    {
+      "id": "T004",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose correctly distinguishes final-state attainment, seven versus five, from uninterrupted all-stage completion, four versus three, explaining that three final-state successes followed failures and resets. The reading recovers both comparisons and their different event meanings. Matched starts/time budgets and the limits on significance and deployment reliability are also recovered from explicit, source-supported prose."
+    },
+    {
+      "id": "T005",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence and prose connect nonadjacent logical-to-physical mapping and exhaustion-triggered block allocation to incremental growth instead of maximum-length contiguous reservation. The reading recovers this allocation relation and the batch comparison, 64 versus 40 at the same 100 ms cap. It correctly restricts the result to the toy allocation configuration without attributing isolated allocator-overhead savings or arbitrary-hardware benefits."
+    },
+    {
+      "id": "T006",
+      "fidelity": "pass",
+      "core_recovery": 1,
+      "scope_recovery": 2,
+      "reason": "The block components and batch comparison are supported. Prose mentions a position map but does not explain nonadjacent storage, exhaustion-triggered allocation or incremental growth versus maximum-length reservation. The reading therefore recovers the measured batch advantage, not the central allocation relationship explaining the design. Its fixed latency cap, toy-workload restriction and exclusions of isolated allocator overhead and arbitrary-hardware benefits are explicit and supported."
+    },
+    {
+      "id": "T007",
+      "fidelity": "fail",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose falsely says total allocation halves and calls the complete footprint reduction twofold; evidence gives 16 to 12 GB, with only optimizer-state storage halving from 8 to 4 GB. The reading correctly rejects the total-halving claim using those prose numbers and the unchanged 8 GB of other allocations. It also recovers the matched configuration, observed checkpoint-loss difference and absence of established quality equivalence or another-batch evidence."
+    },
+    {
+      "id": "T008",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose correctly attributes halving to optimizer-state storage, while unchanged other allocations make total training allocation fall from 16 to 12 GB rather than by half. The reading recovers this resource relationship and the observed losses, 2.3 versus 2.2. It also recovers batch eight, matched device/model/precision and the boundaries against all-resource savings, quality equivalence and other batch sizes."
+    },
+    {
+      "id": "T009",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence supports both lower allocation, 24 to 16 GB, and the observed checkpoint losses, 2.1 versus 2.2. Prose and reading recover those findings together without turning the losses into equivalence or statistical superiority. Batch four, one device, one run per method and absent transfer/production evidence are explicit. The selected abstract function is a measured comparison; missing internal update mechanics do not defeat it."
+    },
+    {
+      "id": "T010",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "The reading accurately recovers the prose's paired allocation and checkpoint-loss comparison: 16 versus 24 GB and 2.1 versus 2.2. These are source-supported observations, not claims of equivalence or statistical superiority. The tested batch/device, single-run evidence and exclusions of transfer, production and across-device performance are recovered. An explanation of the reduced-state operation is not required for this paragraph's comparative function."
+    },
+    {
+      "id": "T011",
+      "fidelity": "concern",
+      "core_recovery": 1,
+      "scope_recovery": 1,
+      "reason": "Evidence requires initialization in [0,1] for the interval invariant. Prose asserts that halving 'keeps every iterate in [0,1]' without stating that condition; the 0.8 example cannot supply it generally. The reading recovers the halving operation, but its conditional preservation formulation is not explicitly established by the prose. Exact arithmetic and the illustrated initialized run provide partial scope; the reading itself says general starting-value conditions are unrecoverable. This is a consequential missing condition, not an explicit arbitrary-start theorem."
+    },
+    {
+      "id": "T012",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose states the initialization condition and explains preservation through nonnegativity and the upper bound under halving. The reading recovers that relation and its exact-arithmetic scope. Both prose and reading distinguish the 0.8 illustration from a general guarantee and use three becoming 1.5 to exclude arbitrary starts. An inexact-arithmetic guarantee is neither supplied nor needed for the selected explanation."
+    },
+    {
+      "id": "T013",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence and prose distinguish halved kernel time, 16 to 8 ms, from request latency, 112 to 104 ms. The reading recovers that the component saving yields an 8 ms end-to-end reduction, not twofold request acceleration. It also recovers unchanged outputs, matched batch/device, included preprocessing/transfers/postprocessing and the absence of concurrent-user throughput or other-device evidence."
+    },
+    {
+      "id": "T014",
+      "fidelity": "fail",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose materially misattributes the kernel's twofold acceleration to the complete request, although its own request timings are 112 and 104 ms. Evidence supports only an 8 ms request reduction. The reading identifies the inconsistency and correctly distinguishes halved kernel time from reduced, non-doubled request speed. It also recovers the different timing boundaries, included request work, matched configuration and exclusions of throughput and other-device/batch claims."
+    },
+    {
+      "id": "T015",
+      "fidelity": "concern",
+      "core_recovery": 2,
+      "scope_recovery": 1,
+      "reason": "Evidence conditions marginal future coverage on exchangeability, but prose states the guarantee without that premise. The reading recovers the central distinction between a 90% marginal guarantee and the realized 89/100 evaluation, which is neither proof nor contradiction. It also recovers the marginal-versus-conditional distinction and absent shift experiments. Scope remains partial because exchangeability is missing from prose and reading; an empirical shift caveat does not establish the theoretical guarantee's condition. Missing derivation alone is not a fidelity failure."
+    },
+    {
+      "id": "T016",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose explicitly attaches the supplied 90% marginal-coverage guarantee to exchangeable calibration and future observations. The reading recovers that condition and correctly separates the guarantee from the realized 89/100 toy outcome. Conditional coverage and arbitrary-shift validity are not asserted; empirical shift behavior remains unmeasured. These consequential theoretical and empirical boundaries are supported by both premise and prose."
+    },
+    {
+      "id": "T017",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "The observed comparison is supported: compact indexing raises exact-match count from 85 to 89 while increasing median query time from 120 to 150 ms. Prose calls this a tradeoff, and the reading recovers that relation rather than uniform improvement. The fixed 100-query dataset, one device and lack of sampling-uncertainty or production evidence are explicitly recovered as limits on deployment inference."
+    },
+    {
+      "id": "T018",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose faithfully pairs higher observed exact-match count with slower median queries. The reading recovers 89 versus 85 matches and 150 versus 120 ms as an accuracy-time tradeoff. Its scope correctly remains the fixed dataset and single device, with no sampling-uncertainty analysis, production evaluation or deployment guarantee. No mechanism or additional fact inventory is needed for this descriptive results function."
+    },
+    {
+      "id": "T019",
+      "fidelity": "pass",
+      "core_recovery": 1,
+      "scope_recovery": 2,
+      "reason": "Evidence supports all three reported accuracy values and their ranking. Prose and reading recover variation across arrangements, but neither conveys the unchanged answer document, distractors and distractor order that explain the placement-versus-content diagnostic. Central diagnostic recovery is therefore partial, not invented from the premise. The actual descriptive claims remain faithful, and the reading fully recovers their fixed-question, tested-task/length scope and exclusions of internal-mechanism identification and all-workload generalization."
+    },
+    {
+      "id": "T020",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose explains that only answer-document position changes while answer content, distractors and their order remain fixed. The reading recovers why these controls exclude changed evidence or distractor selection as explanations for the 80/52/78 contrast. It also recovers the placement diagnostic's tested-task/length scope and its distinction from internal-mechanism identification. Missing actual document length or mechanism does not invalidate this selected function."
+    },
+    {
+      "id": "T021",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence and prose distinguish the proved exact-gradient update from the approximate-gradient implementation. Across its core and scope, the reading recovers the proof's convexity/step-rule conditions and the absence of a proof transfer, while treating decreases on three toy problems as recorded trajectories only. Convergence-rate and nonconvex guarantees are not asserted. Missing formula, numerical step rule or proof derivation does not undermine this proof-versus-implementation explanation."
+    },
+    {
+      "id": "T022",
+      "fidelity": "fail",
+      "core_recovery": 0,
+      "scope_recovery": 1,
+      "reason": "Evidence supplies monotonicity only for exact gradients and explicitly provides no transfer to approximate updates. Prose instead attributes the supplied proof to the approximate implementation and calls theory and observations descriptions of the same update. The reading accepts that false attribution, so the central distinction is wrong. It recovers the three recorded toy trajectories and exclusions of convergence-rate/nonconvex claims, but not the consequential exact-versus-approximate proof boundary."
+    },
+    {
+      "id": "T023",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Evidence supports logical-key lookup to potentially nonadjacent physical blocks and extension without copying earlier blocks into contiguous storage. Prose explains that relation, and the reading recovers both mapped access and avoidance of relocation. It correctly distinguishes this storage operation from a measured speed advantage and notes the absent performance comparison. Omitted library/version and logging details are not required for the requested operational explanation."
+    },
+    {
+      "id": "T024",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "reason": "Prose and reading faithfully connect logical-to-physical mapping and nonadjacent blocks to extension without recopying earlier storage. Library version 2.4 and serial logging are supported metadata, correctly separated from the enabling storage relationship. The reading recovers the fixed-pool scope and absence of a measured speed comparison. Allocation details and full-pool behavior are not supplied claims or necessary conditions for this paragraph's stated operation."
+    }
+  ]
+}

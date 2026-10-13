@@ -1,0 +1,292 @@
+{
+  "audits": [
+    {
+      "id": "D2_text_069",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 4.1/Table 2 (PDF p6) supports the seven-guess greedy comparison, sampling changes, and summarization gains. Prose 'Greater agreement therefore does not by itself offset' is recovered in the reading's cost-agreement comparison. Its batch-one, TPU-v4, T5X, and spare-compute boundaries match the prose and Sections 3.3-3.4. Reading correctly treats GPT-like/LaMDA latency as unestablished; Section 4.2 measures acceptance only. These boundaries adequately constrain the selected latency relationship."
+    },
+    {
+      "id": "D2_text_068",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Table 2/Section 4.1 (PDF p6) confirms acceptance 0.82 versus 0.75, speedups 1.7 versus 3.4, and T5-small's seven translation/five summarization guesses. Prose 'cost-acceptance balance rather than agreement alone' is accurately reconstructed. Reading also recovers hardware, target, temperature-dependent gains, and the explicit rejection/spare-compute qualification supported by Sections 3.3-3.4 and the selected limitations. Scope is adequate for these named T5 comparisons, without implying universal acceleration."
+    },
+    {
+      "id": "D2_text_058",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 4.1/Table 2 (PDF p6) supports draft sizes, all quoted acceptance/speed values, and fixed guess counts. Prose cautiously calls the ordering 'consistent with proposal cost offsetting' agreement; reading preserves that interpretation rather than claiming an isolated causal experiment. Reading's T5-XXL, single-TPU-v4, batch-one, guess-count, and spare-compute boundaries are text-supported. Sections 3.3-3.4 support distinguishing latency from arithmetic savings. The selected comparison needs no broader model-survey reconstruction."
+    },
+    {
+      "id": "D2_text_047",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Sections 3.1-3.3 support deferred normalization, query-block occupancy, warp-owned outputs, exactness, and linear auxiliary memory. Prose 'two workloads therefore require different partitions' is recovered through the reading's training-versus-KV-loading mechanism. Section 4, Table 1, and Figure 5 support quoted kernel gains, eight-A100 training throughput, context dependence, and multi-query decoding gains. Reading keeps these workload/performance levels separate, adequately bounding the selected execution relationship without transferring kernel gains to whole-model inference."
+    },
+    {
+      "id": "D2_text_057",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Table 2 (PDF p6) confirms sampled translation values 0.62/2.6 and 0.71/1.4 with seven versus three guesses. Prose 'complete decoding configurations rather than isolate proposal size' is explicitly recovered, preventing a confounded size-only interpretation. Reading also reproduces greedy/summarization comparisons and the named target, hardware, batch, and baseline. Sections 3.3-3.4 support its spare-capacity and wasted-arithmetic boundaries. Scope adequately qualifies the selected acceptance-versus-latency relationship."
+    },
+    {
+      "id": "D2_text_055",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 2.3/Algorithm 1 (PDF p3) supports shared accepted mass, positive-residual correction, gamma+1 parallel prefixes, and correction/extra-token outcomes. Prose 'independently of the assumptions used to predict speed' is accurately recovered as exactness separate from timing. Section 3.1/Equation 1 and Section 3.3/Theorem 3.8 support the formulas. Reading recovers sampling adjustment, i.i.d. acceptance, relative draft runtime, sufficiently long generations, and unchanged concurrent latency; these are adequate analysis boundaries."
+    },
+    {
+      "id": "D2_text_056",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 2.3/Algorithm 1 supports ratio acceptance, residual correction, retaining only the accepted prefix, and an additional token ensuring progress. Reading faithfully reconstructs prose 'recovering p exactly' and 'at least one token.' Equation 1 and Theorem 3.8 support the expected-yield and speed formulas. Both prose and reading distinguish sampling-adjusted distributions from the i.i.d., long-generation, relative-runtime, and constant verification-latency assumptions, adequately limiting the timing claim."
+    },
+    {
+      "id": "D2_text_067",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 4.1/Table 2 confirms the fixed-seven greedy comparison and T5-small sampling/summarization changes. Prose 'runtime-acceptance balance rather than acceptance alone' is recovered in the reading's drafting-cost explanation. Reading preserves target, existing checkpoints, batch, hardware, and parallel-capacity/arithmetic limits supported by Sections 3.3-3.4. Its statement that GPT-like/LaMDA latency is not recoverable accurately reflects the prose's acceptance-only distinction and Section 4.2, not a missing timed result."
+    },
+    {
+      "id": "D2_text_045",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Table 1/Section 4.3 (PDF p9) confirms 189-to-196 versus 170-to-220 and 175-to-225, supporting larger gains at 8k. Reading recovers prose 'does not transfer uniformly' rather than equating kernel and training speedups. It also recovers eight-A100 per-GPU units and the unhalved causal model-FLOP convention. Section 4.1/Figure 4 supports the separate fixed-16k-token OOM comparison; Section 3.1 supports avoiding quadratic intermediates. Selected performance and memory scopes are adequately separated."
+    },
+    {
+      "id": "D2_text_064",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Sections 3.1-3.3 support exactness, deferred normalization, independent forward outputs, small-batch/head occupancy, and decoding's different KV-loading bottleneck. Reading reconstructs these mechanisms from the prose. Section 4.1, Table 1, and Figure 5 support the stated A100 shapes, kernel gains, eight-GPU training peak/context dependence, and multi-query kernel comparison. Reading maintains these distinct measured scopes and linear auxiliary-memory qualification, adequately bounding the selected hardware-execution account."
+    },
+    {
+      "id": "D2_text_041",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Algorithm 1/Sections 3.1-3.3 support final normalization and independent query assignments; the correctness paragraph supports quadratic computation and linear auxiliary storage. Reading accurately reconstructs prose 'improves GPU use beyond reduced memory traffic.' Section 4/Section 4.1 supports the 1.7-3.0-fold range and reported 230 peak; Table 1 supports smaller, context-dependent training gains. Reading recovers A100 workload controls and eight-GPU model/context boundaries, adequately avoiding a uniform application-speed claim."
+    },
+    {
+      "id": "D2_text_059",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Table 1 confirms the context-specific training numbers; Section 4 supports the separate 1.7-3.0-fold kernel range. Reading reconstructs prose 'below' kernel gains without assuming proportional transfer. Section 4.1/Figure 4 supports PyTorch OOM versus tiled execution at 16k. Section 4.3/Table 1 supports the 72% model-FLOP figure and unhalved causal convention, explicitly recovered as accounting rather than executed-arithmetic counts. Hardware, per-GPU units, and performance-level distinctions adequately bound this result."
+    },
+    {
+      "id": "D2_text_054",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Sections 2.3 and 3.6 support exact sampling for any draft; Sections 3.3-3.4 support cost/agreement and concurrency versus arithmetic. Reading recovers the prose's probability-test/residual-correction mechanism and its separation of exactness from speed assumptions. Section 4.1/Table 2 confirms all named T5 speedups and hardware/checkpoint controls. Scope is adequate for this abstract's qualitative analysis and bounded measurements; it does not assert Theorem 3.8's asymptotic factor for arbitrary generation lengths."
+    },
+    {
+      "id": "D2_text_049",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 2.3/Algorithm 1 supports ratio acceptance, residual replacement, first-rejection truncation, and the extra token after full acceptance. Reading recovers prose 'conditioning prefix no longer applies' and the exact-target relationship. Sections 3.1 and 3.3 support the geometric-sum yield and its runtime denominator. Reading explicitly preserves common-prefix/sampling adjustments, i.i.d. acceptance, long generations, relative draft latency, and one-target-step concurrent verification, adequately qualifying the selected analytical claim."
+    },
+    {
+      "id": "D2_text_043",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Algorithm 1 (PDF p5) supports maximum-reference rescaling of sums and final division; Sections 3.2-3.3 support query-block occupancy and warp-owned forward outputs. Reading reconstructs prose 'without repeated normalization' as reduced non-matrix arithmetic without approximating softmax. Section 3.1.2/Algorithm 2 supports saved-logsumexp backward reconstruction. Reading also retains the prose's small-batch/head qualification and register/shared-memory limits from Section 3.3. These boundaries adequately constrain the selected algorithm/partitioning explanation."
+    },
+    {
+      "id": "D2_text_052",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 2.3/Algorithm 1 supports accepted shared mass plus residual correction yielding p, prefix truncation, and guaranteed progress. Reading accurately reconstructs prose 'combined distribution is exactly p.' Equation 1 and Theorem 3.8 support the yield and walltime expressions. Reading recovers sampling adjustment, i.i.d. acceptance, gamma as proposal count, c as step-time ratio, sufficiently long outputs, and concurrency costing one target step. Those explicit conditions adequately bound the analytical relationship."
+    },
+    {
+      "id": "D2_text_050",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 2.3/Algorithm 1 confirms sequential drafts, concurrent verification, first-rejection residual sampling, and a target token after full acceptance. Reading recovers prose 'restores the target distribution even when the proposal is inaccurate' through the shared/residual-mass explanation. Sections 3.1 and 3.3 support the yield and speed model. Sampling-adjusted distributions, i.i.d. acceptance, proposal count, relative latency, long generations, and unchanged verification walltime are all recovered from the text, making scope adequate."
+    },
+    {
+      "id": "D2_text_063",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Sections 3.1-3.3 support independently normalized rows, deferred normalization, forward reduction removal, and decoding's KV-loading partition. Reading recovers these mechanisms and exactness/linear storage. Sections 4.1-4.3, Table 1, and Figure 5 support quoted shapes, kernel gains, training peak, and sevenfold multi-query kernel gain. Reading's 'smaller, context-dependent benefits' preserves the prose's separation of kernel and whole-model evidence; its hardware and model/context limits adequately bound the chosen relationship."
+    },
+    {
+      "id": "D2_text_039",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Section 3.3 supports split-key partial-output exchanges versus warp-owned query rows; Section 2.2 supports row-wise softmax independence. Reading recovers the prose's causal explanation for eliminating forward inter-warp reductions, plus Section 3.2's small-batch/head occupancy relationship. Algorithm 1 and Section 3.1.2/Algorithm 2 support deferred normalization and logsumexp-based backward recomputation. The selected forward partitioning/exactness scope is adequately explicit; absent decoding and benchmark details are not required for this paragraph's function."
+    },
+    {
+      "id": "D2_text_062",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Sections 2.3, 3.6, and selected limitations support exact target sampling for any draft without retraining or architecture changes. Reading recovers shared-mass acceptance and residual correction from the prose. Section 4.1/Table 2 confirms the named T5 speedups and larger-draft tradeoff. Reading preserves i.i.d., long-generation, unchanged concurrent-latency assumptions from Section 3.3 and the explicit spare-compute/arithmetic qualification. Target/draft sizes, hardware, batch, and sampling distinctions adequately limit the measurements."
+    },
+    {
+      "id": "D2_text_046",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Table 1 (PDF p9) confirms both models' 2k/8k throughput changes. Reading faithfully recovers prose 'do not transfer proportionally' as larger long-context training gains, not identical kernel acceleration. Section 4.3 supports per-GPU units, eight-A100 setup, and unhalved causal-attention accounting. Section 4.1/Figure 4 supports fixed total tokens and PyTorch OOM at 16k while FlashAttention-2 runs. Reading maintains the separate training and kernel scopes, adequate for the selected context-dependent result."
+    },
+    {
+      "id": "D2_text_044",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Algorithm 1 supports rescaling both accumulated exponential sums and weighted outputs when the maximum rises, with final-only division. Reading reconstructs prose 'preserves the attention result while reducing scalar work' rather than inventing reduced quadratic complexity. Section 3.1.2/Algorithm 2 supports saved-logsumexp recomputation; Sections 3.2-3.3 support independent queries, forward warp partitioning, and tile-size resource limits. Reading recovers these qualifications, adequately bounding the selected mechanism without requiring unrelated experimental controls."
+    },
+    {
+      "id": "D2_text_070",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 4.1/Table 2 supports every quoted acceptance/speed pair and the fixed-seven greedy comparison. Reading recovers prose 'improved agreement does not offset its proposal cost' and the sampling-dependent payoff. It also preserves the batch-one TPU-v4/T5X scope and the explicit T5-walltime versus GPT-like/LaMDA-acceptance distinction supported by Section 4.2. Sections 3.3-3.4 support concurrency and rejection waste; reading does not convert latency gains into arithmetic savings. Selected scope is adequate."
+    },
+    {
+      "id": "D2_text_042",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Sections 3.1-3.3 support postponed normalization, independent query-block/warp assignments, exactness, and quadratic arithmetic with linear auxiliary storage. Reading reconstructs these explicit mechanisms. Section 4/Section 4.1 supports the reported 230 peak and 1.7-3.0-fold kernel range; Table 1 supports smaller training gains and context dependence. Reading recovers the A100 shape controls and eight-GPU model/context boundaries, adequately preserving prose 'rather than the full kernel-level acceleration' as a bounded performance comparison."
+    },
+    {
+      "id": "D2_text_071",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Table 1 confirms all throughput values; Section 4.3's quadratic attention term supports the cautiously stated 'consistent with' greater long-context importance. Reading preserves that qualification. Sections 4.1 and 4.3 support differing causal FLOP accounting, explicitly recovered as noninterchangeable utilization. Figure 4 and Sections 2.3/3.1 support 16k feasibility as retained tiling storage benefits. Reading accurately recovers prose 'not a new memory advantage over FlashAttention,' adequately bounding both performance and memory comparisons."
+    },
+    {
+      "id": "D2_text_053",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 2.3/Algorithm 1 and Section 3.6 support sequential proposals, parallel checking, residual correction/extra token, and exactness for any draft. Reading recovers that mechanism and the draft-cost/agreement tradeoff. Section 4.1/Table 2 confirms named T5 measurements and hardware/batch/model sizes; Sections 3.3-3.4 support timing assumptions and increased arithmetic. Scope adequately bounds this abstract's qualitative prediction and measured tests; no asymptotic speed formula is asserted for short outputs."
+    },
+    {
+      "id": "D2_text_040",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Sections 2.2 and 3.3 support independent row denominators and warp-owned outputs avoiding split-key reductions. Reading recovers this causal relation, specifically for the forward output calculation, not all synchronization. Section 3.2 supports small-batch/head occupancy; Algorithm 1 supports deferred division and rescaling. Section 3.1.2/Algorithm 2 and Section 3.3 support saved-logsumexp recomputation and remaining backward synchronization. Reading explicitly retains the latter boundary, making the selected forward/backward scope adequate."
+    },
+    {
+      "id": "D2_text_048",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Sections 3.1-3.3 support normalization/scheduling improvements preserving exact attention and linear storage, with a distinct KV-loading bottleneck during decoding. Reading reconstructs both execution relationships from the prose. Section 4, Table 1, and Figure 5 confirm kernel ranges, context-specific 1.3B training values, and multi-query kernel gains. Reading maintains A100 hardware, eight-GPU per-GPU training units, and attention-only decoding scope, adequately preserving prose 'translate unevenly' without claiming whole-generation acceleration."
+    },
+    {
+      "id": "D2_text_051",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Section 2.3/Algorithm 1 supports shared accepted mass and rejection-weighted positive residual exactly recovering p, plus prefix truncation and correction/extra-token progress. Reading reconstructs this selected exact-sampling relationship. Section 3.1/Equation 1 supports the i.i.d. expected-yield formula, and Section 3.4 supports distinguishing serial-call reduction from computation savings. Reading recovers sampling-adjusted fixed-prefix distributions and that distinction. Since the prose claims token yield, not walltime speed, omitted timing assumptions are not necessary boundaries."
+    },
+    {
+      "id": "D2_text_060",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Table 1 supports the context-specific throughput values; Section 4 supports contrasting roughly 1.3-fold training gains with 1.7-3.0-fold kernels. Reading recovers prose 'does not imply equal gains for the whole model.' Section 4.1/Figure 4 supports the separate fixed-16k-token memory comparison. Section 4.3/Table 1 supports the 72% figure and unhalved causal convention, accurately recovered as accounting rather than executed arithmetic. These hardware, units, and workload distinctions adequately delimit the selected result."
+    },
+    {
+      "id": "D2_text_038",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Algorithm 1 (PDF p5) supports running maxima, sums/numerators rescaled by exp(old-new), and final-only division. Reading recovers the prose's selected relation between reduced repeated normalization and unchanged full-row softmax. Section 3.1.2/Algorithm 2 supports logsumexp-based backward probability reconstruction; the Section 3.1 correctness paragraph supports quadratic arithmetic and linear auxiliary storage. Both boundaries are explicitly recovered, adequately constraining this algorithm-focused paragraph without requiring scheduling or benchmark details."
+    },
+    {
+      "id": "D2_text_065",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Sections 2.3 and 3.6 support probability-ratio acceptance, positive-residual correction, and any-draft exactness without target retraining. Reading recovers the mechanism and prose 'agreement ... weighed against the time spent drafting.' Section 3.3 supports i.i.d., long-generation, and no-extra-concurrent-latency assumptions, all explicitly recovered. Section 4.1/Table 2 confirms T5-small/T5-XXL sampled/greedy translation and summarization values on the named hardware/batch setup. Those controls adequately bound the selected exactness-versus-latency relationship."
+    },
+    {
+      "id": "D2_text_072",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Table 1 confirms context-specific training gains and 225/72% peak. Section 4.3's FLOP formula supports the qualified 'consistent with' growing attention share, preserved by the reading. Sections 4.1 and 4.3 support kernel-versus-training causal accounting differences, also explicitly recovered. Figure 4 and Algorithm 1 support the separate 16k PyTorch OOM versus FlashAttention-2 feasibility statement. Reading keeps eight-GPU per-GPU training, accounting, and kernel-memory scopes distinct, adequately bounding this selected result."
+    },
+    {
+      "id": "D2_text_066",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Sections 2.3 and 3.6 support any-draft distribution preservation; Sections 3.3-3.4 support proposal-cost and rejected-computation tradeoffs. Reading reconstructs prose 'acceptance is therefore insufficient' through agreement versus evaluation cost. Section 4.1/Table 2 confirms all named T5 speedups and existing-checkpoint/batch/hardware controls. Reading recovers i.i.d., sufficiently long generations, and unchanged concurrent latency explicitly stated in the prose. These conditions adequately limit the selected speed analysis and distinguish it from unconditional sampling correctness."
+    },
+    {
+      "id": "D2_text_037",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P03 Algorithm 1 supports exp(old maximum-new maximum) rescaling of both accumulators and final normalization. Reading accurately recovers prose 'same exponential scale' as the reason deferred division preserves exact full-row softmax while reducing non-matrix work. Section 3.1.2/Algorithm 2 supports saved-logsumexp backward reconstruction; the correctness paragraph supports quadratic arithmetic and linear additional storage. Reading recovers nonmaterialization and both complexity boundaries. The selected normalization/storage mechanism is legitimate without the anchor's separate scheduling relationship."
+    },
+    {
+      "id": "D2_text_061",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P04 Sections 2.3 and 3.6 support shared-mass acceptance plus residual correction preserving target sampling for any draft. Reading recovers this mechanism and prose 'improved agreement must compensate for proposal cost.' Section 4.1/Table 2 confirms all T5 measurements and T5X/model/hardware/batch controls. Reading explicitly retains Section 3.3's i.i.d., long-generation, unchanged verification-latency assumptions and Section 3.4/selected limitations' concurrency-versus-arithmetic and spare-compute boundary. These conditions adequately delimit the selected exactness and latency claims."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "N1",
+  "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
+  "questions": {
+    "abstract": "In a 150-200 word full abstract, how does combining single-GPU simulation and PPO learning with an adaptive terrain curriculum enable rapid training of a terrain-aware locomotion policy, and what do the ANYmal training and deployment experiments establish about that contribution? Keep the claim bounded by the reported training setup, the need for adequate per-robot rollout lengths, and the limitation of imperfect terrain maps on hardware.",
+    "methods": "In 110-160 words, why does this PPO setup distinguish time-limit resets from failures or goal completion, and how is the critic target handled for a time-out when episode time is absent from observations and an episode spans multiple short rollout batches?",
+    "results": "In 120-180 words, what does Figure 4 show about the reward-versus-training-time trade-off as parallel robot count increases at a fixed batch size, and why is the task-specific choice of about 2,048-4,096 robots not evidence that unlimited parallelism improves learning? Interpret the comparison under its stated conditions: a simplified task without the curriculum, 1,500 policy updates, and fewer rollout steps per robot as robot count rises."
+  }
+}

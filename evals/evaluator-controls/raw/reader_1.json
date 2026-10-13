@@ -1,0 +1,52 @@
+{
+  "readings": [
+    {
+      "id": "T011",
+      "core": "The exact rule halves the current scalar at each step, repeatedly shrinking it toward zero. For an iterate in [0,1], halving stays in [0,1], sustaining the stated interval invariant.",
+      "scope": "The bound concerns every step of exact arithmetic, illustrated by ten updates starting at 0.8. Convergence speed, rounded arithmetic, implementation costs, and measured runtime benefit are unestablished. General starting-value conditions are not recoverable.",
+      "core_witness": "The exact update halves the current scalar at every step",
+      "scope_witness": "The bound describes every step of the exact arithmetic rule",
+      "unclear": "General starting-value conditions for the interval invariant are unspecified."
+    },
+    {
+      "id": "T009",
+      "core": "The evaluated update uses 16 GB versus 24 GB, with checkpoint loss 2.1 versus baseline 2.2. The contribution is lower observed allocation alongside these loss values, not proven equivalence or statistical advantage. The internal update operation is not recoverable.",
+      "scope": "Batch four, one device, one run per method, and the recorded checkpoint. No significance analysis is reported. Transfer, production behavior, and applicability to every device are unestablished.",
+      "core_witness": "A reduced-state update lowers measured allocation from 24 to 16 GB at batch four on one device.",
+      "scope_witness": "Only one run per method is available, and no significance analysis is reported.",
+      "unclear": "The specific reduced-state operation producing the allocation saving is unspecified."
+    },
+    {
+      "id": "T001",
+      "core": "A small proposer sequentially drafts five predecessor-conditioned tokens. The target checks five prefix positions concurrently in one round, removing per-position target rounds while retaining serial drafting cost. A supplied correction rule retains the target distribution, but its operation is not recoverable.",
+      "scope": "Measurements concern a toy token schedule: 4 ms proposal work, 20 ms target round, three accepted tokens on average. Complete application latency is unestablished; distribution-retention conditions are not recoverable.",
+      "core_witness": "The target then checks all five prefix positions concurrently in one round",
+      "scope_witness": "These measurements describe the evaluated token schedule rather than complete application latency.",
+      "unclear": "Correction-rule operations and conditions for distribution retention are unspecified."
+    },
+    {
+      "id": "T003",
+      "core": "The reported trajectory-completion rate is seven of ten for the policy versus five of ten for the baseline, with matched starts and time budgets. Final-stage state defines completion.",
+      "scope": "The reported comparison measures uninterrupted three-stage completions in ten physical executions. Three successes follow earlier failure/reset; another tally is four versus three. Reset handling and that tally's relation to seven versus five are not recoverable. Small counts establish neither significance nor general deployment reliability.",
+      "core_witness": "seven uninterrupted three-stage completions in ten physical executions, compared with five of ten for the baseline",
+      "scope_witness": "These small counts are descriptive and do not establish statistical significance or general deployment reliability.",
+      "unclear": "How earlier failures/resets affect execution counting, and what the alternate tally measures."
+    },
+    {
+      "id": "T007",
+      "core": "The measured comparison records total allocation of 12 versus 16 GB and optimizer-state storage of 4 versus 8 GB. These support a total saving of 4 GB, not the stated halving of the complete footprint; only optimizer-state storage halves.",
+      "scope": "Same device, model, precision, batch eight; other allocations remain 8 GB. Checkpoint loss is 2.3 versus baseline 2.2. Quality equivalence and other batch sizes are unestablished. Reconciling the twofold-total claim with 12 versus 16 GB is not recoverable.",
+      "core_witness": "total allocation is recorded as 12 GB rather than 16 GB.",
+      "scope_witness": "on the same device, model and precision at batch eight.",
+      "unclear": "The asserted halving of total allocation conflicts with the reported totals."
+    },
+    {
+      "id": "T005",
+      "core": "Logical token positions map to potentially nonadjacent physical blocks; another block is allocated only when an arriving token exhausts the current one. This enables incremental storage instead of maximum-length contiguous reservation. The toy comparison supports batch 64 versus 40 for contiguous reservation at the same 100 ms latency cap.",
+      "scope": "Limited to the evaluated allocation scheme and toy workload. Allocator overhead is not isolated, and benefit on arbitrary hardware is unestablished.",
+      "core_witness": "This permits incremental storage instead of reserving a contiguous region for the maximum sequence length.",
+      "scope_witness": "it does not isolate allocator overhead or establish a benefit on arbitrary hardware.",
+      "unclear": "none"
+    }
+  ]
+}

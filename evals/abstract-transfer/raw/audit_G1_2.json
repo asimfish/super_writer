@@ -1,0 +1,60 @@
+{
+  "audits": [
+    {
+      "id": "G1_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A02 Sec. 2/Eqs. 1-3 and A.1 support regularized neighborhood loss, perturbed-weight gradients, and a conditional population-loss bound. The prose states that mechanism and 'does not certify the practical approximation'; the twice-epoch CIFAR comparison matches Sec. 3.1/Table 1. Its MentorMix deficit and SVHN regression match Table 4 and B.1/Table 5, limiting universality. Curvature/subset claims match Sec. 4. Reading core/core_witness and scope/scope_witness directly locate nearby low-loss parameters and the longer-training comparison."
+    },
+    {
+      "id": "G1_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A02 Sec. 2/Eqs. 1-3 and A.1 support the prose's regularized neighborhood objective, Gaussian-average/norm conditions, and approximate two-gradient update. Sec. 3.1/Table 1 supports the doubled-budget comparison and 2.2%-to-1.6% example; Sec. 3.2/Table 3 supports pretrained EfficientNet-L2's 0.30%. Sec. 4 supports the subset/curvature diagnostics; Table 4 and B.1/Table 5 support the stated exceptions. 'Motivates, but does not certify' answers the guarantee limitation. Reading core/scope and both witnesses are explicit prose claims, not source-only supplementation."
+    },
+    {
+      "id": "G1_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A02 Sec. 2/Eqs. 2-3 supports the prose's first-gradient perturbation and second-gradient update. Sec. 3.1/Table 1 supports CIFAR gains against doubled-epoch budgets; Sec. 3.2/Table 3 supports finetuning gains. A.1 matches the conditional bound; Sec. 4 supports curvature/subset observations. 'Without establishing a generalization guarantee for approximate updates' and the label-noise/SVHN exceptions answer the limitation (Table 4; B.1/Table 5). Omitted regularization and second-order ablation details do not invalidate this abstract-level explanation. Reading core/scope witnesses quote the mechanism and comparison actually stated."
+    },
+    {
+      "id": "G1_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A02 Sec. 2/Eqs. 1-3 supports the prose's neighborhood-loss objective and perturbed-weight update; A.1 supports its Gaussian/norm qualifications. 'Without certifying approximate minibatch updates' separates motivation from guarantee. Sec. 3.1/Table 1 supports CIFAR's doubled training allowance; Sec. 4 supports the measured curvature and independent-subset rationale. Label-noise and SVHN limitations match Table 4 and B.1/Table 5. Reading core/core_witness is explicit; scope/scope_witness refers to the stated twice-epoch allowance, not an unconditional improvement claim."
+    },
+    {
+      "id": "G1_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A01 Secs. 3.2-3.3 and implementation support the prose's perception-grounded attraction/repulsion maps, joint optimization, and observation-based replanning. Sec. 4.1/Table 1 supports 88%/70% versus 24%/0%; Sec. 4.2/Table 2 and A.4.2/Table 4 support category gains with task exceptions. Secs. 3.4/4.3/Table 3 support local waypoint exploration, the success ranges, and mean interaction times. 'When zero-shot plans are insufficient' separates dynamics learning from training-free execution; Sec. 5 supports the limits. Reading core and five-task scope are directly supported by their quoted prose witnesses."
+    },
+    {
+      "id": "G1_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A01 Secs. 3.2-3.3 and implementation support generated perception queries, three-dimensional spatial objectives, and observation-updated trajectory optimization, explicitly present in the prose. Sec. 4.1/Table 1 verifies its disturbance comparison; Sec. 4.2/Table 2 and A.4.2/Table 4 verify category gains and task exceptions. Secs. 3.4/4.3/Table 3 verify exploration priors, zero-shot versus learned success ranges, and mean interaction times. 'Trajectories insufficient for zero-shot completion' clearly delimits the learning result; Sec. 5 supports the limitations. Reading core/scope and witnesses are grounded in the prose's planning and 70% disturbance statements."
+    },
+    {
+      "id": "G1_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A01 Secs. 3.2-3.3 support the prose's code-generated, perception-grounded voxel attraction/constraint scoring and observation-based replanning. Sec. 4.1/Table 1 verifies five-task averages; Sec. 4.2/Table 2 and A.4.2/Table 4 verify transfer with nonuniform task gains. 'Zero-shot trajectories are insufficient yet provide exploration priors' matches Secs. 3.4/4.3 and distinguishes subsequent dynamics learning from zero-shot execution; Table 3 supports the interaction-time contrast. Implementation/Sec. 5 support manual prompts and perception/dynamics/end-effector limits. Reading core and scope, including their witnesses, are explicitly stated in the prose."
+    },
+    {
+      "id": "G1_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A01 Secs. 3.2-3.3 and implementation support the prose's generated visual-perception queries, composed voxel objectives, and closed-loop replanning. Sec. 4.1/Table 1 supports the real-world comparison; Sec. 4.2/Table 2 and A.4.2/Table 4 support category transfer and uneven task results. 'Zero-shot trajectories alone are insufficient' followed by exploration priors and dynamics learning matches Secs. 3.4/4.3/Table 3, including the time contrast. Numerical contact-task success rates are optional here. Implementation/Sec. 5 support the prompt/perception/end-effector limitations. Reading core/scope and witnesses directly identify prose planning and disturbance evidence."
+    }
+  ]
+}

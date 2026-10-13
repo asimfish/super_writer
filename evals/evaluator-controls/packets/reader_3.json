@@ -1,0 +1,56 @@
+[
+  {
+    "id": "T021",
+    "unit": "methods",
+    "questions": [
+      "How does computation proceed, and why does that operation permit the stated consequence?",
+      "What conditions bound the main claim, and what remains unestablished?"
+    ],
+    "text": "The proved update uses exact gradients on a convex objective with the stipulated step-size rule; under those conditions, its objective values are non-increasing. The implementation instead uses approximate gradients, so it is not covered by that supplied monotonicity proof. Its objective decreases at every recorded step on three toy problems, which supports a description of those trajectories rather than a transferred theorem. Keeping the two updates distinct prevents the practical observation from becoming a guarantee for the implemented variant. No convergence rate or nonconvex guarantee is asserted."
+  },
+  {
+    "id": "T019",
+    "unit": "results",
+    "questions": [
+      "What finding supports the conclusion, and against which comparator?",
+      "What exactly was measured, and which conditions limit the inference?"
+    ],
+    "text": "Exact-answer accuracy is 80% with the answer document first, 52% in the middle and 78% last on a fixed set of 100 questions. The middle layout has the lowest score, while the first and last layouts differ by two percentage points. These three measurements describe how performance varies across the evaluated document arrangements. They provide complementary views of first, middle and last placement, rather than a single aggregate score. The findings do not identify an internal neural mechanism and remain limited to the tested task and document length, rather than all long-context workloads."
+  },
+  {
+    "id": "T015",
+    "unit": "abstract",
+    "questions": [
+      "What does the work establish, and what relation explains its contribution?",
+      "Which empirical or theoretical boundaries are explicit?"
+    ],
+    "text": "The interval procedure guarantees at least 90% marginal coverage for a future observation. Calibration observations determine the intervals, and the future-coverage statement supplies the theoretical contribution alongside a fixed toy evaluation. In that evaluation, drawn from the calibration distribution, 89 of 100 targets are covered. The realized proportion illustrates one evaluation and is not itself a proof or contradiction of the marginal guarantee. Conditional coverage is not claimed, and no shift experiment is reported. Empirical behavior outside the calibration distribution therefore remains unmeasured rather than experimentally established."
+  },
+  {
+    "id": "T017",
+    "unit": "results",
+    "questions": [
+      "What finding supports the conclusion, and against which comparator?",
+      "What exactly was measured, and which conditions limit the inference?"
+    ],
+    "text": "Compact indexing returns an exact match for 89 of the 100 evaluated queries, compared with 85 for the baseline on the same fixed dataset. Its median query time is 150 ms rather than 120 ms on one device. The comparison therefore pairs a higher observed match count with slower median queries, rather than a uniform improvement on both measures. The counts and timings describe this dataset and device; no sampling uncertainty or production evaluation is reported. The result is an observed accuracy-time tradeoff, not a guarantee about deployment behavior."
+  },
+  {
+    "id": "T013",
+    "unit": "abstract",
+    "questions": [
+      "What does the work establish, and what relation explains its contribution?",
+      "Which empirical or theoretical boundaries are explicit?"
+    ],
+    "text": "The optimization accelerates one device kernel rather than the whole request by a factor of two. On the same batch and device with unchanged outputs, kernel time falls from 16 to 8 ms. Separately instrumented request latency, including preprocessing, transfers and postprocessing, falls from 112 to 104 ms. The component saving is therefore visible end to end as an 8 ms reduction, but the remaining request work prevents a twofold overall acceleration. These results concern the measured request configuration; the study does not evaluate concurrent-user throughput, and the reported profile does not establish performance on another device."
+  },
+  {
+    "id": "T023",
+    "unit": "methods",
+    "questions": [
+      "How does computation proceed, and why does that operation permit the stated consequence?",
+      "What conditions bound the main claim, and what remains unestablished?"
+    ],
+    "text": "The cache lookup maps each logical key to a physical block in a fixed pool. Since those blocks need not be adjacent, a sequence can extend without copying its earlier blocks into a contiguous region. Access follows the map to the required location despite the physical separation. The operation therefore explains how extension avoids relocation, rather than asserting that this implementation is faster. No performance comparison is available. Library and logging metadata are not required to establish the stated storage relationship."
+  }
+]

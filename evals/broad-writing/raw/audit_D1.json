@@ -1,0 +1,292 @@
+{
+  "audits": [
+    {
+      "id": "D1_text_036",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C, Fig. 5, and IV-A3b support pose-conditioned synthesis, virtual-to-future-pose labels, overshoot mitigation, and the k=3 plateau/terminal-frame tradeoff. Prose 'a command intended to resume progress' appropriately describes supervision rather than guaranteed recovery. The reading reconstructs that coupling and explicitly recovers original/generated training pairs and the recoverability assumption, supported by the selected limitations paragraph. Those boundaries suffice for this labeling-focused methods paragraph."
+    },
+    {
+      "id": "D1_text_026",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C supports fixed VQ-GAN codebooks, pose-conditioned views, and labels from virtual poses to later expert poses; IV-A3b supports the pushing lookahead plateau. Prose 'coupling correction with continued task progress' is reconstructed by the reading, including why simply reversing displacement is insufficient. Its scope accurately retains pushing-specific ablation evidence, mixed training pairs, and recoverable local deviations. No new expert corrections or universal recovery guarantee is inferred."
+    },
+    {
+      "id": "D1_text_005",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 VI-A/B and Fig. 9 support 1% to 44% without temporal ensembling, 35.3% to 2% on human data without CVAE, and separately tuned ensembling gains of 3.3/four points with a VINN decrease. Prose 'do not support applying prediction averaging indiscriminately' matches the reading's selective-benefit reconstruction. Both retain simulated tasks, dataset contrasts, disabled ensembling for chunk tests, and separate tuning; this legitimate ablation relationship need not summarize hardware baselines."
+    },
+    {
+      "id": "D1_text_028",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 III-IV supports the budget, 50 Hz joint mapping, chunking, overlapping predictions, and variational training. V-B/C and Table II support demonstration counts and 88%/96% versus zero final-stage baseline results; VI-C and Appendix F support the human study and initial candy failures. The reading recovers the hardware-to-policy relationship and the explicitly stated one-seed/25-evaluation protocol, 20% threading, and initial 0/10 unwrapping. These finite outcomes adequately bound the abstract's capability claim."
+    },
+    {
+      "id": "D1_text_015",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 IV and Algorithms 1-2 support leader-target labels, follower-joint/four-camera observations, same-timestep exponential aggregation, and training-only latent inference followed by z=0 deployment. Prose 'without mixing actions intended for adjacent times' is recovered precisely in the reading. The reader also retains the controller-offset rationale, Gaussian regularization, discarded encoder, and deterministic deployment. These are the consequential boundaries of the selected control/training mechanism, not a hardware-success guarantee."
+    },
+    {
+      "id": "D1_text_035",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-C2's equation on PDF p.4 confirms inverse-displacement composition with the source-to-future transform; Fig. 5 and IV-A3b support overshoot mitigation and the third-frame/terminal-frame tradeoff. Prose 'provided those states remain recoverable' supplies the necessary recovery boundary. The reading correctly reconstructs pose-consistent relabeling, later targets, mixed training pairs, and that assumption. It does not mistake image perturbation for unchanged-label augmentation or claim irreversible failures can be repaired."
+    },
+    {
+      "id": "D1_text_009",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 III-IV supports affordable joint-space demonstrations and chunked, same-time ensembled control; V-B/C and Tables II-III support 88%/96% hardware results and 20% velcro threading. VI-C supports the separate six-person study's 33-to-20-second zip-tie result. Prose 'In a separate randomized study' and the reading distinguish human teleoperation from autonomous policy performance. The reader retains demonstration counts, hardware trials/seed, and limited threading success, adequately bounding the combined platform/policy claim."
+    },
+    {
+      "id": "D1_text_032",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C and IV-A3b support task/play adaptation, geometric labels toward future expert poses, and the pushing-specific third-frame plateau. Prose 'rather than relying on visual diversity alone' selects the synthesis-to-corrective-supervision relationship, which the reading recovers. Both restrict the procedure to local virtual wrist-camera deviations and a stated pushing ablation. The paragraph describes added training supervision, not guaranteed recovery from every physical failure; an unstated spill limitation is not credited as reader recovery."
+    },
+    {
+      "id": "D1_text_021",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 VI-A/B supports distinct chunking/CVAE effects and selective, separately tuned ensembling. V-B/C and Table III support 100 demonstrations, 92% lifting versus 20% threading, and the observed localization-related failures. Prose 'Physical threading exposes a different bottleneck' and the reading keep hardware outcomes separate from the two simulated-task ablations. The reconstruction includes disabled ensembling, dataset contrast, one hardware seed/25 trials, and perceptual difficulty without claiming the ablations establish hardware causality."
+    },
+    {
+      "id": "D1_text_018",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C supports pose-linked synthesis and future-pose corrective labels. Table II/IV-A4 supports 10/10 versus 3/10 and play-only generation for eight-demo 80% versus 20%; IV-E/Table V supports 16/25 versus 4/25 with matched rectified crops. Prose 'provided deviations remain recoverable' and the reading retain the selected limitations paragraph's irreversible-spill boundary. Tested tasks, held-out cups/new laboratory, and small trial counts are recoverable from the prose, adequately limiting the robustness/transfer claim."
+    },
+    {
+      "id": "D1_text_013",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 III-IV, V-B/C, Tables II-III, VI-C, and Appendix F support the platform/policy mechanism, demonstration counts, reported final-stage rates, study, and initial candy failure. Prose explicitly calls 88%/96% 'reported final-stage success rates'; the reading reconstructs the same bag-opening/battery-insertion events, not multiplied stage probabilities. Its scope retains 25-trial hardware tests and 20% threading/0-of-10 initial unwrapping. These observed outcomes adequately bound capability without implying repeatability across training seeds."
+    },
+    {
+      "id": "D1_text_008",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 IV-A/C and Algorithm 2 support absolute joint-target chunks and weighted overlapping predictions for one target timestep. IV's leader/follower discussion and IV-B support controller offsets and variational training with discarded encoder/z=0 inference. The reading accurately recovers prose 'Combining predictions of the same target, rather than actions at neighboring times' and the four-camera/follower-joint input boundary. This suffices for the selected control mechanism; no neighboring-time smoothing or deployment access to demonstrations is inferred."
+    },
+    {
+      "id": "D1_text_030",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 Tables I-II and IV-A3/4 support 0.355-to-0.328-radian prediction error and the distinct 3/10-to-10/10 execution comparison. IV-A4b confirms eight task demonstrations exclude the play-trained generator's other input; IV-E/Table V confirms 1,447 demonstrations and 4/25-to-16/25 cup results. The reading recovers those distinctions and prose 'so that count excludes other training input.' Matched starts/preprocessing, five unseen cups/new lab, and nine remaining failures adequately bound the selected performance/transfer relationship."
+    },
+    {
+      "id": "D1_text_003",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 IV-C and Table IV's footnote support 57-gram complete-transfer success, 49 task/16 play trajectories, and separate 80%-versus-0% and 70%-versus-30% comparisons. The selected limitations paragraph supports the spill boundary. Prose 'prevent reading ... as a controlled estimate' is recovered through the reading's separate-test scope and explicit nonrecoverability of a causal play benefit. Correction during rotation remains a source-supported interpretation, not an isolated causal finding; numerical and recovery scopes are adequate."
+    },
+    {
+      "id": "D1_text_012",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 Tables I-II support the jitter/flip angular-error contrast, ten-trial pushing rates, and task-only versus task/play generators. IV-C/Table IV explicitly separates the pouring A/B comparisons and possible condition differences. Prose 'do not establish a pouring advantage from play data' is correctly reconstructed by the reading, alongside the selected limitations paragraph's recoverable-departure boundary. Offline error and online completion remain different measures, and neither reader nor writer turns the pouring comparison into a controlled play-data effect."
+    },
+    {
+      "id": "D1_text_006",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 VI-A/B and Fig. 9 support all stated chunk-length, CVAE, and ensembling contrasts, including the 3.3/four-percentage-point gains. The reading recovers the prose's 'consistent with a tradeoff' interpretation rather than an ever-longer-chunk prescription. Its scope accurately identifies two simulated tasks, scripted/human datasets, disabled ensembling in chunk tests, and separately tuned ensembling with VINN harm. Those explicit conditions adequately support this ablation-centered relationship without requiring hardware-baseline coverage."
+    },
+    {
+      "id": "D1_text_033",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 IV-A/B/C and Algorithms 1-2 support leader targets, follower-joint/four-view observations, chunked temporal modeling, exponential same-execution-time aggregation, and encoder removal/z=0 deployment. The reading reconstructs prose 'only when they target the same execution time,' preserving the distinction from adjacent-time smoothing. Training variation and Gaussian regularization are kept separate from deterministic inference. These text-supported control and latent-use boundaries are adequate; no success guarantee or test-time latent inference from future demonstrations is asserted."
+    },
+    {
+      "id": "D1_text_019",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C supports pose-conditioned views and geometric future-pose labels. IV-A4/Table II supports pushing rates and the replicated SPARTN comparison; IV-E/Table V supports 1,447-demo cup augmentation with shared cropped/rectified inputs. Prose 'excludes reversing events such as spilled contents' matches the selected limitations paragraph and the reading's recovery boundary. The reader reconstructs correction beyond appearance augmentation and retains finite pushing tests and held-out cup/environment scope, rather than generalizing to arbitrary manipulation settings."
+    },
+    {
+      "id": "D1_text_011",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 IV-A3/4 and Tables I-II support modest angular-error reduction alongside larger completion changes and pushing generator comparisons. IV-C/Table IV supports the two pouring contrasts and lighting caveat. Prose 'does not isolate that mechanism' and the reading's unclear field correctly withhold a causal error-accumulation finding and pouring play-data attribution. Trial counts, matched augmentation, separate comparisons, and the selected recoverability/spill limitation are text-supported and sufficient for this results relationship."
+    },
+    {
+      "id": "D1_text_002",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C supports geometry-linked synthetic observations and later-pose corrective labels; IV-A4/Table II supports 24-demo task/play pushing results. IV-E/Table V supports the retrained diffusion-policy comparison with five held-out cups and identical rectified crops. Prose 'Recovery labels assume recoverable deviations' is explicitly recovered by the reading, including irreversible spills. Finite trial counts, tested tasks, and matched cup preprocessing adequately delimit the selected extension from low-data regression policies to a larger-data diffusion policy."
+    },
+    {
+      "id": "D1_text_017",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C, IV-A4/Table II, and IV-E/Table V support corrective view/label coupling, the stated pushing comparisons, and held-out cup results. Prose 'around recoverable deviations' and the spill sentence supply the limitation included in the permitted inputs. The reading recovers later-pose supervision, play-only adaptation for eight task demonstrations, five unseen cups/new laboratory, matched rectified crops, and irreversible-failure exclusions. This is adequate for a tested-shift claim; omitted large-dataset size is not credited or required."
+    },
+    {
+      "id": "D1_text_020",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C supports synthetic recovery pairs and later-pose labels; IV-A4/Table II supports the ten-trial pushing, replicated NeRF, and low-demo comparisons. IV-E/Table V supports 1,447-demo diffusion-policy augmentation and matched rectified crops. The reading reconstructs prose 'provided deviations remain recoverable,' consistent with the selected limitations paragraph. Both retain task/play generator choices, held-out objects/environment, and finite measured outcomes, adequately bounding corrective augmentation beyond scarce-data training without promising recovery after spills."
+    },
+    {
+      "id": "D1_text_001",
+      "fidelity": "concern",
+      "core_recovery": 2,
+      "scope_recovery": 1,
+      "failure_types": ["writer_error", "text_ambiguous"],
+      "reason": "P01 III-C2/Fig. 5 (p.4) illustrates avoidance when the virtual pose has passed the next frame but not the farther target; larger k guards against overshoot, not every later-frame choice. Prose 'Targeting a later frame avoids' and reading 'Later targets avoid' omit this consequential condition, leaving mitigation versus guaranteed avoidance ambiguous. Synthetic-view/corrective-label coupling is recovered correctly. Tables II/V support the numerical claims, and matched cup inputs, finite trials, and the irreversible-spill boundary are otherwise adequately reconstructed."
+    },
+    {
+      "id": "D1_text_031",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-C2's equation confirms the inverse-displacement/future-pose label construction; III-B and IV-A3b support adaptation and the pushing lookahead tradeoff. Prose 'supervision for recoverable deviations' keeps the claim about labeled training examples, not unconditional execution recovery. The reading correctly reconstructs unchanged-label avoidance, future-pose targeting, local perturbations, the third-frame plateau, and terminal-frame exclusion. These method-specific boundaries are sufficient without requiring every task's scale or action-dimensionality setup."
+    },
+    {
+      "id": "D1_text_023",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 VI-A/B and Fig. 9 support chunking/CVAE contrasts and VINN's 37%-to-17% ensembling decrease; V-B/C/Table III supports physical threading. Appendix F explicitly distinguishes initial 0/10 candy attempts from 3/5 candies given ten attempts each. Prose 'changed retry budget' is recovered in the reading's scope and its refusal to infer comparable single-attempt improvement. Simulated ablations, separate tuning, physical stages, and retry units remain distinct, adequately supporting this component-benefit/remaining-limits relationship."
+    },
+    {
+      "id": "D1_text_034",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 IV-A/B/C and Algorithms 1-2 support leader-target supervision, temporally dependent chunks, same-time exponential aggregation, and variational training versus zero-latent inference. Prose 'multiple estimates of one command rather than smoothing neighboring actions' is recovered accurately by the reading. It also retains four-view/follower-joint inputs and the discarded encoder. The intended-horizon and within-chunk pause wording appropriately limits temporal modeling; no universal non-Markovian solution or deployment use of demonstrated future actions is inferred."
+    },
+    {
+      "id": "D1_text_024",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 VI-A/B/Fig. 9 supports 1%-to-44% chunking, 35.3%-to-2% human-data CVAE removal, and selectively beneficial ensembling; Table III/V-B/C supports 92% lifting and 20% insertion with 100 demonstrations. Appendix F supports both candy protocols. The reading reconstructs the prose's explicit retry-budget warning, simulated chunk tests without ensembling, and separately tuned comparisons. Those scope distinctions prevent hardware causality, universal averaging benefits, or single-attempt success from being inferred from the reported contrasts."
+    },
+    {
+      "id": "D1_text_029",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 Tables I-II/IV-A3/4 support the offline and online pushing contrasts, including the separate play-data budget. IV-E/Table V supports 1,447-demo cup results with matched starts and rectified crops. Prose 'does not isolate that mechanism' is respected by the reading's unclear field rather than converted into causal proof. The reader also recovers the five-cup/new-lab boundary and irreversible-spill exclusion from the permitted limitations paragraph, adequately limiting the selected performance and transfer claims."
+    },
+    {
+      "id": "D1_text_025",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 III-B/C supports fixed latent-image codebooks, locally displaced virtual views, and action labels toward later demonstration poses; IV-A3b supports the third-frame choice. Prose 'not merely back to the source image' is recovered by the reading's progress-directed relabeling account. The reading preserves pretrained adaptation and small random displacement scope. This paragraph selects how synthetic examples receive labels without additional expert actions, not a universal robustness claim, so unmentioned task protocols or irreversible failures need not be supplied from memory."
+    },
+    {
+      "id": "D1_text_004",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P01 IV-C and Table IV's footnote support 49 demonstrations/16 play trajectories, the two separately randomized pouring comparisons, positional drift, and possible lighting differences. The selected limitations paragraph supports spilled-bean irreversibility. The reading accurately recovers prose 'It does not isolate the value of play,' including why 80% versus 70% is not that estimate. Corrective execution remains an interpretation consistent with observed failures, while the separate-test and recoverability boundaries are fully recoverable from the prose."
+    },
+    {
+      "id": "D1_text_022",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 VI-A/B supports the simulated chunking, CVAE, and separately tuned ensembling contrasts. VI-C/Appendix E supports six participants, 33-to-20-second human zip-tie threading, and 50 Hz follower commands despite 5 Hz leader sampling; V-B/C supports 20% autonomous velcro threading with 100 demonstrations. Prose 'hardware study separately tests leader-input frequency' and the reading separate teleoperation from autonomous results. These explicit protocol distinctions adequately bound the relationship without treating faster human input as proof of autonomous success."
+    },
+    {
+      "id": "D1_text_010",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 III-IV supports direct joint mapping, chunking, same-execution-time ensembling, and variational training. V-B/C and Tables II-III support the stated hardware final-stage results, demonstration counts, and 20% threading; VI-C supports the separate human study. The reading reconstructs the hardware-to-policy relationship and retains one seed/25 trials, task-dependent failure, and six-participant teleoperation scope. Prose 'difficult visual-localization problems unresolved' appropriately limits capability without equating teleoperation improvements with autonomous threading success."
+    },
+    {
+      "id": "D1_text_016",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 IV-A/B/C and Algorithms 1-2 support leader/follower force-producing offsets, four-camera observations, chunks that capture within-chunk pauses, and same-time exponential aggregation. Prose 'Predictions for the same execution time' is reconstructed directly by the reading. Its scope correctly states that actions/joints inform the training latent, while deployment discards that encoder and fixes z to zero. These training/control distinctions are adequate and do not rely on source-only future-action access or adjacent-time smoothing."
+    },
+    {
+      "id": "D1_text_007",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 IV-A/C supports absolute leader-joint targets and every-step aggregation of predictions for the same execution time; IV-B/Algorithm 1 supports training latent inference from demonstrated chunks and proprioception. Algorithm 2 supports discarded encoder/z=0 deployment. The reading reconstructs prose 'chunk prediction does not require withholding observations' without confusing chunking with compulsory open-loop execution. Four-view/follower-joint inputs and the distinct training/deployment latent roles provide adequate scope for this methods relationship."
+    },
+    {
+      "id": "D1_text_027",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 III-IV supports the budget, 50 Hz joint-space platform, chunks, and variational training. V-B/C/Tables II-III support demonstration counts, bag/battery final stages, and 20% threading; VI and Appendix F support the separate study and initial 0/10 candy attempts. The reading recovers prose 'Performance remains uneven' alongside one seed/25 evaluations and the platform-to-policy mechanism. Initial failures are not presented as the later retry protocol, and human teleoperation remains distinct from learned autonomous performance."
+    },
+    {
+      "id": "D1_text_014",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P13 III-IV, V-B/C/Tables II-III, VI-C, and Appendix F support the platform/policy mechanism, budget, demonstrations, reported outcomes, study, and limitations. 'Four comparison methods never progress beyond the first stage' is supported for the immediately named slider-bag and battery tasks, not asserted for every task. The reading retains that comparison, 25-trial hardware scope, 20% threading, and initial 0/10 candy failures. These bounded observations adequately support several tested behaviors without implying uniform success or cross-seed stability."
+    }
+  ]
+}

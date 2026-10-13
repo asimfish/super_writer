@@ -1,0 +1,10 @@
+{
+  "excluded_before_preparation": [
+    {"title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model", "reason": "Existing abstract-exemplars.md development guidance"},
+    {"title": "Masked Autoencoders Are Scalable Vision Learners", "reason": "Existing abstract-exemplars.md development guidance"}
+  ],
+  "selected_title_metadata_search_matches": [],
+  "family_exposure": "Related robotics, generation, inference and theorem concepts exist in development cases; not model-unseen or corpus-independent.",
+  "coordinator_abstract_exposure": "Official metadata searches exposed abstracts before full source preparation; unchanged candidate already existed and is copied without retuning.",
+  "search_limit": "Exact/full title matching in existing eval/docs/references Markdown and JSON, excluding raw outputs and packets; does not certify absence of abbreviated titles or pretraining."
+}

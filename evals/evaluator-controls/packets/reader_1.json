@@ -1,0 +1,56 @@
+[
+  {
+    "id": "T011",
+    "unit": "methods",
+    "questions": [
+      "How does computation proceed, and why does that operation permit the stated consequence?",
+      "What conditions bound the main claim, and what remains unestablished?"
+    ],
+    "text": "The exact update halves the current scalar at every step and keeps every iterate in [0,1]. Halving repeatedly shrinks the scalar toward zero, supplying the interval invariant for the procedure. The ten logged updates beginning at 0.8 illustrate this shrinking sequence within the interval. They provide a concrete run alongside the stated update, rather than a separate experimental method. The bound describes every step of the exact arithmetic rule, not its convergence speed, behavior under rounded arithmetic or implementation costs. No measured runtime benefit is asserted."
+  },
+  {
+    "id": "T009",
+    "unit": "abstract",
+    "questions": [
+      "What does the work establish, and what relation explains its contribution?",
+      "Which empirical or theoretical boundaries are explicit?"
+    ],
+    "text": "A reduced-state update lowers measured allocation from 24 to 16 GB at batch four on one device. At the recorded checkpoint, loss is 2.1 for this update and 2.2 for the baseline. The profile thus reports lower allocation alongside these observed loss values, not a proven equivalence or statistical advantage. Only one run per method is available, and no significance analysis is reported. The resource and loss comparisons concern that evaluated configuration rather than transfer, production behavior or every device."
+  },
+  {
+    "id": "T001",
+    "unit": "methods",
+    "questions": [
+      "How does computation proceed, and why does that operation permit the stated consequence?",
+      "What conditions bound the main claim, and what remains unestablished?"
+    ],
+    "text": "The procedure separates cheap proposal work from expensive target evaluation. A small proposer drafts five tokens sequentially, with each guess conditioned on its predecessors. The target then checks all five prefix positions concurrently in one round, so drafting still has a serial cost but target evaluation no longer requires a separate round for every position. A supplied correction rule retains the target distribution. On the toy workload, proposal work takes 4 ms, a target round takes 20 ms, and accepted yield averages three tokens. These measurements describe the evaluated token schedule rather than complete application latency."
+  },
+  {
+    "id": "T003",
+    "unit": "results",
+    "questions": [
+      "What finding supports the conclusion, and against which comparator?",
+      "What exactly was measured, and which conditions limit the inference?"
+    ],
+    "text": "The policy achieves seven uninterrupted three-stage completions in ten physical executions, compared with five of ten for the baseline under matched starts and time budgets. The final-stage state supplies the completion criterion for this comparison. Three of the seven successes follow an earlier failure and reset, while another recorded tally gives four of ten for the policy and three of ten for the baseline. The reported seven-of-ten result is the trajectory-completion rate used here. These small counts are descriptive and do not establish statistical significance or general deployment reliability."
+  },
+  {
+    "id": "T007",
+    "unit": "results",
+    "questions": [
+      "What finding supports the conclusion, and against which comparator?",
+      "What exactly was measured, and which conditions limit the inference?"
+    ],
+    "text": "Projection halves total training allocation on the same device, model and precision at batch eight. Optimizer-state storage falls from 8 to 4 GB, while the other measured allocations remain 8 GB; total allocation is recorded as 12 GB rather than 16 GB. The reported twofold reduction characterizes the complete measured training-memory footprint. At the recorded checkpoint, loss is 2.3 for projection and 2.2 for the baseline. The profile documents a memory saving with this observed loss difference; it does not establish quality equivalence or characterize another batch size."
+  },
+  {
+    "id": "T005",
+    "unit": "abstract",
+    "questions": [
+      "What does the work establish, and what relation explains its contribution?",
+      "Which empirical or theoretical boundaries are explicit?"
+    ],
+    "text": "A block-based cache changes how serving memory follows sequence growth. Logical token positions map to physical blocks that need not be adjacent, and another block is allocated only when an arriving token exhausts the current one. This permits incremental storage instead of reserving a contiguous region for the maximum sequence length. On the toy workload, the system supports a batch of 64 rather than 40 for contiguous reservation at the same 100 ms latency cap. That comparison concerns the evaluated allocation scheme; it does not isolate allocator overhead or establish a benefit on arbitrary hardware."
+  }
+]

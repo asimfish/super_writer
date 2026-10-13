@@ -1,0 +1,58 @@
+[
+  {
+    "condition": "baseline",
+    "sample": 1,
+    "case": "P1",
+    "words": 75,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 1,
+    "case": "P2",
+    "words": 78,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 2,
+    "case": "P1",
+    "words": 95,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 2,
+    "case": "P2",
+    "words": 98,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 1,
+    "case": "P1",
+    "words": 91,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 1,
+    "case": "P2",
+    "words": 106,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 2,
+    "case": "P1",
+    "words": 93,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 2,
+    "case": "P2",
+    "words": 95,
+    "budget_pass": true
+  }
+]

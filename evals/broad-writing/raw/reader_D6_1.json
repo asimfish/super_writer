@@ -1,0 +1,130 @@
+{
+  "readings": [
+    {
+      "id": "D6_text_195",
+      "core_relation": "After each revealed response, coverage-error feedback lowers alpha_t after misses and raises it after coverage, adjusting set inclusion. Summing updates expresses average miscoverage error as a bounded endpoint difference divided by gamma T, explaining long-run target convergence without modeling distribution shifts.",
+      "scope": "Positive step size and full/empty quantile extensions bound parameter motion. The guarantee concerns accumulated errors, permits extreme sets, and does not ensure short-window coverage.",
+      "witness": "bounded parameter motion, rather than a correct model",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_199",
+      "core_relation": "Coverage-error feedback adjusts the quantile toward larger sets after misses and smaller sets after coverage, restoring long-run empirical miscoverage to its target under distribution shifts without distributional assumptions.",
+      "scope": "Requires next-update response availability and full/empty sets. Stronger bounds assume stationary hidden Markov initialization and fixed fitted functions. Time-point coverage is not guaranteed; empirical local improvements depend on score design, and step size trades responsiveness for instability.",
+      "witness": "This controls accumulated errors, not coverage at every time point.",
+      "unclear": "Additional regularity conditions are not recoverable."
+    },
+    {
+      "id": "D6_text_215",
+      "core_relation": "Normalized-score adaptation tracked 90% local coverage better than fixed calibration in selected volatility failures; adaptation also avoided fixed-calibration troughs in ordered county predictions. Unnormalized errors caused wider swings, showing that feedback alone did not stabilize coverage.",
+      "scope": "Step size 0.005; rolling 1,250-day histories; 500-day stock and 300-county windows. Four panels selected from twelve stocks illustrate failures, not general superiority. County ordering was constructed by time zone and randomized within zones, not actual reporting.",
+      "witness": "feedback alone therefore did not stabilize local coverage",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_189",
+      "core_relation": "Hierarchical predictions achieved near-target distance loss while remaining mostly leaves, so control did not merely reflect coarse predictions. Segmentation and multilabel losses were near target. Non-monotone losses can break control; a supremum envelope restores it, potentially conservatively.",
+      "scope": "ImageNet mean 0.0499 at alpha 0.05; segmentation/COCO means 0.0987/0.0996 at alpha 0.1 over 1,000 splits each. Results concern average risk, not every split or wholly correct sets. Different calibration sizes prevent isolating dispersion causes.",
+      "witness": "predictions are almost always leaf nodes",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_213",
+      "core_relation": "After observing each response, update alpha_{t+1}=alpha_t+gamma(alpha-err_t). Misses raise the requested quantile, enlarging sets with fixed scoring functions. Summing updates makes average miscoverage minus alpha equal (alpha_1-alpha_{T+1})/(gamma T), yielding a vanishing frequency discrepancy through bounded feedback.",
+      "scope": "Requires gamma>0, alpha_1 in [0,1], and full/empty endpoint conventions, which bound alpha_t without clipping. Applies irrespective of the data sequence; controls accumulated errors, not marginal coverage at every time.",
+      "witness": "The guarantee follows from bounded feedback, not a distributional model",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_187",
+      "core_relation": "Conformal risk control extends binary coverage to error severity by reserving worst-case unseen loss B in calibration, guaranteeing expected test loss at most alpha. Monotonicity connects this conservative choice to a symmetric threshold; boundedness alone cannot ensure control.",
+      "scope": "Requires exchangeable, bounded, non-increasing, right-continuous losses and a safe endpoint. A sharp lower bound alpha-2B/(n+1) additionally requires i.i.d., nonnegative losses without fixed-parameter jumps. Guarantees average over calibration/test randomness; applications show near-target means over 1,000 splits.",
+      "witness": "Boundedness alone is insufficient",
+      "unclear": "Specified shift conditions are not recoverable."
+    },
+    {
+      "id": "D6_text_197",
+      "core_relation": "Choose the infimum lambda satisfying [n R_n(lambda)+B]/(n+1)<=alpha, or a safe maximal parameter. Reserving B dominates the unseen loss; comparison with a symmetric full-sample threshold and monotonicity makes the implementable choice no riskier, enabling expected-risk control without the test outcome.",
+      "scope": "Requires an upper loss bound, non-increasing losses, exchangeability and right-continuity. The guarantee averages over both calibration and test randomness rather than treating the calibration mean as test risk.",
+      "witness": "without requiring the test outcome during calibration",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_209",
+      "core_relation": "Corrected calibration yielded near-target false-negative risk rather than substantial undershooting: segmentation averaged 0.0987 and COCO 0.0996 at alpha 0.1. Non-monotone losses can instead approach B, explaining why monotonicity matters.",
+      "scope": "Across 1,000 splits, standard deviations were 0.0114/0.0052; calibration/evaluation counts were 1,000/781 and 4,000/1,000. Different tasks and calibration sizes prevent isolating dispersion causes. Expected-risk control averages over calibration/test data, not every split or image; findings support the tested monotone losses.",
+      "witness": "rather than constraining every split or image",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_193",
+      "core_relation": "Normalized-score adaptation kept local volatility coverage nearer 90% than fixed calibration, including a crisis undercoverage case. Unnormalized residuals caused much larger swings despite adaptation, showing that feedback did not compensate for this score choice.",
+      "scope": "Both refit GARCH on 1,250 days; step size 0.005 and 500-day windows. Four stocks selected from twelve expose fixed-calibration failures, not average advantage. Larger steps partly mitigate swings but increase parameter volatility. Local improvement is empirical, distinct from long-run frequency control.",
+      "witness": "coverage feedback alone did not compensate for this score choice",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_207",
+      "core_relation": "Worst-case unseen-loss correction extends calibration from binary coverage to expected error severity, guaranteeing loss at most alpha. Monotonicity links selected parameters to control; an upper envelope repairs non-monotone losses but can be conservative.",
+      "scope": "Requires exchangeable, non-increasing, right-continuous losses bounded by B and a safe endpoint. The sharp lower bound alpha-2B/(n+1) additionally requires i.i.d., nonnegative losses without fixed-parameter jumps. Control averages calibration/test randomness, not every fitted set; non-monotone risk can approach B. Four application types use 1,000 splits.",
+      "witness": "rather than certifying risk for every fitted set",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_185",
+      "core_relation": "Reserving worst-case unseen loss in calibration controls expected graded error at alpha, beyond binary coverage. Non-monotone losses can approach B despite a lower target; monotone upper envelopes restore control with possible conservatism.",
+      "scope": "Requires exchangeable, bounded, non-increasing, right-continuous losses with safe terminal losses. A tight 2B/(n+1) undershoot bound additionally requires i.i.d., nonnegative losses without fixed-parameter jumps. Four applications show near-target means over 1,000 splits; shift extensions need specified weighting information.",
+      "witness": "making the loss's dependence on the prediction parameter central",
+      "unclear": "Required shift weighting information is not recoverable."
+    },
+    {
+      "id": "D6_text_181",
+      "core_relation": "Coverage-error feedback updates alpha_t after each response: misses lower it and request wider sets. Quantile extensions bound its movement, so summing updates gives average(err_t)-alpha=(alpha_1-alpha_{T+1})/(gamma T), controlling accumulated errors without estimating distribution shifts.",
+      "scope": "Requires gamma>0, alpha_1 in [0,1], and non-decreasing quantiles extended to full/empty sets. Stronger marginal-error analysis assumes stationary hidden Markov initialization, fixed score/quantile functions, Lipschitz statewise miscoverage, and an interior target-attaining parameter in every state.",
+      "witness": "without estimating the shift",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_183",
+      "core_relation": "Choose the smallest lambda satisfying [n R_n(lambda)+B]/(n+1)<=alpha, falling back to a safe maximum. Reserving B for unseen loss makes this choice at least as large as a full-sample oracle's; non-increasing losses make it no riskier, establishing finite-sample expected-risk control.",
+      "scope": "Requires a common upper loss bound and a maximal parameter whose loss is at most alpha. Exchangeability links oracle test loss to its full average; right-continuity ensures threshold attainment.",
+      "witness": "The correction reserves room for an unseen loss as large as B",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_191",
+      "core_relation": "Coverage-error feedback requests wider sets after misses and narrower sets after coverage, restoring target long-run miscoverage despite distribution shifts. Stock and constructed county experiments show local improvements; score normalization remains consequential.",
+      "scope": "Requires immediate feedback and endpoint extensions; not time-point coverage. Stronger bounds assume stationary hidden Markov initialization and fixed score/quantile functions, relating error to target-attaining parameter changes. Larger steps trade responsiveness for volatility; weaker adaptation approaches fixed calibration.",
+      "witness": "Coverage feedback therefore complements score design rather than replacing it.",
+      "unclear": "Additional regularity conditions are not recoverable."
+    },
+    {
+      "id": "D6_text_203",
+      "core_relation": "Segmentation and COCO achieved near-target average false-negative risk, with greater split variation in segmentation. This supports expected-risk control, not splitwise caps. Non-monotone losses can approach B; an upper envelope restores control with possible conservatism.",
+      "scope": "At alpha 0.1 over 1,000 splits, means/standard deviations were 0.0987/0.0114 and 0.0996/0.0052; calibration/evaluation sizes were 1,000/781 and 4,000/1,000. Different tasks/models prevent attributing COCO's smaller spread solely to calibration size. Monotone examples do not establish control for arbitrary bounded losses.",
+      "witness": "the theorem does not cap risk separately for every split",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_201",
+      "core_relation": "Adaptation improved local coverage beyond shared rolling refitting: normalized volatility coverage stayed near 90%, and county coverage avoided fixed-calibration troughs. Removing volatility normalization worsened swings despite feedback, qualifying the improvement.",
+      "scope": "Both use 1,250-day histories; gamma 0.005; 500-day stock/300-county windows. Four displayed stocks were selected failures among twelve, with favorable adaptation reported for all twelve. Counties were time-zone ordered and randomized within zones, not actual reporting order. Local gains are empirical, not implied by long-run frequency control.",
+      "witness": "not consequences of the unrestricted long-run frequency guarantee",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_211",
+      "core_relation": "Choose the smallest lambda satisfying (n R_n(lambda)+B)/(n+1)<=alpha, or a safe maximum. The B correction upper-bounds the full calibration-plus-test average; comparison with its oracle and non-increasing losses ensures no larger test loss, converting calibration into finite-sample expected-risk control.",
+      "scope": "Requires a common upper bound and maximal-parameter loss at most alpha. Exchangeability makes the held-out test function representative conditional on the unordered collection; right-continuity ensures oracle constraint attainment.",
+      "witness": "this comparison converts an empirical calibration rule into a finite-sample expected-risk guarantee",
+      "unclear": "none"
+    },
+    {
+      "id": "D6_text_205",
+      "core_relation": "Outcome feedback adjusts quantile levels, increasing after misses and decreasing after coverage, guaranteeing target realized miscoverage frequency despite drift. Volatility and county examples show better local coverage than fixed calibration; normalization still matters.",
+      "scope": "Requires each response, fixed positive step size, and full/empty sets; not time-point coverage. Stronger bounds assume stationary hidden Markov structure and fixed score/quantile functions, linking error to environmental dependence and optimal-parameter changes. Removing normalization widens swings despite feedback.",
+      "witness": "Feedback therefore complements score design rather than replacing it",
+      "unclear": "Additional regularity conditions are not recoverable."
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "case": "C01",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "pass",
+      "v1": "pass"
+    },
+    "reason": "B explains the operative relationship: five tokens are drafted sequentially, then all five prefix positions are checked concurrently in one target round, reducing serial expensive rounds. A names the components and measurements but leaves the verification schedule unexplained. Both preserve the supplied correction guarantee, the 4 ms proposal cost, 20 ms target round and three-token average yield, and neither claims measured application latency. A's missing operational explanation weakens clarity without making its claims false."
+  },
+  {
+    "case": "C04",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "fail"
+    },
+    "reason": "The evidence distinguishes seven final-state successes from four uninterrupted all-stage completions, with three successes following failure and reset; baseline counts are five and three respectively. A states these events and counts correctly. B calls seven successes 'uninterrupted three-stage completions' and explicitly uses seven of ten as the trajectory-completion rate, despite acknowledging resets and the four-of-ten tally. This materially misidentifies the measured event, not merely an omitted explanation. Both appropriately withhold significance and deployment conclusions."
+  },
+  {
+    "case": "C02",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "pass"
+    },
+    "reason": "A explains the allocation relationship: physical blocks need not be adjacent, and another is allocated only when the current block is exhausted, enabling incremental growth instead of maximum-length contiguous reservation. B lists blocks, a position map and a pool but does not explain when storage grows or why the scheme changes reservation. Both correctly report batches of 64 versus 40 at a 100 ms cap and disclaim isolated allocator overhead and arbitrary-hardware benefits. B's incomplete operation account is a clarity weakness, not a false claim."
+  },
+  {
+    "case": "C06",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "fail"
+    },
+    "reason": "Optimizer-state storage falls from 8 to 4 GB, but unchanged other allocations of 8 GB make total allocation 16 versus 12 GB. A identifies the halved component and explicitly says total allocation is not halved. B twice attributes a twofold reduction to the complete footprint, contradicting both the evidence and its own totals. A also presents checkpoint losses of 2.3 versus 2.2 as an observed tradeoff without claiming quality equivalence; B's similar loss caveat does not repair its false resource attribution."
+  },
+  {
+    "case": "C11",
+    "reviewer": 1,
+    "winner": "tie",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "pass"
+    },
+    "reason": "Both clearly report 16 versus 24 GB at batch four on one device and checkpoint losses of 2.1 versus 2.2. Each treats the resource saving and loss observations as findings from one run per method, not equivalence or statistical superiority, and limits inference to the evaluated configuration without transfer or production claims. Their different phrasing preserves the same contribution and evidence boundaries. Neither has a decisive clarity or calibration advantage."
+  },
+  {
+    "case": "C07",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "concern"
+    },
+    "reason": "A states the essential condition, initialization in [0,1], and explains why halving preserves that interval. Its example of three becoming 1.5 correctly marks the boundary. B says the update 'keeps every iterate in [0,1]' without the initial-value restriction. The ten steps from 0.8 do not supply that general condition; shrinking toward zero alone does not establish interval membership. This is a consequential missing claim condition, so concern rather than a false attribution or logged-event failure."
+  },
+  {
+    "case": "C05",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "fail",
+      "v1": "pass"
+    },
+    "reason": "The supplied timings support a twofold kernel acceleration, 16 to 8 ms, but only an 8 ms complete-request reduction, 112 to 104 ms. B explicitly distinguishes those boundaries and explains why the component improvement does not double overall speed. A claims 'doubles complete-request inference speed' and 'twofold end-to-end acceleration,' materially attributing the kernel ratio to the request measurement despite quoting the correct times. Its throughput and configuration caveats do not cure that contradiction."
+  },
+  {
+    "case": "C08",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "concern",
+      "v1": "pass"
+    },
+    "reason": "B explicitly conditions the supplied at-least-90% marginal guarantee on exchangeability of calibration and future observations, and distinguishes it from conditional or arbitrary-shift coverage. A states the guarantee without that consequential premise; saying no shift experiment exists does not restore the guarantee's condition. Both correctly treat 89 covered targets in 100 draws as one realized evaluation, not proof or contradiction of the marginal guarantee. A's problem is missing claim scope, not a fabricated empirical result."
+  },
+  {
+    "case": "C10",
+    "reviewer": 1,
+    "winner": "tie",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "pass"
+    },
+    "reason": "The passages are identical. Both accurately describe 89 versus 85 exact matches on the same 100 queries and a slower median query time of 150 versus 120 ms on one device. Each makes the accuracy-time tradeoff explicit and limits the conclusion to those observations, without sampling-uncertainty or deployment guarantees. There is no textual or evidential basis for preferring either."
+  },
+  {
+    "case": "C03",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "pass"
+    },
+    "reason": "A explains the diagnostic control: each question keeps the same answer-bearing document and distractors, distractor order stays fixed, and only answer position changes. This makes clear why the 80%, 52% and 78% contrast concerns placement rather than changed evidence. B accurately reports those scores but omits the controls, leaving the stand-alone diagnostic rationale unexplained. Both avoid identifying an internal neural mechanism or generalizing beyond tested task and length. B's missing explanation weakens clarity without falsely describing the measurements."
+  },
+  {
+    "case": "C09",
+    "reviewer": 1,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "fail"
+    },
+    "reason": "The supplied proof covers exact gradients on convex objectives with the stipulated step-size rule, not the approximate-gradient implementation. A separates that conditional theorem from decreases observed along three toy trajectories. B attributes non-increasing values for approximate updates to 'the supplied proof' and calls theory and trajectories descriptions of 'the same update procedure.' This materially false proof attribution transfers a guarantee the evidence explicitly withholds. Correctly reporting the toy decreases and disclaiming convergence rates does not justify that transfer."
+  },
+  {
+    "case": "C12",
+    "reviewer": 1,
+    "winner": "tie",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "pass"
+    },
+    "reason": "Both explain the logical-key mapping to physical blocks, nonadjacent storage and extension without copying earlier blocks into a contiguous region. Each connects lookup to access despite physical separation and avoids claiming a measured speed advantage. A's library version 2.4 and serial logging are supported metadata, explicitly distinguished from the storage mechanism; B legitimately omits those nonessential details. The operation and evidence calibration remain equally clear, so the metadata difference alone does not justify a preference."
+  },
+  {
+    "case": "C01",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "pass"
+    },
+    "reason": "A explains the operative relationship: drafting is sequential, but the target checks all five prefix positions concurrently in one round, avoiding separate expensive rounds. B says only that the target evaluates the positions, leaving the scheduling contribution unclear. Both preserve the supplied correction rule, 4 ms proposal cost, 20 ms target round, three-token yield, and absence of complete application latency measurements. B's missing operational explanation weakens clarity without making its statements false."
+  },
+  {
+    "case": "C04",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "fail",
+      "v1": "pass"
+    },
+    "reason": "B correctly separates seven final-state successes from four uninterrupted all-stage completions, with baseline counts five and three. A calls seven executions 'uninterrupted three-stage completions' and the seven-of-ten tally a 'trajectory-completion rate,' despite acknowledging three earlier failures and resets. This materially misidentifies the measured event; the reset disclosure and small-sample caveat do not repair it. B makes both events and their comparisons independently interpretable."
+  },
+  {
+    "case": "C02",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "pass",
+      "v1": "pass"
+    },
+    "reason": "B explains nonadjacent logical-to-physical mapping and allocation only when the current block is exhausted, connecting incremental growth to avoiding maximum-length contiguous reservation. A lists blocks, a pool, and a position map but does not explain that allocation relationship. Both correctly report batches of 64 versus 40 at the same 100 ms cap and avoid attributing the result to isolated allocator overhead or arbitrary hardware. A's omission weakens contribution clarity, not factual fidelity."
+  },
+  {
+    "case": "C06",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "fail",
+      "v1": "pass"
+    },
+    "reason": "B correctly locates the halving in optimizer-state storage, 8 to 4 GB, while unchanged other allocations leave total training allocation at 12 rather than 16 GB. A twice attributes a twofold reduction to the complete footprint, contradicting its own totals and the supplied evidence. Both report checkpoint losses of 2.3 versus 2.2 without claiming equivalence. B clearly communicates the resource boundary and observed tradeoff."
+  },
+  {
+    "case": "C11",
+    "reviewer": 2,
+    "winner": "tie",
+    "correct": true,
+    "fidelity": {
+      "v2": "pass",
+      "v1": "pass"
+    },
+    "reason": "Both clearly report 16 versus 24 GB at batch four on one device and checkpoint losses of 2.1 versus 2.2. Each gives the resource and loss findings comparable attention, identifies one run per method, and avoids equivalence, significance, transfer, or production claims. 'Smaller allocation' and 'lowers measured allocation' are legitimate alternative descriptions of the same supplied comparison. Neither has a decisive clarity or calibration advantage."
+  },
+  {
+    "case": "C07",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "concern",
+      "v1": "pass"
+    },
+    "reason": "B states the necessary initialization condition, x_0 in [0,1], and explains preservation through nonnegativity and halving. A says the update 'keeps every iterate in [0,1]' without that consequential condition. Its logged start at 0.8 illustrates only one valid run; the supplied start at three yields 1.5 outside the interval. This is a missing claim condition warranting concern. B makes the invariant's scope explicit rather than relying on the example to supply it."
+  },
+  {
+    "case": "C05",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "fail"
+    },
+    "reason": "A distinguishes the kernel's 16-to-8 ms acceleration from the complete request's 112-to-104 ms change, correctly describing an 8 ms end-to-end reduction. B claims 'doubles complete-request inference speed' and 'twofold end-to-end acceleration,' falsely transferring the component result to the request boundary. Reporting both timing values does not resolve that contradiction. Both appropriately avoid concurrent-user throughput claims, but only A calibrates the main result to the measured boundary."
+  },
+  {
+    "case": "C08",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v1": "pass",
+      "v2": "concern"
+    },
+    "reason": "A explicitly conditions the supplied at-least-90% marginal guarantee on exchangeability of calibration and future observations. B states that guarantee without its consequential premise; saying shift behavior is empirically unmeasured does not establish the guarantee's theoretical scope. Both correctly treat 89 covered targets in 100 draws as one realized evaluation, not proof or contradiction, and avoid conditional-coverage claims. B's missing condition warrants concern; A makes the contribution and its limits stand alone."
+  },
+  {
+    "case": "C10",
+    "reviewer": 2,
+    "winner": "tie",
+    "correct": true,
+    "fidelity": {
+      "v2": "pass",
+      "v1": "pass"
+    },
+    "reason": "The paragraphs are identical. Both correctly pair 89 versus 85 exact matches on the same 100-query dataset with slower median query time, 150 versus 120 ms on one device. Each explicitly describes the observed accuracy-time tradeoff and avoids sampling-uncertainty or production guarantees. There is no textual difference supporting a preference."
+  },
+  {
+    "case": "C03",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "pass",
+      "v1": "pass"
+    },
+    "reason": "B explains that each question retains the same answer document and distractors, with distractor order fixed and only answer position changing. This establishes why the 80%, 52%, and 78% contrast diagnoses placement rather than changed evidence content or distractor selection. A accurately reports the scores and scope but leaves that experimental relationship unexplained. Both refrain from identifying an internal neural mechanism. A's omission weakens standalone diagnostic clarity without falsifying its descriptive results."
+  },
+  {
+    "case": "C09",
+    "reviewer": 2,
+    "winner": "v1",
+    "correct": true,
+    "fidelity": {
+      "v2": "fail",
+      "v1": "pass"
+    },
+    "reason": "The supplied proof covers exact-gradient updates on convex objectives under the stipulated step-size rule, not the approximate-gradient implementation. A attributes non-increasing values to that implementation 'under the supplied proof' and calls theory and trajectories descriptions of 'the same update procedure.' That materially misattributes the proof. B explicitly separates the updates and limits the three toy problems' decreases to recorded trajectories, without converting observations into an approximate-gradient guarantee."
+  },
+  {
+    "case": "C12",
+    "reviewer": 2,
+    "winner": "tie",
+    "correct": true,
+    "fidelity": {
+      "v2": "pass",
+      "v1": "pass"
+    },
+    "reason": "Both explain logical-key mapping to nonadjacent physical blocks, mapped access, and sequence extension without copying earlier blocks into contiguous storage. Both distinguish this operation from an unmeasured speed advantage. B includes the supported library version 2.4 and serial logging utility while explicitly separating them from the storage mechanism; A omits those nonessential specifics. That legitimate presentation difference does not impair either paragraph's standalone operation clarity or evidence calibration."
+  }
+]

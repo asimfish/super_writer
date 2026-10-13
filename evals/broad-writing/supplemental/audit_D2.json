@@ -1,0 +1,364 @@
+{
+  "audits": [
+    {
+      "id": "D2_text_069",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Table 2 supports the seven-guess greedy comparison (0.75/3.4x versus 0.82/1.7x) and the sampling-dependent T5-small gains. Sections 3.3-3.4 support the cost tradeoff and rejection waste; Section 4.2 measures acceptance rather than walltime for GPT-like and LaMDA models. The prose explicitly limits latency evidence to implemented T5 experiments, and the reading retains the tradeoff, hardware, baseline, and wider-survey boundary."
+    },
+    {
+      "id": "D2_text_068",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Section 4.1/Table 2 confirms the same-target, seven-proposal greedy comparison and T5-small's translation and summarization sampling contrasts; its summarization runs both use five proposals. Sections 3.3-3.4 support the spare-compute requirement and distinction between latency and arithmetic. The prose's 'cost-acceptance balance rather than agreement alone' is justified, and the reader accurately recovers that relation and the stated experimental constraints."
+    },
+    {
+      "id": "D2_text_058",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Section 4.1 gives the 77M/800M draft sizes, batch-one single-TPU-v4 setup, and Table 2 values for greedy translation and T5-small's sampling contrasts. Section 3.3 supports the qualified 'consistent with proposal cost offsetting' interpretation; Section 3.4 explains wasted arithmetic. The reading preserves the fixed translation draft length, task-specific gains, and concurrency boundary without extending the results to other models."
+    },
+    {
+      "id": "D2_text_047",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Sections 3.1-3.3 support deferred output normalization, query-block scheduling, and forward warp-owned rows with exact attention and linear auxiliary memory. Section 4 and Table 1 support the kernel ranges, 225 TFLOPs/s training peak, and larger 8k gains. Sections 3.2 and 4.2 separately locate decoding's KV-cache bottleneck and sevenfold FasterTransformer comparison. The reading correctly preserves both work-partitioning mechanisms and their distinct performance scopes."
+    },
+    {
+      "id": "D2_text_057",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Table 2 supports standard-sampling translation's 0.62/2.6x versus 0.71/1.4x with seven versus three guesses, plus the reported greedy and summarization gains. Section 4.1 establishes the target and hardware; Sections 3.3-3.4 support runtime cost and wasted computation. The prose explicitly calls these complete configurations rather than isolated proposal-size effects. The reading recovers that qualification and the useful-tokens-per-time relation."
+    },
+    {
+      "id": "D2_text_055",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.2-2.3 and Algorithm 1 support sampling-adjusted distributions, shared accepted mass, rejection correction, sequential drafts, and gamma+1 parallel target prefixes. Section 3.1 gives the i.i.d. expected-yield formula; Section 3.3/Theorem 3.8 supplies relative draft cost, unchanged concurrent latency, and long-generation qualifications. The prose separates exactness from timing assumptions, and the reader recovers that distinction and all stated formula conditions."
+    },
+    {
+      "id": "D2_text_056",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Section 2.3/Algorithm 1 confirms ratio acceptance, normalized positive-residual correction, retention only until first rejection, and an extra target token after full acceptance. Sections 3.1 and 3.3 support the yield and speedup formulas with i.i.d. acceptance, relative draft runtime, sufficiently long generations, and no extra concurrent target latency. The reading accurately reconstructs both the probability correction and these explicitly stated timing boundaries."
+    },
+    {
+      "id": "D2_text_067",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Section 4.1/Table 2 supports the fixed-seven-proposal greedy contrast, common target and hardware, existing checkpoints, and T5-small's sampling-dependent gains. Sections 3.3-3.4 establish the cost tradeoff and arithmetic/concurrency limits. Section 4.2 supports the final acceptance-only boundary for GPT-like and LaMDA. The reader preserves the central cost-agreement relation and correctly treats those models' latency as unmeasured rather than importing T5 speedups."
+    },
+    {
+      "id": "D2_text_045",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Table 1 verifies the cited 2k/8k training values; Section 4.3 states the unhalved causal-attention accounting. Section 4.1/Figure 4 supports separate fixed-16k-token kernel tests and memory feasibility. The prose and reading distinguish context-dependent training gains from storage benefits. Figure 4's ordered PyTorch series has five numeric entries then OOM for six lengths through 16k; this supports the endpoint, although visual plot alignment cannot be independently checked from the locked text."
+    },
+    {
+      "id": "D2_text_064",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Sections 3.1-3.3 support reducing normalization and forward communication while preserving exact attention and linear additional storage. Sections 4.1-4.3 and Table 1 support the A100 benchmark controls, kernel range, eight-GPU training peak and context dependence, and multi-query decoding comparison. The reader accurately recovers the causal execution changes and separates attention-kernel gains, whole-model training, and cache-loading-driven decoding."
+    },
+    {
+      "id": "D2_text_041",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Section 3.1/Algorithm 1 and Sections 3.2-3.3 support deferred normalization and independent query-block/warp assignments; the correctness paragraph retains quadratic FLOPs and linear auxiliary storage. Section 4 reports the 230 TFLOPs/s peak and kernel speedup range, while Section 4.1 and Table 1 establish benchmark controls and smaller, context-dependent training gains. The reading preserves this execution mechanism and the kernel-versus-training distinction."
+    },
+    {
+      "id": "D2_text_059",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Section 4/Table 1 supports the distinct kernel and training speedups and every cited training value. Section 4.3 explains the conventional 72% model-utilization accounting, supporting both prose and reader's warning against interpreting it as executed arithmetic. Figure 4's ordered PyTorch entries end in OOM at the sixth listed length, 16k; the locked text supports that endpoint, but the graphic's spatial alignment cannot be visually verified."
+    },
+    {
+      "id": "D2_text_054",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.1-2.3 support parallel prefix verification and distribution-preserving acceptance/correction for any draft. Sections 3.1 and 3.3 connect agreement, cost, and proposal count under the stated analysis assumptions; Section 3.4 supports extra arithmetic. Section 4.1/Table 2 verifies the T5X comparison, model sizes, hardware, and task/sampling gains. The reader retains the exactness-versus-speed distinction and the limited empirical setup."
+    },
+    {
+      "id": "D2_text_049",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.2-2.3/Algorithm 1 support sampling-adjusted conditional distributions, ratio acceptance, residual replacement, discarding continuations after rejection, and one to gamma+1 outputs. Section 3.1 supplies the equivalent geometric-sum yield; Section 3.3 supplies the cost denominator and timing restrictions. The prose explicitly conditions predicted speedup on long generations and one-step concurrent verification, and the reader reproduces those boundaries without converting fewer serial calls into arithmetic savings."
+    },
+    {
+      "id": "D2_text_043",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Algorithm 1 steps 9-13 support running maxima, rescaled exponential/value sums, and final normalization. Sections 3.2-3.3 support query-tile parallelism and no forward output reduction between warps; Algorithm 2 step 11 supports log-sum-exp-based probability reconstruction. Section 3.3's block-size discussion confirms register spilling and shared-memory limits. The reader recovers the exact execution mechanism and these explicitly stated workload and tuning boundaries."
+    },
+    {
+      "id": "D2_text_052",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.2-2.3/Algorithm 1 support shared-mass acceptance, positive-residual correction, first-rejection truncation, and guaranteed progress. Section 3.1 gives the stated i.i.d. yield; Section 3.3/Theorem 3.8 supplies the walltime denominator and long-output/concurrent-latency qualifications. The prose defines gamma and c and distinguishes the correction mechanism from the timing model. The reader accurately retains those relations and conditions."
+    },
+    {
+      "id": "D2_text_050",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Algorithm 1 confirms sequential gamma-token drafting, parallel target evaluation, ratio acceptance, rejection correction, and a target token after full acceptance. Section 2.3 guarantees the target distribution for inaccurate drafts; Sections 3.1 and 3.3 support the geometric-sum yield and runtime denominator. The prose states i.i.d. acceptance, long generations, and unchanged concurrent target latency. The reading recovers the mechanism and these conditions without unsupported inference."
+    },
+    {
+      "id": "D2_text_063",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Sections 3.1-3.3 establish delayed normalization, independent query-row scheduling, exactness, and linear auxiliary memory. Section 4.1 gives the A100 sequence/token controls; Table 1 supports smaller, context-dependent eight-GPU training gains and the 225 TFLOPs/s peak. Sections 3.2 and 4.2 establish the separate decoding cache-loading bottleneck and FasterTransformer kernel comparison. The reader faithfully separates those mechanisms and measurement scopes."
+    },
+    {
+      "id": "D2_text_039",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Section 2.2 makes softmax rowwise; Sections 3.2-3.3 support replacing split-K partial-output communication with independent query rows and row-block scheduling. Algorithm 1 supports maximum-based rescaling and final division; Section 3.1.2/Algorithm 2 supports saved log-sum-exp and backward recomputation. The prose's communication claim concerns forward outputs, and the reading recovers that central relation and its small-batch/head and exactness/storage boundaries."
+    },
+    {
+      "id": "D2_text_062",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.1-2.3 and 3.6 support parallel verification with exact correction for any draft; the concluding limitation paragraph confirms no retraining or architecture change and spare-compute requirements. Sections 3.1-3.4 support the qualified timing analysis and possible arithmetic increase. Section 4.1/Table 2 verifies the T5X setup and speedups. The reading faithfully reconstructs agreement versus cost and the theoretical and empirical scope."
+    },
+    {
+      "id": "D2_text_046",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Table 1 verifies all four before/after training pairs; Section 4.3 establishes unhalved causal-attention FLOPs. Section 4.1 establishes fixed total tokens and separate kernel timing. The prose and reader correctly distinguish larger 8k training gains from kernel acceleration. Figure 4 lists five PyTorch numeric entries followed by OOM over six lengths ending at 16k, supporting the stated memory endpoint; visual plot alignment remains unavailable in the locked text."
+    },
+    {
+      "id": "D2_text_044",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Algorithm 1 steps 9-13 support rescaling both accumulators when maxima change and normalizing only the final output. Algorithm 2 step 11 supports probability reconstruction using saved log-sum-exp; Sections 3.2-3.3 support row-block and warp-row parallelism plus block-size traffic/resource tradeoffs. The prose restricts the eliminated reduction to the forward pass. The reader accurately recovers the mechanism and the small-workload and memory/register constraints."
+    },
+    {
+      "id": "D2_text_070",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Section 4.1/Table 2 confirms the T5X baseline, batch-one TPU-v4 setup, fixed-seven greedy draft comparison, and sampling-dependent T5-small gains. Sections 3.3-3.4 support the proposal-cost interpretation and discarded target work. Section 4.2 measures GPT-like/LaMDA acceptance, not latency. The prose states that evidential boundary directly, and the reader recovers it together with the central acceptance-versus-speed tradeoff."
+    },
+    {
+      "id": "D2_text_042",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Section 3.1/Algorithm 1 supports deferred output normalization and unchanged quadratic attention with linear auxiliary storage; Sections 3.2-3.3 support independent query blocks and forward warp outputs. Section 4 reports 1.7-3.0x kernel gains and 230 TFLOPs/s; Section 4.1 and Table 1 provide controls and smaller context-dependent training gains. The reader accurately recovers both the hardware-execution relation and the nonuniform transfer to whole-model performance."
+    },
+    {
+      "id": "D2_text_071",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Table 1 verifies the throughput values; Section 4.3's linear parameter and quadratic attention terms support the qualified growing-attention-share interpretation. Sections 4.1/4.3 use different causal FLOP conventions, and Section 2.3 already gives FlashAttention linear storage. Prose and reading preserve these distinctions. Figure 4's ordered PyTorch series supports OOM at the final 16k length, but graphic coordinates cannot be visually checked; this is not an established numerical error."
+    },
+    {
+      "id": "D2_text_053",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.1-2.3/Algorithm 1 support sequential drafts, concurrent prefix checks, first-rejection correction, and an extra token after full acceptance with the target distribution unchanged. Sections 3.1-3.4 support the stated timing assumptions and increased-arithmetic/concurrency tradeoff. Section 4.1/Table 2 verifies the model sizes, hardware, and task/sampling gains. The reader preserves exactness independently of draft agreement and the cost-qualified latency evidence."
+    },
+    {
+      "id": "D2_text_040",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Section 2.2 makes softmax rowwise; Sections 3.2-3.3 support independent query-row work, improved occupancy, and removal of forward partial-output reductions. Algorithm 1 supports maximum rescaling and final normalization; Algorithm 2 reconstructs probabilities from log-sum-exp. Section 3.3 explicitly retains backward synchronization. Both prose and reading preserve the forward/backward distinction and the small-batch/head scope."
+    },
+    {
+      "id": "D2_text_048",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Sections 3.1-3.3 support reduced scalar normalization, independently assigned forward outputs, exactness, and linear auxiliary storage. Section 4 gives the kernel ranges; Table 1 verifies 170->220 at 8k versus 189->196 at 2k on eight A100s. Sections 3.2/4.2 support decoding's cache-loading mechanism and sevenfold FasterTransformer kernel comparison. The reader correctly separates kernel, whole-model, and decoding scopes."
+    },
+    {
+      "id": "D2_text_051",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.2-2.3 support adjusted distributions and the accepted-plus-rejection-weighted residual mass equaling p for any draft. Algorithm 1 supports accepted-prefix truncation, correction, and the extra target token. Section 3.1 gives the i.i.d. expected yield; Section 3.4 distinguishes serial-call reduction from arithmetic savings. This paragraph explains exactness and yield rather than a complete walltime model, and the reader accurately recovers that legitimate function and its boundaries."
+    },
+    {
+      "id": "D2_text_060",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Section 4/Table 1 supports the cited training pairs and smaller training-versus-kernel speedups; Section 4.3 explains the 72% conventional model-FLOP accounting. Prose and reading correctly distinguish throughput from directly executed arithmetic and memory feasibility from speed. Figure 4's ordered PyTorch group ends in OOM for the sixth length, 16k, while tiled series continue; the locked text supports the endpoint, but visual plot positioning cannot be verified."
+    },
+    {
+      "id": "D2_text_038",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Algorithm 1 steps 9-13 verify exp(old maximum minus new maximum) rescaling, accumulated numerator/sum, and final division. Algorithm 2 steps 10-11 verify score recomputation and probabilities reconstructed using saved log-sum-exp; the Section 3.1 correctness paragraph specifies quadratic FLOPs and linear auxiliary memory. The prose explains reduced repeated normalization without claiming reduced asymptotic arithmetic, and the reader faithfully recovers both mechanism and storage boundary."
+    },
+    {
+      "id": "D2_text_065",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.1-2.3 and 3.6 support parallel verification, probability-ratio acceptance, and residual correction preserving the target distribution for any proposal model. Sections 3.1/3.3 support the i.i.d., long-generation, and unchanged-concurrent-latency assumptions. Section 4.1/Table 2 verifies T5 model sizes, hardware, task/sampling gains, and larger drafts' lower speedups. The reader accurately retains exactness, cost-versus-agreement, and the stated analysis and experiment scope."
+    },
+    {
+      "id": "D2_text_072",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Table 1 verifies the training values and 225/72% peak. Section 4.3's FLOP formula supports the qualified attention-share interpretation; Sections 4.1/4.3 confirm different causal accounting. The prose and reader distinguish context-dependent training gains from memory feasibility. Figure 4's six-length axis and five numeric PyTorch entries followed by OOM support the 16k endpoint, although its visual plot coordinates cannot be independently verified from the locked text."
+    },
+    {
+      "id": "D2_text_066",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Algorithm 1 and Sections 2.3/3.6 support distribution-preserving verification for any draft; Sections 3.3-3.4 support proposal latency and rejected-work costs, not universal arithmetic savings. Sections 3.1/3.3 supply the explicitly stated timing assumptions. Section 4.1/Table 2 verifies the existing-checkpoint T5 setup and task/sampling gains. The reader accurately recovers the acceptance-cost tradeoff and confines the measured speedups to that experimental setup."
+    },
+    {
+      "id": "D2_text_037",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P03 Algorithm 1 steps 9-13 supports the running statistics, exp(old maximum minus new maximum) rescaling, and final output normalization. Section 3.1.2/Algorithm 2 supports saved row log-sum-exp and backward probability recomputation; the correctness paragraph preserves quadratic arithmetic and linear additional storage. The prose's 'without approximating attention' and the reading's recovered full-row softmax relation are directly supported, without implying an asymptotic compute reduction."
+    },
+    {
+      "id": "D2_text_061",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P04 Sections 2.1-2.3/3.6 support parallel draft verification and exact shared-mass/residual correction for any draft without target retraining. Sections 3.1-3.4 support the stated timing assumptions and concurrency/arithmetic distinction. Section 4.1/Table 2 verifies the T5X baseline, model sizes, hardware, speedups, and acceptance-cost ordering. The reading faithfully reconstructs that ordering and the theoretical and empirical boundaries rather than treating agreement alone as sufficient."
+    }
+  ]
+}

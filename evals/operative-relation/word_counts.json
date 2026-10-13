@@ -1,0 +1,386 @@
+[
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 198,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 147,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 173,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 73,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 200,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 141,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 181,
+    "within_budget": false
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 96,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 185,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 138,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 175,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 91,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 197,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 149,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 168,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 95,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 200,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 150,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 164,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 104,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 196,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 149,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 169,
+    "within_budget": true
+  },
+  {
+    "paper": "N1",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 101,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 188,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 143,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "results",
+    "words": 155,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 89,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 189,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 148,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 162,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 99,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 194,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 148,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 159,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 1,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 93,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "abstract",
+    "words": 185,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "methods",
+    "words": 150,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "results",
+    "words": 166,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "initial",
+    "unit": "notes",
+    "words": 74,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "abstract",
+    "words": 182,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "methods",
+    "words": 155,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "results",
+    "words": 175,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "baseline",
+    "unit": "notes",
+    "words": 93,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "abstract",
+    "words": 194,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "methods",
+    "words": 150,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "results",
+    "words": 175,
+    "within_budget": true
+  },
+  {
+    "paper": "N2",
+    "sample": 2,
+    "condition": "candidate",
+    "unit": "notes",
+    "words": 101,
+    "within_budget": true
+  }
+]

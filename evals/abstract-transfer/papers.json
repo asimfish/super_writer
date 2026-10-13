@@ -1,0 +1,52 @@
+[
+  {
+    "id": "A01",
+    "group": "G1",
+    "domain": "robot_planning",
+    "title": "VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models",
+    "metadata": "https://proceedings.mlr.press/v229/huang23b.html",
+    "pdf": "https://proceedings.mlr.press/v229/huang23b/huang23b.pdf"
+  },
+  {
+    "id": "A02",
+    "group": "G1",
+    "domain": "optimization",
+    "title": "Sharpness-Aware Minimization for Efficiently Improving Generalization",
+    "metadata": "https://openreview.net/forum?id=6Tm1mposlrM",
+    "author_metadata": "https://research.google/pubs/sharpness-aware-minimization-for-efficiently-improving-generalization/",
+    "pdf": "https://openreview.net/pdf?id=6Tm1mposlrM",
+    "fallback": "https://arxiv.org/pdf/2010.01412v1"
+  },
+  {
+    "id": "A03",
+    "group": "G2",
+    "domain": "image_personalization",
+    "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+    "metadata": "https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2023/papers/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.pdf"
+  },
+  {
+    "id": "A04",
+    "group": "G2",
+    "domain": "language_tool_learning",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "metadata": "https://proceedings.neurips.cc/paper/2023/hash/d842425e4bf79ba039352da0f658a906-Abstract-Conference.html",
+    "pdf": "https://proceedings.neurips.cc/paper_files/paper/2023/file/d842425e4bf79ba039352da0f658a906-Paper-Conference.pdf"
+  },
+  {
+    "id": "A05",
+    "group": "G3",
+    "domain": "inference_systems",
+    "title": "FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU",
+    "metadata": "https://proceedings.mlr.press/v202/sheng23a.html",
+    "pdf": "https://proceedings.mlr.press/v202/sheng23a/sheng23a.pdf"
+  },
+  {
+    "id": "A06",
+    "group": "G3",
+    "domain": "continuous_models",
+    "title": "Neural Ordinary Differential Equations",
+    "metadata": "https://proceedings.neurips.cc/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html",
+    "pdf": "https://proceedings.neurips.cc/paper/2018/file/69386f6bb1dfed68692a24c8686939b9-Paper.pdf"
+  }
+]

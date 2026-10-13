@@ -1,0 +1,130 @@
+{
+  "readings": [
+    {
+      "id": "D2_text_065",
+      "core_relation": "Cheap drafts and parallel verification reduce serial generation latency; acceptance and residual correction preserve the target distribution without retraining. Greater agreement helps only when it offsets drafting cost.",
+      "scope": "Any proposal model. Speed analysis assumes i.i.d. acceptance, long generations, and spare compute preserving target-step latency. Batch-one T5-XXL/T5-small tests on one TPU-v4 yield translation speedups of 2.6x sampling and 3.4x greedy; summarization yields 2.3x and 3.1x. Larger drafts accelerate less.",
+      "witness": "agreement with the target must be weighed against the time spent drafting",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_051",
+      "core_relation": "Accepting drafts with min(1, p(x)/q(x)) supplies shared probability mass; rejected draws use the normalized positive residual, restoring exactly p. Parallel prefix checks retain accepted proposals, then correct the first rejection or add a target token after full acceptance.",
+      "scope": "p and q incorporate the chosen sampling rule at a fixed prefix. Exactness holds regardless of draft quality. Each step emits one to gamma+1 tokens; the expected-yield formula assumes i.i.d. acceptance and concerns serial calls, not computational savings.",
+      "witness": "measuring reduced serial target calls rather than reduced computation",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_049",
+      "core_relation": "Probability-ratio acceptance and positive-residual replacement recover the exact target distribution. After rejection, later drafts are discarded because their conditioning becomes invalid; full acceptance adds a target token, allowing one to gamma+1 tokens per iteration.",
+      "scope": "Target and draft distributions share the prefix and sampling rule. Expected yield is 1+alpha+...+alpha^gamma under i.i.d. acceptance. Predicted speedup divides yield by 1+gamma*c, assuming long generations, proposal latency ratio c, and concurrent verification costing one target step.",
+      "witness": "later drafts are discarded because their conditioning prefix no longer applies",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_067",
+      "core_relation": "T5-large's higher acceptance, 0.82 versus T5-small's 0.75, yields lower speedup, 1.7x versus 3.4x: drafting cost matters alongside agreement. Standard sampling also lowers translation speedup to 2.6x and summarization to 2.3x from greedy's 3.1x.",
+      "scope": "Greedy translation uses seven proposals, the same 11B T5-XXL target, existing checkpoints, batch one, and one TPU-v4. Gains concern walltime, require parallel capacity, and can waste arithmetic.",
+      "witness": "Greater draft agreement does not necessarily produce faster generation.",
+      "unclear": "GPT-like and LaMDA latency gains: not recoverable; only acceptance was measured."
+    },
+    {
+      "id": "D2_text_041",
+      "core_relation": "FlashAttention-2 improves exact attention execution by deferring normalization and repartitioning query tiles across blocks and rows across warps, reducing non-matrix arithmetic and forward reductions. This improves GPU use beyond reduced memory traffic.",
+      "scope": "Arithmetic remains quadratic and auxiliary storage linear. A100 80GB benchmarks, 512-16k sequences and 16k tokens per batch, show 1.7-3.0x speedup over FlashAttention. Complete 1.3B/2.7B GPT-style training on eight A100s gains up to 1.3x, more at 8k than 2k.",
+      "witness": "workload-dependent training benefits rather than a uniform application-level speedup",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_045",
+      "core_relation": "For the 1.3B model, throughput rises from 189 to 196 at 2k context versus 170 to 220 at 8k; the 2.7B model reaches 225 versus 175 at 8k. Training gains approach 1.3x at longer contexts, not uniformly.",
+      "scope": "Units are TFLOPs/s per GPU on eight A100 80GB GPUs; model accounting does not halve causal-attention FLOPs. Separate 16k-total-token attention tests complete 16k sequences where PyTorch exhausts memory, demonstrating storage benefits.",
+      "witness": "kernel acceleration does not transfer uniformly to full-model throughput",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_053",
+      "core_relation": "Sequential cheap drafts followed by parallel target verification reduce serial calls. Acceptance and residual correction preserve the target output distribution for any draft; acceleration depends on agreement and drafting cost, with larger drafts accelerating less in these tests.",
+      "scope": "Analysis assumes i.i.d. acceptance and unchanged concurrent target latency. Batch-one 77M/11B T5 tests on one TPU-v4 yield translation speedups of 3.4x greedy and 2.6x sampling; summarization yields 3.1x and 2.3x. Gains require spare capacity and increased arithmetic.",
+      "witness": "trade increased arithmetic for fewer serial target steps",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_039",
+      "core_relation": "Giving each warp complete query rows eliminates partial-output exchanges and inter-warp reductions because softmax operates independently per row. Query-row blocks also run independently, increasing occupancy. Running maxima and exponential sums rescale unnormalized outputs, with division deferred until the final key tile.",
+      "scope": "The operation retains exact softmax attention; block parallelism helps when batches or head counts are small. Saved rowwise log-sum-exp enables backward recomputation without retaining a quadratic probability matrix.",
+      "witness": "without an inter-warp reduction",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_043",
+      "core_relation": "Running maxima, exponential sums, and weighted value sums maintain unnormalized outputs across tiles. Rescaling when the maximum rises and dividing only at the end recover softmax while reducing non-matrix arithmetic. Query tiles and distinct warp-owned rows expose parallelism without forward inter-warp reductions.",
+      "scope": "Block parallelism helps with small batch or head counts. Backward probabilities are reconstructed from saved row-wise log-sum-exp. Larger tiles reduce transfers, but excessive sizes cause register spilling, slowdown, or shared-memory overflow.",
+      "witness": "without repeated normalization, reducing relatively expensive non-matrix arithmetic",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_047",
+      "core_relation": "FlashAttention-2 defers normalization and partitions query blocks and rows to reduce expensive arithmetic and cross-warp reductions, preserving exact attention with linear auxiliary memory. Multi-query decoding instead partitions KV-cache reads, reflecting a different bottleneck.",
+      "scope": "Tested A100 kernels are 1.7-3.0x faster than FlashAttention and 3-10x than PyTorch. Eight-A100 1.3B/2.7B GPT-style training reaches 225 TFLOPs/s per GPU, with larger gains at 8k than 2k. Multi-query attention kernels gain up to 7x over FasterTransformer on A100.",
+      "witness": "The two workloads therefore require different partitions of work",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_059",
+      "core_relation": "The 1.3B model improves from 189 to 196 at 2k versus 170 to 220 at 8k; the 2.7B model reaches 225 versus 175 at 8k. Whole-model gains peak near 1.3x, below separate 1.7-3.0x kernel gains.",
+      "scope": "Training units are TFLOPs/s per GPU on eight A100 80GB GPUs. PyTorch exhausts memory at 16k while tiled attention runs. Peak 72% model utilization uses unhalved causal-attention FLOPs, not executed-arithmetic counts.",
+      "witness": "rather than as a direct count of executed arithmetic",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_055",
+      "core_relation": "Ratio-based acceptance supplies shared mass; positive-residual sampling after rejection restores exactly p for any draft. Sequential drafts are checked through gamma+1 prefixes in parallel; retained proposals precede a correction token or an extra target token.",
+      "scope": "Distributions reflect the chosen sampling rule. Exactness does not depend on speed assumptions. Expected progress is (1-alpha^(gamma+1))/(1-alpha) under i.i.d. acceptance; division by 1+gamma*c predicts speedup for long generations when concurrent verification adds no latency, with c the draft-to-target runtime ratio.",
+      "witness": "independently of the assumptions used to predict speed",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_037",
+      "core_relation": "Running maxima, exponential sums, and weighted value accumulators defer normalization across key/value blocks. Multiplication by exp(old maximum - new maximum) aligns earlier contributions when the maximum rises; final division recovers exact softmax while reducing non-matrix operations.",
+      "scope": "Complete score and probability matrices are not materialized. Saved row logsumexp supports backward probability recomputation. Arithmetic remains quadratic in sequence length, while additional storage is linear.",
+      "witness": "normalization is deferred without approximating attention",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_061",
+      "core_relation": "Parallel verification of cheap drafts, probability-mass acceptance, and residual correction preserve exact target sampling without retraining. Latency improves through concurrency, not fewer arithmetic operations; greater draft agreement must offset proposal cost.",
+      "scope": "Any draft is valid. Speed analysis assumes i.i.d. acceptance, long generations, and verification costing one target step. Batch-one 77M/11B T5 tests on one TPU-v4 versus T5X yield translation/summarization speedups of 2.6x/2.3x sampling and 3.4x/3.1x greedy. Spare compute is required.",
+      "witness": "Larger draft models achieve higher acceptance but lower walltime gains",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_069",
+      "core_relation": "With seven greedy proposals, T5-large increases acceptance from 0.75 to 0.82 but reduces speedup from T5-small's 3.4x to 1.7x, so agreement alone cannot offset cost. Standard sampling lowers T5-small translation acceptance to 0.62 and speedup to 2.6x; summarization drops from 3.1x to 2.3x.",
+      "scope": "T5-XXL 11B target, batch one, single TPU-v4, T5X baseline. Rejected continuations can increase arithmetic; faster completion requires spare compute.",
+      "witness": "specific to the implemented T5 experiments",
+      "unclear": "GPT-like and LaMDA walltime gains: not recoverable; tests measure acceptance only."
+    },
+    {
+      "id": "D2_text_063",
+      "core_relation": "FlashAttention-2 assigns query rows to warps and blocks and delays normalization, reducing reductions and non-matrix arithmetic while preserving exact attention and linear auxiliary memory. Multi-query decoding distributes KV-cache loads, addressing a different bottleneck.",
+      "scope": "A100 80GB attention tests, 512-16k sequences with 16k total tokens, gain 1.7-3.0x over FlashAttention. Eight-A100 1.3B/2.7B GPT-style training at 2k/8k gains up to 1.3x, showing smaller, context-dependent benefits. Multi-query kernels gain up to 7x over FasterTransformer on A100.",
+      "witness": "kernel acceleration delivers smaller, context-dependent whole-model gains",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_071",
+      "core_relation": "FlashAttention-2 raises 1.3B-model throughput from 189 to 196 at 2k but 170 to 220 at 8k; 2.7B reaches 225 versus 175 at 8k. Larger gains are consistent with attention mattering more at longer contexts.",
+      "scope": "TFLOPs/s per GPU, eight A100 80GB SXM4 GPUs. Training counts full causal attention; kernels halve it, so utilization is not interchangeable. PyTorch fails at 16k while FlashAttention-2 runs, retaining tiled storage benefits rather than improving memory over FlashAttention.",
+      "witness": "not a new memory advantage over FlashAttention",
+      "unclear": "none"
+    },
+    {
+      "id": "D2_text_057",
+      "core_relation": "Under standard sampling, T5-small gains 2.6x with 0.62 acceptance, versus T5-large's 1.4x with 0.71. Acceptance alone does not predict latency; seven versus three guesses mean complete configurations are compared, not isolated proposal size.",
+      "scope": "English-German translation, 11B T5-XXL, batch one, single TPU-v4, ordinary decoding baseline. T5-small reaches 3.4x and 0.75 acceptance with greedy decoding; summarization gains 2.3x sampling and 3.1x greedy. Rejection wastes arithmetic, and acceleration requires spare parallel capacity.",
+      "witness": "compare complete decoding configurations rather than isolate proposal size",
+      "unclear": "none"
+    }
+  ]
+}

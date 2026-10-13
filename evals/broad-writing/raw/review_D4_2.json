@@ -1,0 +1,346 @@
+{
+  "reviews": [
+    {
+      "id": "P08_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both abstracts connect offline reflection-token supervision to evidence-aware continuation selection, then distinguish attribution from correctness. P08 Sections 3.1 and 3.3 describe this mechanism; Table 2 verifies 48.7/54.9 PopQA and the 13B ASQA precision/recall comparison. Section 5.2 supports the precision-MAUVE tradeoff. A's named baseline and B's smoother closing give no meaningful overall advantage."
+    },
+    {
+      "id": "P07_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'Moving the answer paragraph tests positional sensitivity' and B's query-contextualization sentence explain complementary controls. P07 Sections 2.1 and 3.1-3.2 support fixed-answer reordering, UUID lookup, and output-inclusion scoring; Section 4.2 supports B's intervention. Both retain the methodological rationale; their different coverage does not establish a decisive advantage."
+    },
+    {
+      "id": "P08_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B explicitly notes that the ablation changes 'passage handling as well as reflection supervision'; A likewise limits inference to the 'combined training configuration.' P08 Table 2 verifies ASQA precision 66.9/5.0 and str-em 30.0/31.0; Section 5.2 locates the 50k-training/150-question ablation and both customization tradeoffs. B's minor clarity advantage does not break the near tie."
+    },
+    {
+      "id": "P08_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'citation gains can coexist with losses' and B's 'stronger precision does not establish broader evidence coverage' preserve the result's scope. P08 Table 2 supports the same-data PopQA/ASQA contrasts and 13B versus Ret-ChatGPT comparisons; Sections 4.3 and 5.2 support shared passages and customization. B's explicit coverage interpretation is slightly clearer, but the evidential argument remains comparable."
+    },
+    {
+      "id": "P07_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both results paragraphs make the same controlled distinction: query repetition repairs UUID lookup, not QA positional robustness. P07 Section 4.2 gives perfect 300-pair performance versus 45.6% and slight QA changes; Section 4.1 gives Flan-UL2's 1.9-point within-window spread; Section 2.3 gives near-overlapping standard/16K curves. A's specific document counts and B's compact synthesis are equally functional."
+    },
+    {
+      "id": "P07_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both abstracts distinguish nominal capacity from evidence use while preserving the task-dependent exception. P07 Section 2.3 supports middle-position QA degradation and comparable extended-window variants; Sections 3.2 and 4.2 support Claude's near-perfect UUID performance and the query-repetition contrast. A's UUID label and B's compact phrasing do not materially change fidelity or abstract function."
+    },
+    {
+      "id": "P07_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'successful lookup and higher retrieval recall' and B's 'not being converted into corresponding answer gains' accurately summarize the diagnostic evidence. P07 Sections 4.2, 2.3, and 5 support the 300-pair intervention, below-56.1% QA conditions, and post-20-document reader plateau. B's Claude example is also supported by Section 3.2, but neither paragraph needs it to sustain the argument."
+    },
+    {
+      "id": "P07_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'ability to use it' and B's 'evidence access and use' are equivalently scoped conclusions. P07 Sections 2.3, 4.1, 4.2, and 5 support extended-window parity, training-length-conditional encoder-decoder robustness, lookup/QA divergence, and reader saturation before recall. Both organize those contrasts around effective evidence use, without claiming universal failure or a proven mechanistic cause."
+    },
+    {
+      "id": "P08_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both abstracts explain learned reflection, offline critique, and adjustable evidence-aware selection. P08 Sections 3.1-3.3 support the mechanism; Section 4.3 and Table 2 support shared ASQA passages, 66.9/5.0 precision, and lower 7B str-em; Section 5.2 supports the precision-MAUVE tradeoff. B's flow is slightly smoother, while A's explicit ranking description is useful; neither has a substantive advantage."
+    },
+    {
+      "id": "P08_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both methods paragraphs connect offline critic labels, loss masking, and segment ranking to support-aware claim selection. P08 Sections 3.2.1-3.2.2 specify the 7B critic and next-token objective; Section 3.3 specifies normalized critique probabilities, thresholds, and beam search. A emphasizes selection first; B foregrounds supervision. Both correctly keep the critic out of inference and explain test-time control."
+    },
+    {
+      "id": "P08_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'relevance and support separately' and B's 'evidence assessment and sentence selection' express the same core method relationship. P08 Table 1 and Section 3.3 distinguish relevance, support, and utility and define category-normalized scoring; Section 3.2.2 supports loss masking. B explicitly preserves passage-independent utility, while A explains partial support; these are complementary, equally pertinent emphases."
+    },
+    {
+      "id": "P07_s2_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both preserve the fixed-answer diagnostic logic and explain the UUID control. P07 Section 2.1 supports the 2,655 paragraph queries, filtered distractors, and position/length manipulations; Sections 2.3 and 3.1 support oracle/closed-book references and random UUID lookup; Section 4.2 supports querying before and after the data. B's ranked-distractor detail and A's sharper opening do not establish an overall advantage."
+    },
+    {
+      "id": "P07_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both use the oracle/closed-book contrast to separate available evidence from successful use, then bound the query-repetition result to exact lookup. P07 Table 1 supplies 88.3% and 56.1%; Section 2.3 supplies below-baseline 20/30-document cases and standard/16K parity; Section 4.2 supplies 45.6%-to-perfect lookup without comparable QA improvement. Their different opening emphases preserve the same supported results argument."
+    },
+    {
+      "id": "P08_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "reason": "Both abstracts link reflection-guided selection to adjustable attribution, not guaranteed grounding. P08 Sections 3.1-3.3 support offline critique and inference control; Table 2 verifies 13B ASQA precision 70.3/65.1 and recall 71.3/76.6; Section 5.2 supports the MAUVE tradeoff. A's PopQA comparison is supported; B's shared-passages condition and grounding limit match Section 4.3 and Ethical Concerns. Neither is decisively better."
+    },
+    {
+      "id": "P07_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both abstracts organize the study around context capacity versus effective evidence use, not an inventory of model results. P07 Sections 2.3 and 3.2 support QA position bias and the Claude UUID exception; Sections 4.2 and 5 support query-repetition/task divergence and reader saturation ahead of recall. A's 'insufficient indicators' and B's final qualification are equally faithful and appropriately bounded."
+    },
+    {
+      "id": "P08_s2_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both methods explain why separately scoring support can change which continuation survives. P08 Section 3.2.2 supports offline annotation, next-token learning, and passage-loss masking; Section 3.3 gives normalized critique weights and the retrieval threshold. B makes normalization of the retrieval decision explicit; A explains relevant-but-weakly-supported candidates. These complementary clarifications leave the method account comparably strong."
+    },
+    {
+      "id": "P08_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "Both results paragraphs distinguish ASQA attribution, the same-data PopQA control, and inference customization. P08 Table 2 verifies 70.3/65.1 precision, 71.3/76.6 recall, 31.7/40.7 str-em, and 54.9/48.7 PopQA; Section 5.2 verifies precision-versus-MAUVE and task-dependent retrieval costs. B's transitions are slightly more economical; A's metric definitions remain useful. Neither overstates component isolation or overall superiority."
+    },
+    {
+      "id": "P07_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'position, rather than answer availability' and B's 'reordering tests position at a fixed length' equally explain the controlled design. P07 Sections 2.1 and 2.3 support answer-preserving reordering, 10/20/30 documents, and reference conditions; Sections 3.1-3.2 support serialized UUID objects, 75/140/300 pairs, and 500 examples per size. Both accurately report greedy decoding and output-inclusion scoring."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "sources/N1.pdf": "420fc2ac08a7b3d04894e4ad36266e3c7cfc66f6fdc5662e5fcc2931715fdb10",
+  "sources/N1.raw.txt": "25937de46e4f60ee7f906818390fe0a53ae2746cb6529f6424c16d7757495dac",
+  "inputs/N1.txt": "574d878c150814e0784ed79f2db9e2c2a117a27fe216375c236b05a1ffd03670",
+  "metadata/N1.json": "685fb67593937f1c036858e10b29b952e6d15bd30cbfbecee92d73ab58e12565",
+  "anchors/N1.json": "9c3f55bd86819fe78f086e5caea89188d9372e17e4a35d706b791a301911b6a9",
+  "sources/N1.extract.py": "7bc05e37a333cfed4f5fe2f357288571b7f40207888dee57a89562e5d1fef6a7",
+  "sources/N2.pdf": "9894f95c2e07659db6f062d18fff7f15055f91d7035fbdc2db71ab8de65dc76e",
+  "sources/N2.raw.txt": "2d342663bb22616abb049ad6029659047f5fbeb967b31ecbc49ca83ef5fdc0e1",
+  "inputs/N2.txt": "f5c51194891e3836096eddc29be0734822eb8d07fcd0b3e0351b992e11c332e3",
+  "metadata/N2.json": "ec958f0400dac717b33b03d97f8a85ebe983b117d349ee1db8ba2d788bcbf192",
+  "anchors/N2.json": "1e2eaaa87019cd600bbfd2bcf6b24ad0c479709206cd264b86c06793704c7bfc",
+  "sources/N2.extract.py": "f4bdb86a4175c8490ce9d366cc225c73e1f645b1c27b03c0febd0ed28f62d3e3"
+}

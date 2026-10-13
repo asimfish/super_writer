@@ -1,0 +1,7 @@
+{
+  "id": "A06",
+  "critical_question": "How does a reverse-time augmented adjoint solve change the memory needed to train a neural ODE, and what numerical and computational limits qualify that saving?",
+  "source_locator": "Section 2 and Algorithm 1, physical pages 2-3; Section 3 and Table 1, physical pages 3-4; Section 6, physical pages 8-9.",
+  "expected_relation": "Recomputing states while solving for adjoints and parameter gradients avoids retaining every forward solver step, making training memory independent of solver evaluation count. Runtime still depends on solver evaluations and tolerances; backward trajectory reconstruction can introduce numerical error, with checkpointing as a remedy."
+}
+

@@ -1,0 +1,292 @@
+{
+  "audits": [
+    {
+      "id": "D5_text_162",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Tables 1 and 3 support the quoted B-model accuracy, V100 throughput, and IN-22K COCO AP; Sections 2.5-2.6 support the neutral GELU, kernel saturation, and downsampling instability. Prose 'evaluated combination' limits component attribution. The reading recovers both practical competitiveness and that boundary, retaining 384 resolution, pretraining, head, and schedule. These conditions adequately bound the selected comparisons without implying every borrowed component helps."
+    },
+    {
+      "id": "D5_text_163",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Section 6 supports tile/depth radix sorting, reverse traversal, saved final opacity, and gradients without a fixed contributor-count limit; Sections 4-5 support parameter and density updates. Prose 'until saturation' and 'blending remains approximate' bound the guarantee. The reading recovers the sorting/storage mechanism and both boundaries, not a guarantee of exact visibility or gradients for every scene primitive. The selected algorithmic scope is adequate."
+    },
+    {
+      "id": "D5_text_152",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.3-2.6 and Figure 4 support depthwise-before-pointwise ordering, fourfold expansion, one GELU/LayerNorm, and normalized separate downsampling. Section 2.1 and the roadmap support fixed training, three-seed small-regime averages, and varying intermediate FLOPs. Prose 'do not isolate independent component effects' is recovered by the reading. Its 'unclear' statement repeats this explicit attribution limit, not a misunderstanding; the chosen cost/mechanism and experimental scope are recoverable."
+    },
+    {
+      "id": "D5_text_169",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Section 6 supports overlapping 16 x 16 tiles, one radix sort, shared-memory batches, reverse recovery of opacity, and constant additional per-pixel storage. Prose 'no predetermined splat-count cap' concerns blended contributors, while saturation and approximate ordering remain explicit. The reading recovers these qualifications alongside the visibility/storage relationship. No claim of constant total scene memory or exact large-splat visibility is made; this algorithmic scope is sufficient."
+    },
+    {
+      "id": "D5_text_175",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.1 and 2.6 support 76.1-to-78.8 training improvement, neutral GELU at 80.6, fewer activations at 81.3, and normalized downsampling at 82.0 versus 81.3. Table 3 supports the IN-22K COCO B-model AP comparison. Prose 'conditional on preceding modifications' and the reading preserve sequential attribution rather than independent causation. Dataset, head, pretraining, and schedule adequately bound the selected transfer comparison."
+    },
+    {
+      "id": "D5_text_157",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2-4 and Table 1 support fixed-recipe modernization, narrow-width spatial filtering, the 384-resolution B comparison, and IN-22K-pretrained XL's 87.8. Prose names classification, COCO, ADE20K, and 'both training scales'; the reading recovers training plus architecture and those evaluation boundaries. 'Competitive recognition' is confined to these workloads, not all vision or multimodal tasks, so omitted alternative-task limitations do not undermine the selected abstract claim."
+    },
+    {
+      "id": "D5_text_168",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Table 1 confirms B-model accuracy/throughput/FLOPs and EfficientNetV2-L's higher 85.7 at 480 resolution; Tables 3-4 confirm the IN-22K AP and 640-crop mIoU comparisons. Prose 'not the best accuracy' blocks a universal ranking. The reading recovers that exception and the separate downstream protocols. Omitting the COCO schedule does not change this selected, head/pretraining-specific quality comparison; no downstream speed gain is asserted."
+    },
+    {
+      "id": "D5_text_158",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.1, 2.3-2.6, and 3-4 support training-first redesign, spatial/channel separation, scale-up, and downstream competitiveness; Table 1 verifies all numbers and V100 measurement. Prose 'for the evaluated recognition tasks' explicitly limits the conclusion. The reading recovers fixed training, approximate cost control, model/data scales, and named downstream datasets. This is sufficient scope for the selected attention-free alternative, without requiring the abstract to enumerate unevaluated task types."
+    },
+    {
+      "id": "D5_text_147",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Sections 3-6 support the coupled Gaussian, density-control, and rasterization mechanism. Table 1 and Section 7.2 support 30K real-dataset averages, native resolutions, A6000, training range, and mixed Mip-NeRF360 metrics; Section 7.4 supports storage and artifact limits. Prose 'not uniformly better' and the reading preserve metric dependence. Static capture, iteration budget, resource cost, and poor coverage adequately bound the claimed interactive reconstruction."
+    },
+    {
+      "id": "D5_text_146",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.3-2.6 and Figure 4 ground the narrow-width depthwise filter, fourfold pointwise expansion, simplified block, and normalization repair. Sections 2-2.1 ground the sequential fixed 300-epoch recipe, approximate FLOPs, and small-regime three-seed averages. Prose 'conditional on earlier modifications' is recovered by the reading. Its inability to recover independent effects is the stated experimental limit, not failed recovery of the selected mechanism or scope."
+    },
+    {
+      "id": "D5_text_171",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Table 1 verifies the published-reference metric contrast and 7K/30K time, FPS, and stored-parameter tradeoff. Table 3's Truck-30K column and Section 7.3 support 24.81 versus 13.84 with the ten-frontmost gradient cap; Section 7.4 supports popping. Prose 'separate' ablation and the reading keep that experiment distinct from dataset averages. Dataset, budget, A6000, storage, and metric qualifications adequately scope the selected result; no matched-GPU baseline training speedup is claimed."
+    },
+    {
+      "id": "D5_text_159",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Table 1 supports the Mip-NeRF360 metric/storage contrast and Tanks & Temples 7K/30K PSNR/FPS tradeoff. Table 3 and Section 7.3 support the separate Truck gradient-cap result. Prose 'in that setting' prevents generalizing the ablation to every cutoff or scene; the reading preserves this local support and residual artifacts. The named datasets, budgets, A6000 measurement, and distinct ablation sufficiently bound the selected tradeoff."
+    },
+    {
+      "id": "D5_text_148",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Sections 3-6 ground explicit anisotropic primitives, adaptive allocation, shared sorting, and uncapped blended-contributor gradients. Table 1 and Sections 7.2/7.4 ground the real-dataset runtime range, metric dependence, storage, coverage, and popping limits. Prose specifies native resolutions; the reading recovers the central coupling and consequential static-scene, A6000, budget, metric, and resource boundaries. Its shorter scope summary makes no fixed-resolution or portable-speed inference, so selected scope remains adequate."
+    },
+    {
+      "id": "D5_text_156",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Sections 3-6 support the representation/optimization/rasterization coupling. Table 1 verifies real-dataset 30K rates and training times, better aggregate quality than tested fast baselines, larger storage, and lower Mip-NeRF360-dataset PSNR. Prose 'respective native resolutions' and the reading preserve hardware/budget specificity and metric dependence. The quality statement concerns the reported aggregate configurations, not every synthetic object or individual view; static capture and artifact limits adequately bound the conclusion."
+    },
+    {
+      "id": "D5_text_177",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Figure 4 and Sections 2.2-2.6 confirm depthwise-before-expansion ordering, LayerNorm placement, one GELU, fourfold width, patchify stem, and normalized downsampling. Sections 2-2.1 confirm ImageNet-1K, fixed 300-epoch AdamW, approximate FLOPs, and three-seed small-regime averages. Prose 'conditional on the preceding architecture' is explicitly recovered by the reading. These conditions adequately support the chosen spatial-cost relationship without independent-component attribution."
+    },
+    {
+      "id": "D5_text_179",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Table 1 supports the within-method Mip-NeRF360-dataset budget/quality/FPS/storage changes and mixed baseline metrics. Table 3's Average-30K column, caption, and Section 7.3 support 19.19 versus 26.05 on manually downsampled Truck/Garden/Bicycle with unstable capped gradients. Prose 'in these scenes' and the reading preserve local ablation scope. Hardware is unnamed, but no portable FPS guarantee or cross-hardware speedup is asserted; dataset-specific directional tradeoffs remain adequately bounded."
+    },
+    {
+      "id": "D5_text_153",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Section 6 supports one tile/depth radix sort, saturation-based forward blending, reverse traversal, final-opacity reconstruction, and constant extra per-pixel storage. Section 5 supports L1/D-SSIM supervision and positional-gradient cloning/splitting. Prose 'every blended primitive' limits the uncapped-gradient statement to actual contributors. The reading recovers the sorting/storage relationship plus tile size, saturation, and approximate visibility; this selected method scope does not require benchmark protocols."
+    },
+    {
+      "id": "D5_text_176",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.1 and 2.6 support the training gain, neutral activation substitution, beneficial activation reduction, and normalization-repaired downsampling at 82.0. Table 3 supports the IN-22K Cascade Mask R-CNN 3x COCO comparison. Prose 'conditional on preceding redesigns' and the reading retain the sequential attribution boundary, distinguishing roadmap and transfer evidence. Named pretraining, head, schedule, and metrics sufficiently constrain the selected coordinated-design result."
+    },
+    {
+      "id": "D5_text_178",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.2-2.6 and Figure 4 support narrow-width spatial filtering, LayerNorm, fourfold pointwise expansion, and the normalized hierarchy. Sections 2-2.1 support the fixed ImageNet-1K recipe, approximate FLOPs, and ResNet-50 three-seed averages. Prose 'depend on the configuration already reached' is recovered by the reading. Its 'unclear' remark about independent effects correctly recognizes this explicit boundary; the selected mechanism and experimental scope are fully recoverable."
+    },
+    {
+      "id": "D5_text_164",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Section 6 supports overlapping tiles, tile/depth keys, one radix sort, saturation stopping, and reverse opacity reconstruction; Sections 4-5 support parameter optimization and density changes. Prose 'all blended contributors' and 'visibility-aware blending is approximate' delimit the gradient and visibility claims. The reading recovers shared-list efficiency and both qualifications, without extending gradients to culled or unblended primitives. The selected algorithmic scope is adequate."
+    },
+    {
+      "id": "D5_text_165",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2-4 and Table 1 support training-first modernization, attention-free spatial/channel separation, B-model accuracy/12.5% V100 throughput advantage, and XL's 87.8 after IN-22K pretraining. Tables 3-4 support overall box/mask AP and mIoU competitiveness, not every AP submetric. Prose's multimodal/structured-output caveat is grounded in Section F and recovered by the reading. Named recognition workloads and unresolved alternative tasks adequately bound the conclusion."
+    },
+    {
+      "id": "D5_text_145",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.3-2.6 support depthwise spatial filtering before fourfold pointwise expansion, simplified blocks, and downsampling divergence repaired by normalization. Sections 2-2.1 support fixed training, approximate FLOPs, and three-seed small-regime averages. Prose 'successive combined designs' and 'does not independently isolate' are recovered by the reading. The chosen cost relationship and common-training boundary are sufficient; neither prose nor reading treats these as independent factorial ablations."
+    },
+    {
+      "id": "D5_text_155",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Sections 3-6 support anisotropic representation, density adaptation, and tile rasterization with uncapped contributor gradients. Table 1 supports 30K real-dataset rates, native resolutions, A6000, training range, and aggregate quality relative to fast baselines; Section 7.4 supports storage/artifact limits. Prose 'rather than uniform metric superiority' and the reading preserve the Mip-NeRF360 PSNR exception. Static capture and measured resource conditions adequately constrain interactive-quality claims."
+    },
+    {
+      "id": "D5_text_154",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Sections 4-6 support projected covariances, tile/depth sorting, reverse recovery of opacity factors, image-loss updates, and gradient-guided cloning/splitting. Prose 'until opacity saturation' and 'shared order approximates visibility' qualify the no-fixed-count statement. The reading recovers the efficiency/gradient relationship and both algorithmic boundaries. Its concise scope omits no consequential benchmark condition because the paragraph selects the rendering mechanism, not a numerical evaluation claim."
+    },
+    {
+      "id": "D5_text_180",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Table 1 supports the budget, metric, FPS, and storage changes; Section 7.2 footnote 2 identifies four A100s for 12 hours, unlike A6000. Table 3 Average-30K and Section 7.3 support the three-scene ten-frontmost cap result. Prose 'not ... a matched-GPU speedup' and the reading correctly preserve this exception and local ablation scope. Missing preprocessing detail does not imply comparison with differently prepared main-table images."
+    },
+    {
+      "id": "D5_text_173",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2-4 and Figure 4 support progressive fixed-training convolutional redesign, 7 x 7 filtering before fourfold expansion, and competitive recognition. Table 1 supports the B-model and XL numbers, resolution, and V100 throughput. Prose 'in these workloads' and 'rather than ... an isolated cause' limit task scope and causation; the reading recovers both. The selected recognition alternative is supported without asserting attention removal independently caused the gains."
+    },
+    {
+      "id": "D5_text_172",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Table 1 verifies copied-reference metrics and the Mip-NeRF360-dataset 7K/30K time, A6000 FPS, and stored-parameter contrast; Section 7.2 supports native resolutions. Table 3's Truck-30K column/caption and Section 7.3 support the separately prepared gradient-cap ablation. Prose 'tested optimization' and the reading preserve the local inference, resource costs, and coverage/order artifacts. The selected result's dataset, budget, measurement, and ablation boundaries are adequate."
+    },
+    {
+      "id": "D5_text_167",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Tables 1, 3, and 4 support all classification, COCO AP, and ADE20K mIoU comparisons, including EfficientNetV2-L's higher score at different resolution. Prose 'prediction quality rather than the classification speed benefit' separates downstream quality from classification throughput; the reading explicitly recovers that limit. IN-1K versus IN-22K, V100, resolution, heads, and multi-scale testing adequately bound these selected comparisons without requiring every training hyperparameter."
+    },
+    {
+      "id": "D5_text_170",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Section 6 grounds duplicated overlapping-tile instances, GPU sorting, shared-memory blending, reverse traversal, and recovered opacity rather than per-pixel histories. Prose limits gradients to 'contributing' splats and retains opacity saturation and approximate large-splat ordering. The reading recovers the shared visibility/storage mechanism and these qualifications. The paragraph asserts reduced overhead without a count cap, not exact visibility or bounded total scene memory, so its selected scope is adequate."
+    },
+    {
+      "id": "D5_text_174",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.1-2.6 ground enhanced training, stage redesign, narrow-width depthwise filtering, and stabilized transitions; Table 1 grounds the B and XL measurements. Sections 4 and Tables 3-4 ground downstream competitiveness. Prose concludes about 'recognition backbones,' and the reading retains specified datasets, resolution, hardware, and pretraining scales. This task-limited demonstration does not claim all Transformer functions or an independently measured benefit from removing attention, so scope is adequate."
+    },
+    {
+      "id": "D5_text_166",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Section 2.1 supports the baseline training gain and fixed-recipe architecture comparison; Sections 2.3-2.6 support spatial/channel separation. Table 1 verifies accuracy, 12.5% V100 throughput advantage, and XL scaling; Tables 3-4 support overall downstream competitiveness. Prose 'across these recognition tasks' is recovered through the reading's named datasets and training scales. The claim concerns evaluated Swin-style modules, not attention's necessity for unevaluated multimodal or structured-output tasks."
+    },
+    {
+      "id": "D5_text_149",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Sections 3-6 support SfM-initialized Gaussians without normals, density refinement, shared ordering, and reverse opacity recovery. Table 1 confirms 30K dataset-average rates/training times and higher SSIM/lower LPIPS across all three real datasets, with lower PSNR on Mip-NeRF360. Prose 'held-out views' and the reading preserve the real-scene aggregate scope, A6000, budget, storage, and artifact limits. No per-scene superiority or exact-visibility guarantee is inferred."
+    },
+    {
+      "id": "D5_text_160",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Table 1 supports the published-reference mixed metrics, 134 A6000 FPS, training time, and 734 versus 8.6 MB stored parameters. Table 3's Truck-30K column and Section 7.3 support the ten-frontmost cutoff's 24.81-to-13.84 PSNR reduction. Prose 'separate Truck ablation' and the reading keep this local quality test distinct from main-table results. Metric dependence, storage, dataset/budget, and coverage/popping limits adequately constrain the interactive-rendering claim."
+    },
+    {
+      "id": "D5_text_161",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Tables 1 and 3 ground the IN-1K 384/V100 classification comparison and both IN-22K-pretrained COCO backbones under Cascade Mask R-CNN 3x. Sections 2.5-2.6 ground neutral GELU, kernel saturation, and normalization-repaired downsampling. Prose 'combined design' and the reading reject universal component benefit while retaining the normalization condition. The selected task, model, pretraining, head, and measurement boundaries are adequate."
+    },
+    {
+      "id": "D5_text_150",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P10 Sections 3-6 support opacity/SH Gaussians, no normal estimation, adaptive refinement, and shared-sort rendering without a fixed contributor cutoff. Table 1 and Section 7.2 support held-out real-dataset 30K rates, A6000, times, and the SSIM/PSNR contrast; Section 7.4 supports storage and artifacts. Prose 'metric-dependent ... rather than uniform superiority' is recovered by the reading. Named datasets, static capture, budget, resources, and visibility limitations sufficiently scope the conclusion."
+    },
+    {
+      "id": "D5_text_151",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": ["none"],
+      "reason": "P09 Sections 2.3-2.6 and Figure 4 support narrow-width 7 x 7 depthwise filtering before fourfold pointwise expansion, one LayerNorm/GELU, and normalized downsampling. Sections 2-2.1 support fixed 300-epoch AdamW, approximate FLOPs, and three-seed smaller-regime averages. Prose 'unequal intermediate costs limit attribution' and the reading preserve the sequential experiment's boundary. This adequately grounds the selected spatial-cost relationship without crediting independent component effects."
+    }
+  ]
+}

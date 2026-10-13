@@ -1,0 +1,52 @@
+{
+  "readings": [
+    {
+      "id": "N1_T02",
+      "core": "At fixed batch size, more robots shorten rollouts and training but sharply reduce reward at excessive counts. The authors attribute this to insufficient temporal information and tentatively link low-count losses to correlated samples. These limits and slowing throughput support the reported 2,048-4,096-robot, 100,000-200,000-sample compromise; larger batches improve reward at greater cost.",
+      "scope": "Reduced stair/obstacle heights, no curriculum; reward means and standard deviations over five runs after 1,500 updates. The highest-reward 20,000-robot, million-sample baseline is not batch-budget matched.",
+      "core_witness": "increasing robot count shortens each robot's rollout and training time, but reward drops sharply at excessive counts.",
+      "scope_witness": "The simplified task reduces maximum stair and obstacle heights and removes the curriculum",
+      "unclear": "Causal verification of the proposed explanations is not recoverable."
+    },
+    {
+      "id": "N1_T04",
+      "core": "One-GPU simulation and PPO reduce transfers; traversal-based relocation adjusts difficulty without rebuilding terrain. Together with the reported training time and physical traversals, this supports rapid training and deployment, bounded by rollout duration and sensing quality.",
+      "scope": "ANYmal C: 4,096 robots, 98,304 samples/batch, 1,500 updates, i9-11900k/RTX A6000, under 20 minutes. Simulated success excludes base contact: nearly 100% for stairs up to 0.2 m, declining for obstacles, failure beyond 25-degree slopes. Physical stairs/obstacles were traversed; imperfect lidar maps prompted a 0.6 m/s command limit.",
+      "core_witness": "reducing data transfers while collecting experience from thousands of robots.",
+      "scope_witness": "Simulated crossings without base contact achieved nearly 100% success for stair steps up to 0.2 m",
+      "unclear": "Physical success rates and isolated contributions to training speed are not recoverable."
+    },
+    {
+      "id": "N1_T06",
+      "core": "Time-outs are separately flagged and their rewards receive the critic's discounted future-return prediction for the interrupted trajectory. Because episode time is unobserved, terminal treatment would erase continuation value for an unobservable interruption; bootstrapping retains that value rather than treating interruption as task completion.",
+      "scope": "Time-limit resets differ from state-anticipatable failures or completed goals. Episodes last up to 20 seconds, span short rollout batches, and persist across policy updates; time-outs therefore require handling anywhere within a batch, not just collection boundaries.",
+      "core_witness": "bootstrapping the interrupted trajectory's target instead of assigning zero continuation value.",
+      "scope_witness": "Time-outs can consequently occur inside a batch and must be handled wherever they occur",
+      "unclear": "none"
+    },
+    {
+      "id": "N1_T08",
+      "core": "One-GPU simulation, observation/reward computation, and optimization reduce transfers. Progress-based relocation supplies harder terrain experience without regeneration. The reported configuration enables under-20-minute training and physical stairs/obstacles traversal; shortened rollouts can undermine learning, while imperfect elevation maps constrain deployment.",
+      "scope": "ANYmal C, i9-11900k/RTX A6000, 4,096 robots, 98,304 samples/batch, 1,500 updates. Simulated success requires traversal without base contact: nearly always successful stairs up to 0.2 m, declining success on randomized obstacles, failure beyond 25-degree slopes. Hardware linear-velocity commands are capped at 0.6 m/s.",
+      "core_witness": "This combines parallel collection with progressively challenging experience without regenerating terrain.",
+      "scope_witness": "Simulation traversal without base contact is nearly always successful on stairs up to 0.2 m",
+      "unclear": "Physical success rate and the isolated GPU-placement speedup are not recoverable."
+    },
+    {
+      "id": "N1_T10",
+      "core": "At fixed batch size, more robots shorten trajectories and training, but excessive parallelism reduces reward. The authors invoke insufficient temporal information and tentatively reduced sample diversity at low counts. Slowing throughput and larger batches' extra cost support a bounded 2,048-4,096-robot compromise, not unlimited parallelism.",
+      "scope": "No curriculum, reduced maximum stair/obstacle difficulty; mean episode reward and standard deviation over five runs after 1,500 updates. The compromise uses roughly 100,000-200,000 samples/batch. The 20,000-robot, million-sample baseline has the highest reward but trains longer.",
+      "core_witness": "training becomes faster, but reward drops sharply at excessive parallelism.",
+      "scope_witness": "The comparison removes the curriculum, reduces maximum stair and obstacle difficulty",
+      "unclear": "Causal verification of the proposed explanations is not recoverable."
+    },
+    {
+      "id": "N1_T12",
+      "core": "Separately identifying time-outs lets rewards include the critic's discounted remaining-return estimate, preserving continuation value that terminal treatment would remove. The reason is that episode time is unobserved: a time limit interrupts a continuing task rather than a state-predictable failure or goal completion.",
+      "scope": "This concerns time-limit transitions, not failures/goals. Episodes last up to 20 seconds and span multiple short rollout batches; completing a batch does not reset the environment, so timeout detection must cover every occurrence rather than only batch boundaries.",
+      "core_witness": "bootstrapping its target rather than assigning zero future return.",
+      "scope_witness": "Completing a collection batch does not reset the environment",
+      "unclear": "The state used to estimate remaining return is not recoverable."
+    }
+  ]
+}

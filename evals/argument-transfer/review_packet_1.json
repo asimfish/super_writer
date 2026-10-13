@@ -1,0 +1,111 @@
+{
+  "request": {
+    "scope": "Original synthetic development pilot; no real research results",
+    "language": "English",
+    "abstract_words": [
+      130,
+      180
+    ],
+    "results_words": [
+      90,
+      140
+    ],
+    "output_schema": {
+      "cases": [
+        {
+          "id": "case ID",
+          "abstract": "text",
+          "results": "text"
+        }
+      ]
+    },
+    "cases": [
+      {
+        "id": "C1",
+        "author_priority": "Explain the benefit and tradeoff of observation-age-aware robot scheduling, preserving both timing and task outcomes.",
+        "facts": [
+          "A visual grasping controller receives asynchronous camera frames. In its serial implementation, queued older observations can be used while a new frame waits for action generation.",
+          "The proposed scheduler chooses the latest completed frame at each action-generation start and discards older queued frames. It uses the same policy weights as the serial implementation.",
+          "Evaluation uses the same GPU, four moving-object grasping tasks, 80 physical robot executions per task and per method, and the same pretraining and task-demonstration data.",
+          "Mean observation-to-command time is 96 ms with serial scheduling, 62 ms with a faster action decoder alone, and 41 ms with observation-age-aware scheduling. These times include waiting, preprocessing and action generation, but not command-to-motion time.",
+          "Task-average success is 61% for serial scheduling, 62% for the faster decoder and 74% for observation-age-aware scheduling. No uncertainty estimates are supplied.",
+          "The scheduler drops 18% of arriving frames on this workload. The evaluation does not isolate observation freshness from all other scheduling changes."
+        ]
+      },
+      {
+        "id": "C2",
+        "author_priority": "Communicate a diagnosis of aggregate-score sensitivity to task weighting, rather than present a new better-performing policy.",
+        "facts": [
+          "Two warehouse-navigation policies are evaluated on fixed routes: short routes and long routes. Their outputs do not change when score aggregation weights change.",
+          "Policy U succeeds on 90% of short routes and 40% of long routes; policy V succeeds on 75% of short routes and 70% of long routes.",
+          "A dashboard weights short and long routes 9:1, yielding 85% aggregate success for U and 74.5% for V. Equal task-family weighting yields 65% for U and 72.5% for V.",
+          "The study derives the two weighted means and replays the same recorded outputs under both aggregation rules. There is no retraining or new policy.",
+          "The authors provide a report showing both task-family scores beside each aggregate score. The report is applied to the existing fixed-route evaluation; it has no measured effect on deployed safety.",
+          "Route-family execution counts and uncertainty are not supplied. No claim of statistical significance is licensed."
+        ]
+      },
+      {
+        "id": "C3",
+        "author_priority": "Explain what a wrist-camera viewpoint benchmark can test and the baseline finding it exposes; dataset size is supporting detail.",
+        "facts": [
+          "A grasping benchmark records the same objects and manipulation tasks using six wrist-camera mounting positions. Existing evaluation in this project kept mounting position fixed.",
+          "The released benchmark has 2400 demonstration episodes. Episode-disjoint training and validation data use three mount positions; testing uses three different mounts. Objects and task instructions remain shared across the split.",
+          "The protocol measures transfer across camera mounting positions, not unseen objects, unseen tasks, new robots or zero-shot learning without training.",
+          "A baseline trained on the training mounts reaches 84% success on validation mounts from that training group and 57% on held-out mounts. Fine-tuning with 30 demonstrations from the held-out mounts raises success there to 72%.",
+          "The baseline architecture is not a new contribution. The adaptation result uses additional target-mount data; model selection uses the original validation split.",
+          "The benchmark and split definitions are released. Evaluation-trial counts, uncertainty, and a universal robustness guarantee are not supplied."
+        ]
+      }
+    ]
+  },
+  "pairs": [
+    {
+      "case": "C1",
+      "unit": "abstract",
+      "drafts": {
+        "A": "Asynchronous visual grasping can generate actions from queued older observations even while newer frames wait. We study observation-age-aware scheduling, which selects the latest completed camera frame at each action-generation start and discards older queued frames while retaining the serial controller's policy weights. Across four moving-object grasping tasks, we compare serial scheduling, a faster action decoder, and the proposed scheduler on the same GPU, using matched pretraining and task-demonstration data and 80 physical robot executions per task and method. Mean observation-to-command time falls from 96 ms with serial scheduling to 62 ms with the faster decoder and 41 ms with the scheduler; these measurements include waiting, preprocessing, and action generation but exclude command-to-motion time. Corresponding task-average success rates are 61%, 62%, and 74%. The scheduler drops 18% of arriving frames, trading observation retention for more timely commands and higher observed success on this workload. Because the evaluation changes multiple scheduling properties, it does not isolate observation freshness as the cause of these gains.",
+        "B": "Asynchronous visual grasping can act on queued observations even while newer camera frames await action generation. We study an observation-age-aware scheduler that selects the latest completed frame at each action-generation start and discards older queued frames, without changing policy weights. Across four moving-object grasping tasks, we compare scheduling strategies on the same GPU with matched pretraining and demonstration data and 80 physical robot executions per task per method. Mean observation-to-command time falls from 96 ms under serial scheduling to 62 ms with a faster action decoder alone and 41 ms with the scheduler; these measurements include waiting, preprocessing, and action generation but exclude command-to-motion time. Corresponding task-average success rates are 61%, 62%, and 74%. The contrast indicates that decoder acceleration alone does not reproduce the scheduler's observed task outcome. This benefit comes at the cost of dropping 18% of arriving frames. The evaluation supports the scheduling change as a whole, without isolating observation freshness from its other effects."
+      }
+    },
+    {
+      "case": "C1",
+      "unit": "results",
+      "drafts": {
+        "A": "Observation-age-aware scheduling reduced mean observation-to-command time to 41 ms, compared with 96 ms for serial scheduling and 62 ms for decoder acceleration alone. Task-average success rose from 61% under serial scheduling to 74% with the scheduler, whereas the faster decoder reached 62%. These comparisons used the same GPU and training data, with 80 physical executions per method on each of four moving-object grasping tasks; the scheduler retained the serial policy weights. The timing boundary includes waiting, preprocessing, and action generation, not command-to-motion time. Dropping 18% of arriving frames accompanied the improved timing and task outcomes. Because freshness was not isolated from other scheduling changes, the results establish the observed tradeoff of the scheduler rather than a freshness-only effect.",
+        "B": "Observation-age-aware scheduling reduced mean observation-to-command time to 41 ms, compared with 96 ms for serial scheduling and 62 ms for the faster decoder alone. This metric includes waiting, preprocessing, and action generation, not command-to-motion time. Task-average success was 74% with the scheduler, versus 61% and 62% for the respective comparators. These measurements cover four moving-object grasping tasks, with 80 physical executions per task and method on the same GPU and matched training data. The scheduler retained the serial policy weights but dropped 18% of arriving frames. The concurrent timing and task gains therefore describe the scheduling configuration as evaluated, rather than an isolated effect of observation freshness."
+      }
+    },
+    {
+      "case": "C2",
+      "unit": "abstract",
+      "drafts": {
+        "A": "Aggregate navigation scores can reverse a policy ranking when route families receive different weights, even though the evaluated behavior is unchanged. We diagnose this sensitivity in a fixed-route warehouse evaluation by deriving weighted means and replaying the same recorded outputs under two aggregation rules. Policy U succeeds on 90% of short routes and 40% of long routes, while policy V achieves 75% and 70%, respectively. A dashboard weighting short and long routes 9:1 reports 85% aggregate success for U and 74.5% for V; equal task-family weighting instead gives 65% and 72.5%. Thus, the ranking reversal arises from changing route-family weights, not policy behavior. We accompany each aggregate with both task-family scores in a report applied to this existing evaluation. The contribution is a diagnosis of what the aggregate ranking depends on, not a new policy or a retraining result; the report has no measured effect on deployed safety.",
+        "B": "Aggregate success can reverse the apparent ordering of navigation policies without any change in their behavior. We diagnose this sensitivity in a fixed-route warehouse evaluation by deriving weighted success rates and replaying the same recorded outputs under two aggregation rules. Policy U succeeds on 90% of short routes and 40% of long routes, whereas policy V achieves 75% and 70%, respectively. A dashboard weighting the two route families 9:1 reports 85% aggregate success for U and 74.5% for V. Equal task-family weighting instead yields 65% for U and 72.5% for V, reversing their ranking. The reversal reflects which route family the score emphasizes, not retraining or a new policy. We provide a report that places both task-family scores beside each aggregate, making the weighting dependence visible in the existing evaluation. The analysis establishes a limitation of aggregate-only comparisons on these fixed routes; it does not measure an improvement in deployed safety."
+      }
+    },
+    {
+      "case": "C2",
+      "unit": "results",
+      "drafts": {
+        "A": "Reaggregating the same recorded route outcomes changed the policy ranking. Under the dashboard's 9:1 short-to-long weighting, U scored 85% and V scored 74.5%; equal task-family weighting gave 65% and 72.5%, respectively. U's higher short-route success (90% versus 75%) explains its lead under the dashboard rule, while V's higher long-route success (70% versus 40%) produces the opposite ordering with equal weights. Neither policy's outputs changed, and no retraining was performed. Reporting both family-level scores alongside each aggregate exposes this dependence directly. These are descriptive comparisons of the fixed-route evaluation, not evidence of a new policy or improved deployed safety.",
+        "B": "Changing only the aggregation rule reversed the ranking of the two warehouse-navigation policies. Under the dashboard's 9:1 short-to-long weighting, U scored 85% and V 74.5%; equal task-family weighting gave U 65% and V 72.5%. U's 90% success on short routes exceeded V's 75%, but its 40% success on long routes fell below V's 70%, explaining why the relative emphasis matters. Both calculations replayed the same recorded outputs on fixed routes, with no retraining. The paired-score report exposes this route-family tradeoff beside each aggregate, so the reversal should be read as sensitivity of the evaluation summary, not a behavioral improvement or evidence of a deployed safety benefit."
+      }
+    },
+    {
+      "case": "C3",
+      "unit": "abstract",
+      "drafts": {
+        "A": "Evaluating grasping from a fixed wrist-camera mount leaves transfer across mounting positions untested. We introduce a benchmark that records the same objects and manipulation tasks from six wrist-camera mounting positions, enabling evaluation of this viewpoint shift while keeping objects and task instructions shared. The released resource contains 2,400 demonstration episodes, with episode-disjoint training and validation data from three mounts and testing on three different mounts. An existing baseline trained on the training mounts achieves 84% success on validation mounts from that group but 57% on held-out mounts, exposing a performance gap under camera-mount transfer. Fine-tuning with 30 demonstrations from the held-out mounts raises success there to 72%, with model selection still using the original validation split. We release the benchmark and split definitions to support this evaluation. The protocol tests transfer across camera mounting positions rather than unseen objects, unseen tasks, new robots, or learning without training; the adaptation result additionally depends on target-mount demonstrations.",
+        "B": "A fixed wrist-camera viewpoint does not reveal how a grasping policy transfers across camera mounting positions. We release a benchmark and split definitions that test this transfer using the same objects and manipulation tasks recorded from six wrist-camera mounts. Its 2,400 demonstration episodes are divided into episode-disjoint training and validation data from three mounts and test data from three different mounts, with objects and task instructions shared across the split. An existing baseline reaches 84% success on validation mounts within the training group but 57% on held-out mounts, exposing a gap that fixed-mount evaluation cannot measure. Fine-tuning with 30 demonstrations from the held-out mounts raises success there to 72%; model selection continues to use the original validation split. The benchmark therefore supports a specific test of camera-mount transfer and adaptation, rather than generalization to unseen objects, tasks, or robots. The adaptation gain depends on additional target-mount data."
+      }
+    },
+    {
+      "case": "C3",
+      "unit": "results",
+      "drafts": {
+        "A": "The baseline achieved 84% success on validation data from the three training-group mounts and 57% on the three held-out mounts, a 27-percentage-point gap despite shared objects and task instructions. Training and validation episodes were disjoint, and the test mounts differed from those used for training. Fine-tuning with 30 demonstrations from the held-out mounts increased success there to 72%, recovering 15 percentage points while remaining below the original validation score. This adaptation used additional target-mount data, with model selection based on the original validation split. The results illustrate the benchmark's ability to expose sensitivity to camera mounting position and measure adaptation; they do not evaluate transfer to unseen objects, tasks, or robots.",
+        "B": "The baseline's success decreased from 84% on validation mounts within the training group to 57% on the three held-out mounts. Because objects and task instructions are shared across the episode-disjoint split, this comparison evaluates transfer across wrist-camera mounting positions rather than unseen objects or tasks. Fine-tuning with 30 target-mount demonstrations increased held-out success to 72%, a 15-percentage-point gain that remained below the original within-group validation result. Model selection used the original validation split, while adaptation introduced additional target-mount data. The findings expose a mounting-position transfer gap and partial recovery with adaptation; they do not establish transfer to new robots or a universal robustness guarantee."
+      }
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+[
+  {
+    "phase": "review",
+    "id": "A02_s2",
+    "replicate": 1,
+    "words": 63,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G1_T01",
+    "words": 26,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T01",
+    "replicate": 1,
+    "words": 92,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T02",
+    "replicate": 1,
+    "words": 90,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A02_s1",
+    "replicate": 1,
+    "words": 66,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G1_T03",
+    "words": 25,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T03",
+    "replicate": 1,
+    "words": 87,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T04",
+    "replicate": 1,
+    "words": 92,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A01_s1",
+    "replicate": 1,
+    "words": 70,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G1_T05",
+    "words": 25,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T05",
+    "replicate": 1,
+    "words": 90,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T06",
+    "replicate": 1,
+    "words": 88,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A01_s2",
+    "replicate": 1,
+    "words": 73,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G1_T07",
+    "words": 25,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T07",
+    "replicate": 1,
+    "words": 93,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T08",
+    "replicate": 1,
+    "words": 96,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A02_s2",
+    "replicate": 2,
+    "words": 72,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G1_T02",
+    "words": 28,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T01",
+    "replicate": 2,
+    "words": 78,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T02",
+    "replicate": 2,
+    "words": 86,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A02_s1",
+    "replicate": 2,
+    "words": 75,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G1_T04",
+    "words": 24,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T03",
+    "replicate": 2,
+    "words": 89,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T04",
+    "replicate": 2,
+    "words": 78,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A01_s1",
+    "replicate": 2,
+    "words": 75,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G1_T06",
+    "words": 22,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T05",
+    "replicate": 2,
+    "words": 94,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T06",
+    "replicate": 2,
+    "words": 98,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A01_s2",
+    "replicate": 2,
+    "words": 80,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G1_T08",
+    "words": 22,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T07",
+    "replicate": 2,
+    "words": 94,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G1_T08",
+    "replicate": 2,
+    "words": 98,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A03_s2",
+    "replicate": 1,
+    "words": 80,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G2_T01",
+    "words": 25,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T01",
+    "replicate": 1,
+    "words": 76,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T02",
+    "replicate": 1,
+    "words": 82,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A04_s2",
+    "replicate": 1,
+    "words": 89,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G2_T03",
+    "words": 23,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T03",
+    "replicate": 1,
+    "words": 77,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T04",
+    "replicate": 1,
+    "words": 80,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A04_s1",
+    "replicate": 1,
+    "words": 83,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G2_T05",
+    "words": 23,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T05",
+    "replicate": 1,
+    "words": 84,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T06",
+    "replicate": 1,
+    "words": 82,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A03_s1",
+    "replicate": 1,
+    "words": 87,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G2_T07",
+    "words": 26,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T07",
+    "replicate": 1,
+    "words": 82,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T08",
+    "replicate": 1,
+    "words": 86,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A03_s2",
+    "replicate": 2,
+    "words": 73,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G2_T02",
+    "words": 28,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T01",
+    "replicate": 2,
+    "words": 70,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T02",
+    "replicate": 2,
+    "words": 78,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A04_s2",
+    "replicate": 2,
+    "words": 68,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G2_T04",
+    "words": 23,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T03",
+    "replicate": 2,
+    "words": 71,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T04",
+    "replicate": 2,
+    "words": 72,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A04_s1",
+    "replicate": 2,
+    "words": 75,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G2_T06",
+    "words": 26,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T05",
+    "replicate": 2,
+    "words": 81,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T06",
+    "replicate": 2,
+    "words": 72,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A03_s1",
+    "replicate": 2,
+    "words": 68,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G2_T08",
+    "words": 22,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T07",
+    "replicate": 2,
+    "words": 75,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G2_T08",
+    "replicate": 2,
+    "words": 72,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A06_s1",
+    "replicate": 1,
+    "words": 77,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G3_T01",
+    "words": 25,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T01",
+    "replicate": 1,
+    "words": 75,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T02",
+    "replicate": 1,
+    "words": 83,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A05_s2",
+    "replicate": 1,
+    "words": 84,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G3_T03",
+    "words": 27,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T03",
+    "replicate": 1,
+    "words": 82,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T04",
+    "replicate": 1,
+    "words": 81,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A05_s1",
+    "replicate": 1,
+    "words": 86,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G3_T05",
+    "words": 26,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T05",
+    "replicate": 1,
+    "words": 87,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T06",
+    "replicate": 1,
+    "words": 90,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A06_s2",
+    "replicate": 1,
+    "words": 81,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G3_T07",
+    "words": 25,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T07",
+    "replicate": 1,
+    "words": 79,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T08",
+    "replicate": 1,
+    "words": 82,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A06_s1",
+    "replicate": 2,
+    "words": 74,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G3_T02",
+    "words": 23,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T01",
+    "replicate": 2,
+    "words": 88,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T02",
+    "replicate": 2,
+    "words": 82,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A05_s2",
+    "replicate": 2,
+    "words": 82,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G3_T04",
+    "words": 24,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T03",
+    "replicate": 2,
+    "words": 91,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T04",
+    "replicate": 2,
+    "words": 91,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A05_s1",
+    "replicate": 2,
+    "words": 79,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G3_T06",
+    "words": 24,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T05",
+    "replicate": 2,
+    "words": 96,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T06",
+    "replicate": 2,
+    "words": 94,
+    "limit": 100
+  },
+  {
+    "phase": "review",
+    "id": "A06_s2",
+    "replicate": 2,
+    "words": 81,
+    "limit": 100
+  },
+  {
+    "phase": "reader",
+    "id": "G3_T08",
+    "words": 22,
+    "limit": 130
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T07",
+    "replicate": 2,
+    "words": 82,
+    "limit": 100
+  },
+  {
+    "phase": "audit",
+    "id": "G3_T08",
+    "replicate": 2,
+    "words": 84,
+    "limit": 100
+  }
+]

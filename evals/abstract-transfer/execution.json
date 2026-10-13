@@ -1,0 +1,417 @@
+{
+  "protocol_start_date": "2026-10-11",
+  "completion_local_date": "2026-10-12",
+  "model": "inherited same-family agents; no model override",
+  "fork_context": false,
+  "source_contexts": 3,
+  "writing_contexts": 18,
+  "assessment_contexts": 18,
+  "all_contexts_completed_and_closed": true,
+  "initial_writer_questions_withheld": true,
+  "all_assessments_saved_before_first_unblinding": true,
+  "additional_quality_retries": 0,
+  "raw_repairs_or_case_exclusions": 0,
+  "runtime_promotion": false,
+  "commit_push_install_or_version_change": false,
+  "coordinator_discovery_exposure": {
+    "metadata_abstracts": "Primary discovery metadata exposed paper abstracts before source preparation; the previous candidate remained unchanged.",
+    "review_fragment": "Search also returned a Neural ODE review excerpt. It was not passed as a generation/assessment target, and is disclosed rather than claiming clean coordinator isolation.",
+    "selection_scope": "Exact-title search of bounded previous eval/docs/references metadata only; no claim of model-unseen papers, abbreviation or concept isolation."
+  },
+  "history_restore": {
+    "interface": "Whalent Memory status/messages",
+    "messages_read": 0,
+    "result": "Invalid or expired conversation token",
+    "fallback": "Visible current conversation only; no memory/profile/session-note fallback."
+  },
+  "source_preparation": [
+    {
+      "agent_id": "01a12b98-67ad-77b2-9c0e-b5b8f4f092bb",
+      "nickname": "Hooke the 2nd",
+      "group": "G1",
+      "phase": "source",
+      "status": "completed",
+      "result": "Both sources complete; A02 allowed arXiv v1 fallback after ordinary official access blocked; metadata abstract/preview/boundary exposure disclosed."
+    },
+    {
+      "agent_id": "01a12b98-680e-7372-91e9-1c8dfa0c42f0",
+      "nickname": "Turing the 2nd",
+      "group": "G2",
+      "phase": "source",
+      "status": "completed",
+      "result": "Both sources complete; metadata assembly syntax and receipt display errors recovered before generation; excluded previews/example/bibliography fragments disclosed; no abstract/conclusion prose displayed."
+    },
+    {
+      "agent_id": "01a12b98-6843-73b0-b9fa-93cedd863f07",
+      "nickname": "Kant the 2nd",
+      "group": "G3",
+      "phase": "source",
+      "status": "completed",
+      "result": "Sources and receipts complete; A06 cited appendices absent and extraction defects; excluded metadata abstract/preview fragments disclosed."
+    }
+  ],
+  "writing": [
+    {
+      "phase": "initial",
+      "group": "G1",
+      "sample": 1,
+      "output": "raw/initial_G1_1.json",
+      "agent_id": "01a12baa-a409-7e12-b977-0e9de5286296",
+      "nickname": "Epicurus the 2nd",
+      "status": "completed",
+      "result": "`/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/initial_G1_1.json`\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "initial",
+      "group": "G1",
+      "sample": 2,
+      "output": "raw/initial_G1_2.json",
+      "agent_id": "01a12baa-a444-75e2-afa1-aeb1e2d31c39",
+      "nickname": "Erdos the 2nd",
+      "status": "completed",
+      "result": "`/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/initial_G1_2.json`\n\nInitial output truncation resolved by full rereads. Excluded-source exposure: none."
+    },
+    {
+      "phase": "initial",
+      "group": "G2",
+      "sample": 1,
+      "output": "raw/initial_G2_1.json",
+      "agent_id": "01a12baa-a469-7e03-abb4-b7a7c0c7d6d8",
+      "nickname": "Averroes the 2nd",
+      "status": "completed",
+      "result": "`/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/initial_G2_1.json`\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "initial",
+      "group": "G2",
+      "sample": 2,
+      "output": "raw/initial_G2_2.json",
+      "agent_id": "01a12baa-a4a2-78c3-acfc-3757b28bbc3b",
+      "nickname": "Nash the 2nd",
+      "status": "completed",
+      "result": "[initial_G2_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/initial_G2_2.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "initial",
+      "group": "G3",
+      "sample": 1,
+      "output": "raw/initial_G3_1.json",
+      "agent_id": "01a12baa-a4d4-7533-9367-09d8a9f10365",
+      "nickname": "Parfit the 2nd",
+      "status": "completed",
+      "result": "[initial_G3_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/initial_G3_1.json)\n\nA05 read truncation recovered. Excluded-source exposure: none."
+    },
+    {
+      "phase": "initial",
+      "group": "G3",
+      "sample": 2,
+      "output": "raw/initial_G3_2.json",
+      "agent_id": "01a12baa-a607-75f0-b9d2-9cce1f629e54",
+      "nickname": "Kuhn the 2nd",
+      "status": "completed",
+      "result": "`/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/initial_G3_2.json`\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "baseline",
+      "group": "G1",
+      "sample": 1,
+      "output": "raw/baseline_G1_1.json",
+      "agent_id": "01a12baf-1cab-7463-a207-de2eeec4c1e8",
+      "nickname": "Darwin the 2nd",
+      "status": "completed",
+      "result": "[/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/baseline_G1_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/baseline_G1_1.json)\n\nOperational problem: guide output truncation, resolved by rereading. Excluded-source exposure: none."
+    },
+    {
+      "phase": "candidate",
+      "group": "G1",
+      "sample": 1,
+      "output": "raw/candidate_G1_1.json",
+      "agent_id": "01a12baf-1cd4-7a31-b751-4ada875bd206",
+      "nickname": "Copernicus the 2nd",
+      "status": "completed",
+      "result": "[candidate_G1_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/candidate_G1_1.json)\n\nOperational: truncated guide output was recovered by rereading. Excluded-source exposure: none."
+    },
+    {
+      "phase": "baseline",
+      "group": "G1",
+      "sample": 2,
+      "output": "raw/baseline_G1_2.json",
+      "agent_id": "01a12baf-1cfc-7662-897d-8e5a6e0673e6",
+      "nickname": "Helmholtz the 2nd",
+      "status": "completed",
+      "result": "`/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/baseline_G1_2.json`\n\nOperational problems: initial read-output truncation, recovered.\nExcluded-source exposure: none."
+    },
+    {
+      "phase": "candidate",
+      "group": "G1",
+      "sample": 2,
+      "output": "raw/candidate_G1_2.json",
+      "agent_id": "01a12baf-1d25-7c71-8dce-57d2844407cb",
+      "nickname": "Carson the 2nd",
+      "status": "completed",
+      "result": "[candidate_G1_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/candidate_G1_2.json)\n\nOperational problem: initial read truncation, resolved by rereading permitted files. Excluded-source exposure: none."
+    },
+    {
+      "phase": "baseline",
+      "group": "G2",
+      "sample": 1,
+      "output": "raw/baseline_G2_1.json",
+      "agent_id": "01a12baf-1d5a-7951-8c3f-34806f9254f6",
+      "nickname": "Jason the 2nd",
+      "status": "completed",
+      "result": "[/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/baseline_G2_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/baseline_G2_1.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "candidate",
+      "group": "G2",
+      "sample": 1,
+      "output": "raw/candidate_G2_1.json",
+      "agent_id": "01a12baf-1d98-7903-86ec-767f6ae391b6",
+      "nickname": "Bohr the 2nd",
+      "status": "completed",
+      "result": "[candidate_G2_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/candidate_G2_1.json)\n\nOperational: read-output truncation resolved by rereading permitted files. Excluded-source exposure: none."
+    },
+    {
+      "phase": "baseline",
+      "group": "G2",
+      "sample": 2,
+      "output": "raw/baseline_G2_2.json",
+      "agent_id": "01a12bb1-6da1-7912-bded-b5d6f8e9a4fc",
+      "nickname": "Bernoulli the 2nd",
+      "status": "completed",
+      "result": "[baseline_G2_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/baseline_G2_2.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "candidate",
+      "group": "G2",
+      "sample": 2,
+      "output": "raw/candidate_G2_2.json",
+      "agent_id": "01a12bb2-a5c2-7930-9dce-f3d7680ca881",
+      "nickname": "Pascal the 2nd",
+      "status": "completed",
+      "result": "[candidate_G2_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/candidate_G2_2.json)\n\nOperational issue: initial output truncation, resolved with bounded reads. Excluded-source exposure: none."
+    },
+    {
+      "phase": "baseline",
+      "group": "G3",
+      "sample": 1,
+      "output": "raw/baseline_G3_1.json",
+      "agent_id": "01a12bb2-a5f9-7982-b21b-966cbc28dfa0",
+      "nickname": "Noether the 2nd",
+      "status": "completed",
+      "result": "[baseline_G3_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/baseline_G3_1.json)\n\nOperational problem: read-output truncation, recovered using allowed files.\nExcluded-source exposure: none."
+    },
+    {
+      "phase": "candidate",
+      "group": "G3",
+      "sample": 1,
+      "output": "raw/candidate_G3_1.json",
+      "agent_id": "01a12bb2-a620-7f91-8719-52cddc8dfe2d",
+      "nickname": "Beauvoir the 2nd",
+      "status": "completed",
+      "result": "[candidate_G3_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/candidate_G3_1.json)\n\nOperational problem: truncated guide output was reread in full. Excluded-source exposure: none."
+    },
+    {
+      "phase": "baseline",
+      "group": "G3",
+      "sample": 2,
+      "output": "raw/baseline_G3_2.json",
+      "agent_id": "01a12bb2-a646-73b2-9d86-4d03c1f70b57",
+      "nickname": "Maxwell the 2nd",
+      "status": "completed",
+      "result": "[baseline_G3_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/baseline_G3_2.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "candidate",
+      "group": "G3",
+      "sample": 2,
+      "output": "raw/candidate_G3_2.json",
+      "agent_id": "01a12bb2-a66e-7272-99c5-0b3ff8707f34",
+      "nickname": "Harvey the 2nd",
+      "status": "completed",
+      "result": "[candidate_G3_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/candidate_G3_2.json)\n\nOperational problems: truncated guide output was recovered.\nExcluded-source exposure: none."
+    }
+  ],
+  "assessment": [
+    {
+      "phase": "review",
+      "group": "G1",
+      "number": 1,
+      "output": "raw/review_G1_1.json",
+      "agent_id": "01a12bb6-b68c-7850-b871-6c1988724a4e",
+      "nickname": "Aquinas the 2nd",
+      "status": "completed",
+      "result": "[review_G1_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/review_G1_1.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "review",
+      "group": "G1",
+      "number": 2,
+      "output": "raw/review_G1_2.json",
+      "agent_id": "01a12bb6-b6bc-7e81-b5d8-ed566c6df443",
+      "nickname": "Volta the 2nd",
+      "status": "completed",
+      "result": "[review_G1_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/review_G1_2.json)\n\nOperational problem: initial read-output truncation resolved with smaller source ranges.\nExcluded-source exposure: none."
+    },
+    {
+      "phase": "reader",
+      "group": "G1",
+      "number": 1,
+      "output": "raw/reader_G1_1.json",
+      "agent_id": "01a12bb6-b6e3-7503-94fb-261cceb0b4af",
+      "nickname": "Feynman the 2nd",
+      "status": "completed",
+      "result": "/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/reader_G1_1.json\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "reader",
+      "group": "G1",
+      "number": 2,
+      "output": "raw/reader_G1_2.json",
+      "agent_id": "01a12bb6-b708-7c02-8bf2-70893bb79279",
+      "nickname": "Leibniz the 2nd",
+      "status": "completed",
+      "result": "`/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/reader_G1_2.json`\n\nNo operational problems or excluded-source exposure."
+    },
+    {
+      "phase": "review",
+      "group": "G2",
+      "number": 1,
+      "output": "raw/review_G2_1.json",
+      "agent_id": "01a12bb6-b72f-7a41-b544-a22abb88d2c4",
+      "nickname": "Tesla the 2nd",
+      "status": "completed",
+      "result": "[review_G2_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/review_G2_1.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "review",
+      "group": "G2",
+      "number": 2,
+      "output": "raw/review_G2_2.json",
+      "agent_id": "01a12bb6-b756-7693-954b-392108530af7",
+      "nickname": "Ramanujan the 2nd",
+      "status": "completed",
+      "result": "[review_G2_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/review_G2_2.json)\n\nOperational problems: source output truncation; missing passages reread.\nExcluded-source exposure: none."
+    },
+    {
+      "phase": "reader",
+      "group": "G2",
+      "number": 1,
+      "output": "raw/reader_G2_1.json",
+      "agent_id": "01a12bb7-f3ec-7823-8b48-cefab6a4ba9a",
+      "nickname": "Halley the 2nd",
+      "status": "completed",
+      "result": "[reader_G2_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/reader_G2_1.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "reader",
+      "group": "G2",
+      "number": 2,
+      "output": "raw/reader_G2_2.json",
+      "agent_id": "01a12bb8-cd2c-7e03-94fa-6f5e3f01bc61",
+      "nickname": "Faraday the 2nd",
+      "status": "completed",
+      "result": "Saved: /Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/reader_G2_2.json\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "review",
+      "group": "G3",
+      "number": 1,
+      "output": "raw/review_G3_1.json",
+      "agent_id": "01a12bb8-ec57-7e01-8b1d-0ecb767d4e66",
+      "nickname": "Aristotle the 2nd",
+      "status": "completed",
+      "result": "[review_G3_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/review_G3_1.json)\n\nOperational: initial A05 read truncation resolved with bounded reads. Excluded-source exposure: none."
+    },
+    {
+      "phase": "review",
+      "group": "G3",
+      "number": 2,
+      "output": "raw/review_G3_2.json",
+      "agent_id": "01a12bb9-070b-7252-9099-9450b29f96ff",
+      "nickname": "Arendt the 2nd",
+      "status": "completed",
+      "result": "[review_G3_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/review_G3_2.json)\n\nOperational: initial A05 display truncation resolved using source-only excerpts. Excluded-source exposure: none."
+    },
+    {
+      "phase": "reader",
+      "group": "G3",
+      "number": 1,
+      "output": "raw/reader_G3_1.json",
+      "agent_id": "01a12bb9-69ae-7263-a224-2ca192f93279",
+      "nickname": "Sagan the 2nd",
+      "status": "completed",
+      "result": "`/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/reader_G3_1.json`\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "reader",
+      "group": "G3",
+      "number": 2,
+      "output": "raw/reader_G3_2.json",
+      "agent_id": "01a12bb9-957a-7f91-b393-e5a9efc4e068",
+      "nickname": "Anscombe the 2nd",
+      "status": "completed",
+      "result": "/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/reader_G3_2.json\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "audit",
+      "group": "G1",
+      "number": 1,
+      "output": "raw/audit_G1_1.json",
+      "agent_id": "01a12bbc-73c3-7190-8eec-294accc7c768",
+      "nickname": "Gauss the 2nd",
+      "status": "completed",
+      "result": "[/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/audit_G1_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/audit_G1_1.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "audit",
+      "group": "G1",
+      "number": 2,
+      "output": "raw/audit_G1_2.json",
+      "agent_id": "01a12bbc-73f8-79e3-8641-b695c86918dd",
+      "nickname": "Pasteur the 2nd",
+      "status": "completed",
+      "result": "[audit_G1_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/audit_G1_2.json)\n\nOperational problems: none. Excluded-source exposure: none."
+    },
+    {
+      "phase": "audit",
+      "group": "G2",
+      "number": 1,
+      "output": "raw/audit_G2_1.json",
+      "agent_id": "01a12bbc-741c-77e0-b345-65644a425e4e",
+      "nickname": "Plato the 2nd",
+      "status": "completed",
+      "result": "[audit_G2_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/audit_G2_1.json)\n\nOperational problems: initial display truncation, resolved with separate source reads. Excluded-source exposure: none."
+    },
+    {
+      "phase": "audit",
+      "group": "G2",
+      "number": 2,
+      "output": "raw/audit_G2_2.json",
+      "agent_id": "01a12bbc-7442-79b3-b73b-d8c3c45ad9eb",
+      "nickname": "Dalton the 2nd",
+      "status": "completed",
+      "result": "[audit_G2_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/audit_G2_2.json)\n\nOperational problems: truncated tool display recovered by rereading affected source ranges. Excluded-source exposure: none."
+    },
+    {
+      "phase": "audit",
+      "group": "G3",
+      "number": 1,
+      "output": "raw/audit_G3_1.json",
+      "agent_id": "01a12bbc-7465-73a2-9278-1b319523cc62",
+      "nickname": "Ohm the 2nd",
+      "status": "completed",
+      "result": "[/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/audit_G3_1.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/audit_G3_1.json)\n\nOperational issue: initial read output was truncated; resolved with bounded reads. Excluded-source exposure: none."
+    },
+    {
+      "phase": "audit",
+      "group": "G3",
+      "number": 2,
+      "output": "raw/audit_G3_2.json",
+      "agent_id": "01a12bbc-748c-7812-b830-ff940752690e",
+      "nickname": "Mencius the 2nd",
+      "status": "completed",
+      "result": "[audit_G3_2.json](/Users/liyufeng/code/super_writer_abstract_transfer_eval_20261011/raw/audit_G3_2.json)\n\nSource-display truncation handled by scoped rereads. Excluded-source exposure: none."
+    }
+  ]
+}

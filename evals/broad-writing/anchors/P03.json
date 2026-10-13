@@ -1,0 +1,47 @@
+{
+  "id": "P03",
+  "units": {
+    "abstract": [
+      {
+        "role": "core",
+        "reader_question": "How can exact attention run faster without approximating its output?",
+        "expected_relation": "Reducing non-matrix work and reorganizing GPU work assignment improves hardware use while preserving the attention computation.",
+        "source_locator": {"pdf_pages": [4, 7], "section": "3.1-3.3", "substring": "3.1 ALGORITHM"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which performance level and workloads support the acceleration claim?",
+        "expected_relation": "Attention-kernel timing and full-model training throughput describe different scopes; gains depend on the measured shapes, masks and hardware.",
+        "source_locator": {"pdf_pages": [8, 9], "section": "4.1-4.3", "substring": "4.1 BENCHMARKING ATTENTION FOR TRAINING"}
+      }
+    ],
+    "methods": [
+      {
+        "role": "core",
+        "reader_question": "How do scheduling choices connect to the attention bottlenecks?",
+        "expected_relation": "Sequence-level blocks improve occupancy, while independently assigned warp outputs reduce communication; decoding instead emphasizes parallel cache loading.",
+        "source_locator": {"pdf_pages": [6, 7], "section": "3.2-3.3", "substring": "3.2 PARALLELISM"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "What makes the different benchmark comparisons interpretable?",
+        "expected_relation": "Training kernels, multi-query decoding and multi-GPU training have distinct workload controls and timing or FLOP conventions that constrain comparison.",
+        "source_locator": {"pdf_pages": [8, 9], "section": "4.1-4.3", "substring": "Benchmark setting:"}
+      }
+    ],
+    "results": [
+      {
+        "role": "core",
+        "reader_question": "How do kernel measurements relate to full-model performance?",
+        "expected_relation": "Kernel efficiency and end-to-end throughput are related but need not improve by the same factor; the complete workload matrix connects the two measurements.",
+        "source_locator": {"pdf_pages": [8, 9], "section": "4.1 and 4.3, Figure 4 and Table 1", "substring": "Table1: Trainingspeed"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "What limits interpretation of the reported throughput?",
+        "expected_relation": "Unavailable baseline runs, FLOP-count conventions and unexploited H100 features bound the evidence rather than establishing universal hardware or workload gains.",
+        "source_locator": {"pdf_pages": [8, 14], "section": "4.1, 4.3 and Appendix B", "substring": "We choose to follow the formula from the literature"}
+      }
+    ]
+  }
+}

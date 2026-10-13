@@ -1,0 +1,29 @@
+{
+  "seed": 20261013,
+  "domains": 6,
+  "papers": 12,
+  "samples": 3,
+  "units": {
+    "abstract": [
+      150,
+      200
+    ],
+    "methods": [
+      110,
+      160
+    ],
+    "results": [
+      120,
+      180
+    ]
+  },
+  "notes_max": 120,
+  "revisions_per_condition": 1,
+  "expected_initial_passages": 108,
+  "expected_final_passages": 216,
+  "expected_pairs": 108,
+  "preference_reviewers_per_domain": 2,
+  "reader_contexts_per_domain": 2,
+  "source_auditors_per_domain": 1,
+  "raw_schema": "cases array, id and string abstract/methods/results/notes"
+}

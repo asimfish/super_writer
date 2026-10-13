@@ -1,0 +1,453 @@
+{
+  "audits": [
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "abstract",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Learned residual action codes, observation/goal-conditioned prediction, continuous offset, and single-pass generation.",
+          "assessment": "Supported by the two-stage tokenizer/predictor operations and decoded-action offset. The contrast with iterative diffusion describes action generation, not a claim that every baseline is slower.",
+          "source": "lee24y.pdf, PDF pp. 3-4, Sections 3.2-3.4, Figure 2 and Equations 4-7; p. 6, Section 4.4."
+        },
+        {
+          "claim": "Competitive simulated performance and diverse behavior, with Image Kitchen and BlockPush exceptions.",
+          "assessment": "Supported as a broad summary: Table 2 contains both named diffusion advantages. Diversity is reported through a limited entropy proxy and qualitative rollouts; no universal entropy superiority or complete mode coverage is asserted.",
+          "source": "lee24y.pdf, PDF p. 5, Tables 1-2; p. 6, Sections 4.2-4.3 and Figure 4; p. 8, Section 4.7 Results."
+        },
+        {
+          "claim": "Two-phase 19/30 versus 11/30, compared with single-phase 47/50 versus 45/50.",
+          "assessment": "Exact aggregate counts match the modified DiffusionPolicy-T comparison. The larger sequence advantage is aggregate, not a claim of winning every individual task.",
+          "source": "lee24y.pdf, PDF p. 8, Section 4.7 and Table 5."
+        },
+        {
+          "claim": "Onboard CPU latency 207.25 versus 5243.82 ms under fully closed-loop control.",
+          "assessment": "Exact CPU values and rollout protocol are supported. Controller noise is the authors' explanation for open-loop failure on this platform, not an independently isolated or universal cause.",
+          "source": "lee24y.pdf, PDF p. 9, Section 4.7 Practical concerns and Table 7."
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "abstract",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Quantize an embedding and its residual, sum code vectors, decode, and add an offset.",
+          "assessment": "Supported by the actual residual quantization and output construction. The sequential encoding description does not falsely specify an autoregressive predictor configuration.",
+          "source": "lee24y.pdf, PDF pp. 3-4, Sections 3.2-3.3, Figure 2 and Equations 2-7."
+        },
+        {
+          "claim": "Optional goals, single-pass prediction, competitive simulation results, and two diffusion exceptions.",
+          "assessment": "Supported. The performance statement allows task-dependent exceptions and does not turn the entropy report into an unqualified diversity ranking.",
+          "source": "lee24y.pdf, PDF p. 4, Section 3.4; p. 5, Tables 1-2; p. 6, Sections 4.3-4.4."
+        },
+        {
+          "claim": "Similar single-phase totals but larger two-phase advantage over adapted diffusion.",
+          "assessment": "47/50 versus 45/50 and 19/30 versus 11/30 match Table 5. Adaptation of the diffusion baseline is preserved.",
+          "source": "lee24y.pdf, PDF p. 8, Section 4.7 and Table 5."
+        },
+        {
+          "claim": "Closed-loop execution and fresh-action CPU cost on the low-cost robot.",
+          "assessment": "The protocol and 207.25/5243.82 ms CPU values match. Noise-induced receding-horizon failure is reported by the authors for this robot; the passage does not generalize it to other hardware.",
+          "source": "lee24y.pdf, PDF p. 9, Section 4.7 Practical concerns and Table 7."
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "results",
+      "label": "A",
+      "status": "concern",
+      "findings": [
+        {
+          "claim": "Larger aggregate advantage on two-phase than single-phase trials under closed-loop execution.",
+          "assessment": "Supported: ten trials per task give 47/50 versus 45/50 and 19/30 versus 11/30, with modified DiffusionPolicy-T.",
+          "source": "lee24y.pdf, PDF p. 8, Section 4.7 and Table 5; p. 9, Practical concerns."
+        },
+        {
+          "claim": "Diffusion wins the both-doors task, while VQ-BeT exhibits both closing orders.",
+          "assessment": "Supported: the individual counts are 6/10 versus 5/10, and both VQ-BeT orders are a reported qualitative observation, not quantified order frequencies.",
+          "source": "lee24y.pdf, PDF p. 8, Table 5 and Section 4.7 Results."
+        },
+        {
+          "claim": "Final completion rates of all four longer sequences are at least three times diffusion's.",
+          "assessment": "Source-reporting uncertainty, not a numerical mismatch: final-stage ratios are 6/2, 3/1, 7/2, and 6/1. Joint completion of every stage is not unambiguously defined by Table 6, whose Task 4 baseline stage counts increase from 1/10 to 2/10; the authors themselves report end-of-task success.",
+          "source": "lee24y.pdf, PDF pp. 8-9, Section 4.7 Results and Table 6."
+        },
+        {
+          "claim": "CPU inference advantage matters under feedback at every step.",
+          "assessment": "Supported by 207.25 versus 5243.82 ms and the fully closed-loop protocol. The controller-noise explanation remains an author attribution confined to this platform.",
+          "source": "lee24y.pdf, PDF p. 9, Section 4.7 Practical concerns and Table 7."
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "results",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Single-phase 47/50 versus 45/50 and two-phase 19/30 versus 11/30.",
+          "assessment": "Supported aggregate comparison against the adapted diffusion baseline; it does not assert an advantage in every sequence.",
+          "source": "lee24y.pdf, PDF p. 8, Section 4.7 and Table 5."
+        },
+        {
+          "claim": "Final success rate is at least three times diffusion's on each longer task.",
+          "assessment": "Supported as the authors' reported final-stage success: 6/10 versus 2/10, 3/10 versus 1/10, 7/10 versus 2/10, and 6/10 versus 1/10. This does not establish superiority at every intermediate stage.",
+          "source": "lee24y.pdf, PDF pp. 8-9, Section 4.7 Results and Table 6."
+        },
+        {
+          "claim": "Both fridge/toaster closing orders are retained.",
+          "assessment": "Supported qualitative observation in that task. It does not imply that the diffusion baseline has only one order or that every task preserves all modes.",
+          "source": "lee24y.pdf, PDF p. 8, Section 4.7 Results."
+        },
+        {
+          "claim": "Fully closed-loop hardware evaluation with 207.25 versus 5243.82 ms onboard CPU inference.",
+          "assessment": "Supported protocol and exact hardware-specific values. The open-loop noise explanation is reported by the authors, not an independently isolated mechanism.",
+          "source": "lee24y.pdf, PDF p. 9, Section 4.7 Practical concerns and Table 7."
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "abstract",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Learn latent action tokens, predict them from history/optional goals, refine decoded actions, and generate in one pass.",
+          "assessment": "Supported. The contrast with direct action clustering concerns the learned latent tokenizer, not a claim that no quantization or clustering-like operation occurs.",
+          "source": "lee24y.pdf, PDF pp. 3-4, Sections 3.1-3.4 and Figure 2; p. 6, Section 4.4."
+        },
+        {
+          "claim": "Competitive simulated performance and diversity, with diffusion leading on unconditional Image Kitchen and BlockPush.",
+          "assessment": "Supported by the performance tables and reported diversity evidence. No precise or universal entropy advantage is asserted despite source-reporting issues in Figure 4.",
+          "source": "lee24y.pdf, PDF p. 5, Tables 1-2; p. 6, Sections 4.2-4.3 and Figure 4."
+        },
+        {
+          "claim": "47/50 versus 45/50, 19/30 versus 11/30, and at least threefold final success counts on four longer tasks.",
+          "assessment": "The aggregate counts and final-stage ratios match the real-task tables. The wording specifies final counts rather than claiming every intermediate stage is better.",
+          "source": "lee24y.pdf, PDF pp. 8-9, Section 4.7 and Tables 5-6."
+        },
+        {
+          "claim": "RTX A4000 inference 18.06 versus 573.49 ms with all policies closed-loop.",
+          "assessment": "Supported GPU values and protocol. These are workstation GPU timings, not onboard CPU latency, and the passage names the GPU correctly.",
+          "source": "lee24y.pdf, PDF p. 9, Section 4.7 Practical concerns and Table 7."
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "abstract",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Residual latent action codes plus continuous offsets provide single-pass behavior generation.",
+          "assessment": "Supported operations. The emphasis on action fidelity is consistent with the offset design and ablation interpretation, without asserting a fidelity guarantee.",
+          "source": "lee24y.pdf, PDF pp. 3-4, Sections 3.2-3.4 and Figure 2; pp. 6-7, Sections 4.4 and 4.6."
+        },
+        {
+          "claim": "Competitive simulation performance and multiple modes, with two unconditional diffusion exceptions.",
+          "assessment": "Supported summary of task performance and reported diversity; neither all-task superiority nor complete training-distribution matching is claimed.",
+          "source": "lee24y.pdf, PDF p. 5, Tables 1-2; p. 6, Sections 4.2-4.3; p. 8, Section 4.7 Results."
+        },
+        {
+          "claim": "19/30 versus 11/30 two-task trials and at least threefold longer-task final counts.",
+          "assessment": "Supported by Tables 5-6 against modified DiffusionPolicy-T; similar standalone performance is 47/50 versus 45/50.",
+          "source": "lee24y.pdf, PDF pp. 8-9, Section 4.7 and Tables 5-6."
+        },
+        {
+          "claim": "Robot-specific receding-horizon failure motivates closed-loop execution; GPU latency is 18.06 versus 573.49 ms.",
+          "assessment": "Supported as the authors' practical report and exact workstation GPU measurement, with the platform-specific scope preserved.",
+          "source": "lee24y.pdf, PDF p. 9, Section 4.7 Practical concerns and Table 7."
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "results",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Larger sequence advantage: 47/50 versus 45/50 standalone and 19/30 versus 11/30 two-task.",
+          "assessment": "Exact aggregate comparison is supported against modified DiffusionPolicy-T. It establishes the observed aggregate difference, not a causal effect of horizon length alone.",
+          "source": "lee24y.pdf, PDF p. 8, Section 4.7 and Table 5."
+        },
+        {
+          "claim": "Each of four longer tasks has at least three times the baseline's final success count over ten trials.",
+          "assessment": "Supported final-stage counts: 6 versus 2, 3 versus 1, 7 versus 2, and 6 versus 1. Counts at earlier stages need not follow this ranking.",
+          "source": "lee24y.pdf, PDF p. 9, Table 6."
+        },
+        {
+          "claim": "Both fridge/toaster orders accompany the observed sequence performance.",
+          "assessment": "Supported qualitative diversity report, not an isolated explanation for the aggregate success advantage.",
+          "source": "lee24y.pdf, PDF p. 8, Section 4.7 Results."
+        },
+        {
+          "claim": "Closed-loop evaluation and 18.06/573.49 ms RTX A4000 inference.",
+          "assessment": "Supported protocol and exact GPU timing. Controller imprecision is the authors' explanation for this robot's receding-horizon failure.",
+          "source": "lee24y.pdf, PDF p. 9, Section 4.7 Practical concerns and Table 7."
+        }
+      ]
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "results",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Similar standalone totals but different two-task completion totals.",
+          "assessment": "Supported: 47/50 versus 45/50 and 19/30 versus 11/30. This is an aggregate association, not proof that horizon alone causes the gap.",
+          "source": "lee24y.pdf, PDF p. 8, Table 5 and Section 4.7 Results."
+        },
+        {
+          "claim": "At least threefold final success counts across four longer tasks, ten trials each.",
+          "assessment": "Supported literally by the last reported-stage counts in Table 6; no all-stage dominance is implied.",
+          "source": "lee24y.pdf, PDF p. 9, Table 6."
+        },
+        {
+          "claim": "Fully closed-loop rollout and workstation GPU inference of 18.06 versus 573.49 ms.",
+          "assessment": "Supported. The reported receding-horizon failure is limited to the low-cost platform, and the named GPU avoids conflating workstation and onboard CPU measurements.",
+          "source": "lee24y.pdf, PDF p. 9, Section 4.7 Practical concerns and Table 7."
+        },
+        {
+          "claim": "Both closing orders show diversity alongside the aggregate advantage.",
+          "assessment": "Supported as an accompanying qualitative observation. It does not claim diversity causes the gain or that VQ-BeT wins the both-doors task itself, where it scores 5/10 versus diffusion's 6/10.",
+          "source": "lee24y.pdf, PDF p. 8, Section 4.7 Results and Table 5."
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "abstract",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Separate IL/RL proposals are selected with target Q in interaction and bootstrapping, greedily or through value-weighted sampling.",
+          "assessment": "Supported operations, including the soft variant. Alignment concerns the hybrid selection rule; online and bootstrap proposals still use the current and target RL actors respectively.",
+          "source": "p056.pdf, PDF pp. 3-4, Section IV-A, Equations 1-4."
+        },
+        {
+          "claim": "Separate architecture preferences and proposal-removal losses despite actor dropout.",
+          "assessment": "Supported in Robomimic: ResNet-18 is stronger for BC, the proposed network for RL, and Square ablations retain dropout when removing proposals. These are configuration-specific effects, not universal necessities.",
+          "source": "p056.pdf, PDF pp. 7-8, Section V-D, Figures 5-7."
+        },
+        {
+          "claim": "Robomimic advantage but similar Meta-World performance to fine-tuning.",
+          "assessment": "Supported distinction. Meta-World disables IBRL actor dropout and uses ConvNets; Robomimic uses stronger pixel architecture and tests pixel/state settings.",
+          "source": "p056.pdf, PDF pp. 6-7, Section V-C, Figures 3-4."
+        },
+        {
+          "claim": "Hang: 30 demonstrations, 30K steps, 85/65/35/15 percent success, twenty evaluations, and manual resets.",
+          "assessment": "All values and conditions match the real-task evaluation; the result is not an in-training exploration success rate.",
+          "source": "p056.pdf, PDF pp. 8-9, Sections VI-A and VI-B, Table I."
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "abstract",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Imitation supplies proposals during interaction and target computation without a BC regularizer on the RL actor.",
+          "assessment": "Supported central distinction from regularized fine-tuning. IBRL also initializes replay with demonstrations; the passage does not deny that additional use.",
+          "source": "p056.pdf, PDF pp. 3-4, Section IV-A; pp. 5-6, Section V-B."
+        },
+        {
+          "claim": "Different visual architectures, actor dropout, and complementary proposal effects.",
+          "assessment": "Supported by architecture comparisons and Square component ablations. The proposal-removal findings hold with dropout retained and do not claim an isolated causal explanation of every task.",
+          "source": "p056.pdf, PDF pp. 7-8, Section V-D, Figures 5-7."
+        },
+        {
+          "claim": "Faster learning on Robomimic, while fine-tuning is similar on Meta-World.",
+          "assessment": "Supported under the paper's differing task/implementation conditions, without claiming strict superiority over RFT on the simpler benchmark.",
+          "source": "p056.pdf, PDF pp. 5-7, Sections V-A and V-C, Figures 3-4."
+        },
+        {
+          "claim": "Only IBRL exceeds BC on Hang: 85 versus 65, 35, and 15 percent after 30K steps using 30 demonstrations and manual resets.",
+          "assessment": "Supported within the tested budget. Table I reports checkpoint evaluations rather than a guaranteed or all-task improvement over BC.",
+          "source": "p056.pdf, PDF pp. 8-9, Sections VI-A and VI-B, Table I."
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "results",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Hang checkpoint success 85/35/15 percent versus BC's 65, with 30 demonstrations and 30K RL steps.",
+          "assessment": "Exact values and budgets match; twenty matched-condition evaluations support a twenty-percentage-point, not twenty-percent-relative, gain over BC.",
+          "source": "p056.pdf, PDF p. 9, Section VI-B Hang and Table I."
+        },
+        {
+          "claim": "Hardware uses sparse success rewards and manual resets.",
+          "assessment": "Supported conditions; this is not autonomous resetting or dense-reward training.",
+          "source": "p056.pdf, PDF p. 8, Section VI-A; pp. 9-10, Limitations and Future Work."
+        },
+        {
+          "claim": "Square ablations show proposal benefits beyond actor regularization.",
+          "assessment": "Supported by dropout-enhanced baselines and removals with dropout retained. Dropout gains are modality-dependent: RFT improves in pixel/state, RLPD particularly in state.",
+          "source": "p056.pdf, PDF p. 7, Section V-D, Figures 5-6."
+        },
+        {
+          "claim": "Ablations establish component contributions while Hang separately documents reference-policy improvement.",
+          "assessment": "Supported separation of evidence: component interventions occur on simulated Square, and Hang supplies the hardware outcome. No Hang-specific causal ablation is claimed.",
+          "source": "p056.pdf, PDF p. 7, Section V-D; p. 9, Section VI-B and Table I."
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "results",
+      "label": "B",
+      "status": "concern",
+      "findings": [
+        {
+          "claim": "Hang improves from 65 to 85 percent, while RFT/RLPD achieve 35/15 percent, using 30 demonstrations and 30K steps.",
+          "assessment": "Supported exact values and twenty-percentage-point subtraction. Twenty matched-condition checkpoint evaluations, sparse reward, and manual training resets match the protocol.",
+          "source": "p056.pdf, PDF pp. 8-9, Sections VI-A and VI-B, Table I."
+        },
+        {
+          "claim": "Square proposal-removal and dropout-enhanced-baseline comparisons favor IBRL.",
+          "assessment": "Supported within simulated Square: removing proposals degrades performance with dropout retained, and enhanced baselines remain less sample efficient.",
+          "source": "p056.pdf, PDF p. 7, Section V-D, Figures 5-6."
+        },
+        {
+          "claim": "The Square ablations distinguish this Hang benefit from actor regularization alone.",
+          "assessment": "Ambiguous cross-setting causal attribution: if 'this benefit' means the preceding twenty-point Hang gain, Square ablations do not isolate its hardware cause. They support proposal contributions on Square; a general algorithm-level interpretation is possible, but no Hang proposal/dropout ablation is supplied.",
+          "source": "p056.pdf, PDF p. 7, Section V-D, Figures 5-6; p. 9, Section VI-B Hang and Table I."
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "abstract",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Separate imitation reference and higher-Q selection in both interaction and TD targets, without an imitation loss on the RL actor.",
+          "assessment": "Supported for greedy IBRL, used in the selected pixel Square and real Hang results. State-based experiments use the soft variant; the passage gives no specific state-result claim requiring greedy selection.",
+          "source": "p056.pdf, PDF pp. 3-4, Section IV-A, Equations 1-4."
+        },
+        {
+          "claim": "Separate encoders, actor dropout, shallow ViT critic, and proposal-removal effects.",
+          "assessment": "Supported by the described architecture and Robomimic ablations. Removing proposals with dropout retained supports contributions beyond dropout in those tested settings.",
+          "source": "p056.pdf, PDF pp. 4-5, Section IV-C; pp. 7-8, Section V-D, Figures 5-7."
+        },
+        {
+          "claim": "Similar Meta-World performance to RFT; pixel Square solved within 500K with fifty demonstrations while baselines remain below sixty percent.",
+          "assessment": "Supported as the authors' reported solve characterization, not a claim of perfect Square success. The fifty-demonstration and pixel conditions are correctly attached.",
+          "source": "p056.pdf, PDF p. 5, Section V-A; pp. 6-7, Section V-C and Figures 3-4."
+        },
+        {
+          "claim": "Hang 85/65/35/15 percent with thirty demonstrations, 30K steps, twenty evaluations, sparse reward, and manual resets.",
+          "assessment": "Supported exact evaluation values and hardware conditions.",
+          "source": "p056.pdf, PDF pp. 8-9, Sections VI-A and VI-B, Table I."
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "abstract",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Standalone imitation proposals aid interaction and value targets without a BC constraint on the RL actor.",
+          "assessment": "Supported two-proposal mechanism and shared selection-rule structure. The description accommodates greedy or soft selection without claiming a true-return guarantee.",
+          "source": "p056.pdf, PDF pp. 3-4, Section IV-A, Equations 1-4."
+        },
+        {
+          "claim": "Different visual encoders, actor regularization, and proposal contributions beyond dropout.",
+          "assessment": "Supported by the architecture design and Square ablations; the evidence is configuration-specific rather than proof of universal component necessity.",
+          "source": "p056.pdf, PDF pp. 4-5, Section IV-C; pp. 7-8, Section V-D, Figures 5-7."
+        },
+        {
+          "claim": "Meta-World matches RFT; pixel Square uses fifty demonstrations and is solved within 500K with baselines below sixty percent.",
+          "assessment": "Supported distinctions and numerical conditions. Solved repeats the authors' characterization and does not mean a one-hundred-percent curve endpoint.",
+          "source": "p056.pdf, PDF pp. 5-7, Sections V-A and V-C, Figures 3-4."
+        },
+        {
+          "claim": "Real Hang yields 85 percent versus 65/35/15 percent after 30K steps, with thirty demonstrations, twenty evaluations, and manual resets.",
+          "assessment": "Supported values and bounded hardware protocol, not autonomous deployment or universal improvement over imitation.",
+          "source": "p056.pdf, PDF pp. 8-9, Sections VI-A and VI-B, Table I."
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "results",
+      "label": "A",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Hang improves over BC while the two RL baselines fall below it under a common 30K budget.",
+          "assessment": "85/65/35/15 percent, thirty demonstrations, and twenty matched-condition evaluations are supported. BC is demonstration-trained and does not itself receive the RL interaction budget.",
+          "source": "p056.pdf, PDF p. 9, Section VI-B Hang and Table I."
+        },
+        {
+          "claim": "Drawer reaches 100 percent at 10K steps versus RFT's fifteen and RLPD's zero, using thirty demonstrations.",
+          "assessment": "Exact early-checkpoint values match Table I, including fifteen rather than the prose's less-than-fifteen wording. Perfect success is a finite twenty-trial observation, not a guarantee.",
+          "source": "p056.pdf, PDF p. 9, Section VI-B Drawer and Table I."
+        },
+        {
+          "claim": "These results support bounded policy improvement and interaction efficiency under sparse reward and manual resets.",
+          "assessment": "Supported outcome interpretation: Hang exceeds its reference and early Drawer reaches higher success at the same budget. No unobserved matched-performance efficiency percentage or isolated mechanism is invented.",
+          "source": "p056.pdf, PDF pp. 8-9, Sections VI-A and VI-B, Table I; pp. 9-10, Limitations and Future Work."
+        }
+      ]
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "results",
+      "label": "B",
+      "status": "pass",
+      "findings": [
+        {
+          "claim": "Hang improves by twenty percentage points over BC with 85/65/35/15 percent success.",
+          "assessment": "Supported exact rates and correctly expressed subtraction, with thirty demonstrations, 30K RL steps, and twenty matched-condition evaluations. It does not assign online training to the BC reference.",
+          "source": "p056.pdf, PDF p. 9, Section VI-B Hang and Table I."
+        },
+        {
+          "claim": "Drawer early checkpoint achieves 100 percent versus fifteen/zero at 10K steps with thirty demonstrations.",
+          "assessment": "Supported finite-trial comparison. This establishes the reported early-budget advantage without inventing the steps baselines need to attain equal performance.",
+          "source": "p056.pdf, PDF p. 9, Section VI-B Drawer and Table I."
+        },
+        {
+          "claim": "Hardware training uses sparse binary success reward and manual episode resets.",
+          "assessment": "Supported; reset assistance is retained and no autonomous-reset or dense-reward scope is implied.",
+          "source": "p056.pdf, PDF p. 8, Section VI-A; pp. 9-10, Limitations and Future Work."
+        }
+      ]
+    }
+  ]
+}

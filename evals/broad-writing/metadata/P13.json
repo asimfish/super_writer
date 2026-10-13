@@ -1,0 +1,120 @@
+{
+  "id": "P13",
+  "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+  "domain": "robotics",
+  "venue": "Proceedings of Robotics: Science and Systems XIX",
+  "year": 2023,
+  "metadata_url": "https://www.roboticsproceedings.org/rss19/p016.html",
+  "pdf_url": "https://www.roboticsproceedings.org/rss19/p016.pdf",
+  "pdf_sha256": "8ba87afc999609ed38bf254aa974607aa2a838a812c50fc6b44d0d74052d4fb8",
+  "extracted_sha256": "00b4b3cbe42a98be269c8690bca9b5c525461802d5e8db7ece7af8c14ad80214",
+  "body_sha256": "093a3e6b14c3a2777b869892ecefe98710e41c4d7afa044ace9939e57df944dd",
+  "pages": {
+    "pdf_total": 19,
+    "numbering": "1-based physical PDF pages",
+    "selected_segments": [
+      {
+        "order": 1,
+        "label": "Complete hardware, ACT method, experiments and ablations (Sections III-VI)",
+        "start_string": "III. ALOHA: A LOW-COST OPEN-SOURCE HARDWARE\n",
+        "end_string": "VII. LIMITATIONS AND CONCLUSION\n",
+        "end_mode": "exclusive_boundary",
+        "pdf_pages": [
+          3,
+          11
+        ],
+        "raw_utf8_byte_range": [
+          12310,
+          55235
+        ],
+        "word_count": 7184
+      },
+      {
+        "order": 2,
+        "label": "Complete related supplementary C-F, including detailed architecture, settings, user study and limitations; displaced architecture diagram and hyperparameter tables IV-VIII",
+        "start_string": "C. Detailed Architecture Diagram\n",
+        "end_string": null,
+        "end_mode": "end_of_file",
+        "pdf_pages": [
+          15,
+          19
+        ],
+        "raw_utf8_byte_range": [
+          76406,
+          87044
+        ],
+        "word_count": 1784
+      }
+    ]
+  },
+  "ordered_extraction_segments": [
+    {
+      "order": 1,
+      "label": "Complete hardware, ACT method, experiments and ablations (Sections III-VI)",
+      "start_string": "III. ALOHA: A LOW-COST OPEN-SOURCE HARDWARE\n",
+      "end_string": "VII. LIMITATIONS AND CONCLUSION\n",
+      "end_mode": "exclusive_boundary",
+      "pdf_pages": [
+        3,
+        11
+      ],
+      "raw_utf8_byte_range": [
+        12310,
+        55235
+      ],
+      "word_count": 7184
+    },
+    {
+      "order": 2,
+      "label": "Complete related supplementary C-F, including detailed architecture, settings, user study and limitations; displaced architecture diagram and hyperparameter tables IV-VIII",
+      "start_string": "C. Detailed Architecture Diagram\n",
+      "end_string": null,
+      "end_mode": "end_of_file",
+      "pdf_pages": [
+        15,
+        19
+      ],
+      "raw_utf8_byte_range": [
+        76406,
+        87044
+      ],
+      "word_count": 1784
+    }
+  ],
+  "extraction_command": "pdftotext -raw sources/P13.pdf sources/P13.extracted.txt",
+  "selection_command": "python3 sources/P13.extract.py",
+  "extractor": "Poppler pdftotext 26.03.0",
+  "source_version": {
+    "kind": "official_proceedings_pdf",
+    "fallback_used": false,
+    "retrieved_date": "2026-10-11"
+  },
+  "download_attempts": [
+    {
+      "attempt": 1,
+      "max_time_seconds": 80,
+      "automatic_retries": 0,
+      "bytes": 5781160,
+      "curl_exit_code": 0,
+      "result": "complete official PDF"
+    }
+  ],
+  "prior_family_overlap": "Related action-chunking concept in writing-library.json; exact paper/title not found in pre-generation repository search. Model-pretraining exposure unknown.",
+  "identity_verification": "Official RSS proceedings landing page title, BibTeX year/DOI 10.15607/RSS.2023.XIX.016, and PDF first page.",
+  "body_word_count": 8968,
+  "source_warnings": [
+    "Replacement for P02 download failure, selected before any generation.",
+    "Table III and adjacent prose say three remaining real tasks but display/name four; original source wording and rows retained.",
+    "Stage success ratios are not inferred to be joint trajectory-completion probabilities; tables contain later-stage counts larger than earlier ones.",
+    "Simulation uses three seeds and 50 trials each; hardware uses one seed and 25 trials. Ablation evidence must not silently establish hardware causality."
+  ],
+  "extraction_warnings": [
+    "Raw line-wrap hyphens, glyphs, equations, form feeds and flattened tables remain unchanged.",
+    "pdfinfo reports Bad annotation destination; text extraction succeeds. PDF plots remain graphical source, not reconstructed from flattened labels.",
+    "Related supplementary C-F and displaced final figures/tables are explicitly included; unrelated appendices A-B, abstract, Introduction, Related Work, and summary conclusion are excluded."
+  ],
+  "limitations_locator": {
+    "section": "Appendix F",
+    "pdf_page": 17
+  }
+}

@@ -1,0 +1,5186 @@
+[
+  {
+    "id": "P01_s1_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'actions directed toward later poses' and B's 'action from its perturbed pose toward a later expert pose' capture P01 III-C2. Both connect scarce-data pushing (Table IIa) to larger-dataset generalization (IV-E, Table V) and preserve recoverability. B specifies generator training; A specifies matched starts. These complementary details do not establish a decisive abstract-level advantage."
+  },
+  {
+    "id": "P01_s1_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both start with the need to change labels alongside views and explain progress-directed geometric targets (P01 III-B, III-C2). A's 'inverse displacement' makes the composition explicit; B's 'command intended to resume progress' emphasizes its purpose. Both justify the third subsequent frame by the error plateau and terminal-frame loss (IV-A3b, Fig. 8) and retain recoverability (IV-E). Their quality is closely matched."
+  },
+  {
+    "id": "P01_s1_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both interpret P01 Table I's prediction improvement alongside Table IIa's execution results and explicitly identify separate play training for eight demonstrations (IV-A4b). Both preserve matched starts and rectified inputs for novel cups (IV-E). A closes on 'Nine trials still fail'; B on recoverability. Table V and IV-E support these complementary limits, leaving the results paragraphs closely matched."
+  },
+  {
+    "id": "P13_s1_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both link the hardware contribution to chunking, same-time ensembling, and variational training (P13 III, IV-A/B). A's '88% success' and B's 'reported final-stage rates' agree with Table II; both retain the one-seed protocol and weak threading outcome. A gives zip-tie times, while B summarizes both human tasks (VI-C). These are equally pertinent abstract selections."
+  },
+  {
+    "id": "P13_s1_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'only when they target the same execution time' and B's 'multiple estimates of one command' accurately explain temporal ensembling (P13 IV-A). Both connect leader labels to contact forces (IV opening) and variational training to human variability, with encoder removal and zero latent at inference (IV-B). B adds a supported pause example; this does not create a meaningful overall advantage."
+  },
+  {
+    "id": "P13_s1_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both separate chunk-length and human-data variational effects (P13 VI-A/B). A's '92% ... only 20%' foregrounds autonomous stage attrition and observed localization failures (Table III, V-C). B additionally distinguishes leader-input frequency from follower commands maintained at 50 Hz (VI-C, Appendix E). These are different, source-supported results emphases; neither is decisively better."
+  },
+  {
+    "id": "P01_s2_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both connect geometric relabeling (P01 III-C2) to pushing comparisons against BC and replicated SPARTN (IV-A1d, Table II) and larger-dataset cup arrangement (IV-E, Table V). B's 'events such as spilled contents' is less idiomatic than A's recoverability formulation, but the intended limitation matches IV-E. This small language difference does not outweigh their equivalent abstract coverage and explanation."
+  },
+  {
+    "id": "P01_s2_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'Composing transforms' and B's 'Composing the inverse displacement with reconstructed expert poses' both describe the virtual-to-future-pose label in P01 III-C2. Both explain why next-frame supervision can command retreat (Fig. 5). B adds the terminal-frame tradeoff supporting three-frame lookahead (IV-A3b, Fig. 8); A foregrounds recovery supervision. Both serve the methods function clearly."
+  },
+  {
+    "id": "P01_s2_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'does not isolate that mechanism' appropriately qualifies the offline/online contrast; B presents the contrast without causal attribution (P01 Table I, IV-A4a). Both distinguish task-only pushing results (Table IIc) from separately conducted pouring comparisons whose conditions may differ (Table IV note). Their evidence selection supports the same coherent conclusion about augmentation and play data."
+  },
+  {
+    "id": "P13_s2_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'sequence prediction need not discard feedback' and B's 'combined at every control step' capture P13 IV-A. A selects customized grippers; B explains avoiding inverse-kinematics failures (III), both pertinent hardware details. Both preserve the physical evaluation protocol, final task results, and uneven threading/candy outcomes (V-B/C, Tables II/III, Appendix F). Neither abstract has a decisive functional advantage."
+  },
+  {
+    "id": "P13_s2_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'temporally correlated behavior such as pauses' and B's 'without mixing actions intended for adjacent times' emphasize complementary mechanisms supported by P13 IV-A. Both explain leader-command offsets, frequent policy queries, Gaussian-prior variational training, and discarding the encoder with zero latent at deployment (IV opening, IV-B). Neither emphasis produces a substantial methods-level advantage."
+  },
+  {
+    "id": "P13_s2_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both organize chunking, variational training, and nonuniform ensembling around the findings in P13 VI-A/B and Fig. 9. A's 'change in retry budget' and B's 'ten attempts allowed per candy' correctly distinguish Appendix F's 0/10 initial attempts from 3/5 candies under retries. Both connect physical limitations to perception (V-C); their explanatory content and readability are nearly equivalent."
+  },
+  {
+    "id": "P01_s3_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A's 'With 24 task demonstrations' anchors the following eight-demonstration result as a reduced-data evaluation (P01 IV-A4a/b, Table IIa). B leaves its first pushing comparison unconditioned, obscuring that relationship. Both faithfully explain geometric recovery labels (III-C2) and novel-cup performance (IV-E, Table V). A better selects the condition needed to interpret its abstract's data-efficiency evidence."
+  },
+  {
+    "id": "P01_s3_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'not merely back to the source image' and B's 'Rather than merely reversing that displacement' accurately distinguish progress-directed labels from undoing perturbations (P01 III-C2, Fig. 5). Both retain the fixed codebook (III-B2) and joint training (III-A). B locates the lookahead choice in the pushing ablation (Fig. 8); A explains its rationale directly. The difference is minor."
+  },
+  {
+    "id": "P01_s3_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both connect the baseline's rotation without receiver-directed translation to pouring failure (P01 IV-C2). A's 'does not isolate the value of play' and B's 'not ... a controlled estimate' correctly interpret the differing baseline rates and possible condition changes in Table IV's note. B's 57-gram completion criterion is supported by IV-C1; neither paragraph offers materially stronger explanation."
+  },
+  {
+    "id": "P13_s3_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'never progress beyond the first stage' and B's 'zero ... at those stages' both match P13 Table II. Both accurately connect ALOHA and ACT (III, IV), retain the threading demonstration exception (V-B), and distinguish main-task success from threading and candy limitations (Table III, Appendix F). Their hardware detail choices differ without materially changing abstract quality."
+  },
+  {
+    "id": "P13_s3_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both explain leader-target supervision through controller force (P13 IV opening) and combine predictions for one execution time rather than neighboring actions (IV-A). B's 'chunk and proprioception' makes the variational encoder inputs explicit (IV-B); A more explicitly describes moderating chunk transitions. Both preserve zero-latent deterministic deployment and provide comparably complete methods explanations."
+  },
+  {
+    "id": "P13_s3_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'sequence prediction and modeling human variability' and B's 'gains from sequence prediction ... variable human behavior' organize the same supported distinction (P13 VI-A/B, Fig. 9). Both retain disabled ensembling for chunk-length comparisons and separate tuning for ensembling comparisons. Their conclusions appropriately distinguish transferable chunking from method-dependent averaging; the wording differences are minor."
+  },
+  {
+    "id": "P01_s1_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'generator trained on task and play data' matches the 10/10 pushing condition in P01 IV-A4d/Table IIc; B's 'matched starts' matches IV-E1. Both clearly connect view synthesis, geometric labels, and transfer, with accurate recoverability limits. A is more explicit about generator training, B about evaluation controls; neither has a material abstract-level advantage."
+  },
+  {
+    "id": "P01_s1_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B explicitly names 'inverse displacement' composition, while A explains how the virtual-pose target resumes progress. Both faithfully describe P01 III-B/C's geometry and joint data training. Their identical third-frame rationale is supported by IV-A3b and Fig. 8, including lost terminal frames for larger offsets. Neither offers a substantive advantage as a methods paragraph."
+  },
+  {
+    "id": "P01_s1_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B closes on 'Nine trials still fail,' directly reflecting P01 Table V's 16/25 successes. A states that the deployment contrast 'does not isolate that mechanism' and closes on recoverability, supported by IV-E's final limitation paragraph. Both correctly distinguish offline error, online success, play-data input, and tested transfer. These different interpretive emphases remain comparably useful."
+  },
+  {
+    "id": "P13_s1_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'Autonomous velcro threading' and 'zip-tie threading' distinguish policy evaluation from human teleoperation. P13 V-B/C and Table III report 100 demonstrations and 20% for velcro; VI-C reports 33-to-20-second zip-tie times. A's repeated unqualified 'threading' blurs that distinction. Both accurately present the hardware-policy contribution and main task results; B communicates the two experiments more precisely."
+  },
+  {
+    "id": "P13_s1_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A highlights 'pauses within a chunk' and distinguishes one-command averaging from adjacent-action smoothing; B makes the transformer and two-arm prediction framing explicit. Both match P13 IV-A/B and Algorithm 2: leader targets preserve force offsets, overlapping predictions share a timestep, and inference fixes the latent to zero. B is slightly more compact, but the explanation is not materially stronger."
+  },
+  {
+    "id": "P13_s1_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A includes the independently tested leader-update frequency effect (P13 VI-C, Appendix E); B's 'different bottleneck' develops autonomous threading through 92%-to-20% stage outcomes (Table III, V-C). Both correctly scope chunking and CVAE ablations to simulation and qualify ensembling by separate tuning. The broader hardware coverage and tighter policy focus are comparably effective results selections."
+  },
+  {
+    "id": "P01_s2_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A emphasizes 'rather than relying on appearance augmentation alone'; B explicitly states joint training on real and generated pairs. Both are central operations in P01 III-A/C. Their selected pushing and large-data cup-arrangement results agree with Tables II and V, and neither presents recovery as reversing spills. These complementary emphases leave a near tie."
+  },
+  {
+    "id": "P01_s2_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A makes label computation explicit through the 'inverse displacement' and explains why farther targets are not preferred: they exclude terminal frames. Both details are supported by P01 III-C2 and IV-A3b. B states the recovery mechanism clearly but omits that implementation tradeoff. A gives the more complete methods rationale without extraneous evidence."
+  },
+  {
+    "id": "P01_s2_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'even when conventional image augmentation is already present' and B's 'modest offline error reduction' frame the same supported contrast (P01 Table I, IV-A4a). Both distinguish within-test augmentation gains from the unisolated effect of play in separate pouring tests (Table IV). Their evidence-to-claim links are equally strong; B's additional mechanism qualification does not create a material advantage."
+  },
+  {
+    "id": "P13_s2_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A identifies the successful task as a 'slider bag' and explains joint-space design through inverse-kinematics failures, supported by P13 III and Table II. B's 'bag-opening stage' is less specific given Appendix F's failed flat-bag task. Both faithfully summarize chunking, variational training, evaluations, and limits; A makes the hardware rationale and main successes more interpretable."
+  },
+  {
+    "id": "P13_s2_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'pauses within a chunk' connects sequence prediction to the non-Markovian demonstrations discussed in P13 IV-A. A explains horizon reduction and deterministic deployment well but leaves that relationship unstated. Both accurately preserve leader-target force offsets, same-timestep exponential ensembling, and zero-latent inference (IV, IV-B). B better explains why chunking suits the demonstration behavior."
+  },
+  {
+    "id": "P13_s2_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both distinguish transferable chunking from human-data-specific variational gains and restrict ensembling to separately tuned comparisons (P13 VI-A/B, Fig. 9). A's 'changed retry budget' and B's 'single-attempt improvement' correctly distinguish 0/10 attempts from 3/5 candies given retries (Appendix F). Their interpretation and evidence selection are effectively equivalent."
+  },
+  {
+    "id": "P01_s3_abstract",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both center corrective supervision around recoverable deviations, consistent with P01 III-C2. Their ten-trial and play-trained eight-demo results match Table IIa/IV-A4b, and cup-arrangement outcomes match IV-E. B adds the 24-demo condition; A's 'matched rectified, center-cropped inputs' states the same shared preprocessing as B. These are comparable abstracts, not grounds for preferring additional numerical detail."
+  },
+  {
+    "id": "P01_s3_methods",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'continued task progress' explains why labeling must do more than reverse displacement; B explains why generated views need their own labels. Both trace the same pose-to-label mechanism (P01 III-B/C), preserve the fixed codebook, and use the supported third-frame choice (IV-A3b, Fig. 8). A makes recoverability explicit; B's leaner account remains comparably effective."
+  },
+  {
+    "id": "P01_s3_results",
+    "paper": "P01",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'coordination during rotation' and B's 'positional drift' both match P01 IV-C2's baseline failure description. Both correctly retain the separate 80/0 and 70/30 comparisons and avoid treating them as isolating play's effect, consistent with Table IV's note. A's task-specific framing and B's explicit test-condition explanation provide comparable results interpretation."
+  },
+  {
+    "id": "P13_s3_abstract",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B links direct joint mapping to avoiding inverse kinematics near singularities, the design rationale in P13 III, instead of A's hardware-component list. Its 'leader updates' also identifies the manipulated frequency variable (Appendix E). Both match Table II/III outcomes and initial candy failures in Appendix F. B explains the platform's contribution more clearly."
+  },
+  {
+    "id": "P13_s3_methods",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "concern",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "B's 'effective prediction horizon' is ambiguous: P13 IV-A shortens the task's effective horizon, while the forecast spans k actions. This is a fidelity concern, not an incorrect algorithm description. A uses the task-horizon framing and supplies variational-encoder inputs (IV-B). Both preserve leader-target force offsets and same-timestep ensembling; A is more technically precise."
+  },
+  {
+    "id": "P13_s3_results",
+    "paper": "P13",
+    "domain": "D1",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'variability-aware training' and B's 'modeling human variability' both interpret P13 VI-A/B, Fig. 9 correctly: chunking benefits two baselines, CVAE gains concentrate on human data, and separately tuned ensembling hurts VINN. B's opening is slightly smoother, but both explain these relationships and limits equally well; the stylistic difference is too small to break the tie."
+  },
+  {
+    "id": "P03_s1_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both abstracts connect delayed normalization and row/block partitioning to exact attention, then distinguish kernel acceleration from training gains. P03 Sections 3.1-3.3, Section 4.1's fixed-16k-token setup, and Table 1 support these claims. A's 'workload-dependent training benefits' and B's 'rather than the full kernel-level acceleration' express the same warranted interpretation. Phrasing differences do not materially change the abstract's effectiveness."
+  },
+  {
+    "id": "P03_s1_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B specifies 'tracks the largest score seen' and that warps 'share keys and values,' connecting the online recurrence and row ownership more explicitly than A. P03 Algorithm 1, steps 9-12, and Section 3.3's split-Q description support both explanations. Both retain exactness and the tile-size limits; B is more self-contained as a methods paragraph."
+  },
+  {
+    "id": "P03_s1_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'much smaller gains at 2k' and B's 'does not transfer uniformly' follow P03 Table 1: 189 to 196 versus 170 to 220 for the 1.3B model. Section 4.3 supports the FLOP convention; Section 4.1/Figure 4 support the separate OOM comparison. A's additional 2.7B value and B's closing distinction offer comparable results synthesis."
+  },
+  {
+    "id": "P04_s1_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "concern",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "concern",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both abstracts' 'accept more proposals/tokens' blurs higher acceptance rates with counts: P04 Table 2 varies gamma (ENDE, temp 1: seven versus three), and Section 3.1 ties yield to both alpha and gamma. This is a wording concern, not a demonstrated numerical contradiction. Otherwise, their exactness, concurrency, and T5 speedup summaries are comparably effective."
+  },
+  {
+    "id": "P04_s1_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'draft generates gamma proposals sequentially' makes the gamma*c denominator operationally intelligible, and 'independently of the assumptions used to predict speed' distinguishes correctness from the runtime model. A accurately states both results but leaves that execution-cost link implicit. P04 Algorithm 1, Section 2.3, and Theorem 3.8 support the distinction and timing assumptions."
+  },
+  {
+    "id": "P04_s1_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both use Table 2's fixed-seven-proposal greedy ENDE comparison to show that higher acceptance need not yield lower latency. A adds unchanged proposal counts across sampling comparisons; B distinguishes GPT-like/LaMDA acceptance measurements from T5 latency evidence (P04 Section 4.2). These are pertinent, supported emphases. Their capacity/arithmetic distinction matches Section 3.4 and the concluding limitation; neither results account clearly dominates."
+  },
+  {
+    "id": "P03_s2_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A uses the 1.3B context comparison; B summarizes both model sizes and peak throughput. Both are supported by P03 Table 1 and preserve the main execution contribution (Sections 3.1-3.3). Their 'bottleneck shifts to loading the KV cache'/'requires rapid loading' follows Section 3.2's decoding discussion and Section 4.2. Neither evidence choice is inherently superior for this abstract."
+  },
+  {
+    "id": "P03_s2_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'only after all tiles have been processed' and B's 'same exponential scale' explain the rescaled accumulator and final division (P03 Section 3.1.1, Algorithm 1, steps 9-13). Their logsumexp/backward and quadratic-compute/linear-storage distinctions also match Sections 3.1.1-3.1.2. B makes the rescaling rationale slightly more explicit, but the methods accounts are near-equivalent."
+  },
+  {
+    "id": "P03_s2_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both connect P03 Table 1's context-dependent gains to attention's increasing computational share, consistent with Section 4.3's formula. Both correctly contrast unhalved training FLOPs with Section 4.1's causal kernel accounting. A's 'not a new memory advantage over FlashAttention' is supported by Section 2.3 and Figure 4; B's PyTorch-only memory comparison makes no contrary claim. These are near-equivalent results syntheses."
+  },
+  {
+    "id": "P04_s2_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "concern",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'improve acceptance' states the measured rate; A's 'accept more guesses' ambiguously suggests counts despite varying draft lengths (P04 Table 2). Both give supported T5 latencies and the correct exactness/latency distinction (Sections 2.3/3.3). B also explains accepted-prefix correction more directly; this preference includes A's fidelity concern, not a claim that its numbers are wrong."
+  },
+  {
+    "id": "P04_s2_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explicitly links 'generates gamma guesses sequentially' to concurrent target checking and the gamma*c latency term; B leaves drafting and verification as compressed implications. P04 Algorithm 1 separates the autoregressive draft loop from parallel target runs; Section 3.3 derives the cost accordingly. Both acceptance/residual explanations are faithful, but A is more complete as a methods account."
+  },
+  {
+    "id": "P04_s2_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'with draft length fixed' uses Table 2's greedy ENDE comparison (gamma=7 for both T5-small and T5-large), directly supporting the cost-agreement tradeoff. A accurately uses standard-sampling configurations but their gamma values differ, as it acknowledges. P04 Section 4.1 supports both; B selects a cleaner comparison for this results argument."
+  },
+  {
+    "id": "P03_s3_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'different response' and B's 'different bottleneck' both correctly connect multi-query decoding to KV-cache loading (P03 Sections 3.2/4.2). Sections 3.1-3.3 support the training mechanisms; Section 4.1 and Table 1 support kernel and whole-model gains. B states the decoding contrast a little more directly, but both deliver the same coherent abstract contribution without conflating the benchmarks."
+  },
+  {
+    "id": "P03_s3_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A starts with independent row denominators; B starts with the split-key reduction. Both connect row ownership to fewer shared-memory exchanges and higher occupancy, matching P03 Sections 3.2-3.3. Their final normalization and log-sum-exp explanations match Section 3.1. A's backward-synchronization qualification is supported, while B confines its reduction claim to forward outputs. The explanatory difference is too small for a preference."
+  },
+  {
+    "id": "P03_s3_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'accelerating one operation does not imply equal gains' and B's comparison with 'attention-kernel gains' synthesize P03 Table 1 and Section 4 consistently. Both distinguish PyTorch's 16k OOM from tiled execution (Figure 4) and explain the unhalved causal FLOP convention (Section 4.3). Their results claims and explanatory value are essentially equivalent."
+  },
+  {
+    "id": "P04_s3_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both explain exactness through shared accepted mass and residual correction (P04 Section 2.3), qualify the latency model (Sections 3.1/3.3), and give Table 2's task- and sampling-specific T5 speedups. A's 'can entail more arithmetic work' and B's 'exploit concurrency rather than fewer arithmetic operations' agree with Section 3.4. Their abstract-level contributions and evidence selection are near-equivalent."
+  },
+  {
+    "id": "P04_s3_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'weighted by rejection probability' makes the mass argument explicit; A connects expected yield to the conditional walltime formula. P04 Section 2.3, Algorithm 1, and Sections 3.1/3.3 support both. B correctly distinguishes serial-call reduction from arithmetic savings (Section 3.4). The different, pertinent explanatory emphases leave the methods paragraphs effectively tied."
+  },
+  {
+    "id": "P04_s3_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'same seven-token proposal length' and B's 'holding draft length fixed' ground the same cost-agreement argument in P04 Table 2. Both retain the sampling-specific T5 findings and correctly limit GPT-like/LaMDA evidence to acceptance (Section 4.2). Their closing arithmetic qualifications match Section 3.4. Minor differences in concision do not outweigh their equivalent results interpretation."
+  },
+  {
+    "id": "P03_s1_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both link unchanged exact attention to reduced normalization work and query-row parallelism, then distinguish kernel gains from smaller training gains. P03 Secs. 3.1-3.3, 4.1, and Table 1 support those relationships and figures. B's 'uniform application-level speedup' is slightly clearer than A's 'full kernel-level acceleration,' but this wording difference is a near tie."
+  },
+  {
+    "id": "P03_s1_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both explain rescaled accumulators, final normalization, backward recomputation, and query-row ownership accurately (P03 Algorithm 1; Secs. 3.2-3.3). The concluding register-spilling and capacity limits also match Sec. 3.3. B's 'shared-memory traffic' is slightly more precise than A's 'transfers,' but their mechanisms, evidence selection, and overall methods exposition remain equivalent."
+  },
+  {
+    "id": "P03_s1_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'different benefits' and B's 'do not transfer proportionally' correctly distinguish training throughput from kernel speed and memory feasibility. P03 Sec. 4.3, Table 1 supports the larger 8k gains and the unhalved FLOPs convention; Sec. 4.1, Fig. 4 supports PyTorch OOM at 16k with fixed total tokens. B's additional 2.7B comparison is pertinent but not decisive."
+  },
+  {
+    "id": "P04_s1_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'without substituting' and B's 'preserving' both clearly distinguish exact target sampling from draft quality. P04 Secs. 2.1-2.3 and 3.3 support their mechanisms and timing assumptions; Sec. 4.1, Table 2 supports the TPU-v4 setup and all four T5 speedups. B foregrounds spare hardware capacity; A identifies T5X and English-to-German explicitly. Neither advantage is decisive."
+  },
+  {
+    "id": "P04_s1_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A separates distributional correctness from speed assumptions; B makes the extra timing conditions explicit at its close. Both correctly use 'normalized positive part' correction and accepted-prefix retention (P04 Sec. 2.3, Algorithm 1). Their expected-yield and speedup formulas match Secs. 3.1 and 3.3, including i.i.d. acceptance, long generations, and unchanged concurrent target latency. This is a near tie."
+  },
+  {
+    "id": "P04_s1_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both use the fixed-seven-proposal greedy comparison to show that higher acceptance need not produce lower latency (P04 Sec. 4.1, Table 2). A distinguishes GPT-like/LaMDA acceptance measurements from T5 walltime results, matching Sec. 4.2; B identifies unchanged proposal counts across sampling comparisons. Both selections are pertinent, and both correctly connect rejected work and spare compute to Sec. 3.4."
+  },
+  {
+    "id": "P03_s2_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'smaller, context-dependent gains' connects the kernel results to an interpretable training comparison (170 to 220 versus 189 to 196), supported by P03 Sec. 4.3, Table 1. A's absolute 225-TFLOPs/s peak is accurate but leaves the training effect less clear. Both correctly distinguish training's execution costs from decoding's KV-cache bottleneck (Secs. 3.2, 4.2)."
+  },
+  {
+    "id": "P03_s2_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both make maximum-change rescaling and final-only division intelligible: A's 'same exponential scale' and B's 'full-row softmax' explain the same invariant. P03 Sec. 3.1.1, Algorithm 1 (steps 9-13), and its correctness paragraph support exact output, saved logsumexp, quadratic arithmetic, and linear auxiliary storage. Their ordering differences do not materially affect the methods function."
+  },
+  {
+    "id": "P03_s2_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both infer context dependence from the 2k/8k comparisons and distinguish training FLOPs accounting from causally masked kernel accounting (P03 Secs. 4.1, 4.3, Table 1). B's 'not a new memory advantage over FlashAttention' explicitly identifies the memory comparison's scope; A also names PyTorch as the baseline. Both match Fig. 4's 16k OOM result. These are comparably effective results paragraphs."
+  },
+  {
+    "id": "P04_s2_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explains the residual's role in restoring target mass; B more compactly names acceptance and residual resampling while foregrounding the guess-cost tradeoff. Both are supported by P04 Secs. 2.3 and 3.3-3.4. Sec. 4.1, Table 2 supports their matched setup and speedup figures. Their differing mechanism detail and tradeoff emphasis are equally appropriate for an abstract."
+  },
+  {
+    "id": "P04_s2_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B explicitly connects 'guesses sequentially' with target verification 'concurrently,' explaining the execution schedule behind the gamma*c cost term. A accurately explains correction but leaves that central scheduling step implicit. P04 Sec. 2.1 and Algorithm 1 support the staged schedule; Secs. 3.1 and 3.3 support both yield and timing formulas. Both preserve the target distribution."
+  },
+  {
+    "id": "P04_s2_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A uses the matched-seven-guess greedy comparison; B uses standard-sampling configurations and explicitly notes their differing guess counts. P04 Sec. 4.1, Table 2 supports both routes to the conclusion that acceptance alone is insufficient. Secs. 3.3-3.4 support the cost tradeoff and wasted arithmetic. Their different evidence selections serve their stated results claims equally well."
+  },
+  {
+    "id": "P03_s3_abstract",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both organize the contribution around independent query rows and distinguish training from KV-cache-limited decoding. P03 Secs. 3.1-3.3 support the mechanisms; Secs. 4.1-4.3 support the kernel, training, and FasterTransformer comparisons. B states the 8k-versus-2k pattern directly, while A concludes with smaller, context-dependent whole-model gains. Both faithfully summarize the same contribution without a decisive difference."
+  },
+  {
+    "id": "P03_s3_methods",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'each warp its own query rows' and B's row-specific denominator explain the same row independence and removal of forward reductions. P03 Secs. 3.2-3.3 support both warp and thread-block partitioning; Sec. 3.1.1 supports deferred normalization and logsumexp storage. B's backward-synchronization qualification is accurate, but neither version materially improves the explanation over the other."
+  },
+  {
+    "id": "P03_s3_results",
+    "paper": "P03",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both distinguish roughly 1.3-fold training gains from 1.7-3.0-fold kernel gains and interpret the reported 72% using its FLOPs convention (P03 Sec. 4.3, Table 1). Their PyTorch-versus-tiled memory comparison matches Sec. 4.1, Fig. 4. B names the fixed-16k-token setting explicitly; A locates the result in the separate benchmarks. The overall results interpretation is effectively equivalent."
+  },
+  {
+    "id": "P04_s3_abstract",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both explain probability-mass correction, separate exactness from conditional acceleration, and bound the measured gains to batch-one T5 tests. P04 Secs. 2.3, 3.3-3.6, and 4.1, Table 2 support these claims. A's 'improved agreement must compensate for proposal cost' and B's 'tradeoff between agreement and proposal cost' draw the same justified inference. Neither offers a material abstract-level advantage."
+  },
+  {
+    "id": "P04_s3_methods",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A makes rejection-weighted residual mass explicit; B gives the same exactness argument and additionally connects token yield to walltime. P04 Sec. 2.3 and Algorithm 1 support both prefix-handling accounts; Secs. 3.1, 3.3-3.4 support yield, conditional speedup, and the distinction from arithmetic savings. These are comparably effective methods paragraphs with different, well-supported closing emphases."
+  },
+  {
+    "id": "P04_s3_results",
+    "paper": "P04",
+    "domain": "D2",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'does not offset its proposal cost' and B's 'does not by itself offset' interpret the same fixed-length greedy comparison appropriately. P04 Sec. 4.1, Table 2 supports acceptance and speedup figures; Sec. 4.2 confirms that GPT-like/LaMDA tests measured acceptance only. Both explain sampling dependence and rejected computation without extending the demonstrated latency gains beyond T5. Their differences are minor."
+  },
+  {
+    "id": "P05_s1_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B spells out normalize-then-rescale more concretely; A gives an equally clear motivation and labels memory savings a separate ablation. P05 Eq. (5), Table 1, and Table 7 support mechanism, accuracy-parameter tradeoff, and the 24.4% saving with a 0.2-point decrease. Both retain the video limitation from Table 3 and avoid attributing gains solely to extra rank."
+  },
+  {
+    "id": "P05_s1_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B leads directly with separating column length and direction; A explicitly closes on the distinction between analyzed geometry and implementation. Both trace initialization, normalization, and detachment accurately. P05 Eqs. (5)-(7), Sec. 4.3, and Eq. (11) support preservation of forward weights and magnitude learning while replacing the projected gradient. The small presentation difference does not decide the methods preference."
+  },
+  {
+    "id": "P05_s1_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both connect smaller parameter budgets to qualified aggregate gains, then distinguish update-pattern resemblance from task superiority. P05 Table 1 supports the modest 13B gain; Sec. 4.1 and Tables 3 and 12 support the correlations and YC2C/VQAv2/VQAT limitations. A supplies an explicit synthesis; B makes the smaller 13B gain clearer earlier. Neither has a material results advantage."
+  },
+  {
+    "id": "P06_s1_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B integrates 'conditional rank reduction' into the compression rationale and keeps the memory-quality tradeoff central. A's additional per-layer explanation is accurate but repeats a supporting implementation point while omitting that rank justification. P06 Lemma 3.3, Theorem 3.8, and Secs. 5.3-5.5 support both accounts. B provides a better-balanced abstract, not a stronger empirical claim."
+  },
+  {
+    "id": "P06_s1_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'full dimensional' and B's 'full-sized' correctly distinguish dense weights from compact optimizer moments. Algorithm 2 and P06 Sec. 4.2 support the projection dimensions; Theorem 3.8 and Sec. 4.1 support the bounded guarantee and refresh rationale. B explicitly includes update scaling, while A states the same essential mechanism with less reiteration. The methods comparison remains close."
+  },
+  {
+    "id": "P06_s1_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A separates quality and storage comparisons; B puts them together before interpreting the advantage over evaluated adapters. P06 Table 2, Sec. 5.1, and Appendix C support the values and comparison conditions. Both distinguish estimated storage from the device footprint and correctly interpret Table 11's lower throughput. Neither ordering materially improves the results argument."
+  },
+  {
+    "id": "P05_s2_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A closes on parameterization rather than rank alone; B closes on the tested accuracy-parameter tradeoff. Both derive DoRA from the VL-BART observation, explain separate magnitude control, and preserve pooled-data and baseline conditions. P05 Secs. 3.2, 4.1, and 5.1, plus Tables 1, 3, and 7, support these claims. The more specific versus broader closing emphasis is a near tie."
+  },
+  {
+    "id": "P05_s2_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'two jobs' and B's separate column-length control explain the same parameterization rather than merely listing components. P05 Sec. 4.1 and Eq. (5) support frozen W0 and zero-B initialization; Eqs. (6) and (11) support exact projection versus detached scaling. Both explain that the denominator still changes in forward computation, preventing a misleading fixed-normalization interpretation."
+  },
+  {
+    "id": "P05_s2_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both show smaller-rank DoRA beating higher-rank LoRA without asserting rank monotonicity. B's three-task/YC2C contrast explains the video aggregate; A more explicitly bounds interpretation to recipes and learning rates. P05 Table 15 supports 77.9 versus 40.7 and the rank-64 decline; Table 3 supports the remaining captioning gap. These complementary explanatory gains remain a near tie."
+  },
+  {
+    "id": "P06_s2_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explicitly excludes refreshed Adam from the guarantee; B already limits contraction to fixed projections and an identity regularizer. Both correctly distinguish distributed quality testing from single-device profiling. P06 Theorem 3.8, Tables 2 and 3, and Sec. 5.5 support those boundaries and reported results. The additional details in A and direct compression framing in B yield no decisive abstract advantage."
+  },
+  {
+    "id": "P06_s2_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A connects refresh to following useful directions and ends with the frequency tradeoff, matching P06 Sec. 4.1. B accurately describes Algorithm 2 and Theorem 3.8, but its closing assumption list explains less about how those conditions relate to the implemented design. Both correctly distinguish fixed-projection contraction from convergence of refreshed Adam."
+  },
+  {
+    "id": "P06_s2_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A starts with profiling conditions; B starts with their feasibility implication. Both attribute 22.0 GB to combined techniques and separate it from the 64-A100 quality trial. P06 Secs. 5.3 and 5.5, Fig. 4, and Appendix E's Table 11 support the contrasts. Both interpret the throughput penalty without presenting memory feasibility as completed consumer-GPU pretraining."
+  },
+  {
+    "id": "P05_s3_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A foregrounds DoRA; B starts with LoRA's coupled update and closes on the reduced-rank implication. Both explain the mechanism and qualify the comparison with baseline provenance and learning-rate adjustment. P05 Eq. (5), Sec. 5.1, and Tables 1, 3, and 7 support their parameter, performance, and detachment claims. Both function effectively as abstracts."
+  },
+  {
+    "id": "P05_s3_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explains why normalization removes scale; B expresses the derivative change directly as 'scaling alone.' P05 Eqs. (5)-(7) and (11) support both accounts of initialization, forward weights, and unchanged magnitude learning. Both distinguish the practical derivative from exact normalization and retain inference merging. The explanatory emphases differ, but neither materially improves the methods function."
+  },
+  {
+    "id": "P05_s3_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A calls the correlations 'complementary descriptive evidence'; B likewise denies that they establish the gains' cause. Both connect half-rank efficiency to a remaining video gap, rather than claiming universal superiority. P05 Table 1 supports 77.5 versus 74.7, Sec. 4.1 supplies the correlations, and Table 3 supports 85.4 below 87.5. Their different ordering yields no material results advantage."
+  },
+  {
+    "id": "P06_s3_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "Both foreground projection and distinguish the distributed 14.65-perplexity run from 22.0-GB profiling, supported by P06 Secs. 5.3 and 5.5. B names projected-gradient convergence more exactly; A's fixed-projection qualification retains Theorem 3.8's scope. Both mention fine-tuning experiments without reporting their outcome, a shared abstract-selection weakness. Otherwise their contribution and evidence balance are effectively equivalent."
+  },
+  {
+    "id": "P06_s3_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A's m-by-r to r-by-n explanation makes the one-sided projection operational, including the opposite side for m > n; B says only 'chosen from the matrix dimensions.' This improves methods clarity, not merely numerical detail, and matches P06 Sec. 4.2 and Algorithm 2. Both correctly separate Theorem 3.8's subspace progress from refreshed Adam."
+  },
+  {
+    "id": "P06_s3_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explains the restriction on learned changes; B emphasizes full-sized weights and compact statistics. Both connect Table 2's near-baseline perplexity and estimated storage to a separate measured runtime tradeoff. P06 Sec. 5.5 and Appendix E's Table 11 support the combined-technique footprint and 6.93-to-5.63-GB comparison. Neither conflates estimated storage with device memory or promises simultaneous throughput improvement."
+  },
+  {
+    "id": "P05_s1_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A explicitly states normalization before column scaling; B connects the VL-BART observation to separate magnitude learning more directly. Both match P05 Eq. 5 and Table 1, retain the learning-rate adjustment, and report Table 7's 24.4% memory reduction with a 0.2-point decrement. Their final smaller-budget interpretations and Table 3 video limitation are equally defensible."
+  },
+  {
+    "id": "P05_s1_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both explain the forward construction and unchanged initialization in P05 Eq. 5, then separate orthogonal projection in Eq. 6 from detached scaling in Eq. 11. A's 'preserves the forward decomposition' and B's final distinction between geometry and implementation make the same important point. B's added explanation does not materially strengthen A's already complete methods account."
+  },
+  {
+    "id": "P05_s1_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "P05 Table 1 supports both half-rank comparisons, including the modest 13B gain of 80.8 versus 80.5. Both connect Sec. 4.1's correlations to an update-pattern claim without making them causal, and retain Table 3's YC2C shortfall and Table 12's VQAv2/VQAT reversals. A highlights gain size; B supplies an explicit economic-adaptation conclusion. These are comparably effective results paragraphs."
+  },
+  {
+    "id": "P06_s1_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A includes conditional rank reduction; B explains how per-layer updates avoid retained gradients. Both give the same central mechanism and separate the distributed quality test from memory profiling (P06 Secs. 4.3, 5.3, 5.5). Their 'small aggregate gains over LoRA' wording matches Table 4's 85.89/85.94 versus 85.61/85.93. Both fulfill the abstract function with different, pertinent emphases."
+  },
+  {
+    "id": "P06_s1_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "Both accurately place Adam's moments in r-by-n space (P06 Algorithm 2) and explain why refreshed projections avoid a fixed low-rank weight update (Sec. 4.1). Their 'progress within ... subspace' qualification matches Theorem 3.8 and Sec. 4.1's warning about overall performance. A states update scaling; B states the storage rationale more directly. Neither difference warrants a preference."
+  },
+  {
+    "id": "P06_s1_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'favors gradient-state compression' and B's 'need not incur the larger perplexity penalties' interpret the same matched-rank results in P06 Table 2 and Sec. 5.1. Both explicitly distinguish component-memory estimates from measured footprints and the 64-GPU run from consumer-device feasibility (Secs. 5.3-5.5). The matched Table 11 throughput comparison supports both conclusions equally."
+  },
+  {
+    "id": "P05_s2_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A concludes with the tested 'accuracy-parameter tradeoff'; B with parameterization 'not only its rank.' Both follow from P05 Table 1's same-rank and half-rank comparisons and Eq. 5's separate magnitude vector. They also retain the learning-rate adjustment (Sec. 5.1), video deficit (Table 3), and detached-norm ablation (Table 7). Their abstract-level synthesis is substantively equivalent."
+  },
+  {
+    "id": "P05_s2_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'omits the norm derivative' and B's 'its derivative is omitted' both correctly distinguish the evaluated implementation from exact differentiation (P05 Sec. 4.3, Eq. 11). Both explain separate column-scale control and initialization from Eq. 5. B spells out the normalization steps; A makes the factor constraints explicit. These are equivalent strengths for a methods paragraph."
+  },
+  {
+    "id": "P05_s2_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A locates the remaining video gap in YC2C while showing that the other three tasks match or exceed full fine-tuning (P05 Table 3). This explains the aggregate more concretely than B's general 'full fine-tuning remains higher.' Both accurately report Table 15's nonmonotonic rank results and distinguish the mixed video score from percentage-point accuracy."
+  },
+  {
+    "id": "P06_s2_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "Both summarize the memory mechanism, conditional theory (P06 Sec. 3.2, Theorem 3.8), and close Table 2-3 perplexities without equating profiling with a completed single-device run. B names LoRA's frozen initialization and explicitly excludes refreshed Adam from the guarantee; A specifies the profiling batch. These source-supported differences do not materially change the abstract's adequacy."
+  },
+  {
+    "id": "P06_s2_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both accurately describe P06 Algorithm 2 and Theorem 3.8. B's 'refresh therefore serves an operational purpose' connects the fixed-subspace guarantee to changing gradient directions, which P06 Sec. 4.1 explicitly distinguishes from overall performance. A supplies the assumptions accurately but as a list; B more fully explains why refreshing is necessary and why it has costs."
+  },
+  {
+    "id": "P06_s2_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A leads with 24 GB feasibility; B leads with the profiling setup. Both separate the 22.0 GB measurement (P06 Sec. 5.5) from the 64-A100 perplexity trial (Sec. 5.3, Table 3), and use the matched Table 11 throughput rows. Their shared conclusion, lower memory rather than faster training, is equally well supported."
+  },
+  {
+    "id": "P05_s3_abstract",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A closes on the smaller-budget implication; B states the contribution immediately. Both connect the VL-BART observation to column normalization and independent magnitudes (P05 Sec. 4.1, Eq. 5), then report the same-rank and half-rank evidence accurately (Table 1). The 24.4% saving and 0.2-point decrement match Table 7. Neither ordering materially improves the abstract's function."
+  },
+  {
+    "id": "P05_s3_methods",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "'Normalization assigns scale' in A and 'removes the column-length change' in B explain the same separation in P05 Eq. 5. Both preserve zero-update initialization and distinguish the exact projected gradient (Eq. 6) from detached scaling (Eq. 11). A foregrounds the purpose; B explains the normalization operation more explicitly. Both are effective methods summaries."
+  },
+  {
+    "id": "P05_s3_results",
+    "paper": "P05",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A's 'gains need not come from a larger adaptation budget' and B's 'larger directional update budget' are both supported by P05 Table 1's half-rank result. Both keep the correlations descriptive (Sec. 4.1) and retain the video deficit (Table 3). Their different evidence orders do not produce a substantive difference in results-paragraph quality."
+  },
+  {
+    "id": "P06_s3_abstract",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "B's 'comparisons test whether this compression preserves full-rank performance' gives the experiments a clear argumentative role; A's 'Experiments examine' mainly lists their scope. P06 Table 3 supports the close 7B perplexities, and Sec. 5.5 supports the separately measured 22.0 GB footprint. Both keep the fixed-projection analysis conditional and identify the measured throughput cost."
+  },
+  {
+    "id": "P06_s3_methods",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 4,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B specifies the m <= n projection, the r-by-n moment space, and the opposite side for m > n, making the storage mechanism reproducible; A leaves 'chosen from the matrix dimensions' unspecified. P06 Sec. 4.2 and Algorithm 2 support that rule. Both correctly restrict Theorem 3.8 to fixed-projection progress rather than refreshed Adam."
+  },
+  {
+    "id": "P06_s3_results",
+    "paper": "P06",
+    "domain": "D3",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B more precisely contrasts gradient compression with 'restricting learned changes to a single low-rank factorization,' matching P06 Sec. 5.1's LoRA definition W0 + BA. A's 'shrinking the model's parameterization' is less specific, though not a source contradiction. Both accurately separate Table 2's storage estimates from Table 11's measured memory-throughput tradeoff and Sec. 5.5's combined 7B footprint."
+  },
+  {
+    "id": "P07_s1_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'input capacity from effective evidence use' and B's 'insufficient indicators of effective evidence use' summarize the same contribution. P07 Sections 2.3, 3.2, 4.2, and 5 support the shared positional findings, Claude exception, query intervention, and reader-recall divergence. Both integrate these findings into a scoped abstract rather than a metric inventory. Their modest differences in emphasis do not warrant a preference."
+  },
+  {
+    "id": "P07_s1_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'reordering tests position at a fixed length' and B's 'position, rather than answer availability' correctly explain P07 Section 2.1's control. Sections 2.2 and 3.1-3.2 support greedy decoding, JSON UUIDs, sample counts, and inclusion scoring. Both explain why the synthetic task reduces linguistic confounds and how the reference prompts function. The slightly different sequencing leaves two equally strong methods summaries."
+  },
+  {
+    "id": "P07_s1_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'without establishing better use of natural-language evidence' and B's 'without resolving the observed difficulty' correctly bound the query intervention in P07 Section 4.2. Section 4.1 supports the 1.9-point Flan-UL2 contrast; Section 2.3 supports the overlapping standard/16K curves. Both use these controls to explain why lookup success and window size do not establish positional robustness, with similarly clear results prose."
+  },
+  {
+    "id": "P08_s1_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'predicted evidence support part of sentence selection' and B's 'support contributes to their selection' capture the same contribution. P08 Sections 3.2-3.3 support their offline-critic and decoding accounts; Table 2 and Section 5.2 support the shared gains and tradeoffs. Both supply a coherent abstract linking mechanism, evaluation, and limits; B's more explicit model and metric labels do not establish a clear advantage."
+  },
+  {
+    "id": "P08_s1_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A opens with offline supervision; B opens with passage-conditioned sentence selection. P08 Sections 3.2.1-3.3 and Equations 2-4 support both training-to-decoding accounts. B specifies retrieval-probability normalization, while A specifies normalized critique scoring; neither contradicts the source. Both explain how predicted support affects selection and why controls need neither retraining nor an inference-time critic. The differing entry points are equally effective."
+  },
+  {
+    "id": "P08_s1_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "A's 'combination therefore improves attribution' and B's 'citation gains can coexist with losses' accurately interpret P08 Table 2. Sections 4.3 and 5.2 support the shared-document condition, zero threshold, and customization tradeoffs. A unpacks the baseline more readably; B's compressed baseline clause is denser but precise. Both connect the comparisons to task-dependent objectives, leaving only a small stylistic difference."
+  },
+  {
+    "id": "P07_s2_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'evidence access and use' and B's 'effective evidence use' identify the same evaluated limitation. P07 Sections 2.3, 4.1-4.2, and 5 support their capacity, training-length, query-placement, and retrieval-pipeline contrasts. Both qualify the conclusion to evaluated question-answering systems and organize the evidence around one central distinction. Minor wording differences do not alter fidelity, explanatory relationships, or abstract effectiveness."
+  },
+  {
+    "id": "P07_s2_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'holding the question and available documents fixed' and B's 'within a fixed document set' describe the same position control in P07 Section 2.1. Both correctly explain distractor-count manipulation, reference conditions, UUID simplification, inclusion scoring, and the Section 4.2 query intervention. A specifies relevance ranking; B more explicitly connects the control to retained support. Neither difference materially changes this methods paragraph's effectiveness."
+  },
+  {
+    "id": "P07_s2_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "P07 Sections 4.2, 2.3, and 5 support both paragraphs' intervention, closed-book, and reader-recall contrasts. A adds the supported Claude comparison from Section 3.2; B ends with a particularly direct link between lookup, retrieval recall, and answering. Neither mistakes evidence availability for effective use. The additional example and tighter synthesis are comparably useful choices for this results paragraph."
+  },
+  {
+    "id": "P08_s2_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A foregrounds adjustable retrieval and evidence emphasis; B explicitly connects weighted self-evaluations to candidate ranking. Both accounts match P08 Sections 3.2-3.3. Table 2 supports the same-document citation gain and lower str-em; Section 5.2 supports the MAUVE tradeoff. A names the task families, while B specifies the small correctness difference. Both choices serve the abstract without a clear functional winner."
+  },
+  {
+    "id": "P08_s2_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explains the normalized retrieval threshold and passage-independent utility; B explains why relevance need not imply support. P08 Table 1, Sections 3.2-3.3, and Equations 2-4 support both accounts. Their respective endings connect learned judgments to adjustable selection criteria and distinguish retrieval need from support emphasis. Both explain the method's causal workflow precisely; these different explanatory details do not produce a clear advantage."
+  },
+  {
+    "id": "P08_s2_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "P08 Table 2 supports both citation-versus-correctness contrasts, and Section 5.2 supports the separate 50k ablation and customization tradeoffs. A's 'passage handling as well as reflection supervision' identifies the top-one-passage confound more precisely than B's 'not an isolated effect of one token.' B nevertheless reaches the same warranted combined-configuration interpretation. The explanatory difference is modest enough to preserve a tie."
+  },
+  {
+    "id": "P07_s3_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both opening sentences distinguish accepted context length from effective evidence use. P07 Sections 2.1-2.3 support the controlled QA comparison; Sections 3.2 and 4.2 support the Claude exception and query-repetition contrast. A's 'positional sensitivity is not uniform across tasks' and B's 'retrieval failures are not uniform' preserve the same qualification. Both fulfill the abstract function without materially different claims or explanatory strength."
+  },
+  {
+    "id": "P07_s3_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explains why query repetition enables earlier contextualization, supported by P07 Section 4.2. B makes the fixed distractor set and output-inclusion criterion explicit, supported by Sections 2.1 and 3.1. Both explain how position and context length are manipulated and why UUID lookup complements question answering. These are comparably useful methods summaries, not a substantive quality separation."
+  },
+  {
+    "id": "P07_s3_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "P07 Table 1 and Section 2.3 support the 88.3/56.1 comparison and overlapping positional curves; Section 4.2 supports 45.6-to-perfect lookup without comparable QA improvement. A frames these as availability versus use; B frames them as added context negating supplied evidence's benefit. Both connect the controls to the same bounded inference, rather than merely listing scores. Their results argument and readability are essentially equivalent."
+  },
+  {
+    "id": "P08_s3_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both accurately connect reflection-guided selection to adjustable decoding in P08 Sections 3.2-3.3. B's same-data PopQA comparison broadens the result evidence beyond ASQA, supported by Table 2; A's opening is clearer than B's awkward 'without ensuring that a response needs external evidence.' A's grounding limit matches Ethical Concerns, and Section 5.2 supports both tradeoffs. Broader coverage and cleaner prose leave a near tie."
+  },
+  {
+    "id": "P08_s3_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explicitly distinguishes passage-independent utility, supported by P08 Table 1 and Section 3.1's footnote. B explains why a relevant passage can still yield a partially supported continuation, illustrated in Section 3.1 and operationalized by Equations 3-4. Both accurately connect offline labels, masked-loss training, and critique-guided selection. These complementary explanations are comparably precise and useful for the methods function."
+  },
+  {
+    "id": "P08_s3_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "P08 Table 2 supports both ASQA and same-data PopQA contrasts; Sections 4.1 and 5.2 support B's metric explanations and the shared customization tradeoffs. A's 'control answers a different question' usefully separates attribution from training-example availability. B's 'combined training-and-decoding approach' similarly limits causal attribution. Both explain operating choices without claiming uniform superiority; the extra definitions do not establish a clear overall preference."
+  },
+  {
+    "id": "P07_s1_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both abstracts organize the study around context capacity versus effective evidence use, not an inventory of model results. P07 Sections 2.3 and 3.2 support QA position bias and the Claude UUID exception; Sections 4.2 and 5 support query-repetition/task divergence and reader saturation ahead of recall. A's 'insufficient indicators' and B's final qualification are equally faithful and appropriately bounded."
+  },
+  {
+    "id": "P07_s1_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'position, rather than answer availability' and B's 'reordering tests position at a fixed length' equally explain the controlled design. P07 Sections 2.1 and 2.3 support answer-preserving reordering, 10/20/30 documents, and reference conditions; Sections 3.1-3.2 support serialized UUID objects, 75/140/300 pairs, and 500 examples per size. Both accurately report greedy decoding and output-inclusion scoring."
+  },
+  {
+    "id": "P07_s1_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both results paragraphs make the same controlled distinction: query repetition repairs UUID lookup, not QA positional robustness. P07 Section 4.2 gives perfect 300-pair performance versus 45.6% and slight QA changes; Section 4.1 gives Flan-UL2's 1.9-point within-window spread; Section 2.3 gives near-overlapping standard/16K curves. A's specific document counts and B's compact synthesis are equally functional."
+  },
+  {
+    "id": "P08_s1_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both abstracts connect offline reflection-token supervision to evidence-aware continuation selection, then distinguish attribution from correctness. P08 Sections 3.1 and 3.3 describe this mechanism; Table 2 verifies 48.7/54.9 PopQA and the 13B ASQA precision/recall comparison. Section 5.2 supports the precision-MAUVE tradeoff. A's named baseline and B's smoother closing give no meaningful overall advantage."
+  },
+  {
+    "id": "P08_s1_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both methods paragraphs connect offline critic labels, loss masking, and segment ranking to support-aware claim selection. P08 Sections 3.2.1-3.2.2 specify the 7B critic and next-token objective; Section 3.3 specifies normalized critique probabilities, thresholds, and beam search. A emphasizes selection first; B foregrounds supervision. Both correctly keep the critic out of inference and explain test-time control."
+  },
+  {
+    "id": "P08_s1_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'citation gains can coexist with losses' and B's 'stronger precision does not establish broader evidence coverage' preserve the result's scope. P08 Table 2 supports the same-data PopQA/ASQA contrasts and 13B versus Ret-ChatGPT comparisons; Sections 4.3 and 5.2 support shared passages and customization. B's explicit coverage interpretation is slightly clearer, but the evidential argument remains comparable."
+  },
+  {
+    "id": "P07_s2_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'ability to use it' and B's 'evidence access and use' are equivalently scoped conclusions. P07 Sections 2.3, 4.1, 4.2, and 5 support extended-window parity, training-length-conditional encoder-decoder robustness, lookup/QA divergence, and reader saturation before recall. Both organize those contrasts around effective evidence use, without claiming universal failure or a proven mechanistic cause."
+  },
+  {
+    "id": "P07_s2_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both preserve the fixed-answer diagnostic logic and explain the UUID control. P07 Section 2.1 supports the 2,655 paragraph queries, filtered distractors, and position/length manipulations; Sections 2.3 and 3.1 support oracle/closed-book references and random UUID lookup; Section 4.2 supports querying before and after the data. B's ranked-distractor detail and A's sharper opening do not establish an overall advantage."
+  },
+  {
+    "id": "P07_s2_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'successful lookup and higher retrieval recall' and B's 'not being converted into corresponding answer gains' accurately summarize the diagnostic evidence. P07 Sections 4.2, 2.3, and 5 support the 300-pair intervention, below-56.1% QA conditions, and post-20-document reader plateau. B's Claude example is also supported by Section 3.2, but neither paragraph needs it to sustain the argument."
+  },
+  {
+    "id": "P08_s2_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both abstracts explain learned reflection, offline critique, and adjustable evidence-aware selection. P08 Sections 3.1-3.3 support the mechanism; Section 4.3 and Table 2 support shared ASQA passages, 66.9/5.0 precision, and lower 7B str-em; Section 5.2 supports the precision-MAUVE tradeoff. B's flow is slightly smoother, while A's explicit ranking description is useful; neither has a substantive advantage."
+  },
+  {
+    "id": "P08_s2_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both methods explain why separately scoring support can change which continuation survives. P08 Section 3.2.2 supports offline annotation, next-token learning, and passage-loss masking; Section 3.3 gives normalized critique weights and the retrieval threshold. B makes normalization of the retrieval decision explicit; A explains relevant-but-weakly-supported candidates. These complementary clarifications leave the method account comparably strong."
+  },
+  {
+    "id": "P08_s2_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B explicitly notes that the ablation changes 'passage handling as well as reflection supervision'; A likewise limits inference to the 'combined training configuration.' P08 Table 2 verifies ASQA precision 66.9/5.0 and str-em 30.0/31.0; Section 5.2 locates the 50k-training/150-question ablation and both customization tradeoffs. B's minor clarity advantage does not break the near tie."
+  },
+  {
+    "id": "P07_s3_abstract",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both abstracts distinguish nominal capacity from evidence use while preserving the task-dependent exception. P07 Section 2.3 supports middle-position QA degradation and comparable extended-window variants; Sections 3.2 and 4.2 support Claude's near-perfect UUID performance and the query-repetition contrast. A's UUID label and B's compact phrasing do not materially change fidelity or abstract function."
+  },
+  {
+    "id": "P07_s3_methods",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'Moving the answer paragraph tests positional sensitivity' and B's query-contextualization sentence explain complementary controls. P07 Sections 2.1 and 3.1-3.2 support fixed-answer reordering, UUID lookup, and output-inclusion scoring; Section 4.2 supports B's intervention. Both retain the methodological rationale; their different coverage does not establish a decisive advantage."
+  },
+  {
+    "id": "P07_s3_results",
+    "paper": "P07",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both use the oracle/closed-book contrast to separate available evidence from successful use, then bound the query-repetition result to exact lookup. P07 Table 1 supplies 88.3% and 56.1%; Section 2.3 supplies below-baseline 20/30-document cases and standard/16K parity; Section 4.2 supplies 45.6%-to-perfect lookup without comparable QA improvement. Their different opening emphases preserve the same supported results argument."
+  },
+  {
+    "id": "P08_s3_abstract",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both abstracts link reflection-guided selection to adjustable attribution, not guaranteed grounding. P08 Sections 3.1-3.3 support offline critique and inference control; Table 2 verifies 13B ASQA precision 70.3/65.1 and recall 71.3/76.6; Section 5.2 supports the MAUVE tradeoff. A's PopQA comparison is supported; B's shared-passages condition and grounding limit match Section 4.3 and Ethical Concerns. Neither is decisively better."
+  },
+  {
+    "id": "P08_s3_methods",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'relevance and support separately' and B's 'evidence assessment and sentence selection' express the same core method relationship. P08 Table 1 and Section 3.3 distinguish relevance, support, and utility and define category-normalized scoring; Section 3.2.2 supports loss masking. B explicitly preserves passage-independent utility, while A explains partial support; these are complementary, equally pertinent emphases."
+  },
+  {
+    "id": "P08_s3_results",
+    "paper": "P08",
+    "domain": "D4",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both results paragraphs distinguish ASQA attribution, the same-data PopQA control, and inference customization. P08 Table 2 verifies 70.3/65.1 precision, 71.3/76.6 recall, 31.7/40.7 str-em, and 54.9/48.7 PopQA; Section 5.2 verifies precision-versus-MAUVE and task-dependent retrieval costs. B's transitions are slightly more economical; A's metric definitions remain useful. Neither overstates component isolation or overall superiority."
+  },
+  {
+    "id": "P09_s1_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both accurately use the 76.1%-to-78.8% training gain to motivate the fixed-recipe architectural study (P09 Sec. 2.1), then connect block organization to classification, scaling, and transfer evidence (Secs. 2.3-2.6, 3.1, and 4). A's conclusion is already scoped to these recognition tasks. B's multimodal and structured-output qualification is supported by Sec. F, but its presence does not itself establish an abstract-level advantage."
+  },
+  {
+    "id": "P09_s1_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both opening explanations correctly separate depthwise spatial filtering from pointwise channel mixing (P09 Secs. 2.3-2.5). B locates GELU between the pointwise layers; A explicitly compares filtering before and after expansion. Sec. 2.6 and Figure 4 support those descriptions. Both retain the fixed training, approximate compute control, and conditional attribution needed to explain the methodological trajectory."
+  },
+  {
+    "id": "P09_s1_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both lead with simultaneous accuracy and measured-throughput gains, correctly witnessed by P09 Table 1, and use Table 3's ImageNet-22K COCO comparison as transfer evidence. Their later GELU, kernel-saturation, and downsampling statements match Secs. 2.5-2.6. A emphasizes the normalization condition; B emphasizes limits on independent component attribution. Both conclusions fit the reported sequential redesign, without a decisive difference."
+  },
+  {
+    "id": "P10_s1_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A foregrounds reuse of the differentiable rasterizer for reconstruction and viewing; B foregrounds how cloning and splitting allocate detail. Both are supported by P10 Secs. 3, 5, and 6. Table 1 supports the real-dataset performance summaries and the remaining Mip-NeRF360 PSNR deficit. Both conclusions integrate competitive quality with larger stored models and artifacts, rather than presenting an unqualified speed claim."
+  },
+  {
+    "id": "P10_s1_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'storage per pixel need not grow' makes the memory consequence explicit, and its ending connects gradients to varying depth complexity, both supported by P10 Sec. 6. A faithfully explains the same sorting and reverse-traversal mechanism, including approximation for larger splats, but repeats the fixed-count point in its final two sentences. B is slightly cleaner; the methodological explanations remain near-tied."
+  },
+  {
+    "id": "P10_s1_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A specifies the ablation's manually downsampled inputs; B more directly explains why the gradient result matters. Both accurately distinguish the published Mip-NeRF360 reference from the iteration-budget comparison (P10 Table 1), and reproduce Truck's 24.81-to-13.84 dB collapse (Table 3; Sec. 7.3). Their artifact conclusions are supported by Sec. 7.4. These are complementary presentation strengths, not a decisive difference."
+  },
+  {
+    "id": "P09_s2_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's broader spatial processing and B's narrower-width filtering both explain the cost rationale in P09 Sec. 2.5, rather than merely listing architectural changes. Both establish the fixed-recipe comparison and accurately report Table 1's 384-resolution ConvNeXt-B and scaled XL results. Their downstream summaries and attention-free conclusions remain within the recognition tasks evaluated in Sec. 4. The functional differences are minor."
+  },
+  {
+    "id": "P09_s2_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's narrow-width explanation and B's separation of spatial and dense channel operations both capture the rationale in P09 Secs. 2.3-2.5. Both correctly connect normalized transitions to the divergence reported in Sec. 2.6 and describe Sec. 2.1's fixed recipe and three-seed averaging. Their closing statements equally preserve the conditional nature of sequential architectural comparisons."
+  },
+  {
+    "id": "P09_s2_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both correctly condition the Swin-B comparison on ImageNet-1K training and 384-resolution inputs, and give EfficientNetV2-L's different resolution and cost (P09 Table 1). Tables 3-4 support their pretrained COCO and ADE20K comparisons. A closes by distinguishing competitiveness from the higher EfficientNet classification score; B distinguishes downstream prediction quality from classification throughput. Both organize the evidence coherently and remain source-faithful."
+  },
+  {
+    "id": "P10_s2_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A connects shared primitives to fitting and rasterization; B connects adaptable geometry to projection and explicitly names spherical harmonics. Both explanations are supported by P10 Secs. 3-6. Table 1 and Sec. 7.2 support their dataset-average speed and training ranges, while Sec. 7.4 supports the storage and artifact limitations. Neither abstract's selection or presentation has a decisive advantage."
+  },
+  {
+    "id": "P10_s2_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "concern",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'accelerating display through a fixed gradient cutoff' conflates fitting with viewing: P10 Sec. 7.3 tests skipping gradients to accelerate optimization, not display. B accurately links opacity-based stopping and reverse traversal to uncapped gradient propagation (Sec. 6), with a clearer forward/backward sequence. A otherwise preserves the rasterizer's mechanism, so the fidelity concern is localized."
+  },
+  {
+    "id": "P10_s2_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A develops the interactive-display/storage tradeoff; B additionally illustrates the iteration-budget tradeoff with Tanks & Temples. Both uses of P10 Table 1 are pertinent and correctly conditioned. Their separate Truck comparisons reproduce Table 3's 24.81-to-13.84 dB decline and connect it to preserving gradients, as discussed in Sec. 7.3. A's tighter focus and B's additional within-method comparison remain near-tied."
+  },
+  {
+    "id": "P09_s3_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's stage-computation and normalized-transition explanation and B's narrower-width block explanation are both supported by P09 Secs. 2.2-2.6. Both connect the ImageNet scale-up and COCO/ADE20K evaluations to a competitive attention-free backbone (Table 1; Sec. 4). B makes conditional attribution explicit, but A does not claim an isolated attention-removal effect. Neither has a decisive functional advantage as an abstract."
+  },
+  {
+    "id": "P09_s3_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both explain narrow-width depthwise filtering followed by fourfold pointwise expansion, LayerNorm placement, and the intervening GELU, matching P09 Secs. 2.4-2.6 and Figure 4. A relates this separation to Transformer organization; B foregrounds its cost rationale. Both correctly report Sec. 2.1's fixed recipe and seed averaging, then explain why sequential effects depend on the preceding configuration. Their methods functions are equally well served."
+  },
+  {
+    "id": "P09_s3_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A identifies ResNet-50 for the initial training gain, whereas B leaves that model implicit but leads with a clear coordinated-redesign thesis. P09 Secs. 2.1 and 2.6 support the baseline, neutral GELU substitution, activation reduction, and stabilized roadmap result. Both retain conditional attribution and correctly use Table 3's COCO comparison as transfer evidence. The contextual and organizational strengths remain close."
+  },
+  {
+    "id": "P10_s3_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explains opacity recovery during backpropagation; B explicitly connects projection to avoiding normal estimation. P10 Secs. 4 and 6 support both mechanisms. A's higher SSIM and lower LPIPS across all three datasets are verified in Table 1, as are B's SSIM and PSNR qualifications. Both integrate those results with storage and visibility limitations without claiming uniform superiority."
+  },
+  {
+    "id": "P10_s3_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explicitly states constant extra per-pixel storage; B explains how reverse traversal avoids variable-length histories. Both accurately connect one keyed GPU sort, shared tile lists, opacity stopping, and uncapped gradient contributors (P10 Sec. 6). Their final optimization descriptions correctly relate the L1/D-SSIM loss to geometry updates and gradient-selected cloning or splitting (Secs. 5.1-5.2). These are comparably effective methods explanations."
+  },
+  {
+    "id": "P10_s3_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A specifies manually downsampled ablation inputs but omits frame-rate hardware; B supplies A6000 context and correctly distinguishes 48 GPU-hours on four A100s from a matched-device comparison (P10 Sec. 7.2, footnote 2). Both faithfully explain Table 1's budget tradeoff and Table 3's 26.05-to-19.19 dB ablation loss. A's focused ablation account and B's broader deployment conditions remain near-tied."
+  },
+  {
+    "id": "P09_s1_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both explain the strengthened baseline and convolutional redesign before presenting classification, scaling, and transfer evidence (P09 Sec. 2.1; Table 1; Sec. 4). A's multimodal and structured-output boundary is supported by Limitations F. B's conclusion is already bounded to 'these recognition tasks.' The extra caveat does not make A inherently better; both convey the central contribution clearly."
+  },
+  {
+    "id": "P09_s1_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "A's 'dense channel transformations carry most of the work' matches P09 Sec. 2.5's rationale for moving depthwise filtering before expansion. B explains the same ordering through its reduced channel count. Both accurately connect simplified blocks and normalized downsampling to the fixed-recipe sequential evaluation (Secs. 2.1, 2.6; Fig. 4). Their methodological explanations are effectively equivalent."
+  },
+  {
+    "id": "P09_s1_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both connect classification accuracy and measured throughput (P09 Table 1) to COCO transfer (Table 3), then interpret neutral or unstable roadmap changes (Secs. 2.5-2.6). A's 'evaluated combination' emphasizes conditional attribution; B's 'condition of the reported downsampling result' specifies stabilization. Both synthesize the evidence rather than merely listing gains, with no meaningful difference in results-paragraph quality."
+  },
+  {
+    "id": "P10_s1_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "A explains size-dependent cloning and splitting; B emphasizes that the 'same differentiable rasterizer supports reconstruction and subsequent viewing.' Both are grounded in P10 Secs. 4-6 and summarize the contribution clearly. Table 1 supports their quality and throughput comparisons, and Sec. 7.4 supports storage and coverage limitations. These complementary emphases leave the abstracts closely matched."
+  },
+  {
+    "id": "P10_s1_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'storage per pixel need not grow' and B's 'without a predetermined count limit' capture complementary requirements established in P10 Sec. 6. Both explain tile duplication, shared sorting, opacity saturation, reverse traversal, and approximate blending with accurate causal links. A foregrounds gradient preservation; B foregrounds shared visibility work. These are equally effective explanations of the rasterizer."
+  },
+  {
+    "id": "P10_s1_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both interpret the same quality-throughput-storage tradeoff accurately (P10 Table 1), and both identify Truck's gradient-cap failure (Sec. 7.3; Table 3). B's 'separate Truck ablation using manually downsampled inputs' supplies useful provenance from the table caption; A already distinguishes Truck from the preceding dataset averages. A's popping explanation matches Sec. 7.4. Their results arguments remain near-equivalent."
+  },
+  {
+    "id": "P09_s2_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "A's 'convolutional route to competitive recognition' and B's 'convolutional alternative for the evaluated recognition tasks' draw similarly bounded conclusions. P09 Secs. 2.1 and 2.5 support their fixed-training and narrow-width kernel explanations; Table 1 verifies both classification examples, and Sec. 4 supports downstream competitiveness. B makes the initial training step slightly more explicit, without changing the abstract's explanatory strength."
+  },
+  {
+    "id": "P09_s2_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both explain narrow-width spatial filtering and conditional sequential evaluation. A's 'successive combined designs' and B's 'conditional on earlier modifications' reflect P09 Secs. 2.1, 2.4-2.6 and Fig. 4: fixed training, pre-expansion depthwise filtering, and normalized downsampling. B foregrounds affordability slightly more directly, but neither has a substantive explanatory advantage."
+  },
+  {
+    "id": "P09_s2_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 4
+    },
+    "reason": "A's 'prediction quality rather than the classification speed benefit' distinguishes what the downstream comparisons establish (P09 Tables 1, 3, 4). Both correctly qualify EfficientNetV2-L's different 480 x 480 setting. B's closing return to its higher classification score adds less to interpreting the COCO/ADE20K results. All reported values and evaluation conditions are supported."
+  },
+  {
+    "id": "P10_s2_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "candidate",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'same primitives to support optimization and fast rasterization' makes the representation-renderer coupling clearer than A's 'accessible to a differentiable tile rasterizer' (P10 Secs. 4-6). Both faithfully report Table 1's A6000 throughput and mixed Mip-NeRF360 metrics, with storage and artifacts supported by Sec. 7.4. B organizes these into a stronger abstract-level contribution."
+  },
+  {
+    "id": "P10_s2_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "candidate",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "concern",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "B's 'accelerating display through a fixed gradient cutoff' blurs training and inference: P10 Sec. 7.3 tests skipping gradients to speed optimization, not display. This warrants a localized fidelity concern, not rejection of the method description. A relates reverse traversal directly to gradient support and memory, matching Sec. 6; both otherwise match Secs. 5-6."
+  },
+  {
+    "id": "P10_s2_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "B's 'interactive display at competitive quality' connects Table 1's metric-dependent comparison to the practical contribution and storage cost. Its Truck cutoff result directly tests whether an optimization shortcut preserves quality (P10 Sec. 7.3; Table 3). A is accurate, but its intervening Tanks & Temples budget comparison makes the results argument less unified."
+  },
+  {
+    "id": "P09_s3_abstract",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "A's 'competitive alternative to Swin in these workloads' and B's 'Transformer-style organization without relying on self-attention' both reflect P09's closing remarks in Sec. 2.6. Their narrow-width kernel rationale and classification/scaling examples match Sec. 2.5 and Table 1; Sec. 4 supports transfer. A emphasizes conditional attribution, B the organizing question. Neither offers a decisive abstract-level advantage."
+  },
+  {
+    "id": "P09_s3_methods",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both accurately place LayerNorm before the pointwise layers and GELU between them (P09 Fig. 4; Sec. 2.6), explaining why depthwise filtering precedes fourfold expansion (Secs. 2.4-2.5). A's 'configuration already reached' and B's 'conditional on the preceding architecture' equally characterize the fixed-recipe roadmap. Their block, hierarchy, and evaluation descriptions are precise and comparably readable."
+  },
+  {
+    "id": "P09_s3_results",
+    "paper": "P09",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "A's 'coordinated redesign' and B's 'tested activation layout' are both supported by P09 Sec. 2.6: GELU substitution is neutral, fewer activations help, and normalized separate downsampling reaches 82.0%. Both distinguish this roadmap result from Table 3's pretrained COCO comparison and preserve conditional attribution. A leads with synthesis; B builds from the strengthened baseline. Both fulfill the results function."
+  },
+  {
+    "id": "P10_s3_abstract",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "A's 'without a fixed primitive-count cutoff' and B's opacity reconstruction accurately summarize P10 Sec. 6. Both connect real-time rendering to metric-dependent quality and storage costs (Table 1; Sec. 7.4). A names the datasets and appearance encoding; B states the LPIPS comparison. These supported selection differences do not establish a meaningful abstract-level winner."
+  },
+  {
+    "id": "P10_s3_methods",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'avoiding variable-length per-pixel histories' and B's 'extra per-pixel storage constant' express the same backward-pass advantage documented in P10 Sec. 6. Both accurately connect tile sorting, approximate visibility, reverse traversal, image loss, and gradient-guided densification (Secs. 5.1-5.2). B spells out duplication and thresholds; A emphasizes acquiring detail. Neither materially improves the methods explanation."
+  },
+  {
+    "id": "P10_s3_results",
+    "paper": "P10",
+    "domain": "D5",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "reason": "Both turn Table 1's training-budget comparison and Table 3's gradient-cap ablation into coherent tradeoff arguments. A's 'matched-GPU speedup' caution is supported by P10 Sec. 7.2, footnote 2; B's 'manually downsampled inputs' matches Table 3's caption. Neither makes an unsupported timing comparison, and both retain Sec. 7.4's limitations. These different contextual choices do not break the near tie."
+  },
+  {
+    "id": "P11_s1_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "A's closing 'loss structure on which its guarantee depends' ties the correction, sharp shortfall and non-monotone failure into one abstract-level claim (P11 Secs. 2.1-2.3). B is faithful, including its quantile, multiple-risk and weighted-shift extensions (Secs. 4.1-4.3), but inserts that scope list without relating it to the main calibration argument. A provides the more cohesive synthesis."
+  },
+  {
+    "id": "P11_s1_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'expected test loss equal the full-sample mean' and B's 'uniformly representative of the collection' express the same conditional-exchangeability step in P11 Sec. 2.1. Both correctly connect the B correction, oracle ordering and non-increasing losses. A names the infimum and joint averaging explicitly; B makes the loss-function conditioning clearer. The methods explanations have no material fidelity or functional difference."
+  },
+  {
+    "id": "P11_s1_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'theorem does not cap risk separately for every split' and B's 'ceiling on every evaluation split' correctly interpret P11 Theorem 1 alongside Secs. 3.1-3.2's means and standard deviations. Both avoid attributing COCO's narrower spread solely to calibration size. B states the upper envelope's domination more explicitly, but both accurately connect the empirical findings to Sec. 2.3's structural boundary."
+  },
+  {
+    "id": "P12_s1_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'order 1/(gamma T)' matches P12 Proposition 4.1; B's 'immediate response feedback' matches Sec. 7's applicability limit. Both distinguish accumulated from time-specific coverage and integrate Sec. 5's score-normalization finding with Sec. 2.1's responsiveness-volatility tradeoff. A emphasizes the bound and B the operational setting; the abstracts are comparably informative."
+  },
+  {
+    "id": "P12_s1_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'controls accumulated miscoverage pathwise' and B's 'identity turns bounded parameter movement' accurately explain P12 Sec. 2, Eq. (2), and Proposition 4.1. Both retain initialization and quantile extensions, and distinguish the stationary, fixed-function marginal-error setting of Sec. 4.2. B introduces the two parameters more explicitly; A states the guarantee's scope compactly. These are near-equivalent methods explanations."
+  },
+  {
+    "id": "P12_s1_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'beyond refitting the forecasting model' and A's 'did not remove sensitivity to score construction' identify the two contrasts in P12 Secs. 2.2 and 5. Both correctly report the 500-day curves, selected four-stock panels, Fannie Mae failure and unnormalized-score deterioration. B specifies centered windows, but that added detail does not materially improve an already clear results interpretation."
+  },
+  {
+    "id": "P11_s2_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'symmetric calibration-plus-test threshold' and B's 'rather than applying to each realized split' express complementary parts of P11 Sec. 2.1's argument. Both retain Theorem 2's extra assumptions and Sec. 2.3's bounded non-monotone failure. A adds extensions, while B closes more narrowly on boundedness; neither difference materially improves the abstract's contribution or fidelity."
+  },
+  {
+    "id": "P11_s2_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 5,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B's 'infimum' and 'non-increasing losses' state the selection rule and ordering argument more precisely than A's 'smallest' and unspecified 'monotonicity' (P11 Sec. 2.1, Eq. (6)). Both faithfully explain the worst-case correction and exchangeable full-sample average. B also identifies the loss-function collection underlying the symmetric threshold more explicitly, strengthening this methods explanation without changing its claim."
+  },
+  {
+    "id": "P11_s2_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'not achieved simply by always choosing coarse ancestors' and B's 'need not uniformly replace specific predictions with coarse ones' are supported by P11 Sec. 3.3's almost-always-leaf result. Both accurately contextualize the Secs. 3.1-3.2 means and dispersion and connect them to Sec. 2.3's monotonicity boundary. Their different ordering yields no substantive results-level advantage."
+  },
+  {
+    "id": "P12_s2_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A lowers the 'miscoverage parameter'; B increases the 'quantile level' after a miss. Both directions agree with P12 Sec. 2, Eq. (2), because the threshold uses 1-alpha_t. Both separate Proposition 4.1 from the stationary, fixed-function Sec. 4.2 results and preserve Sec. 5's normalization limitation. A includes the step-size tradeoff; B is slightly more fluid. Neither clearly dominates."
+  },
+  {
+    "id": "P12_s2_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'enlarging the set when the score and quantile functions are held fixed' clarifies the threshold direction; B's 'can accompany updates' preserves P12 Sec. 2's changing-function setup. Both correctly state initialization, unclipped boundedness and the finite-horizon deviation bound from Lemma 4.1 and Proposition 4.1. The average and cumulative identities are equivalent, so neither methods account has a substantive advantage."
+  },
+  {
+    "id": "P12_s2_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 4
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'not consequences of the unrestricted long-run frequency guarantee' and B's 'not a reconstruction of election-night performance' give distinct, supported limits (P12 Secs. 4.1 and 6). Both identify shared rolling refitting, selected stock displays and normalization sensitivity (Secs. 2.2 and 5). B's wording is slightly more direct, but the substantive empirical argument and evidence selection remain closely matched."
+  },
+  {
+    "id": "P11_s3_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'Monotonicity supplies the link' and B's 'limiting how conservative the calibration can be' highlight complementary mechanisms supported by P11 Secs. 2.1-2.3. Both accurately preserve the upper-bound assumptions, stronger sharp lower bound, joint expectation and upper-envelope repair. A's more causal closing and B's explicit interpretation of the shortfall are comparably useful for the abstract."
+  },
+  {
+    "id": "P11_s3_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'correction reserves room for an unseen loss' and B's 'correction upper-bounds the average' both capture P11 Sec. 2.1's proof. Each connects oracle ordering, non-increasing losses, conditional exchangeability and right-continuity to expected-risk control. A presents the algorithm immediately; B motivates the correction first. Neither ordering materially improves the methods paragraph's explanatory function."
+  },
+  {
+    "id": "P11_s3_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'does not imply that every split or image satisfies the threshold' and B's 'does not contradict expected-risk control' correctly interpret P11 Theorem 1 and Secs. 3.1-3.2's dispersion. Both report the same near-target evidence, avoid an isolated calibration-size explanation and retain Proposition 2's non-monotone boundary. B elaborates the expectation link; A integrates the boundary more compactly. The difference is minor."
+  },
+  {
+    "id": "P12_s3_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 1,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'quantile extensions permitting full or empty sets' makes P12 Sec. 4.1's conventions explicit; B's 'difference between bounded calibration levels' explains the telescoping mechanism in Proposition 4.1. Both preserve the stronger Sec. 4.2 assumptions, empirical local-coverage scope and Sec. 5 score-design limitation. These complementary emphases leave their abstract-level explanations closely matched."
+  },
+  {
+    "id": "P12_s3_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 1,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "concern",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "B specifies alpha_1 in [0,1] and non-decreasing quantiles before claiming boundedness, matching P12 Sec. 4.1 and Lemma 4.1. A's 'keeps alpha_t between -gamma and 1 + gamma' omits the initialization needed for that assertion, a fidelity concern. Both correctly derive the telescoping discrepancy from Sec. 2, Eq. (2); B also makes the threshold direction clearer."
+  },
+  {
+    "id": "P12_s3_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 1,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's 'refitting alone did not prevent the fixed method's failure' and B's 'displayed failure cases' reflect P12 Sec. 2.2's shared GARCH setup and selected panels. Both ground the normalization contrast in Sec. 5 and the 300-county/time-zone result in Sec. 6. A emphasizes limits on theoretical interpretation; B emphasizes constructed reporting order. Both serve the results function equally well."
+  },
+  {
+    "id": "P11_s1_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "Both accurately summarize P11 Theorems 1-2, the sharpness construction in Proposition 1, and the non-monotone failure and repair in Proposition 2/Corollary 1. B more explicitly interprets the gap as worst-case conservatism; A includes the additional scope of Sections 4.1-4.3. Both connect the contribution to Sections 3.1-3.4, leaving a near tie overall."
+  },
+  {
+    "id": "P11_s1_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A describes uniform representativeness; B states its expected-loss consequence directly. These are equivalent proof steps in P11 Theorem 1, which conditions on the multiset and uses Eq. (6). Both explain the correction, oracle ordering, monotonicity, right-continuity and fallback. B's explicit averaging scope is useful, but does not create a substantial advantage over A's complete proof explanation."
+  },
+  {
+    "id": "P11_s1_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "Both accurately report the sample sizes, means and dispersions in P11 Sections 3.1-3.2, then explain why near-target means do not guarantee control on every split. Both avoid attributing dispersion to calibration size alone. Proposition 2 and Corollary 1 support their complementary non-monotone failure and upper-envelope repair. The reordered exposition does not materially improve either results paragraph."
+  },
+  {
+    "id": "P12_s1_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both distinguish Proposition 4.1's unrestricted long-run frequency control from Section 4.2's restricted stronger analysis. B states the finite-horizon rate; A more fully explains the feedback and step-size tradeoff. Sections 2.2, 5 and 6 support their local-coverage and score-normalization claims. Neither numerical specificity nor the alternative emphasis creates a substantial abstract-level advantage."
+  },
+  {
+    "id": "P12_s1_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "Both explain the feedback direction, bounded trajectory and telescoping identity supported by P12 Eq. (2), Lemma 4.1 and Proposition 4.1. Both retain Theorem 4.2's separate assumptions. A foregrounds the target/parameter distinction; B explicitly calls the accumulated control pathwise. These are comparably effective methods explanations, with similarly dense closing condition lists."
+  },
+  {
+    "id": "P12_s1_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 1,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both isolate feedback from rolling GARCH refitting, qualify the four-of-twelve stock selection and explain the score-normalization contrast (P12 Section 2.2, Figure 1; Section 5, Figure 2). A's centered windows match Eq. (4). Both distinguish local empirical performance from Proposition 4.1's long-run guarantee. Their different opening emphases are equally effective results framing."
+  },
+  {
+    "id": "P11_s2_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both state expected-loss control, the stronger-assumption sharp lower bound and failure without monotonicity, while preserving averaging over calibration and test data (P11 Theorems 1-2; Propositions 1-2). B's symmetric-threshold explanation and A's boundedness-alone conclusion are comparably useful abstract framing. Sections 3.1-3.4 support both application summaries; B's extension sentence also matches Section 4."
+  },
+  {
+    "id": "P11_s2_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both explain why reserving B dominates the calibration-plus-test mean, why the resulting parameter is no smaller than the oracle's, and how monotonicity transfers the bound. P11 Theorem 1's conditioning on the multiset supplies their exchangeability argument. Both explicitly identify averaging over calibration and test randomness. The wording differences do not materially change the methods explanation."
+  },
+  {
+    "id": "P11_s2_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "B foregrounds preserved leaf resolution, while A foregrounds near-target false-negative risk. Both interpret the supported means and dispersions without isolating an application effect or asserting splitwise guarantees (P11 Sections 3.1-3.3; Theorem 1). Both explain the non-monotone boundary and upper-envelope repair accurately (Proposition 2; Corollary 1). The different result orderings have comparable explanatory value."
+  },
+  {
+    "id": "P12_s2_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A's increasing quantile level and B's decreasing miscoverage parameter both match P12 Eq. (2), because sets use Q_t(1-alpha_t). Both distinguish Proposition 4.1 from Section 4.2's stationary hidden Markov results and qualify empirical improvements with Section 5's score-normalization comparison. B includes the step-size tradeoff; A specifies the empirical target. These are near-equivalent abstracts."
+  },
+  {
+    "id": "P12_s2_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both derive the same finite-horizon bound from P12 Eq. (2), Lemma 4.1 and Proposition 4.1, retaining initialization and full/empty-set conventions. A expresses cumulative excess before bounding frequency; B writes the average identity directly. A also notes compatibility with fitted-function updates, while B qualifies enlargement with fixed functions. Both explain the mechanism and guarantee scope precisely."
+  },
+  {
+    "id": "P12_s2_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 2,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "P12 Section 2.2 supports the selected four-stock panels and reported adaptive success across twelve; Section 5 supports the normalization contrast. Section 6 explicitly orders counties by time zone and randomizes within zones. A emphasizes the constructed geographic drift; B distinguishes empirical local improvements from the unrestricted frequency guarantee. Both interpret the evidence and delimit its scope comparably."
+  },
+  {
+    "id": "P11_s3_abstract",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "baseline",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 4
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "B explains the correction more transparently than A's 'thresholding an average' formulation and explicitly identifies monotonicity as the link between selection and control. This makes the abstract's method-to-limitation argument clearer. Both faithfully retain P11 Theorems 1-2, Proposition 1's sharpness, Proposition 2's failure and Corollary 1's repair; Sections 3.1-3.4 support both application summaries."
+  },
+  {
+    "id": "P11_s3_methods",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both explain the correction as reserving the unseen loss, then connect oracle comparison, monotonicity and conditional exchangeability to expected-risk control. P11 Theorem 1's proof supplies each step, including right-continuity and the maximal-parameter fallback. A's motivation-first opening and B's rule-first opening provide equivalent methodological clarity; neither has a material advantage."
+  },
+  {
+    "id": "P11_s3_results",
+    "paper": "P11",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "Both connect near-target means and differing splitwise dispersions to the expected-risk, rather than per-split or per-image, guarantee (P11 Sections 3.1-3.2; Theorem 1). Both then use Proposition 2's near-B counterexample to explain why these successful monotone applications do not justify dropping monotonicity. A's undershooting emphasis and B's variation emphasis yield comparably coherent results interpretations."
+  },
+  {
+    "id": "P12_s3_abstract",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer": 2,
+    "winner": "tie",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "A explains the telescoping mechanism; B names the endpoint convention and explicitly restricts empirical claims to reported comparisons. Both preserve P12 Proposition 4.1's accumulated-error guarantee, Section 4.2's stationary hidden Markov setting, Section 5's deterioration under unnormalized scores and Section 7's immediate-response limitation. These complementary emphases leave the abstract functions essentially equivalent."
+  },
+  {
+    "id": "P12_s3_methods",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer": 2,
+    "winner": "baseline",
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "candidate": {
+      "fidelity": "concern",
+      "contribution": 5,
+      "argument": 4,
+      "selection": 4,
+      "language": 5
+    },
+    "reason": "B asserts the [-gamma, 1+gamma] bound without specifying alpha_1 in [0,1], required in P12 Section 4.1 and Lemma 4.1; A retains it. Both correctly derive the telescoping identity from Eq. (2) and distinguish accumulated from short-window coverage. The missing initialization condition weakens B's standalone explanation of the bound, so A is preferred."
+  },
+  {
+    "id": "P12_s3_results",
+    "paper": "P12",
+    "domain": "D6",
+    "sample": 3,
+    "unit": "results",
+    "reviewer": 2,
+    "winner": "tie",
+    "candidate": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "baseline": {
+      "fidelity": "pass",
+      "contribution": 5,
+      "argument": 5,
+      "selection": 5,
+      "language": 5
+    },
+    "reason": "Both interpret the normalized-score benefit, shared rolling refitting, selected failure cases and unnormalized-score deterioration faithfully (P12 Sections 2.2 and 5). Both accurately describe Section 6's constructed county ordering and local-coverage comparison. A emphasizes that this is not an election-night replay; B excludes pointwise guarantees and interval-width conclusions. Neither scope statement creates a material results-level advantage."
+  }
+]

@@ -1,0 +1,130 @@
+{
+  "id": "P07",
+  "title": "Lost in the Middle: How Language Models Use Long Contexts",
+  "domain": "language_evaluation_retrieval",
+  "venue": "Transactions of the Association for Computational Linguistics",
+  "year": 2024,
+  "volume": 12,
+  "publisher": "MIT Press",
+  "doi": "10.1162/tacl_a_00638",
+  "metadata_url": "https://aclanthology.org/2024.tacl-1.9/",
+  "pdf_url": "https://aclanthology.org/2024.tacl-1.9.pdf",
+  "pdf_sha256": "f37f6fabe0fe0d8c73b67579cd115dbf14e282cfb7b7af655ae8109638402c9b",
+  "extracted_sha256": "93537569229d185255971ae0d15bb949c741c5181f7625bdf8dcf7e764c0fe50",
+  "body_sha256": "5ce624f1b8baca7eb35d9d8543e2f9c9be33a0f1600584bb276beab9311e6f70",
+  "pages": {
+    "numbering": "1-based physical PDF pages",
+    "total_pdf": 17,
+    "article_printed_range": [157, 173],
+    "selected_pdf_ranges": [[3, 10]],
+    "selected_printed_ranges": [[159, 166]],
+    "limitations_pdf_pages": [3, 5, 10]
+  },
+  "extraction_command": "python3 sources/P07.extract.py",
+  "extraction_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+  "pdftotext_command": "pdftotext -raw sources/P07.pdf sources/P07.extracted.txt",
+  "pdftotext_version": "26.03.0",
+  "body_word_count_whitespace": 3541,
+  "extraction_segments": [
+    {
+      "section": "2 Multi-Document Question Answering (opening)",
+      "start": "2 Multi-Document Question Answering\n",
+      "end": "1\nnelsonliu.me/papers/lost-in-the-middle.\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "pdf_pages": [3, 3],
+      "byte_range": [10053, 10183]
+    },
+    {
+      "section": "2 Multi-Document Question Answering (continuation and 2.1-2.3)",
+      "start": "analyze model performance on multi-document\nquestionanswering,",
+      "end": "3 How Well Can Language Models\nRetrieve From Input Contexts?\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "pdf_pages": [3, 6],
+      "byte_range": [10225, 19535]
+    },
+    {
+      "section": "3 How Well Can Language Models Retrieve From Input Contexts?",
+      "start": "3 How Well Can Language Models\nRetrieve From Input Contexts?\n",
+      "end": "4 Why Are Language Models Not\nRobust to Changes in the Position of\nRelevant Information?\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "pdf_pages": [6, 7],
+      "byte_range": [19535, 23144]
+    },
+    {
+      "section": "4 Why Are Language Models Not Robust to Changes in the Position of Relevant Information?",
+      "start": "4 Why Are Language Models Not\nRobust to Changes in the Position of\nRelevant Information?\n",
+      "end": "5 Is More Context Is Always Better?\nA Case Study With Open-Domain QA\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "pdf_pages": [7, 10],
+      "byte_range": [23144, 31907]
+    },
+    {
+      "section": "5 Is More Context Is Always Better? A Case Study With Open-Domain QA",
+      "start": "5 Is More Context Is Always Better?\nA Case Study With Open-Domain QA\n",
+      "end": "6 Related Work\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "pdf_pages": [10, 10],
+      "byte_range": [31907, 34530]
+    }
+  ],
+  "limitations_locators": [
+    {
+      "section": "2.1 Experimental Setup, footnote 2",
+      "pdf_pages": [3, 3],
+      "start": "AmbiguityinNaturalQuestions-Openmeansthatasmall\n",
+      "end": "3\nWealsoexploredusingrandomdocumentsasdistractors,\n",
+      "end_exclusive": true,
+      "included_in_body": true,
+      "issue": "Some retrieved distractors can contain reasonable answers; the paper reports an unambiguous-subset check."
+    },
+    {
+      "section": "2.2 Models, decoding choice",
+      "pdf_pages": [5, 5],
+      "start": "when generating outputs and leave exploration of\n",
+      "end": "Open Models. We experiment with MPT-\n",
+      "end_exclusive": true,
+      "included_in_body": true,
+      "issue": "Decoding is greedy; other decoding methods are deferred."
+    },
+    {
+      "section": "2.2 Models, footnote 6",
+      "pdf_pages": [5, 5],
+      "start": "We also evaluate GPT-4 (8K) on a subset of\n",
+      "end": "Model Closed-Book Oracle\n",
+      "end_exclusive": true,
+      "included_in_body": true,
+      "issue": "Cost restricts GPT-4 evaluation to a QA subset rather than the full diagnostics."
+    },
+    {
+      "section": "5 Is More Context Is Always Better? A Case Study With Open-Domain QA",
+      "pdf_pages": [10, 10],
+      "start": "answer to this question is ultimately downstream\n",
+      "end": "We use language models in a standard\n",
+      "end_exclusive": true,
+      "included_in_body": true,
+      "issue": "The value of added context is task-dependent; the practical case study uses paragraph-answer NaturalQuestions-Open."
+    }
+  ],
+  "source_version": "Official TACL 2024 journal PDF hosted by ACL Anthology; not an arXiv fallback or conference proceedings edition.",
+  "prior_family_overlap": "unassessed",
+  "download_attempts": [
+    {"attempt": 1, "url": "https://aclanthology.org/2024.tacl-1.9.pdf", "http_status": 200, "curl_exit_code": 0, "bytes": 2609413}
+  ],
+  "download_policy": {"max_pdf_attempts": 3, "used_pdf_attempts": 1, "connect_timeout_seconds": 15, "max_time_seconds_per_attempt": 90, "automatic_retries": 0},
+  "source_warnings": [
+    "There is no standalone Limitations section. Inline limitations are separately located above; no limitations prose is invented.",
+    "The complete selected main-body Sections 2-5 are retained. Related work, Abstract, Introduction, Conclusion, acknowledgments, references, and supplementary experiments are excluded."
+  ],
+  "extraction_warnings": [
+    "Poppler raw reading order interleaves the Introduction's footnote 1 with the opening of Section 2. Only that exact orphaned footnote is excluded using two byte slices.",
+    "Raw extraction contains original line breaks, hyphenation, joined words, glyph artifacts, and printed page numbers. No repair, rewriting, or whitespace normalization is performed.",
+    "Table 1's comparison rows and all available figure captions are retained. Plot graphics and some example artwork are not recoverable as text; consult the saved PDF for graphical values and layout.",
+    "Main-body reports of exceptions, limited gains, and unfavorable interventions are retained alongside positive findings. Referenced appendix experiments are not silently added or treated as fully extracted.",
+    "The body has 3541 whitespace-delimited words; joined words in the source extraction make this count approximate."
+  ]
+}

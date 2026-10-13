@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "id": "C01",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 faithfully states sequential dependent proposals, concurrent target-prefix verification in one expensive round, supplied correction, and the measured costs without claiming application latency. v2 retains predecessor conditioning but omits concurrent verification and the shared-round schedule, so it cannot answer the standalone question. Preference for v1, passing fidelity for both, and missing critical support in v2 are defensible."
+    },
+    {
+      "id": "C02",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 supports incremental growth through nonadjacent mapped blocks and allocation on exhaustion, with the supplied batch comparison and appropriate limits. v2 names blocks and a map but omits nonadjacency and allocation as growth requires, leaving the requested mechanism unspecified. Its retained descriptions do not contradict the premises; v1 preference, both fidelity passes, and missing support for v2 are defensible."
+    },
+    {
+      "id": "C03",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 correctly reports the scores and the within-question control: identical answer documents, distractors, and distractor order, with only answer placement changing. That control rules out evidence-content and distractor-selection differences without identifying an internal mechanism. v2 preserves the numerical contrast but not the fixed-document control, so it cannot answer either required control component. The preference and support classifications are justified, with no false retained measurement."
+    },
+    {
+      "id": "C04",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 distinguishes final-state attainment, seven versus five of ten, from uninterrupted all-stage completion, four versus three, and explains the three reset-mediated successes. v2 explicitly calls seven of ten uninterrupted trajectory completion despite those resets and gives the baseline's final-state count the same wrong interpretation. This intended contradiction is consequential; correct counts elsewhere do not repair it. The permitted adverse fidelity labels and v1 preference are defensible."
+    },
+    {
+      "id": "C05",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 correctly assigns the twofold acceleration to kernel time, 16 to 8 ms, and reports complete requests at 112 to 104 ms with unchanged configuration and outputs. The end-to-end saving is 8 ms, not half the request latency. v2 explicitly promotes the component factor to complete-request speed, contradicting its own correct timings and the requested boundary. The preference, adverse fidelity alternatives, and contradicted-support classification are justified."
+    },
+    {
+      "id": "C06",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 correctly separates optimizer state, 8 to 4 GB, from unchanged other allocations of 8 GB and total allocation, 16 to 12 GB. It also preserves the checkpoint losses and does not assert quality equivalence. v2 falsely calls the total footprint halved, even while retaining the numbers that disprove that statement. This is the intended resource-boundary corruption and directly affects the standalone answer; the oracle is defensible."
+    },
+    {
+      "id": "C07",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 states the required initial domain and correctly explains its preservation under exact halving, including the supplied counterexample outside that domain. v2 states an unqualified every-iterate invariant; its later run from 0.8 does not supply the general initialization condition. The x_0=3 example refutes the unrestricted reading. v1 preference and adverse fidelity are warranted, whether detection describes the defect as missing critical initialization or contradicted unrestricted support."
+    },
+    {
+      "id": "C08",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 faithfully states the fictional marginal guarantee under exchangeability and distinguishes it from conditional coverage, shift robustness, and the finite 89-of-100 observation. v2 omits the relationship the standalone question requests; retaining marginality and noting no shift experiment do not provide that theoretical premise. Missing support and fidelity concern are defensible: the premises establish no unconditional guarantee, but also supply no counterexample requiring a contradicted classification. Preference for v1 is justified."
+    },
+    {
+      "id": "C09",
+      "valid": true,
+      "issues": [],
+      "reason": "v1 correctly limits the supplied proof to exact gradients with convexity and the stipulated step-size rule, and treats approximate-gradient decreases as recorded observations only. v2 explicitly attributes that proof to the approximate implementation and calls proof and observations descriptions of the same update. This contradicts the supplied proof boundary without needing to show an actual increasing approximate trajectory. v1 preference, adverse fidelity alternatives, and contradicted support are defensible."
+    },
+    {
+      "id": "C10",
+      "valid": true,
+      "issues": [],
+      "reason": "Both variants are identical and accurately report more exact matches, 89 versus 85, but slower median queries, 150 versus 120 ms, on the fixed dataset and device. Neither asserts production reliability or statistical certainty. Both provide all support needed for the standalone tradeoff question, so passing fidelity, supported classifications, and a tie are justified."
+    },
+    {
+      "id": "C11",
+      "valid": true,
+      "issues": [],
+      "reason": "Both nonidentical variants accurately report allocation of 16 versus 24 GB at batch four, checkpoint losses of 2.1 versus 2.2, and the single-run uncertainty without claiming equivalence, significance, or deployment generality. Both answer the standalone question completely. Passing fidelity and supported classifications are justified; allowing either language preference or a tie avoids imposing an unsupported mandatory tie."
+    },
+    {
+      "id": "C12",
+      "valid": true,
+      "issues": [],
+      "reason": "Both variants explain that logical-to-physical lookup permits nonadjacent blocks and extension without relocating earlier blocks, and neither claims measured speed improvement. v1's library version and serial logging utility are supplied facts; v2's omission of those nonessential details does not remove support for the requested operation. Both fidelity passes and supported classifications are justified, with either stylistic preference or a tie permitted."
+    }
+  ]
+}

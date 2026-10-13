@@ -1,0 +1,20 @@
+{
+  "raw_files": 84,
+  "supplementary_raw_files": 6,
+  "source_preparation_contexts": 6,
+  "primary_output_contexts": 84,
+  "supplementary_output_contexts": 6,
+  "total_contexts": 96,
+  "copied_files": 187,
+  "all_copied_bytes_identical": true,
+  "prompt_path_transformation_only": "absolute local workspace to {WORKSPACE}",
+  "excluded": [
+    "third-party PDFs",
+    "full extracted paper text",
+    "body inputs",
+    "rendered pages",
+    "source-containing review/audit packets"
+  ],
+  "license_boundary": "Repository license does not relicense cited papers. Raw generated prose and original editorial judgments are model outputs, not endorsed author abstracts or human review.",
+  "rerun": "Not a self-contained paper-text redistribution or model call runner. Retrieve the exact source versions, reproduce the saved extraction recipes, verify source_hashes, and reconstruct private packets in a fresh workspace. Use prompts.portable.json with an explicit inherited-model agent runner; helpers refuse to overwrite existing artifacts. Source text and extraction bytes may differ across Poppler versions and PDF updates."
+}

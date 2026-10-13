@@ -1,0 +1,29 @@
+{
+  "scope": "Original synthetic forward probes, not a real-paper holdout or acceptance benchmark",
+  "facts": [
+    {"id": "F1", "text": "A synthetic robot policy uses a temporal residual code to represent continuous action chunks. Its implementation includes quantile normalization, an MLP, a residual cache, entropy coding, and a lookup decoder."},
+    {"id": "F2", "text": "On two fixed simulated manipulation tasks at matched training budget, coded actions reach 76% and 68% success versus 61% and 57% for per-step binning. Each entry uses 100 executions. No hardware evaluation or training-run uncertainty is available."},
+    {"id": "F3", "text": "A separate released encoder checkpoint is trained once on three source simulators and reused without refitting on two excluded simulators. It averages 24 and 29 tokens per chunk versus 80 and 90 for binning at comparable reconstruction error. No policy-success measurements exist on the excluded simulators."},
+    {"id": "F4", "text": "On the measured workstation, the coded policy takes 180 ms per chunk versus 110 ms for the binning policy. Compression is not a demonstrated inference-speed gain."}
+  ],
+  "cases": [
+    {
+      "id": "paired-contributions",
+      "author_decision": "Give equal priority to the action representation's policy-learning result and the released checkpoint's reuse without refitting. Both are contributions to the abstract. Mechanism internals are supporting detail.",
+      "omit_fact_ids": [],
+      "oracle": {"required_meanings": ["Policy-learning result in simulation", "Reusable checkpoint plus no-refitting compression evidence", "Reuse evidence is not unseen-simulator policy success"], "allowed_omission": "Individual module names or per-task inventories", "forbidden": "Faster inference or hardware success"}
+    },
+    {
+      "id": "method-priority",
+      "author_decision": "The abstract should focus on the action representation's policy-learning result and its measured deployment tradeoff. The released checkpoint is useful supporting material, not a separately prioritized contribution; omit it if needed for a coherent abstract.",
+      "omit_fact_ids": [],
+      "oracle": {"required_meanings": ["Policy-learning result in simulation", "Token compression does not imply faster measured inference"], "allowed_omission": "Checkpoint reuse result", "forbidden": "Treating every supplied result as an obligatory contribution"}
+    },
+    {
+      "id": "priority-without-evidence",
+      "author_decision": "I want the abstract to present both improved policy learning and a released checkpoint that transfers to new simulators without refitting. The latter is a desired claim, not an already confirmed result. Draft only what the available facts support and identify what is needed to establish the other claim.",
+      "omit_fact_ids": ["F3"],
+      "oracle": {"required_meanings": ["Supported policy-learning result", "Missing reuse/release evidence in separate author notes"], "allowed_omission": "Unsupported checkpoint contribution from manuscript", "forbidden": "Inventing a release, excluded-simulator result, or author confirmation"}
+    }
+  ]
+}

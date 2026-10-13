@@ -18,10 +18,10 @@ promise**. A row that reports a metric with no contribution mapping is a
 failure, not a stylistic preference — `results_validation_check.py` rejects any
 row whose `Contribution Claim Tested` or `Result/Evidence` cell is empty.
 
-This is the sharpest constraint in the rewrite: it converts "we ran experiments"
-into "we proved each thing we claimed." If a contribution has no row, you either
-forgot to test it or the claim is unsupported — both must be fixed before the
-paper is honest.
+The mapping makes it possible to inspect how experiments bear on each claim;
+it does not turn empirical observations into proofs. A result may support,
+qualify, or fail a promise. A contribution without a row needs its appropriate
+evidence or a narrower claim, not an invented experiment or a forced positive result.
 
 ## Required Table
 
@@ -30,8 +30,8 @@ Write this Markdown table to `paper_rewriting_output/results_validation.md`:
 | Results Unit | Contribution Claim Tested | Result/Evidence | Figure/Table | Confirmatory Condition | Allowed Interpretation | Interpretation NOT Allowed |
 |---|---|---|---|---|---|---|
 | 4.2 Main accuracy vs. SOTA | C1: our method beats prior SOTA on benchmark X | +3.1 acc over best baseline (88.4 vs 85.3) | Table 2 | Holds only on X's standard split; same backbone, same epochs | Method improves accuracy under matched-budget training on X | Do NOT claim general superiority on unseen domains or larger budgets |
-| 4.3 Ablation of module M | C2: module M is the source of the gain | Removing M drops acc 88.4 to 85.9 | Table 3 | Single dataset, single seed-averaged run | M contributes the majority of the C1 gain | Do NOT claim M is necessary for other architectures |
-| 4.4 Efficiency | C3: method is cheaper at inference | 1.7x fewer FLOPs at equal accuracy | Fig. 4 | Measured on one GPU, batch=1 | Lower inference cost at matched accuracy | Do NOT claim training-time savings (not measured) |
+| 4.3 Ablation of module M | C2: M contributes under the tested configuration | Removing M drops acc 88.4 to 85.9 | Table 3 | Same dataset and training budget, averaging over training seeds | Removing M is associated with a 2.5-point drop in this ablation | Do NOT infer the isolated causal mechanism, fraction of total gain, or necessity for other architectures |
+| 4.4 Efficiency | C3: method requires fewer inference operations | 1.7x fewer FLOPs at equal accuracy | Fig. 4 | Same input shape and counting convention | Lower counted inference FLOPs at matched accuracy | Do NOT infer measured latency, energy, or training-time savings |
 
 ## Why Each Column Exists
 
@@ -70,6 +70,18 @@ Write this Markdown table to `paper_rewriting_output/results_validation.md`:
    `Interpretation NOT Allowed` is the single most common cause of reviewer
    "overclaiming" complaints, so fill it.
 
+## Check What the Metric Counts
+
+Before interpreting a value, identify the measured event and denominator from
+the protocol, not only its number and column heading. Success at the final
+stage is not automatically joint completion of every stage in a trajectory.
+If later-stage counts increase, query the reporting definition; that pattern
+does not by itself prove the table is wrong or license silently changing it.
+Keep an ambiguous result at the source's established outcome scope, or omit it
+and record the definition query. This applies to abstract compression as well
+as Results. Use the existing evidence and interpretation columns, not a new
+required artifact. The structural checker cannot verify this distinction.
+
 ## Failure Modes The Check Catches
 
 - **Metric-only row** — a number with an empty `Contribution Claim Tested`. The
@@ -94,5 +106,8 @@ then validate from the project directory with:
 python "<SKILL_DIR>/scripts/results_validation_check.py" paper_rewriting_output --markdown --write
 ```
 
-Exit 0 = every Results subsection validates a promise. Exit 1 = at least one
-subsection reports a metric that proves nothing.
+Exit 0 means the table passed its structural checks, not that every contribution
+is scientifically validated. Exit 1 means required structure or content is
+missing. Inspect actual evidence and interpretation separately; follow
+[experimental prose guidance](writing-protocols.md#from-measurements-to-experimental-prose)
+when turning the mapping into text.

@@ -1,0 +1,130 @@
+[
+  {
+    "condition": "baseline",
+    "sample": 1,
+    "case": "P1",
+    "unit": "abstract",
+    "words": 177,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 1,
+    "case": "P1",
+    "unit": "results",
+    "words": 155,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 1,
+    "case": "P2",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 1,
+    "case": "P2",
+    "unit": "results",
+    "words": 154,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 2,
+    "case": "P1",
+    "unit": "abstract",
+    "words": 188,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 2,
+    "case": "P1",
+    "unit": "results",
+    "words": 166,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 2,
+    "case": "P2",
+    "unit": "abstract",
+    "words": 185,
+    "budget_pass": true
+  },
+  {
+    "condition": "baseline",
+    "sample": 2,
+    "case": "P2",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 1,
+    "case": "P1",
+    "unit": "abstract",
+    "words": 179,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 1,
+    "case": "P1",
+    "unit": "results",
+    "words": 141,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 1,
+    "case": "P2",
+    "unit": "abstract",
+    "words": 183,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 1,
+    "case": "P2",
+    "unit": "results",
+    "words": 146,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 2,
+    "case": "P1",
+    "unit": "abstract",
+    "words": 176,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 2,
+    "case": "P1",
+    "unit": "results",
+    "words": 161,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 2,
+    "case": "P2",
+    "unit": "abstract",
+    "words": 174,
+    "budget_pass": true
+  },
+  {
+    "condition": "candidate",
+    "sample": 2,
+    "case": "P2",
+    "unit": "results",
+    "words": 153,
+    "budget_pass": true
+  }
+]

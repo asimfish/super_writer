@@ -1,0 +1,130 @@
+{
+  "readings": [
+    {
+      "id": "D1_text_008",
+      "core_relation": "ACT predicts joint-target chunks and exponentially averages overlapping predictions for the same execution time at every timestep, shortening the horizon while preserving feedback and smooth transitions. Leader-arm labels retain force-producing command discrepancies; variational training models demonstration variability.",
+      "scope": "Inputs are four camera views and follower joints. Deployment discards the encoder and fixes the latent at zero; neighboring-time actions are not blended.",
+      "witness": "Combining predictions of the same target, rather than actions at neighboring times",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_032",
+      "core_relation": "DMD pairs synthesized views at perturbed wrist-camera poses with transforms toward later expert poses. This adds corrective recovery supervision, not just visual diversity, and avoids backward commands when perturbations overshoot the next demonstrated pose.",
+      "scope": "A pretrained latent diffusion model is adapted using task or play trajectories and structure-from-motion transforms. Pushing uses the third future frame because angular error approximately plateaus there. Real and generated pairs train the policy jointly.",
+      "witness": "supplies recovery supervision absent from the original trajectories",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_022",
+      "core_relation": "Without ensembling, 100-action chunks raise ACT success from 1% to 44%; longer chunks worsen it. Removing variational training drops human-data success from 35.3% to 2% but scarcely changes scripted results. Separately tuned ensembling helps ACT by 3.3 points but hurts VINN.",
+      "scope": "Two simulated tasks. Six participants thread in 20 versus 33 seconds at 50 versus 5 Hz leader updates; followers remain at 50 Hz. Autonomous threading succeeds only 20% despite 100 demonstrations, exposing visual-localization difficulties.",
+      "witness": "concentrated in the human-data setting",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_010",
+      "core_relation": "ALOHA offers affordable, directly joint-coupled teleoperation; ACT learns joint-target chunks, ensembles same-time predictions for frequent feedback, and models human variability. Together they support precise bimanual imitation: bag opening reaches 88% and battery insertion 96%, versus zero final-stage success for four tuned baselines.",
+      "scope": "Two simulated and six physical tasks; $20,000 budget; 50 demonstrations/physical task, 100 for threading; one seed, 25 physical trials/task. Threading succeeds only 20%. Six participants work faster at 50 than 5 Hz.",
+      "witness": "difficult visual-localization problems unresolved",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_002",
+      "core_relation": "DMD pairs synthesized off-trajectory wrist views with actions toward later expert poses, supplying recovery supervision and avoiding backward commands after overshoot. Improvements span regression and diffusion policies, beyond scarce task data.",
+      "scope": "Adaptation uses task data, play, or both. Tests include pushing, stacking, pouring, hanging, and cup arrangement. Pushing: 24 demonstrations, task-plus-play generator, 10/10 versus 3/10 successes. Cups: 1,447 demonstrations, five unseen cups/new environment, matched preprocessing, 16/25 versus 4/25. Recovery excludes irreversible spills.",
+      "witness": "Recovery labels assume recoverable deviations",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_036",
+      "core_relation": "DMD synthesizes views at nearby virtual camera poses and labels them with transforms toward later expert poses, coupling visual perturbation to commands that resume progress. Unchanged labels may mismatch perturbed poses; immediate-successor targets can command backward motion after overshoot.",
+      "scope": "Structure from motion supplies transforms for adapting a pretrained diffusion model. Third-subsequent-frame targets balance plateauing directional-error improvement against losing terminal frames. Generated and original pairs train the policy; deviations are assumed recoverable.",
+      "witness": "a command intended to resume progress",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_026",
+      "core_relation": "DMD combines pose-conditioned view synthesis with geometric action relabeling, extending supervision without collecting new expert actions at every perturbed state. Labels map virtual wrist-camera poses to later expert poses, correcting deviations while maintaining progress and avoiding backward commands after overshoot.",
+      "scope": "Structure from motion supplies training transforms; the pretrained diffusion model's latent-image codebook stays fixed. A pushing ablation favors three-frame lookahead as error plateaus. Original and generated pairs train the policy, assuming nearby deviations remain recoverable.",
+      "witness": "coupling correction with continued task progress",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_034",
+      "core_relation": "ACT chunks future joint targets to shorten the horizon and represent temporal dependencies. Every-step queries exponentially combine only predictions for the same execution time, maintaining feedback and smooth transitions without blending distinct neighboring commands. Leader targets preserve force-generating discrepancies.",
+      "scope": "Inputs are four camera views and follower joints. Conditional variational training represents demonstration variation through reconstruction and Gaussian-prior regularization. Deployment discards its encoder and fixes the latent at zero, making predictions deterministic given observations.",
+      "witness": "multiple estimates of one command rather than smoothing neighboring actions",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_012",
+      "core_relation": "DMD lowers median angular error from 0.355 to 0.328 radians while pushing success rises from 30% to 100%, supporting corrective supervision beyond conventional augmentation. Task-only pushing reaches 80%, versus 100% with task plus play. Separate pouring comparisons favor DMD but cannot isolate play's benefit.",
+      "scope": "Pushing uses color jitter/flips, 24 demonstrations, ten trials/method. Pouring: 80% versus 0% and 70% versus 30%, under potentially different conditions. Recovery excludes irreversible spills.",
+      "witness": "do not establish a pouring advantage from play data",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_028",
+      "core_relation": "ALOHA supplies affordable joint-space teleoperation; ACT chunks future targets, combines overlapping predictions each step, and models human variability. These address precision and accumulated errors: bag opening reaches 88% and battery insertion 96%, while four tuned baselines complete neither.",
+      "scope": "$20,000, 50 Hz control; two simulated and six physical tasks; 50 demonstrations/physical task except 100 for threading; one seed, 25 physical evaluations/method. Six participants teleoperate faster at 50 than 5 Hz. Threading reaches 20%; initial candy completion is 0/10.",
+      "witness": "policies that tolerate errors across long, high-frequency trajectories",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_030",
+      "core_relation": "DMD lowers pushing error from 0.355 to 0.328 radians but raises completion from 3/10 to 10/10, consistent with cumulative execution errors. Cup augmentation improves Diffusion Policy from 4/25 to 16/25, extending benefit beyond scarce task data.",
+      "scope": "Pushing uses color jitter/flips and 24 demonstrations; eight-demonstration results are 8/10 versus 2/10, plus a generator trained on separate play data. Cups use 1,447 demonstrations, five unseen cups/new laboratory, matched starts and preprocessing; nine failures remain.",
+      "witness": "so that count excludes other training input",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_024",
+      "core_relation": "Chunking raises simulated success from 1% to 44% and also helps BC-ConvMLP/VINN; longer chunks worsen performance. Removing variational training drops human-data success from 35.3% to 2%, barely affecting scripted data. Separately tuned ensembling helps ACT by 3.3 points but lowers VINN from 37% to 17%.",
+      "scope": "Two tasks; chunking tested without ensembling. Velcro drops from 92% lifting to 20% insertion despite 100 demonstrations. Candy's 0/10 initial attempts and later 3/5 with ten attempts/candy are not single-attempt equivalents.",
+      "witness": "That change in retry budget",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_016",
+      "core_relation": "ACT predicts joint-target chunks to shorten the horizon and capture correlated behavior, then combines same-time predictions with exponential weights at every step to retain feedback and smooth transitions. Leader-target supervision preserves offsets that generate controller forces.",
+      "scope": "ALOHA inputs are four camera views and follower joints. A conditional variational autoencoder infers demonstration variation from actions and joints, regularized toward a Gaussian prior; deployment removes the encoder and fixes the latent to zero.",
+      "witness": "Predictions for the same execution time are combined with exponential weighting",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_018",
+      "core_relation": "DMD supplies off-trajectory recovery supervision by pairing synthesized wrist views with actions toward later expert poses, avoiding backward labels after overshoot. This improves execution and transfer for tested imitation policies. Camera-pose reconstruction links synthesis and action labels.",
+      "scope": "Generator adaptation uses task data, play, or both. Tests cover pushing, stacking, pouring, hanging, and cups. Pushing: 24 demonstrations, 10/10 versus 3/10; eight demonstrations with play-only adaptation, 80% versus 20%. Cups: five unseen objects/new laboratory, matched preprocessing, 16/25 versus 4/25. Recovery excludes irreversible spills.",
+      "witness": "provided deviations remain recoverable",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_006",
+      "core_relation": "Without ensembling, 100-step chunks increase mean success from 1% to 44%; longer chunks slightly worsen it. BC-ConvMLP and VINN also benefit, so gains are not transformer-specific. Removing variational training lowers human-data success from 35.3% to 2% but barely changes scripted results, supporting variability-aware training.",
+      "scope": "Two simulated tasks, scripted and human datasets. Separately tuned ensembling adds 3.3 points to ACT and four to BC-ConvMLP but hurts VINN; neither averaging nor ever-longer chunks is uniformly beneficial.",
+      "witness": "consistent with a tradeoff",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_020",
+      "core_relation": "DMD couples pose-conditioned synthetic wrist-camera views with later-pose corrective labels, teaching recovery from undemonstrated states and avoiding backward commands after overshoot. Improvements extend from scarce-data imitation to a diffusion policy trained on 1,447 demonstrations.",
+      "scope": "Adaptation uses task data, play, or both. Pushing: 24 demonstrations, ten trials/method, 100% versus 30% cloning and 50% NeRF augmentation; eight demonstrations with play-trained synthesis, 80% versus 20%. Cups: unseen objects/environment, matched preprocessing, 16/25 versus 4/25. Irreversible spills are excluded. Other tested tasks include stacking, pouring, and shirt hanging.",
+      "witness": "provided deviations remain recoverable",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_014",
+      "core_relation": "ALOHA supplies affordable, directly joint-mapped teleoperation avoiding inverse-kinematics singularity problems. ACT predicts joint-target chunks, ensembles same-time predictions for feedback, and models human variability, extending precise learned bimanual manipulation. Bag opening reaches 88% and battery insertion 96%; four comparison methods never pass the first stage.",
+      "scope": "$20,000 budget; two simulated and six hardware tasks; 50 demonstrations/hardware task except 100 for threading; 25-trial hardware tests. Six participants finish faster with 50Hz than 5Hz leader updates. Threading reaches 20%; initial candy completion is 0/10.",
+      "witness": "retaining substantial perception and force limitations",
+      "unclear": "none"
+    },
+    {
+      "id": "D1_text_004",
+      "core_relation": "DMD improves pouring success to 80% versus cloning's 0%, consistent with correcting positional drift as the baseline rotates without approaching the receiving cup. A separate task-only-generator comparison yields 70% versus 30%, supporting augmentation without play, not proving play's added value.",
+      "scope": "First generator adaptation uses 49 task demonstrations and 16 play trajectories. Tests are randomized pairwise comparisons; different baseline rates and possible lighting/condition differences prevent attributing 80% versus 70% to play. Recovery cannot retrieve spilled beans.",
+      "witness": "It does not isolate the value of play",
+      "unclear": "none"
+    }
+  ]
+}

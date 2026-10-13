@@ -1,0 +1,60 @@
+{
+  "audits": [
+    {
+      "id": "G1_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A02 Sec.2, Eqs.(1)-(3), supports regularized neighborhood minimization and perturbed-weight updates; Sec.3.1/Table1 supports the doubled-epoch comparison and 2.2% to 1.6% result. Prose 'does not certify the practical approximation' distinguishes A.1's conditional bound from optimizer guarantees. Sec.3.3/Table4 and B.1/Table5 support the noise and SVHN caveats; Sec.4 supports the qualified diagnostics. Reading core is grounded in 'nearby parameters also have low loss' and scope in 'up to twice as many epochs.' The prose answers both parts of the frozen question."
+    },
+    {
+      "id": "G1_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A02 Sec.2/Eqs.(1)-(3) and A.1 support the neighborhood objective, approximate two-gradient update, and stated assumptions. Sec.3.1/Table1 supports the longer-baseline comparison; Sec.3.2/Table3 supports the explicitly qualified EfficientNet-L2 result. Prose 'motivates, but does not certify, the minibatch implementation' and the noise/SVHN exceptions correctly limit guarantees (Sec.3.3/Table4; B.1/Table5). Sec.4 supports subset and curvature claims without causal overreach. Reading core follows the conditional bound sentence; scope follows 'twice as many epochs.' Both are supported by actual prose."
+    },
+    {
+      "id": "G1_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A02 Sec.2/Eqs.(2)-(3) supports 'one gradient' for perturbation and 'a second gradient' for updating original weights. Sec.3.1/Table1 supports all tested CIFAR gains against longer-trained baselines. A.1 supports the conditional assumptions; prose 'without establishing a generalization guarantee for approximate updates' preserves their limited reach. Sec.3.3/Table4, Sec.4, and B.1/Table5 support its remaining qualifications. Reading core and scope directly match the neighborhood and doubled-epoch sentences. Omitted regularization and second-order details do not prevent this legitimate abstract-level answer."
+    },
+    {
+      "id": "G1_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A02 Sec.2/Eqs.(1)-(3) supports worst-neighborhood loss and the two-gradient update; A.1 supports the assumptions in the bound sentence. Prose 'without certifying approximate minibatch updates' separates motivation from guarantee. Sec.3.1 supports the doubled-epoch CIFAR comparison; Secs.3.2-3.3, Table4, and B.1/Table5 support transfer gains and stated exceptions. Sec.4 supports the explicitly studied curvature/subset findings. Reading core is grounded in 'worst training loss within a parameter neighborhood'; scope matches the allowed doubled epochs. Missing numeric examples or regularization detail are optional, not contradictions."
+    },
+    {
+      "id": "G1_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A01 Secs.3.2-3.3 and the motion-planner implementation support attraction/repulsion maps, visually grounded code, joint objectives, and observation-based replanning. Table1 supports all real-world percentages; Table2 and A.4.2/Table4 support aggregate gains with task-level exceptions. Secs.3.4/4.3/Table3 support locally perturbed waypoint priors, both success ranges, and mean interaction times. Prose 'adaptation when zero-shot plans are insufficient' explicitly distinguishes learned contact-rich success from zero-shot execution. Sec.5 supports the limitations. Reading core follows 'optimize desired motion and constraints jointly'; scope follows the five-task comparison."
+    },
+    {
+      "id": "G1_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A01 Secs.3.2-3.3 and implementation support perception-querying programs, spatial value objectives, and observation-updated planning. Table1 verifies 88%/70% versus 24%/0%; Table2 and A.4.2/Table4 verify the qualified simulated results. Secs.3.4/4.3/Table3 support focused exploration, the zero-shot and learned success ranges, and interaction-time comparison. Prose explicitly labels the low range 'zero-shot' and describes subsequent 'online dynamics learning,' answering the claim boundary. Sec.5 supports the limitations. Reading core matches 'planners optimize trajectories against these maps'; scope matches '70% under disturbances.'"
+    },
+    {
+      "id": "G1_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A01 Sec.3.2 supports perception-grounded voxel scoring; Sec.3.3 and implementation support joint planning and updated-observation replanning. Table1 verifies the five-task percentages; Table2 and A.4.2/Table4 support category gains without uniform task improvements. Prose 'zero-shot trajectories are insufficient yet provide exploration priors' faithfully separates planning from learned contact-rich control (Secs.3.4/4.3/Table3), including the interaction-time contrast. Secs.4.4/5 support perception, dynamics, prompt, and end-effector limits. Reading core matches 'consider goals and constraints jointly'; scope matches the five-task comparison. Omitted contact-task success percentages are optional."
+    },
+    {
+      "id": "G1_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A01 Secs.3.2-3.3 and implementation support code-generated, visually grounded voxel composition and observation-updated planning. Table1 verifies the tabletop comparison; Table2 and A.4.2/Table4 support the qualified transfer claim. Prose 'zero-shot trajectories alone are insufficient' followed by exploration priors and 'Dynamics learning' preserves the contact-rich distinction (Secs.3.4/4.3/Table3); the source supports the interaction-time contrast. Implementation and Sec.5 support prompt examples, perception dependence, and end-effector-only planning. Reading core follows 'planners optimize trajectories against these maps'; scope follows '70% with disturbances.' No full learning proof or success percentages are required."
+    }
+  ]
+}

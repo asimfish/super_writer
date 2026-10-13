@@ -1,0 +1,112 @@
+{
+  "reviews": [
+    {
+      "id": "Q01",
+      "preferred": "B",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "reason": "B explains the operative relationship: five tokens are drafted sequentially, then all five prefix positions are checked concurrently in one target round, reducing serial expensive rounds. A names the components and measurements but leaves the verification schedule unexplained. Both preserve the supplied correction guarantee, the 4 ms proposal cost, 20 ms target round and three-token average yield, and neither claims measured application latency. A's missing operational explanation weakens clarity without making its claims false."
+    },
+    {
+      "id": "Q02",
+      "preferred": "A",
+      "fidelity": {
+        "A": "pass",
+        "B": "fail"
+      },
+      "reason": "The evidence distinguishes seven final-state successes from four uninterrupted all-stage completions, with three successes following failure and reset; baseline counts are five and three respectively. A states these events and counts correctly. B calls seven successes 'uninterrupted three-stage completions' and explicitly uses seven of ten as the trajectory-completion rate, despite acknowledging resets and the four-of-ten tally. This materially misidentifies the measured event, not merely an omitted explanation. Both appropriately withhold significance and deployment conclusions."
+    },
+    {
+      "id": "Q03",
+      "preferred": "A",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "reason": "A explains the allocation relationship: physical blocks need not be adjacent, and another is allocated only when the current block is exhausted, enabling incremental growth instead of maximum-length contiguous reservation. B lists blocks, a position map and a pool but does not explain when storage grows or why the scheme changes reservation. Both correctly report batches of 64 versus 40 at a 100 ms cap and disclaim isolated allocator overhead and arbitrary-hardware benefits. B's incomplete operation account is a clarity weakness, not a false claim."
+    },
+    {
+      "id": "Q04",
+      "preferred": "A",
+      "fidelity": {
+        "A": "pass",
+        "B": "fail"
+      },
+      "reason": "Optimizer-state storage falls from 8 to 4 GB, but unchanged other allocations of 8 GB make total allocation 16 versus 12 GB. A identifies the halved component and explicitly says total allocation is not halved. B twice attributes a twofold reduction to the complete footprint, contradicting both the evidence and its own totals. A also presents checkpoint losses of 2.3 versus 2.2 as an observed tradeoff without claiming quality equivalence; B's similar loss caveat does not repair its false resource attribution."
+    },
+    {
+      "id": "Q05",
+      "preferred": "Tie",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "reason": "Both clearly report 16 versus 24 GB at batch four on one device and checkpoint losses of 2.1 versus 2.2. Each treats the resource saving and loss observations as findings from one run per method, not equivalence or statistical superiority, and limits inference to the evaluated configuration without transfer or production claims. Their different phrasing preserves the same contribution and evidence boundaries. Neither has a decisive clarity or calibration advantage."
+    },
+    {
+      "id": "Q06",
+      "preferred": "A",
+      "fidelity": {
+        "A": "pass",
+        "B": "concern"
+      },
+      "reason": "A states the essential condition, initialization in [0,1], and explains why halving preserves that interval. Its example of three becoming 1.5 correctly marks the boundary. B says the update 'keeps every iterate in [0,1]' without the initial-value restriction. The ten steps from 0.8 do not supply that general condition; shrinking toward zero alone does not establish interval membership. This is a consequential missing claim condition, so concern rather than a false attribution or logged-event failure."
+    },
+    {
+      "id": "Q07",
+      "preferred": "B",
+      "fidelity": {
+        "A": "fail",
+        "B": "pass"
+      },
+      "reason": "The supplied timings support a twofold kernel acceleration, 16 to 8 ms, but only an 8 ms complete-request reduction, 112 to 104 ms. B explicitly distinguishes those boundaries and explains why the component improvement does not double overall speed. A claims 'doubles complete-request inference speed' and 'twofold end-to-end acceleration,' materially attributing the kernel ratio to the request measurement despite quoting the correct times. Its throughput and configuration caveats do not cure that contradiction."
+    },
+    {
+      "id": "Q08",
+      "preferred": "B",
+      "fidelity": {
+        "A": "concern",
+        "B": "pass"
+      },
+      "reason": "B explicitly conditions the supplied at-least-90% marginal guarantee on exchangeability of calibration and future observations, and distinguishes it from conditional or arbitrary-shift coverage. A states the guarantee without that consequential premise; saying no shift experiment exists does not restore the guarantee's condition. Both correctly treat 89 covered targets in 100 draws as one realized evaluation, not proof or contradiction of the marginal guarantee. A's problem is missing claim scope, not a fabricated empirical result."
+    },
+    {
+      "id": "Q09",
+      "preferred": "Tie",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "reason": "The passages are identical. Both accurately describe 89 versus 85 exact matches on the same 100 queries and a slower median query time of 150 versus 120 ms on one device. Each makes the accuracy-time tradeoff explicit and limits the conclusion to those observations, without sampling-uncertainty or deployment guarantees. There is no textual or evidential basis for preferring either."
+    },
+    {
+      "id": "Q10",
+      "preferred": "A",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "reason": "A explains the diagnostic control: each question keeps the same answer-bearing document and distractors, distractor order stays fixed, and only answer position changes. This makes clear why the 80%, 52% and 78% contrast concerns placement rather than changed evidence. B accurately reports those scores but omits the controls, leaving the stand-alone diagnostic rationale unexplained. Both avoid identifying an internal neural mechanism or generalizing beyond tested task and length. B's missing explanation weakens clarity without falsely describing the measurements."
+    },
+    {
+      "id": "Q11",
+      "preferred": "A",
+      "fidelity": {
+        "A": "pass",
+        "B": "fail"
+      },
+      "reason": "The supplied proof covers exact gradients on convex objectives with the stipulated step-size rule, not the approximate-gradient implementation. A separates that conditional theorem from decreases observed along three toy trajectories. B attributes non-increasing values for approximate updates to 'the supplied proof' and calls theory and trajectories descriptions of 'the same update procedure.' This materially false proof attribution transfers a guarantee the evidence explicitly withholds. Correctly reporting the toy decreases and disclaiming convergence rates does not justify that transfer."
+    },
+    {
+      "id": "Q12",
+      "preferred": "Tie",
+      "fidelity": {
+        "A": "pass",
+        "B": "pass"
+      },
+      "reason": "Both explain the logical-key mapping to physical blocks, nonadjacent storage and extension without copying earlier blocks into a contiguous region. Each connects lookup to access despite physical separation and avoids claiming a measured speed advantage. A's library version 2.4 and serial logging are supported metadata, explicitly distinguished from the storage mechanism; B legitimately omits those nonessential details. The operation and evidence calibration remain equally clear, so the metadata difference alone does not justify a preference."
+    }
+  ]
+}

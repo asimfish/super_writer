@@ -1,0 +1,130 @@
+{
+  "reviews": [
+    {
+      "id": "P12_s1_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "reason": "Both explain the feedback direction, bounded trajectory and telescoping identity supported by P12 Eq. (2), Lemma 4.1 and Proposition 4.1. Both retain Theorem 4.2's separate assumptions. A foregrounds the target/parameter distinction; B explicitly calls the accumulated control pathwise. These are comparably effective methods explanations, with similarly dense closing condition lists."
+    },
+    {
+      "id": "P11_s3_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both explain the correction as reserving the unseen loss, then connect oracle comparison, monotonicity and conditional exchangeability to expected-risk control. P11 Theorem 1's proof supplies each step, including right-continuity and the maximal-parameter fallback. A's motivation-first opening and B's rule-first opening provide equivalent methodological clarity; neither has a material advantage."
+    },
+    {
+      "id": "P11_s1_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 4, "selection": 4, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "reason": "Both accurately summarize P11 Theorems 1-2, the sharpness construction in Proposition 1, and the non-monotone failure and repair in Proposition 2/Corollary 1. B more explicitly interprets the gap as worst-case conservatism; A includes the additional scope of Sections 4.1-4.3. Both connect the contribution to Sections 3.1-3.4, leaving a near tie overall."
+    },
+    {
+      "id": "P11_s2_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both state expected-loss control, the stronger-assumption sharp lower bound and failure without monotonicity, while preserving averaging over calibration and test data (P11 Theorems 1-2; Propositions 1-2). B's symmetric-threshold explanation and A's boundedness-alone conclusion are comparably useful abstract framing. Sections 3.1-3.4 support both application summaries; B's extension sentence also matches Section 4."
+    },
+    {
+      "id": "P11_s2_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "reason": "B foregrounds preserved leaf resolution, while A foregrounds near-target false-negative risk. Both interpret the supported means and dispersions without isolating an application effect or asserting splitwise guarantees (P11 Sections 3.1-3.3; Theorem 1). Both explain the non-monotone boundary and upper-envelope repair accurately (Proposition 2; Corollary 1). The different result orderings have comparable explanatory value."
+    },
+    {
+      "id": "P12_s1_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both distinguish Proposition 4.1's unrestricted long-run frequency control from Section 4.2's restricted stronger analysis. B states the finite-horizon rate; A more fully explains the feedback and step-size tradeoff. Sections 2.2, 5 and 6 support their local-coverage and score-normalization claims. Neither numerical specificity nor the alternative emphasis creates a substantial abstract-level advantage."
+    },
+    {
+      "id": "P12_s1_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both isolate feedback from rolling GARCH refitting, qualify the four-of-twelve stock selection and explain the score-normalization contrast (P12 Section 2.2, Figure 1; Section 5, Figure 2). A's centered windows match Eq. (4). Both distinguish local empirical performance from Proposition 4.1's long-run guarantee. Their different opening emphases are equally effective results framing."
+    },
+    {
+      "id": "P12_s3_methods",
+      "winner": "A",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "concern", "contribution": 5, "argument": 4, "selection": 4, "language": 5},
+      "reason": "B asserts the [-gamma, 1+gamma] bound without specifying alpha_1 in [0,1], required in P12 Section 4.1 and Lemma 4.1; A retains it. Both correctly derive the telescoping identity from Eq. (2) and distinguish accumulated from short-window coverage. The missing initialization condition weakens B's standalone explanation of the bound, so A is preferred."
+    },
+    {
+      "id": "P11_s2_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both explain why reserving B dominates the calibration-plus-test mean, why the resulting parameter is no smaller than the oracle's, and how monotonicity transfers the bound. P11 Theorem 1's conditioning on the multiset supplies their exchangeability argument. Both explicitly identify averaging over calibration and test randomness. The wording differences do not materially change the methods explanation."
+    },
+    {
+      "id": "P12_s3_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A explains the telescoping mechanism; B names the endpoint convention and explicitly restricts empirical claims to reported comparisons. Both preserve P12 Proposition 4.1's accumulated-error guarantee, Section 4.2's stationary hidden Markov setting, Section 5's deterioration under unnormalized scores and Section 7's immediate-response limitation. These complementary emphases leave the abstract functions essentially equivalent."
+    },
+    {
+      "id": "P12_s2_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "P12 Section 2.2 supports the selected four-stock panels and reported adaptive success across twelve; Section 5 supports the normalization contrast. Section 6 explicitly orders counties by time zone and randomizes within zones. A emphasizes the constructed geographic drift; B distinguishes empirical local improvements from the unrestricted frequency guarantee. Both interpret the evidence and delimit its scope comparably."
+    },
+    {
+      "id": "P11_s1_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "reason": "Both accurately report the sample sizes, means and dispersions in P11 Sections 3.1-3.2, then explain why near-target means do not guarantee control on every split. Both avoid attributing dispersion to calibration size alone. Proposition 2 and Corollary 1 support their complementary non-monotone failure and upper-envelope repair. The reordered exposition does not materially improve either results paragraph."
+    },
+    {
+      "id": "P12_s2_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's increasing quantile level and B's decreasing miscoverage parameter both match P12 Eq. (2), because sets use Q_t(1-alpha_t). Both distinguish Proposition 4.1 from Section 4.2's stationary hidden Markov results and qualify empirical improvements with Section 5's score-normalization comparison. B includes the step-size tradeoff; A specifies the empirical target. These are near-equivalent abstracts."
+    },
+    {
+      "id": "P11_s3_abstract",
+      "winner": "B",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 4, "selection": 4, "language": 4},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "reason": "B explains the correction more transparently than A's 'thresholding an average' formulation and explicitly identifies monotonicity as the link between selection and control. This makes the abstract's method-to-limitation argument clearer. Both faithfully retain P11 Theorems 1-2, Proposition 1's sharpness, Proposition 2's failure and Corollary 1's repair; Sections 3.1-3.4 support both application summaries."
+    },
+    {
+      "id": "P11_s3_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "reason": "Both connect near-target means and differing splitwise dispersions to the expected-risk, rather than per-split or per-image, guarantee (P11 Sections 3.1-3.2; Theorem 1). Both then use Proposition 2's near-B counterexample to explain why these successful monotone applications do not justify dropping monotonicity. A's undershooting emphasis and B's variation emphasis yield comparably coherent results interpretations."
+    },
+    {
+      "id": "P11_s1_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A describes uniform representativeness; B states its expected-loss consequence directly. These are equivalent proof steps in P11 Theorem 1, which conditions on the multiset and uses Eq. (6). Both explain the correction, oracle ordering, monotonicity, right-continuity and fallback. B's explicit averaging scope is useful, but does not create a substantial advantage over A's complete proof explanation."
+    },
+    {
+      "id": "P12_s2_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both derive the same finite-horizon bound from P12 Eq. (2), Lemma 4.1 and Proposition 4.1, retaining initialization and full/empty-set conventions. A expresses cumulative excess before bounding frequency; B writes the average identity directly. A also notes compatibility with fitted-function updates, while B qualifies enlargement with fixed functions. Both explain the mechanism and guarantee scope precisely."
+    },
+    {
+      "id": "P12_s3_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both interpret the normalized-score benefit, shared rolling refitting, selected failure cases and unnormalized-score deterioration faithfully (P12 Sections 2.2 and 5). Both accurately describe Section 6's constructed county ordering and local-coverage comparison. A emphasizes that this is not an election-night replay; B excludes pointwise guarantees and interval-width conclusions. Neither scope statement creates a material results-level advantage."
+    }
+  ]
+}

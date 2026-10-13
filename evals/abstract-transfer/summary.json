@@ -1,0 +1,116 @@
+{
+  "completed": {
+    "papers": 6,
+    "groups": 3,
+    "initial_abstracts": 12,
+    "final_abstracts": 24,
+    "pairs": 12,
+    "preferences": 24,
+    "readings": 24,
+    "source_audit_judgments": 48
+  },
+  "votes": {
+    "tie": 8,
+    "candidate": 10,
+    "baseline": 6
+  },
+  "pair_outcomes": {
+    "disagreement": 8,
+    "unanimous_candidate": 2,
+    "unanimous_tie": 1,
+    "unanimous_baseline": 1
+  },
+  "by_paper": {
+    "A01": {
+      "baseline": 1,
+      "candidate": 3
+    },
+    "A02": {
+      "tie": 2,
+      "candidate": 1,
+      "baseline": 1
+    },
+    "A03": {
+      "candidate": 2,
+      "baseline": 1,
+      "tie": 1
+    },
+    "A04": {
+      "candidate": 2,
+      "tie": 2
+    },
+    "A05": {
+      "baseline": 1,
+      "tie": 1,
+      "candidate": 2
+    },
+    "A06": {
+      "tie": 2,
+      "baseline": 2
+    }
+  },
+  "by_sample": {
+    "1": {
+      "candidate": 4,
+      "baseline": 2,
+      "tie": 6
+    },
+    "2": {
+      "tie": 2,
+      "candidate": 6,
+      "baseline": 4
+    }
+  },
+  "source_audits": {
+    "baseline": {
+      "fidelity": {
+        "pass": 24
+      },
+      "critical_support": {
+        "supported": 24
+      },
+      "reader_support": {
+        "text_grounded": 24
+      }
+    },
+    "candidate": {
+      "fidelity": {
+        "pass": 24
+      },
+      "critical_support": {
+        "supported": 24
+      },
+      "reader_support": {
+        "text_grounded": 24
+      }
+    }
+  },
+  "continuation_gate": {
+    "eligible_for_further_abstract_validation": false,
+    "criteria": {
+      "both_samples_net_candidate": true,
+      "four_papers_net_candidate": true,
+      "two_unanimous_candidate_pairs": true,
+      "no_unanimous_baseline_pair": false,
+      "no_candidate_fidelity_fail": true,
+      "no_new_candidate_concern": true,
+      "all_candidate_abstracts_within_budget": true
+    },
+    "new_concerns": [],
+    "candidate_fidelity_fail_labels": 0
+  },
+  "generation_budget_violations": [
+    {
+      "paper": "A05",
+      "group": "G3",
+      "sample": 1,
+      "condition": "initial",
+      "field": "abstract",
+      "words": 203,
+      "within_budget": false
+    }
+  ],
+  "assessment_budget_violations": [],
+  "witness_violations": [],
+  "claim_boundary": "Operational next-stage criterion, not statistical significance, human validity or automatic runtime promotion."
+}

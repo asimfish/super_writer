@@ -1,0 +1,1056 @@
+{
+  "scheduled_output_tasks": 84,
+  "fresh_contexts": true,
+  "model": "inherited, no override",
+  "source_preparation_agents": [
+    {
+      "agent_id": "01a1298f-1070-7e91-a148-226167d0bf6c",
+      "nickname": "Gauss",
+      "domain": "D1"
+    },
+    {
+      "agent_id": "01a1298f-109c-7ec0-8782-8297d1418a14",
+      "nickname": "Peirce",
+      "domain": "D2"
+    },
+    {
+      "agent_id": "01a1298f-10bc-72a1-9e08-8fed90345654",
+      "nickname": "Kant",
+      "domain": "D3"
+    },
+    {
+      "agent_id": "01a1298f-10df-79d2-b24b-a09f8be27701",
+      "nickname": "Halley",
+      "domain": "D4"
+    },
+    {
+      "agent_id": "01a1298f-10fe-7142-b515-6c6fb2b7b14d",
+      "nickname": "Volta",
+      "domain": "D5"
+    },
+    {
+      "agent_id": "01a1298f-111f-7cc1-a5c4-0c07d84e670f",
+      "nickname": "Kuhn",
+      "domain": "D6"
+    }
+  ],
+  "jobs": [
+    {
+      "agent_id": "01a129cc-9117-7053-a369-153a4c8014d6",
+      "nickname": "Sartre",
+      "phase": "initial",
+      "domain": "D1",
+      "sample": 1,
+      "output": "raw/initial_D1_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D1_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129cc-9153-7003-9126-79f8cee39e42",
+      "nickname": "Confucius",
+      "phase": "initial",
+      "domain": "D2",
+      "sample": 1,
+      "output": "raw/initial_D2_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D2_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129cc-9190-7471-ab2e-c1201213a644",
+      "nickname": "Hegel",
+      "phase": "initial",
+      "domain": "D3",
+      "sample": 1,
+      "output": "raw/initial_D3_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D3_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129cc-91cd-7c52-a186-ef6fe444f7ca",
+      "nickname": "Cicero",
+      "phase": "initial",
+      "domain": "D4",
+      "sample": 1,
+      "output": "raw/initial_D4_1.json",
+      "status": "completed"
+    },
+    {
+      "agent_id": "01a129cc-9206-7dc0-a2b5-db48f3df393e",
+      "nickname": "Hilbert",
+      "phase": "initial",
+      "domain": "D5",
+      "sample": 1,
+      "output": "raw/initial_D5_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D5_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129cc-923b-7a63-bc1c-3b6002e82530",
+      "nickname": "Carver",
+      "phase": "initial",
+      "domain": "D6",
+      "sample": 1,
+      "output": "raw/initial_D6_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D6_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129cf-01ec-74a1-b074-2a48a1202cf2",
+      "nickname": "Singer",
+      "phase": "initial",
+      "domain": "D1",
+      "sample": 2,
+      "output": "raw/initial_D1_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D1_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129cf-7842-79c3-a9ec-294a509134e5",
+      "nickname": "Hypatia",
+      "phase": "initial",
+      "domain": "D2",
+      "sample": 2,
+      "output": "raw/initial_D2_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D2_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129cf-7867-70c3-863d-de8e30b15262",
+      "nickname": "Russell",
+      "phase": "initial",
+      "domain": "D3",
+      "sample": 2,
+      "output": "raw/initial_D3_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D3_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129d0-6885-7aa0-b7c1-519b16c6ad16",
+      "nickname": "Boole",
+      "phase": "initial",
+      "domain": "D4",
+      "sample": 2,
+      "output": "raw/initial_D4_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D4_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129d0-68b4-7e72-b95f-27677c74ac22",
+      "nickname": "Lorentz",
+      "phase": "initial",
+      "domain": "D5",
+      "sample": 2,
+      "output": "raw/initial_D5_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D5_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129d0-68de-7391-9036-7ea6a5909aac",
+      "nickname": "Raman",
+      "phase": "initial",
+      "domain": "D6",
+      "sample": 2,
+      "output": "raw/initial_D6_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D6_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129d2-69fd-7c52-8c6c-f60cf5442db5",
+      "nickname": "Pauli",
+      "phase": "initial",
+      "domain": "D1",
+      "sample": 3,
+      "output": "raw/initial_D1_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D1_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129d2-8d2d-7c43-8d2b-d3fcc7ee400e",
+      "nickname": "Goodall",
+      "phase": "initial",
+      "domain": "D2",
+      "sample": 3,
+      "output": "raw/initial_D2_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D2_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129d2-9bbc-7b21-a680-0f16afd9c1ab",
+      "nickname": "Gibbs",
+      "phase": "initial",
+      "domain": "D3",
+      "sample": 3,
+      "output": "raw/initial_D3_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D3_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129d3-0c40-7cc0-b0a9-0e689d6c6274",
+      "nickname": "Turing",
+      "phase": "initial",
+      "domain": "D4",
+      "sample": 3,
+      "output": "raw/initial_D4_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D4_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129d3-924d-73c3-bdb5-6e3d6801eed3",
+      "nickname": "Hume",
+      "phase": "initial",
+      "domain": "D5",
+      "sample": 3,
+      "output": "raw/initial_D5_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D5_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129d3-bae5-7b90-ae02-c46eecef994c",
+      "nickname": "Bernoulli",
+      "phase": "initial",
+      "domain": "D6",
+      "sample": 3,
+      "output": "raw/initial_D6_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/initial_D6_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129d6-c092-7c61-b5f4-2219c3030715",
+      "nickname": "Locke",
+      "phase": "revision",
+      "domain": "D1",
+      "sample": 1,
+      "condition": "baseline",
+      "output": "raw/baseline_D1_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D1_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129d6-c0c1-7ee1-8036-25829a02e763",
+      "nickname": "Banach",
+      "phase": "revision",
+      "domain": "D1",
+      "sample": 1,
+      "condition": "candidate",
+      "output": "raw/candidate_D1_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D1_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129d6-c0e3-78b2-9e46-e286bf2ffae8",
+      "nickname": "Kepler",
+      "phase": "revision",
+      "domain": "D2",
+      "sample": 1,
+      "condition": "baseline",
+      "output": "raw/baseline_D2_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D2_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129d6-c10e-7e92-80a3-af34e1618b94",
+      "nickname": "Sagan",
+      "phase": "revision",
+      "domain": "D2",
+      "sample": 1,
+      "condition": "candidate",
+      "output": "raw/candidate_D2_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D2_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129d6-c131-7963-9aed-f23e3d004e63",
+      "nickname": "Avicenna",
+      "phase": "revision",
+      "domain": "D3",
+      "sample": 1,
+      "condition": "baseline",
+      "output": "raw/baseline_D3_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D3_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129d6-c15b-7113-98ee-8f5db4249ebc",
+      "nickname": "Darwin",
+      "phase": "revision",
+      "domain": "D3",
+      "sample": 1,
+      "condition": "candidate",
+      "output": "raw/candidate_D3_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D3_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129da-4acd-7333-803a-e716ff0ef2b5",
+      "nickname": "Popper",
+      "phase": "revision",
+      "domain": "D4",
+      "sample": 1,
+      "condition": "baseline",
+      "output": "raw/baseline_D4_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D4_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129da-4af7-7492-b1a0-ba8b3ad89c6a",
+      "nickname": "Ampere",
+      "phase": "revision",
+      "domain": "D4",
+      "sample": 1,
+      "condition": "candidate",
+      "output": "raw/candidate_D4_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D4_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129da-4b1d-7290-8588-2db1f2608125",
+      "nickname": "Godel",
+      "phase": "revision",
+      "domain": "D5",
+      "sample": 1,
+      "condition": "baseline",
+      "output": "raw/baseline_D5_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D5_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129db-6155-77e0-9c88-5a95b7fb5c99",
+      "nickname": "Aquinas",
+      "phase": "revision",
+      "domain": "D5",
+      "sample": 1,
+      "condition": "candidate",
+      "output": "raw/candidate_D5_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D5_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129db-754d-72e0-be51-d0467feeba96",
+      "nickname": "Zeno",
+      "phase": "revision",
+      "domain": "D6",
+      "sample": 1,
+      "condition": "baseline",
+      "output": "raw/baseline_D6_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D6_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129db-d0b0-7212-a141-6f5133e4f9c3",
+      "nickname": "Herschel",
+      "phase": "revision",
+      "domain": "D6",
+      "sample": 1,
+      "condition": "candidate",
+      "output": "raw/candidate_D6_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D6_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129dd-ba50-72e3-8f6b-014bd3b42c6d",
+      "nickname": "Chandrasekhar",
+      "phase": "revision",
+      "domain": "D1",
+      "sample": 2,
+      "condition": "baseline",
+      "output": "raw/baseline_D1_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D1_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129de-5759-7112-97d7-f473314e3af4",
+      "nickname": "Aristotle",
+      "phase": "revision",
+      "domain": "D1",
+      "sample": 2,
+      "condition": "candidate",
+      "output": "raw/candidate_D1_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D1_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129de-956f-7d31-835d-50b022b990f5",
+      "nickname": "Euler",
+      "phase": "revision",
+      "domain": "D2",
+      "sample": 2,
+      "condition": "baseline",
+      "output": "raw/baseline_D2_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D2_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129df-3e1c-7400-8be8-bdffe81867f8",
+      "nickname": "Dewey",
+      "phase": "revision",
+      "domain": "D2",
+      "sample": 2,
+      "condition": "candidate",
+      "output": "raw/candidate_D2_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D2_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129df-8e13-7f73-b35d-b32d4bce2ccf",
+      "nickname": "Newton",
+      "phase": "revision",
+      "domain": "D3",
+      "sample": 2,
+      "condition": "baseline",
+      "output": "raw/baseline_D3_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D3_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129e0-4f18-7883-b21b-35c192345d00",
+      "nickname": "Franklin",
+      "phase": "revision",
+      "domain": "D3",
+      "sample": 2,
+      "condition": "candidate",
+      "output": "raw/candidate_D3_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D3_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129e2-5232-72b3-b09b-ef9e6db21bd4",
+      "nickname": "Tesla",
+      "phase": "revision",
+      "domain": "D4",
+      "sample": 2,
+      "condition": "baseline",
+      "output": "raw/baseline_D4_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D4_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129e2-5c43-7870-86e5-c282462d5592",
+      "nickname": "Copernicus",
+      "phase": "revision",
+      "domain": "D4",
+      "sample": 2,
+      "condition": "candidate",
+      "output": "raw/candidate_D4_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D4_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129e2-f61e-7e70-aa30-73e0ef4c952e",
+      "nickname": "Leibniz",
+      "phase": "revision",
+      "domain": "D5",
+      "sample": 2,
+      "condition": "baseline",
+      "output": "raw/baseline_D5_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D5_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129e3-3a27-7901-80e6-2ce9c1b19a91",
+      "nickname": "Bacon",
+      "phase": "revision",
+      "domain": "D5",
+      "sample": 2,
+      "condition": "candidate",
+      "output": "raw/candidate_D5_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D5_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129e3-bc8c-76b2-86ea-2f2444ccccb0",
+      "nickname": "Ptolemy",
+      "phase": "revision",
+      "domain": "D6",
+      "sample": 2,
+      "condition": "baseline",
+      "output": "raw/baseline_D6_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D6_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129e5-2a72-7ff0-960c-aacd16d2bb1b",
+      "nickname": "Epicurus",
+      "phase": "revision",
+      "domain": "D6",
+      "sample": 2,
+      "condition": "candidate",
+      "output": "raw/candidate_D6_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D6_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129e6-1da6-7c93-8688-72ff86be8dba",
+      "nickname": "Nietzsche",
+      "phase": "revision",
+      "domain": "D1",
+      "sample": 3,
+      "condition": "baseline",
+      "output": "raw/baseline_D1_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D1_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129e6-4275-71f2-a925-4fee327ae718",
+      "nickname": "Huygens",
+      "phase": "revision",
+      "domain": "D1",
+      "sample": 3,
+      "condition": "candidate",
+      "output": "raw/candidate_D1_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D1_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129e6-6585-7c71-a55a-48b64b4f503d",
+      "nickname": "Einstein",
+      "phase": "revision",
+      "domain": "D2",
+      "sample": 3,
+      "condition": "baseline",
+      "output": "raw/baseline_D2_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D2_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129e8-59c2-7e02-ade8-92a593889d05",
+      "nickname": "Noether",
+      "phase": "revision",
+      "domain": "D2",
+      "sample": 3,
+      "condition": "candidate",
+      "output": "raw/candidate_D2_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D2_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129e9-1500-73d1-bbf6-fb95a2954780",
+      "nickname": "Erdos",
+      "phase": "revision",
+      "domain": "D3",
+      "sample": 3,
+      "condition": "baseline",
+      "output": "raw/baseline_D3_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D3_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129e9-d7bd-7f01-b726-34808641dc1a",
+      "nickname": "Bohr",
+      "phase": "revision",
+      "domain": "D3",
+      "sample": 3,
+      "condition": "candidate",
+      "output": "raw/candidate_D3_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D3_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129e9-fa33-7090-b555-c359e4731174",
+      "nickname": "Pascal",
+      "phase": "revision",
+      "domain": "D4",
+      "sample": 3,
+      "condition": "baseline",
+      "output": "raw/baseline_D4_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D4_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129ea-0c3e-7751-8075-71d3e6d470b3",
+      "nickname": "Descartes",
+      "phase": "revision",
+      "domain": "D4",
+      "sample": 3,
+      "condition": "candidate",
+      "output": "raw/candidate_D4_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D4_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129ea-253c-7f11-b060-3de0d459fa17",
+      "nickname": "Laplace",
+      "phase": "revision",
+      "domain": "D5",
+      "sample": 3,
+      "condition": "baseline",
+      "output": "raw/baseline_D5_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D5_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129ed-33e9-7de1-9bd5-da31836021f4",
+      "nickname": "Carson",
+      "phase": "revision",
+      "domain": "D5",
+      "sample": 3,
+      "condition": "candidate",
+      "output": "raw/candidate_D5_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D5_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129ed-68aa-7892-b47d-3658e74acb42",
+      "nickname": "Ohm",
+      "phase": "revision",
+      "domain": "D6",
+      "sample": 3,
+      "condition": "baseline",
+      "output": "raw/baseline_D6_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/baseline_D6_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129ed-84c4-7280-bd50-1ec029ce50ff",
+      "nickname": "Feynman",
+      "phase": "revision",
+      "domain": "D6",
+      "sample": 3,
+      "condition": "candidate",
+      "output": "raw/candidate_D6_3.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/candidate_D6_3.json"
+      }
+    },
+    {
+      "agent_id": "01a129f2-9af1-7bd0-90c3-def72eef2a9e",
+      "nickname": "Dirac",
+      "phase": "review",
+      "domain": "D1",
+      "replicate": 1,
+      "output": "raw/review_D1_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D1_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129f2-9b1b-7102-b830-db176970e609",
+      "nickname": "Socrates",
+      "phase": "review",
+      "domain": "D1",
+      "replicate": 2,
+      "output": "raw/review_D1_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D1_2.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129f2-9b3e-7153-91db-055173db0266",
+      "nickname": "Ramanujan",
+      "phase": "reader",
+      "domain": "D1",
+      "replicate": 1,
+      "output": "raw/reader_D1_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D1_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129f2-9b60-70d2-9f98-6273b7cd3566",
+      "nickname": "Fermat",
+      "phase": "reader",
+      "domain": "D1",
+      "replicate": 2,
+      "output": "raw/reader_D1_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "`/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D1_2.json`\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129f2-9ba0-7221-9771-27d05f9a5b4b",
+      "nickname": "Wegener",
+      "phase": "review",
+      "domain": "D2",
+      "replicate": 1,
+      "output": "raw/review_D2_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D2_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129f2-9bc5-7591-9a40-4d7f680a54a2",
+      "nickname": "Dalton",
+      "phase": "review",
+      "domain": "D2",
+      "replicate": 2,
+      "output": "raw/review_D2_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D2_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129f7-16ef-79f1-b935-523809de6435",
+      "nickname": "Helmholtz",
+      "phase": "reader",
+      "domain": "D2",
+      "replicate": 1,
+      "output": "raw/reader_D2_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D2_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129f7-1718-7fc1-81dd-c666dfedaf82",
+      "nickname": "Nash",
+      "phase": "reader",
+      "domain": "D2",
+      "replicate": 2,
+      "output": "raw/reader_D2_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D2_2.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129f7-173b-7fd0-bd2d-c3df22ec2dc5",
+      "nickname": "Poincare",
+      "phase": "review",
+      "domain": "D3",
+      "replicate": 1,
+      "output": "raw/review_D3_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D3_1.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129f8-284b-70f3-99d5-1a66d22086e4",
+      "nickname": "Curie",
+      "phase": "review",
+      "domain": "D3",
+      "replicate": 2,
+      "output": "raw/review_D3_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D3_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129f8-47ed-7960-976a-59c8d347f923",
+      "nickname": "Hubble",
+      "phase": "reader",
+      "domain": "D3",
+      "replicate": 1,
+      "output": "raw/reader_D3_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D3_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129f9-2ea9-7662-a194-745d6f83b12e",
+      "nickname": "Arendt",
+      "phase": "reader",
+      "domain": "D3",
+      "replicate": 2,
+      "output": "raw/reader_D3_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D3_2.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129f9-b567-78b0-89c1-2eb8347451c4",
+      "nickname": "Linnaeus",
+      "phase": "review",
+      "domain": "D4",
+      "replicate": 1,
+      "output": "raw/review_D4_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D4_1.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129fa-7df2-7d80-8462-88988f827ebf",
+      "nickname": "Harvey",
+      "phase": "review",
+      "domain": "D4",
+      "replicate": 2,
+      "output": "raw/review_D4_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D4_2.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129fb-7f05-7661-8bad-a64bf88b6fba",
+      "nickname": "Jason",
+      "phase": "reader",
+      "domain": "D4",
+      "replicate": 1,
+      "output": "raw/reader_D4_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D4_1.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129fb-9fe4-7593-9527-3d3196b5b958",
+      "nickname": "Maxwell",
+      "phase": "reader",
+      "domain": "D4",
+      "replicate": 2,
+      "output": "raw/reader_D4_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "`/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D4_2.json`\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129fc-5c83-72e0-8e03-a87c7b66215b",
+      "nickname": "Schrodinger",
+      "phase": "review",
+      "domain": "D5",
+      "replicate": 1,
+      "output": "raw/review_D5_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D5_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129fd-4476-7591-9e17-f465cf511e67",
+      "nickname": "Kierkegaard",
+      "phase": "review",
+      "domain": "D5",
+      "replicate": 2,
+      "output": "raw/review_D5_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D5_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129fd-cdf4-7180-afe5-9ebd945e45d2",
+      "nickname": "Euclid",
+      "phase": "reader",
+      "domain": "D5",
+      "replicate": 1,
+      "output": "raw/reader_D5_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D5_1.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a129fe-16a5-7181-83b8-f3135e062164",
+      "nickname": "Boyle",
+      "phase": "reader",
+      "domain": "D5",
+      "replicate": 2,
+      "output": "raw/reader_D5_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D5_2.json\n\nValidation issue: D5_text_168’s witness starts with lowercase “the” instead of “The”. Left unchanged per the no-edit requirement."
+      }
+    },
+    {
+      "agent_id": "01a129fe-cb6e-7e01-bae9-1b362a47014b",
+      "nickname": "Heisenberg",
+      "phase": "review",
+      "domain": "D6",
+      "replicate": 1,
+      "output": "raw/review_D6_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D6_1.json"
+      }
+    },
+    {
+      "agent_id": "01a129fe-dfd3-70c2-94cb-9a35930a4e5d",
+      "nickname": "Rawls",
+      "phase": "review",
+      "domain": "D6",
+      "replicate": 2,
+      "output": "raw/review_D6_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/review_D6_2.json"
+      }
+    },
+    {
+      "agent_id": "01a129ff-b2b8-7603-bb07-67dce94a564d",
+      "nickname": "McClintock",
+      "phase": "reader",
+      "domain": "D6",
+      "replicate": 1,
+      "output": "raw/reader_D6_1.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D6_1.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a12a00-b4ce-7c42-8082-d8cc6be03a02",
+      "nickname": "Mendel",
+      "phase": "reader",
+      "domain": "D6",
+      "replicate": 2,
+      "output": "raw/reader_D6_2.json",
+      "status": "completed",
+      "final": {
+        "completed": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/raw/reader_D6_2.json\n\nOperational problems: none."
+      }
+    },
+    {
+      "agent_id": "01a12a05-1726-7153-9715-e86df57514ee",
+      "nickname": "James",
+      "phase": "audit",
+      "domain": "D1",
+      "output": "raw/audit_D1.json",
+      "status": "running"
+    },
+    {
+      "agent_id": "01a12a05-1750-7cc0-9cf1-56b65a230bad",
+      "nickname": "Lagrange",
+      "phase": "audit",
+      "domain": "D2",
+      "output": "raw/audit_D2.json",
+      "status": "running"
+    },
+    {
+      "agent_id": "01a12a05-177a-73a2-9845-c14d359c3430",
+      "nickname": "Galileo",
+      "phase": "audit",
+      "domain": "D3",
+      "output": "raw/audit_D3.json",
+      "status": "running"
+    },
+    {
+      "agent_id": "01a12a05-17a2-7893-9566-4c203e96c695",
+      "nickname": "Averroes",
+      "phase": "audit",
+      "domain": "D4",
+      "output": "raw/audit_D4.json",
+      "status": "running"
+    },
+    {
+      "agent_id": "01a12a05-17dc-77f0-8ee1-c3756e8092ee",
+      "nickname": "Beauvoir",
+      "phase": "audit",
+      "domain": "D5",
+      "output": "raw/audit_D5.json",
+      "status": "running"
+    },
+    {
+      "agent_id": "01a12a05-1807-75c0-8913-9bffdecb7689",
+      "nickname": "Archimedes",
+      "phase": "audit",
+      "domain": "D6",
+      "output": "raw/audit_D6.json",
+      "status": "running"
+    }
+  ]
+}

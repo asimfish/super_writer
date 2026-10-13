@@ -1,0 +1,168 @@
+{
+  "id": "P10",
+  "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+  "domain": "vision_graphics",
+  "venue": "ACM Transactions on Graphics (SIGGRAPH 2023 Conference Proceedings)",
+  "year": 2023,
+  "metadata_url": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+  "metadata_verification_urls": [
+    "https://www-sop.inria.fr/reves/Basilic/2023/KKLD23/",
+    "https://arxiv.org/abs/2308.04079v1"
+  ],
+  "journal_volume": 42,
+  "journal_issue": 4,
+  "publication_month_in_primary_metadata": "July",
+  "publisher_doi": "10.1145/3592433",
+  "publisher_pdf_url_attempted": "https://dl.acm.org/doi/pdf/10.1145/3592433",
+  "pdf_url": "https://arxiv.org/pdf/2308.04079v1",
+  "pdf_path": "sources/P10.pdf",
+  "pdf_sha256": "f4c0c9f27e2d02b0265017f66049d471eb66cb50203bc918f51ba07d20cbbe11",
+  "extracted_path": "sources/P10.extracted.txt",
+  "extracted_sha256": "6cb2c2207ffa5d50ceff0355e865a3edb9cf8069ccf9a252efb5742b2303bbca",
+  "body_path": "inputs/P10.txt",
+  "body_sha256": "9ce9f898fbc4f27f16a3f06fdb65d5c1eedb4242167b398204580066dd37ca3c",
+  "pages": {
+    "numbering": "1-based physical PDF pages; ranges are inclusive",
+    "main_pdf": {
+      "total": 14,
+      "selected_ranges": [
+        [
+          4,
+          11
+        ]
+      ],
+      "limitations_range": [
+        10,
+        11
+      ]
+    }
+  },
+  "extraction_command": "python3 sources/P10.extract.py",
+  "poppler_commands": [
+    "pdftotext -raw sources/P10.pdf sources/P10.extracted.txt"
+  ],
+  "poppler_version": "26.03.0",
+  "anchors_path": "anchors/P10.json",
+  "body_word_count_method": "Number of UTF-8 decoded str.split() tokens; source text is not normalized",
+  "ordered_extraction_segments": [
+    {
+      "order": 1,
+      "kind": "methods_analysis",
+      "label": "Complete Sections 3-6",
+      "pdf_path": "sources/P10.pdf",
+      "source_text_path": "sources/P10.extracted.txt",
+      "pdf_pages": [
+        4,
+        6
+      ],
+      "start": "3 OVERVIEW\n",
+      "end": "7 IMPLEMENTATION, RESULTS AND EVALUATION\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "source_byte_range": [
+        20165,
+        36794
+      ],
+      "body_byte_range": [
+        0,
+        16629
+      ],
+      "word_count": 2519
+    },
+    {
+      "order": 2,
+      "kind": "experiments",
+      "label": "Complete Section 7 through 7.3 including implementation, Tables 1-3, and ablations",
+      "pdf_path": "sources/P10.pdf",
+      "source_text_path": "sources/P10.extracted.txt",
+      "pdf_pages": [
+        6,
+        10
+      ],
+      "start": "7 IMPLEMENTATION, RESULTS AND EVALUATION\n",
+      "end": "7.4 Limitations\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "source_byte_range": [
+        36794,
+        51708
+      ],
+      "body_byte_range": [
+        16629,
+        31543
+      ],
+      "word_count": 2273
+    },
+    {
+      "order": 3,
+      "kind": "limitations",
+      "label": "Complete Section 7.4 with continued text and floating figure captions",
+      "pdf_path": "sources/P10.pdf",
+      "source_text_path": "sources/P10.extracted.txt",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "start": "7.4 Limitations\n",
+      "end": "8 DISCUSSION AND CONCLUSIONS\n",
+      "start_inclusive": true,
+      "end_exclusive": true,
+      "source_byte_range": [
+        51708,
+        54887
+      ],
+      "body_byte_range": [
+        31543,
+        34722
+      ],
+      "word_count": 474
+    }
+  ],
+  "segment_join": "Direct concatenation of exact UTF-8 byte slices; no added text or cleanup",
+  "source_version": {
+    "type": "pinned_author_arxiv_fallback_not_publisher_pdf",
+    "arxiv_id": "2308.04079",
+    "arxiv_version": "v1",
+    "submission_date_utc": "2023-08-08T06:37:06Z",
+    "description": "Author-submitted arXiv v1. Publisher retrieval returned HTTP 403. ACM-style typesetting in this file does not establish identity with the final proceedings PDF."
+  },
+  "prior_family_overlap": "unassessed",
+  "download_policy": {
+    "maximum_attempts_per_paper": 3,
+    "pdf_attempts_used": 2,
+    "connect_timeout_seconds": 15,
+    "total_timeout_seconds": 90,
+    "curl_retries": 0
+  },
+  "download_attempts": [
+    {
+      "attempt": 1,
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3592433",
+      "http_status": 403,
+      "curl_exit_code": 56,
+      "result": "publisher PDF unavailable; no PDF bytes saved",
+      "bytes": 0
+    },
+    {
+      "attempt": 2,
+      "url": "https://arxiv.org/pdf/2308.04079v1",
+      "http_status": 200,
+      "result": "saved pinned author arXiv fallback",
+      "bytes": 35829709
+    }
+  ],
+  "source_warnings": [
+    "The official ACM publisher PDF was unavailable (HTTP 403); the saved file is explicitly the pinned author arXiv v1 fallback.",
+    "Project-page PDF link resolution failed in the browser. No author-project PDF is used and no equality with that file is assumed.",
+    "The project and institutional publication records and arXiv journal reference identify TOG 42(4), July 2023; the fallback PDF footer instead says Article 1 and publication date August 2023. These fallback imprint fields are not treated as final publisher bibliographic data.",
+    "The project-page abstract uses a different real-time threshold from the pinned arXiv record; the abstract is excluded and no wording or threshold is imported from it into the body."
+  ],
+  "extraction_warnings": [
+    "Poppler raw text retains original line breaks, form feeds, running headers, hard hyphenation, merged words, mathematical glyphs, and imperfect equation/table reading order; none are repaired.",
+    "Tables 1-3 and their captions, all methods and metric columns, hardware exceptions, copied-versus-rerun baseline conditions, mixed findings, and all ablations are retained. Bitmap figures are not reconstructible from pdftotext; consult the saved PDF for imagery.",
+    "Figure 10 is an ablation figure floating into the Section 7.4 raw-text span before continued memory limitations on PDF page 11; it is retained in place, not removed or relocated. Failure Figure 11-12 captions are also retained.",
+    "Abstract, Introduction, Related Work, Section 8 Discussion and Conclusions, acknowledgments, references, and appendices are excluded; selected main-body sections are complete."
+  ],
+  "status": "source_preparation_complete",
+  "body_word_count": 5266
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "T001",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T001",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T003",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T003",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T005",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T005",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T007",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T007",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T009",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T009",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T011",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T011",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T002",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T002",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T004",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T004",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T006",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T006",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T008",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T008",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T010",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T010",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T012",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T012",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T013",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T013",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T015",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T015",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T017",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T017",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T019",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T019",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T021",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T021",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T023",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T023",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T014",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T014",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T016",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T016",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T018",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T018",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T020",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T020",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T022",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T022",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T024",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "T024",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  }
+]

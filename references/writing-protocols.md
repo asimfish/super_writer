@@ -35,6 +35,9 @@ it must not displace a supported, author-prioritized contribution.
 2. Select the section protocol and a variant appropriate to the supplied work.
    Check each move against evidence: present, missing or not applicable. Reuse
    the existing rationale matrix/section plan rather than creating another gate.
+   For exemplar-informed writing, apply [argument transfer](argument-transfer.md)
+   so the selected moves answer actual reader questions. A correct sequence of
+   labels alone cannot turn a fact inventory into an argument.
 3. Interpret `required: true` as a check when applicable, not an obligation to
    invent a paragraph, novelty claim, experiment, weakness or mitigation. Ask
    the minimum necessary question or narrow the draft when essential input is
@@ -73,6 +76,50 @@ it must not displace a supported, author-prioritized contribution.
 Experiments include domain overlays for RL, world models, embodied AI and VLA.
 The upstream peer-review protocol is excluded; producing a referee report is
 not the writer's role. These counts do not add to the number of venue formats.
+
+## From Measurements to Experimental Prose
+
+Use the existing claim/evidence map to identify the question a result answers.
+Lead with the informative comparison, retain the conditions needed to interpret
+it, then explain what it supports. A matched-speed/different-success contrast may
+be more useful than narrating every row. Do not require this sequence when the
+surrounding section already supplies it. An ablation can support a component's
+role without isolating the proposed causal mechanism or proving necessity.
+When a table is available, choose the comparison that distinguishes plausible
+interpretations and explain its consequence; leave redundant rows in the table.
+Keep exceptions or secondary outcomes that materially change that consequence.
+Retain supplied uncertainty and its definition beside a close numerical
+comparison when they affect interpretation. Concision is not a reason to replace
+available uncertainty with a generic disclaimer. Do not invent missing intervals.
+
+Keep scientific qualifications in the manuscript; keep unresolved reporting
+queries in separate author notes. Unknown units, dispersion definitions or
+trial denominators must not be guessed. Omit or provisionally label affected
+claims until resolved, rather than calling the text submission-ready or adding
+repetitive audit commentary to every paragraph. Do not omit a genuine limitation
+merely because an author note is available. A descriptive, appropriately scoped
+comparison need not repeatedly deny significance or universal robustness.
+Before sending a numerical discrepancy query, recompute it with the actual
+weights, denominator and rounding convention. If these are unknown, ask about
+the aggregation rule rather than assert a contradictory total. Author notes
+require the same factual care as manuscript prose.
+
+Preserve the source's evidential verb and qualifier when rewriting a real paper:
+evaluate is not automatically demonstrate, and a proposed capability is not
+automatically a validated property. Adjectives about reliability, generality,
+robustness or unity require an explicit evidence anchor.
+
+For embodied work, distinguish the evaluated setting and the claimed transfer:
+simulation versus hardware, unseen object versus unseen task, and zero-shot
+deployment versus few-shot adaptation. Distinguish demonstration episodes,
+sampled trajectories, repeated executions, training seeds and task averages;
+they are not interchangeable independent sample counts. Preserve the relevant
+pretraining/adaptation budgets and comparison denominator. A dataset's general
+evaluation count does not establish the sample count for each ablation: attach
+counts only where their experimental scope is supported. Open-loop plans can
+still execute through feedback controllers. Report measured latency or robot
+interaction time as such; neither parameter count nor FLOPs alone establishes
+deployment speed. Apply only the distinctions that matter to the current claim.
 
 ## Five LaTeX Table Skeletons
 

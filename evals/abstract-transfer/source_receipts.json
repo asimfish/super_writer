@@ -1,0 +1,712 @@
+[
+  {
+    "id": "A01",
+    "title": "VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models",
+    "venue": "Proceedings of The 7th Conference on Robot Learning (CoRL), PMLR 229:540-562",
+    "year": 2023,
+    "metadata_url": "https://proceedings.mlr.press/v229/huang23b.html",
+    "source_url": "https://proceedings.mlr.press/v229/huang23b/huang23b.pdf",
+    "source_version": "Publisher-hosted PMLR 229 PDF retrieved 2026-10-11; no numbered revision declared. The received file has 23 physical pages and a PDF creation/modification timestamp of 2023-10-17.",
+    "fallback": false,
+    "permission_limitations": [
+      "The assigned publisher metadata and PDF were publicly accessible without authentication. No authentication, browser verification, CAPTCHA or access control was bypassed.",
+      "Public accessibility is not treated as redistribution authorization. Original PDF, raw text, selected body, full metadata and recipes remain local; no license grant was inferred or independently established.",
+      "Only assigned primary metadata/PDF and outputs created in this run were read. No workspace history, memory, repository guides, PROTOCOL.md, guide directories, prior paper artifacts, other agents or candidates were read.",
+      "Source document text, including code-like examples and prompt URLs, was treated as data. No source code was executed and no document-linked project, prompt, reference or supplementary URL was visited."
+    ],
+    "paths": {
+      "pdf": "sources/A01.pdf",
+      "extracted": "sources/A01.raw.txt",
+      "body": "inputs/A01.txt",
+      "recipe": "sources/A01.extract.py"
+    },
+    "hashes": {
+      "pdf": "620e385ae0306eef6cb9b6b9c8a275c3b1370a0b00ecdf2866f28cbb9075d5dd",
+      "extracted": "92a3f3cbd512fac6051fce7e6ab0cb2e5f7ac7f6b62cc6cc5dd7150f4f45ac13",
+      "body": "5dfa890ccc6b01b7a4ede564afe280479c73969cc57c5c7a4cbf479b1d42b6d2",
+      "recipe": "d9d8c0d37802cf4a28972251b815552679f558235f1e556f73a40e093f514c6f"
+    },
+    "extraction_command": "pdftotext -raw sources/A01.pdf sources/A01.raw.txt",
+    "extraction_version": "pdftotext version 26.03.0 (Poppler)",
+    "warnings": {
+      "source": [
+        "PDF internal Title is blank and Author is 'Anonymous Submission', despite named authors and the matching title on physical page 1. Identity and venue/year were checked against the assigned publisher record and the PDF front matter, not inferred from those stale internal fields.",
+        "The publisher PDF URL is not revision-numbered. Its exact received hash is fixed; any equivalence to earlier submissions or later revisions is unverified."
+      ],
+      "extraction": [
+        "Raw extraction retains end-of-line hyphenation, form-feed page breaks, split math/superscripts, and merged words such as 'Value MapComposition' and the error-analysis spacing defects. No dehyphenation, spelling, equation or table repair was performed.",
+        "Figures retain only their actual extractable text, labels and captions. The selected body does not reproduce figure pixels or invent missing bar/plot values.",
+        "The section-5 limitation sentences and section-4.4 footnotes are separate ordered byte spans; surrounding conclusion and future-work prose is excluded."
+      ],
+      "download": []
+    },
+    "excluded_source_exposure": {
+      "abstract": {
+        "exposed": true,
+        "scope": "The publisher metadata tool returned the full abstract and repeated abstract fields in citation formats. A later heading search incidentally displayed the first raw abstract line. The full raw abstract was not deliberately read as a target.",
+        "cause": "Automatic assigned-metadata rendering and raw boundary discovery.",
+        "included_in_body": false
+      },
+      "introduction": {
+        "exposed": true,
+        "scope": "Introduction heading and byte/page boundaries only; no Introduction prose deliberately inspected or selected.",
+        "included_in_body": false,
+        "necessary_non_summary_definition_selected": false
+      },
+      "contribution_preview_and_roadmaps": {
+        "exposed": true,
+        "scope": "The short Method and Experiments section-roadmap paragraphs were read when locating complete substantive subsections and excluded.",
+        "included_in_body": false
+      },
+      "conclusion_and_future_work": {
+        "exposed": true,
+        "scope": "Mixed section-5 heading, the trailing raw word fragment of a conclusion sentence adjacent to the limitations, and future-work sentences after the limitations were incidentally visible during boundary checking. The conclusion's preceding sentences were not deliberately read.",
+        "included_in_body": false,
+        "exception": "Only the complete explicit limitation sentences at [32018,32643) are selected; they are not the conclusion summary."
+      },
+      "references": {
+        "exposed": true,
+        "scope": "Heading plus scattered bibliographic lines matching section-like initials and the keyword/heading searches; no full reference list read or selected.",
+        "included_in_body": false
+      },
+      "excluded_appendices": {
+        "exposed": true,
+        "scope": "A.1 was read in full and excluded as optional qualitative capability examples. A.5 heading and a prefix listing prompt roles/URLs were read at the appendix boundary; those URLs were not followed.",
+        "included_in_body": false
+      },
+      "model_prose_source_abstract_targets_or_writer_requests": {
+        "read": false,
+        "created": false
+      },
+      "past_outputs_unassigned_papers_agents_history_memory_guides": {
+        "read": false
+      }
+    },
+    "operational_problems": [],
+    "blocker": null
+  },
+  {
+    "id": "A02",
+    "title": "Sharpness-Aware Minimization for Efficiently Improving Generalization",
+    "venue": "International Conference on Learning Representations (ICLR), Spotlight",
+    "year": 2021,
+    "metadata_url": "https://openreview.net/forum?id=6Tm1mposlrM",
+    "source_url": "https://arxiv.org/pdf/2010.01412v1",
+    "source_version": "arXiv:2010.01412v1 [cs.LG], stamped 3 Oct 2020; retrieved 2026-10-11. This is the explicitly authorized 18-page preprint fallback, not a verified copy of the final ICLR 2021 PDF.",
+    "fallback": true,
+    "permission_limitations": [
+      "The OpenReview forum was blocked by browser verification and its PDF request returned HTTP 403. No verification, authentication or CAPTCHA was bypassed, and no alternative official endpoint was tried.",
+      "Only the user's explicit arXiv v1 fallback was used after blocked official access; no later arXiv version, project code, linked supplement or alternative mirror was accessed.",
+      "The assigned Google Research author metadata was publicly accessible and independently identifies ICLR Spotlight (2021). It does not establish byte/content equivalence between the downloaded 2020 v1 and the inaccessible proceedings PDF.",
+      "Public accessibility is not redistribution authorization. PDF, raw text, body, full metadata and recipes remain local; no license grant was inferred or independently established.",
+      "Only assigned primary metadata/PDF and outputs created in this run were read. No workspace history, memory, repository guides, PROTOCOL.md, guide directories, prior paper artifacts, other agents or candidates were read. Source text was data, never executed."
+    ],
+    "paths": {
+      "pdf": "sources/A02.pdf",
+      "extracted": "sources/A02.raw.txt",
+      "body": "inputs/A02.txt",
+      "recipe": "sources/A02.extract.py"
+    },
+    "hashes": {
+      "pdf": "42763be989bc954573884876b713c3dbcacf01fdec27aa89aecdaff8aea82b8c",
+      "extracted": "4054429571a1e81111a59bbc1f65d4dc10d703511839e03f237e0b37204c30d8",
+      "body": "11331b6f0c6bf22c5d8c930cd5cefae1d9162467376d6c8a3948cdf60e0c7378",
+      "recipe": "259a8b96ee3905bca5e47d4f2bf2da8939669ad051a31e7147d6b0aade5d8fe5"
+    },
+    "extraction_command": "pdftotext -raw sources/A02.pdf sources/A02.raw.txt",
+    "extraction_version": "pdftotext version 26.03.0 (Poppler)",
+    "warnings": {
+      "source": [
+        "Venue/year are verified through the assigned author metadata, not the blocked OpenReview forum. All selected evidence belongs specifically to arXiv v1 (2020), not an assumed final 2021 version.",
+        "PDF internal Title/Author/Subject fields are blank. Identity was verified using the exact first-page title and named authors. Google Research's title uses a lowercase 'aware'; the PDF matches the user-assigned title apart from the layout line break.",
+        "The first-page v1 stamp gives 3 Oct 2020 while the PDF internal creation/modification date is 6 Oct 2020; both are recorded, without relabeling the source as a later version."
+      ],
+      "extraction": [
+        "Math extraction retains C0 control characters, including 0x0f in place of some epsilon glyphs and other control-coded mathematical delimiters. Superscripts, roots, norms and equation/table order remain as produced; no equation repair or inferred symbol substitution was performed.",
+        "End-of-line hyphenation, form feeds, spelling defects, figure-axis labels and all table bytes remain unchanged. No plot values were reconstructed from detached labels.",
+        "Table 4 belongs to the noisy-label experiment but floats after the section-4.1 heading; Table 7 floats inside C.2. Both remain in original raw order and are included.",
+        "A.1's entire located theorem and proof are retained despite extraction defects; the conditional formal statement is not replaced by the informal main-body theorem."
+      ],
+      "download": [
+        "The official PDF attempt returned HTTP 403, text/html, and was rejected as a non-PDF. Attempt 2 downloaded the explicit arXiv v1 fallback successfully; no further PDF attempts occurred."
+      ]
+    },
+    "excluded_source_exposure": {
+      "abstract": {
+        "exposed": true,
+        "scope": "The assigned Google Research metadata tool returned its full abstract. The raw PDF abstract was not deliberately displayed as a target; only the PDF header before the Abstract marker was displayed for title checking.",
+        "cause": "Automatic assigned author-metadata rendering.",
+        "included_in_body": false
+      },
+      "introduction_and_contribution_preview": {
+        "exposed": true,
+        "scope": "A source-body read beginning at raw line 65 incidentally displayed the tail of the Introduction contribution bullets and section roadmap before section 2; Introduction prose outside that tail was not deliberately read. Heading and version-stamp boundary searches also located Introduction material.",
+        "included_in_body": false,
+        "necessary_non_summary_definition_selected": false
+      },
+      "empirical_section_preview": {
+        "exposed": true,
+        "scope": "The section-3 opening task overview and general-result preview were visible after the methods section when locating 3.1; excluded in full, with all complete substantive experimental subsections retained.",
+        "included_in_body": false
+      },
+      "discussion_conclusion_and_future_work": {
+        "exposed": true,
+        "scope": "The whole short section 6 was inspected for otherwise missing central limitations. It contains summary and future-work material, with no additional central assumption needed beyond the retained methods/analysis/proof/ablations, so it was excluded in full.",
+        "included_in_body": false
+      },
+      "references": {
+        "exposed": true,
+        "scope": "Heading, scattered arXiv-reference lines matching the version-stamp search, and the last reference fragment immediately preceding Appendix A were incidentally displayed; no full reference list read or selected.",
+        "included_in_body": false
+      },
+      "blocked_official_source": {
+        "excluded": true,
+        "scope": "OpenReview browser-verification response and HTTP-403 PDF-response receipt only; official publication prose was not accessible.",
+        "bypass_attempted": false
+      },
+      "model_prose_source_abstract_targets_or_writer_requests": {
+        "read": false,
+        "created": false
+      },
+      "past_outputs_unassigned_papers_agents_history_memory_guides": {
+        "read": false
+      }
+    },
+    "operational_problems": [
+      "Official OpenReview metadata requires browser verification and the ordinary official PDF download returned HTTP 403. The explicit arXiv v1 fallback resolved acquisition, but final-proceedings version equivalence remains unverified."
+    ],
+    "blocker": null
+  },
+  {
+    "id": "A03",
+    "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "year": 2023,
+    "metadata_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html",
+    "source_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.pdf",
+    "source_version": "CVPR 2023 CVF-hosted Open Access accepted-paper version, with CVF watermark; not independently compared with final IEEE Xplore publication",
+    "fallback": false,
+    "permission_limitations": [
+      "The assigned CVF metadata page says copyright and rights remain with authors or other holders, and copying is subject to their copyright constraints.",
+      "Public access is not redistribution authorization. Original PDF, raw extraction, selected text, full metadata, and recipes remain local.",
+      "CVF describes the accepted Open Access version as identical apart from the watermark; this statement was recorded, not independently validated against another version."
+    ],
+    "paths": {
+      "pdf": "sources/A03.pdf",
+      "extracted": "sources/A03.raw.txt",
+      "body": "inputs/A03.txt",
+      "recipe": "sources/A03.extract.py"
+    },
+    "hashes": {
+      "pdf": "7f050cdc4863f7a76a67a17efd878a4a460d750818e35fce509333be4bb1d0da",
+      "extracted": "e78d5d4aeb1d6122d2435474c843d2a8aead15ccdc6e3b760596969d06007aae",
+      "body": "b15d51a88a2403223a1ef277f23cd4cd7fadb232270fa2ed490e8ef8f538d146",
+      "recipe": "9d2ff7a86407c6003fb85e9c4178d6a673cf9dd94589152b77efeffd95507927"
+    },
+    "extraction_command": "pdftotext -raw sources/A03.pdf sources/A03.raw.txt",
+    "extraction_version": "pdftotext version 26.03.0",
+    "warnings": {
+      "source": [
+        "Only the assigned official metadata page and PDF were accessed; no arXiv, project page, dataset, supplemental PDF, or other source/version was read.",
+        "The assigned PDF has main text and references only. A separate supplement is linked and referenced but was not acquired or inspected; appendix/supplement-only details are not independently verified.",
+        "The selected evidence is empirical. No central formal theorem or proof requiring an in-PDF appendix was located.",
+        "The CVF accepted-version description does not establish an independently checked identity to IEEE Xplore.",
+        "A front-page Figure 1 preview caption and two standalone method/experiment overviews were incidentally read and excluded; see exposure locators."
+      ],
+      "extraction": [
+        "Raw line-end hyphenation, missing spaces, original spelling/punctuation, UTF-8 math glyphs, page numbers, and formfeed bytes are retained without normalization.",
+        "Equations (1) and (2) contain literal LaTeX-like commands and distorted mathematical layout in the raw extraction. These defects are retained; no equations were repaired.",
+        "Tables and figure captions follow Poppler raw stream order rather than reconstructed columns. Bitmap images are not represented by the text extraction and were not separately inspected.",
+        "Complete located subsections 3.1-3.3 and 4.1-4.5 are selected; standalone method/experiment overview paragraphs and all Introduction prose are excluded."
+      ],
+      "download": []
+    },
+    "excluded_source_exposure": {
+      "scope_restriction_observed": "No history/memory, repository guides, PROTOCOL.md, guide directories, past outputs, other publications, candidates, or other agents were read.",
+      "metadata_abstract": {
+        "downloaded_as_source_data": true,
+        "displayed_to_agent": false,
+        "selected_in_body": false,
+        "processing": "HTML was retained verbatim. Structured inspection emitted citation/title/permission fields and PDF links only; abstract content was not displayed."
+      },
+      "pdf_abstract": {
+        "raw_start_byte": 657,
+        "raw_end_byte": 2151,
+        "physical_page_range": [
+          1,
+          1
+        ],
+        "label_displayed": true,
+        "prose_displayed_to_agent": false,
+        "selected_in_body": false,
+        "processing": "Full-PDF mechanical extraction/hash checks; only the Abstract heading and offset were emitted."
+      },
+      "front_matter": {
+        "raw_start_byte": 0,
+        "raw_end_byte": 657,
+        "physical_page_range": [
+          1,
+          1
+        ],
+        "displayed_to_agent": true,
+        "selected_in_body": false,
+        "details": "Raw lines 1-15 used for title checking also exposed the Figure 1 preview caption at [219,657). That preview was excluded and is not an anchor evidentiary locator."
+      },
+      "introduction": {
+        "raw_start_byte": 2151,
+        "raw_end_byte": 7474,
+        "physical_page_range": [
+          1,
+          2
+        ],
+        "prose_displayed_to_agent": false,
+        "heading_displayed": true,
+        "selected_in_body": false,
+        "incidental_nonprose": [
+          {
+            "raw_start_byte": 3480,
+            "raw_end_byte": 3568,
+            "physical_page_range": [
+              1,
+              1
+            ],
+            "kind": "CVF watermark/version line returned by venue search"
+          }
+        ]
+      },
+      "excluded_overviews": [
+        {
+          "raw_start_byte": 11315,
+          "raw_end_byte": 12212,
+          "section": "3. Method opening overview",
+          "displayed_to_agent": true,
+          "selected_in_body": false
+        },
+        {
+          "raw_start_byte": 20908,
+          "raw_end_byte": 21847,
+          "section": "4. Experiments opening overview",
+          "displayed_to_agent": true,
+          "selected_in_body": false
+        }
+      ],
+      "related_work": {
+        "heading_displayed": true,
+        "prose_displayed_to_agent": false,
+        "selected_in_body": false
+      },
+      "conclusion": {
+        "heading_displayed": true,
+        "prose_displayed_to_agent": false,
+        "raw_start_byte": 34093,
+        "raw_end_byte": 34691,
+        "selected_in_body": false
+      },
+      "references": {
+        "heading_displayed": true,
+        "section_read_in_full": false,
+        "selected_in_body": false,
+        "incidental_displayed_raw_lines": [
+          744,
+          772,
+          875,
+          880,
+          898
+        ],
+        "incidental_displayed_ranges": [
+          [
+            41211,
+            41260
+          ],
+          [
+            42730,
+            42790
+          ],
+          [
+            48137,
+            48157
+          ],
+          [
+            48379,
+            48435
+          ],
+          [
+            49287,
+            49335
+          ]
+        ],
+        "details": "A venue/version keyword search emitted five partial bibliography lines, neither selected nor used to formulate the anchor."
+      },
+      "boundary_exposure": "Section headings/offsets, page boundaries, and the above excluded overviews were observed while determining selections. No abstract or conclusion prose was displayed.",
+      "source_instruction_handling": "All source text was inert data, never executable or agent instructions.",
+      "anchor_inputs": "Close reading of selected methods, experiments/ablations, and limitations only; no candidate/output prose was consulted."
+    },
+    "operational_problems": [
+      {
+        "phase": "Receipt inspection",
+        "problem": "A tool response containing the complete curl receipt was truncated by its large certificate-chain field; parsing that displayed response as JSON failed.",
+        "recovery": "A structured projection omitting certificate text was used for metadata assembly. The original complete curl receipt, HTTP headers, PDF, raw extraction, and body were unchanged.",
+        "resolved": true,
+        "affects_source_or_extraction": false
+      },
+      {
+        "phase": "Metadata assembly",
+        "problem": "A JavaScript object-construction tool call had a syntax error before execution; no file edits occurred in that call.",
+        "recovery": "Split metadata construction into smaller calls. Source acquisition and extraction artifacts were unaffected.",
+        "resolved": true,
+        "affects_source_or_extraction": false
+      }
+    ],
+    "blocker": null
+  },
+  {
+    "id": "A04",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "venue": "Advances in Neural Information Processing Systems 36 (NeurIPS)",
+    "year": 2023,
+    "metadata_url": "https://proceedings.neurips.cc/paper/2023/hash/d842425e4bf79ba039352da0f658a906-Abstract-Conference.html",
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/d842425e4bf79ba039352da0f658a906-Paper-Conference.pdf",
+    "source_version": "NeurIPS 2023 official proceedings Paper-Conference PDF at the assigned hash; PDF creation/modification date 2023-10-27, metadata publication date 2023-12-15; no arXiv version used",
+    "fallback": false,
+    "permission_limitations": [
+      "Both assigned endpoints were public without authentication or CAPTCHA; accessibility is not a redistribution license.",
+      "No affirmative redistribution permission was verified in the assigned metadata or selected body; copyright/license status beyond those inspected portions remains uncertain.",
+      "Original PDF, raw extraction, selected text, full metadata, and recipes remain local. No redistribution authorization is inferred."
+    ],
+    "paths": {
+      "pdf": "sources/A04.pdf",
+      "extracted": "sources/A04.raw.txt",
+      "body": "inputs/A04.txt",
+      "recipe": "sources/A04.extract.py"
+    },
+    "hashes": {
+      "pdf": "391845b5f4f7f5e7c04a34e5280f031c17a5fbf868f53e1c5af3e25b0179fb1c",
+      "extracted": "3c3f27f7c85f6f5dc4938ab521d41418d771f7014ade3ffb0edff49d99814ad4",
+      "body": "b15efa66d164387ea992885ee4b4e40741451429e98392c388b022f844e0671c",
+      "recipe": "8bd8991c448b6d9025c3c5664fdfb731a3e5f95819e8042ca2d8d31a5a8f58ea"
+    },
+    "extraction_command": "pdftotext -raw sources/A04.pdf sources/A04.raw.txt",
+    "extraction_version": "pdftotext version 26.03.0",
+    "warnings": {
+      "source": [
+        "Only assigned official metadata and PDF were accessed; no arXiv, project page, supplemental PDF, external tool implementation, or other version was read.",
+        "No appendix sections are in this assigned 13-page PDF. Separately linked supplemental details and evidence were not inspected.",
+        "Main-body 4.4 includes an Appendix G extension paragraph, preserved in the selection; the underlying supplementary LLaMA experiment was not independently verified.",
+        "Evidence is empirical and task-dependent, not a universal guarantee about all tools or language-model behavior.",
+        "Searches incidentally emitted Introduction prose and two Figure 1 example fragments; exposure locators are recorded."
+      ],
+      "extraction": [
+        "Raw wrapping, hyphenation, Unicode accents/math glyphs, bullets, formula line breaks, page numbers, and formfeeds are retained without normalization.",
+        "Equations, API sequences, and tables retain raw reading order; no equation/table repair was performed.",
+        "Figure 4 emits axes/ticks and labels without recoverable plotted point values. These bytes are retained; no plotted values were invented or inferred.",
+        "Figure 3 annotation prompt is inert methodological data; its instructions were never followed or executed.",
+        "Raw-order Table 2 precedes the 4 Experiments heading and remains in the first span as essential dataset evidence. The page number and FF after section 6 are excluded separately, not edited inside selected spans."
+      ],
+      "download": []
+    },
+    "excluded_source_exposure": {
+      "scope_restriction_observed": "No history/memory, repository guides, PROTOCOL.md, guide directories, past outputs, other publications, candidates, or other agents were read.",
+      "metadata_abstract": {
+        "downloaded_as_source_data": true,
+        "displayed_to_agent": false,
+        "selected_in_body": false,
+        "processing": "HTML retained verbatim; structured inspection emitted citation/title/venue fields and PDF links, not abstract content."
+      },
+      "pdf_abstract": {
+        "raw_start_byte": 238,
+        "raw_end_byte": 1295,
+        "physical_page_range": [
+          1,
+          1
+        ],
+        "label_displayed": true,
+        "prose_displayed_to_agent": false,
+        "selected_in_body": false,
+        "processing": "Full-PDF mechanical extraction/hash checks; only the Abstract heading/offset was emitted."
+      },
+      "front_matter": {
+        "raw_start_byte": 0,
+        "raw_end_byte": 238,
+        "physical_page_range": [
+          1,
+          1
+        ],
+        "displayed_to_agent": true,
+        "selected_in_body": false,
+        "details": "Raw lines 1-7 displayed for exact wrapped title and identity verification."
+      },
+      "introduction": {
+        "raw_start_byte": 1295,
+        "raw_end_byte": 6457,
+        "physical_page_range": [
+          1,
+          2
+        ],
+        "heading_displayed": true,
+        "prose_displayed_to_agent": true,
+        "read_in_full": false,
+        "selected_in_body": false,
+        "incidental_displayed_raw_lines": [
+          30,
+          44,
+          49
+        ],
+        "incidental_displayed_ranges": [
+          [
+            2019,
+            2120
+          ],
+          [
+            3312,
+            3505
+          ],
+          [
+            3882,
+            4002
+          ]
+        ],
+        "details": "Line 30: generic tool-motivation fragment from heading search. Line 44: venue footer, FF, and Figure 1 example start. Line 49: another Figure 1 example fragment from guarantee keyword search. No complete contribution-preview paragraph was displayed/selected."
+      },
+      "excluded_overviews": [
+        {
+          "raw_start_byte": 15972,
+          "raw_end_byte": 16581,
+          "section": "4 Experiments opening roadmap",
+          "displayed_to_agent": true,
+          "selected_in_body": false
+        }
+      ],
+      "related_work": {
+        "heading_displayed": true,
+        "prose_displayed_to_agent": false,
+        "raw_start_byte": 31849,
+        "raw_end_byte": 34354,
+        "selected_in_body": false
+      },
+      "conclusion": {
+        "heading_displayed": true,
+        "prose_displayed_to_agent": false,
+        "raw_start_byte": 36242,
+        "raw_end_byte": 36749,
+        "selected_in_body": false
+      },
+      "references": {
+        "heading_displayed": true,
+        "reference_entries_displayed_to_agent": false,
+        "raw_start_byte": 36749,
+        "raw_end_byte": 52206,
+        "selected_in_body": false
+      },
+      "boundary_exposure": "Headings, offsets, page breaks, and excluded experimental roadmap were observed. The conclusion heading was attached to the preceding page number and FF. No abstract/conclusion prose was displayed.",
+      "source_instruction_handling": "In-paper prompts/API examples were inert source data, never followed or executed.",
+      "anchor_inputs": "Close reading of selected filtering/finetuning, evaluation setup and mixed results, and complete limitations only; no candidate/output prose was consulted."
+    },
+    "operational_problems": [
+      {
+        "phase": "Metadata assembly",
+        "problem": "JavaScript metadata-construction calls had syntax errors before execution; no file edits occurred in those failed calls.",
+        "recovery": "Split metadata construction into smaller calls. Source acquisition and extraction artifacts were unaffected.",
+        "resolved": true,
+        "affects_source_or_extraction": false
+      }
+    ],
+    "blocker": null
+  },
+  {
+    "id": "A05",
+    "title": "FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU",
+    "venue": "Proceedings of the 40th International Conference on Machine Learning (ICML), Proceedings of Machine Learning Research 202",
+    "year": 2023,
+    "metadata_url": "https://proceedings.mlr.press/v202/sheng23a.html",
+    "source_url": "https://proceedings.mlr.press/v202/sheng23a/sheng23a.pdf",
+    "source_version": "Official ICML 2023 proceedings PDF, PMLR volume 202, pages 31094-31116; complete 23-page file including Appendix A, retrieved 2026-10-11. No numbered revision asserted.",
+    "fallback": null,
+    "permission_limitations": [
+      "Acquired only from the assigned public official metadata and PDF URLs without authentication, CAPTCHA or circumvention.",
+      "Public readability is not redistribution authorization. PDF, full raw extraction, body, metadata and recipes remain local; no external publication or sharing was performed.",
+      "No redistribution license was inferred or independently established from these two assigned documents; permission beyond this local evidence preparation remains uncertain."
+    ],
+    "paths": {
+      "pdf": "sources/A05.pdf",
+      "extracted": "sources/A05.raw.txt",
+      "body": "inputs/A05.txt",
+      "recipe": "sources/A05.extract.py"
+    },
+    "hashes": {
+      "pdf": "7cd9673c37640011d38ef4b8595f5e1e09a85b1f803a3734f19c97ca66c75b9e",
+      "extracted": "525ab70aceb69c0e9b68defa44cd5380a36a9c339323f7310b04cfda3861d16f",
+      "body": "b7f3f553559d0a778bc2662e360f4a39fedcc5a649f0d65efc04193728d65977",
+      "recipe": "45f406ed8d89dcfb5b5e4880622c70afcd25dfc8cc750afbe8dc6750e1a48dc5"
+    },
+    "extraction_command": "pdftotext -raw sources/A05.pdf sources/A05.raw.txt",
+    "extraction_version": "pdftotext version 26.03.0",
+    "warnings": {
+      "source": [
+        "Source revision is unnumbered; site/HTTP timestamps are not a scientific revision identifier.",
+        "The Appendix A.2 guarantee is an asymptotic theoretical I/O analysis, with model-not-fitting-on-GPU and no-CPU-computation assumptions. The proof treats KV I/O as constant and ignores small activation I/O; it is not a measured wall-clock guarantee.",
+        "Throughput benchmarks use dummy weights; quality evaluations use real weights. Some long benchmark runs project final throughput from fewer generated tokens. These disclosures are retained in full.",
+        "Multi-GPU decoding and full-generation throughput have different scaling; compression and offloading gains depend on model size, host capacity and disk/cache conditions. All contrary or qualifying evidence is retained."
+      ],
+      "extraction": [
+        "Original pdftotext -raw bytes were preserved without dehyphenation, whitespace cleanup, equation/table repair, glyph correction or Unicode normalization.",
+        "Extraction-order running titles, page numbers, form feeds, split formulas and table ordering remain in selected spans. Plot labels/captions are retained, but no unprinted plot values were inferred.",
+        "Non-whitespace control bytes occur in mathematical expressions and corrupted-looking operators; they remain unchanged. Two displaced footnotes were specifically accounted for."
+      ],
+      "download": []
+    },
+    "excluded_source_exposure": {
+      "machine_access": "The complete PDF and HTML (including abstract and excluded sections) were downloaded; pdftotext processed the complete PDF. Only assigned-source material was accessed.",
+      "abstract": {
+        "prose_displayed": false,
+        "heading_displayed": true,
+        "heading_raw_byte": 225,
+        "full_abstract_used_for_anchor": false
+      },
+      "introduction": {
+        "excluded_raw_range": [
+          2523,
+          10955
+        ],
+        "incidental_exposure": "Structural scan printed numerical/figure-label lines on pages 1-2 and one Introduction/contribution-preview line fragment at raw byte 8797. No full Introduction was read or selected.",
+        "used_for_anchor": false
+      },
+      "appendix_summary": {
+        "incidental_prose_displayed": true,
+        "raw_range": [
+          80874,
+          81118
+        ],
+        "excluded_from_body": true,
+        "used_for_anchor": false
+      },
+      "conclusion": {
+        "heading_displayed": true,
+        "prose_displayed": false,
+        "excluded_raw_range": [
+          45984,
+          46171
+        ]
+      },
+      "acknowledgements": {
+        "incidental_tail_displayed": true,
+        "raw_range": [
+          46300,
+          46461
+        ],
+        "excluded_from_body": true,
+        "used_for_anchor": false
+      },
+      "references": {
+        "heading_and_selected_citation_line_fragments_displayed_by_structural_scan": true,
+        "physical_page_range": [
+          10,
+          12
+        ],
+        "excluded_from_body": true,
+        "used_for_anchor": false
+      },
+      "boundary_scanning": "Section headings and a short 'In summary' opening at the end of an exploratory excerpt were incidentally displayed before the entire appendix summary paragraph was located and excluded.",
+      "metadata_exposure": "Only citation fields, title/headings, venue info block and footer were displayed; no HTML abstract prose was displayed.",
+      "other_paper_artifacts": [],
+      "history_memory_repo_guides_or_other_agents_accessed": false,
+      "writer_candidates_or_prior_outputs_accessed": false
+    },
+    "operational_problems": [],
+    "blocker": null
+  },
+  {
+    "id": "A06",
+    "title": "Neural Ordinary Differential Equations",
+    "venue": "Advances in Neural Information Processing Systems 31 (NeurIPS 2018)",
+    "year": 2018,
+    "metadata_url": "https://proceedings.neurips.cc/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html",
+    "source_url": "https://proceedings.neurips.cc/paper/2018/file/69386f6bb1dfed68692a24c8686939b9-Paper.pdf",
+    "source_version": "Official NeurIPS 2018 proceedings Paper.pdf served at the assigned legacy URL; complete 13-page file with main paper and references, without cited appendices A-F; retrieved 2026-10-11. No arXiv version asserted.",
+    "fallback": null,
+    "permission_limitations": [
+      "Acquired only from the assigned public official metadata and PDF URLs without authentication, CAPTCHA or circumvention.",
+      "Public readability is not redistribution authorization. PDF, full raw extraction, body, metadata and recipes remain local; no external publication or sharing was performed.",
+      "No redistribution license was inferred or independently established from these two assigned documents; permission beyond this local evidence preparation remains uncertain."
+    ],
+    "paths": {
+      "pdf": "sources/A06.pdf",
+      "extracted": "sources/A06.raw.txt",
+      "body": "inputs/A06.txt",
+      "recipe": "sources/A06.extract.py"
+    },
+    "hashes": {
+      "pdf": "fe6fae5c828a11d0347c04bc9fa765091df9551a85e6fa891980bfcae8d9ffce",
+      "extracted": "d74bd106f0cac540927755da5dea30ca82306f14648a6f35a42d4bab91c27fa0",
+      "body": "57d4c7bd8fac4e33f0805ff8ae9cab65b74c7e855ab7bc9ef3c57592dc63b953",
+      "recipe": "0369a4a75b17ea55a1b937da21ff1f73e230ad05ba0244e7a88b408345f2b803"
+    },
+    "extraction_command": "pdftotext -raw sources/A06.pdf sources/A06.raw.txt",
+    "extraction_version": "pdftotext version 26.03.0",
+    "warnings": {
+      "source": [
+        "The assigned proceedings PDF contains no cited appendices A-F: the instantaneous-change-of-variables proof, extended adjoint derivations, code and additional experiments cannot be checked from this authorized file. This is a documented source-version limitation, not a truncated download.",
+        "The numerical reconstruction and tolerance limitations are retained; no exact numerical-gradient or unconditional constant-runtime guarantee is inferred.",
+        "Co-contributions (continuous density models and irregular-time latent models) and the flow experiment's mixed fitting evidence are retained, even though the single audit anchor focuses on training memory."
+      ],
+      "extraction": [
+        "Original pdftotext -raw bytes were preserved without dehyphenation, whitespace cleanup, equation/table repair, glyph correction or Unicode normalization.",
+        "Extraction-order running titles, page numbers, form feeds, split formulas and table ordering remain in selected spans. Plot labels/captions are retained, but no unprinted plot values were inferred.",
+        "626 U+FFFD replacement characters occur in the full raw extraction, including mathematical symbols, implementation names, tolerance literals and figure labels; no replacements were attempted."
+      ],
+      "download": []
+    },
+    "excluded_source_exposure": {
+      "machine_access": "The complete PDF and HTML (including abstract and excluded sections) were downloaded; pdftotext processed the complete PDF. Only assigned-source material was accessed.",
+      "abstract": {
+        "pdf_prose_displayed": false,
+        "heading_displayed": true,
+        "heading_raw_byte": 313,
+        "metadata_incidental_fragment_displayed": true,
+        "metadata_locator": "sources/A06.metadata.html line 144; rg displayed the opening <p> plus at most 160 non-tag characters, not the complete abstract.",
+        "fragment_used_for_anchor": false,
+        "abstract_target_created": false
+      },
+      "introduction": {
+        "essential_selected_raw_range": [
+          1698,
+          2722
+        ],
+        "incidental_figure_framing_raw_range": [
+          1208,
+          1698
+        ],
+        "incidental_benefit_preview_raw_range": [
+          2722,
+          4802
+        ],
+        "benefit_preview_displayed": true,
+        "benefit_preview_excluded": true,
+        "benefit_preview_used_for_anchor": false,
+        "venue_footer_displayed": true
+      },
+      "conclusion": {
+        "heading_displayed": true,
+        "prose_displayed": false,
+        "excluded_raw_range": [
+          31514,
+          31984
+        ]
+      },
+      "references": {
+        "heading_and_selected_citation_line_fragments_displayed_by_structural_scan": true,
+        "physical_page_range": [
+          11,
+          12
+        ],
+        "excluded_from_body": true,
+        "used_for_anchor": false
+      },
+      "metadata_exposure": "A broad permission/paragraph locator inadvertently displayed a truncated opening HTML abstract paragraph. No full abstract was read, retained as a target, or used to construct the anchor. Metadata name-change-policy text and headings were also incidentally displayed.",
+      "other_paper_artifacts": [],
+      "history_memory_repo_guides_or_other_agents_accessed": false,
+      "writer_candidates_or_prior_outputs_accessed": false
+    },
+    "operational_problems": [],
+    "blocker": null
+  }
+]

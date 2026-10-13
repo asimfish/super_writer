@@ -4,9 +4,64 @@ Use this reference when the user wants the manuscript to imitate excellent paper
 
 ## Goal
 
-Convert a small full-text corpus into a reusable `style_profile.md`. The profile is the source of truth for later rewriting. Do not begin style imitation until the profile exists.
+For corpus-based manuscript rewriting, convert the selected full texts into a
+reusable `style_profile.md` before imitation; use it to guide later revisions.
+For a bounded passage or organization-learning request, keep the relevant
+observations in the existing plan as described below, without a full profile.
 
 For deep imitation, also read `deep-imitation-protocol.md` after this file.
+
+Use [argument transfer](argument-transfer.md) to turn each useful observation
+into a located writing choice and an evidence-conditioned text action. For a
+bounded request, analyze only the relevant passages and keep these decisions in
+the existing plan. Corpus metrics describe examples; they do not prescribe how
+many paragraphs, citations or numbers our argument must contain.
+
+## Explain a System or Synthesize a Rule Set
+
+Use this bounded branch when the user supplies a diagram, overview or passage
+and asks to learn its organization. Read that material first. Analyze only the
+visible structure; a one-page overview does not establish the full specification
+or the unseen paper's organization. Keep notes in the existing plan or profile;
+do not require a full corpus, new database or all downstream artifacts.
+
+Distinguish the system's workflow from its supporting resources and validation.
+A module list answers what exists; a useful explanation also shows what enters,
+what each operation changes, where its output goes and why the parts are grouped
+that way. Describe real dependencies, not an invented pipeline chosen to fit the
+reference. A taxonomy, derivation or parallel interaction may explain the object
+better than a sequence.
+
+One useful presentation is a structural map, an annotated unit, conditional
+entries, limits and provenance. Choose only what clarifies the requested object;
+these are explanation options, not obligatory manuscript sections. Label a
+synthetic example as such. Show a positive example and a misleading transfer
+when the contrast clarifies applicability, rather than copying source sentences.
+
+For a reusable observation, adapt the existing dossier row with these fields:
+
+| Field | What to record |
+|---|---|
+| Location and reading scope | Visible panel, sentence or passage; what was not read |
+| Function | Reader question answered or dependency made intelligible |
+| Applicability | Kind of work and author evidence that permit this choice |
+| Text action | Explain, distinguish, reorder or qualify a specific relationship |
+| Contrast and exception | A misleading version or a case needing another order |
+| Nature and evidence | Source observation, project convention, optional guidance or experimental candidate; actual verification, if any |
+| Prose check | What the reader can recover from the final unit without notes |
+
+Group observations by the reader problem or operation they share, not just by
+venue, similar words or sentence length. Keep distinct assumptions distinct;
+record a non-transfer when our materials cannot support the source's structure.
+Repeated observations do not become official requirements, and an instruction
+currently used by this project is not thereby a proven quality improvement.
+
+Transfer the explanatory organization, not domain-specific restrictions. A
+maintenance manual's sentence budgets or vocabulary approval do not establish
+academic-writing limits. Preserve technical definitions, uncertainty, equations
+and scope. Claims of improved writing need separate evaluation under
+[blind evaluation](blind-evaluation.md); filled entries and guard passes are not
+such evidence. This branch does not promote evaluation snapshots to defaults.
 
 ## Corpus Selection
 
@@ -157,9 +212,11 @@ Also create a compact transfer table that links the style profile to the writing
 | Section | Style Rule | Paragraph Template Row | Result Template Row, If Applicable | Why This Transfers |
 |---|---|---|---|---|
 
-## Non-Negotiable Rules
+## Observed Patterns and Actual Constraints
 
-List only rules supported by at least two corpus papers, or by the target venue.
+Identify actual official venue requirements separately from recurring prose
+patterns. A choice shared by two papers is an observation, not a mandatory rule.
+Record when our contribution or evidence calls for a different choice.
 ```
 
 ## How to Infer Style

@@ -2,6 +2,51 @@
   "scope": "Original synthetic calibration cases; not measured effectiveness",
   "cases": [
     {
+      "id": "baseline-training-regimes",
+      "materials": "Synthetic robot study: a policy recipe is evaluated on the same bimanual tasks against two pretrained models fine-tuned with their default recipes and two imitation policies trained from scratch. Its largest absolute average-success gain among these comparisons is 12 percentage points. There is no claim of matched training compute.",
+      "request": "Check the comparison conditions and numerical interpretation before preferring a draft.",
+      "drafts": {
+        "A": "On the bimanual tasks, the recipe exceeds two pretrained models fine-tuned with their default recipes and two imitation policies trained from scratch, with gains of up to 12 percentage points in average success.",
+        "B": "On the bimanual tasks, the recipe exceeds all four baselines under their default fine-tuning recipes, with gains of up to 12 percentage points in average success."
+      },
+      "oracle": {
+        "kind": "factual_failure",
+        "fidelity": {"A": "pass", "B": "fail"},
+        "preferred": ["A"],
+        "reason": "B incorrectly assigns fine-tuning to the from-scratch policies. Correct numbers and a shared task do not repair the training-regime attribution. A does not assert matched compute or a 12-point gain over every baseline."
+      }
+    },
+    {
+      "id": "design-rationale-under-compression",
+      "materials": "Synthetic assembly study: visually similar parts require distinguishing printed instructions. The authors initialize a policy from a pretrained image-text encoder to exploit its text-image representations. A two-stage controller executes the resulting actions. On a fixed assembly evaluation the policy succeeds in 72 of 100 trials versus 60 for a specified baseline. No ablation isolates the encoder's effect. The author prioritizes explaining the design rationale and observed comparison.",
+      "request": "Compare retained meaning without assuming an architectural rationale is an experimentally isolated cause.",
+      "drafts": {
+        "A": "We build an assembly policy from a pretrained image-text encoder and a two-stage controller. It succeeds in 72 of 100 fixed-evaluation trials versus 60 for the baseline. The system combines pretrained representations with staged action execution.",
+        "B": "To distinguish similar parts using printed instructions, we initialize an assembly policy from a pretrained image-text encoder to exploit its text-image representations. A two-stage controller executes actions. The policy succeeds in 72 of 100 fixed-evaluation trials versus 60 for the baseline."
+      },
+      "oracle": {
+        "kind": "valid_but_weaker",
+        "fidelity": {"A": "pass", "B": "pass"},
+        "preferred": ["B"],
+        "reason": "B retains the concrete problem and intended role of pretraining. A repeats architecture instead. Neither draft establishes that the encoder caused the measured gain; B's purpose clause is not an ablation claim."
+      }
+    },
+    {
+      "id": "method-first-or-gap-first",
+      "materials": "Synthetic scheduling study: average queue load hides burst delays. A scheduler reacts to per-client waiting time. On a fixed trace it reduces worst-client delay from 40 to 30 ms at unchanged throughput. No other results are supplied.",
+      "request": "Compare these drafts. Do not require either a gap-first or a method-first opening.",
+      "drafts": {
+        "A": "We introduce a scheduler that responds to per-client waiting time, addressing burst delays hidden by average queue load. On a fixed trace it reduces worst-client delay from 40 to 30 ms at unchanged throughput.",
+        "B": "Average queue load hides burst delays. We introduce a scheduler that responds to per-client waiting time. On a fixed trace it reduces worst-client delay from 40 to 30 ms at unchanged throughput."
+      },
+      "oracle": {
+        "kind": "defensible_tie",
+        "fidelity": {"A": "pass", "B": "pass"},
+        "preferred": ["A", "B"],
+        "reason": "Both preserve the problem, design response, evidence and scope. Sentence ordering alone does not justify a substantive quality preference."
+      }
+    },
+    {
       "id": "mixed-contribution-retention",
       "materials": "Synthetic study: the author prioritizes a theorem showing that aggregate resource usage cannot identify the worst client delay under a stated heterogeneous-load construction. A per-client audit distinguishes the constructed cases. A queue simulator demonstrates the discrepancy. Implementation uses a parser, event queue, trace recorder and report formatter. There is no measured throughput gain.",
       "request": "Choose the abstract that better communicates the author's primary contribution without changing the facts. Explain the information tradeoff.",
@@ -44,6 +89,81 @@
         "fidelity": {"A": "pass", "B": "pass"},
         "preferred": ["A", "B"],
         "reason": "Both preserve mechanism, the complete comparison and boundary. Result ordering alone does not establish superiority; a minor stylistic preference is acceptable if not called a material quality gap."
+      }
+    },
+    {
+      "id": "co-contribution-under-compression",
+      "materials": "Synthetic robot-learning study: the author gives equal priority to reducing update computation and reducing expert corrections. A scheduled update method freezes stable weights while retaining a trainable subspace. Against full updates on the same three simulated tasks, update time falls by 12%, while success is higher on one task, lower on one, and equal on one. Against behavior cloning, expert corrections fall by 20% on those tasks. The two comparisons use different baselines. There is no hardware evaluation.",
+      "request": "Choose the more effective abstract given the author's priorities. An omitted contribution need not be a factual error.",
+      "drafts": {
+        "A": "A scheduled update method freezes stable weights while retaining a trainable subspace for robot learning. Across three simulated tasks, it reduces update time by 12% relative to full updates, with success higher on one task, lower on one, and equal on one. This supports a training-computation tradeoff in simulation, not hardware deployment.",
+        "B": "A scheduled update method freezes stable weights while retaining a trainable subspace for robot learning. Across three simulated tasks, it reduces update time by 12% relative to full updates, with mixed success outcomes, and uses 20% fewer expert corrections than behavior cloning. These results address update computation and expert-data requirements under separate comparisons in simulation."
+      },
+      "oracle": {
+        "kind": "valid_but_weaker",
+        "fidelity": {"A": "pass", "B": "pass"},
+        "preferred": ["B"],
+        "reason": "B retains both explicitly prioritized contributions and their distinct baselines. A's precise task tally displaces the expert-data result; factual accuracy alone does not recover that loss."
+      }
+    },
+    {
+      "id": "author-query-versus-manuscript",
+      "materials": "Synthetic ablation: on one fixed simulator task, baseline succeeds in 40 of 50 executions and the variant in 43 of 50. Recorded batch-time values are .30 and .24, but their time unit and the uncertainty definition are missing. Both candidates are provisional, and both are delivered with the identical separate author note: confirm timing units and uncertainty before finalizing timing claims; the counts support descriptive, not statistical, comparison. No hardware tests were performed.",
+      "request": "Compare the experiment paragraphs as manuscript prose accompanied by the stated author note. Do not reward hiding missing data, or require repeating an already separated reporting query in the paragraph.",
+      "drafts": {
+        "A": "On the fixed simulator task, the variant succeeds in 43 of 50 executions, compared with 40 of 50 for the baseline. The source packet does not provide the batch-time unit or define uncertainty, so those missing details must be clarified. No significance test is available. These figures concern simulation rather than hardware deployment.",
+        "B": "On the fixed simulator task, the variant succeeds in 43 of 50 executions, compared with 40 of 50 for the baseline. This is a modest observed success increase in the evaluated setting; the comparison does not establish a hardware benefit."
+      },
+      "oracle": {
+        "kind": "valid_but_weaker",
+        "fidelity": {"A": "pass", "B": "pass"},
+        "preferred": ["B"],
+        "reason": "Both omit the unresolved timing claim and retain the simulation boundary. With identical author notes already supplied, B separates scientific prose from reporting work; it neither conceals the missing information nor claims significance or readiness."
+      }
+    },
+    {
+      "id": "embodied-transfer-and-trial-unit",
+      "materials": "Synthetic embodiment study: a pretrained policy receives five demonstrations of a new task, then plans four trajectories executed ten times each on a physical robot. It succeeds in 28 of 40 executions. The comparison policy succeeds in 20 of 40 using the same protocol. A separate simulator-only experiment varies object color without changing the task. There are no other transfer experiments.",
+      "request": "Assess the transfer and sample-count claims before comparing the writing.",
+      "drafts": {
+        "A": "After adaptation with five demonstrations of a new task, the policy succeeds in 28 of 40 robot executions versus 20 of 40 for the comparison policy. Each policy uses four planned trajectories executed ten times each. A separate simulation evaluates object-color changes within the same task.",
+        "B": "The policy generalizes zero-shot to new physical tasks, succeeding in 28 of 40 independently sampled robot trajectories versus 20 of 40 for the comparison policy. Object-color generalization further demonstrates transfer to new tasks."
+      },
+      "oracle": {
+        "kind": "factual_failure",
+        "fidelity": {"A": "pass", "B": "fail"},
+        "preferred": ["A"],
+        "reason": "B changes five-demo adaptation into zero-shot transfer, repeated executions into independent trajectory samples, and within-task color variation into new-task transfer. A preserves the actual evidence units."
+      }
+    },
+    {
+      "id": "available-uncertainty-is-evidence",
+      "materials": "Synthetic adaptation experiment: on the same two physical tasks, full training scores 64 +/- 8% and adapter training 63 +/- 9%, with reported standard errors over 30 scored executions per approach. Adapter training uses 12 GB rather than 40 GB at batch 8. The surrounding table contains both uncertainties. Independent training-run counts are unspecified. The author wants a compact interpretation of the measured tradeoff.",
+      "request": "Compare these experiment paragraphs; distinguish useful uncertainty from generic caution. No significance or equivalence inference is licensed.",
+      "drafts": {
+        "A": "Adapter training uses 12 GB rather than 40 GB at batch 8, with scores of 63 +/- 9% versus 64 +/- 8% for full training on the two tasks (standard errors over 30 executions per approach). The measurements show a memory reduction alongside close aggregate scores, not established equivalence.",
+        "B": "Adapter training uses 12 GB rather than 40 GB at batch 8, with scores of 63% versus 64% for full training on the two tasks. These are descriptive results, not evidence of statistical significance, universal superiority, robustness across seeds, or deployment reliability."
+      },
+      "oracle": {
+        "kind": "valid_but_weaker",
+        "fidelity": {"A": "pass", "B": "pass"},
+        "preferred": ["A"],
+        "reason": "A retains supplied uncertainty relevant to the close comparison. B is not factually false, but spends its budget denying unrelated stronger claims instead of communicating the available evidence."
+      }
+    },
+    {
+      "id": "ablation-count-scope",
+      "materials": "Synthetic navigation paper: its benchmark uses 900 validation episodes. A separate ablation table reports success scores 48 and 51 for replacement and averaging but gives no episode count or link to the benchmark protocol. Units for the scores are defined as percentages. No other evaluation details are supplied.",
+      "request": "Check whether each experimental statement is supported by the supplied evidence. More detail is not automatically better.",
+      "drafts": {
+        "A": "In the ablation, averaging scores 51% versus 48% for replacement, a three-percentage-point difference. The table favors retaining earlier observations under its evaluated configuration.",
+        "B": "Across the ablation's 900 validation episodes, averaging scores 51% versus 48% for replacement, a three-percentage-point difference. The table favors retaining earlier observations under its evaluated configuration."
+      },
+      "oracle": {
+        "kind": "factual_failure",
+        "fidelity": {"A": "pass", "B": "fail"},
+        "preferred": ["A"],
+        "reason": "B attaches a general benchmark count to an ablation without evidence that the same episodes were used. The scope attribution is unsupported, not a demonstrated numerical contradiction."
       }
     }
   ]

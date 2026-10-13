@@ -114,7 +114,9 @@ Label common defects precisely:
 
 ### 2. State the Learned Target Logic
 
-Use the dossier and templates. For each section, name the learned pattern:
+Use the dossier and [argument transfer](argument-transfer.md) to name a learned
+choice, its applicability, and the relation implemented in prose. The following
+are possible information functions, not obligatory sentence or section orders:
 
 - Abstract: motivation -> gap -> method -> key evidence -> significance.
 - Introduction: field problem -> bottleneck -> prior progress -> unresolved gap -> design response -> evidence preview.
@@ -122,7 +124,10 @@ Use the dossier and templates. For each section, name the learned pattern:
 - Results: question/promise -> evidence -> comparison -> interpretation -> transition.
 - Discussion: answer -> mechanism/significance -> relation to prior work -> limitations -> field implication.
 
-If the target venue uses a different pattern, use the venue-specific pattern and cite the artifact that supports it.
+Adapt order to the contribution and evidence. A method-first abstract or a
+diagnostic paper need not invent a gap or solution to match this list. Cite the
+located exemplar choice or actual venue requirement, rather than asserting that
+all papers at a venue share one pattern.
 
 ### 3. Compare Revised Logic Against Both Baselines
 
@@ -132,7 +137,9 @@ For every major section, compare three things:
 2. Learned target logic.
 3. Revised logic.
 
-The revised section passes only if it follows the learned target logic while preserving the user's actual evidence.
+The revised section passes when its intended reader question is resolved by
+the evidence and the learned choice actually serves that purpose. Structural
+similarity alone is insufficient.
 
 Do not give credit for:
 

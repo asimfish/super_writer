@@ -1,0 +1,650 @@
+[
+  {
+    "phase": "review",
+    "id": "N1_s1_results",
+    "replicate": 1,
+    "words": 86,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s1_abstract",
+    "replicate": 1,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s2_methods",
+    "replicate": 1,
+    "words": 86,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s2_abstract",
+    "replicate": 1,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s2_results",
+    "replicate": 1,
+    "words": 86,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s1_methods",
+    "replicate": 1,
+    "words": 86,
+    "limit": 110
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T01",
+    "words": 108,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T03",
+    "words": 134,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T05",
+    "words": 109,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T07",
+    "words": 124,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T09",
+    "words": 126,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T11",
+    "words": 116,
+    "limit": 140
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T01",
+    "replicate": 1,
+    "words": 82,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T02",
+    "replicate": 1,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T03",
+    "replicate": 1,
+    "words": 83,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T04",
+    "replicate": 1,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T05",
+    "replicate": 1,
+    "words": 82,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T06",
+    "replicate": 1,
+    "words": 89,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T07",
+    "replicate": 1,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T08",
+    "replicate": 1,
+    "words": 90,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T09",
+    "replicate": 1,
+    "words": 90,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T10",
+    "replicate": 1,
+    "words": 89,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T11",
+    "replicate": 1,
+    "words": 83,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T12",
+    "replicate": 1,
+    "words": 92,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s1_results",
+    "replicate": 2,
+    "words": 83,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s1_abstract",
+    "replicate": 2,
+    "words": 86,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s2_methods",
+    "replicate": 2,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s2_abstract",
+    "replicate": 2,
+    "words": 87,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s2_results",
+    "replicate": 2,
+    "words": 89,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N1_s1_methods",
+    "replicate": 2,
+    "words": 90,
+    "limit": 110
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T02",
+    "words": 122,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T04",
+    "words": 129,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T06",
+    "words": 105,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T08",
+    "words": 127,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T10",
+    "words": 117,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N1_T12",
+    "words": 109,
+    "limit": 140
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T01",
+    "replicate": 2,
+    "words": 75,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T02",
+    "replicate": 2,
+    "words": 81,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T03",
+    "replicate": 2,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T04",
+    "replicate": 2,
+    "words": 82,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T05",
+    "replicate": 2,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T06",
+    "replicate": 2,
+    "words": 83,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T07",
+    "replicate": 2,
+    "words": 86,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T08",
+    "replicate": 2,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T09",
+    "replicate": 2,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T10",
+    "replicate": 2,
+    "words": 83,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T11",
+    "replicate": 2,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N1_T12",
+    "replicate": 2,
+    "words": 86,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s2_results",
+    "replicate": 1,
+    "words": 94,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s1_results",
+    "replicate": 1,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s2_methods",
+    "replicate": 1,
+    "words": 95,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s1_abstract",
+    "replicate": 1,
+    "words": 94,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s2_abstract",
+    "replicate": 1,
+    "words": 94,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s1_methods",
+    "replicate": 1,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T01",
+    "words": 111,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T03",
+    "words": 100,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T05",
+    "words": 112,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T07",
+    "words": 107,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T09",
+    "words": 114,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T11",
+    "words": 111,
+    "limit": 140
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T01",
+    "replicate": 1,
+    "words": 83,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T02",
+    "replicate": 1,
+    "words": 84,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T03",
+    "replicate": 1,
+    "words": 87,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T04",
+    "replicate": 1,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T05",
+    "replicate": 1,
+    "words": 86,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T06",
+    "replicate": 1,
+    "words": 90,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T07",
+    "replicate": 1,
+    "words": 89,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T08",
+    "replicate": 1,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T09",
+    "replicate": 1,
+    "words": 97,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T10",
+    "replicate": 1,
+    "words": 90,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T11",
+    "replicate": 1,
+    "words": 89,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T12",
+    "replicate": 1,
+    "words": 92,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s2_results",
+    "replicate": 2,
+    "words": 65,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s1_results",
+    "replicate": 2,
+    "words": 70,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s2_methods",
+    "replicate": 2,
+    "words": 79,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s1_abstract",
+    "replicate": 2,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s2_abstract",
+    "replicate": 2,
+    "words": 73,
+    "limit": 110
+  },
+  {
+    "phase": "review",
+    "id": "N2_s1_methods",
+    "replicate": 2,
+    "words": 75,
+    "limit": 110
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T02",
+    "words": 108,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T04",
+    "words": 97,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T06",
+    "words": 102,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T08",
+    "words": 103,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T10",
+    "words": 110,
+    "limit": 140
+  },
+  {
+    "phase": "reader",
+    "id": "N2_T12",
+    "words": 122,
+    "limit": 140
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T01",
+    "replicate": 2,
+    "words": 95,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T02",
+    "replicate": 2,
+    "words": 91,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T03",
+    "replicate": 2,
+    "words": 88,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T04",
+    "replicate": 2,
+    "words": 92,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T05",
+    "replicate": 2,
+    "words": 94,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T06",
+    "replicate": 2,
+    "words": 85,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T07",
+    "replicate": 2,
+    "words": 93,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T08",
+    "replicate": 2,
+    "words": 98,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T09",
+    "replicate": 2,
+    "words": 96,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T10",
+    "replicate": 2,
+    "words": 95,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T11",
+    "replicate": 2,
+    "words": 93,
+    "limit": 110
+  },
+  {
+    "phase": "audit",
+    "id": "N2_T12",
+    "replicate": 2,
+    "words": 96,
+    "limit": 110
+  }
+]

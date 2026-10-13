@@ -1,0 +1,13 @@
+{
+  "copied_files": 75,
+  "raw_response_files": 24,
+  "source_preparation_contexts": 2,
+  "writing_contexts": 12,
+  "assessment_contexts": 12,
+  "all_copied_bytes_identical": true,
+  "withheld": "PDFs, full extraction, selected publisher body, full metadata/boundary recipes and image renders remain local.",
+  "prompt_transformation": "Workspace string values replaced with {WORKSPACE}; no saved response changed.",
+  "receipt_transformation": "Selected structured source metadata, version warnings and SHA-256; no source body excerpt.",
+  "rerun": "Helpers make no model calls. Fresh runs need an explicit agent runner and independently reviewed source packets, then new byte receipts. Original hash analysis requires the local omitted inputs. New source versions cannot silently replace them.",
+  "claim_boundary": "Small targeted same-family experiment, not human review, general writing gain or new research."
+}

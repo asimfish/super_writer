@@ -1,0 +1,252 @@
+{
+  "reviews": [
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The conditional noise-prediction claim follows Section 4.1 in its noise/action setup. The 63.9% versus 42.0% comparison preserves voxel versus RGB inputs, absolute control and 100 demonstrations; the matched-voxel hardware ranges agree with Table 3."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The expert and noise-transformation conditions match Section 4.1, and the explanation of relative-action conjugation matches Section 4.2. The 53.7% versus 42.0% mean-peak comparison and the six-task, matched-voxel hardware claim agree with Tables 2 and 3."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 4,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "B",
+      "reason": "B's 'relative updates require conjugation because the current pose also rotates' explains the operative relationship that A's opening merely says depends on the control convention. Its image-model comparison also supports the architectural claim without changing observation modality, complementing the matched-voxel hardware evidence."
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The RGB 53.7% versus 42.0% and voxel 72.6% versus baseline 71.4% values match Table 2, with their control and demonstration budgets preserved. The paragraph identifies training maxima, three seeds, the modality change, and Table 3's 40-demonstration letter-alignment contrast."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "Table 2 supports both the absolute-control 53.7% versus 42.0% and relative-control 35.4% versus 33.3% comparisons at 100 demonstrations. The training-maximum convention and matched-voxel, approximately matched-size letter-alignment comparison are supported by Sections 5.1 and 5.3."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both connect the RGB comparison and matched-voxel hardware contrast to an architectural benefit and retain the peak-success convention. A gives the cross-budget sample-efficiency comparison a distinct function while explicitly noting its modality change; B uses the same-budget relative-control contrast to establish control dependence. Neither leaves the central inference materially less explained."
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The noise condition, left-multiplication versus conjugation distinction, and discrete-rotation architecture match Sections 4.1-4.3. The RGB and voxel comparisons match Table 2 with their modalities and budgets identified; the six-task hardware success range matches Table 3."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The joint transformation of observations, noisy actions and target noise matches Proposition 1 under the stated conditions. Table 2 supports the voxel 200-demonstration versus strongest-baseline 1,000-demonstration comparison, and Table 3 supports the matched-voxel hardware ranges."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 4,
+          "language": 5
+        }
+      },
+      "preferred": "A",
+      "reason": "A specifies the control distinction as 'left multiplication versus conjugation' where B only says the construction respects different rules. A also gives the 53.7% versus 42.0% RGB comparison an identifiable shared-backbone setting; B's simulation comparison changes representation without identifying the baseline's modality. These details make A's design and experimental interpretation more specific."
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The two control-mode comparisons match Table 2 and retain the training-maxima and three-seed convention. Letter alignment at 40 demonstrations and bagel baking at 58 match Table 3, including the source's attribution of all EquiDiff bagel failures to joint limits."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The six-task hardware ranges, 20 trials, shared voxel input and letter-alignment contrast match Section 5.3. The RGB absolute-control result, peak-success reporting and smaller gains at higher budgets or under relative control follow Table 2."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both explain why same-RGB simulation and matched-voxel hardware comparisons support a benefit beyond richer visual input. A connects the same-budget control contrast and bagel failures to control convention and execution constraints; B establishes the breadth of the hardware advantage and its data-regime dependence. Each selects evidence that advances a specific, supported interpretation."
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The excess-loss objective, reusable weights, action preprocessing and validation-based early stopping match Sections 3.1-3.2. The 5% local co-training condition, RT-X quarter-data 80% versus 38% versus 33% result, and two-task full-Bridge comparison are supported by Section 4 and its figures."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The explanation that near-zero reference training loss removes the informative excess-loss comparison matches Section 3.1. Averaged weights, three representative co-training tasks with 25 demonstrations each at 5%, and the RT-X and Bridge outcomes match Sections 3.2 and 4."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 5,
+          "language": 4
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "B",
+      "reason": "B's sentence about 'near-zero training loss' erasing the reference comparison explains why early stopping is necessary for this particular objective, whereas A only says it guards against overfitting. B also assigns separate explanatory roles to normalization and discretization, turning the design choices into a connected response to misleading domain losses."
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The Bridge and RT-X quarter-data means match Figure 3, and the similar full-Bridge outcome matches Figure 1. The 400,000-step budget, 25 demonstrations for each of three co-training tasks at 5%, and ten physical trials agree with Section 4.1; the post-co-training generalization interpretation is supported there."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The quarter-data results and four-task versus two-task Bridge evaluations match Figures 1 and 3. Continued learned-weight sampling after subsetting is stated in Section 4.4; the later-reference-checkpoint and continuous-action ablation outcomes follow Section 4.5."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both use fixed-retention comparisons to establish a downstream curation benefit rather than a data-volume advantage. A's closing sentence locates the result as generalization after limited co-training, not zero-shot transfer; B identifies continued weighting after retention and connects the ablations to the reference and action-estimation choices. These are complementary, consequential explanations without a decisive overall advantage."
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The relative-loss objective, discretized weight estimation, reference-overfitting rationale and reuse for diffusion training and retention match Section 3. The reason for 5% in-domain co-training, retained RT-X performance and Bridge quarter-data means are supported by Sections 4.1 and 4.4."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The excess-loss mechanism, embodiment-specific Gaussian normalization, discretization and domain-level checkpoint selection follow Sections 3.1-3.2. The 25-demonstration, three-task, 5% co-training condition and RT-X quarter-data comparison agree with Section 4.1 and Figure 3."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both make the distinctive contribution reusable reference-relative weights rather than a final policy, and connect robotics-specific loss problems to the design. A explains why reference memorization and failed pretraining-only transfer motivate early stopping and co-training; B explicitly separates the discrete curation model from diffusion training and anchors the reduced-data benefit in RT-X. Both preserve the dataset-regime boundary of the claim."
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "Both quarter-data comparisons match Figure 3, with four tasks, ten trials, 400,000 training steps and the 5% co-training protocol retained. The similar two-task full-Bridge outcome and worse continuous-action or overfit-reference ablations match Sections 4.2 and 4.5; it does not claim either ablation is the sole cause."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The Bridge means and evaluation counts match Figures 1 and 3, and the shared training and co-training conditions match Section 4.1. The combined retention/weighting interpretation follows Section 4.4, which retains exact domain weights during training and states that the Bridge subset evaluation adds tasks."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 4,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "B",
+      "reason": "B's 'Retention and training-time domain weights change together' identifies what the fixed-volume comparison actually tests; A's 'composition of a reduced training set matters' leaves that coupling unexplained. B also explains why the full-Bridge and quarter-data averages are not paired measurements of the same task set, preventing the regime contrast from being mistaken for a within-task data-removal effect."
+    }
+  ]
+}

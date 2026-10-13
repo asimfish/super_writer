@@ -1,0 +1,364 @@
+{
+  "audits": [
+    {
+      "id": "D6_text_198",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorem 1 and its proof support the corrected mean, safe fallback, oracle ordering, and exchangeable full-sample averaging. Prose explicitly concludes expectation over calibration and test randomness; the reader repeats that relation and recovers boundedness, monotonicity, right-continuity, and the safe endpoint. This legitimately explains the theoretical method; empirical split details are not required."
+    },
+    {
+      "id": "D6_text_183",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorem 1's proof supplies the B correction, maximal-parameter fallback, non-increasing-loss comparison, and conditional exchangeability argument. Prose's 'finite-sample expected-risk control' is not a per-calibration guarantee. Reader core accurately reconstructs the oracle relation, while scope names the upper bound, safe maximum, exchangeability, and right-continuity without adding unsupported conditions."
+    },
+    {
+      "id": "D6_text_196",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Section 2's feedback description and Section 4.1 support the telescoping argument and accumulated-error guarantee. Prose and reader explicitly retain initialization, full/empty extensions, positive step size, and the short-window limitation. Section 4.1's extracted endpoint and step-size symbols are damaged, so their exact printed notation cannot be verified; the feedback direction and bounded-iterate proof support the stated relation, not a demonstrated numerical error."
+    },
+    {
+      "id": "D6_text_187",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorems 1-2, Proposition 1, Proposition 2, Section 3, and the concluding limitations support the upper guarantee, stronger sharp lower bound, non-monotone failure, four applications, and shift qualification. Reader reconstructs unseen-loss correction and distinguishes exchangeable expected-risk control from the stronger tightness assumptions. Its uncertainty about specific shift conditions does not invent them; an abstract need not enumerate every extension."
+    },
+    {
+      "id": "D6_text_216",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2.1-2.2 support 0.005, rolling 1,250-day fits/quantiles, 500-day coverage, selected four-of-twelve stocks, and crisis undercoverage; Section 5 supplies unnormalized-score deterioration. Section 6 supports constructed time-zone order and 300-county coverage. Prose's 'not guaranteed pointwise coverage or shorter intervals' bounds the interpretation. Reader recovers the feedback-versus-score contrast and those empirical restrictions without turning examples into guarantees."
+    },
+    {
+      "id": "D6_text_212",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorem 1's proof supports the infimum rule, B reservation, safe terminal fallback, oracle comparison, and conditional full-sample expectation. Prose explicitly says the guarantee averages calibration and test observations rather than conditioning on a particular sample. Reader recovers that central transfer and all named structural conditions; no unsupported reader inference is needed."
+    },
+    {
+      "id": "D6_text_184",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorem 1 proves the corrected calibration inequality, oracle ordering, and expected-loss bound using exchangeability, right-continuity, and non-increasing losses. Its assumptions do not require calibrated model probabilities, supporting the prose's final distinction. Reader accurately states the method, safe endpoint, and expectation scope. Omitting empirical evaluation is legitimate for this proof-focused methods paragraph."
+    },
+    {
+      "id": "D6_text_208",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorems 1-2 and Proposition 1 support the expected upper bound and sharp lower bound under stronger assumptions. Section 3 supports four nonbinary applications over 1,000 splits; Proposition 2 and Corollary 1 support failure without monotonicity and potentially conservative upper envelopes. Reader preserves the conditional assumptions and calibration/test expectation, rather than inferring per-fitted-set control."
+    },
+    {
+      "id": "D6_text_201",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Section 2.2 reports normalized-score adaptive coverage, shared rolling refitting, selected four-of-twelve stocks, and favorable adaptation in all examined cases. Section 5 supports wider swings without normalization; Section 6 specifies constructed time-zone ordering and the county comparison. Prose explicitly separates these local findings from unrestricted long-run control, and the reader recovers both that distinction and the selection/order qualifications."
+    },
+    {
+      "id": "D6_text_199",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2 and 4.1 support coverage-error feedback and distribution-free long-run frequency, not per-time coverage. Sections 4.2.1-4.2.3 support fixed functions, stationary hidden Markov initialization, and stronger conditional bounds; Sections 5 and 7 support score sensitivity and immediate outcomes. Reader preserves these stated boundaries and does not fill in the abstract's unspecified additional regularity."
+    },
+    {
+      "id": "D6_text_202",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2.2 and 5 support the near-90% normalized-score comparison, common 1,250-day pipeline, selected stock panels, and worsening unnormalized-score coverage. Section 6 explicitly constructs time-zone order with within-zone randomization, supporting prose's distinction from actual reporting-time replay. Reader accurately reconstructs local improvements and these consequential empirical restrictions."
+    },
+    {
+      "id": "D6_text_189",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Section 3.3 gives ImageNet 0.0499/0.0011 at 0.05 and almost-always leaf predictions; Sections 3.1-3.2 give the stated FNR means, dispersions, and different calibration sizes. Theorem 1 does not impose splitwise ceilings; Proposition 2 and Corollary 1 supply the non-monotone boundary and envelope remedy. Reader accurately links near-target graded loss to retained resolution and preserves the comparative and guarantee limits."
+    },
+    {
+      "id": "D6_text_200",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2 and 4.1 support feedback, bounded-level telescoping, and finite-horizon/long-run accumulated-error control. Prose explicitly excludes coverage at every time; Sections 4.2, 5, and 7 support stationary fixed-function sharper theory, score dependence, and response availability. Reader recovers those consequential distinctions and appropriately leaves unspecified regularity unspecified. An abstract need not reproduce every endpoint convention."
+    },
+    {
+      "id": "D6_text_186",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorems 1-2 and Proposition 1 support corrected expected-loss calibration and tight worst-case conservatism; Proposition 2 and Corollary 1 support non-monotone failure and envelope conservatism. Section 3 supplies the four application means across 1,000 splits. Reader preserves the unseen-observation relation and separates base assumptions from stronger tightness assumptions; no absent-source conditional guarantee is inferred."
+    },
+    {
+      "id": "D6_text_197",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorem 1's proof supports the infimum/fallback rule, domination of the test-inclusive average, symmetric oracle, monotone ordering, and exchangeable expectation. Prose explicitly limits the conclusion to calibration/test randomness without observing the test outcome. Reader core reproduces that relation and scope recovers the structural assumptions stated in the paragraph, including the safe fallback in its core."
+    },
+    {
+      "id": "D6_text_211",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorem 1 supplies the formula, safe maximal parameter, B upper bound, and oracle proof. Prose explains exchangeable representativeness conditional on unordered losses, not conditional risk for a particular calibration sample. Reader reconstructs the conservative-parameter relation and the bound, endpoint, exchangeability, and continuity conditions; 'finite-sample expected-risk control' remains the supported guarantee."
+    },
+    {
+      "id": "D6_text_215",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2.1-2.2 support the step size, rolling histories, Bernoulli comparison, crisis failure, and selected four panels. Section 5 supports score-dependent swings; Section 6 gives time-zone ordering, within-zone randomization, and 300-county local coverage. Prose explicitly calls this constructed drift, not an election-night replay. Reader correctly retains selection, empirical window scope, and failure of feedback alone to stabilize unnormalized scores."
+    },
+    {
+      "id": "D6_text_185",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorems 1-2 and Proposition 1 support corrected graded-risk control and sharp undershoot bounds with the stated stronger conditions. Sections 3 and 4.1-4.3 support applications, quantiles, multiple risks, and informed shift extensions; Proposition 2 and Corollary 1 support the monotonicity boundary. Reader recovers these relationships without inventing unspecified weighting details, which are not mandatory abstract wording."
+    },
+    {
+      "id": "D6_text_182",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Section 2 and Section 4.1 support the feedback direction and telescoping accumulated-error argument. Sections 4.2.1 and 4.2.3 state stationary hidden Markov initialization, fixed functions, Lipschitz miscoverage, and interior target-attaining parameters. Prose and reader explicitly distinguish these stronger marginal bounds from pathwise frequency control. Damaged symbols in Lemma 4.1 prevent direct verification of its printed interval notation, not the qualitative argument."
+    },
+    {
+      "id": "D6_text_194",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Section 2.2 and Equation (4) support shared 1,250-day GARCH refitting, centered 500-day windows, selected stock cases, and Fannie Mae undercoverage. Sections 2.1 and 5 support the responsiveness/volatility tradeoff and partial mitigation of unnormalized-score swings. Reader correctly recovers the empirical comparison and selected-case restriction, without equating long-run frequency control with local stability."
+    },
+    {
+      "id": "D6_text_204",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Sections 3.1-3.2 provide every stated mean, standard deviation, target, calibration/evaluation count, and repetition count. Theorem 1 supports expectation rather than splitwise ceilings; different tasks/models preclude isolating calibration-size effects. Proposition 2 and Corollary 1 support bounded non-monotone failure and envelope control. Reader reconstructs the near-target relation and these explicit limits without importing causal attribution."
+    },
+    {
+      "id": "D6_text_203",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Sections 3.1-3.2 support the two numerical summaries and split counts. Prose correctly treats dispersion as distinct from Theorem 1's expectation guarantee and explicitly acknowledges task/model confounding. Proposition 2 and Corollary 1 support the non-monotone boundary and envelope remedy. Reader recovers the comparative relation and scope, not a risk ceiling for each split or arbitrary bounded losses."
+    },
+    {
+      "id": "D6_text_207",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorem 1 supports unseen-loss correction and expected-risk control; Theorem 2 and Proposition 1 support the stronger sharp lower bound. Section 3 supports four application types, and Proposition 2/Corollary 1 support non-monotone failure and potentially conservative envelopes. Reader preserves both assumption tiers and the explicit calibration/test-average versus every-fitted-set distinction."
+    },
+    {
+      "id": "D6_text_205",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Section 2 supports increasing the quantile level, rather than the miscoverage parameter, after misses. Sections 4.1-4.2 support long-run frequency and model-specific stronger bounds; Sections 2.2, 5, 6, and 7 support the examples, normalization qualification, and immediate labels. Reader accurately maintains that parameter direction and all stated consequential boundaries without supplying unspecified regularity conditions."
+    },
+    {
+      "id": "D6_text_192",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2 and 4.1 support feedback and vanishing frequency discrepancy; Sections 4.2, 5, and 6 support conditional sharper theory, score sensitivity, and constructed geographic drift. Reader repeats initialization, endpoint conventions, and the non-pointwise limitation. Equation (5) loses step-size factors in extraction, so its printed denominator cannot be directly checked; the stated order is supported by the bounded-recursion argument."
+    },
+    {
+      "id": "D6_text_206",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2 and 4.1 support revealed-outcome feedback and long-run frequency under arbitrary data sequences with the stated conventions. Section 4.2 supports joint stationarity, fixed functions, and stronger model-specific bounds; Sections 5-7 support score dependence, empirical domain limits, and immediate outcomes. Reader preserves these distinctions and does not infer local or per-time guarantees from unrestricted frequency control."
+    },
+    {
+      "id": "D6_text_213",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Section 2 and Section 4.1 support miss-driven quantile adjustment, bounded feedback, and long-run frequency. Prose states positive gamma, initialization, extreme-set conventions, and the non-marginal scope; reader repeats them. Lemma 4.1 and Equation (5) lose signs/step-size symbols in extraction, preventing direct authentication of the printed constants. The prose's explicit bound follows algebraically from its recursion and bounded endpoints; no numerical contradiction is established."
+    },
+    {
+      "id": "D6_text_181",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Section 2 supports the distinction between target miscoverage and its adaptive quantile argument. Section 4.1 supports bounded-feedback frequency control, while Sections 4.2.1 and 4.2.3 supply the stronger marginal-error assumptions. Reader accurately recovers the telescoping relation and both assumption tiers. The extracted Lemma 4.1 interval loses symbols, limiting direct notation verification rather than establishing an erroneous bound."
+    },
+    {
+      "id": "D6_text_195",
+      "fidelity": "concern",
+      "core_recovery": 2,
+      "scope_recovery": 1,
+      "failure_types": [
+        "text_missing"
+      ],
+      "reason": "P12 Section 4.1 explicitly assumes alpha_1 in [0,1] before Lemma 4.1. Prose asserts that extensions 'keep alpha_t between -gamma and 1 + gamma' without that initialization condition; extensions alone do not give this invariant from an arbitrary starting value. Reader repeats the partial conditions and reports no uncertainty. Feedback, telescoping, and the short-window limitation are correctly recovered; the missing condition, not damaged source notation, causes concern."
+    },
+    {
+      "id": "D6_text_210",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Sections 3.1-3.2 support the exact means, dispersions, sample counts, targets, and 1,000 repetitions. Theorem 1 concerns expected loss, supporting prose's rejection of split/image ceilings; task and sample-size differences prevent causal isolation of dispersion. Proposition 2 supplies the non-monotone counterexample. Reader accurately reconstructs the empirical relation and preserves both the comparative qualification and monotonicity boundary."
+    },
+    {
+      "id": "D6_text_193",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2.1-2.2 support step size 0.005, common GARCH refitting, windowed coverage, stock selection, and crisis undercoverage. Section 5 supports wider swings without normalization and partial mitigation by larger steps. Prose explicitly limits the comparison to selected normalized-score cases and separates it from long-run theory; reader retains those qualifications and does not claim an average comparative advantage."
+    },
+    {
+      "id": "D6_text_190",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Sections 3.1-3.3 support the reported numbers, different calibration sizes, and almost-always leaf resolution. Theorem 1 does not guarantee every split; Proposition 2 and Corollary 1 support the non-monotone boundary and supremum-envelope remedy. Reader accurately preserves empirical specificity and repair conservatism, and acknowledges that the prose leaves the other repair conditions unspecified rather than inventing them."
+    },
+    {
+      "id": "D6_text_214",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Section 2 allows simultaneous score/quantile updates and supports outcome feedback; Section 4.1 supplies the bounded-recursion proof. Prose and reader retain initialization, positive gamma, extreme-set conventions, and the short-window limitation. Source Equation (5) has missing symbols, so exact printed factors cannot be authenticated directly; the paragraph's finite-horizon expression is the algebraic consequence of its explicit telescoping identity and endpoints, not an established numerical error."
+    },
+    {
+      "id": "D6_text_191",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P12 Sections 2 and 4.1 support immediate-feedback long-run frequency; Section 4.2 supports stationary hidden Markov, fixed-function sharper theory. Sections 2.1, 2.2, 5, and 6 support step-size behavior, local comparisons, constructed ordering, and normalization sensitivity. Reader recovers feedback plus accumulated-versus-per-time scope and appropriately does not fill in the paragraph's unnamed additional regularity conditions."
+    },
+    {
+      "id": "D6_text_209",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Sections 3.1-3.2 supply the numerical results, targets, counts, and repetition count. Prose's 'rather than constraining every split or image' correctly states Theorem 1's expectation scope, and differing tasks/sample sizes prevent identifying dispersion causes. Proposition 2 supplies the non-monotone boundary. Reader reconstructs near-target means and all these stated qualifications without extending success beyond the tested monotone losses."
+    },
+    {
+      "id": "D6_text_188",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P11 Theorem 1 supports corrected expected-loss calibration and its assumptions; Theorem 2 and Proposition 1 support the stronger sharp lower bound. The fixed-parameter discontinuity wording does not assert globally continuous sample paths. Section 3 and Proposition 2 support application means and bounded non-monotone failure. Reader preserves both assumption tiers and the explicit calibration/test-average limitation, rather than inferring splitwise control."
+    }
+  ]
+}

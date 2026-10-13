@@ -1,0 +1,398 @@
+[
+  {
+    "id": "N1_s1_results",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "results",
+    "outcome": "unanimous_tie",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N1_s1_abstract",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "abstract",
+    "outcome": "disagreement",
+    "winners": [
+      "tie",
+      "candidate"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N1_s2_methods",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "methods",
+    "outcome": "unanimous_tie",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N1_s2_abstract",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "abstract",
+    "outcome": "unanimous_tie",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N1_s2_results",
+    "paper": "N1",
+    "sample": 2,
+    "unit": "results",
+    "outcome": "disagreement",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N1_s1_methods",
+    "paper": "N1",
+    "sample": 1,
+    "unit": "methods",
+    "outcome": "unanimous_tie",
+    "winners": [
+      "tie",
+      "tie"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N2_s2_results",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "results",
+    "outcome": "disagreement",
+    "winners": [
+      "baseline",
+      "tie"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N2_s1_results",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "results",
+    "outcome": "disagreement",
+    "winners": [
+      "tie",
+      "baseline"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N2_s2_methods",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "methods",
+    "outcome": "unanimous_baseline",
+    "winners": [
+      "baseline",
+      "baseline"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N2_s1_abstract",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "abstract",
+    "outcome": "unanimous_candidate",
+    "winners": [
+      "candidate",
+      "candidate"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N2_s2_abstract",
+    "paper": "N2",
+    "sample": 2,
+    "unit": "abstract",
+    "outcome": "disagreement",
+    "winners": [
+      "candidate",
+      "tie"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  },
+  {
+    "id": "N2_s1_methods",
+    "paper": "N2",
+    "sample": 1,
+    "unit": "methods",
+    "outcome": "disagreement",
+    "winners": [
+      "candidate",
+      "tie"
+    ],
+    "source": {
+      "baseline": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      },
+      "candidate": {
+        "fidelity": [
+          "pass",
+          "pass"
+        ],
+        "critical_support": [
+          "supported",
+          "supported"
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,252 @@
+{
+  "reviews": [
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The clause requiring an equivariant expert and action-transforming noise preserves Section 4.1's assumptions. Relative updates requiring conjugation because the current pose rotates matches Section 4.2; the 53.7%/42.0% simulation comparison and matched-voxel hardware results match Tables 2 and 3."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The 63.9% versus 42.0% comparison correctly identifies voxel and RGB inputs, respectively, as in Table 2. The same-voxel, approximately parameter-matched hardware comparison and 80-95% versus 0-60% ranges agree with Section 5.3 and Table 3; the discrete-rotation architecture agrees with Section 4.3."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "A",
+      "reason": "A's 'relative updates require conjugation because the current pose also rotates' explains the design-relevant relationship that B only labels as a difference between control conventions. A also pairs the same-RGB simulation comparison with matched-voxel hardware evidence, giving its architectural interpretation a more direct evidential basis than B's cross-representation simulation comparison."
+    },
+    {
+      "case": "P1",
+      "sample": 1,
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The absolute and relative RGB averages match Table 2, and the maxima over 50 evaluations averaged across three seeds match Table 1's reporting protocol. Letter alignment at 40 demonstrations, 19/20 versus 0/20, and the matched voxel inputs and approximate parameter counts match Table 3 and Section 5.3."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "Table 2 supports the 53.7%/42.0% RGB comparison, 72.6% at 200 demonstrations versus 71.4% at 1,000, and 2.1-3.7 percentage-point relative-control gains over the best baseline. The draft acknowledges the cross-representation comparison, preserves the peak-over-training protocol, and reports letter alignment consistently with Table 3."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both connect the same-RGB/backbone and matched-voxel hardware comparisons to an architectural benefit, preserve the peak-selection protocol, and specify weaker image-relative gains. A makes the same-budget control contrast explicit; B adds a sample-efficiency comparison while naming its observation change. These are complementary, properly scoped uses of evidence, with no decisive inferential advantage."
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The observation/noisy-action/target-noise relationship and action-transforming-noise condition agree with Section 4.1. The shared discrete-rotation U-Net agrees with Section 4.3; 72.6% at 200 demonstrations versus the strongest baseline's 71.4% at 1,000 and the matched-voxel hardware ranges agree with Tables 2 and 3."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "Left multiplication versus conjugation accurately summarizes Section 4.2. The image symmetry mismatch matches Section 5.1; Table 2 supports both the same-RGB 53.7%/42.0% comparison and the explicitly voxel-versus-RGB 72.6%/71.4% comparison. The hardware conditions and success range match Section 5.3 and Table 3."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "B",
+      "reason": "B specifies 'left multiplication versus conjugation' where A's 'different transformation rules' leaves the design distinction unspecified. B's same-RGB, same-backbone comparison establishes a gain without changing observation representation, and it labels the RGB comparator in the separate sample-efficiency contrast; A's sole simulation contrast leaves that consequential input difference implicit."
+    },
+    {
+      "case": "P1",
+      "sample": 2,
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The six-task hardware ranges, same voxel grid, approximate parameter matching, and 20 trials per task match Section 5.3 and Table 3. The RGB comparison and diminishing absolute-control advantage over DiffPo-C match Table 2; the simulation reporting protocol matches Table 1."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The absolute and relative RGB averages and seed-averaged training maxima match Tables 1 and 2. Letter alignment at 40 demonstrations and bagel baking at 58 demonstrations match Table 3. Attribution of all EquiDiff bagel-baking failures to robot joint limits is explicitly reported in Section 5.3."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4
+        }
+      },
+      "preferred": "Tie",
+      "reason": "Both explain why matched-input comparisons support an architectural benefit beyond voxel input and retain the peak-over-training qualification. A's six-task hardware range and demonstration-budget trend establish breadth and data dependence; B's same-budget control contrast and documented joint-limit failures establish control and execution dependence. Neither obscures the central relationship or provides a decisive advantage for this unit."
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The explanation that near-zero reference losses erase the excess-loss comparison matches Section 3.1, and averaged reusable weights match Section 3.2. The 25-demonstration, three-task, 5% co-training setup matches Section 4.1; the 80%/38%/33% quarter-data RT-X results match Figure 3."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The excess-loss objective and reusable weights agree with Sections 3 and 3.2. Size-proportional sampling correctly describes the Uniform baseline in Section 4.1. The four-task RT-X subset results match Figure 3, and the two-task full-data Bridge comparison and limited co-training conditions match Section 4.1 and Figure 1."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "A",
+      "reason": "A's 'near-zero training loss to erase this comparison' explains specifically why reference overfitting defeats excess-loss weighting; B's 'guards against reference overfitting' names the safeguard without that mechanism. A also connects the differing full-data and subset Bridge findings to the distinct questions of weighting and removal, giving its design-and-evidence account more explanatory economy."
+    },
+    {
+      "case": "P2",
+      "sample": 1,
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The subset means and four-task evaluations match Figure 3; the 400,000-step, 5% co-training and ten-trial conditions match Section 4.1. Continued sampling with learned weights after subsetting is explicit in Section 4.4. The late-reference-checkpoint and continuous-action ablations match Section 4.5."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "The RT-X and Bridge subset means match Figure 3, and the CLIP-based SSP description matches Section 4.4. Section 4.1 supports the stated shared training budget, co-training quantity and weight, ten executions per task, and distinction from zero-shot transfer; Figure 1 supports similar full-data Bridge performance."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        }
+      },
+      "preferred": "A",
+      "reason": "A's 'learned weights still used for sampling after subsetting' specifies the intervention tested under matched data and training budgets. It also distinguishes the four-task subset from the two-task full-data Bridge evaluation. B's opening 'mixture choice mattered more after subsetting' leaves those evaluation populations and continued training-time weighting unspecified, making the removal-versus-weighting relationship less precise."
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "abstract",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "Embodiment-level Gaussian normalization, action discretization, and checkpoints selected before domain overfitting agree with Section 3.1. Reusing weights with independent diffusion-policy training agrees with Section 3.2. The co-training quantities and quarter-data RT-X means match Section 4.1 and Figure 3."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "Returning reusable weights for policy training and retention, rather than a final policy, matches Section 3.2. The explanation for 5% in-domain co-training matches the reported zero-shot failure in Section 4.1. RT-X performance retention and the 90%/50%/22% Bridge subset comparison match Section 4.4 and Figure 3."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 4,
+          "language": 4
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "preferred": "B",
+      "reason": "B links early stopping to reference-loss collapse, explicitly connects the returned weights to both training and retention, and explains that co-training is needed because pretraining alone failed on the evaluation setups. A names overfitting and supplies the co-training amount but leaves those specific relationships less developed. B's Bridge comparison also directly tests action-informed against visual-embedding curation."
+    },
+    {
+      "case": "P2",
+      "sample": 2,
+      "unit": "results",
+      "fidelity": {
+        "A": {
+          "status": "pass",
+          "reason": "The two-task full-data and four-task subset Bridge evaluations agree with Figure 1, Figure 3, and Section 4.4. The statement that retention and training-time weights change together matches Section 4.4's procedure. The training and co-training conditions match Section 4.1, and reported RT-X performance retention matches Section 4.4."
+        },
+        "B": {
+          "status": "pass",
+          "reason": "Both datasets' quarter-data means and four-task subset evaluations match Figure 3. The shared training budget, co-training quantities, ten trials, and evaluation shifts match Section 4.1. Similar two-task full-data Bridge performance matches Figure 1, and the continuous-action and overfit-reference ablation outcomes match Section 4.5."
+        }
+      },
+      "ratings": {
+        "A": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "B": {
+          "contribution": 5,
+          "argument": 4,
+          "selection": 4,
+          "language": 5
+        }
+      },
+      "preferred": "A",
+      "reason": "A's 'retention and training-time domain weights change together' identifies the combined intervention rather than leaving the benefit attributed to reduced-set composition alone, as B's central interpretation does. Its final sentence also explains why the two-task full-data and four-task subset Bridge averages are not paired measurements. These relationships specify what the evidence establishes; B's valid ablations do not resolve either comparison issue."
+    }
+  ]
+}

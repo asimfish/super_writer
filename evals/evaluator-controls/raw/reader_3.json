@@ -1,0 +1,52 @@
+{
+  "readings": [
+    {
+      "id": "T021",
+      "core": "The proved update uses exact gradients on a convex objective with a stipulated step-size rule; those conditions support the supplied non-increasing-objective guarantee. The implementation uses approximate gradients. The update formula, step-size rule, and proof mechanism are not recoverable.",
+      "scope": "The proof covers only the stated exact-gradient update. Decreases at every recorded step on three toy problems describe implementation trajectories, not a transferred guarantee. No convergence rate or nonconvex guarantee is asserted.",
+      "core_witness": "uses exact gradients on a convex objective with the stipulated step-size rule",
+      "scope_witness": "it is not covered by that supplied monotonicity proof",
+      "unclear": "The update formula, step-size rule, and derivation connecting the stated conditions to monotonicity are absent."
+    },
+    {
+      "id": "T019",
+      "core": "Middle placement scores 52% exact-answer accuracy, versus 80% for first placement and 78% for last placement. Middle is lowest; first and last differ by two percentage points. These comparisons establish variation across the evaluated arrangements.",
+      "scope": "Exact-answer accuracy was measured on a fixed set of 100 questions under three answer-document placements. Inference is limited to the tested task and document length. An internal neural mechanism and applicability to all long-context workloads are not recoverable.",
+      "core_witness": "Exact-answer accuracy is 80% with the answer document first, 52% in the middle and 78% last",
+      "scope_witness": "remain limited to the tested task and document length, rather than all long-context workloads",
+      "unclear": "none"
+    },
+    {
+      "id": "T015",
+      "core": "The procedure guarantees at least 90% marginal coverage for a future observation. Calibration observations determine the intervals; the future-coverage statement is the theoretical contribution alongside a toy evaluation. Interval construction and the derivation of that guarantee are not recoverable.",
+      "scope": "One fixed toy evaluation drawn from the calibration distribution covers 89 of 100 targets, neither proving nor contradicting the marginal guarantee. Conditional coverage is not claimed; no shift experiment is reported. Outside-distribution empirical behavior is unmeasured. Additional theoretical assumptions are not recoverable.",
+      "core_witness": "The interval procedure guarantees at least 90% marginal coverage for a future observation.",
+      "scope_witness": "Conditional coverage is not claimed, and no shift experiment is reported.",
+      "unclear": "Interval construction, guarantee derivation, and any additional assumptions bounding the theoretical guarantee are absent."
+    },
+    {
+      "id": "T017",
+      "core": "Compact indexing yields 89 exact matches among 100 queries, versus the baseline's 85 on the same fixed dataset. Its median query time is slower: 150 ms versus 120 ms. This supports an observed accuracy-time tradeoff, not uniform improvement.",
+      "scope": "Exact-match counts and median query times describe the fixed dataset and one device. No sampling uncertainty or production evaluation is reported. Sampling uncertainty and deployment behavior are not recoverable; the observations are not deployment guarantees.",
+      "core_witness": "89 of the 100 evaluated queries, compared with 85 for the baseline",
+      "scope_witness": "The counts and timings describe this dataset and device",
+      "unclear": "none"
+    },
+    {
+      "id": "T013",
+      "core": "Kernel time halves from 16 to 8 ms, while separately measured request latency falls from 112 to 104 ms. The 8 ms component saving appears end to end, but remaining request work prevents a twofold overall acceleration.",
+      "scope": "Measurements use the same batch and device with unchanged outputs and concern the measured request configuration. Request latency includes preprocessing, transfers, and postprocessing. Concurrent-user throughput was not evaluated; performance on another device is not established. Those outcomes are not recoverable.",
+      "core_witness": "the remaining request work prevents a twofold overall acceleration.",
+      "scope_witness": "same batch and device with unchanged outputs",
+      "unclear": "none"
+    },
+    {
+      "id": "T023",
+      "core": "Lookup maps each logical key to a physical block in a fixed pool, and access follows that map. Blocks need not be adjacent, so extending a sequence does not require copying earlier blocks into a contiguous region.",
+      "scope": "The claim establishes the stated storage relationship and extension without relocating earlier blocks, not faster execution. Comparative performance is not recoverable because no comparison is available. Library and logging metadata are unnecessary to establish this storage relationship.",
+      "core_witness": "a sequence can extend without copying its earlier blocks into a contiguous region.",
+      "scope_witness": "No performance comparison is available.",
+      "unclear": "none"
+    }
+  ]
+}

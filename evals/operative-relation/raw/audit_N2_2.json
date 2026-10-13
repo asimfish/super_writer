@@ -1,0 +1,88 @@
+{
+  "audits": [
+    {
+      "id": "N2_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Table 2 (N2.txt:1171-1177) gives the stated coverages and widths; Section 6.2 identifies permutation as exchangeable and greater weighted variability. Theorem 2b and Section 5.3 restrict drift guarantees. Prose: 'raises coverage to 89.0% but increases width to 0.606' contrasts with weighted fitting's 89.3%/0.527 and the permuted control's lost width advantage. 'Neither weighted method reaches 90%' and the final sentence supply the target and generalization limits. Reading: core's 'not universally narrower weighted intervals' and scope's 'per-time and universal drift coverage are not established' are explicit prose conclusions."
+    },
+    {
+      "id": "N2_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Table 2 (N2.txt:1173-1175) confirms all six coverage/width pairs; Section 6.2 describes the exchangeable permutation control and increased variability. Theorem 2b bounds undercoverage by weighted residual-law total variation. Prose: 'keeping least squares fixed' isolates calibration's coverage gain and width cost; 'With calibration weighting retained' isolates fitting's shortening. Both weighted results are below 90%, and the ending explicitly rejects per-time and universal drift guarantees. Reading: core's 'complementary calibration and fitting roles' and scope's 'Random permutation removes the fitting width advantage' directly summarize these comparisons, without importing source-only facts."
+    },
+    {
+      "id": "N2_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Table 2 (N2.txt:1171-1177) supports the ordered and permuted numbers; Section 6.2 identifies exchangeability after permutation. Theorem 2b supplies the residual-distribution penalty. Prose: 'calibration weighting improves coverage here at a width cost, while weighted fitting offsets that cost' states the distinct roles; 'neither weighted method reaches the 90% target' interprets the target. The permuted comparison removes the width advantage, and the closing sentence denies arbitrary-drift guarantees. Reading: core's 'fitting offsets calibration's width cost' and scope's small-discrepancy qualification are directly stated, not supplied from the source."
+    },
+    {
+      "id": "N2_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Table 2 (N2.txt:1173-1175) matches the reported ordered/permuted coverages and widths; Section 6.2 explains the exchangeable control. Theorem 2b supports the final conditional lower-bound statement. Prose: 'calibration weighting moves coverage toward the 90% target at a width cost' separates calibration from fitting's narrower intervals; 'Neither weighted method reaches the target' and the last two sentences distinguish observed averages from guarantees. Reading: core's separate improvement/shortening roles and scope's 'width advantage disappears in the randomly permuted control' have explicit witnesses. Its pointwise/drift cautions also occur in the prose."
+    },
+    {
+      "id": "N2_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Section 7.2, equations (24)-(31), locates the test residual at K, proves infinity-cutoff dominance using w_K <= 1, bounds strange-index mass by alpha, and compares swapped/original laws by total variation. Sections 3.2 and 5.5 fix tags and weights. Prose: 'keeping tags fixed puts the test residual at index K' and 'prediction cutoff with test mass at infinity is no smaller' supply the implication, followed by independent averaging and the original-law alpha bound. Reading: core's 'replacing swapped residual laws by the original' and scope's before-data, unit-test-weight conditions directly track this explanation."
+    },
+    {
+      "id": "N2_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Section 7.1 identifies unequal-weight and nonsymmetric-fitting obstacles; Section 7.2, equations (24)-(31), establishes relocation, quantile dominance, alpha mass, independence, and total-variation comparison. Prose: 'retaining positional tags' and 'at the true test label' identify the residual vector; 'because w_i <= 1, this threshold dominates' explains the rejection implication. The ending explicitly averages over K and bounds the original-law weighted mass before adding distances. Reading: core's alpha-plus-distances account and scope's 'infinity-adjusted threshold dominating the swapped-vector quantile' are grounded in these sentences, with no source-only repair."
+    },
+    {
+      "id": "N2_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Sections 3.1-3.2, Theorems 2b/3, Section 5.3, and Tables 2/3 support the construction, conditional bounds, and empirical limits. Prose: 'tags retained at their positions,' the high-residual mass statement, and the swapped-law comparison connect the construction to coverage; 'not exact nominal validity' distinguishes nonexchangeability. Its electricity tradeoff and permutation/election cautions complete the abstract objective. Reading: core and scope repeat these claims. Its unclear 'Why the swap implies high-residual membership is not recoverable' accurately notes an omitted derivation, not a missing abstract-level contribution; no proof detail is silently imported."
+    },
+    {
+      "id": "N2_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Sections 3.1-3.2 and Theorems 2b/2c/3 support fixed weights/tags, randomized fitting, the residual-law penalty, and qualified overcoverage; Tables 2/3 support the empirical claims. Prose: 'Weights emphasize observations expected to resemble the test distribution; tags enable order-sensitive fitting' explains their roles. 'The swap connects miscoverage to high-residual indices' plus the mass and distribution comparison provides an adequate abstract-level causal summary. Exchangeable validity, small-penalty undercoverage, and the coverage/width tradeoff are explicit. Reading: core's reduced coverage lower bound and scope's vanished exchangeable penalty and ordering limitation are text-grounded; a detailed proof is not claimed."
+    },
+    {
+      "id": "N2_T09",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Sections 3.1-3.2, Theorems 2b/3, Section 5.3, and Tables 2/3 support the separate weighting/tag roles, weighted swap, residual-law bound, and empirical caveats. Prose: 'probabilities proportional to these weights and a unit test weight' connects construction to high-residual mass and the total-variation lower bound. Exchangeability, conditional undercoverage, and ordered-versus-permuted width behavior are explicit. Reading: core/scope are supported; its unclear 'Why the swap implies high-residual membership is not recoverable' correctly identifies an undemonstrated proof step. That derivation is unnecessary for the bounded abstract objective, which the prose answers without source supplementation."
+    },
+    {
+      "id": "N2_T10",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Sections 3.1-3.2, Theorems 2b/2c/3, Section 5.3, and Tables 1-3 substantiate the construction, baselines, exchangeability distinction, and empirical tradeoff. Prose: 'separating calibration weighting from tagged model fitting' explains the roles; the independent weighted exchange before fitting leads to the stated high-residual mass and residual-law penalty. 'A small penalty limits undercoverage' contrasts with exchangeable validity, and permutation/election observations limit generalization. Reading: core's complementary roles and scope's unit test weight, differing conformal/jackknife+ baselines, and lost width advantage all have explicit prose witnesses. The abstract objective needs no full quantile derivation."
+    },
+    {
+      "id": "N2_T11",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Equation (12) gives normalization; Section 3.2 fixes positional tags and independent K. Section 7.2, equations (24)-(31), establishes test-residual relocation, infinity-cutoff dominance, alpha mass, and weighted total-variation comparison. Prose: 'test residual becomes entry K' and 'test weight's dominance over calibration weights' explain the miscoverage implication; subsequent sentences give vectorwise mass, independent averaging, and probability-change bounds. The final symmetry/stability qualification agrees with Section 3.2. Reading: core's 'infinity-based cutoff and test-weight dominance' and scope's normalization, fixed-position tags, and independence directly reflect the explanation rather than filling gaps from the source."
+    },
+    {
+      "id": "N2_T12",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Source: Sections 3.2 and 7.1 explain nonsymmetric residuals; equation (12) and Section 7.2, equations (24)-(31), supply normalization, relocation, cutoff dominance, alpha mass, independence, and total variation. Prose: 'keeping tags at their positions' fixes the fitting roles; 'replacing the test residual by infinity' with calibration weights no larger than test weight explains the implication. It then compares each swapped event with its original counterpart and states the weighted discrepancy bound. Reading: core's sampled-index/mass/comparison chain and scope's unit unnormalized test weight, independent draw, and no symmetry/stability requirement are explicit prose claims."
+    }
+  ]
+}

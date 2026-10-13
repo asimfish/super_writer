@@ -1,0 +1,18 @@
+{
+  "P1": {
+    "title": "Equivariant Diffusion Policy",
+    "official_pdf_url": "https://raw.githubusercontent.com/mlresearch/v270/main/assets/wang25a/wang25a.pdf",
+    "pdf_sha256": "e3fd0e63a1711dbc2ba7eff8c2e0bdb612f1e3d6f7f39bb602c55d4734acdadf",
+    "body_sha256": "c7ed27fc3c5f263db23fb94a5c7a04e034dc547329025d786dcd89fcc9e65b41",
+    "extraction": "pdftotext -layout -f 2 -l 9; select declared section boundaries without repairing text",
+    "body_words_approx": 4086
+  },
+  "P2": {
+    "title": "ReMix: Optimizing Data Mixtures for Large Scale Imitation Learning",
+    "official_pdf_url": "https://raw.githubusercontent.com/mlresearch/v270/main/assets/hejna25a/hejna25a.pdf",
+    "pdf_sha256": "57a256b4a5dffee0d40dac5285a764cc89057f3f07ddd3d755f2df33371c6efb",
+    "body_sha256": "cf3eab0dabb8bc6dec2c15cabf0f7e84358d141fe1b1c19c2d8aa23b71623af3",
+    "extraction": "pdftotext -layout -f 2 -l 9; select declared section boundaries without repairing text",
+    "body_words_approx": 4079
+  }
+}

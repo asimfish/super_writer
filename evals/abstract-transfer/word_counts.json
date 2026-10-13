@@ -1,0 +1,650 @@
+[
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 177,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "condition": "initial",
+    "field": "notes",
+    "words": 49,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 178,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "condition": "initial",
+    "field": "notes",
+    "words": 51,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 177,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 56,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 176,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 65,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 187,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 75,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 189,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 73,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 186,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "condition": "initial",
+    "field": "notes",
+    "words": 70,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 189,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "condition": "initial",
+    "field": "notes",
+    "words": 76,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 185,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 79,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 195,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 77,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 181,
+    "within_budget": true
+  },
+  {
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 76,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 191,
+    "within_budget": true
+  },
+  {
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 77,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 173,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "condition": "initial",
+    "field": "notes",
+    "words": 63,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 189,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "condition": "initial",
+    "field": "notes",
+    "words": 75,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 178,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 71,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 181,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 80,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 171,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 76,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 174,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 84,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 186,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "condition": "initial",
+    "field": "notes",
+    "words": 64,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 181,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "condition": "initial",
+    "field": "notes",
+    "words": 73,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 175,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 61,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 193,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 81,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 188,
+    "within_budget": true
+  },
+  {
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 78,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 186,
+    "within_budget": true
+  },
+  {
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 86,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 203,
+    "within_budget": false
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "condition": "initial",
+    "field": "notes",
+    "words": 78,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 197,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "condition": "initial",
+    "field": "notes",
+    "words": 76,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 195,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 82,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 196,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 83,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 200,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 79,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 198,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 87,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 193,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "condition": "initial",
+    "field": "notes",
+    "words": 82,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "condition": "initial",
+    "field": "abstract",
+    "words": 188,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "condition": "initial",
+    "field": "notes",
+    "words": 73,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 194,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 81,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "abstract",
+    "words": 192,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "condition": "baseline",
+    "field": "notes",
+    "words": 82,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 189,
+    "within_budget": true
+  },
+  {
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 77,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "abstract",
+    "words": 183,
+    "within_budget": true
+  },
+  {
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "condition": "candidate",
+    "field": "notes",
+    "words": 72,
+    "within_budget": true
+  }
+]

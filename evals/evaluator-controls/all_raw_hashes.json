@@ -1,0 +1,12 @@
+{
+  "raw/review_1.json": "36c8537aeb9ce5e269a249b9db2ce96b3f0d1939a741ecaecfc96e0696a091a9",
+  "raw/review_2.json": "5be02ed0e5621a2740a7e082685e1b581cc94699793d324e48617fb4f601af7b",
+  "raw/reader_1.json": "4de7384bbaf604cd30e1f7f4dd2b643fdda0c09492a9706da054d2b3f52f2186",
+  "raw/reader_2.json": "7eace8f758076e5b848f2b0f0b8a4c3062a7162ccd6ebf4195b33c12283c60f8",
+  "raw/reader_3.json": "c16d267e68f54124bd071c0533945d5879559012f12e22ec1dea2f3e8f5aadef",
+  "raw/reader_4.json": "f71fc70b56f04cb139bcf95d6587abce3b72bacadf36d4b8fe10d2be7474f7c1",
+  "raw/coarse_1.json": "7c059e25021bdd4e392b729f8a2480f8d8ccc1071b1cad820728caa8b4aef472",
+  "raw/coarse_2.json": "e0a71347a687c4e20231fffdb03cd34cbc2e785839898dbae1d85d3670320d63",
+  "raw/fine_1.json": "b25332551c9d9ad5b12071063d30cc908af5151a73740384785d6f6a5852aa90",
+  "raw/fine_2.json": "9b9b324b64b0c01a88495173464c6d59749a7663ca60df0d270a074ec662ea80"
+}

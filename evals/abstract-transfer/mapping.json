@@ -1,0 +1,266 @@
+[
+  {
+    "id": "A02_s2",
+    "paper": "A02",
+    "group": "G1",
+    "sample": 2,
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "G1_T01",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "G1_T02",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "A02_s1",
+    "paper": "A02",
+    "group": "G1",
+    "sample": 1,
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "G1_T03",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "G1_T04",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "A01_s1",
+    "paper": "A01",
+    "group": "G1",
+    "sample": 1,
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "G1_T05",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "G1_T06",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "A01_s2",
+    "paper": "A01",
+    "group": "G1",
+    "sample": 2,
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "G1_T07",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "G1_T08",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "A03_s2",
+    "paper": "A03",
+    "group": "G2",
+    "sample": 2,
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "G2_T01",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "G2_T02",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "A04_s2",
+    "paper": "A04",
+    "group": "G2",
+    "sample": 2,
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "G2_T03",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "G2_T04",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "A04_s1",
+    "paper": "A04",
+    "group": "G2",
+    "sample": 1,
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "G2_T05",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "G2_T06",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "A03_s1",
+    "paper": "A03",
+    "group": "G2",
+    "sample": 1,
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "G2_T07",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "G2_T08",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "A06_s1",
+    "paper": "A06",
+    "group": "G3",
+    "sample": 1,
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reader_1": {
+      "id": "G3_T01",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "G3_T02",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "A05_s2",
+    "paper": "A05",
+    "group": "G3",
+    "sample": 2,
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "G3_T03",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "G3_T04",
+      "condition": "baseline"
+    }
+  },
+  {
+    "id": "A05_s1",
+    "paper": "A05",
+    "group": "G3",
+    "sample": 1,
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "G3_T05",
+      "condition": "baseline"
+    },
+    "reader_2": {
+      "id": "G3_T06",
+      "condition": "candidate"
+    }
+  },
+  {
+    "id": "A06_s2",
+    "paper": "A06",
+    "group": "G3",
+    "sample": 2,
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reader_1": {
+      "id": "G3_T07",
+      "condition": "candidate"
+    },
+    "reader_2": {
+      "id": "G3_T08",
+      "condition": "baseline"
+    }
+  }
+]

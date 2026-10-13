@@ -51,6 +51,10 @@ section location.
 
 ## Rewrite Rules
 
+- For exemplar-informed revision, apply `references/argument-transfer.md` and
+  read back the claim from the prose before checking the plan; repair missing
+  relations or unsupported implications at their actual location. A copied move
+  order or high rewritten-word ratio does not establish improvement.
 - Rewrite from the matrix, not by appending to old paragraphs.
 - Preserve LaTeX commands, labels, citations, equations, figures, tables.
 - Use `output_language` from config.

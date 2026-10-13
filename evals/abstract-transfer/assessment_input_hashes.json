@@ -1,0 +1,16 @@
+{
+  "mapping.json": "d6899bf97a20245ce53d1003c3e830b536de83c44b258d4e5c111854aeef6eae",
+  "tasks.assessments.json": "b8ea16f63d42af9aa80b06a868aa7ec169c3416673868878d15e2c655e1f2986",
+  "packets/reader_G1_1.json": "33477413daf863e24c143b416c1d74b31943b3771f842111f8171648b5a7a81d",
+  "packets/reader_G1_2.json": "4808b771ed8fea3a139be911428aa39634a87b84a63151f0d5e7b0b9ccd46e66",
+  "packets/reader_G2_1.json": "0e2f1e34349cd31c95704a5f97d22ee87f22d53b513f73006e215270876a4df2",
+  "packets/reader_G2_2.json": "bcbd70f0fa891e7645de22c3c72a4905a9635899899b31dae233fa1520cecad6",
+  "packets/reader_G3_1.json": "c8d30af7cd708ca00c673ca6859155a286341131a58cd47d2895ba3ebfde14f5",
+  "packets/reader_G3_2.json": "d6a022710fb36fa3d6b163b2bf22c891b8fb43f4ac60f93d75683c5eb716efba",
+  "packets/review_G1_1.json": "c56a054e0b283eb7cac78ee1d671fcf61f0e03a8e22232db212ca42bfc1d7a0f",
+  "packets/review_G1_2.json": "511b592f7dff30cd95ad0a6d04f4941cd8d47ade8e2c3570912760cfac7d6d0d",
+  "packets/review_G2_1.json": "b5262f7391b044913c370a29c5fb32a64f801f6edd92872b6dab437ab09f50da",
+  "packets/review_G2_2.json": "3ea1a318b1726b7b2452a1b2839359d54438a78d08eddeac5d7be44b3c55ba6e",
+  "packets/review_G3_1.json": "8a8ae2afff4897553ab3182099ab7384824c4e570a908a7a6f6d6f9d5cf0adef",
+  "packets/review_G3_2.json": "eaa616693bf3503fb3def8fa1da4e0cb7d7013c3501b61e40b176146405c2650"
+}

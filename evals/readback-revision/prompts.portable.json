@@ -1,0 +1,97 @@
+[
+  {
+    "original_file": "prompts.audit.json",
+    "original_sha256": "818890342a78b2ab509cf362d388aafedae1eb9c5035619df9821bfce29f4082",
+    "path_redaction": "Evaluation root replaced by <EVAL_ROOT>; source/input contents are not embedded.",
+    "prompts": [
+      {
+        "role": "source_grounding",
+        "message": "You are the independent source-grounding auditor for a bounded writing evaluation. Work only under <EVAL_ROOT>. For now, inspect sources/lee24y.pdf (Behavior Generation with Latent Actions) only on PDF pages 3-9, sections 3-4 and their tables/figures; do not read page 1, Introduction, author abstract, or sections 5 onward. Use pdftotext -raw and rendered designated body pages if helpful. Do not browse, read repository files/guides, other outputs, history, or credentials. Create source_grounding_P1.json with located evidence about the method's actual operations, evaluation conditions, informative comparisons, and limitations available in those sections, enough to later audit new abstracts and Results paragraphs. Distinguish author interpretation, reported observation and isolated cause. Do not copy long source passages. This is grounding, not writing or quality judging. Use apply_patch for the new local file, no edits elsewhere. End after saving; a later message may provide the second paper and anonymous generated prose. No expected findings or writing preferences are supplied."
+      },
+      {
+        "role": "source_grounding_followup",
+        "message": "The second official source is now complete: sources/p056.pdf (Imitation Bootstrapped Reinforcement Learning). Inspect Methods section IV, Experiments V-VI and the separately titled Limitations and Future Work, excluding section VII Summary, acknowledgments, Introduction and author abstract. PDF pages 3-10 may contain these sections; skip adjacent excluded material. The exact permitted body is inputs/P2.txt; inputs/P1.txt is now also available. Create source_grounding_P2.json with the same located-evidence scope as your first grounding, only in the evaluation root. Do not read any writer outputs, guides, repository files or judgments. This is still source grounding, not quality judging."
+      },
+      {
+        "role": "source_audit",
+        "message": "After completing the two source-grounding notes, audit the new generated prose in <EVAL_ROOT>/review_packet_1.json. Read only this anonymous packet, the already permitted body evidence/grounding notes and designated PDF body pages. Do not read initial drafts, any guides, condition mappings, writers' working notes, other judgments or other raw files. Audit all 16 A/B texts against the actual method operations and evaluation conditions. Focus on central contribution/explanation, selected quantitative comparisons, and any consequential scope or ambiguity; a pass means no mismatch found in this bounded review, not exhaustive verification. Distinguish explicit mismatch from ambiguity or source-reporting uncertainty, and do not resolve ambiguous evidence by inventing facts. Save raw/source_audit.json, schema {\"audits\":[{\"case\":\"P1\",\"sample\":1,\"unit\":\"abstract\",\"label\":\"A\",\"status\":\"pass|concern|fail\",\"findings\":[{\"claim\":\"brief focal claim paraphrase\",\"assessment\":\"why supported, unsupported, ambiguous or uncertain\",\"source\":\"PDF page and section/table locator\"}]}]}. Include exactly each of the 16 case/sample/unit/label combinations once. Prefer 2-4 brief located findings per passage rather than exhaustive clause inventories; preserve concerns even if prose sounds polished. No quality preference or condition inference is requested. Do not copy long publisher passages. Use apply_patch for this one file, no writes elsewhere, no retries or edits to saved prose. Return only the saved path."
+      }
+    ]
+  },
+  {
+    "original_file": "prompts.initial.json",
+    "original_sha256": "3c0d959c23515d2741b74fd0d62c7a0522e4b3c0eabac859e8a38e71cba19277",
+    "path_redaction": "Evaluation root replaced by <EVAL_ROOT>; source/input contents are not embedded.",
+    "prompts": [
+      {
+        "role": "initial_writer",
+        "sample": 1,
+        "message": "Complete a bounded scientific writing request in an isolated workspace, <EVAL_ROOT>. Read only request.json, inputs/P1.txt, inputs/P2.txt, baseline/abstract-decisions.md and baseline/writing-protocols.md. Using those body materials, write one conference-style English abstract (150-200 words) and one Results paragraph (120-180 words) per paper for robot-learning readers, plus brief internal working_notes at most 120 words per case. Follow request.task and each results_scope. Select evidence by function and preserve supported contributions; do not inventory every component or table, invent evidence, significance or gaps, or assume a general guarantee. Do not browse, read PDFs/author abstracts, other outputs, repository/history/memory, other guides, credentials or external sources. Do not deliberately reproduce remembered publisher wording; model pretraining recall cannot be excluded. This is a bounded writing request, not a full-paper workflow: no extra artifact tree. Save your single generation as raw/initial_1.json, schema {\"cases\":[{\"id\":\"P1\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"},{\"id\":\"P2\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"}]}. Use apply_patch for this one file; do not write elsewhere. Finalize the full response before saving; no retry, output selection or editing the saved generation. Count words before finalizing if useful, treating hyphenated/apostrophe words as one word. Return only the saved path."
+      },
+      {
+        "role": "initial_writer",
+        "sample": 2,
+        "message": "Complete a bounded scientific writing request in an isolated workspace, <EVAL_ROOT>. Read only request.json, inputs/P1.txt, inputs/P2.txt, baseline/abstract-decisions.md and baseline/writing-protocols.md. Using those body materials, write one conference-style English abstract (150-200 words) and one Results paragraph (120-180 words) per paper for robot-learning readers, plus brief internal working_notes at most 120 words per case. Follow request.task and each results_scope. Select evidence by function and preserve supported contributions; do not inventory every component or table, invent evidence, significance or gaps, or assume a general guarantee. Do not browse, read PDFs/author abstracts, other outputs, repository/history/memory, other guides, credentials or external sources. Do not deliberately reproduce remembered publisher wording; model pretraining recall cannot be excluded. This is a bounded writing request, not a full-paper workflow: no extra artifact tree. Save your single generation as raw/initial_2.json, schema {\"cases\":[{\"id\":\"P1\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"},{\"id\":\"P2\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"}]}. Use apply_patch for this one file; do not write elsewhere. Finalize the full response before saving; no retry, output selection or editing the saved generation. Count words before finalizing if useful, treating hyphenated/apostrophe words as one word. Return only the saved path."
+      }
+    ]
+  },
+  {
+    "original_file": "prompts.review.json",
+    "original_sha256": "696604b0bb69b9667bcaaa04422c869c8ab3aeb30aac962db42eb01c272084d5",
+    "path_redaction": "Evaluation root replaced by <EVAL_ROOT>; source/input contents are not embedded.",
+    "prompts": [
+      {
+        "role": "reviewer",
+        "reviewer": 1,
+        "message": "You are an anonymous scientific prose reviewer in an isolated evaluation. Read only <EVAL_ROOT>/review_packet_1.json, which contains permitted body sources and eight anonymous A/B pairs. Do not browse, read PDFs/author abstracts, initial drafts, working notes, guides, condition mappings, other judgments, repository/history/memory, credentials or other outputs. Judge each abstract or Results paragraph against its body and writing task. Source fidelity is separate from style: mark A and B pass, concern, or fail, noting source mismatch, unsupported causal or general claims, ambiguous conditions, or missing evidence where consequential. Then rate contribution (distinctive contribution/supported co-contributions), argument (relationships and informative comparisons make the answer intelligible), selection (evidence chosen by function with consequential scope), and language (natural, precise academic prose) from 1-5 per draft. 3 is adequate; 5 requires specific compelling writing, not merely correct grammar or mentioning a mechanism. Do not favor more numbers, greater length, blanket caveats or a particular move order. Select A, B, or Tie with a located substantive reason. A writing preference is not an excuse for a source failure. No expected preference is supplied. Save a single raw response to <EVAL_ROOT>/raw/judge_1.json with schema {\"reviews\":[{\"case\":\"P1\",\"sample\":1,\"unit\":\"abstract\",\"fidelity\":{\"A\":\"pass\",\"B\":\"pass\"},\"fidelity_notes\":{\"A\":\"...\",\"B\":\"...\"},\"ratings\":{\"A\":{\"contribution\":3,\"argument\":3,\"selection\":3,\"language\":3},\"B\":{\"contribution\":3,\"argument\":3,\"selection\":3,\"language\":3}},\"preferred\":\"Tie\",\"reason\":\"located reason, at most 80 words\"}]}. Include exactly the eight supplied pairs once each. Use apply_patch for this one file; do not modify prose or write elsewhere. No retries, response selection or editing after saving. Return only the saved path."
+      },
+      {
+        "role": "reviewer",
+        "reviewer": 2,
+        "message": "You are an anonymous scientific prose reviewer in an isolated evaluation. Read only <EVAL_ROOT>/review_packet_2.json, which contains permitted body sources and eight anonymous A/B pairs. Do not browse, read PDFs/author abstracts, initial drafts, working notes, guides, condition mappings, other judgments, repository/history/memory, credentials or other outputs. Judge each abstract or Results paragraph against its body and writing task. Source fidelity is separate from style: mark A and B pass, concern, or fail, noting source mismatch, unsupported causal or general claims, ambiguous conditions, or missing evidence where consequential. Then rate contribution (distinctive contribution/supported co-contributions), argument (relationships and informative comparisons make the answer intelligible), selection (evidence chosen by function with consequential scope), and language (natural, precise academic prose) from 1-5 per draft. 3 is adequate; 5 requires specific compelling writing, not merely correct grammar or mentioning a mechanism. Do not favor more numbers, greater length, blanket caveats or a particular move order. Select A, B, or Tie with a located substantive reason. A writing preference is not an excuse for a source failure. No expected preference is supplied. Save a single raw response to <EVAL_ROOT>/raw/judge_2.json with schema {\"reviews\":[{\"case\":\"P1\",\"sample\":1,\"unit\":\"abstract\",\"fidelity\":{\"A\":\"pass\",\"B\":\"pass\"},\"fidelity_notes\":{\"A\":\"...\",\"B\":\"...\"},\"ratings\":{\"A\":{\"contribution\":3,\"argument\":3,\"selection\":3,\"language\":3},\"B\":{\"contribution\":3,\"argument\":3,\"selection\":3,\"language\":3}},\"preferred\":\"Tie\",\"reason\":\"located reason, at most 80 words\"}]}. Include exactly the eight supplied pairs once each. Use apply_patch for this one file; do not modify prose or write elsewhere. No retries, response selection or editing after saving. Return only the saved path."
+      }
+    ]
+  },
+  {
+    "original_file": "prompts.revision_1.json",
+    "original_sha256": "87272eb275beafe22821690899a8a4da70b9bec1a83b34e8d1984847b2d300d3",
+    "path_redaction": "Evaluation root replaced by <EVAL_ROOT>; source/input contents are not embedded.",
+    "prompts": [
+      {
+        "role": "editor",
+        "condition": "baseline",
+        "sample": 1,
+        "initial_file": "raw/initial_1.json",
+        "message": "Complete a bounded scientific editing request in the isolated workspace <EVAL_ROOT>. Read only request.json, inputs/P1.txt, inputs/P2.txt, raw/initial_1.json, baseline/abstract-decisions.md, baseline/writing-protocols.md and baseline/argument-transfer.md. Follow request.revision_task and the designated guides. Revise the supplied initial abstract and Results paragraph per case into publication-quality prose for robot-learning readers using only that body evidence. The final abstract must be 150-200 words and Results 120-180 words; internal working_notes at most 120 words per case. Preserve supported contributions and findings, and do not assume an initial claim is correct. This is one bounded revision response, not a full-paper pipeline; no extra tables or artifact tree. Do not browse, read publisher PDFs/author abstracts, other outputs, repository/history/memory, other guides, credentials or external sources. Do not deliberately reproduce remembered publisher wording; model pretraining recall cannot be excluded. Save one untouched revision as raw/baseline_1.json, schema {\"cases\":[{\"id\":\"P1\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"},{\"id\":\"P2\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"}]}. Use apply_patch for this one file, no writes elsewhere. Finalize before saving; no retry, generation selection or editing the saved response. Count words before finalizing if useful, treating hyphenated/apostrophe words as one word. Return only the saved path."
+      },
+      {
+        "role": "editor",
+        "condition": "candidate",
+        "sample": 1,
+        "initial_file": "raw/initial_1.json",
+        "message": "Complete a bounded scientific editing request in the isolated workspace <EVAL_ROOT>. Read only request.json, inputs/P1.txt, inputs/P2.txt, raw/initial_1.json, baseline/abstract-decisions.md, baseline/writing-protocols.md and candidate/argument-transfer.md. Follow request.revision_task and the designated guides. Revise the supplied initial abstract and Results paragraph per case into publication-quality prose for robot-learning readers using only that body evidence. The final abstract must be 150-200 words and Results 120-180 words; internal working_notes at most 120 words per case. Preserve supported contributions and findings, and do not assume an initial claim is correct. This is one bounded revision response, not a full-paper pipeline; no extra tables or artifact tree. Do not browse, read publisher PDFs/author abstracts, other outputs, repository/history/memory, other guides, credentials or external sources. Do not deliberately reproduce remembered publisher wording; model pretraining recall cannot be excluded. Save one untouched revision as raw/candidate_1.json, schema {\"cases\":[{\"id\":\"P1\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"},{\"id\":\"P2\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"}]}. Use apply_patch for this one file, no writes elsewhere. Finalize before saving; no retry, generation selection or editing the saved response. Count words before finalizing if useful, treating hyphenated/apostrophe words as one word. Return only the saved path."
+      }
+    ]
+  },
+  {
+    "original_file": "prompts.revision_2.json",
+    "original_sha256": "4107e473a99a05df4e509bd8e753bc7be4814af7ccb8e607070c2ab7d5789202",
+    "path_redaction": "Evaluation root replaced by <EVAL_ROOT>; source/input contents are not embedded.",
+    "prompts": [
+      {
+        "role": "editor",
+        "condition": "baseline",
+        "sample": 2,
+        "initial_file": "raw/initial_2.json",
+        "message": "Complete a bounded scientific editing request in the isolated workspace <EVAL_ROOT>. Read only request.json, inputs/P1.txt, inputs/P2.txt, raw/initial_2.json, baseline/abstract-decisions.md, baseline/writing-protocols.md and baseline/argument-transfer.md. Follow request.revision_task and the designated guides. Revise the supplied initial abstract and Results paragraph per case into publication-quality prose for robot-learning readers using only that body evidence. The final abstract must be 150-200 words and Results 120-180 words; internal working_notes at most 120 words per case. Preserve supported contributions and findings, and do not assume an initial claim is correct. This is one bounded revision response, not a full-paper pipeline; no extra tables or artifact tree. Do not browse, read publisher PDFs/author abstracts, other outputs, repository/history/memory, other guides, credentials or external sources. Do not deliberately reproduce remembered publisher wording; model pretraining recall cannot be excluded. Save one untouched revision as raw/baseline_2.json, schema {\"cases\":[{\"id\":\"P1\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"},{\"id\":\"P2\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"}]}. Use apply_patch for this one file, no writes elsewhere. Finalize before saving; no retry, generation selection or editing the saved response. Count words before finalizing if useful, treating hyphenated/apostrophe words as one word. Return only the saved path."
+      },
+      {
+        "role": "editor",
+        "condition": "candidate",
+        "sample": 2,
+        "initial_file": "raw/initial_2.json",
+        "message": "Complete a bounded scientific editing request in the isolated workspace <EVAL_ROOT>. Read only request.json, inputs/P1.txt, inputs/P2.txt, raw/initial_2.json, baseline/abstract-decisions.md, baseline/writing-protocols.md and candidate/argument-transfer.md. Follow request.revision_task and the designated guides. Revise the supplied initial abstract and Results paragraph per case into publication-quality prose for robot-learning readers using only that body evidence. The final abstract must be 150-200 words and Results 120-180 words; internal working_notes at most 120 words per case. Preserve supported contributions and findings, and do not assume an initial claim is correct. This is one bounded revision response, not a full-paper pipeline; no extra tables or artifact tree. Do not browse, read publisher PDFs/author abstracts, other outputs, repository/history/memory, other guides, credentials or external sources. Do not deliberately reproduce remembered publisher wording; model pretraining recall cannot be excluded. Save one untouched revision as raw/candidate_2.json, schema {\"cases\":[{\"id\":\"P1\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"},{\"id\":\"P2\",\"working_notes\":\"...\",\"abstract\":\"...\",\"results\":\"...\"}]}. Use apply_patch for this one file, no writes elsewhere. Finalize before saving; no retry, generation selection or editing the saved response. Count words before finalizing if useful, treating hyphenated/apostrophe words as one word. Return only the saved path."
+      }
+    ]
+  }
+]

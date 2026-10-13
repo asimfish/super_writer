@@ -1,0 +1,294 @@
+{
+  "pairs": [
+    {
+      "id": "Q01",
+      "case": "C01",
+      "reviewer_1": {
+        "A": "v2",
+        "B": "v1"
+      },
+      "reviewer_2": {
+        "A": "v1",
+        "B": "v2"
+      }
+    },
+    {
+      "id": "Q02",
+      "case": "C04",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    },
+    {
+      "id": "Q03",
+      "case": "C02",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    },
+    {
+      "id": "Q04",
+      "case": "C06",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    },
+    {
+      "id": "Q05",
+      "case": "C11",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    },
+    {
+      "id": "Q06",
+      "case": "C07",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    },
+    {
+      "id": "Q07",
+      "case": "C05",
+      "reviewer_1": {
+        "A": "v2",
+        "B": "v1"
+      },
+      "reviewer_2": {
+        "A": "v1",
+        "B": "v2"
+      }
+    },
+    {
+      "id": "Q08",
+      "case": "C08",
+      "reviewer_1": {
+        "A": "v2",
+        "B": "v1"
+      },
+      "reviewer_2": {
+        "A": "v1",
+        "B": "v2"
+      }
+    },
+    {
+      "id": "Q09",
+      "case": "C10",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    },
+    {
+      "id": "Q10",
+      "case": "C03",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    },
+    {
+      "id": "Q11",
+      "case": "C09",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    },
+    {
+      "id": "Q12",
+      "case": "C12",
+      "reviewer_1": {
+        "A": "v1",
+        "B": "v2"
+      },
+      "reviewer_2": {
+        "A": "v2",
+        "B": "v1"
+      }
+    }
+  ],
+  "texts": [
+    {
+      "id": "T001",
+      "case": "C01",
+      "variant": "v1",
+      "reader": 1
+    },
+    {
+      "id": "T002",
+      "case": "C01",
+      "variant": "v2",
+      "reader": 2
+    },
+    {
+      "id": "T003",
+      "case": "C04",
+      "variant": "v2",
+      "reader": 1
+    },
+    {
+      "id": "T004",
+      "case": "C04",
+      "variant": "v1",
+      "reader": 2
+    },
+    {
+      "id": "T005",
+      "case": "C02",
+      "variant": "v1",
+      "reader": 1
+    },
+    {
+      "id": "T006",
+      "case": "C02",
+      "variant": "v2",
+      "reader": 2
+    },
+    {
+      "id": "T007",
+      "case": "C06",
+      "variant": "v2",
+      "reader": 1
+    },
+    {
+      "id": "T008",
+      "case": "C06",
+      "variant": "v1",
+      "reader": 2
+    },
+    {
+      "id": "T009",
+      "case": "C11",
+      "variant": "v1",
+      "reader": 1
+    },
+    {
+      "id": "T010",
+      "case": "C11",
+      "variant": "v2",
+      "reader": 2
+    },
+    {
+      "id": "T011",
+      "case": "C07",
+      "variant": "v2",
+      "reader": 1
+    },
+    {
+      "id": "T012",
+      "case": "C07",
+      "variant": "v1",
+      "reader": 2
+    },
+    {
+      "id": "T013",
+      "case": "C05",
+      "variant": "v1",
+      "reader": 3
+    },
+    {
+      "id": "T014",
+      "case": "C05",
+      "variant": "v2",
+      "reader": 4
+    },
+    {
+      "id": "T015",
+      "case": "C08",
+      "variant": "v2",
+      "reader": 3
+    },
+    {
+      "id": "T016",
+      "case": "C08",
+      "variant": "v1",
+      "reader": 4
+    },
+    {
+      "id": "T017",
+      "case": "C10",
+      "variant": "v1",
+      "reader": 3
+    },
+    {
+      "id": "T018",
+      "case": "C10",
+      "variant": "v2",
+      "reader": 4
+    },
+    {
+      "id": "T019",
+      "case": "C03",
+      "variant": "v2",
+      "reader": 3
+    },
+    {
+      "id": "T020",
+      "case": "C03",
+      "variant": "v1",
+      "reader": 4
+    },
+    {
+      "id": "T021",
+      "case": "C09",
+      "variant": "v1",
+      "reader": 3
+    },
+    {
+      "id": "T022",
+      "case": "C09",
+      "variant": "v2",
+      "reader": 4
+    },
+    {
+      "id": "T023",
+      "case": "C12",
+      "variant": "v2",
+      "reader": 3
+    },
+    {
+      "id": "T024",
+      "case": "C12",
+      "variant": "v1",
+      "reader": 4
+    }
+  ]
+}

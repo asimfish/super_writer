@@ -1,0 +1,48 @@
+{
+  "id": "P06",
+  "purpose": "Original editorial grounding aids, not publisher wording, mandatory fact lists, a model abstract, or a comparison verdict.",
+  "units": {
+    "abstract": [
+      {
+        "role": "core",
+        "reader_question": "How can low-rank processing coexist with full-parameter learning?",
+        "expected_relation": "Compress gradient statistics rather than freezing weights, and refresh projection subspaces so successive updates are not confined to one fixed low-rank region.",
+        "source_locator": {"pdf_pages": [4, 5, 6], "sections": ["3.3", "4.1", "4.2"], "items": ["Equations 10-15", "Algorithm 2"]}
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which experimental settings delimit the memory-efficiency claim?",
+        "expected_relation": "Bound savings by optimizer, projection rank, per-layer updates, and token batch; keep pretraining quality and small-batch device feasibility as distinct evaluations.",
+        "source_locator": {"pdf_pages": [7, 8, 9, 23], "sections": ["5.1-5.5", "E"], "items": ["Tables 2-4", "Figure 4", "Table 11"]}
+      }
+    ],
+    "methods": [
+      {
+        "role": "core",
+        "reader_question": "What operation produces a memory-efficient weight update?",
+        "expected_relation": "Project gradients into a compact space, maintain optimizer statistics there, lift the processed update back to weight space, and periodically recompute the projector.",
+        "source_locator": {"pdf_pages": [4, 5, 6], "sections": ["3.3", "4.1", "4.2"], "items": ["Equations 10-15", "Algorithm 2"]}
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which assumptions and implementation choices limit the theoretical argument?",
+        "expected_relation": "Keep conditional low-rank and fixed-projection convergence statements separate from adaptive-optimizer practice and the subspace-refresh trade-off.",
+        "source_locator": {"pdf_pages": [3, 4, 5, 6], "sections": ["3.2", "3.3", "4.1", "4.3", "4.4"], "items": ["Lemma 3.3", "Theorem 3.8"]}
+      }
+    ],
+    "results": [
+      {
+        "role": "core",
+        "reader_question": "What joint trade-off is tested by compression and refresh?",
+        "expected_relation": "Read perplexity and fine-tuning scores alongside optimizer memory, throughput, rank, refresh frequency, and training length instead of treating memory savings alone as success.",
+        "source_locator": {"pdf_pages": [7, 8, 9, 23], "sections": ["5", "6", "E"], "items": ["Tables 2-4", "Figure 5", "Table 11"]}
+      },
+      {
+        "role": "scope",
+        "reader_question": "How far do the 7B and fine-tuning measurements generalize?",
+        "expected_relation": "Separate a single-trial multi-GPU quality run from low-token-batch single-device memory feasibility, and retain task-specific comparisons that differ from aggregate trends.",
+        "source_locator": {"pdf_pages": [8, 9, 22, 23], "sections": ["5.3", "5.4", "5.5", "D", "E"], "items": ["Tables 3-4", "Tables 8-11"]}
+      }
+    ]
+  }
+}

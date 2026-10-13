@@ -1,0 +1,66 @@
+{
+  "tasks.initial.json": [
+    {
+      "phase": "review",
+      "number": 1,
+      "output": "raw/review_1.json",
+      "message": "Independently review the anonymous prose pairs in {WORKSPACE}/packets/review_1.json. Use only supplied fictional evidence, not actual scientific claims. No browsing, other files, history or agents. Assess stand-alone contribution/operation clarity and evidence calibration, not length or labels. Fidelity pass: supported claims; concern: consequential ambiguous/missing claim condition; fail: materially false attribution/event. A missing explanation can weaken writing without being false. Legitimate alternative phrasing or omitted nonessential detail is not automatically defective. Return exactly one response, no quality retry or raw repair, via apply_patch to {WORKSPACE}/raw/review_1.json with schema {\"reviews\":[{\"id\":\"pair id\",\"preferred\":\"A|B|Tie\",\"fidelity\":{\"A\":\"pass|concern|fail\",\"B\":\"pass|concern|fail\"},\"reason\":\"<=110 words with decisive evidence/text witnesses\"}]}. Cover all 12 pairs. Final only path and operational problems."
+    },
+    {
+      "phase": "review",
+      "number": 2,
+      "output": "raw/review_2.json",
+      "message": "Independently review the anonymous prose pairs in {WORKSPACE}/packets/review_2.json. Use only supplied fictional evidence, not actual scientific claims. No browsing, other files, history or agents. Assess stand-alone contribution/operation clarity and evidence calibration, not length or labels. Fidelity pass: supported claims; concern: consequential ambiguous/missing claim condition; fail: materially false attribution/event. A missing explanation can weaken writing without being false. Legitimate alternative phrasing or omitted nonessential detail is not automatically defective. Return exactly one response, no quality retry or raw repair, via apply_patch to {WORKSPACE}/raw/review_2.json with schema {\"reviews\":[{\"id\":\"pair id\",\"preferred\":\"A|B|Tie\",\"fidelity\":{\"A\":\"pass|concern|fail\",\"B\":\"pass|concern|fail\"},\"reason\":\"<=110 words with decisive evidence/text witnesses\"}]}. Cover all 12 pairs. Final only path and operational problems."
+    },
+    {
+      "phase": "reader",
+      "number": 1,
+      "output": "raw/reader_1.json",
+      "message": "Read only {WORKSPACE}/packets/reader_1.json. Treat each paragraph as standalone fictional research prose. No browsing, source evidence, other files, history or agents. Answer the two questions using only what the paragraph states or necessarily entails. Do not use scientific familiarity to complete missing operations or conditions; explicitly say not recoverable when absent. Supply a literal text witness for each answer (<=18 words) or empty witness when absent. At most 140 words per text across answers, witnesses and unclear. Save exactly one untouched JSON response via apply_patch to {WORKSPACE}/raw/reader_1.json with schema {\"readings\":[{\"id\":\"text id\",\"core\":\"answer to question 1\",\"scope\":\"answer to question 2\",\"core_witness\":\"literal substring or empty\",\"scope_witness\":\"literal substring or empty\",\"unclear\":\"specific missing relation or none\"}]}. Cover all six texts. Final only path and operational problems."
+    },
+    {
+      "phase": "reader",
+      "number": 2,
+      "output": "raw/reader_2.json",
+      "message": "Read only {WORKSPACE}/packets/reader_2.json. Treat each paragraph as standalone fictional research prose. No browsing, source evidence, other files, history or agents. Answer the two questions using only what the paragraph states or necessarily entails. Do not use scientific familiarity to complete missing operations or conditions; explicitly say not recoverable when absent. Supply a literal text witness for each answer (<=18 words) or empty witness when absent. At most 140 words per text across answers, witnesses and unclear. Save exactly one untouched JSON response via apply_patch to {WORKSPACE}/raw/reader_2.json with schema {\"readings\":[{\"id\":\"text id\",\"core\":\"answer to question 1\",\"scope\":\"answer to question 2\",\"core_witness\":\"literal substring or empty\",\"scope_witness\":\"literal substring or empty\",\"unclear\":\"specific missing relation or none\"}]}. Cover all six texts. Final only path and operational problems."
+    },
+    {
+      "phase": "reader",
+      "number": 3,
+      "output": "raw/reader_3.json",
+      "message": "Read only {WORKSPACE}/packets/reader_3.json. Treat each paragraph as standalone fictional research prose. No browsing, source evidence, other files, history or agents. Answer the two questions using only what the paragraph states or necessarily entails. Do not use scientific familiarity to complete missing operations or conditions; explicitly say not recoverable when absent. Supply a literal text witness for each answer (<=18 words) or empty witness when absent. At most 140 words per text across answers, witnesses and unclear. Save exactly one untouched JSON response via apply_patch to {WORKSPACE}/raw/reader_3.json with schema {\"readings\":[{\"id\":\"text id\",\"core\":\"answer to question 1\",\"scope\":\"answer to question 2\",\"core_witness\":\"literal substring or empty\",\"scope_witness\":\"literal substring or empty\",\"unclear\":\"specific missing relation or none\"}]}. Cover all six texts. Final only path and operational problems."
+    },
+    {
+      "phase": "reader",
+      "number": 4,
+      "output": "raw/reader_4.json",
+      "message": "Read only {WORKSPACE}/packets/reader_4.json. Treat each paragraph as standalone fictional research prose. No browsing, source evidence, other files, history or agents. Answer the two questions using only what the paragraph states or necessarily entails. Do not use scientific familiarity to complete missing operations or conditions; explicitly say not recoverable when absent. Supply a literal text witness for each answer (<=18 words) or empty witness when absent. At most 140 words per text across answers, witnesses and unclear. Save exactly one untouched JSON response via apply_patch to {WORKSPACE}/raw/reader_4.json with schema {\"readings\":[{\"id\":\"text id\",\"core\":\"answer to question 1\",\"scope\":\"answer to question 2\",\"core_witness\":\"literal substring or empty\",\"scope_witness\":\"literal substring or empty\",\"unclear\":\"specific missing relation or none\"}]}. Cover all six texts. Final only path and operational problems."
+    }
+  ],
+  "tasks.audit.json": [
+    {
+      "phase": "coarse",
+      "number": 1,
+      "output": "raw/coarse_1.json",
+      "message": "Independently audit all 24 anonymous prose/reader entries in {WORKSPACE}/packets/coarse.json using only those fictional premises. No browsing, oracles, mappings, guides, other outputs, history or agents. Fidelity pass means supported claims; concern means consequential ambiguous scope/missing claim condition; fail means materially false event/attribution. Missing explanation is not automatically false science. Score reader central-relation and consequential-scope recovery 0 absent/wrong, 1 partial, 2 recoverable, source-supported and text-supported. Judge the paragraph's selected function, not a mandatory fact inventory. Do not credit remembered/missing facts as prose recovery. Schema {\"audits\":[{\"id\":\"text id\",\"fidelity\":\"pass|concern|fail\",\"core_recovery\":0,\"scope_recovery\":0,\"reason\":\"<=110 words, located evidence/prose/reading\"}]}. Save exactly one untouched response via apply_patch to {WORKSPACE}/raw/coarse_1.json. No repair or quality retry. Final only path and operational problems."
+    },
+    {
+      "phase": "coarse",
+      "number": 2,
+      "output": "raw/coarse_2.json",
+      "message": "Independently audit all 24 anonymous prose/reader entries in {WORKSPACE}/packets/coarse.json using only those fictional premises. No browsing, oracles, mappings, guides, other outputs, history or agents. Fidelity pass means supported claims; concern means consequential ambiguous scope/missing claim condition; fail means materially false event/attribution. Missing explanation is not automatically false science. Score reader central-relation and consequential-scope recovery 0 absent/wrong, 1 partial, 2 recoverable, source-supported and text-supported. Judge the paragraph's selected function, not a mandatory fact inventory. Do not credit remembered/missing facts as prose recovery. Schema {\"audits\":[{\"id\":\"text id\",\"fidelity\":\"pass|concern|fail\",\"core_recovery\":0,\"scope_recovery\":0,\"reason\":\"<=110 words, located evidence/prose/reading\"}]}. Save exactly one untouched response via apply_patch to {WORKSPACE}/raw/coarse_2.json. No repair or quality retry. Final only path and operational problems."
+    },
+    {
+      "phase": "fine",
+      "number": 1,
+      "output": "raw/fine_1.json",
+      "message": "Independently audit all 24 anonymous prose/reader entries in {WORKSPACE}/packets/fine.json using only those fictional premises. No browsing, oracles, mappings, guides, other outputs, history or agents. Fidelity pass means supported claims; concern means consequential ambiguous scope/missing claim condition; fail means materially false event/attribution. Missing explanation is not automatically false science. For each critical question, classify the support IN THE PROSE as supported (explicit or necessarily entailed), missing (requires absent information), contradicted (text answers it incompatibly with evidence), or uncertain (source/prose insufficient to decide). Source knowledge cannot fill prose gaps. A correct source fact supplied by a reader is inferred rather than text-grounded when the prose lacks it. Legitimate omissions outside the requested relation are not errors. Schema {\"audits\":[{\"id\":\"text id\",\"fidelity\":\"pass|concern|fail\",\"critical_support\":\"supported|missing|contradicted|uncertain\",\"reader_support\":\"text_grounded|inferred|wrong|unanswered|ambiguous\",\"reason\":\"<=110 words, locate critical prose witness or absence and supporting evidence\"}]}. Save exactly one untouched response via apply_patch to {WORKSPACE}/raw/fine_1.json. No repair or quality retry. Final only path and operational problems."
+    },
+    {
+      "phase": "fine",
+      "number": 2,
+      "output": "raw/fine_2.json",
+      "message": "Independently audit all 24 anonymous prose/reader entries in {WORKSPACE}/packets/fine.json using only those fictional premises. No browsing, oracles, mappings, guides, other outputs, history or agents. Fidelity pass means supported claims; concern means consequential ambiguous scope/missing claim condition; fail means materially false event/attribution. Missing explanation is not automatically false science. For each critical question, classify the support IN THE PROSE as supported (explicit or necessarily entailed), missing (requires absent information), contradicted (text answers it incompatibly with evidence), or uncertain (source/prose insufficient to decide). Source knowledge cannot fill prose gaps. A correct source fact supplied by a reader is inferred rather than text-grounded when the prose lacks it. Legitimate omissions outside the requested relation are not errors. Schema {\"audits\":[{\"id\":\"text id\",\"fidelity\":\"pass|concern|fail\",\"critical_support\":\"supported|missing|contradicted|uncertain\",\"reader_support\":\"text_grounded|inferred|wrong|unanswered|ambiguous\",\"reason\":\"<=110 words, locate critical prose witness or absence and supporting evidence\"}]}. Save exactly one untouched response via apply_patch to {WORKSPACE}/raw/fine_2.json. No repair or quality retry. Final only path and operational problems."
+    }
+  ]
+}

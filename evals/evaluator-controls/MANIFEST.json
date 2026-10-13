@@ -1,0 +1,11 @@
+{
+  "copied_files": 45,
+  "raw_response_files": 10,
+  "fixture_review_contexts": 2,
+  "anonymous_output_contexts": 10,
+  "all_copied_bytes_identical": true,
+  "sources": "Original synthetic fictional premises and prose; no publication or private manuscript text.",
+  "prompt_transformation": "Workspace string values replaced with {WORKSPACE}; no behavioral text repair.",
+  "claim_boundary": "Evaluator calibration only, not improved writing or human independence.",
+  "rerun": "Use a new workspace. Helpers do not call a model or overwrite outputs. Temporary fixture tests are not fresh model judgments. Results are nondeterministic."
+}

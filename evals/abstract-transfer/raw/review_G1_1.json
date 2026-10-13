@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "id": "A02_s2",
+      "preferred": "Tie",
+      "A": {"fidelity": "pass", "argument": 5, "language": 4},
+      "B": {"fidelity": "pass", "argument": 5, "language": 4},
+      "reason": "Both explain neighborhood-loss minimization, the conditional bound, the two-gradient approximation, and the controlled CIFAR comparison. A supplies clearer problem framing and explicitly separates curvature diagnostics from causation; B more directly explains why independent subset maximizations change the objective and scopes the 0.30% finetuning result to additional pretraining. Both retain label-noise and SVHN limits. Their complementary strengths do not establish a material preference."
+    },
+    {
+      "id": "A02_s1",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 5, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both faithfully distinguish theoretical motivation from approximate updates and scope the curvature, transfer, label-noise, and SVHN evidence. B makes the controlled CIFAR improvement concrete with the supported 2.2% to 1.6% comparison, then explicitly connects separate subset maximizations and their outcomes to the significance of subset size. A also gives a coherent, sufficient account; B's evidence-to-contribution connection earns a narrow preference, not a fidelity advantage."
+    },
+    {
+      "id": "A01_s1",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both accurately cover grounded spatial objectives, replanning, real-world success, uneven task-level transfer, and the separate online-learning contribution. B better explains the operative links: attractive and repulsive voxel values become planning objectives, while local waypoint perturbations focus exploration when zero-shot trajectories fail. Its success and interaction-time comparisons match the source and support this dual role without claiming universal generalization. A is faithful and well written but leaves these mechanisms less explicit."
+    },
+    {
+      "id": "A01_s2",
+      "preferred": "B",
+      "A": {"fidelity": "pass", "argument": 4, "language": 5},
+      "B": {"fidelity": "pass", "argument": 5, "language": 5},
+      "reason": "Both preserve the real-world comparison, category-level rather than uniform simulated gains, trajectory-guided dynamics learning, and manual prompting and end-effector limitations. B explains what voxel values do and how scoring trajectories combines targets with constraints; A names composed maps without making their operative meaning equally clear. B also ties the interaction-time contrast directly to focused exploration and acknowledges environment-dynamics limitations. The preference rests on supported explanation, not missing equations or an exhaustive result inventory."
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "audits": [
+    {
+      "id": "D3_text_096",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Sections 4.1-4.3 support projected optimizer statistics, dense-weight updates, refreshed subspaces, and combined memory-saving techniques. Sections 5.3-5.5 and Table 4 support the separate 7B quality/profile results, near-full-tuning GLUE averages, and slower 1B throughput. The prose's 'Separately' and 'not faster training' boundaries are retained in both reader fields; its conditional-theory account does not claim refreshed-Adam convergence."
+    },
+    {
+      "id": "D3_text_105",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Lemma 3.3 and Theorem 3.8 support conditional stable-rank bounds and fixed-projection, identity-regularizer contraction; Section 4.1 limits that guarantee. Table 2, Section 5, and Section 5.3 support the 1B numbers, equal search budgets, and separate 7B trial. The reader recovers compression, refresh, profiling ingredients, and throughput cost. Not recovering every stable-rank assumption is not consequential for this abstract's explicitly conditional claim."
+    },
+    {
+      "id": "D3_text_102",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Sections 3.2 and 4.1 connect the VL-BART correlation diagnosis to separately learned magnitudes and normalized low-rank directions. Section 5.1 and Table 1 support pooled training, prior-work LoRA, adjusted learning rate, and the quoted budgets/accuracies. Table 3 and Section 4.3 support the remaining video gap and detached-norm memory reduction. The reader preserves these relations and the prose's tested-tradeoff boundary."
+    },
+    {
+      "id": "D3_text_073",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Algorithm 2 and Section 4.2 support leading left singular vectors, P^T G, compact moments, scaling, and lifting to dense weights. Section 4.1 supports changing-subspace accumulation and both refresh-frequency hazards. Theorem 3.8 has fixed projections and an identity regularizer. The reader accurately retains the prose's mechanism and its distinction between conditional projected-gradient contraction and unproved refreshed-Adam convergence."
+    },
+    {
+      "id": "D3_text_097",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Sections 3.2-4.2 support conditional stable-rank analysis, fixed-projection theory, compact statistics, and refresh beyond a single update subspace. Sections 5.3 and 5.5 support the separate untuned distributed quality run, combined 22.0 GB profile, and lower 1B throughput. The reader retains these boundaries. Its uncertainty about detailed structured-gradient conditions does not contradict the appropriately conditional abstract."
+    },
+    {
+      "id": "D3_text_078",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Sections 3.2 and 4.1 support the diagnostic-to-decomposition relation and inference merging. Table 1 and Section 5.1 support the published baseline, adjusted learning rate, same/half-rank scores, and parameter fractions. Table 3 supports the video gap; Table 7 supports 24.4% memory reduction and a 78.3-to-78.1 accuracy change. The reader accurately recovers both the economical-adaptation relation and these limits."
+    },
+    {
+      "id": "D3_text_076",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Table 1 and Section 5.1 substantiate all three LLaMA-7B score/budget comparisons and the baseline/learning-rate caveat. Section 4.1 reports correlations -0.31, -0.62, and 0.83; Table 3 reports 83.5, 85.4, and 87.5. The prose expressly avoids causal identification and complete gap closure. The reader retains those qualifications while recovering the smaller-budget advantage."
+    },
+    {
+      "id": "D3_text_094",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Equation 5 supports normalized W0+BA, frozen pretrained weights, separate magnitudes, and preserved initialization. Equation 6 supports scaled perpendicular projection; Section 4.3 and Equation 11 support recomputed but detached norms, retained magnitude gradients, and scaling without the projection term. The reader accurately distinguishes the prose's forward decomposition from the implemented backward computation, without importing the exact derivative's geometry into the experiments."
+    },
+    {
+      "id": "D3_text_100",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Table 2 supports the 1B perplexities and weight-plus-optimizer estimates; Section 5.1 supports matched ranks and ReLoRA without full-rank warmup, while Section 5 supplies equal learning-rate search budgets. Sections 5.3-5.5 separate distributed quality from small-batch memory feasibility. Table 11 supports the throughput pair. The reader retains excluded memory components, recipe limits, and the prose's quality-memory rather than speed tradeoff."
+    },
+    {
+      "id": "D3_text_089",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Algorithm 2 and Section 4.2 support one-sided SVD projection, r-by-n moments, scaling, and direct dense-weight updates. Theorem 3.8 supplies structured Lipschitz components, bounded weights, fixed projections, identity regularization, and a curvature condition. Section 4.1 restricts this to designated-subspace progress. The reader recovers both the operational refresh mechanism and the prose's explicit rejection of a refreshed-Adam full-space optimum guarantee."
+    },
+    {
+      "id": "D3_text_077",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Sections 3.2 and 4.1 support the correlation motivation, separate magnitude learning, normalized directions, and mergeability. Table 1 and Section 5.1 support same/half-rank results and the baseline/learning-rate caveat. Table 3 supports the remaining video gap; Table 7 supports the detached-norm memory and accuracy differences. The reader's central relation and scope reproduce these explicit, source-grounded claims."
+    },
+    {
+      "id": "D3_text_104",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Table 2 supports rank 512, 13.1 billion tokens, all quoted perplexities, and storage estimates. Sections 4.2-4.3 support full-sized weights and combined projection/8-bit/per-layer savings; Section 5.5 separates device profiling from quality evaluation. Table 11 supports 6.93 versus 5.63 GB and 1205.31 versus 1019.63 tokens/second. The reader preserves the setting-specific statistics-compression advantage and the prose's lack of simultaneous throughput improvement."
+    },
+    {
+      "id": "D3_text_107",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Sections 3.2 and 4.1 support the VL-BART coupling diagnosis, decomposition, and latency-free merged inference. Section 5.1 and Table 1 support the reference recipe, adjusted learning rate, published baseline, and same/half-rank scores. Table 3 and Table 7 support the video gap and separate detachment ablation. The reader recovers the capacity-allocation relation while retaining these experimental and cost boundaries."
+    },
+    {
+      "id": "D3_text_083",
+      "fidelity": "concern",
+      "core_recovery": 2,
+      "scope_recovery": 1,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Sections 5.3-5.5 support the separate 7B quality/profile results, memory reductions, and GaLore throughput cost. Table 11 contains the quoted 1B numbers, but its 'Layer Wise' entries are extracted as '8' and '4' without a usable legend. Both prose and reader explicitly say both optimizers use per-layer updates; Adam's status cannot be verified from this locked layout. No numerical error is established, but that protocol detail prevents fully source-supported scope recovery."
+    },
+    {
+      "id": "D3_text_085",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Table 15 supports the rank-8 score/budget pair, rank-32 LoRA comparison, and nonmonotonic DoRA rank sweep. Table 3 supports the video aggregate and matching/exceeding full tuning on TVQA, How2QA, and TVC while trailing YC2C. Section 5.2 identifies question-answering and captioning tasks. The reader retains recipe specificity, rank sensitivity, the full-tuning gap, and the prose's mixed-score rather than accuracy-percentage interpretation."
+    },
+    {
+      "id": "D3_text_087",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Table 1 supports half-rank scores and budgets for both model sizes; Section 5.1 supplies published baseline provenance and learning-rate adjustment. Section 4.1 supplies the query-weight correlations. Table 3 establishes the remaining YC2C/video deficit, and Table 12 establishes VQAv2/VQAT losses to LoRA despite a higher average. The reader recovers economic adaptation and faithfully preserves the prose's noncausal, nonuniform-performance limits."
+    },
+    {
+      "id": "D3_text_075",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Table 1 and Section 5.1 support equal-rank and half-rank score/budget comparisons with prior-work LoRA and adjusted learning rate. Table 3 supports narrowing, not eliminating, the video aggregate gap. Section 4.1 supports all three diagnostic correlations. The reader retains the prose's distinction between descriptive motivation and causal explanation; the smaller-budget observation is not converted into an isolated decomposition effect."
+    },
+    {
+      "id": "D3_text_103",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Table 2 supports rank 512, token count, 1B perplexities, and weight-plus-optimizer estimates. Sections 4.2-4.3 and 5.5 support full-sized weights and the combined ingredients of the separate 7B profile. Table 11 supports the paired 1B memory/throughput measurements. The reader accurately recovers the setting-specific compression advantage, distinguishes estimates from device profiling, and retains the prose's explicit rejection of faster training."
+    },
+    {
+      "id": "D3_text_091",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Equation 5 and initialization discussion support trainable magnitudes, frozen W0, trainable A/B, column normalization, and zero B preserving initial weights. Equation 6 supports orthogonal directional projection; Section 4.3 and Equation 11 support changing norm values with detached derivatives and a scaled gradient. Both reader fields preserve the prose's central forward/backward distinction and initialization constraints."
+    },
+    {
+      "id": "D3_text_088",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Table 1 supports smaller-budget half-rank accuracy gains for 7B and 13B; Section 5.1 supports the recipe caveat. Section 4.1 supplies the diagnostic correlations. Tables 3 and 12 support the remaining video/YC2C deficit and LLaVA's VQAv2/VQAT losses despite aggregate gains. The reader preserves both economical adaptation and the prose's rejection of isolated causality or uniform task superiority."
+    },
+    {
+      "id": "D3_text_092",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Equation 5 supports separate column magnitudes and normalized W0+BA; its initialization discussion supports frozen W0, pretrained norms, and zero B. Equation 6 and Section 4.3 distinguish exact scaled perpendicular projection from the evaluated detached-denominator gradient in Equation 11. The reader reconstructs the mechanism centrally and places the implemented derivative boundary in scope; neither field claims the exact projection survives detachment."
+    },
+    {
+      "id": "D3_text_106",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Sections 4.1-4.3 support projected statistics, dense weights, refresh, and combined memory techniques. Theorem 3.8 supports conditional fixed-projection, identity-regularizer contraction. Table 2 and Section 5 support tuned 1B comparisons; Section 5.3 supports the separate untuned 7B result. Figure 4 and Section 5.5 support the 256-token profile and slower 1B implementation. The reader recovers these explicit mechanism, theory, and evaluation boundaries."
+    },
+    {
+      "id": "D3_text_095",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Sections 4.1-4.3 support refreshed compact optimizer moments and immediate per-layer updates. Theorem 3.8 and Section 4.1 support the fixed-projection versus empirical refreshed-Adam distinction. Sections 5.3-5.5 and Table 4 support distributed quality, separate combined memory profiling, near-full-tuning GLUE averages, and lower throughput. The reader retains the consequential limitations; its inability to enumerate exact theoretical assumptions is not a defect in this conditional abstract."
+    },
+    {
+      "id": "D3_text_084",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Figure 4 and Section 5.5 support the 256-token, single-device 22.0 GB profile, reductions, and combined savings. Section 5.3 supports the separate single-trial 64-A100 quality result. Section 5.5 identifies 1019.63 as per-layer GaLore throughput; Table 11 supplies the 1205.31 Adam comparator despite unclear layer-wise symbols. The prose and reader preserve the profiling/quality and memory/speed boundaries without explicitly assigning Adam a per-layer status."
+    },
+    {
+      "id": "D3_text_090",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Algorithm 2 and Section 4.2 support leading left singular vectors, P^T G, r-by-n moments, and lifting onto full-dimensional weights. Section 4.1 supports periodic subspace changes. Theorem 3.8 supplies the stated fixed-projection, continuity, weight-bound, regularization, and curvature limitations. The reader recovers both the compression operation and the prose's restriction to conditional subspace progress rather than a refreshed-Adam full-space convergence guarantee."
+    },
+    {
+      "id": "D3_text_081",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Equation 5 supports frozen pretrained weights plus a low-rank product, column normalization, separate magnitudes, and preserved initialization. Section 4.3 explicitly retains changing norm values and magnitude gradients while Equation 11 replaces Equation 6's projection with scaling. Section 4.1 supports merged inference. The reader accurately recovers these implementation details and does not confuse the normalized forward representation with exact normalization differentiation."
+    },
+    {
+      "id": "D3_text_093",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Equation 5 and initialization discussion support frozen W0, trainable BA, independently learned magnitudes, pretrained norms, and zero updates. Equation 6 supports removing the direction-parallel gradient component. Section 4.3 and Equation 11 support recomputed norms treated as constants, unchanged magnitude gradients, and scaling alone. The reader preserves the prose's forward decomposition and exact-versus-implemented backward distinction."
+    },
+    {
+      "id": "D3_text_108",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Sections 3.2 and 4.1 support the correlation-based motivation and independent magnitude versus normalized-direction mechanism, including merging. Section 5.1 and Table 1 support the published baseline, adjusted learning rate, and quoted rank/budget tradeoffs. Table 7 supports the separate detachment ablation, and Table 3 supports the video aggregate gap. The reader faithfully retains these boundaries and does not turn the alternative parameterization into uniform superiority."
+    },
+    {
+      "id": "D3_text_080",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Section 4.2 and Algorithm 2 support the projector dimensions, smaller moments, lifting, scaling, and opposite projection side. Section 4.1 supports refresh beyond one subspace. Theorem 3.8's contraction bound supports the fixed-projection, identity-regularizer, curvature, and suitable-step-size qualifications. The reader recovers the operation and accurately restricts the guarantee to designated-subspace progress rather than periodically refreshed Adam."
+    },
+    {
+      "id": "D3_text_079",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Sections 4.1-4.2 and Algorithm 2 support SVD selection, dimension-dependent one-sided projection, compact Adam moments, direct weight updates, and periodic refresh without adapters. Theorem 3.8 supports fixed-projection contraction under continuity, bounded weights, identity regularization, and the stated contraction condition. The reader preserves the prose's distinction between this conditional subspace analysis and empirically evaluated switching Adam."
+    },
+    {
+      "id": "D3_text_101",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Sections 3.2 and 4.1 connect the checkpoint coupling diagnosis with separate magnitudes and normalized directional adaptation. Section 5.1 and Table 1 support pooled training, prior-work baseline, adjusted learning rate, and same/half-rank outcomes. Table 3 and Section 4.3 support the video gap and detached-norm memory reduction. The reader accurately recovers the prose's tested parameterization-versus-rank relation and its experimental limits."
+    },
+    {
+      "id": "D3_text_074",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Algorithm 2 and Section 4.2 support leading left singular vectors, projected r-by-n moments, scaling, and dense-weight updates. Section 4.1 supports both refresh hazards without enlarged moment arrays. Theorem 3.8 supplies the structured-gradient, Lipschitz, bounded-weight, fixed-projection, identity-regularizer contraction conditions. The reader recovers the storage mechanism and retains the prose's explicit exclusion of a refreshed-Adam convergence guarantee."
+    },
+    {
+      "id": "D3_text_098",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Sections 4.1-4.3 support compact statistics, full-weight updates, refresh, and combined memory techniques. Sections 3.2-3.3 support explicitly conditional rank and fixed-projection claims. Section 5.3 supplies the untuned distributed quality comparison; Figure 4 and Section 5.5 supply the separate 256-token memory profile and throughput cost. The reader retains all consequential distinctions, including near-baseline quality rather than faster training."
+    },
+    {
+      "id": "D3_text_086",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Table 15 supports the rank-8 comparison, trainable fractions, rank-32 LoRA baseline, and nonmonotonic DoRA accuracies. Section 5.1 supports the learning-rate caveat. Table 3 supports the remaining video aggregate gap, while Section 5.2 identifies mixed question-answering/captioning tasks. The reader recovers the recipe-specific parameter-efficiency relation and preserves rank sensitivity, mixed-score interpretation, and incomplete full-tuning recovery."
+    },
+    {
+      "id": "D3_text_082",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P05 Equation 5 supports separate column magnitudes, normalized frozen-plus-low-rank directions, and preserved initialization. Section 4.3 states that norm values track updates while detached derivatives leave magnitude gradients unchanged; Equation 11 lacks Equation 6's projection term. Section 4.1 supports inference merging. The reader accurately recovers the central scale/direction separation and the prose's implemented-gradient boundary."
+    },
+    {
+      "id": "D3_text_099",
+      "fidelity": "pass",
+      "core_recovery": 2,
+      "scope_recovery": 2,
+      "failure_types": [
+        "none"
+      ],
+      "reason": "P06 Table 2 supports all 1B perplexities and weight/optimizer estimates; Section 5 and Section 5.1 support equal search budgets, matched ranks, and no ReLoRA full-rank warmup. Section 5.3 supports the separate distributed 7B trial, and Section 5.5 supports small-batch device feasibility. Table 11 supports the throughput comparison. The reader retains excluded memory components and the prose's memory/quality benefit rather than a speed claim."
+    }
+  ]
+}

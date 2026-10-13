@@ -1,0 +1,48 @@
+{
+  "id": "P05",
+  "purpose": "Original editorial grounding aids, not publisher wording, mandatory fact lists, a model abstract, or a comparison verdict.",
+  "units": {
+    "abstract": [
+      {
+        "role": "core",
+        "reader_question": "What connects the weight-update diagnosis to the adaptation mechanism?",
+        "expected_relation": "Separate magnitude learning from low-rank directional learning to address the coupled update behavior examined in the diagnosis.",
+        "source_locator": {"pdf_pages": [3, 4], "sections": ["3.2", "4.1"], "items": ["Figure 2", "Equation 5"]}
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which adaptation settings and costs bound the contribution?",
+        "expected_relation": "Ground the mechanism in the tested language and multimodal adaptation settings; distinguish mergeable inference weights from training-time overhead.",
+        "source_locator": {"pdf_pages": [4, 5, 6, 7, 9], "sections": ["4.1", "4.3", "5", "6"]}
+      }
+    ],
+    "methods": [
+      {
+        "role": "core",
+        "reader_question": "How are the two weight components updated in the implemented method?",
+        "expected_relation": "A trainable magnitude scales a normalized pretrained direction plus a low-rank update; detaching the norm changes the implemented backward computation.",
+        "source_locator": {"pdf_pages": [4, 5], "sections": ["4.1", "4.2", "4.3"], "items": ["Equations 5-11"]}
+      },
+      {
+        "role": "scope",
+        "reader_question": "What design makes the diagnostic and empirical comparisons interpretable?",
+        "expected_relation": "Keep the VL-BART layer/checkpoint diagnosis distinct from downstream comparisons, and preserve each comparison's rank, tuning modules, data, and baseline provenance.",
+        "source_locator": {"pdf_pages": [3, 5, 6, 7, 8, 15, 16], "sections": ["3.2", "5.1-5.6", "A.3"], "items": ["Tables 1-6", "Tables 8-11"]}
+      }
+    ],
+    "results": [
+      {
+        "role": "core",
+        "reader_question": "How do the diagnostic pattern and resource-constrained task outcomes relate?",
+        "expected_relation": "Relate the magnitude/direction diagnostic to measured adaptation outcomes while comparing scores jointly with rank and trainable-parameter budget.",
+        "source_locator": {"pdf_pages": [4, 6, 7, 8, 21], "sections": ["4.1", "5.1-5.6", "A.7"], "items": ["Figure 2", "Tables 1-6", "Table 15"]}
+      },
+      {
+        "role": "scope",
+        "reader_question": "Where do averages conceal conditional or mixed outcomes?",
+        "expected_relation": "Separate per-task outcomes and full-tuning gaps from aggregate scores; treat image-personalization examples as qualitative evidence rather than a general accuracy guarantee.",
+        "source_locator": {"pdf_pages": [6, 7, 9, 17, 21, 22], "sections": ["5.2", "5.3", "6.2", "A.4", "A.7", "A.8"], "items": ["Tables 2-4", "Table 12", "Table 15", "Figures 8-9"]}
+      }
+    ]
+  }
+}

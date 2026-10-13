@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "P01_s1_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P01_s1_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P01_s1_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P13_s1_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P13_s1_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P13_s1_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P01_s2_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P01_s2_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P01_s2_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P13_s2_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P13_s2_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P13_s2_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P01_s3_abstract",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P01_s3_methods",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P01_s3_results",
+    "domain": "D1",
+    "paper": "P01",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P13_s3_abstract",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P13_s3_methods",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P13_s3_results",
+    "domain": "D1",
+    "paper": "P13",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P03_s1_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P03_s1_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P03_s1_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P04_s1_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P04_s1_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P04_s1_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P03_s2_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P03_s2_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P03_s2_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P04_s2_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P04_s2_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P04_s2_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P03_s3_abstract",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P03_s3_methods",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P03_s3_results",
+    "domain": "D2",
+    "paper": "P03",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P04_s3_abstract",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P04_s3_methods",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P04_s3_results",
+    "domain": "D2",
+    "paper": "P04",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P05_s1_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P05_s1_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P05_s1_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P06_s1_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P06_s1_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P06_s1_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P05_s2_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P05_s2_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P05_s2_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P06_s2_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P06_s2_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P06_s2_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P05_s3_abstract",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P05_s3_methods",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P05_s3_results",
+    "domain": "D3",
+    "paper": "P05",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P06_s3_abstract",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P06_s3_methods",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P06_s3_results",
+    "domain": "D3",
+    "paper": "P06",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P07_s1_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P07_s1_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P07_s1_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P08_s1_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P08_s1_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P08_s1_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P07_s2_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P07_s2_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P07_s2_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P08_s2_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P08_s2_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P08_s2_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P07_s3_abstract",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P07_s3_methods",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P07_s3_results",
+    "domain": "D4",
+    "paper": "P07",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P08_s3_abstract",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P08_s3_methods",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P08_s3_results",
+    "domain": "D4",
+    "paper": "P08",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P09_s1_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P09_s1_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P09_s1_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P10_s1_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P10_s1_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P10_s1_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P09_s2_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P09_s2_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P09_s2_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P10_s2_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P10_s2_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P10_s2_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P09_s3_abstract",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P09_s3_methods",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P09_s3_results",
+    "domain": "D5",
+    "paper": "P09",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P10_s3_abstract",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P10_s3_methods",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P10_s3_results",
+    "domain": "D5",
+    "paper": "P10",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P11_s1_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P11_s1_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P11_s1_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P12_s1_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P12_s1_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P12_s1_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 1,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P11_s2_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P11_s2_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P11_s2_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P12_s2_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P12_s2_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P12_s2_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 2,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P11_s3_abstract",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P11_s3_methods",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P11_s3_results",
+    "domain": "D6",
+    "paper": "P11",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  },
+  {
+    "id": "P12_s3_abstract",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "abstract",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P12_s3_methods",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "methods",
+    "reviewer_1": {
+      "A": "candidate",
+      "B": "baseline"
+    },
+    "reviewer_2": {
+      "A": "baseline",
+      "B": "candidate"
+    }
+  },
+  {
+    "id": "P12_s3_results",
+    "domain": "D6",
+    "paper": "P12",
+    "sample": 3,
+    "unit": "results",
+    "reviewer_1": {
+      "A": "baseline",
+      "B": "candidate"
+    },
+    "reviewer_2": {
+      "A": "candidate",
+      "B": "baseline"
+    }
+  }
+]

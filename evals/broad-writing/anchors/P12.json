@@ -1,0 +1,48 @@
+{
+  "id": "P12",
+  "anchor_policy": "Original editorial grounding aids, not an expected draft, an all-facts checklist, or a required comparison verdict.",
+  "units": {
+    "abstract": [
+      {
+        "role": "core",
+        "reader_question": "How can a conformal procedure respond when the data distribution keeps changing?",
+        "expected_relation": "Observed misses feed back into one calibration parameter, linking online adaptation to long-run coverage without exchangeability.",
+        "source_locator": { "pdf_pages": [2, 3, 6], "sections": ["2", "4.1"], "items": ["Equation (2)", "Proposition 4.1"] }
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which coverage claims remain unconditional, and which require additional structure?",
+        "expected_relation": "Long-run error frequency is distribution-free; sharper local or marginal behavior depends on shift structure, initialization, and the score design.",
+        "source_locator": { "pdf_pages": [6, 7, 8, 9, 10], "sections": ["4.1", "4.2", "5", "7"] }
+      }
+    ],
+    "methods": [
+      {
+        "role": "core",
+        "reader_question": "What is changed in the empirical comparison, and how is its effect measured?",
+        "expected_relation": "Adaptive and fixed calibration use corresponding prediction pipelines; windowed coverage and a Bernoulli comparator expose how the feedback update behaves over time.",
+        "source_locator": { "pdf_pages": [3, 4, 5, 9, 10], "sections": ["2.2", "6"], "items": ["Equation (4)", "Figures 1 and 3"] }
+      },
+      {
+        "role": "scope",
+        "reader_question": "How broad is the evaluation, and how is drift represented?",
+        "expected_relation": "Rolling stock forecasts and time-zone-ordered county predictions supply two domains; the displayed stock cases are a selected subset of twelve, and the election order is constructed.",
+        "source_locator": { "pdf_pages": [4, 5, 10], "sections": ["2.2", "6", "7"] }
+      }
+    ],
+    "results": [
+      {
+        "role": "core",
+        "reader_question": "What do the coverage trajectories show in the reported real-data settings?",
+        "expected_relation": "The normalized-score stock and election examples connect calibration feedback with coverage near the target, while fixed calibration exhibits periods of substantial deviation.",
+        "source_locator": { "pdf_pages": [5, 10], "sections": ["2.2", "6"], "items": ["Figures 1 and 3"] }
+      },
+      {
+        "role": "scope",
+        "reader_question": "What prevents those examples from establishing uniform local reliability?",
+        "expected_relation": "Removing score normalization worsens local coverage even with adaptation; immediate-label feedback, model-specific sharper theory, and two-domain evidence limit the interpretation.",
+        "source_locator": { "pdf_pages": [7, 8, 9, 10], "sections": ["4.2", "5", "7"], "items": ["Figure 2"] }
+      }
+    ]
+  }
+}

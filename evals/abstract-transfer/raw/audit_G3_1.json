@@ -1,0 +1,60 @@
+{
+  "audits": [
+    {
+      "id": "G3_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A06 Sec.2/Algorithm 1 (lines 24-105) supports the prose's 'reverse-time augmented ODE' and 'without retaining intermediate solver operations'; Table 1 (129-151) gives evaluation-independent memory and the quoted MNIST comparison. Sec.3 (152-167) and Sec.6 (501-511) support tolerance/computation and reconstruction-error/checkpoint caveats, which answer the critical question at abstract level. Secs.4-5 support trace-additive flows and spiral RMSE. The reading's core and 'not improved accuracy' scope are explicit prose claims, not source-based repairs."
+    },
+    {
+      "id": "G3_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A06 Sec.2/Algorithm 1 (lines 24-105) supports 'reconstructs states alongside gradients' in a reverse-time augmented solve instead of retained operations. Table 1 and Sec.3 (129-167) support memory independent of evaluation count, the exact MNIST values, and precision/computation trade-offs; Sec.6 (501-511) supports reconstruction error and checkpoint storage. These prose statements supply both saving and qualifications. Secs.4-5 support the remaining flow/time-series claims. The reading's 'reconstructs states' core and 'rather than improved accuracy' scope are directly witnessed in the text."
+    },
+    {
+      "id": "G3_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A05 Secs.3-4 (lines 121-158,197-270) and Sec.6.1 (556-579,601-644) support the prose's offloading/layer-reuse mechanism and 'not low-latency generation' scope. Tables 1-3 establish hardware, throughput figures and qualified scaling; Sec.6.2 supports separate real-weight quality claims. Appendix A.2 (784-795,928-940) supports the explicitly restricted weight-I/O bound; Table 12 supports nonuniform compression speed. The reading's amortization core, dummy-weight throughput comparison and host-memory witness all appear in the prose. The critical mechanism and workload/latency limit are supported."
+    },
+    {
+      "id": "G3_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A05 Sec.4.2 and Sec.6.1 (lines 197-270,556-579) support 'Reusing each loaded layer' and cache-offloaded larger batches. Sec.6 (500-545), Tables 1-3, Sec.6.2 and Table 12 support hardware, dummy-weight throughput, compression/quality separation and model-qualified scaling. Appendix A.2 supports the restricted asymptotic bound. The closing 'favor bulk throughput over low-latency generation' matches Sec.6.1's trade-off (601-644) and answers the critical limit. The reading's layer-reuse core and 'use dummy weights'/host-memory scope are directly grounded."
+    },
+    {
+      "id": "G3_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A05 Sec.4.2 and Sec.6.1 (lines 197-270,556-579) support 'reuses loaded weights,' cache-enabled larger batches and the throughput mechanism. Tables 1-3 confirm hardware, rates and offloaded-model scaling; Sec.6.2 and Table 12 support quality and compression caveats. Appendix A.2 supports the prose's idealized asymptotic weight-I/O bound; Sec.6.1 (681-687) confirms HELM's 21 hours. 'Batch utility under long completion times' supplies a legitimate latency qualification without exact Pareto values. The reading's core and dummy-weight OPT-175B comparison are explicit in the prose."
+    },
+    {
+      "id": "G3_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A05 Sec.4.2 and Sec.6.1 (lines 197-270,556-644) support larger batches, loaded-layer reuse, rates, compression and offloaded-model scaling. Appendix A.2 supports the idealized weight-I/O bound; Sec.6.2 and Table 12 support quality/compression caveats, and Sec.6.1 (681-687) confirms HELM. The prose limits gains to 'workloads accepting long completion times' and host-memory/storage resources, matching Sec.6.1 and Appendix A.4. The reading's amortization core and dummy-weight/host-memory scope are text-grounded. Mechanism and latency trade-off are supplied without requiring exact completion-latency numbers."
+    },
+    {
+      "id": "G3_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A06 Sec.2/Algorithm 1 (lines 24-105) supports 'reconstructs the trajectory' in an augmented backward solve, without solver-operation retention; Table 1 supports memory independent of evaluation count. Sec.3 (152-167) supports the tolerance/computation trade-off, and Sec.6 (501-511) supports the prose's reconstruction-error risk and checkpoint storage trade-off. These answer the critical question without requiring minibatch details. Secs.4-5 and Tables 1-2 support the flow, MNIST and spiral claims. The reading's no-retention core and numerical-error scope quote actual prose."
+    },
+    {
+      "id": "G3_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A06 Sec.2/Algorithm 1 (lines 24-105) and Table 1 support 'reconstructing states instead of storing solver operations' and evaluation-independent memory. Sec.3 (152-167) and Sec.6 (501-511) support the prose's tolerance/computation trade-off, backward numerical error, and checkpoint storage qualification, satisfying the critical question at abstract level. Table 1 supports comparable MNIST accuracy with fewer parameters; Secs.4-5/Table 2 support trace-additive flows, observation-time Poisson likelihoods and spiral extrapolation. The reading's reconstruction core and 'comparable classification performance' scope are directly text-grounded."
+    }
+  ]
+}

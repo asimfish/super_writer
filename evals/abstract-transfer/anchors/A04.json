@@ -1,0 +1,7 @@
+{
+  "id": "A04",
+  "critical_question": "How does filtering self-proposed API calls by their effect on subsequent-token prediction let a language model learn when and how to use tools, and what do the zero-shot evaluations support within the method's inability to chain or interactively refine calls?",
+  "source_locator": "Section 2, physical PDF pages 2-4; section 3, physical page 4; sections 4.1-4.2, physical pages 5-8, including inference restrictions and mixed task results; section 6, physical page 9. PDF printed page numbers match physical page numbers.",
+  "expected_relation": "A few per-tool demonstrations seed calls retained when their returned information improves predictive loss; finetuning on those augmentations teaches tool selection and invocation. Zero-shot gains are task-dependent, not universal; independently sampled calls and restricted evaluation do not establish chained or interactive tool use."
+}
+

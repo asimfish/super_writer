@@ -1,0 +1,346 @@
+{
+  "reviews": [
+    {
+      "id": "P12_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'controls accumulated miscoverage pathwise' and B's 'identity turns bounded parameter movement' accurately explain P12 Sec. 2, Eq. (2), and Proposition 4.1. Both retain initialization and quantile extensions, and distinguish the stationary, fixed-function marginal-error setting of Sec. 4.2. B introduces the two parameters more explicitly; A states the guarantee's scope compactly. These are near-equivalent methods explanations."
+    },
+    {
+      "id": "P11_s3_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'correction reserves room for an unseen loss' and B's 'correction upper-bounds the average' both capture P11 Sec. 2.1's proof. Each connects oracle ordering, non-increasing losses, conditional exchangeability and right-continuity to expected-risk control. A presents the algorithm immediately; B motivates the correction first. Neither ordering materially improves the methods paragraph's explanatory function."
+    },
+    {
+      "id": "P11_s1_abstract",
+      "winner": "A",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 5
+      },
+      "reason": "A's closing 'loss structure on which its guarantee depends' ties the correction, sharp shortfall and non-monotone failure into one abstract-level claim (P11 Secs. 2.1-2.3). B is faithful, including its quantile, multiple-risk and weighted-shift extensions (Secs. 4.1-4.3), but inserts that scope list without relating it to the main calibration argument. A provides the more cohesive synthesis."
+    },
+    {
+      "id": "P11_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'symmetric calibration-plus-test threshold' and B's 'rather than applying to each realized split' express complementary parts of P11 Sec. 2.1's argument. Both retain Theorem 2's extra assumptions and Sec. 2.3's bounded non-monotone failure. A adds extensions, while B closes more narrowly on boundedness; neither difference materially improves the abstract's contribution or fidelity."
+    },
+    {
+      "id": "P11_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'not achieved simply by always choosing coarse ancestors' and B's 'need not uniformly replace specific predictions with coarse ones' are supported by P11 Sec. 3.3's almost-always-leaf result. Both accurately contextualize the Secs. 3.1-3.2 means and dispersion and connect them to Sec. 2.3's monotonicity boundary. Their different ordering yields no substantive results-level advantage."
+    },
+    {
+      "id": "P12_s1_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'order 1/(gamma T)' matches P12 Proposition 4.1; B's 'immediate response feedback' matches Sec. 7's applicability limit. Both distinguish accumulated from time-specific coverage and integrate Sec. 5's score-normalization finding with Sec. 2.1's responsiveness-volatility tradeoff. A emphasizes the bound and B the operational setting; the abstracts are comparably informative."
+    },
+    {
+      "id": "P12_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B's 'beyond refitting the forecasting model' and A's 'did not remove sensitivity to score construction' identify the two contrasts in P12 Secs. 2.2 and 5. Both correctly report the 500-day curves, selected four-stock panels, Fannie Mae failure and unnormalized-score deterioration. B specifies centered windows, but that added detail does not materially improve an already clear results interpretation."
+    },
+    {
+      "id": "P12_s3_methods",
+      "winner": "B",
+      "A": {
+        "fidelity": "concern",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 4,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B specifies alpha_1 in [0,1] and non-decreasing quantiles before claiming boundedness, matching P12 Sec. 4.1 and Lemma 4.1. A's 'keeps alpha_t between -gamma and 1 + gamma' omits the initialization needed for that assertion, a fidelity concern. Both correctly derive the telescoping discrepancy from Sec. 2, Eq. (2); B also makes the threshold direction clearer."
+    },
+    {
+      "id": "P11_s2_methods",
+      "winner": "B",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 4,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "B's 'infimum' and 'non-increasing losses' state the selection rule and ordering argument more precisely than A's 'smallest' and unspecified 'monotonicity' (P11 Sec. 2.1, Eq. (6)). Both faithfully explain the worst-case correction and exchangeable full-sample average. B also identifies the loss-function collection underlying the symmetric threshold more explicitly, strengthening this methods explanation without changing its claim."
+    },
+    {
+      "id": "P12_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'quantile extensions permitting full or empty sets' makes P12 Sec. 4.1's conventions explicit; B's 'difference between bounded calibration levels' explains the telescoping mechanism in Proposition 4.1. Both preserve the stronger Sec. 4.2 assumptions, empirical local-coverage scope and Sec. 5 score-design limitation. These complementary emphases leave their abstract-level explanations closely matched."
+    },
+    {
+      "id": "P12_s2_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'not consequences of the unrestricted long-run frequency guarantee' and B's 'not a reconstruction of election-night performance' give distinct, supported limits (P12 Secs. 4.1 and 6). Both identify shared rolling refitting, selected stock displays and normalization sensitivity (Secs. 2.2 and 5). B's wording is slightly more direct, but the substantive empirical argument and evidence selection remain closely matched."
+    },
+    {
+      "id": "P11_s1_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'theorem does not cap risk separately for every split' and B's 'ceiling on every evaluation split' correctly interpret P11 Theorem 1 alongside Secs. 3.1-3.2's means and standard deviations. Both avoid attributing COCO's narrower spread solely to calibration size. B states the upper envelope's domination more explicitly, but both accurately connect the empirical findings to Sec. 2.3's structural boundary."
+    },
+    {
+      "id": "P12_s2_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 4
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A lowers the 'miscoverage parameter'; B increases the 'quantile level' after a miss. Both directions agree with P12 Sec. 2, Eq. (2), because the threshold uses 1-alpha_t. Both separate Proposition 4.1 from the stationary, fixed-function Sec. 4.2 results and preserve Sec. 5's normalization limitation. A includes the step-size tradeoff; B is slightly more fluid. Neither clearly dominates."
+    },
+    {
+      "id": "P11_s3_abstract",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'Monotonicity supplies the link' and B's 'limiting how conservative the calibration can be' highlight complementary mechanisms supported by P11 Secs. 2.1-2.3. Both accurately preserve the upper-bound assumptions, stronger sharp lower bound, joint expectation and upper-envelope repair. A's more causal closing and B's explicit interpretation of the shortfall are comparably useful for the abstract."
+    },
+    {
+      "id": "P11_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'does not imply that every split or image satisfies the threshold' and B's 'does not contradict expected-risk control' correctly interpret P11 Theorem 1 and Secs. 3.1-3.2's dispersion. Both report the same near-target evidence, avoid an isolated calibration-size explanation and retain Proposition 2's non-monotone boundary. B elaborates the expectation link; A integrates the boundary more compactly. The difference is minor."
+    },
+    {
+      "id": "P11_s1_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'expected test loss equal the full-sample mean' and B's 'uniformly representative of the collection' express the same conditional-exchangeability step in P11 Sec. 2.1. Both correctly connect the B correction, oracle ordering and non-increasing losses. A names the infimum and joint averaging explicitly; B makes the loss-function conditioning clearer. The methods explanations have no material fidelity or functional difference."
+    },
+    {
+      "id": "P12_s2_methods",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'enlarging the set when the score and quantile functions are held fixed' clarifies the threshold direction; B's 'can accompany updates' preserves P12 Sec. 2's changing-function setup. Both correctly state initialization, unclipped boundedness and the finite-horizon deviation bound from Lemma 4.1 and Proposition 4.1. The average and cumulative identities are equivalent, so neither methods account has a substantive advantage."
+    },
+    {
+      "id": "P12_s3_results",
+      "winner": "Tie",
+      "A": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "B": {
+        "fidelity": "pass",
+        "contribution": 5,
+        "argument": 5,
+        "selection": 5,
+        "language": 5
+      },
+      "reason": "A's 'refitting alone did not prevent the fixed method's failure' and B's 'displayed failure cases' reflect P12 Sec. 2.2's shared GARCH setup and selected panels. Both ground the normalization contrast in Sec. 5 and the 300-county/time-zone result in Sec. 6. A emphasizes limits on theoretical interpretation; B emphasizes constructed reporting order. Both serve the results function equally well."
+    }
+  ]
+}

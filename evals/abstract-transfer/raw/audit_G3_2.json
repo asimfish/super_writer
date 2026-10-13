@@ -1,0 +1,60 @@
+{
+  "audits": [
+    {
+      "id": "G3_T01",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A06 Section 2/Algorithm 1 recomputes states with adjoints backward; Table 1 distinguishes O(1) memory from evaluation-dependent time. Prose locates the saving in 'without retaining intermediate solver operations' and qualifies it with tolerances, reverse-reconstruction error, and checkpoint storage, matching Sections 3 and 6. This supplies an abstract-level answer without requiring every minibatching caveat. Tables 1-2 and Sections 4-5 support the reported experiments and other mechanisms. Reading core matches the retention statement; scope 'not improved accuracy' is explicit in prose and consistent with 0.42% versus 0.41%."
+    },
+    {
+      "id": "G3_T02",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A06 Section 2/Algorithm 1 supports 'reconstructs states alongside gradients' in one backward augmented solve; Table 1 supports evaluation-independent memory, not constant runtime. Prose's tolerance/computation trade-off and final reconstruction-error/checkpointing sentences supply numerical and computational qualifications from Sections 3 and 6. The MNIST and spiral values match Tables 1-2; Sections 4-5 support trace-based flows and irregular-time latent modeling. Reading core is grounded in the reconstruction sentence, and its comparable-accuracy/fewer-parameters scope follows the explicit MNIST comparison and 'rather than improved accuracy.'"
+    },
+    {
+      "id": "G3_T03",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A05 Sections 3-4 and 6.1 support cache-enabled batching and loaded-layer weight reuse; prose explicitly links both to throughput and says 'not low-latency generation.' Appendix A.4/Table 19 corroborates the batch-latency trade-off. Section 6/Table 1 and Table 2 support dummy-weight OPT-175B, T4/208-GB hardware, and 0.69/1.12 versus 0.01. Appendix A.2 supports the qualified weight-I/O bound; Sections 5-6.2 and Tables 3/12 support compression and scaling claims. Reading core quotes the amortization mechanism; its numerical scope and host-memory witness are present in prose."
+    },
+    {
+      "id": "G3_T04",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A05 Sections 4.2 and 6.1 explain layer reuse and larger batches from cache offloading; prose states those mechanisms and closes with bulk throughput over low-latency generation. Section 6/Table 1, Table 2, and Appendix A.4/Table 19 support the hardware, dummy-weight rates, and latency qualification. Appendix A.2 supports the explicitly restricted asymptotic weight-I/O bound. Sections 5-6.2 and Table 3 support compression, accuracy, and qualified scaling. Reading core matches 'amortizes weight transfers'; its dummy-weight and substantial-host-memory scope is explicitly grounded in the benchmark and closing sentences."
+    },
+    {
+      "id": "G3_T05",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A05 Sections 4.2/6.1 support prose's block weight reuse, cache-enabled batching, and amortization. Its batched workload, larger effective batches, and closing 'long completion times' supply a legitimate abstract-level workload/latency qualification; exact Pareto latencies are optional (Appendix A.4/Tables 19-20). Section 6/Tables 1-3 support hardware, dummy-weight rates, and scaling; Sections 5-6.2/Table 5 support compression/quality. Section 6.1 and Appendix A.4/Table 9 support the 21-hour HELM example. The idealized weight-I/O claim matches Appendix A.2. Reading core, numeric scope, and '208-GB CPU memory' witness occur in prose."
+    },
+    {
+      "id": "G3_T06",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A05 Sections 4.2/6.1 support prose's cache-enabled batching and per-layer weight amortization. The closing sentence explicitly limits gains to workloads accepting long completion times and host-memory/storage constraints, consistent with Appendix A.4/Tables 19/24. Section 6/Tables 1-3 support dummy-weight rates, hardware, and offloaded-model scaling; Sections 5-6.2/Table 5 support compression and quality claims. Section 6.1/Table 9 supports HELM's 21 hours including overhead; Appendix A.2 supports the idealized weight-I/O bound. Reading core and dummy-weight witness are explicit, and its host-memory dependence is stated in prose."
+    },
+    {
+      "id": "G3_T07",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A06 Section 2/Algorithm 1 and Table 1 support backward augmented reconstruction without retaining solver operations and evaluation-independent memory. Prose separately states the tolerance/computation trade-off and numerical reconstruction error, with checkpointing's added storage, matching Sections 3 and 6. These qualify the saving adequately at abstract level. Sections 4-5 and Tables 1-2 support the additive-flow, irregular-time, MNIST, and spiral claims. Reading core is directly grounded in the opening adjoint sentences; its scope and witness 'can introduce numerical error' reproduce the final qualification."
+    },
+    {
+      "id": "G3_T08",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "A06 Section 2/Algorithm 1 supports 'reconstructing states instead of storing solver operations'; Table 1 supports memory independent of evaluations while time remains evaluation-dependent. Prose qualifies the saving through tolerance-dependent computation and backward reconstruction error/checkpoint storage, consistent with Sections 3 and 6. Sections 4-5 and Tables 1-2 support the flow, observation-timing, classification, and spiral claims. Reading core is explicit in the adjoint sentence, and scope 'comparable classification performance with fewer parameters' is stated in the MNIST comparison, not merely guessed from the source."
+    }
+  ]
+}

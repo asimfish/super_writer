@@ -1,0 +1,107 @@
+{
+  "id": "P12",
+  "title": "Adaptive Conformal Inference Under Distribution Shift",
+  "domain": "uncertainty_theory",
+  "venue": "Advances in Neural Information Processing Systems 34 (NeurIPS 2021)",
+  "year": 2021,
+  "metadata_url": "https://proceedings.neurips.cc/paper/2021/hash/0d441de75945e5acbc865406fc9a2559-Abstract.html",
+  "requested_metadata_url": "https://arxiv.org/abs/2106.00170",
+  "pdf_url": "https://proceedings.neurips.cc/paper/2021/file/0d441de75945e5acbc865406fc9a2559-Paper.pdf",
+  "pdf_sha256": "09bafbdf509e985fd5add45f13a93f426d9083814dec3e78721711aac4ec035a",
+  "body_sha256": "75c8513a43cda2081866e8acbace7540288773b78bfeb52ebe3af450c6b2f3b8",
+  "extracted_sha256": "b51824dbf4f8ef93447ab4132df57b8980797502599197da10766dc7d7120cfd",
+  "pages": {
+    "pdf_total": 13,
+    "selected_pdf_range": [2, 10],
+    "selected_pdf_pages": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "numbering": "One-based physical PDF pages, matching printed page numbers. Partial first/last pages and section exclusions use exact substrings."
+  },
+  "extraction_command": "pdftotext -raw sources/P12.pdf sources/P12.extracted.txt && node sources/P12.extract.mjs",
+  "command_working_directory": "/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011",
+  "extractor": "Poppler pdftotext 26.03.0, -raw, default UTF-8 and page breaks",
+  "extraction_segments": [
+    {
+      "order": 1,
+      "label": "Complete Section 2: method, step-size choice, and market-volatility experiment",
+      "pdf_pages": [2, 5],
+      "start": "2 Adapting conformal inference to distribution shifts\n",
+      "end": "3 Related Work\n",
+      "start_inclusive": true,
+      "end_inclusive": false
+    },
+    {
+      "order": 2,
+      "label": "Complete Sections 4-6: coverage analysis, score-design sensitivity, and election experiment",
+      "pdf_pages": [6, 10],
+      "start": "4 Coverage guarantees\n",
+      "end": "7 Discussion\n",
+      "start_inclusive": true,
+      "end_inclusive": false
+    },
+    {
+      "order": 3,
+      "label": "Separately located limitations: entire Section 7 (limitations-only discussion)",
+      "pdf_pages": [10, 10],
+      "start": "7 Discussion\n",
+      "end": "\n10\f8 Acknowledgements\n",
+      "start_inclusive": true,
+      "end_inclusive": false
+    }
+  ],
+  "limitations_locator": {
+    "pdf_pages": [10, 10],
+    "section": "7 Discussion",
+    "extraction_segment_order": 3
+  },
+  "selection_policy": "Concatenate the three unchanged raw byte slices in paper order without adding separators. Include all main-body analysis, experiments, captions, footnotes, assumptions, comparisons, and negative/sensitivity findings. Exclude Abstract, Introduction (including 1.1), Related Work, acknowledgements, and references. Section 7 contains limitations rather than a summary conclusion and is retained in full.",
+  "body_word_count": 4604,
+  "word_count_method": "Whitespace-separated tokens in the selected raw text; mathematical tokens and figure labels are included.",
+  "source_version": {
+    "kind": "official_proceedings_pdf",
+    "publisher_host": "proceedings.neurips.cc",
+    "proceedings_year": 2021,
+    "arxiv_pdf_used": false,
+    "identity_verified_against": [
+      "https://proceedings.neurips.cc/paper/2021/hash/0d441de75945e5acbc865406fc9a2559-Abstract.html",
+      "https://arxiv.org/abs/2106.00170"
+    ],
+    "retrieval_date": "2026-10-11"
+  },
+  "prior_family_overlap": "unassessed",
+  "download_attempts": [
+    {
+      "attempt": 1,
+      "url": "https://proceedings.neurips.cc/paper/2021/file/0d441de75945e5acbc865406fc9a2559-Paper.pdf",
+      "http_status": 200,
+      "bytes": 845022,
+      "result": "Saved official proceedings PDF",
+      "bounds": "curl --retry 0 --connect-timeout 20 --max-time 120"
+    }
+  ],
+  "source_warnings": [
+    "The proceedings PDF contains 13 pages; separately linked supplementary material is not part of this saved PDF and was not downloaded or included.",
+    "Section 2.2 explicitly states that four displayed stocks were chosen from twelve because the fixed-alpha comparator clearly failed; the complete statement is retained.",
+    "The election experiment replicates drift through time-zone ordering and random order within zones, rather than claiming to replay the actual reporting sequence; the full design is retained."
+  ],
+  "extraction_warnings": [
+    "Raw extraction contains font-encoding artifacts, missing mathematical operators/step-size glyphs, misplaced mathematical tokens, and compressed spacing. No OCR, normalization, equation repair, or source rewriting was performed.",
+    "Figures 1-3 are preserved through all extractable labels and captions; raster/visual curves are available only in the saved PDF. No main-body tables were found.",
+    "Section 1.1 and its Equation (1), although relevant background for CQR, are excluded because they are inside Introduction; later references to that setup remain unchanged.",
+    "The input retains incidental page numbers and form feeds inside selected slices. The last page footer and acknowledgements are excluded by the exact final boundary."
+  ],
+  "verification": {
+    "pdfinfo": "Passed without diagnostics: 13 pages, 845022 bytes",
+    "all_page_render_command": "pdftoppm -r 10 sources/P12.pdf | shasum -a 256",
+    "all_page_render_sha256": "0e1a953ff6776cf993269c2716043b34320d350c19830e6034eaad6ab5fafe2d",
+    "all_page_render_diagnostics": "None",
+    "repeat_raw_extraction_sha256_matches": true,
+    "body_is_exact_ordered_raw_byte_slices": true,
+    "segment_boundaries_unique_and_page_ranges_verified": true,
+    "pdf_raw_body_checksums_verified": true,
+    "anchor_counts": { "abstract": 2, "methods": 2, "results": 2 },
+    "each_unit_has_one_core_and_one_scope_anchor": true,
+    "anchor_locator_pages_within_selected_body": true,
+    "generation_performed": false
+  },
+  "status": "prepared"
+}

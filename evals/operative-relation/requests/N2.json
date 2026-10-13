@@ -1,0 +1,9 @@
+{
+  "id": "N2",
+  "title": "Conformal Prediction Beyond Exchangeability",
+  "questions": {
+    "abstract": "In 150-200 words, what is the paper's central contribution to full conformal prediction when data exchangeability or model-fitting symmetry fails? Explain how fixed calibration weights, fixed algorithm tags, and a data-independent randomized swap connect a finite-sample coverage bound to the empirical coverage/interval-width tradeoff, distinguishing exchangeable-data validity from near-nominal coverage under nonexchangeability when the weighted swapped-residual total-variation term is small.",
+    "methods": "In 110-160 words, how does the proof of Theorem 2b turn a data-independent weighted random swap into a miscoverage bound for full conformal prediction with a nonsymmetric fitting algorithm? Explain the weighted mass bound for high-residual indices and the comparison of swapped and original residual distributions, including the roles of prespecified calibration weights in [0,1] and fixed algorithm tags.",
+    "results": "In 120-180 words, what does the original-versus-randomly-permuted electricity-data comparison in Table 2 show about the different roles of calibration-residual weighting and weighted least-squares fitting in coverage and interval width? Interpret the comparisons against the 90% target, distinguish the exchangeable permuted control from the ordered data, and explain why this empirical result is not a universal 90% coverage guarantee under arbitrary distribution drift."
+  }
+}

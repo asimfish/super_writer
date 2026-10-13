@@ -1,0 +1,19 @@
+{
+  "units": {
+    "abstract": {
+      "question": "In 150-200 words, what is the paper's central contribution to full conformal prediction when data exchangeability or model-fitting symmetry fails? Explain how fixed calibration weights, fixed algorithm tags, and a data-independent randomized swap connect a finite-sample coverage bound to the empirical coverage/interval-width tradeoff, distinguishing exchangeable-data validity from near-nominal coverage under nonexchangeability when the weighted swapped-residual total-variation term is small.",
+      "source_locator": "Author-hosted fallback: Sections 3.1-3.2, physical PDF pages 10-14; Section 5.1 (Theorem 2b), pages 17-18; Sections 5.3-5.5, pages 19-23; Section 6, pages 23-30, including Tables 1-3. These are fallback-version locators, not journal pagination.",
+      "relation": "independent editorial paraphrase"
+    },
+    "methods": {
+      "question": "In 110-160 words, how does the proof of Theorem 2b turn a data-independent weighted random swap into a miscoverage bound for full conformal prediction with a nonsymmetric fitting algorithm? Explain the weighted mass bound for high-residual indices and the comparison of swapped and original residual distributions, including the roles of prespecified calibration weights in [0,1] and fixed algorithm tags.",
+      "source_locator": "Author-hosted fallback: Section 3.1, equation (12), physical PDF page 11; Section 3.2, equations (18)-(20), pages 13-14; Section 5.1, Theorem 2b, page 17; Section 7.2, equations (24)-(31), pages 32-34.",
+      "relation": "independent editorial paraphrase"
+    },
+    "results": {
+      "question": "In 120-180 words, what does the original-versus-randomly-permuted electricity-data comparison in Table 2 show about the different roles of calibration-residual weighting and weighted least-squares fitting in coverage and interval width? Interpret the comparisons against the 90% target, distinguish the exchangeable permuted control from the ordered data, and explain why this empirical result is not a universal 90% coverage guarantee under arbitrary distribution drift.",
+      "source_locator": "Author-hosted fallback: Section 6.1 method definitions, physical PDF page 24; Section 6.2, pages 26-28; Figure 3 and Table 2, page 27; Section 5.1, Theorem 2b, page 17; Section 5.3, weight-choice limitations, page 20.",
+      "relation": "independent editorial paraphrase"
+    }
+  }
+}

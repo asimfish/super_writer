@@ -1,0 +1,48 @@
+{
+  "id": "P01",
+  "anchor_purpose": "Original editorial grounding aids, not a reference abstract, quality verdict, or mandatory fact checklist.",
+  "units": {
+    "abstract": [
+      {
+        "role": "core",
+        "reader_question": "How is off-trajectory supervision obtained without new expert corrections?",
+        "expected_relation": "Pose-conditioned view synthesis and trajectory-derived corrective labels augment the demonstrations used for policy learning.",
+        "source_locator": {"pdf_pages": [2, 4], "section": "III. APPROACH", "details": "Overview and generated-image labeling"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "What bounds the claimed robustness?",
+        "expected_relation": "The evidence concerns eye-in-hand manipulation, and corrective supervision assumes states from which recovery remains possible.",
+        "source_locator": {"pdf_pages": [5, 10], "section": "IV. EXPERIMENTS; V. DISCUSSION", "details": "Task definitions and separately selected limitations paragraph on page 10"}
+      }
+    ],
+    "methods": [
+      {
+        "role": "core",
+        "reader_question": "How do generated observations obtain useful action targets?",
+        "expected_relation": "Relative camera poses connect perturbed views to future demonstration frames; looking farther ahead reduces conflicting labels after overshoot.",
+        "source_locator": {"pdf_pages": [3, 4], "section": "III.B-C", "details": "Pose-conditioned synthesis and future-frame labeling; Figure 5"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which design choices condition the comparisons?",
+        "expected_relation": "Task versus play data, pose-scale recovery, and action dimensionality vary by task; randomized comparisons and matched image preprocessing constrain interpretation.",
+        "source_locator": {"pdf_pages": [5, 10], "section": "IV.A-E", "details": "Per-task setups, randomized A/B protocol, and rectified-image UMI comparison"}
+      }
+    ],
+    "results": [
+      {
+        "role": "core",
+        "reader_question": "How does synthetic augmentation relate to measured policy performance?",
+        "expected_relation": "Completion improves in the reported comparisons, with task-dependent gains; offline angular prediction error and online success measure different behavior.",
+        "source_locator": {"pdf_pages": [6, 10], "section": "IV.A-E", "details": "Tables I-V and offline versus online validation"}
+      },
+      {
+        "role": "scope",
+        "reader_question": "Which conditions prevent treating all success rates as interchangeable?",
+        "expected_relation": "Pouring baselines come from separate randomized tests with potentially different conditions; novel-cup evaluation uses matched cropped inputs and limited trials.",
+        "source_locator": {"pdf_pages": [9, 10], "section": "IV.C; IV.E", "details": "Table IV footnote, Table V, and held-out evaluation protocol"}
+      }
+    ]
+  }
+}

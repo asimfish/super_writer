@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11",
+  "environment": "macOS, Python 3.14.3; existing Playwright Chromium",
+  "repository_tests": {"total": 180, "passed": 179, "skipped": 1, "skip_reason": "PowerShell unavailable"},
+  "cli_smoke": {"passed": 11},
+  "control_helper_tests": {"passed": 10},
+  "relation_helper_tests": {"passed": 10},
+  "previous_broad_helper_tests": {"passed": 13},
+  "relative_file_links": {"entry_points": 12, "existing_destinations": 135, "remote_or_fragment_checks": false},
+  "public_secret_pattern_scan": {"files": 133, "credential_matches": 0, "pdfs": 0, "security_guarantee": false},
+  "follow_up_byte_integrity": {"copied_files": 75, "raw_responses": 24, "frozen_hash_entries": 58, "passed": true},
+  "frontmatter": "pass",
+  "python_compilation": "pass",
+  "browser_javascript_syntax": "pass",
+  "diff_whitespace": "pass",
+  "screenshots": {"viewports": [1440, 390], "controls_and_follow_up_visually_inspected": true},
+  "candidate_runtime_promotion": false,
+  "installed_or_version_changed": false,
+  "committed_or_pushed": false,
+  "writing_quality_verdict": "No overall gain. Local abstract preference signal only; no human effectiveness or trained-weight claim.",
+  "limits": "Local infrastructure evidence, not new remote CI, Windows, venue-template compilation, Word-client certification, formal entailment or human review. This derived receipt is outside the 75 byte-copied source artifacts."
+}

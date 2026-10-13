@@ -1,0 +1,67 @@
+{
+  "scheduled_output_tasks": 6,
+  "completed_output_tasks": 6,
+  "unique_output_contexts": 6,
+  "model": "inherited same family, no override",
+  "fork_context": false,
+  "protocol": "supplemental/PROTOCOL.md",
+  "relationship": "Separate operationally triggered replication; does not replace primary audits, preferences or prose.",
+  "raw_repaired": false,
+  "quality_retries": 0,
+  "jobs": [
+    {
+      "agent_id": "01a12a0e-d7ad-7c12-b957-4faef8d1bb0a",
+      "nickname": "Planck",
+      "phase": "text_only_audit",
+      "domain": "D1",
+      "output": "supplemental/audit_D1.json",
+      "status": "completed",
+      "final": "Saved: [audit_D1.json](/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/supplemental/audit_D1.json)\n\nOperational problems: none."
+    },
+    {
+      "agent_id": "01a12a0e-d7e0-7c23-9f22-de8107cd47d9",
+      "nickname": "Meitner",
+      "phase": "text_only_audit",
+      "domain": "D2",
+      "output": "supplemental/audit_D2.json",
+      "status": "completed",
+      "final": "Saved: [audit_D2.json](/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/supplemental/audit_D2.json)\n\nNo unresolved operational problems."
+    },
+    {
+      "agent_id": "01a12a0e-d811-7c71-838c-7fee9802c106",
+      "nickname": "Mill",
+      "phase": "text_only_audit",
+      "domain": "D3",
+      "output": "supplemental/audit_D3.json",
+      "status": "completed",
+      "final": "Saved: [audit_D3.json](/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/supplemental/audit_D3.json). No operational problems."
+    },
+    {
+      "agent_id": "01a12a0e-d839-78d1-99fc-2ab97dbc318c",
+      "nickname": "Faraday",
+      "phase": "text_only_audit",
+      "domain": "D4",
+      "output": "supplemental/audit_D4.json",
+      "status": "completed",
+      "final": "Saved: [audit_D4.json](/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/supplemental/audit_D4.json)\n\nOperational problems: none."
+    },
+    {
+      "agent_id": "01a12a0e-d866-7cb1-b555-d2f82de0d11a",
+      "nickname": "Pasteur",
+      "phase": "text_only_audit",
+      "domain": "D5",
+      "output": "supplemental/audit_D5.json",
+      "status": "completed",
+      "final": "Saved: [audit_D5.json](/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/supplemental/audit_D5.json)\n\nOperational problems: none."
+    },
+    {
+      "agent_id": "01a12a0e-d895-7032-b16f-11d696d55758",
+      "nickname": "Parfit",
+      "phase": "text_only_audit",
+      "domain": "D6",
+      "output": "supplemental/audit_D6.json",
+      "status": "completed",
+      "final": "Saved: [audit_D6.json](/Users/liyufeng/Desktop/research/super_writer_broad_eval_20261011/supplemental/audit_D6.json)\n\nOperational problems: none."
+    }
+  ]
+}

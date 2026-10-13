@@ -1,0 +1,2058 @@
+{
+  "completed": {
+    "papers": 12,
+    "domains": 6,
+    "initial_passages": 108,
+    "final_passages": 216,
+    "pairs": 108,
+    "preference_votes": 216,
+    "reader_reconstructions": 216,
+    "source_audits": 216
+  },
+  "overall": {
+    "votes": {
+      "tie": 184,
+      "candidate": 12,
+      "baseline": 20
+    },
+    "source_audit": {
+      "baseline": {
+        "concern": 1,
+        "pass": 107
+      },
+      "candidate": {
+        "pass": 107,
+        "concern": 1
+      }
+    },
+    "reader_recovery": {
+      "baseline": {
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 108
+          }
+        },
+        "scope_recovery": {
+          "mean": 1.9907407407407407,
+          "counts": {
+            "1": 1,
+            "2": 107
+          }
+        }
+      },
+      "candidate": {
+        "core_recovery": {
+          "mean": 2,
+          "counts": {
+            "2": 108
+          }
+        },
+        "scope_recovery": {
+          "mean": 1.9907407407407407,
+          "counts": {
+            "2": 107,
+            "1": 1
+          }
+        }
+      }
+    },
+    "reviewer_scores": {
+      "baseline": {
+        "contribution": 5,
+        "argument": 4.958333333333333,
+        "selection": 4.902777777777778,
+        "language": 4.875
+      },
+      "candidate": {
+        "contribution": 4.99537037037037,
+        "argument": 4.902777777777778,
+        "selection": 4.856481481481482,
+        "language": 4.875
+      }
+    },
+    "reviewer_fidelity": {
+      "baseline": {
+        "pass": 211,
+        "concern": 5
+      },
+      "candidate": {
+        "pass": 213,
+        "concern": 3
+      }
+    },
+    "failure_types": {
+      "baseline": {
+        "writer_error": 1,
+        "text_ambiguous": 1,
+        "none": 106,
+        "reader_inference": 1
+      },
+      "candidate": {
+        "none": 106,
+        "reader_inference": 1,
+        "text_missing": 1
+      }
+    }
+  },
+  "pair_outcomes": {
+    "unanimous_tie": 81,
+    "disagreement": 22,
+    "unanimous_baseline": 4,
+    "unanimous_candidate": 1
+  },
+  "paper_signed_preferences": {
+    "P01": 0,
+    "P13": -0.05555555555555555,
+    "P03": 0,
+    "P04": -0.05555555555555555,
+    "P05": 0.05555555555555555,
+    "P06": -0.2777777777777778,
+    "P07": 0,
+    "P08": 0,
+    "P09": 0.05555555555555555,
+    "P10": 0.1111111111111111,
+    "P11": -0.16666666666666666,
+    "P12": -0.1111111111111111
+  },
+  "mean_paper_signed_preference": -0.037037037037037035,
+  "conditional_bootstrap": {
+    "draws": 10000,
+    "seed": 20261013,
+    "interval": [
+      -0.07407407407407407,
+      0.0
+    ],
+    "interpretation": "Conditional paper-cluster descriptive interval only; two purposively selected papers/domain, not population significance."
+  },
+  "by_domain": {
+    "D1": {
+      "votes": {
+        "tie": 29,
+        "candidate": 3,
+        "baseline": 4
+      },
+      "source_audit": {
+        "baseline": {
+          "concern": 1,
+          "pass": 17
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 1.9444444444444444,
+            "counts": {
+              "1": 1,
+              "2": 17
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.972222222222222,
+          "language": 4.916666666666667
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.916666666666667,
+          "selection": 4.916666666666667,
+          "language": 4.972222222222222
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 35,
+          "concern": 1
+        },
+        "candidate": {
+          "pass": 36
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "writer_error": 1,
+          "text_ambiguous": 1,
+          "none": 17
+        },
+        "candidate": {
+          "none": 18
+        }
+      }
+    },
+    "D2": {
+      "votes": {
+        "tie": 29,
+        "candidate": 3,
+        "baseline": 4
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.972222222222222,
+          "language": 4.916666666666667
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.888888888888889,
+          "selection": 4.944444444444445,
+          "language": 4.944444444444445
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 34,
+          "concern": 2
+        },
+        "candidate": {
+          "pass": 35,
+          "concern": 1
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 18
+        },
+        "candidate": {
+          "none": 18
+        }
+      }
+    },
+    "D3": {
+      "votes": {
+        "tie": 28,
+        "baseline": 6,
+        "candidate": 2
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.972222222222222,
+          "selection": 4.694444444444445,
+          "language": 5
+        },
+        "candidate": {
+          "contribution": 4.972222222222222,
+          "argument": 4.833333333333333,
+          "selection": 4.611111111111111,
+          "language": 4.972222222222222
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 36
+        },
+        "candidate": {
+          "pass": 36
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 18
+        },
+        "candidate": {
+          "none": 18
+        }
+      }
+    },
+    "D4": {
+      "votes": {
+        "tie": 36
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4.944444444444445
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.972222222222222,
+          "selection": 4.972222222222222,
+          "language": 4.833333333333333
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 36
+        },
+        "candidate": {
+          "pass": 36
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 17,
+          "reader_inference": 1
+        },
+        "candidate": {
+          "none": 17,
+          "reader_inference": 1
+        }
+      }
+    },
+    "D5": {
+      "votes": {
+        "tie": 31,
+        "candidate": 4,
+        "baseline": 1
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.888888888888889,
+          "selection": 4.944444444444445,
+          "language": 4.527777777777778
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.972222222222222,
+          "selection": 4.944444444444445,
+          "language": 4.611111111111111
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 34,
+          "concern": 2
+        },
+        "candidate": {
+          "pass": 36
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 18
+        },
+        "candidate": {
+          "none": 18
+        }
+      }
+    },
+    "D6": {
+      "votes": {
+        "baseline": 5,
+        "tie": 31
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 17,
+          "concern": 1
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 18
+            }
+          },
+          "scope_recovery": {
+            "mean": 1.9444444444444444,
+            "counts": {
+              "2": 17,
+              "1": 1
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4.833333333333333,
+          "language": 4.944444444444445
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.833333333333333,
+          "selection": 4.75,
+          "language": 4.916666666666667
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 36
+        },
+        "candidate": {
+          "pass": 34,
+          "concern": 2
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 18
+        },
+        "candidate": {
+          "none": 17,
+          "text_missing": 1
+        }
+      }
+    }
+  },
+  "by_paper": {
+    "P01": {
+      "votes": {
+        "tie": 16,
+        "candidate": 1,
+        "baseline": 1
+      },
+      "source_audit": {
+        "baseline": {
+          "concern": 1,
+          "pass": 8
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 1.8888888888888888,
+            "counts": {
+              "1": 1,
+              "2": 8
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4.944444444444445,
+          "language": 4.944444444444445
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "writer_error": 1,
+          "text_ambiguous": 1,
+          "none": 8
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P13": {
+      "votes": {
+        "tie": 13,
+        "baseline": 3,
+        "candidate": 2
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.888888888888889,
+          "selection": 5,
+          "language": 4.888888888888889
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.888888888888889,
+          "selection": 4.833333333333333,
+          "language": 4.944444444444445
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 17,
+          "concern": 1
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P03": {
+      "votes": {
+        "tie": 16,
+        "candidate": 1,
+        "baseline": 1
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 5,
+          "language": 4.944444444444445
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.944444444444445,
+          "language": 4.944444444444445
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P04": {
+      "votes": {
+        "tie": 13,
+        "baseline": 3,
+        "candidate": 2
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.944444444444445,
+          "language": 4.888888888888889
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.833333333333333,
+          "selection": 4.944444444444445,
+          "language": 4.944444444444445
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "concern": 2,
+          "pass": 16
+        },
+        "candidate": {
+          "concern": 1,
+          "pass": 17
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P05": {
+      "votes": {
+        "tie": 17,
+        "candidate": 1
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4.666666666666667,
+          "language": 5
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4.722222222222222,
+          "language": 5
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P06": {
+      "votes": {
+        "baseline": 6,
+        "tie": 11,
+        "candidate": 1
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.722222222222222,
+          "language": 5
+        },
+        "candidate": {
+          "contribution": 4.944444444444445,
+          "argument": 4.666666666666667,
+          "selection": 4.5,
+          "language": 4.944444444444445
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P07": {
+      "votes": {
+        "tie": 18
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 5
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 8,
+          "reader_inference": 1
+        },
+        "candidate": {
+          "none": 8,
+          "reader_inference": 1
+        }
+      }
+    },
+    "P08": {
+      "votes": {
+        "tie": 18
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 5,
+          "language": 4.888888888888889
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.944444444444445,
+          "language": 4.666666666666667
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P09": {
+      "votes": {
+        "tie": 17,
+        "candidate": 1
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.944444444444445,
+          "language": 4.555555555555555
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4.944444444444445,
+          "language": 4.555555555555555
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P10": {
+      "votes": {
+        "tie": 14,
+        "candidate": 3,
+        "baseline": 1
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.833333333333333,
+          "selection": 4.944444444444445,
+          "language": 4.5
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.944444444444445,
+          "language": 4.666666666666667
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 16,
+          "concern": 2
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P11": {
+      "votes": {
+        "baseline": 3,
+        "tie": 15
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 9
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4.722222222222222,
+          "language": 5
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.777777777777778,
+          "selection": 4.666666666666667,
+          "language": 4.888888888888889
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 18
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 9
+        }
+      }
+    },
+    "P12": {
+      "votes": {
+        "tie": 16,
+        "baseline": 2
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 9
+        },
+        "candidate": {
+          "pass": 8,
+          "concern": 1
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 9
+            }
+          },
+          "scope_recovery": {
+            "mean": 1.8888888888888888,
+            "counts": {
+              "2": 8,
+              "1": 1
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 5,
+          "selection": 4.944444444444445,
+          "language": 4.888888888888889
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.888888888888889,
+          "selection": 4.833333333333333,
+          "language": 4.944444444444445
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 18
+        },
+        "candidate": {
+          "pass": 16,
+          "concern": 2
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 9
+        },
+        "candidate": {
+          "none": 8,
+          "text_missing": 1
+        }
+      }
+    }
+  },
+  "by_unit": {
+    "abstract": {
+      "votes": {
+        "tie": 61,
+        "candidate": 4,
+        "baseline": 7
+      },
+      "source_audit": {
+        "baseline": {
+          "concern": 1,
+          "pass": 35
+        },
+        "candidate": {
+          "pass": 36
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 1.9722222222222223,
+            "counts": {
+              "1": 1,
+              "2": 35
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.972222222222222,
+          "selection": 4.861111111111111,
+          "language": 4.819444444444445
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.902777777777778,
+          "selection": 4.777777777777778,
+          "language": 4.861111111111111
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 70,
+          "concern": 2
+        },
+        "candidate": {
+          "pass": 71,
+          "concern": 1
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "writer_error": 1,
+          "text_ambiguous": 1,
+          "none": 35
+        },
+        "candidate": {
+          "none": 36
+        }
+      }
+    },
+    "methods": {
+      "votes": {
+        "tie": 56,
+        "baseline": 11,
+        "candidate": 5
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 36
+        },
+        "candidate": {
+          "pass": 35,
+          "concern": 1
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 1.9722222222222223,
+            "counts": {
+              "2": 35,
+              "1": 1
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.930555555555555,
+          "selection": 4.972222222222222,
+          "language": 4.916666666666667
+        },
+        "candidate": {
+          "contribution": 4.986111111111111,
+          "argument": 4.847222222222222,
+          "selection": 4.888888888888889,
+          "language": 4.916666666666667
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 69,
+          "concern": 3
+        },
+        "candidate": {
+          "pass": 70,
+          "concern": 2
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 36
+        },
+        "candidate": {
+          "none": 35,
+          "text_missing": 1
+        }
+      }
+    },
+    "results": {
+      "votes": {
+        "tie": 67,
+        "candidate": 3,
+        "baseline": 2
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 36
+        },
+        "candidate": {
+          "pass": 36
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.972222222222222,
+          "selection": 4.875,
+          "language": 4.888888888888889
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.958333333333333,
+          "selection": 4.902777777777778,
+          "language": 4.847222222222222
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 72
+        },
+        "candidate": {
+          "pass": 72
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 35,
+          "reader_inference": 1
+        },
+        "candidate": {
+          "none": 35,
+          "reader_inference": 1
+        }
+      }
+    }
+  },
+  "by_sample": {
+    "1": {
+      "votes": {
+        "tie": 67,
+        "baseline": 4,
+        "candidate": 1
+      },
+      "source_audit": {
+        "baseline": {
+          "concern": 1,
+          "pass": 35
+        },
+        "candidate": {
+          "pass": 36
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 1.9722222222222223,
+            "counts": {
+              "1": 1,
+              "2": 35
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.986111111111111,
+          "selection": 4.902777777777778,
+          "language": 4.888888888888889
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.944444444444445,
+          "selection": 4.861111111111111,
+          "language": 4.861111111111111
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 71,
+          "concern": 1
+        },
+        "candidate": {
+          "pass": 71,
+          "concern": 1
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "writer_error": 1,
+          "text_ambiguous": 1,
+          "none": 35
+        },
+        "candidate": {
+          "none": 36
+        }
+      }
+    },
+    "2": {
+      "votes": {
+        "tie": 55,
+        "baseline": 9,
+        "candidate": 8
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 36
+        },
+        "candidate": {
+          "pass": 36
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.916666666666667,
+          "selection": 4.916666666666667,
+          "language": 4.847222222222222
+        },
+        "candidate": {
+          "contribution": 5,
+          "argument": 4.861111111111111,
+          "selection": 4.888888888888889,
+          "language": 4.888888888888889
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 69,
+          "concern": 3
+        },
+        "candidate": {
+          "pass": 72
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 36
+        },
+        "candidate": {
+          "none": 36
+        }
+      }
+    },
+    "3": {
+      "votes": {
+        "candidate": 3,
+        "tie": 62,
+        "baseline": 7
+      },
+      "source_audit": {
+        "baseline": {
+          "pass": 36
+        },
+        "candidate": {
+          "pass": 35,
+          "concern": 1
+        }
+      },
+      "reader_recovery": {
+        "baseline": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          }
+        },
+        "candidate": {
+          "core_recovery": {
+            "mean": 2,
+            "counts": {
+              "2": 36
+            }
+          },
+          "scope_recovery": {
+            "mean": 1.9722222222222223,
+            "counts": {
+              "2": 35,
+              "1": 1
+            }
+          }
+        }
+      },
+      "reviewer_scores": {
+        "baseline": {
+          "contribution": 5,
+          "argument": 4.972222222222222,
+          "selection": 4.888888888888889,
+          "language": 4.888888888888889
+        },
+        "candidate": {
+          "contribution": 4.986111111111111,
+          "argument": 4.902777777777778,
+          "selection": 4.819444444444445,
+          "language": 4.875
+        }
+      },
+      "reviewer_fidelity": {
+        "baseline": {
+          "pass": 71,
+          "concern": 1
+        },
+        "candidate": {
+          "pass": 70,
+          "concern": 2
+        }
+      },
+      "failure_types": {
+        "baseline": {
+          "none": 35,
+          "reader_inference": 1
+        },
+        "candidate": {
+          "none": 34,
+          "reader_inference": 1,
+          "text_missing": 1
+        }
+      }
+    }
+  },
+  "budget_violations": [],
+  "word_summary": {
+    "initial": {
+      "abstract": {
+        "mean": 179.02777777777777,
+        "minimum": 166,
+        "maximum": 192
+      },
+      "methods": {
+        "mean": 140.91666666666666,
+        "minimum": 130,
+        "maximum": 151
+      },
+      "results": {
+        "mean": 158.94444444444446,
+        "minimum": 147,
+        "maximum": 176
+      },
+      "notes": {
+        "mean": 64.83333333333333,
+        "minimum": 42,
+        "maximum": 100
+      }
+    },
+    "baseline": {
+      "abstract": {
+        "mean": 177.61111111111111,
+        "minimum": 165,
+        "maximum": 188
+      },
+      "methods": {
+        "mean": 142.05555555555554,
+        "minimum": 123,
+        "maximum": 155
+      },
+      "results": {
+        "mean": 160.30555555555554,
+        "minimum": 144,
+        "maximum": 178
+      },
+      "notes": {
+        "mean": 80.30555555555556,
+        "minimum": 52,
+        "maximum": 107
+      }
+    },
+    "candidate": {
+      "abstract": {
+        "mean": 175.22222222222223,
+        "minimum": 159,
+        "maximum": 192
+      },
+      "methods": {
+        "mean": 141.38888888888889,
+        "minimum": 135,
+        "maximum": 155
+      },
+      "results": {
+        "mean": 159.08333333333334,
+        "minimum": 143,
+        "maximum": 177
+      },
+      "notes": {
+        "mean": 86.80555555555556,
+        "minimum": 68,
+        "maximum": 112
+      }
+    }
+  },
+  "budget_sensitivity": {
+    "eligible_pairs": 108,
+    "votes": {
+      "tie": 184,
+      "candidate": 12,
+      "baseline": 20
+    }
+  },
+  "source_concerned_unanimous_preferences": []
+}

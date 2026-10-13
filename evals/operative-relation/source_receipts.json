@@ -1,0 +1,157 @@
+[
+  {
+    "id": "N1",
+    "title": "Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning",
+    "venue": "Proceedings of the 5th Conference on Robot Learning",
+    "year": 2022,
+    "conference_event_year": 2021,
+    "metadata_url": "https://proceedings.mlr.press/v164/rudin22a.html",
+    "pdf_url": "https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf",
+    "source_version": "Official PMLR volume 164 rudin22a.pdf, as downloaded for this packet.",
+    "source_version_limitations": "No alternate, arXiv, author-site or supplementary version was used. The URL has no explicit revision label; the receipt, server headers and SHA-256 identify the actual retrieved bytes, not a claim that the publisher will never replace them.",
+    "fallback": null,
+    "hashes": {
+      "algorithm": "sha256",
+      "pdf": "420fc2ac08a7b3d04894e4ad36266e3c7cfc66f6fdc5662e5fcc2931715fdb10",
+      "extracted": "25937de46e4f60ee7f906818390fe0a53ae2746cb6529f6424c16d7757495dac",
+      "body": "574d878c150814e0784ed79f2db9e2c2a117a27fe216375c236b05a1ffd03670",
+      "official_metadata_html": "fb0e5ea039212b49b3d020cb785e568b817ad377331cfc138e398a3892516c7d"
+    },
+    "source_paths": {
+      "pdf": "sources/N1.pdf",
+      "extracted": "sources/N1.raw.txt",
+      "body": "inputs/N1.txt",
+      "recipe": "sources/N1.extract.py",
+      "download_receipt": "sources/N1.download.json",
+      "official_metadata_html": "sources/N1.metadata.html",
+      "integrity_receipt": "sources/N1.integrity.json"
+    },
+    "extraction_command": "pdftotext -raw sources/N1.pdf sources/N1.raw.txt",
+    "extraction_version": "pdftotext version 26.03.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC\n",
+    "warnings": {
+      "source": [
+        "The official publication year is 2022, not the 2021 conference-event year printed in the PDF. The PDF was created and modified in November 2021.",
+        "Embedded PDF metadata has a blank Title and Author Anonymous Submission; visible title/authors and the official publication record agree.",
+        "The publisher pagination is 91-100, while the PDF prints internal pages 1-10; all locators explicitly use physical/internal PDF pages.",
+        "The main body refers to external supplementary reward weights, noise details, VRAM/throughput and bootstrapping ablations. Those materials were not accessed and are not additional support in this packet.",
+        "Section 2.2.1 reports difficulty below 25 consecutive steps, while Section 4.2 gives 4096 robots and a 98304-sample batch (24 steps by the stated formula). Both original statements are retained; no strict universal threshold or reconciliation is manufactured.",
+        "Abstract-only claims, including the flat-terrain training-time headline, are not imported into the selected body or the question objectives."
+      ],
+      "encoding_and_extraction": [
+        "UTF-8 strict decoding succeeded. Original pdftotext -raw bytes are retained without Unicode normalization, dehyphenation, spelling/spacing repair or OCR.",
+        "Subscripts and equation layout are flattened, including B = nrobotsnsteps. Symbols, line-wrapped words, running headers, form feeds and standalone page/footnote numbers remain as extracted.",
+        "Section 4.3 contains merged-word strings (including Therobotcanwalkupanddownstairsandhandlesobstaclesinadynamicmanner.) exactly as extracted.",
+        "Graphical plot marks, axes and layout are not reconstructed from images. Original captions and narrative remain; the complete PDF and page renders are retained as provenance. No main-body text tables were identified.",
+        "Figure captions interrupt paragraphs and footnote 1 occurs in the raw Section 3 span although it annotates Section 2.2.2. Nothing is relocated."
+      ],
+      "download": [],
+      "pdf_parser": [],
+      "render": []
+    },
+    "permission_limitations": "The user supplied public official publisher URLs and requested local source excerpts for evaluation. No login or access restriction was encountered and the PDF is unencrypted. No explicit reuse license was verified in the permitted sources; public accessibility is not asserted to authorize redistribution or unrestricted reuse.",
+    "excluded_source_exposure": {
+      "publisher_abstract": "Exposed during the required official-page web lookup and the local BibTeX identity/year check. Not copied into the selected body or used as an abstract target.",
+      "pdf_abstract": "Its opening line was exposed by heading search; its prose was not separately read.",
+      "introduction": "Read to check for essential definitions; not retained or used as a target.",
+      "conclusion_and_references": "Headings exposed by section search; prose not read. These bytes are present in the full raw extraction and were automatically rendered with all PDF pages, but those page images were not visually inspected.",
+      "visually_inspected_physical_pages": [
+        3,
+        6,
+        7
+      ],
+      "external_supplements_and_linked_sources": "Not accessed.",
+      "guides_other_paper_artifacts_past_outputs_conversation_memory": "Not accessed.",
+      "other_agents": "None used."
+    }
+  },
+  {
+    "id": "N2",
+    "title": "Conformal Prediction Beyond Exchangeability",
+    "venue": "The Annals of Statistics",
+    "year": 2023,
+    "metadata_url": "https://projecteuclid.org/journals/annals-of-statistics/volume-51/issue-2/Conformal-prediction-beyond-exchangeability/10.1214/23-AOS2276.full",
+    "pdf_url": "https://projecteuclid.org/journals/annals-of-statistics/volume-51/issue-2/Conformal-prediction-beyond-exchangeability/10.1214/23-AOS2276.pdf",
+    "downloaded_pdf_url": "https://www.stat.cmu.edu/~ryantibs/papers/nexcp.pdf",
+    "source_version": {
+      "kind": "author_hosted_manuscript",
+      "version_identifier": null,
+      "publisher_version_identity": "unverified; not asserted",
+      "embedded_pdf_creation_metadata": "Wed Sep 21 02:50:33 2022 CST",
+      "http_last_modified": "Wed, 02 Oct 2024 18:37:40 GMT",
+      "physical_pages": 62,
+      "limitation": "The source has 62 physical pages, whereas official journal pagination is 816-845. Neither the embedded creation date nor the server modification date establishes a manuscript revision identifier or equivalence to the published article."
+    },
+    "fallback": {
+      "used": true,
+      "explicitly_authorized": true,
+      "url": "https://www.stat.cmu.edu/~ryantibs/papers/nexcp.pdf",
+      "reason": "Both direct publisher URLs returned Incapsula access-block HTML; the publisher PDF response was not a PDF."
+    },
+    "hashes": {
+      "algorithm": "sha256",
+      "pdf": "9894f95c2e07659db6f062d18fff7f15055f91d7035fbdc2db71ab8de65dc76e",
+      "extracted": "2d342663bb22616abb049ad6029659047f5fbeb967b31ecbc49ca83ef5fdc0e1",
+      "body": "f5c51194891e3836096eddc29be0734822eb8d07fcd0b3e0351b992e11c332e3",
+      "recipe": "f4bdb86a4175c8490ce9d366cc225c73e1f645b1c27b03c0febd0ed28f62d3e3",
+      "anchors": "1e2eaaa87019cd600bbfd2bcf6b24ad0c479709206cd264b86c06793704c7bfc"
+    },
+    "paths": {
+      "original_pdf": "sources/N2.pdf",
+      "original_raw_extraction": "sources/N2.raw.txt",
+      "body": "inputs/N2.txt",
+      "recipe": "sources/N2.extract.py",
+      "download_receipt": "sources/N2.download.json",
+      "publication_evidence": "sources/N2.publication-verification.json",
+      "verification": "sources/N2.validation.json",
+      "anchors": "anchors/N2.json"
+    },
+    "extraction_command": "pdftotext -raw sources/N2.pdf sources/N2.raw.txt",
+    "extraction_version": "pdftotext version 26.03.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC",
+    "source_warnings": [
+      "Original raw extraction is retained unchanged, including page numbers, form feeds, decomposed glyphs, broken ligatures, fragmented superscripts/subscripts, control characters, equation layout, and flattened table/figure labels.",
+      "Figures contain plotted/image content not recovered by pdftotext; the original PDF preserves them. No OCR or visual/table reconstruction was performed.",
+      "Residual weighting trades robustness against effective sample size and interval width; a useful near-nominal guarantee requires the weighted swapped-residual total-variation term to be small.",
+      "Split conformal's pre-fitted model independence, distinct residuals for the upper-coverage theorem, and the jackknife+ worst-case 1-2alpha baseline remain in the selected body. The editorial contribution/proof questions focus on full conformal rather than conflating these guarantees.",
+      "Section 6.1's NexCP+WLS description cites equation (14), although the general nonsymmetric method is equation (20). This source citation ambiguity is preserved, not repaired; the experiment code was not downloaded or audited, and the presence/absence of its randomized swap implementation is not inferred.",
+      "Section 7 provides main-body split/full proofs; jackknife+ and some additional calculations refer to excluded appendices. The selected proof objective requires only the included Section 7.2.",
+      "Election weighting is justified by prior-2016 information in the manuscript. No unconditional validity from arbitrary contemporary data-dependent weights is asserted."
+    ],
+    "encoding_warnings": {
+      "utf8_decoding_errors": 0,
+      "preserved_body_control_byte_counts": {
+        "0x01": 36,
+        "0x02": 1,
+        "0x03": 1,
+        "0x08": 4,
+        "0x0c": 27,
+        "0x0f": 16,
+        "0x10": 2,
+        "0x11": 2,
+        "0x1d": 1
+      },
+      "repairs_performed": false
+    },
+    "download_warnings": [
+      "HTTP 200 publisher responses were access-block HTML, not successful page/PDF access.",
+      "All three bounded retrieval slots were used: official page, official PDF, authorized author PDF; each used a 60-second maximum and zero retries.",
+      "The author PDF's HTTP Content-Length, curl size_download, saved-byte count, PDF parser, 62 contiguous raw page labels, and all-page rendering agree; no partial/trailing transfer data was accepted."
+    ],
+    "permission_version_limitations": [
+      "Direct publisher access unavailable; no access-control bypass attempted.",
+      "The user explicitly authorized the public author-hosted fallback for this local source packet; public accessibility is not treated as a redistribution-license grant.",
+      "Official identity/year/venue are supported by indexed official-PDF bibliographic text, not a successful direct .full page parse.",
+      "Publisher-version identity and exact manuscript revision remain unverified."
+    ],
+    "excluded_source_exposure": {
+      "abstract": "The bibliographic search result automatically exposed the official abstract; a raw first-page boundary preview also exposed its opening words. No abstract was selected, copied as a target, or used for editorial question wording.",
+      "introduction_and_related_work": "N2 Introduction overview/contribution-preview text and its related-work subsection were inspected to locate exact definition/selection boundaries; all such prose is excluded except the declared definitions.",
+      "discussion": "Only the Section 8 heading was located as the exclusive end boundary; Discussion prose was not read.",
+      "references_and_appendices": "A structural heading search exposed reference/appendix headings and isolated matched lines; a final-page marker/tail check exposed a short caption tail. No reference entry or appendix was used as substantive support, and none is selected.",
+      "guides": false,
+      "other_paper_artifacts": false,
+      "past_model_outputs": false,
+      "conversation_logs_or_memory": false,
+      "other_agents": false
+    }
+  }
+]

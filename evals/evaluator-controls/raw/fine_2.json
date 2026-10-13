@@ -1,0 +1,172 @@
+{
+  "audits": [
+    {
+      "id": "T001",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose explicitly says the proposer drafts five tokens sequentially and the target checks all five prefix positions concurrently in one round. These sentences supply the requested execution relationship and agree with the evidence: scheduling shares expensive rounds without eliminating serial drafting. The reader reproduces that relationship and the toy-workload boundary. Missing correction-rule operations do not undermine the requested scheduling explanation."
+    },
+    {
+      "id": "T002",
+      "fidelity": "pass",
+      "critical_support": "missing",
+      "reader_support": "unanswered",
+      "reason": "The prose says the target 'evaluates the proposed prefix positions' but never says concurrently or within one shared round. Predecessor-conditioned proposals and a measured target-round cost do not establish that verification schedule. The evidence explicitly supplies concurrent evaluation of all five positions in one round. The reader repeats the components and measurements without answering how positions share a round. This is an absent explanation, not a materially false scheduling claim."
+    },
+    {
+      "id": "T003",
+      "fidelity": "fail",
+      "critical_support": "contradicted",
+      "reader_support": "wrong",
+      "reason": "The opening calls seven of ten 'uninterrupted three-stage completions,' and the prose later labels seven of ten the trajectory-completion rate. Evidence assigns seven to final-state attainment and only four to uninterrupted all-stage completion; baseline counts are five and three respectively. The prose's own three earlier failures and resets also conflict with 'uninterrupted.' The reader repeats the false uninterrupted-event attribution and treats the correct alternate tally as unresolved rather than distinguishing the two events."
+    },
+    {
+      "id": "T004",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The decisive witness is 'a final-state measurement, not uninterrupted completion of all three stages.' The prose gives seven versus five final-state successes, identifies three policy successes following failure and reset, and separately gives four versus three joint completions. All agree with the evidence. The reader preserves both event definitions and the descriptive, matched-configuration limits."
+    },
+    {
+      "id": "T005",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Logical positions map to blocks that 'need not be adjacent,' and another block is allocated only when an arriving token exhausts the current block. Together these explicit operations explain incremental growth instead of contiguous maximum-length reservation, exactly as the evidence specifies. The reader identifies both operations and keeps the batch comparison within the toy workload and matched latency cap, without asserting isolated allocator or arbitrary-hardware benefits."
+    },
+    {
+      "id": "T006",
+      "fidelity": "pass",
+      "critical_support": "missing",
+      "reader_support": "unanswered",
+      "reason": "The prose lists fixed-size blocks, a physical pool and a position map, but does not state that blocks may be nonadjacent or that allocation occurs when the current block fills. Those evidence-supplied operations are needed to explain growth without maximum-length contiguous reservation. The batch and latency comparison does not supply them. The reader correctly reports that operations are unrecoverable but does not answer the requested storage relationship. The stated measurements remain faithful."
+    },
+    {
+      "id": "T007",
+      "fidelity": "fail",
+      "critical_support": "contradicted",
+      "reader_support": "text_grounded",
+      "reason": "The prose asserts that projection 'halves total training allocation' and calls the complete footprint reduction twofold. Evidence instead halves optimizer-state storage from 8 to 4 GB; unchanged other allocations leave totals of 16 and 12 GB. The prose itself supplies these numbers, so its total-halving claim is materially false, not merely unexplained. The reader correctly detects the contradiction and derives the 4 GB total saving and state-only halving from explicit prose measurements."
+    },
+    {
+      "id": "T008",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose explicitly halves optimizer-state storage from 8 to 4 GB, holds other allocations at 8 GB, and states total training allocation falls from 16 to 12 GB 'not by half.' These are the evidence's resource boundaries and totals. The reader accurately preserves them, along with batch eight, matched device/model/precision and the observed loss difference without claiming quality equivalence."
+    },
+    {
+      "id": "T009",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose states allocation falls from 24 to 16 GB and checkpoint losses are 2.1 versus 2.2, at batch four on one device. 'Only one run per method' and no significance analysis explicitly limit inference; equivalence and statistical advantage are not established. These claims match the evidence and the reader. An absent internal update mechanism is outside the requested resource/loss comparison and is not an error."
+    },
+    {
+      "id": "T010",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The allocation witness is '16 GB rather than the baseline's 24 GB'; the following sentence gives losses of 2.1 and 2.2. One run per method, no significance analysis and no established equivalence or statistical superiority are explicit. Evidence supports this paired resource/loss finding and its limited configuration. The reader accurately retains both outcomes and uncertainty. Missing reduction-mechanism details do not affect the critical question."
+    },
+    {
+      "id": "T011",
+      "fidelity": "concern",
+      "critical_support": "missing",
+      "reader_support": "inferred",
+      "reason": "The prose claims the update 'keeps every iterate in [0,1]' without stating an initialization requirement. The run beginning at 0.8 illustrates only one start. Evidence requires initialization in [0,1] and gives 3 followed by 1.5 as a counterexample outside that scope. This is a consequential missing claim condition, not an explicit assertion about arbitrary initialization. The reader adds the correct conditional 'For an iterate in [0,1]' but cannot locate a prose initialization premise; that supplementation is inferred rather than a stated answer."
+    },
+    {
+      "id": "T012",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "'If initialization lies in [0,1]' explicitly supplies the required premise. The prose explains preservation of nonnegativity and the upper bound, distinguishes illustrative updates from the condition, and gives three followed by 1.5 as a counterexample to arbitrary starts. These statements match the evidence. The reader correctly identifies initialization and exact arithmetic as the scope; an absent inexact-arithmetic guarantee is not required."
+    },
+    {
+      "id": "T013",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose assigns the factor of two to one device kernel, with 16 to 8 ms timing, and separately reports complete requests falling from 112 to 104 ms. It explicitly describes an 8 ms end-to-end reduction rather than twofold overall acceleration. These boundaries and unchanged-output conditions match the evidence. The reader accurately retains the component/request distinction and does not extrapolate to concurrent-user throughput or other devices."
+    },
+    {
+      "id": "T014",
+      "fidelity": "fail",
+      "critical_support": "contradicted",
+      "reader_support": "text_grounded",
+      "reason": "The opening says the optimization 'doubles complete-request inference speed,' and a later sentence attributes 'twofold end-to-end acceleration' to the kernel. Evidence supports twofold kernel acceleration only: 16 to 8 ms, while requests fall from 112 to 104 ms. The prose includes those incompatible request timings, so this is a materially false timing-boundary attribution. The reader correctly identifies the numerical inconsistency using the prose itself rather than importing a missing source fact."
+    },
+    {
+      "id": "T015",
+      "fidelity": "concern",
+      "critical_support": "missing",
+      "reader_support": "unanswered",
+      "reason": "The prose states a 90% marginal guarantee but never requires exchangeability between calibration and future observations. Evidence makes that relationship the guarantee's premise. A toy evaluation drawn from the calibration distribution and an absent shift experiment do not state the theoretical condition. This omission leaves consequential guarantee scope ambiguous, without explicitly asserting validity under arbitrary shift. The reader repeats the guarantee and acknowledges absent assumptions but never supplies the requested relationship. The 89/100 realization is not a contradiction of the fictional marginal guarantee."
+    },
+    {
+      "id": "T016",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The opening expressly conditions the supplied guarantee on calibration and future observations being exchangeable, and 'Under that premise' attaches the 90% marginal coverage claim to it. This matches the fictional evidence without requiring an external theorem. The prose and reader distinguish marginal from conditional coverage and the 89/100 realization from a proof or contradiction, while leaving shift behavior unmeasured."
+    },
+    {
+      "id": "T017",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose gives 89 versus 85 exact matches on the same fixed 100 queries and median times of 150 versus 120 ms on one device. Its explicit conclusion is higher observed match count with slower median queries, 'not a guarantee about deployment behavior.' These observations and limits match the evidence. The reader accurately reports the tradeoff rather than uniform improvement or production reliability."
+    },
+    {
+      "id": "T018",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "Explicit match counts of 89 versus 85 and median timings of 150 versus 120 ms establish the stated accuracy-time tradeoff on the fixed dataset and one device. 'No sampling uncertainty or production evaluation' and 'not a guarantee about deployment behavior' answer the production portion directly. Evidence and reader agree with these restricted observations; no missing implementation explanation is needed for this question."
+    },
+    {
+      "id": "T019",
+      "fidelity": "pass",
+      "critical_support": "missing",
+      "reader_support": "unanswered",
+      "reason": "The prose reports 80%, 52% and 78% accuracy across placements on a fixed question set, but never says each question retains the same answer document and distractors or that distractor order is fixed. Evidence supplies those controls to rule out changed evidence content or distractor selection. A fixed question set alone does not establish them. The reader summarizes observed variation without answering the control or alternative-explanation question. The prose's descriptive score comparison is nevertheless faithful."
+    },
+    {
+      "id": "T020",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "'Each question retains the same answer-bearing document and distractors, with distractor order fixed; only the answer document moves' supplies the critical control. The next sentence explicitly rules out changed evidence content or different distractor selection as explanations. These statements match the evidence and the reader's account. The prose appropriately distinguishes a placement diagnostic from identifying an internal neural mechanism; unspecified mechanism and numerical document length do not defeat this requested relation."
+    },
+    {
+      "id": "T021",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose attaches the supplied proof to exact gradients, a convex objective and the stipulated step-size rule. It then says the approximate-gradient implementation 'is not covered' by that proof. Evidence supports this distinction and only trajectory-level decreases on three toy problems for the implementation. The reader preserves the distinction. Missing formulas or proof mechanisms do not prevent answering which computation the supplied proof covers."
+    },
+    {
+      "id": "T022",
+      "fidelity": "fail",
+      "critical_support": "contradicted",
+      "reader_support": "wrong",
+      "reason": "The prose attributes non-increasing objective values 'under the supplied proof' to the approximate-gradient implementation and calls theory and observations descriptions of the same update. Evidence restricts the proof to exact gradients and supplies no transfer to approximate updates. Recorded decreases on three toy problems cannot establish that transfer. The reader repeats the false approximate-gradient proof attribution; listing missing approximation conditions does not correct the incompatible account of proof coverage."
+    },
+    {
+      "id": "T023",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose maps logical keys to physical blocks in a fixed pool and explicitly connects nonadjacency to extension without copying earlier blocks into a contiguous region. Access follows the map despite physical separation. Evidence supports this storage relationship and supplies no measured speed advantage. The prose denies a faster-implementation claim, and the reader accurately retains that boundary. Omitted library-version and logging metadata are irrelevant to the requested operation."
+    },
+    {
+      "id": "T024",
+      "fidelity": "pass",
+      "critical_support": "supported",
+      "reader_support": "text_grounded",
+      "reason": "The prose explicitly says nonadjacent blocks permit adding storage without copying earlier blocks and that the map provides access despite separation. 'It is not a measured speed claim' answers the performance question consistently with evidence. Library version 2.4 and serial logging are accurately identified as metadata rather than the reason separated storage works. The reader retains these distinctions. Unspecified allocation details or full-pool behavior are outside the requested mapping relationship."
+    }
+  ]
+}

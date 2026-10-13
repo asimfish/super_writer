@@ -1,0 +1,52 @@
+{
+  "readings": [
+    {
+      "id": "T016",
+      "core": "The supplied guarantee gives at least 90% marginal coverage for a future observation when calibration and future observations are exchangeable. The 89/100 toy result is a realized evaluation, neither proof nor contradiction of that guarantee.",
+      "scope": "The guarantee requires exchangeability and asserts neither conditional coverage nor validity under arbitrary distribution shift. The toy evaluation uses the calibration distribution; no shift experiment measures behavior outside it.",
+      "core_witness": "Under that premise, coverage for a future observation is at least 90%",
+      "scope_witness": "No shift experiment is reported, so empirical behavior outside the calibration distribution remains unmeasured.",
+      "unclear": "none"
+    },
+    {
+      "id": "T018",
+      "core": "Compact indexing achieves 89 exact matches versus the baseline's 85 on the same 100 queries, but median query time is 150 ms versus 120 ms. This supports an observed accuracy-time tradeoff, not uniform improvement.",
+      "scope": "Exact-match counts and median query times concern one fixed dataset and one device. No sampling uncertainty or production evaluation is reported, and deployment behavior is not guaranteed.",
+      "core_witness": "89 of the 100 evaluated queries, compared with 85 for the baseline",
+      "scope_witness": "no sampling uncertainty or production evaluation is reported.",
+      "unclear": "none"
+    },
+    {
+      "id": "T024",
+      "core": "Lookup maps logical keys to physical blocks in a fixed pool. Because blocks need not be adjacent, sequence extension can add storage without recopying earlier blocks into one contiguous region; the map preserves access despite separation.",
+      "scope": "The storage claim concerns a fixed pool, not measured speed. Library version 2.4 and serial logging identify the implementation but do not enable separated storage. No performance comparison is available.",
+      "core_witness": "The map supplies access to the right physical location despite that separation",
+      "scope_witness": "it is not a measured speed claim.",
+      "unclear": "Block allocation during extension and behavior when the pool is full are not recoverable."
+    },
+    {
+      "id": "T022",
+      "core": "The procedure updates a convex objective using approximate gradients and a stipulated step-size rule. A supplied proof gives non-increasing values, and three toy trajectories decrease at every recorded step. The precise operation explaining monotonicity is not recoverable.",
+      "scope": "The theoretical description concerns the convex objective, approximate gradients, and stipulated rule under the supplied proof. Empirical observations cover three recorded toy problems. No convergence rate, nonconvex guarantee, or performance on another problem class is asserted.",
+      "core_witness": "updates a convex objective with approximate gradients and the stipulated step-size rule",
+      "scope_witness": "no convergence rate, nonconvex guarantee or performance on a different problem class is asserted.",
+      "unclear": "The update formula, step-size specification, and approximation conditions supporting monotonicity are not recoverable."
+    },
+    {
+      "id": "T020",
+      "core": "Middle placement scores 52% versus 80% first and 78% last on the same 100 questions. Only answer-document placement changes, so changed evidence content or distractor selection cannot explain the contrast.",
+      "scope": "Exact-answer scores are measured with the answer-bearing document and distractors retained and distractor order fixed. The inference is a placement diagnostic limited to the tested task and document length, not an internal-mechanism identification or all-workload generalization.",
+      "core_witness": "exact-answer scores are 80% first, 52% middle and 78% last on the same 100 questions.",
+      "scope_witness": "The inference remains limited to the tested task and document length",
+      "unclear": "The internal mechanism causing the placement effect and the actual document length are not recoverable."
+    },
+    {
+      "id": "T014",
+      "core": "Unchanged outputs, halved kernel time (16 to 8 ms), and reduced complete-request latency (112 to 104 ms) are reported. Twofold complete-request acceleration is claimed, but those request timings do not establish doubling. The asserted kernel-to-end-to-end explanation is inconsistent with them.",
+      "scope": "Kernel timing and request latency have different boundaries; request latency includes preprocessing, transfers, and postprocessing. Results concern the evaluated batch, device, and request configuration. Concurrent-user throughput is unevaluated; another device or batch size is unestablished.",
+      "core_witness": "The optimized kernel thus supplies the twofold end-to-end acceleration reported here.",
+      "scope_witness": "the study does not evaluate concurrent-user throughput",
+      "unclear": "How the supplied request timings could support twofold complete-request acceleration is not recoverable."
+    }
+  ]
+}

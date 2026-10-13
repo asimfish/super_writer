@@ -54,6 +54,11 @@ Context: `tier`, `source_index.md`, scene reference path.
 
 Sections: Exemplar Inventory table, Structural Patterns, Rhetorical Patterns, Language Patterns.
 
+Follow `agents/research-exemplar.md` and `references/argument-transfer.md`.
+Give this agent the active writing scope and available contribution/evidence
+notes. Its handoff must identify a source passage, why the writing choice works,
+when our evidence permits it, and the concrete action for the next writer.
+
 ### Agent C: SOTA Mapper → `sota_gap_map.md`
 
 Context: `tier`, `source_index.md`, `user_motivation` (if set).

@@ -1,0 +1,46 @@
+{
+  "id": "P10",
+  "purpose": "Original editorial grounding aids, not required fact lists or preferred verdicts.",
+  "abstract": [
+    {
+      "role": "core",
+      "reader_question": "What connects the scene representation to training and rendering efficiency?",
+      "expected_relation": "Explicit anisotropic Gaussians, adaptive density control, and differentiable rasterization work together to connect reconstruction quality with computational cost.",
+      "source_locator": {"pdf": "sources/P10.pdf", "pdf_pages": [4, 6], "sections": ["3 OVERVIEW", "4 DIFFERENTIABLE 3D GAUSSIAN SPLATTING", "5 OPTIMIZATION WITH ADAPTIVE DENSITY CONTROL OF 3D GAUSSIANS", "6 FAST DIFFERENTIABLE RASTERIZER FOR GAUSSIANS"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "What capture and resource conditions qualify the efficiency claim?",
+      "expected_relation": "The relationship concerns static multiview scenes and depends on training budget, image resolution, scene coverage, and available GPU memory.",
+      "source_locator": {"pdf": "sources/P10.pdf", "pdf_pages": [10, 11], "sections": ["7.4 Limitations"]}
+    }
+  ],
+  "methods": [
+    {
+      "role": "core",
+      "reader_question": "How does image supervision change both Gaussian parameters and their allocation?",
+      "expected_relation": "Rendering losses drive parameter optimization, while cloning, splitting, and pruning adjust the representation where reconstruction requires different density.",
+      "source_locator": {"pdf": "sources/P10.pdf", "pdf_pages": [4, 6], "sections": ["4 DIFFERENTIABLE 3D GAUSSIAN SPLATTING", "5.1 Optimization", "5.2 Adaptive Control of Gaussians"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "Which evaluation conditions govern comparability?",
+      "expected_relation": "Scene sets, held-out views, native image resolutions, iteration budgets, hardware exceptions, and copied versus rerun baseline metrics define the comparisons.",
+      "source_locator": {"pdf": "sources/P10.pdf", "pdf_pages": [8, 9], "sections": ["7.1 Implementation", "7.2 Results and Evaluation", "Tables 1-3"]}
+    }
+  ],
+  "results": [
+    {
+      "role": "core",
+      "reader_question": "How are reconstruction quality and runtime related across configurations?",
+      "expected_relation": "Training duration and representation choices change quality, rendering speed, and storage together; the tables and ablations expose that tradeoff.",
+      "source_locator": {"pdf": "sources/P10.pdf", "pdf_pages": [8, 10], "sections": ["Tables 1-3", "7.2 Results and Evaluation", "7.3 Ablations"]}
+    },
+    {
+      "role": "scope",
+      "reader_question": "Where do the reported results cease to imply reliable reconstruction?",
+      "expected_relation": "Poor observation, visibility approximations, large scenes, and memory demand limit the result; individual metric comparisons are not a universal ordering.",
+      "source_locator": {"pdf": "sources/P10.pdf", "pdf_pages": [10, 11], "sections": ["7.4 Limitations", "Figures 10-12"]}
+    }
+  ]
+}

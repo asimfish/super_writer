@@ -1,0 +1,98 @@
+[
+  {
+    "id": "D1",
+    "domain": "robotics",
+    "papers": [
+      [
+        "P01",
+        "Diffusion Meets DAgger: Supercharging Eye-in-hand Imitation Learning",
+        "https://www.roboticsproceedings.org/rss20/p048.html"
+      ],
+      [
+        "P02",
+        "ScrewMimic: Bimanual Imitation from Human Videos with Screw Space Projection",
+        "https://www.roboticsproceedings.org/rss20/p078.html"
+      ]
+    ]
+  },
+  {
+    "id": "D2",
+    "domain": "efficient_inference",
+    "papers": [
+      [
+        "P03",
+        "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+        "https://openreview.net/forum?id=mZn2Xyh9Ec"
+      ],
+      [
+        "P04",
+        "Fast Inference from Transformers via Speculative Decoding",
+        "https://proceedings.mlr.press/v202/leviathan23a.html"
+      ]
+    ]
+  },
+  {
+    "id": "D3",
+    "domain": "adaptation_training",
+    "papers": [
+      [
+        "P05",
+        "DoRA: Weight-Decomposed Low-Rank Adaptation",
+        "https://research.nvidia.com/labs/lpr/publication/liu2024dora/"
+      ],
+      [
+        "P06",
+        "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+        "https://arxiv.org/abs/2403.03507"
+      ]
+    ]
+  },
+  {
+    "id": "D4",
+    "domain": "language_evaluation_retrieval",
+    "papers": [
+      [
+        "P07",
+        "Lost in the Middle: How Language Models Use Long Contexts",
+        "https://aclanthology.org/2024.tacl-1.9/"
+      ],
+      [
+        "P08",
+        "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+        "https://openreview.net/forum?id=hSyW5go0v8"
+      ]
+    ]
+  },
+  {
+    "id": "D5",
+    "domain": "vision_graphics",
+    "papers": [
+      [
+        "P09",
+        "A ConvNet for the 2020s",
+        "https://openaccess.thecvf.com/content/CVPR2022/html/Liu_A_ConvNet_for_the_2020s_CVPR_2022_paper.html"
+      ],
+      [
+        "P10",
+        "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+        "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/"
+      ]
+    ]
+  },
+  {
+    "id": "D6",
+    "domain": "uncertainty_theory",
+    "papers": [
+      [
+        "P11",
+        "Conformal Risk Control",
+        "https://openreview.net/forum?id=33XGfHLtZg"
+      ],
+      [
+        "P12",
+        "Adaptive Conformal Inference Under Distribution Shift",
+        "https://arxiv.org/abs/2106.00170"
+      ]
+    ]
+  }
+]

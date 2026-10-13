@@ -1,0 +1,20 @@
+{
+  "DP": {
+    "min_words": 150,
+    "max_words": 190,
+    "required": ["12", "46.9%", "four robot-manipulation benchmarks", "planned"],
+    "forbidden": ["reliable", "universal robustness"]
+  },
+  "OFT": {
+    "min_words": 150,
+    "max_words": 190,
+    "required": ["76.5%", "97.1%", "26x", "throughput", "percentage points", "fine-tuned", "from scratch"],
+    "forbidden": ["all baselines were fine-tuned", "latency increased by 26x"]
+  },
+  "PI0": {
+    "min_words": 150,
+    "max_words": 190,
+    "required": ["flow matching", "pretrained vision-language model", "fine-tuning"],
+    "forbidden": ["universally robust", "reliable across all robots", "state of the art"]
+  }
+}

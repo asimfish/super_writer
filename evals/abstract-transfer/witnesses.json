@@ -1,0 +1,338 @@
+[
+  {
+    "id": "G1_T01",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T01",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T03",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T03",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T05",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T05",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T07",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T07",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T02",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T02",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T04",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T04",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T06",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T06",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T08",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G1_T08",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T01",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T01",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T03",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T03",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T05",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T05",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T07",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T07",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T02",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T02",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T04",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T04",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T06",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T06",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T08",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G2_T08",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T01",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T01",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T03",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T03",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T05",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T05",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T07",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T07",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T02",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T02",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T04",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T04",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T06",
+    "condition": "candidate",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T06",
+    "condition": "candidate",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T08",
+    "condition": "baseline",
+    "field": "core_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  },
+  {
+    "id": "G3_T08",
+    "condition": "baseline",
+    "field": "scope_witness",
+    "literal_or_empty": true,
+    "within_budget": true
+  }
+]

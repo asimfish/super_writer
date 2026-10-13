@@ -1,0 +1,130 @@
+{
+  "reviews": [
+    {
+      "id": "P08_s1_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's 'predicted evidence support part of sentence selection' and B's 'support contributes to their selection' capture the same contribution. P08 Sections 3.2-3.3 support their offline-critic and decoding accounts; Table 2 and Section 5.2 support the shared gains and tradeoffs. Both supply a coherent abstract linking mechanism, evaluation, and limits; B's more explicit model and metric labels do not establish a clear advantage."
+    },
+    {
+      "id": "P07_s3_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A explains why query repetition enables earlier contextualization, supported by P07 Section 4.2. B makes the fixed distractor set and output-inclusion criterion explicit, supported by Sections 2.1 and 3.1. Both explain how position and context length are manipulated and why UUID lookup complements question answering. These are comparably useful methods summaries, not a substantive quality separation."
+    },
+    {
+      "id": "P08_s2_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 4, "selection": 5, "language": 5},
+      "reason": "P08 Table 2 supports both citation-versus-correctness contrasts, and Section 5.2 supports the separate 50k ablation and customization tradeoffs. A's 'passage handling as well as reflection supervision' identifies the top-one-passage confound more precisely than B's 'not an isolated effect of one token.' B nevertheless reaches the same warranted combined-configuration interpretation. The explanatory difference is modest enough to preserve a tie."
+    },
+    {
+      "id": "P08_s1_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 4},
+      "reason": "A's 'combination therefore improves attribution' and B's 'citation gains can coexist with losses' accurately interpret P08 Table 2. Sections 4.3 and 5.2 support the shared-document condition, zero threshold, and customization tradeoffs. A unpacks the baseline more readably; B's compressed baseline clause is denser but precise. Both connect the comparisons to task-dependent objectives, leaving only a small stylistic difference."
+    },
+    {
+      "id": "P07_s1_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's 'without establishing better use of natural-language evidence' and B's 'without resolving the observed difficulty' correctly bound the query intervention in P07 Section 4.2. Section 4.1 supports the 1.9-point Flan-UL2 contrast; Section 2.3 supports the overlapping standard/16K curves. Both use these controls to explain why lookup success and window size do not establish positional robustness, with similarly clear results prose."
+    },
+    {
+      "id": "P07_s3_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "Both opening sentences distinguish accepted context length from effective evidence use. P07 Sections 2.1-2.3 support the controlled QA comparison; Sections 3.2 and 4.2 support the Claude exception and query-repetition contrast. A's 'positional sensitivity is not uniform across tasks' and B's 'retrieval failures are not uniform' preserve the same qualification. Both fulfill the abstract function without materially different claims or explanatory strength."
+    },
+    {
+      "id": "P07_s2_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "P07 Sections 4.2, 2.3, and 5 support both paragraphs' intervention, closed-book, and reader-recall contrasts. A adds the supported Claude comparison from Section 3.2; B ends with a particularly direct link between lookup, retrieval recall, and answering. Neither mistakes evidence availability for effective use. The additional example and tighter synthesis are comparably useful choices for this results paragraph."
+    },
+    {
+      "id": "P07_s2_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's 'evidence access and use' and B's 'effective evidence use' identify the same evaluated limitation. P07 Sections 2.3, 4.1-4.2, and 5 support their capacity, training-length, query-placement, and retrieval-pipeline contrasts. Both qualify the conclusion to evaluated question-answering systems and organize the evidence around one central distinction. Minor wording differences do not alter fidelity, explanatory relationships, or abstract effectiveness."
+    },
+    {
+      "id": "P08_s2_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A foregrounds adjustable retrieval and evidence emphasis; B explicitly connects weighted self-evaluations to candidate ranking. Both accounts match P08 Sections 3.2-3.3. Table 2 supports the same-document citation gain and lower str-em; Section 5.2 supports the MAUVE tradeoff. A names the task families, while B specifies the small correctness difference. Both choices serve the abstract without a clear functional winner."
+    },
+    {
+      "id": "P08_s1_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A opens with offline supervision; B opens with passage-conditioned sentence selection. P08 Sections 3.2.1-3.3 and Equations 2-4 support both training-to-decoding accounts. B specifies retrieval-probability normalization, while A specifies normalized critique scoring; neither contradicts the source. Both explain how predicted support affects selection and why controls need neither retraining nor an inference-time critic. The differing entry points are equally effective."
+    },
+    {
+      "id": "P08_s3_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A explicitly distinguishes passage-independent utility, supported by P08 Table 1 and Section 3.1's footnote. B explains why a relevant passage can still yield a partially supported continuation, illustrated in Section 3.1 and operationalized by Equations 3-4. Both accurately connect offline labels, masked-loss training, and critique-guided selection. These complementary explanations are comparably precise and useful for the methods function."
+    },
+    {
+      "id": "P07_s2_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's 'holding the question and available documents fixed' and B's 'within a fixed document set' describe the same position control in P07 Section 2.1. Both correctly explain distractor-count manipulation, reference conditions, UUID simplification, inclusion scoring, and the Section 4.2 query intervention. A specifies relevance ranking; B more explicitly connects the control to retained support. Neither difference materially changes this methods paragraph's effectiveness."
+    },
+    {
+      "id": "P07_s3_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "P07 Table 1 and Section 2.3 support the 88.3/56.1 comparison and overlapping positional curves; Section 4.2 supports 45.6-to-perfect lookup without comparable QA improvement. A frames these as availability versus use; B frames them as added context negating supplied evidence's benefit. Both connect the controls to the same bounded inference, rather than merely listing scores. Their results argument and readability are essentially equivalent."
+    },
+    {
+      "id": "P08_s3_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 4, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 4},
+      "reason": "Both accurately connect reflection-guided selection to adjustable decoding in P08 Sections 3.2-3.3. B's same-data PopQA comparison broadens the result evidence beyond ASQA, supported by Table 2; A's opening is clearer than B's awkward 'without ensuring that a response needs external evidence.' A's grounding limit matches Ethical Concerns, and Section 5.2 supports both tradeoffs. Broader coverage and cleaner prose leave a near tie."
+    },
+    {
+      "id": "P07_s1_abstract",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's 'input capacity from effective evidence use' and B's 'insufficient indicators of effective evidence use' summarize the same contribution. P07 Sections 2.3, 3.2, 4.2, and 5 support the shared positional findings, Claude exception, query intervention, and reader-recall divergence. Both integrate these findings into a scoped abstract rather than a metric inventory. Their modest differences in emphasis do not warrant a preference."
+    },
+    {
+      "id": "P08_s2_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A explains the normalized retrieval threshold and passage-independent utility; B explains why relevance need not imply support. P08 Table 1, Sections 3.2-3.3, and Equations 2-4 support both accounts. Their respective endings connect learned judgments to adjustable selection criteria and distinguish retrieval need from support emphasis. Both explain the method's causal workflow precisely; these different explanatory details do not produce a clear advantage."
+    },
+    {
+      "id": "P08_s3_results",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "P08 Table 2 supports both ASQA and same-data PopQA contrasts; Sections 4.1 and 5.2 support B's metric explanations and the shared customization tradeoffs. A's 'control answers a different question' usefully separates attribution from training-example availability. B's 'combined training-and-decoding approach' similarly limits causal attribution. Both explain operating choices without claiming uniform superiority; the extra definitions do not establish a clear overall preference."
+    },
+    {
+      "id": "P07_s1_methods",
+      "winner": "Tie",
+      "A": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "B": {"fidelity": "pass", "contribution": 5, "argument": 5, "selection": 5, "language": 5},
+      "reason": "A's 'reordering tests position at a fixed length' and B's 'position, rather than answer availability' correctly explain P07 Section 2.1's control. Sections 2.2 and 3.1-3.2 support greedy decoding, JSON UUIDs, sample counts, and inclusion scoring. Both explain why the synthetic task reduces linguistic confounds and how the reference prompts function. The slightly different sequencing leaves two equally strong methods summaries."
+    }
+  ]
+}
