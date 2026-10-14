@@ -6,6 +6,41 @@ behavior below, not research novelty, factual entailment or acceptance gains.
 
 ## Reproducible Checks
 
+### Optional writing-role handoffs (2026-10-15)
+
+The [role workflow](../references/writing-team.md) and
+[source study](research/ideascientist-2026-10-15.md) add an explicit, bounded
+revision route, not a new default or a successful writing-quality trial.
+
+| Acceptance scope | Observed local evidence |
+|---|---|
+| Role contract | 21 focused tests cover the authored sequence, all review return targets, missing evidence, no-change, original retention, exact budget boundary and exhausted budget |
+| Input integrity | Changed task/evidence/exemplar/guidance/history invalidates receipts; wrong owners, unknown or duplicate IDs, absent witnesses, duplicate JSON keys and undeclared fields are rejected |
+| Acceptance boundaries | Failures, open queries, unassessed applicable references, ties, regressions and unchanged text cannot be accepted as improvements |
+| Context and effects | Review input omits diagnosis/proposal/prior review; mutable packet changes do not change the run; offline/read-only behavior and non-dereferenced source paths checked |
+| Distribution | Build a real ZIP, extract to a path with spaces, run the installed CLI, match the source packet, append a response without altering input, reject malformed response cleanly |
+| Regression | Python 3.14 on macOS: 315 cases, 314 passed, one PowerShell-unavailable skip; all 11 inherited smoke checks pass |
+| Static and preservation | New Python compiles; skill validator and whitespace check pass; the AI-spec archive check verifies frozen inputs, 13 completions and derived outputs; default guide and resource corpus hashes remain unchanged |
+
+Reproduce the key checks from the repository root:
+
+```bash
+python -m unittest discover -s tests -p test_writing_loop.py -v
+python -m unittest discover -s tests
+python scripts/smoke_test.py
+python evals/ai-spec-pilot/archive.py check
+python scripts/writing_loop.py examples/writing-team/input.json
+```
+
+The example responses and judgments are authored together, not obtained from
+independent model calls. The reviewer comparison is non-blind. Source analysis,
+structural tests, and valid handoffs do not establish semantic accuracy, host
+isolation or writing gain. Three added activation expectations are declarations,
+not executed activation-rate measurements. No new dependencies, provider SDKs,
+dataset rows, imported noncommercial code, tags or global installation are added.
+Remote CI must be inspected on the pushed commit separately; local macOS tests
+alone do not establish Windows or Linux compatibility.
+
 ### Opt-in evidence-link mechanism (2026-10-14)
 
 The [candidate procedure](../references/evidence-link-candidate.md) implements

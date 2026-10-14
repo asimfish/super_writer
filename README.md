@@ -27,6 +27,13 @@ Python 脚本负责可重复的检查。项目不自带模型，不承诺录用�
 是否需要改变写法；**尚未执行新模型盲测，不代表效果提升，也未升级默认规则**。
 [具体机制与正反边界](references/evidence-link-candidate.md) · [可复现输入与下一轮验证](evals/evidence-link/README.md)
 
+**可选角色协作：** 借鉴 IdeaScientist，把差距诊断、改法提议和正文实现分开，由编排者调度，
+审读者从成稿检查理解、范例迁移和证据忠实性。交接工具检查版本、职责、回退和停止，
+不自动调用模型，也不把检查通过当成写作提升。大型想法库用于发现论文的设计已记录，**尚未下载或导入**。
+[角色与架构图](docs/system-organization.md#可选角色协作与反馈) ·
+[来源核实与奖励适配](docs/research/ideascientist-2026-10-15.md) ·
+[原创交接示例](examples/writing-team/README.md)
+
 <a id="examples"></a>
 ## 样文：先看结果
 

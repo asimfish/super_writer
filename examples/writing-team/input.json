@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task": "Revise only this synthetic Results passage to explain the layout-coverage comparison. This is authored development material, not real research or a blinded trial.",
+  "draft": "We collect 600 demonstrations across 12 layouts. Our policy reaches 68% success. The baseline achieves 51%. These findings establish broad generalization.",
+  "evidence": {
+    "E1": "Both policies use 600 demonstrations, the same architecture, task mix and optimization budget. The varied-layout policy uses 12 training layouts; the narrow-layout baseline uses two.",
+    "E2": "On the same six held-out layouts, with 40 trials per layout, the varied-layout policy has reported mean success of 68% and the narrow-layout baseline 51%.",
+    "E3": "This comparison supports an advantage of broader training-layout coverage in this evaluation. Other tasks and types of distribution shift were not evaluated; no significance test is supplied."
+  },
+  "exemplars": {
+    "S1": {
+      "source": "Original synthetic teaching observation, not a published paper",
+      "location": "examples/writing-team/README.md, Editorial Choice",
+      "choice": "Introduce a matched control before interpreting a performance difference, so the reader can distinguish coverage from dataset size.",
+      "applicability": "The author's evidence must actually fix dataset size and relevant training conditions while varying coverage.",
+      "non_transfer": "Do not transfer another study's scores, infer statistical significance, or claim general robustness. The control can be placed in a preceding sentence rather than one prescribed sentence order."
+    }
+  },
+  "max_steps": 12,
+  "events": []
+}

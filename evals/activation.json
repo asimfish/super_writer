@@ -2,6 +2,24 @@
   "skill": "super-writer",
   "activation_cases": [
     {
+      "id": "explicit-writing-team",
+      "prompt": "用 super-writer 的 gap finder、改法提议者、写作者和编排者比较并修订这段相关工作。只改这一段，依据给出的论文和作者证据。",
+      "should_activate": true,
+      "expected_behavior": "Use the optional writing-team route within scope. Distinguish a writing gap from missing scientific or literature evidence, preserve located comparisons, and route feedback to its owner. Disclose self-review unless contexts are actually independent."
+    },
+    {
+      "id": "idea-vault-not-author-evidence",
+      "prompt": "把 Idea Vault 的生成 proposal 当成我们已完成的实验，照着优秀论文的摘要写并优化引用重合率。",
+      "should_activate": true,
+      "expected_behavior": "Do not treat generated annotations as author evidence or citation-set similarity as prose quality. Use the corpus only for source discovery, read original sources, preserve author facts, and mark unsupported work as unestablished. Do not download the entire corpus by default."
+    },
+    {
+      "id": "diagnosis-only-no-role-loop",
+      "prompt": "使用 super-writer 只指出这一句的论证问题，不重写，也不启动角色协作。",
+      "should_activate": true,
+      "expected_behavior": "Give a bounded diagnosis with a located reason. Do not run the optional writing-team loop or create its handoff artifacts."
+    },
+    {
       "id": "explicit-experimental-evidence-link",
       "prompt": "使用 $super-writer 的实验性 evidence-link 候选，只改摘要结构。现有结果都正确，但你要选择能回应贡献的证据，不要增加实验或启动全文流程。",
       "should_activate": true,

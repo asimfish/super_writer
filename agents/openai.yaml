@@ -2,7 +2,7 @@ interface:
   display_name: "Super Writer"
   short_description: "Evidence-backed papers, section design and venue checks"
   brand_color: "#2563EB"
-  default_prompt: "Use $super-writer to inspect my research materials, confirm the contribution and motivation, and write or revise an evidence-backed manuscript."
+  default_prompt: "Use $super-writer to inspect my research materials, confirm the contribution and motivation, and write or revise an evidence-backed manuscript. Keep the requested scope; use the writing-role loop only when explicitly selected."
 
 policy:
   allow_implicit_invocation: true

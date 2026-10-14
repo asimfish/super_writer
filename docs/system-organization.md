@@ -56,6 +56,51 @@ flowchart TB
 | [表格骨架](../references/table-templates/) | 5 个 | 待填真实材料的 TeX 结构，不是已经完成的实验 |
 | [会议档案](../references/venue-profiles.json) | 11 个 | 2026-09-06 核对的归档；目标年份、赛道、阶段的现行规则仍需复查 |
 
+### 可选角色协作与反馈
+
+借鉴 IdeaScientist 后增加的是**有明确交接的局部修订流程**，不是另一套字典或完整论文工作流。
+只有明确选择时才启用；普通写作仍沿用既有默认规则。编排者负责范围、分派和停止，
+gap finder 负责诊断，改法提议者负责写作操作，写作者负责正文；审读和范例阅读是支持职能。
+
+```mermaid
+flowchart TB
+    A[Author task and evidence] --> O[Orchestrator: scope and budget]
+    O --> G[Gap finder: located reader difficulty]
+    G --> P[Revision proposer: operation and success test]
+    P --> W[Writer: candidate passage]
+    W --> R[Reviewer: prose-first read-back]
+    R --> D{Decision}
+    D -->|wrong diagnosis| G
+    D -->|unsuitable operation| P
+    D -->|failed realization| W
+    D -->|supported acceptance| F[Located manuscript edit]
+    D -->|missing evidence or stop| K[Keep original and report query]
+    O -.->|budget exhausted| K
+    V[External discovery sources] --> L[Exemplar learner: read original passage]
+    L --> C[Existing dossier: choice, conditions, non-transfer]
+    C -.-> G
+    C -.-> P
+    C -.-> R
+```
+
+这里有三类不同的“差距”：**文稿没讲清楚、作者证据不足、相关文献尚未核实**。
+只有第一类能直接靠写作修复；后两类需要补充事实或阅读，不能由提议者生成一个看似合理的结果。
+相关工作先选择有依据的比较轴，再组织区别；检索没找到不等于从未有人做过。
+
+审读给出三项独立反馈：论证本身能否理解、是否迁移了适用的写作选择、是否忠于作者证据。
+它们不合成未经校准的分数，引用集合重合也不代表文字质量。缺范例时，范例迁移标为未评估。
+
+`writing_loop.py` 只检查结构、ID、原文片段、交接归属及输入版本，输出下一个角色的数据包；
+真正的阅读、改写和 agent 调用仍由宿主执行。它不是工具权限沙箱；同一上下文连续扮演角色
+必须标注自审，不能称独立评审。非接受状态保留原文，不因多改几轮就采用最后一稿。
+
+大型想法库处在外部发现层：先发现论文，再读原文，再归纳成带条件的写作选择。
+它不是数百万份优质摘要，也没有计入本仓库的资源数量。
+[来源、数据版本与许可](research/ideascientist-2026-10-15.md) ·
+[职责和交接协议](../references/writing-team.md) ·
+[设计取舍](designs/adr-003-writing-role-handoffs.md) ·
+[原创示例](../examples/writing-team/README.md)
+
 ## B. 形成过程：三类输入不能混用
 
 系统的组织来自现有工作流的继承、公开资源的选择性吸收，以及本地范文分析与评测。

@@ -442,3 +442,19 @@ rights to external standard content. No compliance, human domain-review result,
 model training or writing-quality gain is inferred. No executable upstream code,
 dependency, hook, secret read, autonomous network action, global installation,
 commit or publication is introduced.
+
+## IdeaScientist Design Study (2026-10-15)
+
+Reviewed `jiarui-liu/IdeaScientist` at
+`82a98a08772eab08d11fd097445afa4a8eaaa5b3`, paper arXiv:2610.04074v1, and
+`Jerry999/SvalbardIdeaVault` data card revision
+`64ab36be959afab06066f8c1e7ea292dba9362e5`. See the
+[reading scope, differing corpus counts and asset licenses](docs/research/ideascientist-2026-10-15.md).
+
+Independently adapt artifact-based role separation, bounded feedback and distinct
+evaluation components to writing diagnosis, editorial proposals, prose and
+read-back. No CC BY-NC upstream code/prompts, training rubrics, corpus rows,
+weights or paper prose are copied. New role cards, checker and synthetic teaching
+example are original. The external corpus is discovery-only, not installed or
+counted as local templates. No new network/model/credential capability, semantic
+proof, independent writing trial or quality promotion is claimed.

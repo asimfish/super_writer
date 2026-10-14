@@ -1,0 +1,53 @@
+{
+  "gap_finder": {
+    "status": "actionable",
+    "diagnosis": "The scores are disconnected from the matched-data comparison, and the ending overstates evaluation scope.",
+    "draft_witness": "These findings establish broad generalization.",
+    "reader_question": "Does layout coverage help at fixed demonstration count, and where was that tested?",
+    "evidence_ids": ["E1", "E2", "E3"],
+    "source_ids": ["S1"]
+  },
+  "proposer": {
+    "status": "revise",
+    "operation": "Frame the comparison around coverage at fixed data volume; bind both scores to their policies and the same held-out layouts; narrow the interpretation to this test.",
+    "expected_effect": "The reader can identify what the comparison distinguishes without inferring that more demonstrations explain the advantage.",
+    "risk": "Calling the comparison proof of generalization would exceed the evidence; listing every controlled detail could obscure the contrast.",
+    "success_test": "From prose alone, recover the fixed count, varied coverage, comparison scope, direction and bounded implication.",
+    "evidence_ids": ["E1", "E2", "E3"],
+    "source_ids": ["S1"]
+  },
+  "writer": {
+    "text": "To test layout coverage at fixed data volume, we train both policies on 600 demonstrations with the same architecture, task mix and optimization budget. Training across 12 layouts yields 68% mean success on six held-out layouts, compared with 51% for training on two layouts. This comparison supports broader training-layout coverage for the evaluated layout shift; it does not establish robustness to other tasks or shifts.",
+    "evidence_ids": ["E1", "E2", "E3"],
+    "open_queries": []
+  },
+  "reviewer": {
+    "decision": "accept",
+    "comparison": "better",
+    "reason": "For this authored example the selected control is realized, the score referents are recoverable, and the closing scope matches E3. This is a supplied teaching judgment, not an independent evaluation.",
+    "readback": "With count and training conditions fixed, broader layout coverage is associated with higher success on the same held-out layouts; the evidence is restricted to that layout shift.",
+    "judgments": {
+      "intrinsic": {
+        "status": "pass",
+        "reason": "The opening explains the comparison's question before presenting its answer.",
+        "witness": "To test layout coverage at fixed data volume",
+        "evidence_ids": ["E1"],
+        "source_ids": []
+      },
+      "reference_function": {
+        "status": "pass",
+        "reason": "The synthetic teaching choice is applied as a matched control, not copied scientific content or a compulsory sentence order.",
+        "witness": "we train both policies on 600 demonstrations",
+        "evidence_ids": ["E1"],
+        "source_ids": ["S1"]
+      },
+      "fidelity": {
+        "status": "pass",
+        "reason": "The comparison preserves E1/E2 and does not extend E3 beyond the evaluated shift. No significance claim was introduced.",
+        "witness": "it does not establish robustness to other tasks or shifts.",
+        "evidence_ids": ["E1", "E2", "E3"],
+        "source_ids": []
+      }
+    }
+  }
+}
