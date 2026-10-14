@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "status": "development_not_quality_evidence",
+  "provenance": "Original synthetic facts and editorial expectations authored for this repository under its MIT license. No copied paper text, private research or model completions.",
+  "families": [
+    {
+      "id": "E01",
+      "domain": "embodied_learning",
+      "unit": "abstract",
+      "task": "Write a bounded abstract passage introducing the resource and the evidence for the author-prioritized addition.",
+      "author_priority": "Select a supported resource contribution.",
+      "evidence": {
+        "E1": "The released robot dataset contains 12000 successful demonstrations collected at 16 sites using one documented collection protocol. This establishes the resource's recorded scale and construction, not its uniqueness in the literature.",
+        "E2": "In a size-matched study with 2000 demonstrations per condition, policies trained across 12 scenes succeed on 58% of the held-out scene tasks, versus 41% for policies trained across three scenes. Backbone, training steps and task set are shared. No significance test or unseen task-family claim is available.",
+        "E3": "On a separate shared task set, adding all released demonstrations to local training data raises policy success from 32% to 61%. This comparison changes both amount and scene coverage; it does not separate them."
+      },
+      "probes": [
+        {
+          "id": "E01-diversity",
+          "changes": {"author_priority": "Foreground the measured usefulness of scene diversity at equal data size, not just the dataset's scale."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1", "E2"],
+            "required_meanings": ["The size-matched scene comparison answers the diversity promise; policies are the evaluated objects.", "The inference concerns the held-out scene tasks with shared backbone and steps."],
+            "forbidden_meanings": ["Treating the 32-to-61 gain alone as isolating diversity.", "Claiming significance, uniqueness or general robot competence."],
+            "reason": "A large co-training gain is true but does not distinguish amount from coverage."
+          }
+        },
+        {
+          "id": "E01-resource",
+          "changes": {"author_priority": "Foreground the released resource's scale and reproducible construction; utility is secondary, and no new performance method is claimed."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1"],
+            "required_meanings": ["Recorded scale, collection scope and release are the central addition.", "Any optional utility finding retains its actual comparison scope."],
+            "forbidden_meanings": ["Requiring an ablation before a resource can be described.", "Recasting the resource as a novel policy algorithm or proving literature uniqueness."],
+            "reason": "The same evidence permits a different allocation when the contribution priority changes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "domain": "vision_learning",
+      "unit": "results",
+      "task": "Explain what the data-composition comparison establishes without listing the setup as unrelated facts.",
+      "author_priority": "Determine whether broader training data improve recognition under the actual comparison.",
+      "evidence": {
+        "E1": "A classifier trained on broad data has 63% recognition accuracy, versus 49% for the narrow-data classifier, on the same 1000 held-out images. Dataset sizes and training steps are equal. These are descriptive accuracies without a significance analysis.",
+        "E2": "The backbone relationship must be supplied in the probe.",
+        "E3": "No experiment isolates a neural mechanism, and no other recognition task is evaluated."
+      },
+      "probes": [
+        {
+          "id": "E02-shared-backbone",
+          "changes": {"evidence.E2": "Both classifiers use the same backbone."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1", "E2"],
+            "required_meanings": ["The shared backbone and budget qualify the broad-versus-narrow comparison where the result is interpreted.", "The tested classifiers, not their training images, have the reported accuracies."],
+            "forbidden_meanings": ["An isolated neural mechanism or statistical significance.", "Separating a short control sentence merely to satisfy a setup checklist."],
+            "reason": "Binding a relevant control makes the data comparison intelligible; no universal sentence pattern is required."
+          }
+        },
+        {
+          "id": "E02-different-backbones",
+          "changes": {"evidence.E2": "The broad-data classifier uses backbone H; the narrow-data classifier uses backbone L."},
+          "oracle": {
+            "disposition": "narrowed",
+            "selected_evidence_ids": ["E1", "E2"],
+            "required_meanings": ["Data composition and backbone change together in the observed classifier comparison.", "The result alone does not attribute the difference to broader data."],
+            "forbidden_meanings": ["Inventing a shared backbone or treating equal data size as matching the architecture.", "Dropping a valid descriptive result because isolated attribution is unavailable."],
+            "reason": "Changing one control changes the licensed interpretation, not the recorded accuracies."
+          }
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "domain": "language_model_evaluation",
+      "unit": "results",
+      "task": "Report the evaluated object's result and explain the metric's meaning under the fixed comparison.",
+      "author_priority": "Compare two models trained on different example sets without confusing examples with evaluated models.",
+      "evidence": {
+        "E1": "Model A is trained on annotated examples and model B on unannotated examples. Both use the same architecture, training steps and 800 held-out questions.",
+        "E2": "The measured quantity and direction must be supplied in the probe.",
+        "E3": "No significance test or experiment separating annotation content from all associated collection choices is supplied."
+      },
+      "probes": [
+        {
+          "id": "E03-answer-accuracy",
+          "changes": {"evidence.E2": "Exact-answer accuracy is 65% for model A and 50% for model B; higher is better."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1", "E2"],
+            "required_meanings": ["The models, not example sets, achieve exact-answer accuracy.", "Model A has a descriptive 15-percentage-point accuracy advantage on these questions."],
+            "forbidden_meanings": ["Examples answering questions or a 15% relative gain.", "An isolated annotation mechanism or significant improvement."],
+            "reason": "The grammatical subject and reporting unit must agree with the evaluated quantity."
+          }
+        },
+        {
+          "id": "E03-calibration-error",
+          "changes": {"evidence.E2": "Expected calibration error is 0.06 for model A and 0.12 for model B under the same stated binning rule; lower is better. No answer-accuracy values are supplied."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1", "E2"],
+            "required_meanings": ["Model A has lower measured calibration error under the shared rule.", "Calibration error does not supply an answer-accuracy comparison."],
+            "forbidden_meanings": ["Treating lower error as worse performance.", "Claiming better answer accuracy or universal calibration from these values."],
+            "reason": "Changing the metric changes the finding, not only the number inserted into a stock performance sentence."
+          }
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "domain": "robotics_evaluation",
+      "unit": "results",
+      "task": "Explain the simulator comparison and state the conclusion that the requested target permits, without repeated generic cautions.",
+      "author_priority": "Evaluate a simulator's usefulness for policy assessment.",
+      "evidence": {
+        "E1": "For three policies tested on the same robot task, physical success rates are 40%, 60% and 80%; simulator rates are 65%, 85% and 95%. Both order the policies from first to third identically. No uncertainty analysis is supplied.",
+        "E2": "Absolute simulator rates are higher for every policy. No calibration procedure was applied.",
+        "E3": "This assessment includes one task and three policies, not other task families."
+      },
+      "probes": [
+        {
+          "id": "E04-ranking",
+          "changes": {"author_priority": "Assess whether the simulator reproduces the policy ordering on the tested task."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1", "E3"],
+            "required_meanings": ["The observed ordering agrees for these three policies on this task.", "Any qualification distinguishes ordering from absolute-rate prediction without restating the same scope at every sentence."],
+            "forbidden_meanings": ["Equating ordering agreement with calibrated success probabilities.", "General simulator validity or redundant denials of universal superiority."],
+            "reason": "A scoped ranking conclusion answers the active question; another generic closing caution adds no test."
+          }
+        },
+        {
+          "id": "E04-absolute-rate",
+          "changes": {"author_priority": "Assess whether simulator success rates accurately estimate physical success rates, not merely their ordering."},
+          "oracle": {
+            "disposition": "narrowed",
+            "selected_evidence_ids": ["E1", "E2"],
+            "required_meanings": ["Absolute rates overestimate physical success in every tested policy, despite preserved ordering.", "Ranking agreement cannot validate the requested absolute-rate estimate."],
+            "forbidden_meanings": ["Treating a preserved ranking as evidence of calibration.", "Inventing a rate correction or hiding the positive bias."],
+            "reason": "The same measurements answer a different question negatively when the evaluation target changes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "domain": "statistical_evaluation",
+      "unit": "methods",
+      "task": "Explain the reason for using the two measures in this evaluation.",
+      "author_priority": "Keep metric definition distinct from the rationale for a complementary measurement.",
+      "evidence": {
+        "E1": "Pearson correlation measures linear association between simulated and physical success rates.",
+        "E2": "The supplied design also measures policy-order agreement. A monotone nonlinear mapping can preserve policy order without preserving a linear rate relationship, so the two measures answer distinct questions.",
+        "E3": "No theorem makes ordering agreement sufficient for accurate absolute rates, and no observed superiority of one metric is reported."
+      },
+      "probes": [
+        {
+          "id": "E05-definition-only",
+          "changes": {"task": "Write a bounded Methods definition of Pearson correlation for this evaluation; do not redesign or justify the metric suite."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1"],
+            "required_meanings": ["Pearson quantifies linear association between the specified rate measurements.", "The bounded definition request does not require adding a metric-selection argument."],
+            "forbidden_meanings": ["Calling Pearson an absolute calibration measure.", "Expanding a definition-only edit into a new experimental design."],
+            "reason": "A complete definition can be sufficient for the requested unit."
+          }
+        },
+        {
+          "id": "E05-complementary-rationale",
+          "changes": {"task": "Explain why the supplied design retains policy-order agreement alongside Pearson correlation, not just what the measures are named."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1", "E2"],
+            "required_meanings": ["A monotone nonlinear relationship can retain order without a linear rate relationship.", "The complementary measures separate linear association from policy-order agreement."],
+            "forbidden_meanings": ["A definition list as a substitute for the requested rationale.", "Claiming the pairing proves accurate absolute rates or measured superiority."],
+            "reason": "The rationale needs the distinguishing relationship, not another adjective describing Pearson."
+          }
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "domain": "optimization_theory",
+      "unit": "abstract",
+      "task": "Describe the formal contribution and the implementation without assigning the theorem beyond its assumptions.",
+      "author_priority": "Preserve the theorem as a contribution while accurately describing its application to the implemented sampler.",
+      "evidence": {
+        "E1": "The proved sampler theorem returns the exact target distribution when target and proposal densities are known exactly and the stated rejection correction is applied.",
+        "E2": "The implementation's density access must be supplied in the probe.",
+        "E3": "A toy evaluation reports sample-moment error of 0.03 for the implementation. No bound relates that measured moment error to distributional equality."
+      },
+      "probes": [
+        {
+          "id": "E06-exact-implementation",
+          "changes": {"evidence.E2": "The implementation uses exactly evaluated target and proposal densities and applies the theorem's stated rejection correction."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1", "E2"],
+            "required_meanings": ["The implementation meets the stated assumptions of the exact-distribution theorem.", "The empirical moment measurement is not the proof of exactness."],
+            "forbidden_meanings": ["A guarantee for arbitrary unknown densities.", "A 0.03 moment error as a certificate of distributional equality."],
+            "reason": "The theorem can apply when its operational assumptions are actually satisfied."
+          }
+        },
+        {
+          "id": "E06-approximate-implementation",
+          "changes": {"evidence.E2": "The implementation substitutes a learned approximate proposal density whose error is not bounded; it otherwise applies the stated rejection correction."},
+          "oracle": {
+            "disposition": "narrowed",
+            "selected_evidence_ids": ["E1", "E2", "E3"],
+            "required_meanings": ["The formal exactness result retains its exact-density assumption.", "The approximate implementation has an observed toy moment error, not established exact-distribution output."],
+            "forbidden_meanings": ["Silently inheriting the exact theorem in the approximate implementation.", "Deleting a legitimate theorem because an implementation uses approximations."],
+            "reason": "A changed assumption changes which contribution and empirical evidence can be linked."
+          }
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "domain": "vision_learning",
+      "unit": "results",
+      "task": "Interpret the component-removal result alongside the full-system comparison.",
+      "author_priority": "Determine whether the full-system gain can be attributed to component M in the tested configuration.",
+      "evidence": {
+        "E1": "Full-system accuracy is 58%, versus 50% for the reference system, on one shared image task with matched training steps.",
+        "E2": "Removing component M holds all other specified settings fixed. The removal result must be supplied in the probe.",
+        "E3": "All results are descriptive single-run values without a significance analysis or a test of the proposed internal mechanism."
+      },
+      "probes": [
+        {
+          "id": "E07-removal-worse",
+          "changes": {"evidence.E2": "Removing component M holds all other specified settings fixed and yields 54% accuracy."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E1", "E2", "E3"],
+            "required_meanings": ["Removal lowers the recorded accuracy by four points in this configuration.", "This supports a bounded component effect but does not establish its internal mechanism or assign a fraction of the total gain."],
+            "forbidden_meanings": ["Proof that M is necessary on other tasks or architectures.", "A significant effect or identified neural cause from a single run."],
+            "reason": "A removal contrast can inform attribution without becoming a universal mechanism claim."
+          }
+        },
+        {
+          "id": "E07-removal-better",
+          "changes": {"evidence.E2": "Removing component M holds all other specified settings fixed and yields 60% accuracy."},
+          "oracle": {
+            "disposition": "narrowed",
+            "selected_evidence_ids": ["E1", "E2", "E3"],
+            "required_meanings": ["The full system still beats the reference, but removing M improves the recorded accuracy further.", "This result does not support attributing the full-system gain to M's benefit in this configuration."],
+            "forbidden_meanings": ["Suppressing the adverse component finding to preserve a positive story.", "Inferring that M is always harmful or inventing uncertainty to reverse the observation."],
+            "reason": "Changing the removal outcome changes the attribution while leaving the main result intact."
+          }
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "domain": "model_serving",
+      "unit": "abstract",
+      "task": "Write a bounded abstract passage preserving independently supported author-prioritized additions and their actual comparators.",
+      "author_priority": "Treat higher action-generation throughput and fewer expert corrections as two important completed contributions if both are established.",
+      "evidence": {
+        "E1": "A serving interface uses cached action plans and an expert correction channel. Construction details alone do not establish a throughput or correction benefit.",
+        "E2": "On a fixed request workload, action-generation throughput is 32 actions per second versus 16 for serving baseline A on the same device. End-to-end task latency is not measured.",
+        "E3": "The expert-correction result must be supplied in the probe."
+      },
+      "probes": [
+        {
+          "id": "E08-two-supported-additions",
+          "changes": {"evidence.E3": "On a separate fixed assistance task set, expert corrections average four per task versus six for interface baseline B. A and B are distinct baselines; no significance analysis is supplied."},
+          "oracle": {
+            "disposition": "supported",
+            "selected_evidence_ids": ["E2", "E3"],
+            "required_meanings": ["Both throughput and expert-correction findings retain meaningful space.", "Each finding remains attached to its distinct baseline and measurement boundary."],
+            "forbidden_meanings": ["Dropping the correction contribution solely because the throughput ratio is larger.", "Turning two baselines into one joint comparison or throughput into complete task latency."],
+            "reason": "The evidence links preserve co-contributions rather than enforcing one metric per abstract."
+          }
+        },
+        {
+          "id": "E08-unmeasured-second-addition",
+          "changes": {"evidence.E3": "Expert-correction counts have not been measured. No correction comparison or result is available."},
+          "oracle": {
+            "disposition": "narrowed",
+            "selected_evidence_ids": ["E2"],
+            "required_meanings": ["The completed finding is action-generation throughput under its stated comparison.", "The requested correction benefit is unestablished and belongs in an author query, not as a completed finding."],
+            "forbidden_meanings": ["Inventing fewer expert corrections or rebranding an unmeasured benefit as demonstrated.", "Leaking reporting gaps into the manuscript as source-packet commentary."],
+            "reason": "An author's priority requires allocation only when its completed-result claim is supported."
+          }
+        }
+      ]
+    }
+  ]
+}

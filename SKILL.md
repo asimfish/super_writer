@@ -71,6 +71,7 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
 | Resume | [resume](references/resume.md) | First incomplete stage and its upstream prerequisites |
 | Research | [research](references/research.md) | Source index, dossier, exemplars, style profile, gap map, motivation options |
 | Learn an exemplar's writing decisions | [argument transfer](references/argument-transfer.md), [exemplar dossier](references/exemplar-learning-dossier.md) | Located source choice, reader question, applicable author evidence, planned text action and final prose check |
+| Explicitly test experimental evidence allocation | [evidence-link candidate](references/evidence-link-candidate.md) | Opt-in selection, comparison binding and prose read-back in the existing plan; not promoted or measured better |
 | Contribution | [contribution](references/contribution.md) | Confirmed contribution; `contribution_check.py` |
 | Citations | [citation](references/citation.md) | Sentence-level support bank; `citation_bank_check.py` |
 | Rewrite a draft | [rewrite](references/rewrite.md) | Original logic map, rewrite matrix, logic-transfer audit, manuscript |
@@ -143,6 +144,11 @@ reader's question, why the choice works, our supporting evidence, and the actual
 text action. After drafting, read back the claim from prose before consulting
 the plan; check its recovered relation and scope against the evidence, not
 merely that the source was cited or its keywords appear.
+
+Only when the author or an evaluation explicitly selects the experimental
+[evidence-link candidate](references/evidence-link-candidate.md), use its
+evidence-choice and realization procedure inside the same plan. Otherwise retain
+the default argument-transfer workflow; development fixtures are not proof of gain.
 
 For an active section or experiment table, select one protocol and suitable
 variant from [writing protocols](references/writing-protocols.md), not the whole

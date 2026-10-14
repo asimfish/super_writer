@@ -2,6 +2,24 @@
   "skill": "super-writer",
   "activation_cases": [
     {
+      "id": "explicit-experimental-evidence-link",
+      "prompt": "使用 $super-writer 的实验性 evidence-link 候选，只改摘要结构。现有结果都正确，但你要选择能回应贡献的证据，不要增加实验或启动全文流程。",
+      "should_activate": true,
+      "expected_behavior": "Use evidence-link-candidate only because it is explicitly selected. Choose promise-relevant author evidence, bind object/comparator/conditions and read back within the existing bounded plan. Do not import fixture facts, claim a measured gain or start a full artifact tree."
+    },
+    {
+      "id": "ordinary-writing-keeps-default-guide",
+      "prompt": "用 super-writer 根据这些已确认贡献和结果写一个摘要，不做机制实验，也不补实验。",
+      "should_activate": true,
+      "expected_behavior": "Use the default argument-transfer and abstract decisions. Do not automatically load or promote the experimental evidence-link candidate; preserve facts and bounded author priorities."
+    },
+    {
+      "id": "punctuation-excludes-experimental-replanning",
+      "prompt": "不要用 super-writer；只改这段摘要的标点，不要重新规划贡献、选证据或调整句序。",
+      "should_activate": false,
+      "expected_behavior": "Respect explicit exclusion and the punctuation-only scope. Do not activate the candidate, change evidence allocation or launch manuscript planning."
+    },
+    {
       "id": "academic-clarity-not-maintenance-grammar",
       "prompt": "使用 $super-writer 只改论文方法段中的 it 指代和名词修饰关系。保留 vision-language-action model、running mean 以及准确的被动语态和时态。",
       "should_activate": true,

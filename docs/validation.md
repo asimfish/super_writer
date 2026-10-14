@@ -6,6 +6,47 @@ behavior below, not research novelty, factual entailment or acceptance gains.
 
 ## Reproducible Checks
 
+### Opt-in evidence-link mechanism (2026-10-14)
+
+The [candidate procedure](../references/evidence-link-candidate.md) implements
+promise-relevant evidence selection, evaluated-object/comparison binding, prose
+realization and read-back inside the existing dossier/rationale workflow. It is
+explicitly selected, not a default promotion. The last AI-spec trial's 3 / 10 / 11
+verdict and failed gate remain unchanged. No new model writing trial is executed.
+
+- Twelve new tests pass: 16 paired development inputs differ in exactly one
+  priority, scope or evidence field; baseline/candidate packets share all writer
+  fields except guidance; private expectations stay out of input assembly. Hashes,
+  malformed/unknown selections, no-op and non-counterfactual changes, offline
+  assembly and default-guide preservation are checked. A caller-mutation regression
+  first fails, then passes with separate evidence snapshots for each packet.
+- The actual release bundle retains the candidate, cases, README and packet tool;
+  an extracted, relocated CLI produces the same complete packet and input digest.
+  The tool prints JSON only; it does not generate prose, grade semantics or enforce
+  filesystem isolation. Guidance exposure is unequal and disclosed. A 120-word
+  ceiling has no lower-bound padding requirement.
+- Python 3.14 runs 294 tests: 293 pass, one PowerShell-unavailable skip. All 11
+  existing CLI smoke checks, Python compilation and whitespace checks pass.
+  This is local macOS evidence; remote CI/platform results are checked separately.
+- The AI-spec archive check still reproduces all frozen inputs, 13 completions,
+  blinding, judgments, recovery and HTML, with all 55 experimental receipts intact.
+  The default argument-transfer guide is byte-identical to its frozen baseline;
+  library, protocol and venue hashes retain the ADR-001 values. No catalog entries,
+  agent defaults, versions, tags, global installs or prior experimental outputs change.
+
+The eight families / 16 probes / seven domain labels describe original synthetic
+development fixtures, not a paper corpus or independent samples. Three additional
+activation expectations are declarations, not an executed model routing evaluation.
+The new guide is locally authored from located failure hypotheses; no upstream
+text, dependency or new runtime network/credential/execution capability is imported.
+It adds no artifact columns or compulsory full-paper workflow for bounded edits.
+
+Engineering checks pass; writing effectiveness and independent semantic/activation
+review remain unverified. A fresh real-paper trial must freeze cases, budgets,
+access and promotion criteria before generation. Known development cases and past
+votes cannot establish held-out improvement. See the
+[reproduction commands and evaluation boundary](../evals/evidence-link/README.md).
+
 ### Pilot output-link portability (2026-10-13)
 
 The [first pilot publication CI](https://github.com/asimfish/super_writer/actions/runs/38399574723)

@@ -27,6 +27,14 @@ Local metric explanation improves, but evidence selection and cohesion still los
 [Results and failure analysis](docs/ai-spec-pilot-evaluation.md) ·
 [Side-by-side comparison](evals/ai-spec-pilot/comparison.html)
 
+**Mechanism candidate:** an opt-in evidence-selection, comparison-binding,
+prose-realization and read-back procedure uses the existing rationale matrix,
+without another required report. Eight families / 16 counterfactual development
+probes change a priority or condition to require a different writing decision.
+**No new model trial, quality gain or default promotion is claimed.**
+[Candidate and exceptions](references/evidence-link-candidate.md) ·
+[Reproducible inputs and next evaluation](evals/evidence-link/README.md)
+
 <a id="examples"></a>
 ## Start With the Examples
 

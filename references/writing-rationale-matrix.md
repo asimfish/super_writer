@@ -71,6 +71,13 @@ its applicability in the evidence column, and the actual writing operation in
 question. Keep the existing columns; citing a paper or reproducing its sentence
 count alone does not show transfer.
 
+For an explicitly selected [evidence-link experiment](evidence-link-candidate.md),
+record which available evidence answers the foregrounded promise and why another
+plausible fact is deferred in the existing evidence/planned-move cells. Bind the
+evaluated object, comparison and consequential condition in the text action;
+read back that relation in the final check. This opt-in candidate adds no columns
+or required rows and is not a promoted default or a semantic checker.
+
 Minimum depth requirement:
 
 - Use at least 8 rows for ordinary manuscripts/reports. Longer manuscripts

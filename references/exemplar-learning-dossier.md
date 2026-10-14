@@ -11,6 +11,13 @@ applicability and final-prose checks. For a bounded section, analyze only its
 relevant passages and use the existing plan; the full dossier and all templates
 below are for full-paper work. A filled artifact does not by itself prove learning.
 
+When explicitly testing the [evidence-link candidate](evidence-link-candidate.md),
+make the handoff actionable: identify the author's foregrounded promise, the
+available evidence that best answers it, the alternative that evidence distinguishes,
+and any necessary object/control/scope binding. Use the existing transfer column;
+mark unsupported applicability instead of prescribing the exemplar's experiment.
+Do not apply this experimental extension as a default requirement.
+
 For a user-supplied overview or system description, use the bounded
 [organization-learning branch](style-learning-workflow.md#explain-a-system-or-synthesize-a-rule-set)
 to distinguish structure, operations, conditional guidance and verification;

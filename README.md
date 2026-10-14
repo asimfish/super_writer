@@ -22,6 +22,11 @@ Python 脚本负责可重复的检查。项目不自带模型，不承诺录用�
 **未通过预设门槛，默认规则不变**。指标解释有局部改善，但证据选择与段落衔接仍有退步。
 [完整结果和失败分析](docs/ai-spec-pilot-evaluation.md) · [横向对比](evals/ai-spec-pilot/comparison.html)
 
+**机制改进候选：** 新增“选证据 → 绑定对象与对照 → 组织成句 → 成稿读回”的可选流程，
+接入现有写作矩阵，不新增必填报告。配套 8 类、16 个反事实开发探针，检验优先级或条件改变时
+是否需要改变写法；**尚未执行新模型盲测，不代表效果提升，也未升级默认规则**。
+[具体机制与正反边界](references/evidence-link-candidate.md) · [可复现输入与下一轮验证](evals/evidence-link/README.md)
+
 <a id="examples"></a>
 ## 样文：先看结果
 

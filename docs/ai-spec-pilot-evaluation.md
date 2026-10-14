@@ -75,6 +75,12 @@ comparison that tests it, place controls with that comparison, name the evaluate
 object, and interpret the result once with necessary scope rather than repeated
 generic cautions. These are **post-hoc hypotheses, not tested rules**.
 
+The [opt-in evidence-link candidate](../references/evidence-link-candidate.md)
+now implements that selection-and-realization procedure, with
+[16 original counterfactual development probes](../evals/evidence-link/README.md).
+Their packet/schema checks are not new writing results; the failed pilot verdict
+and all frozen experimental inputs and outputs remain unchanged.
+
 Freeze a new candidate before fresh cases. Keep author-abstract comparisons,
 human review and non-ceiling recovery assessment separate. Do not reuse this
 pilot as held-out confirmation, pool earlier votes or relax the failed gate.
