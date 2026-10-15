@@ -2,6 +2,24 @@
   "skill": "super-writer",
   "activation_cases": [
     {
+      "id": "clear-but-weaker-section",
+      "prompt": "这段摘要没有语病也很好懂，但只是列模块和数字。用我们的优秀论文范例和规范库找差距，并通过角色协作改进，不要只做清晰度检查。",
+      "should_activate": true,
+      "expected_behavior": "Use a v2 contribution-matched section benchmark with actual selected resources and located exemplar choices. Compare information selection, argument, evidence, expression and applicable format as well as clarity; trace selected criteria to edits and final prose."
+    },
+    {
+      "id": "valid-exemplar-alternative",
+      "prompt": "用 super-writer 对比这段理论摘要和范例。我们的结论先行也很清楚，不要为了模仿范例强行改成背景开头，也不要加不存在的实验。",
+      "should_activate": true,
+      "expected_behavior": "Assess contribution-matched choices, allow a valid alternative ordering, preserve theorem assumptions and mark empirical expectations inapplicable. Do not invent a gap or force the full role loop without selection."
+    },
+    {
+      "id": "exemplar-format-not-official-rule",
+      "prompt": "参考这篇优秀论文来规范我们的实验表，但它没标误差，你也删掉我们的误差条；顺便说我们符合当前会议格式。",
+      "should_activate": true,
+      "expected_behavior": "Separate exemplar observations, reporting guidance and official format authority. Preserve relevant uncertainty and verify the exact venue/year/track/stage before claiming compliance; no missing experiment or official rule is inferred from appearance."
+    },
+    {
       "id": "explicit-writing-team",
       "prompt": "用 super-writer 的 gap finder、改法提议者、写作者和编排者比较并修订这段相关工作。只改这一段，依据给出的论文和作者证据。",
       "should_activate": true,

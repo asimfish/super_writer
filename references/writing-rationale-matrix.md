@@ -71,6 +71,16 @@ its applicability in the evidence column, and the actual writing operation in
 question. Keep the existing columns; citing a paper or reproducing its sentence
 count alone does not show transfer.
 
+When the author requests excellent-paper-informed writing, first form a scoped
+[section benchmark](style-learning-workflow.md#section-benchmark-before-revision).
+Use the existing pattern/norm columns for its source choice and conditional
+expectation, the current-problem column for the consequential difference, and
+the final check for the implemented choice. Compare information selection,
+organization, evidence, expression and applicable format as well as clarity.
+Already-clear prose can still be a weak abstract or a paper-by-paper related-work
+list. Preserve strengths and valid alternative structures; no new columns or
+mandatory full-paper artifacts are needed for a bounded request.
+
 For an explicitly selected [evidence-link experiment](evidence-link-candidate.md),
 record which available evidence answers the foregrounded promise and why another
 plausible fact is deferred in the existing evidence/planned-move cells. Bind the

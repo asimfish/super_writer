@@ -65,7 +65,7 @@ gap finder 负责诊断，改法提议者负责写作操作，写作者负责正
 ```mermaid
 flowchart TB
     A[Author task and evidence] --> O[Orchestrator: scope and budget]
-    O --> G[Gap finder: located reader difficulty]
+    O --> G[Gap finder: section benchmark comparisons]
     G --> P[Revision proposer: operation and success test]
     P --> W[Writer: candidate passage]
     W --> R[Reviewer: prose-first read-back]
@@ -78,14 +78,26 @@ flowchart TB
     O -.->|budget exhausted| K
     V[External discovery sources] --> L[Exemplar learner: read original passage]
     L --> C[Existing dossier: choice, conditions, non-transfer]
-    C -.-> G
-    C -.-> P
-    C -.-> R
+    C --> B[Section benchmark: applicable choices and criteria]
+    N[Existing protocols, rules and language cards] --> B
+    B -.-> G
+    B -.-> P
+    B -.-> W
+    B -.-> R
 ```
 
-这里有三类不同的“差距”：**文稿没讲清楚、作者证据不足、相关文献尚未核实**。
+这里有三类不同的“差距”：**文稿的选择和组织不够好、作者证据不足、相关文献尚未核实**。
 只有第一类能直接靠写作修复；后两类需要补充事实或阅读，不能由提议者生成一个看似合理的结果。
 相关工作先选择有依据的比较轴，再组织区别；检索没找到不等于从未有人做过。
+
+第一类不只包含读不懂的地方。当前写法可能清楚、准确，但摘要只列模块而没有核心想法，
+相关工作只列论文而没有归纳，实验只列数值而没有问题、对照和解释。v2 对标输入把选定的
+章节协议、AI 规范、语言卡和具体范例观察真正传给各角色，比较内容、组织、证据、表达、
+清晰度和适用格式；每项区分差距、已达到、合理替代、不适用或未评估。
+提议者沿用所选差距，写作者给出正文实现位置，审读者不看前面评语而重新对标。
+只有规范而没有范例时明确标为 standards-only，不能声称已学习某篇优秀论文。
+[对标方法](../references/style-learning-workflow.md#section-benchmark-before-revision) ·
+[三类章节示例](../examples/writing-team/benchmark.md)
 
 审读给出三项独立反馈：论证本身能否理解、是否迁移了适用的写作选择、是否忠于作者证据。
 它们不合成未经校准的分数，引用集合重合也不代表文字质量。缺范例时，范例迁移标为未评估。

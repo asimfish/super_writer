@@ -6,7 +6,12 @@ tests. Reuse the existing dossier and rationale matrix; do not create a second
 full-paper workflow. `references/writing-team.md` owns the shared contract.
 
 Resolve the author's task and evidence; request source reading through the
-existing exemplar learner when needed. Dispatch only the next role packet from
+existing exemplar learner when needed. For exemplar/standards-based comparison, create a v2
+section benchmark first using `references/style-learning-workflow.md`; v1 remains
+the intrinsic-diagnosis compatibility path, not evidence of library-based review.
+Select applicable resource IDs and located exemplar observations, preserve their
+conditions/exceptions, and declare unassessed dimensions. Do not search unrelated
+papers or load the whole library to fill a quota. Dispatch the packet from
 `scripts/writing_loop.py`, store its actual response with the supplied hash, and
 check it before handing work onward. A receipt binds input bytes, not agent
 identity. Never label coordinator-authored fixtures independent agent output.

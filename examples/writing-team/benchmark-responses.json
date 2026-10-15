@@ -1,0 +1,58 @@
+{
+  "gap_finder": {
+    "status": "actionable",
+    "diagnosis": "The abstract is understandable and avoids exaggeration, but the module inventory hides the computation-saving insight. The result is not connected to a matched-backbone comparison.",
+    "draft_witness": "PatchMap has a map cache and an update module.",
+    "reader_question": "What work does PatchMap avoid, and how do the measurements evaluate that contribution?",
+    "evidence_ids": ["E1", "E2", "E3"],
+    "source_ids": ["S1"],
+    "selected_criteria": ["C1", "C2", "C3"],
+    "assessments": {
+      "C1": {"status": "gap", "current": "Names two modules but omits selective cell updating.", "difference": "S1's transferable operation-to-problem explanation is missing despite E1 supplying it.", "draft_witness": "PatchMap has a map cache and an update module.", "evidence_ids": ["E1"]},
+      "C2": {"status": "gap", "current": "Moves from an inventory to evaluation and scores.", "difference": "The abstract protocol's insight/mechanism move can explain why the timing evidence matters, not just reorder the same inventory.", "draft_witness": "We evaluate it on 120 indoor navigation trials.", "evidence_ids": ["E1", "E2"]},
+      "C3": {"status": "gap", "current": "Preserves both scores but leaves the matched backbone implicit.", "difference": "The comparison should expose the fixed perception backbone while retaining the slightly lower observed success.", "draft_witness": "compared with 28 ms and 82% for full rebuilding.", "evidence_ids": ["E2", "E3"]},
+      "C4": {"status": "meets", "current": "Uses map-update time and task success rather than vague efficiency claims.", "difference": "Keep those exact quantity names; no sophisticated synonym is needed.", "draft_witness": "Mean map-update time is 12 ms and task success is 81%", "evidence_ids": ["E2", "E3"]},
+      "C5": {"status": "meets", "current": "The comparison values and method referents are understandable.", "difference": "This is not a comprehension failure; the selected gaps concern scientific emphasis and organization.", "draft_witness": "Mean map-update time is 12 ms and task success is 81%, compared with 28 ms and 82% for full rebuilding.", "evidence_ids": ["E2"]},
+      "C6": {"status": "meets", "current": "One short paragraph fits the requested word budget.", "difference": "Preserve the supplied format; no venue-specific rule is inferred.", "draft_witness": "We present PatchMap for indoor robot navigation.", "evidence_ids": []}
+    }
+  },
+  "proposer": {
+    "status": "revise",
+    "operation": "For C1/C2, adapt S1's operation-to-problem connection: replace the cache/module list with reusing unchanged cells and updating observed cells to avoid full rebuilding. For C3, connect the timing result to the matched trials/backbone and retain both success values.",
+    "expected_effect": "The abstract communicates the method's distinctive computational choice and why the selected comparison evaluates it.",
+    "risk": "Do not claim equal success, faster whole-task execution, or the exemplar's causal/scientific conclusions.",
+    "success_test": "The reader can state what computation is avoided, recover the two measured outcomes and their comparison scope, and distinguish the claimed benefit from unchanged perception.",
+    "evidence_ids": ["E1", "E2", "E3"],
+    "source_ids": ["S1"],
+    "criterion_ids": ["C1", "C2", "C3"]
+  },
+  "writer": {
+    "text": "To avoid rebuilding unchanged map regions, PatchMap reuses existing cells and updates those touched by new observations during indoor robot navigation. On 120 matched trials with the same perception backbone, mean map-update time is 12 ms versus 28 ms for full rebuilding, while observed task success is 81% versus 82%. The measured computational benefit concerns map updating rather than end-to-end navigation latency.",
+    "evidence_ids": ["E1", "E2", "E3"],
+    "open_queries": [],
+    "implementations": {
+      "C1": {"status": "realized", "witness": "reuses existing cells and updates those touched by new observations", "note": "The method is now an operation, not merely two component names."},
+      "C2": {"status": "realized", "witness": "To avoid rebuilding unchanged map regions", "note": "The operation is introduced as a response to the computation the paper aims to avoid."},
+      "C3": {"status": "realized", "witness": "On 120 matched trials with the same perception backbone", "note": "The comparison condition is visible and both observed success rates remain in the passage."}
+    }
+  },
+  "reviewer": {
+    "decision": "accept",
+    "comparison": "better",
+    "reason": "Authored development judgment: relative to the original module inventory, the opening now states the operation and its computational purpose; the comparison also names the fixed backbone. This is not an independent preference vote.",
+    "readback": "PatchMap avoids full rebuilding by retaining cells and updating those affected by observations. Map updates take less time in the matched indoor comparison, with observed success 81% rather than 82%; no equivalence or whole-task speed claim is made.",
+    "judgments": {
+      "intrinsic": {"status": "pass", "reason": "The purpose-to-operation-to-evidence relation is explicit.", "witness": "To avoid rebuilding unchanged map regions", "evidence_ids": ["E1"], "source_ids": []},
+      "reference_function": {"status": "pass", "reason": "The local S1 observation is transferred as an explanatory role, not residual-network terminology or wording.", "witness": "PatchMap reuses existing cells and updates those touched by new observations", "evidence_ids": ["E1"], "source_ids": ["S1"]},
+      "fidelity": {"status": "pass", "reason": "The supplied outcomes and their limited measured quantity remain explicit.", "witness": "while observed task success is 81% versus 82%", "evidence_ids": ["E1", "E2", "E3"], "source_ids": []}
+    },
+    "assessments": {
+      "C1": {"status": "meets", "current": "Explains selective updating rather than listing modules.", "difference": "The previously missing distinctive operation is now foregrounded.", "draft_witness": "reuses existing cells and updates those touched by new observations", "evidence_ids": ["E1"]},
+      "C2": {"status": "valid_alternative", "current": "Uses a purpose-led method opening followed by evidence.", "difference": "No manufactured literature-gap sentence is needed; the relation is clear in this alternative to the protocol's example sequence.", "draft_witness": "To avoid rebuilding unchanged map regions", "evidence_ids": ["E1"]},
+      "C3": {"status": "meets", "current": "Names the matched trials/backbone and preserves both measured outcomes.", "difference": "The result now evaluates a specific computational change while preserving the success difference.", "draft_witness": "On 120 matched trials with the same perception backbone", "evidence_ids": ["E2", "E3"]},
+      "C4": {"status": "meets", "current": "Uses the exact map-update quantity and observed success.", "difference": "Retains the original's precise terminology rather than inflating the claim.", "draft_witness": "mean map-update time is 12 ms versus 28 ms", "evidence_ids": ["E2"]},
+      "C5": {"status": "meets", "current": "Method, baseline and quantity referents remain recoverable.", "difference": "The new organization does not sacrifice the original's readable comparison.", "draft_witness": "while observed task success is 81% versus 82%", "evidence_ids": ["E2"]},
+      "C6": {"status": "meets", "current": "The revision remains one paragraph under 110 words.", "difference": "The author's text constraints are preserved; official venue formatting is outside this case.", "draft_witness": "The measured computational benefit concerns map updating rather than end-to-end navigation latency.", "evidence_ids": []}
+    }
+  }
+}

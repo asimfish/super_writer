@@ -17,6 +17,74 @@ bounded request, analyze only the relevant passages and keep these decisions in
 the existing plan. Corpus metrics describe examples; they do not prescribe how
 many paragraphs, citations or numbers our argument must contain.
 
+## Section Benchmark Before Revision
+
+When the author wants excellent-paper-informed writing, set a positive quality
+target before diagnosing defects. Understandable, grammatical prose can still
+choose the wrong information, bury the insight, narrate tables, or summarize
+papers without synthesis. The gap finder compares the draft with this target;
+it does not merely search for confusion or invent its own ideal paragraph.
+
+Use the existing resources, in this order of purpose (not authority):
+
+1. **Author contribution and section function:** decide what this passage must
+   accomplish and what evidence is available. A theory abstract and a dataset
+   abstract need different targets.
+2. **Located exemplar choices:** choose relevant observations from the existing
+   dossier or [abstract notes](abstract-exemplars.md), or read the relevant source
+   section when needed. Notes on an abstract cannot establish that paper's
+   experiment or related-work style. Prefer complementary examples when the
+   choice is contentious; do not require a paper-count quota.
+3. **Reusable norms and expression:** select one [section protocol](writing-protocols.md),
+   applicable [AI-spec records](ai-writing-spec.md), and optional [language cards](writing-library.md).
+   These local syntheses are conditional guidance, not official conference rules.
+4. **Format authority:** use supplied requirements and the exact venue/year/track/
+   stage guide for mandatory formatting. Do not infer word limits, citation bans
+   or caption styles from famous papers. Missing current rules mean unverified
+   compliance, not permission to substitute an archived profile.
+
+Cover these dimensions at the requested scope; record why an excluded dimension
+is inapplicable or unassessed. They are not six mandatory weaknesses to repair.
+
+| Dimension | Positive target | Difference worth diagnosing |
+|---|---|---|
+| Content selection | Space goes to the distinctive contribution and consequential evidence | Correct implementation details crowd out the key insight |
+| Argument organization | Moves and paragraph roles form an effective progression | A list of accurate statements leaves the argument implicit |
+| Evidence presentation | Comparisons, displays and interpretation answer the section's question | Scores are enumerated without showing what they establish |
+| Academic expression | Precise disciplinary terms, informative verbs, economical sentence roles | Generic praise or inflated wording replaces scientific specificity |
+| Clarity and cohesion | Referents, transitions and information dependencies remain recoverable | The relation must be reconstructed from the author's notes |
+| Format and reporting | Applicable structural/reporting requirements are met | Unexplained table conventions, missing units or verified format violations |
+
+The section changes what these dimensions mean:
+
+| Section | Compare with applicable exemplars | Useful local starting point |
+|---|---|---|
+| Abstract | Contribution emphasis; obstacle/insight/mechanism relation; decisive evidence; information compression; scoped ending | `abstract` with a contribution-matched variant; [abstract decisions](abstract-decisions.md) and selected exemplar notes |
+| Related work | Technical grouping; synthesis across sources; fair comparison axes; relationship to our contribution; citation-to-claim scope | `related_work` / `taxonomy-first` or `concept-evolution` |
+| Experiments | Questions mapped to controls; setup/result/analysis separation; result ordering; ablation/failure logic; tables, captions and reporting | `experiments` for section structure, `experiments.analysis` for a passage, or one matching table protocol |
+
+Record comparisons in existing dossier/rationale rows:
+
+`criterion -> source/resource location and observed choice -> our current choice
+-> consequential difference -> applicability -> edit -> final-text witness`.
+
+Use `gap`, `meets`, `valid_alternative`, `not_applicable` or `not_assessed` rather
+than a vague excellent/poor label. A method-first opening, chronological account
+of a genuine conceptual evolution, or necessary technical repetition can be a
+valid alternative. Different facts may require a different rhetorical choice.
+Show what should improve, what already works, and what must not be transferred.
+
+In the explicitly selected [role loop](writing-team.md), use schema v2 to carry
+these criteria and selected resources through every handoff. The writer must
+locate the implementation of each proposed criterion; the reviewer rechecks the
+criteria against the prose without seeing earlier assessments. No clear-text
+case should be declared good merely because it is understandable.
+
+For drafting from materials, use the same target and exemplar-informed blueprint
+before the first draft. There is no existing-prose gap to invent, and the revision
+checker is unnecessary until a passage exists. Learn organization, evidence
+allocation and scientific phrasing; write original prose from the author's facts.
+
 ## Explain a System or Synthesize a Rule Set
 
 Use this bounded branch when the user supplies a diagram, overview or passage

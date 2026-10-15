@@ -6,6 +6,42 @@ behavior below, not research novelty, factual entailment or acceptance gains.
 
 ## Reproducible Checks
 
+### Section benchmarks beyond clarity (2026-10-15)
+
+Schema v2 carries contribution-matched criteria, selected existing protocols,
+AI rules and language cards through diagnosis, proposal, prose and fresh review.
+The [worked comparisons](../examples/writing-team/benchmark.md) cover an abstract,
+related work and an experiment passage; only the abstract has a full authored
+four-role fixture. None is an independent model trial or a measured quality gain.
+
+- Sixteen new tests cover exact complete resource projection, three section types
+  and a table protocol, unknown IDs, wrong section/variant, duplicate or excessive
+  selections, missing criterion bases, invalid dimensions, complete assessments,
+  exact witnesses, valid alternatives, and unassessed-source stops.
+- Selected gaps cannot silently disappear or be replaced in the proposal; every
+  proposed criterion needs a located realization or explicit blocked query.
+  Review checks all declared criteria, including previously adequate dimensions,
+  without receiving earlier assessments or the writer's implementation claims.
+- Changed resource content or criteria invalidate old receipts. The standards-only
+  label, read-only/offline behavior, mutation isolation and relocated release CLI
+  are checked. Local-synthesis entries preserve empty source notes rather than
+  receiving invented paper attribution.
+- Python 3.14 on macOS runs 331 cases: 330 pass, one PowerShell-unavailable skip.
+  All 11 smoke checks, compilation, skill validation and whitespace checks pass.
+  The old pilot archive and frozen default guide remain unchanged; library,
+  protocol and venue resource hashes retain their previous values.
+
+```bash
+python -m unittest discover -s tests -p test_writing_benchmark.py -v
+python scripts/writing_loop.py examples/writing-team/benchmark-input.json
+```
+
+Three added activation expectations are declared behavior, not measured routing
+accuracy. No automatic library expansion, new paper reading, official-format
+certification, default quality promotion or model-weight training occurred.
+The test suite verifies contracts and authored fixtures, not the insightfulness
+of an arbitrary future comparison. Remote CI remains separate commit-bound evidence.
+
 ### Optional writing-role handoffs (2026-10-15)
 
 The [role workflow](../references/writing-team.md) and

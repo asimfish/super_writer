@@ -11,7 +11,7 @@ evidence-link guide. Default argument-transfer guidance remains unchanged.
 | Owner | Question | Handoff | Not its responsibility |
 |---|---|---|---|
 | [Orchestrator](../agents/writing-orchestrator.md) | What is the next justified action? | Scope, input snapshot, next role, stop/return decision | Writing expert verdicts or changing facts |
-| [Gap finder](../agents/writing-gap-finder.md) | What can readers not recover from this passage? | Located diagnosis, reader question, applicable evidence | Inventing a scientific gap |
+| [Gap finder](../agents/writing-gap-finder.md) | How does this section differ from applicable excellent-paper choices and writing standards? | Criterion-level comparisons, strengths, valid alternatives and prioritized gaps | Inventing a scientific gap or treating clarity as the entire quality target |
 | [Revision proposer](../agents/revision-proposer.md) | Which concrete edit would resolve that problem? | Operation, expected effect, preconditions, risk, success test | Inventing a new method or experiment |
 | [Writer](../agents/revision-writer.md) | How does that operation become clear, accurate prose? | Candidate passage and open author queries | Accepting its own revision |
 | [Reviewer](../agents/revision-reviewer.md) | Does the passage itself deliver the intended relation? | Prose-first read-back, three separate judgments, return target | Grading compliance as writing excellence |
@@ -68,6 +68,54 @@ The run has exactly `schema_version` (1), `task`, original `draft`, author
 `location`, `choice`, `applicability`, `non_transfer`. These are observations
 already grounded by reading, not a search result's quality score. The orchestrator
 chooses a bounded budget; 12 handoffs is a useful starting point, not a quality norm.
+
+### Schema 2: Exemplar and Standards Benchmark
+
+Use v2 for the user's excellent-paper-informed comparison request; v1 remains
+readable as the original intrinsic-diagnosis contract. Add `benchmark` to the run
+and set `schema_version` to 2. No implicit migration rewrites old events.
+Build the target using [section benchmarking](style-learning-workflow.md#section-benchmark-before-revision).
+
+The benchmark has exactly:
+
+- `section`, `contribution`: scope and supported contribution type/priority.
+- `protocol`, `variant`: exact bundled section-protocol and variant IDs.
+- `ai_spec_ids`, `library_ids`: 0-6 exact IDs each, not entire catalogs.
+- `criteria`: 1-12 scoped ID-keyed records with `dimension` (`content`,
+  `organization`, `evidence`, `expression`, `clarity`, `format`), `expectation`,
+  `applicability`, `resource_ids` and `source_ids`. At least one resource or
+  located exemplar must support each criterion. Cover relevant dimensions without
+  manufacturing six defects or turning an uninspected format into a pass.
+
+The helper resolves the protocol and cards with the existing lookup APIs and
+includes their full checks, conditions, exceptions and source metadata in every
+role packet. It does not open manuscript/source paths or fetch papers. Protocol
+IDs and complete card bytes enter the input receipt, so a changed selected
+resource invalidates old handoffs. Unknown IDs and section mismatches fail closed.
+`benchmark_basis` distinguishes `standards_only` from `standards_and_exemplars`;
+local norms alone cannot demonstrate learning from a particular excellent paper.
+
+The v2 role outputs extend, not replace, the fields above:
+
+| Role | Additional output |
+|---|---|
+| Gap finder | `assessments` for every criterion and `selected_criteria` containing only diagnosed gaps |
+| Proposer | `criterion_ids` matching selected gaps, addressed concretely in `operation` |
+| Writer | `implementations` keyed by every proposed criterion, each with `status` (`realized`/`blocked`), exact `witness`, and `note`; blocked entries require an author query |
+| Reviewer | Fresh `assessments` of every criterion, without seeing prior assessments or implementation claims |
+
+Each assessment has `status` (`gap`, `meets`, `valid_alternative`, `not_applicable`,
+`not_assessed`), `current`, `difference`, `draft_witness`, `evidence_ids`.
+Inapplicable/unassessed criteria use an empty witness and explain the reason.
+An omitted idea is witnessed by the existing passage whose selection/organization
+should change, not by a quotation invented to fill the schema.
+Known gaps or unassessed criteria preclude `no_change` and acceptance; a supported
+alternative is allowed. Source needs can stop the gap finder as `needs_sources`.
+Checks establish coverage and linkage, not whether judgments are insightful.
+
+See the [clear-but-weaker abstract example](../examples/writing-team/benchmark.md),
+including related-work and experiment contrasts. New runs are required after this
+guidance update; old raw events are retained rather than silently re-hashed.
 
 Every event is owned by the expected role. Its receipt binds task, original draft,
 evidence, exemplars, budget, full event prefix, role context and loaded guidance.

@@ -18,7 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 EXAMPLE = ROOT / "examples/writing-team"
 SPEC = importlib.util.spec_from_file_location("writing_loop", ROOT / "scripts/writing_loop.py")
 LOOP = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(LOOP)
+with patch.object(sys, "path", [str(ROOT / "scripts"), *sys.path]):
+    SPEC.loader.exec_module(LOOP)
 
 
 class WritingLoopTests(unittest.TestCase):

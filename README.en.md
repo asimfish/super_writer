@@ -36,13 +36,18 @@ probes change a priority or condition to require a different writing decision.
 [Reproducible inputs and next evaluation](evals/evidence-link/README.md)
 
 **Optional role loop:** informed by IdeaScientist, separate gap diagnosis,
-editorial proposals and prose realization under an orchestrator, with a prose-first
-review of understanding, reference-function transfer and fidelity. A local checker
+editorial proposals and prose realization under an orchestrator. Section benchmarks
+load actual exemplar observations, protocols, AI rules and optional language cards
+to compare content selection, organization, evidence, expression, clarity and
+applicable format, including clear-but-weaker prose. Selected gaps are linked to
+proposed edits and final-text witnesses; strengths and valid alternatives remain.
+A prose-first reviewer reassesses the criteria and fidelity. A local checker
 validates handoffs, freshness, returns and stops; it does not call models or prove
 writing gains. The large idea corpus is a proposed discovery source, **not imported**.
 [Architecture](docs/system-organization.md#可选角色协作与反馈) ·
 [Source study and reward adaptation](docs/research/ideascientist-2026-10-15.md) ·
-[Authored handoff example](examples/writing-team/README.md)
+[Authored handoff example](examples/writing-team/README.md) ·
+[Abstract, related-work and experiment contrasts](examples/writing-team/benchmark.md)
 
 <a id="examples"></a>
 ## Start With the Examples

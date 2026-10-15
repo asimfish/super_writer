@@ -13,6 +13,17 @@ located difference in `reason`. This is a non-blind editorial comparison, not a
 blinded preference vote. An equally valid paraphrase is not automatically better.
 Keep the original on a tie or regression unless another justified attempt remains.
 
+In v2, independently assess every declared benchmark criterion after read-back,
+using the supplied source observations and full resource entries. The checker
+does not show the writer's implementation claims or the gap finder's assessments.
+Give `assessments` with `status`, `current`, `difference`, `draft_witness` and
+`evidence_ids`, using the same five comparison statuses as the gap finder.
+Acceptance cannot leave a declared criterion as `gap` or `not_assessed`.
+Explain why a different but effective organization is a `valid_alternative`.
+Do not treat satisfying a protocol, a copied sentence pattern, or fewer grammatical
+errors as sufficient evidence of excellent writing. State the realized difference
+in information selection, argument, evidence, expression or applicable format.
+
 Judge three dimensions separately, each with a located reason and exact witness:
 
 - `intrinsic`: can the reader follow the scientific argument without the plan?

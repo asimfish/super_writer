@@ -9,6 +9,8 @@ import hashlib
 import json
 from pathlib import Path
 
+import writing_benchmark
+
 ROOT = Path(__file__).resolve().parents[1]
 ROLE_FILES = {
     "gap_finder": "agents/writing-gap-finder.md",
@@ -47,8 +49,11 @@ def ids(value: object, pool: dict) -> None:
 
 
 def validate_input(run: dict) -> None:
-    fields(run, "schema_version task draft evidence exemplars max_steps events")
-    require(type(run["schema_version"]) is int and run["schema_version"] == 1,
+    require(isinstance(run, dict), "Run must be a JSON object")
+    version = run.get("schema_version")
+    fields(run, "schema_version task draft evidence exemplars max_steps events"
+           + (" benchmark" if version == 2 else ""))
+    require(type(version) is int and version in (1, 2),
             "Unsupported schema_version")
     text(run["task"])
     text(run["draft"])
@@ -70,26 +75,29 @@ def validate_input(run: dict) -> None:
 
 
 def validate_output(role: str, out: dict, context: dict) -> None:
+    extensions = {"gap_finder": " assessments selected_criteria", "proposer": " criterion_ids",
+                  "writer": " implementations", "reviewer": " assessments"}
+    extension = extensions[role] if "benchmark" in context else ""
     if role == "gap_finder":
-        fields(out, "status diagnosis draft_witness reader_question evidence_ids source_ids")
-        require(out["status"] in ("actionable", "no_change", "needs_evidence"),
+        fields(out, "status diagnosis draft_witness reader_question evidence_ids source_ids" + extension)
+        require(out["status"] in ("actionable", "no_change", "needs_evidence", "needs_sources"),
                 "Unknown gap status")
         for key in ("diagnosis", "reader_question", "draft_witness"):
             text(out[key])
         require(out["draft_witness"] in context["draft"], "Gap witness is not in the current draft")
     elif role == "proposer":
-        fields(out, "status operation expected_effect risk success_test evidence_ids source_ids")
+        fields(out, "status operation expected_effect risk success_test evidence_ids source_ids" + extension)
         require(out["status"] in ("revise", "needs_evidence"), "Unknown proposal status")
         for key in ("operation", "expected_effect", "risk", "success_test"):
             text(out[key])
     elif role == "writer":
-        fields(out, "text evidence_ids open_queries")
+        fields(out, "text evidence_ids open_queries" + extension)
         text(out["text"])
         require(isinstance(out["open_queries"], list), "open_queries must be a list")
         for query in out["open_queries"]:
             text(query)
     else:
-        fields(out, "decision comparison reason readback judgments")
+        fields(out, "decision comparison reason readback judgments" + extension)
         require(out["decision"] in ("accept", "return_gap_finder", "return_proposer",
                                     "return_writer", "needs_evidence", "keep_original"),
                 "Unknown review decision")
@@ -126,12 +134,16 @@ def validate_output(role: str, out: dict, context: dict) -> None:
             require(judgments["reference_function"]["status"] == expected,
                     "Reference judgment must reflect the supplied reference context")
             require(not context["open_queries"], "Resolve open writer queries before acceptance")
+        if extension:
+            writing_benchmark.validate_handoff(role, out, context)
         return
     ids(out["evidence_ids"], context["evidence"])
     if "source_ids" in out:
         ids(out["source_ids"], context["exemplars"])
     if role == "writer" or out.get("status") in ("actionable", "revise"):
         require(bool(out["evidence_ids"]), "An actionable handoff needs author evidence IDs")
+    if extension:
+        writing_benchmark.validate_handoff(role, out, context)
 
 
 def instructions(role: str) -> list[dict]:
@@ -143,6 +155,8 @@ def instructions(role: str) -> list[dict]:
 def inspect_run(run: dict) -> dict:
     """Replay handoffs. A hash links inputs, not authorship or semantic truth."""
     validate_input(run)
+    resources = (writing_benchmark.load_resources(run["benchmark"], run["exemplars"])
+                 if run["schema_version"] == 2 else None)
     initial = {key: value for key, value in run.items() if key != "events"}
     role, status = "gap_finder", "ready"
     draft, gap, proposal, feedback, queries = run["draft"], None, None, None, []
@@ -156,6 +170,9 @@ def inspect_run(run: dict) -> dict:
             break
         context = {"task": run["task"], "draft": draft,
                    "evidence": run["evidence"], "exemplars": run["exemplars"]}
+        if resources is not None:
+            context.update(benchmark=run["benchmark"], writing_resources=resources)
+            context["benchmark_basis"] = ("standards_and_exemplars" if run["exemplars"] else "standards_only")
         if role == "reviewer":
             # Read-back is independent of the proposed explanation, not of host memory.
             context["open_queries"] = queries
@@ -166,9 +183,16 @@ def inspect_run(run: dict) -> dict:
                 context["gap"] = gap
             if role == "writer":
                 context["proposal"] = proposal
+        guidance = instructions(role)
+        if resources is not None:
+            paths = ["references/style-learning-workflow.md"]
+            if run["benchmark"]["section"] == "abstract":
+                paths.append("references/abstract-decisions.md")
+            guidance.extend({"path": path, "text": (ROOT / path).read_text(encoding="utf-8")}
+                            for path in paths)
         packet = {"role": role, "step": step, "run_input_sha256": digest(initial),
                   "history_sha256": digest(run["events"][:step]),
-                  "input": context, "guidance": instructions(role)}
+                  "input": context, "guidance": guidance}
         packet_hash = digest(packet)
         if step == len(run["events"]):
             return {"status": status, "steps_used": step, "packet": copy.deepcopy(packet),

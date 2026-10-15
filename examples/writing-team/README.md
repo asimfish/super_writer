@@ -5,6 +5,11 @@ original synthetic material written together. This is **not** output from four
 independent agents, a blind preference result, a real experiment or proof of gain.
 [Input](input.json) and [response bodies](responses.json) exercise the contract.
 
+This is the original v1 handoff example. For the current excellent-paper and
+standards comparison, see [the v2 section benchmark](benchmark.md): it includes
+a clear-but-weaker abstract and related-work/experiment contrasts, with actual
+selected local resources and criterion-to-prose handoffs.
+
 ## Editorial Choice
 
 The example teaches a conditional operation: put the matched control where it

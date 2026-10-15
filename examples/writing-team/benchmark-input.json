@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "task": "Revise this synthetic abstract as one paragraph under 110 words. Learn the applicable writing choices, not the exemplar's scientific content. This is development material, not real research or a blind trial. No target venue is specified.",
+  "draft": "We present PatchMap for indoor robot navigation. PatchMap has a map cache and an update module. We evaluate it on 120 indoor navigation trials. Mean map-update time is 12 ms and task success is 81%, compared with 28 ms and 82% for full rebuilding.",
+  "evidence": {
+    "E1": "PatchMap reuses unchanged map cells and updates cells touched by new observations, instead of rebuilding the entire map after each observation. The contribution is reducing map-update computation during indoor robot navigation, not a new perception backbone.",
+    "E2": "On 120 matched indoor navigation trials using the same perception backbone, mean map-update time is 12 ms for PatchMap versus 28 ms for full rebuilding. Observed task success is 81% versus 82%, respectively.",
+    "E3": "No significance or equivalence test is supplied. Map-update time is not end-to-end navigation latency. The study does not establish generalization to outdoor scenes."
+  },
+  "exemplars": {
+    "S1": {
+      "source": "Local editorial observation in references/abstract-exemplars.md about the ResNet abstract, not a new reading of the paper",
+      "location": "05. ResNet (CVPR 2016), organization, transfer and boundary bullets; abstract-only reading scope",
+      "choice": "Make the operative change explainable before asking performance evidence to support it; a model name and score list do not carry that explanation.",
+      "applicability": "Transfer the relation between operation and problem to a method abstract whose author evidence explains what changes; no residual-network science is transferred.",
+      "non_transfer": "Do not copy wording, optimization claims or competition results. A result-first abstract can also work if the operative change is still explicit."
+    }
+  },
+  "max_steps": 12,
+  "events": [],
+  "benchmark": {
+    "section": "abstract",
+    "contribution": "Method: reduce map-update computation by preserving unchanged cells, with measured navigation success also visible.",
+    "protocol": "abstract",
+    "variant": "empirical-method",
+    "ai_spec_ids": ["ai.rule.operation", "ai.rule.quantities"],
+    "library_ids": ["general.sentence-pattern.quantify.001"],
+    "criteria": {
+      "C1": {"dimension": "content", "expectation": "Foreground the distinctive operation instead of only naming implementation modules.", "applicability": "E1 explains which computation is avoided; S1 supplies an editorial relation, not a technical analogy.", "resource_ids": ["abstract", "ai.rule.operation"], "source_ids": ["S1"]},
+      "C2": {"dimension": "organization", "expectation": "Connect the avoided computation, operation and supporting result within the abstract's argument.", "applicability": "Any order that makes these relations explicit is valid; there is no mandatory gap-first opening.", "resource_ids": ["abstract"], "source_ids": ["S1"]},
+      "C3": {"dimension": "evidence", "expectation": "Bind the timing comparison to the matched setting and retain the observed success tradeoff without asserting equivalence.", "applicability": "Use E2 and E3; do not treat map-update time as total navigation latency.", "resource_ids": ["ai.rule.quantities", "general.sentence-pattern.quantify.001"], "source_ids": []},
+      "C4": {"dimension": "expression", "expectation": "Use exact measurement names and informative scientific verbs without generic praise.", "applicability": "Map-update time and task success are the actual evaluated quantities; necessary technical repetition is valid.", "resource_ids": ["ai.rule.quantities"], "source_ids": []},
+      "C5": {"dimension": "clarity", "expectation": "Make each numerical value's method and metric referent recoverable.", "applicability": "The current abstract can already be clear on referents while weaker on insight and organization.", "resource_ids": ["ai.rule.quantities"], "source_ids": []},
+      "C6": {"dimension": "format", "expectation": "Preserve the author's one-paragraph, under-110-word delivery constraint.", "applicability": "Only the supplied text constraint is assessable. No official venue compliance is claimed without a venue and current guide.", "resource_ids": ["abstract"], "source_ids": []}
+    }
+  }
+}

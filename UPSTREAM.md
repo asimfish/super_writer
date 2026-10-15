@@ -458,3 +458,19 @@ weights or paper prose are copied. New role cards, checker and synthetic teachin
 example are original. The external corpus is discovery-only, not installed or
 counted as local templates. No new network/model/credential capability, semantic
 proof, independent writing trial or quality promotion is claimed.
+
+### Section Benchmark Follow-up (2026-10-15)
+
+Original local refinement prompted by the author's request to compare against
+excellent-paper writing, not only find incomprehensible prose. Schema v2 connects
+the existing protocol/card lookup APIs and located exemplar observations to
+criterion-level diagnosis, proposal, prose witnesses and fresh review. The current
+library/AI-spec/protocol contents and upstream pins are unchanged. Local rules
+without source notes remain labeled as synthesis, not attributed to a famous paper.
+
+The PatchMap facts, responses and three section contrasts are original synthetic
+development material. S1 refers to an already archived abstract-only ResNet note;
+no new paper reading, source text, external dataset or license is incorporated.
+The new helper only reads bundled resources and explicit run inputs; no provider,
+network, credentials, automatic file writes or global installation are added.
+Compatibility checks and authored examples do not establish writing-quality gain.

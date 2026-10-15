@@ -15,6 +15,14 @@ action. If author evidence is unavailable, make applicability conditional rather
 than manufacturing a gap or result. Mark reading scope (abstract, section, full
 text) and one useful non-transfer. Separate structural choices from terminology.
 
+For section benchmarking, provide positive writing targets as well as warnings:
+what information the exemplar prioritizes, how its argument progresses, how it
+uses evidence and comparisons, and what its sentence roles accomplish. Map each
+observation to the requested section; an abstract reading does not authorize
+claims about that paper's related work or experiments. Supply the source choice,
+applicability and non-transfer to the existing benchmark criteria, distinguishing
+your editorial inference from an official formatting requirement.
+
 **Handoff:** Give the drafting agent the selected choices and evidence anchors
 for its active unit, including what the reader should understand afterward.
 The writer must locate their implementation in the existing rationale matrix's

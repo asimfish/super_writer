@@ -71,6 +71,7 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
 | Resume | [resume](references/resume.md) | First incomplete stage and its upstream prerequisites |
 | Research | [research](references/research.md) | Source index, dossier, exemplars, style profile, gap map, motivation options |
 | Learn an exemplar's writing decisions | [argument transfer](references/argument-transfer.md), [exemplar dossier](references/exemplar-learning-dossier.md) | Located source choice, reader question, applicable author evidence, planned text action and final prose check |
+| Write toward excellent-paper examples and standards | [section benchmark](references/style-learning-workflow.md#section-benchmark-before-revision) | Contribution-matched exemplar choices and selected norms; compare content, organization, evidence, expression, clarity and format, not only comprehension |
 | Explicit role-based comparative revision | [writing team](references/writing-team.md), [orchestrator](agents/writing-orchestrator.md) | Scoped gap, editorial proposal, candidate prose and read-back; `writing_loop.py` checks handoffs, not semantic quality |
 | Explicitly test experimental evidence allocation | [evidence-link candidate](references/evidence-link-candidate.md) | Opt-in selection, comparison binding and prose read-back in the existing plan; not promoted or measured better |
 | Contribution | [contribution](references/contribution.md) | Confirmed contribution; `contribution_check.py` |
@@ -96,7 +97,11 @@ Load only the playbooks needed for the active request. A reference to another
 skill is optional: use the local playbook when that companion is unavailable.
 
 For explicitly requested role-based revision, use the writing-team route within
-the existing dossier and rationale matrix. Distinguish a writing gap from missing
+the existing dossier and rationale matrix. For exemplar/standards comparison,
+use its v2 benchmark and existing resource lookups so diagnosis, proposal, prose
+and review share actual criteria and sources. Clear text can still need better
+selection or organization; a different valid structure is not automatically a gap.
+Distinguish a writing gap from missing
 scientific evidence; return failures to the responsible role and stop at the
 budget. Disclose sequential self-review when independent contexts are unavailable.
 The role checker does not dispatch agents or promote experimental guidance.

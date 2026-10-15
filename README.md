@@ -28,11 +28,14 @@ Python 脚本负责可重复的检查。项目不自带模型，不承诺录用�
 [具体机制与正反边界](references/evidence-link-candidate.md) · [可复现输入与下一轮验证](evals/evidence-link/README.md)
 
 **可选角色协作：** 借鉴 IdeaScientist，把差距诊断、改法提议和正文实现分开，由编排者调度，
-审读者从成稿检查理解、范例迁移和证据忠实性。交接工具检查版本、职责、回退和停止，
+gap finder 按当前章节选入优秀论文观察、章节协议、写作规范及语言卡，比较**内容取舍、论证组织、
+证据呈现、专业表达、清晰度和适用格式**，不只寻找读不懂的句子。每个选定差距都要对应改法及成稿位置，
+审读者再独立检查这些对标项；已有优点和不同但合理的写法也要保留。交接工具检查版本、职责、回退和停止，
 不自动调用模型，也不把检查通过当成写作提升。大型想法库用于发现论文的设计已记录，**尚未下载或导入**。
 [角色与架构图](docs/system-organization.md#可选角色协作与反馈) ·
 [来源核实与奖励适配](docs/research/ideascientist-2026-10-15.md) ·
-[原创交接示例](examples/writing-team/README.md)
+[原创交接示例](examples/writing-team/README.md) ·
+[摘要、相关工作和实验：清楚但不够好的写法怎样改](examples/writing-team/benchmark.md)
 
 <a id="examples"></a>
 ## 样文：先看结果

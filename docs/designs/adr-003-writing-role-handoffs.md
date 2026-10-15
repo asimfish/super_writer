@@ -51,3 +51,22 @@ a new blind trial. No default corpus, frozen guide or archived evaluation change
 The corpus remains an external discovery source. A future bounded index requires
 its own import/license/filtering decision; a full download or automated admission
 is not a side effect of loading this workflow.
+
+## Section Benchmark Extension
+
+The author's clarification broadens diagnosis beyond comprehension failures.
+A positive, section-specific benchmark now precedes diagnosis when excellent-paper
+writing is requested. Reuse existing protocol, AI-spec and language-card APIs;
+do not fork a new norms database or treat writing-resource counts as quality.
+Schema v2 includes selected resources and applicable criteria in every role's
+context, with fresh criterion-level review and criterion-to-edit traceability.
+Schema v1 remains readable for intrinsic diagnosis. Changed guidance invalidates
+old receipts as designed; preserve old raw runs rather than rewriting hashes.
+
+Compare content selection, argument organization, evidence presentation, expression,
+clarity and applicable formatting. A clear passage can still have a meaningful
+quality gap; a different effective structure can be a valid alternative. Norms
+without exemplars support standards-based review, not claims about learning from
+excellent papers. Official formatting still needs the exact current authority.
+The new helper loads only selected existing bundled records, not source URLs or
+arbitrary local paths, and adds no network, model execution or manuscript writes.
