@@ -75,8 +75,9 @@ def validate_input(run: dict) -> None:
 
 
 def validate_output(role: str, out: dict, context: dict) -> None:
-    extensions = {"gap_finder": " assessments selected_criteria", "proposer": " criterion_ids",
-                  "writer": " implementations", "reviewer": " assessments"}
+    extensions = {"gap_finder": " assessments selected_criteria deferred_criteria",
+                  "proposer": " criterion_ids compression_plan",
+                  "writer": " implementations compression", "reviewer": " assessments compression"}
     extension = extensions[role] if "benchmark" in context else ""
     if role == "gap_finder":
         fields(out, "status diagnosis draft_witness reader_question evidence_ids source_ids" + extension)
@@ -147,7 +148,8 @@ def validate_output(role: str, out: dict, context: dict) -> None:
 
 
 def instructions(role: str) -> list[dict]:
-    paths = (ROLE_FILES[role], "references/writing-team.md", "references/argument-transfer.md")
+    paths = (ROLE_FILES[role], "references/writing-team.md", "references/argument-transfer.md",
+             "references/compression-first-writing.md")
     return [{"path": path, "text": (ROOT / path).read_text(encoding="utf-8")}
             for path in paths]
 

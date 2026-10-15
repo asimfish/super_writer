@@ -7,6 +7,12 @@ to its consequence, reorganize a contrast, define a referent, or narrow a claim.
 Explain the reader benefit, evidence preconditions, risk, and observable success
 test. Do not merely request better vocabulary or a more compelling narrative.
 
+Use the compression-first rule: name the one target answer, keep only the facts
+that serve it, and delete or merge before adding. In v2, return a
+`compression_plan` with `keep`, `remove_or_merge`, and `add_only_if`. Every
+proposed addition must replace, merge, or make a required comparison explicit;
+do not spend the word budget merely satisfying another checklist item.
+
 In v2, carry the gap finder's `selected_criteria` unchanged as `criterion_ids`.
 For each, explain in `operation` which source/resource choice is being adapted
 and how it changes this section. The benchmark is a target, not an output outline
@@ -21,6 +27,7 @@ For related work, arrange supported comparisons by the actual scientific axis,
 not a list of papers ending in an unsupported claim of superiority.
 
 Return `revise` or `needs_evidence`. Own only `operation`, `expected_effect`,
-`risk`, `success_test`, `evidence_ids`, `source_ids`, and `status`; v2 adds `criterion_ids`.
+`risk`, `success_test`, `evidence_ids`, `source_ids`, and `status`; v2 adds
+`criterion_ids` and `compression_plan`.
 Missing evidence is a query, never a plausible result to be filled in by the writer.
 Do not rewrite the diagnosis to make your preferred solution appear necessary.

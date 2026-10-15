@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "task": "Revise this synthetic abstract as one paragraph under 110 words. Learn the applicable writing choices, not the exemplar's scientific content. This is development material, not real research or a blind trial. No target venue is specified.",
+  "task": "Revise this synthetic abstract as one paragraph of at most 60 words. Prefer a shorter or equal-length draft; every added clause must replace, merge, or make a required comparison explicit. Learn writing choices, not the exemplar's science. This is development material, not a blind trial.",
   "draft": "We present PatchMap for indoor robot navigation. PatchMap has a map cache and an update module. We evaluate it on 120 indoor navigation trials. Mean map-update time is 12 ms and task success is 81%, compared with 28 ms and 82% for full rebuilding.",
   "evidence": {
     "E1": "PatchMap reuses unchanged map cells and updates cells touched by new observations, instead of rebuilding the entire map after each observation. The contribution is reducing map-update computation during indoor robot navigation, not a new perception backbone.",
@@ -31,7 +31,16 @@
       "C3": {"dimension": "evidence", "expectation": "Bind the timing comparison to the matched setting and retain the observed success tradeoff without asserting equivalence.", "applicability": "Use E2 and E3; do not treat map-update time as total navigation latency.", "resource_ids": ["ai.rule.quantities", "general.sentence-pattern.quantify.001"], "source_ids": []},
       "C4": {"dimension": "expression", "expectation": "Use exact measurement names and informative scientific verbs without generic praise.", "applicability": "Map-update time and task success are the actual evaluated quantities; necessary technical repetition is valid.", "resource_ids": ["ai.rule.quantities"], "source_ids": []},
       "C5": {"dimension": "clarity", "expectation": "Make each numerical value's method and metric referent recoverable.", "applicability": "The current abstract can already be clear on referents while weaker on insight and organization.", "resource_ids": ["ai.rule.quantities"], "source_ids": []},
-      "C6": {"dimension": "format", "expectation": "Preserve the author's one-paragraph, under-110-word delivery constraint.", "applicability": "Only the supplied text constraint is assessable. No official venue compliance is claimed without a venue and current guide.", "resource_ids": ["abstract"], "source_ids": []}
-    }
+    "C6": {"dimension": "format", "expectation": "Preserve the author's one-paragraph, at-most-60-word delivery constraint.", "applicability": "Only the supplied text constraint is assessable. No official venue compliance is claimed without a venue and current guide.", "resource_ids": ["abstract"], "source_ids": []}
+  },
+  "target_answer": "PatchMap avoids full map rebuilding by updating only affected cells, reducing map-update time in matched indoor trials without claiming an end-to-end navigation improvement.",
+  "priority_criteria": ["C1", "C2", "C3"],
+  "budget": {
+    "max_words": 60,
+    "max_delta_words": 0,
+    "max_sentences": 3,
+    "max_added_clauses": 3,
+    "replacement_rule": "Every added clause must replace, merge, or make a required comparison explicit."
   }
+}
 }

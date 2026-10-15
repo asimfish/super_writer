@@ -7,7 +7,7 @@ independent agents, a blind preference result, a real experiment or proof of gai
 
 This is the original v1 handoff example. For the current excellent-paper and
 standards comparison, see [the v2 section benchmark](benchmark.md): it includes
-a clear-but-weaker abstract and related-work/experiment contrasts, with actual
+a compression-first abstract and related-work/experiment contrasts, with actual
 selected local resources and criterion-to-prose handoffs.
 
 ## Editorial Choice

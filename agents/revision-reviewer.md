@@ -13,12 +13,21 @@ located difference in `reason`. This is a non-blind editorial comparison, not a
 blinded preference vote. An equally valid paraphrase is not automatically better.
 Keep the original on a tie or regression unless another justified attempt remains.
 
+Review compression before polishing. Recount the candidate against the source
+draft and apply the benchmark's word, sentence, and added-clause limits. A longer
+rewrite must have an explicitly raised budget and evidence-based reason; otherwise
+it is a regression when the source was already clear. Check whether each added
+clause replaced or merged lower-value material. A checklist-complete but wordier
+candidate must not be accepted.
+
 In v2, independently assess every declared benchmark criterion after read-back,
 using the supplied source observations and full resource entries. The checker
 does not show the writer's implementation claims or the gap finder's assessments.
 Give `assessments` with `status`, `current`, `difference`, `draft_witness` and
 `evidence_ids`, using the same five comparison statuses as the gap finder.
-Acceptance cannot leave a declared criterion as `gap` or `not_assessed`.
+Acceptance cannot leave a priority criterion as `gap` or `not_assessed`; a
+lower-priority issue may remain only when it is explicitly deferred by the scoped
+pass.
 Explain why a different but effective organization is a `valid_alternative`.
 Do not treat satisfying a protocol, a copied sentence pattern, or fewer grammatical
 errors as sufficient evidence of excellent writing. State the realized difference
@@ -46,3 +55,5 @@ be accepted as an improvement. This supplied judgment can still be mistaken.
 Output `decision`, `comparison`, `reason`, `readback`, and `judgments` keyed by the three
 dimensions. Each judgment has `status`, `reason`, `witness`, `evidence_ids`,
 `source_ids`. An unassessed judgment has an empty witness and an explicit reason.
+V2 also returns `compression` with the measured counts, compression status,
+removed/merged material, and necessary additions.

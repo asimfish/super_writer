@@ -39,14 +39,22 @@ class WritingBenchmarkTests(unittest.TestCase):
             run = self.advance(run)
         return run
 
-    def test_clear_but_weaker_fixture_preserves_strengths_and_traces_edits(self):
+    def test_concise_fixture_preserves_strengths_and_traces_edits(self):
         gap = self.outputs["gap_finder"]
         self.assertEqual(gap["assessments"]["C5"]["status"], "meets")
         self.assertEqual(gap["selected_criteria"], ["C1", "C2", "C3"])
         self.assertEqual(set(self.outputs["writer"]["implementations"]), set(gap["selected_criteria"]))
         self.assertEqual(LOOP.inspect_run(self.through(4))["status"], "accepted_revision")
-        self.assertLess(len(self.outputs["writer"]["text"].split()), 110)
+        self.assertLess(BENCHMARK.word_count(self.outputs["writer"]["text"]),
+                        BENCHMARK.word_count(self.run["draft"]))
         self.assertNotIn("\n", self.outputs["writer"]["text"])
+
+    def test_compression_budget_rejects_a_more_complete_but_longer_rewrite(self):
+        out = copy.deepcopy(self.outputs["writer"])
+        out["text"] += " The measured computational benefit concerns map updating rather than end-to-end navigation latency."
+        out["compression"].update(original_words=44, revision_words=53, delta_words=9)
+        with self.assertRaisesRegex(ValueError, "change in word count"):
+            self.advance(self.through(2), out)
 
     def test_packet_contains_exact_complete_existing_resources(self):
         context = LOOP.inspect_run(self.run)["packet"]["input"]
@@ -94,6 +102,20 @@ class WritingBenchmarkTests(unittest.TestCase):
             with self.subTest(key=key, value=value), self.assertRaises(ValueError):
                 LOOP.inspect_run(run)
 
+    def test_target_answer_priority_and_compression_budget_are_required(self):
+        for changes in (
+            {"target_answer": ""},
+            {"priority_criteria": []},
+            {"priority_criteria": ["C1", "C2", "C3", "C4"]},
+            {"budget": {**self.run["benchmark"]["budget"], "max_words": 0}},
+            {"budget": {**self.run["benchmark"]["budget"], "max_delta_words": -1}},
+            {"budget": {**self.run["benchmark"]["budget"], "unexpected": True}},
+        ):
+            run = copy.deepcopy(self.run)
+            run["benchmark"].update(changes)
+            with self.subTest(changes=changes), self.assertRaises(ValueError):
+                LOOP.inspect_run(run)
+
     def test_criteria_need_located_basis_and_valid_dimensions(self):
         for changes in ({"resource_ids": [], "source_ids": []}, {"resource_ids": ["unknown"]},
                         {"source_ids": ["unknown"]}, {"dimension": "paper_fame"},
@@ -122,6 +144,14 @@ class WritingBenchmarkTests(unittest.TestCase):
         out["assessments"]["C1"]["status"] = "valid_alternative"
         with self.assertRaisesRegex(ValueError, "Only a diagnosed gap"):
             self.advance(self.run, out)
+
+    def test_nonpriority_gap_must_be_explicitly_deferred(self):
+        out = copy.deepcopy(self.outputs["gap_finder"])
+        out["assessments"]["C5"]["status"] = "gap"
+        with self.assertRaisesRegex(ValueError, "selected or explicitly deferred"):
+            self.advance(self.run, out)
+        out["deferred_criteria"] = ["C5"]
+        self.assertEqual(LOOP.inspect_run(self.advance(self.run, out))["status"], "ready")
 
     def test_no_change_cannot_hide_unassessed_or_known_gaps(self):
         out = copy.deepcopy(self.outputs["gap_finder"])
@@ -167,15 +197,19 @@ class WritingBenchmarkTests(unittest.TestCase):
         self.assertIn("writing_resources", packet["input"])
         self.assertNotIn("PRIVATE_", json.dumps(packet))
 
-    def test_acceptance_rechecks_all_criteria_including_unselected_strengths(self):
+    def test_acceptance_rechecks_priority_and_allows_explicitly_deferred_gaps(self):
         for status in ("gap", "not_assessed"):
             out = copy.deepcopy(self.outputs["reviewer"])
-            row = out["assessments"]["C5"]
+            row = out["assessments"]["C1"]
             row["status"] = status
             if status == "not_assessed":
                 row["draft_witness"] = ""
-            with self.subTest(status=status), self.assertRaisesRegex(ValueError, "block acceptance"):
+            with self.subTest(status=status), self.assertRaisesRegex(ValueError, "priority"):
                 self.advance(self.through(3), out)
+        out = copy.deepcopy(self.outputs["reviewer"])
+        out["assessments"]["C5"]["status"] = "gap"
+        self.assertEqual(LOOP.inspect_run(self.advance(self.through(3), out))["status"],
+                         "accepted_revision")
 
     def test_standards_only_does_not_claim_exemplar_based_review(self):
         self.run["exemplars"] = {}

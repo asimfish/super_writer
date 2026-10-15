@@ -79,8 +79,15 @@ Build the target using [section benchmarking](style-learning-workflow.md#section
 The benchmark has exactly:
 
 - `section`, `contribution`: scope and supported contribution type/priority.
+- `target_answer`: the one reader answer this revision pass is trying to make
+  recoverable.
+- `priority_criteria`: 1-3 criterion IDs allowed to drive this pass. Other
+  diagnosed gaps must be explicitly deferred instead of becoming extra prose.
 - `protocol`, `variant`: exact bundled section-protocol and variant IDs.
 - `ai_spec_ids`, `library_ids`: 0-6 exact IDs each, not entire catalogs.
+- `budget`: positive `max_words` and `max_sentences`, `max_delta_words`,
+  `max_added_clauses`, and a `replacement_rule`. The candidate is checked against
+  the source draft, so a generous absolute limit does not authorize padding.
 - `criteria`: 1-12 scoped ID-keyed records with `dimension` (`content`,
   `organization`, `evidence`, `expression`, `clarity`, `format`), `expectation`,
   `applicability`, `resource_ids` and `source_ids`. At least one resource or
@@ -99,21 +106,23 @@ The v2 role outputs extend, not replace, the fields above:
 
 | Role | Additional output |
 |---|---|
-| Gap finder | `assessments` for every criterion and `selected_criteria` containing only diagnosed gaps |
-| Proposer | `criterion_ids` matching selected gaps, addressed concretely in `operation` |
-| Writer | `implementations` keyed by every proposed criterion, each with `status` (`realized`/`blocked`), exact `witness`, and `note`; blocked entries require an author query |
-| Reviewer | Fresh `assessments` of every criterion, without seeing prior assessments or implementation claims |
+| Gap finder | `assessments` for every criterion, `selected_criteria` for priority gaps, and `deferred_criteria` for other diagnosed gaps |
+| Proposer | `criterion_ids` matching selected gaps plus a deletion-first `compression_plan` |
+| Writer | `implementations` keyed by every proposed criterion and measured `compression`; blocked entries require an author query |
+| Reviewer | Fresh `assessments` of every criterion and measured `compression`, without seeing prior assessments or implementation claims |
 
 Each assessment has `status` (`gap`, `meets`, `valid_alternative`, `not_applicable`,
 `not_assessed`), `current`, `difference`, `draft_witness`, `evidence_ids`.
 Inapplicable/unassessed criteria use an empty witness and explain the reason.
 An omitted idea is witnessed by the existing passage whose selection/organization
 should change, not by a quotation invented to fill the schema.
-Known gaps or unassessed criteria preclude `no_change` and acceptance; a supported
-alternative is allowed. Source needs can stop the gap finder as `needs_sources`.
-Checks establish coverage and linkage, not whether judgments are insightful.
+Known or unassessed priority gaps preclude acceptance; lower-priority gaps may be
+deferred explicitly. A supported alternative is allowed. Source needs can stop the
+gap finder as `needs_sources`. Checks establish coverage and linkage, not whether
+judgments are insightful. A longer, checklist-complete rewrite is not an
+improvement when it violates the declared compression budget.
 
-See the [clear-but-weaker abstract example](../examples/writing-team/benchmark.md),
+See the [compression-first abstract example](../examples/writing-team/benchmark.md),
 including related-work and experiment contrasts. New runs are required after this
 guidance update; old raw events are retained rather than silently re-hashed.
 

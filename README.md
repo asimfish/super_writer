@@ -35,7 +35,7 @@ gap finder 按当前章节选入优秀论文观察、章节协议、写作规范
 [角色与架构图](docs/system-organization.md#可选角色协作与反馈) ·
 [来源核实与奖励适配](docs/research/ideascientist-2026-10-15.md) ·
 [原创交接示例](examples/writing-team/README.md) ·
-[摘要、相关工作和实验：清楚但不够好的写法怎样改](examples/writing-team/benchmark.md)
+[摘要、相关工作和实验：压缩优先地改进清楚但不够好的写法](examples/writing-team/benchmark.md)
 
 <a id="examples"></a>
 ## 样文：先看结果
