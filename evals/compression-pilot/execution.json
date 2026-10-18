@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-18",
+  "tested_commit": "870a205",
+  "previous_commit": "3f9d99c",
+  "model": "inherited parent configuration; no model or reasoning overrides; exact service model version, temperature and token usage unavailable",
+  "context": "fork_context false; prompt-scoped file access, not OS quarantine",
+  "sources": [
+    {
+      "block": 1,
+      "agent_id": "01a14f35-90a3-7c31-83fd-632d16991c54",
+      "pagesVisuallyChecked": {
+        "109": [
+          7,
+          8
+        ],
+        "110": [
+          7,
+          8,
+          10
+        ],
+        "052": [
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "agent_id": "01a14f35-90cf-7941-9d62-feb6d0e32222",
+      "pagesVisuallyChecked": {
+        "112": [
+          10
+        ],
+        "156": [
+          9
+        ],
+        "157": [
+          7,
+          9,
+          10
+        ]
+      }
+    }
+  ],
+  "writers": [
+    {
+      "writer_id": "compression-1",
+      "prompt": "You are writer compression-1 in a frozen academic revision pilot. Use a fresh context. Read ONLY /Users/liyufeng/Code/super_writer/evals/compression-pilot/prompts/compression-1.json. Follow that JSON instruction and its attached guidance; do not inspect any other file, source PDF, author abstract, prior result, agent output, or repository instructions. You may run a local word-count calculation on your own candidate text using the packet counting rule. Do not browse, spawn agents, or write files. Revise all six cases in the packet once. Return the actual first completed batch; no external feedback round. Your entire final answer must be valid JSON, without Markdown fences: {\"writer_id\":\"compression-1\",\"cases\":[{\"id\":\"case id exactly\",\"text\":\"one paragraph of manuscript prose\",\"note\":\"brief edit rationale, at most 45 words\"}]}. Include every input case exactly once.",
+      "agent_id": "01a14f39-1c11-7970-810d-91e0f3124255",
+      "nickname": "Faraday"
+    },
+    {
+      "writer_id": "prior-1",
+      "prompt": "You are writer prior-1 in a frozen academic revision pilot. Use a fresh context. Read ONLY /Users/liyufeng/Code/super_writer/evals/compression-pilot/prompts/prior-1.json. Follow that JSON instruction and its attached guidance; do not inspect any other file, source PDF, author abstract, prior result, agent output, or repository instructions. You may run a local word-count calculation on your own candidate text using the packet counting rule. Do not browse, spawn agents, or write files. Revise all six cases in the packet once. Return the actual first completed batch; no external feedback round. Your entire final answer must be valid JSON, without Markdown fences: {\"writer_id\":\"prior-1\",\"cases\":[{\"id\":\"case id exactly\",\"text\":\"one paragraph of manuscript prose\",\"note\":\"brief edit rationale, at most 45 words\"}]}. Include every input case exactly once.",
+      "agent_id": "01a14f39-1c38-7901-82cd-c263c1ef5710",
+      "nickname": "Herschel"
+    },
+    {
+      "writer_id": "editorial-1",
+      "prompt": "You are writer editorial-1 in a frozen academic revision pilot. Use a fresh context. Read ONLY /Users/liyufeng/Code/super_writer/evals/compression-pilot/prompts/editorial-1.json. Follow that JSON instruction and its attached guidance; do not inspect any other file, source PDF, author abstract, prior result, agent output, or repository instructions. You may run a local word-count calculation on your own candidate text using the packet counting rule. Do not browse, spawn agents, or write files. Revise all six cases in the packet once. Return the actual first completed batch; no external feedback round. Your entire final answer must be valid JSON, without Markdown fences: {\"writer_id\":\"editorial-1\",\"cases\":[{\"id\":\"case id exactly\",\"text\":\"one paragraph of manuscript prose\",\"note\":\"brief edit rationale, at most 45 words\"}]}. Include every input case exactly once.",
+      "agent_id": "01a14f39-1c58-7c82-9351-5338f2b8bd38",
+      "nickname": "Raman"
+    },
+    {
+      "writer_id": "editorial-2",
+      "prompt": "You are writer editorial-2 in a frozen academic revision pilot. Use a fresh context. Read ONLY /Users/liyufeng/Code/super_writer/evals/compression-pilot/prompts/editorial-2.json. Follow that JSON instruction and its attached guidance; do not inspect any other file, source PDF, author abstract, prior result, agent output, or repository instructions. You may run a local word-count calculation on your own candidate text using the packet counting rule. Do not browse, spawn agents, or write files. Revise all six cases in the packet once. Return the actual first completed batch; no external feedback round. Your entire final answer must be valid JSON, without Markdown fences: {\"writer_id\":\"editorial-2\",\"cases\":[{\"id\":\"case id exactly\",\"text\":\"one paragraph of manuscript prose\",\"note\":\"brief edit rationale, at most 45 words\"}]}. Include every input case exactly once.",
+      "agent_id": "01a14f39-1c7a-77a0-b2a9-943d0aa0b61b",
+      "nickname": "Schrodinger"
+    },
+    {
+      "writer_id": "prior-2",
+      "prompt": "You are writer prior-2 in a frozen academic revision pilot. Use a fresh context. Read ONLY /Users/liyufeng/Code/super_writer/evals/compression-pilot/prompts/prior-2.json. Follow that JSON instruction and its attached guidance; do not inspect any other file, source PDF, author abstract, prior result, agent output, or repository instructions. You may run a local word-count calculation on your own candidate text using the packet counting rule. Do not browse, spawn agents, or write files. Revise all six cases in the packet once. Return the actual first completed batch; no external feedback round. Your entire final answer must be valid JSON, without Markdown fences: {\"writer_id\":\"prior-2\",\"cases\":[{\"id\":\"case id exactly\",\"text\":\"one paragraph of manuscript prose\",\"note\":\"brief edit rationale, at most 45 words\"}]}. Include every input case exactly once.",
+      "agent_id": "01a14f39-1ca4-7731-b7f1-ebd90512766a",
+      "nickname": "Laplace"
+    },
+    {
+      "writer_id": "compression-2",
+      "prompt": "You are writer compression-2 in a frozen academic revision pilot. Use a fresh context. Read ONLY /Users/liyufeng/Code/super_writer/evals/compression-pilot/prompts/compression-2.json. Follow that JSON instruction and its attached guidance; do not inspect any other file, source PDF, author abstract, prior result, agent output, or repository instructions. You may run a local word-count calculation on your own candidate text using the packet counting rule. Do not browse, spawn agents, or write files. Revise all six cases in the packet once. Return the actual first completed batch; no external feedback round. Your entire final answer must be valid JSON, without Markdown fences: {\"writer_id\":\"compression-2\",\"cases\":[{\"id\":\"case id exactly\",\"text\":\"one paragraph of manuscript prose\",\"note\":\"brief edit rationale, at most 45 words\"}]}. Include every input case exactly once.",
+      "agent_id": "01a14f39-1cc6-7ca3-904d-fba736c8130f",
+      "nickname": "Hilbert"
+    }
+  ],
+  "reviewers": [
+    {
+      "reviewer_id": "J01",
+      "prompt": "You are anonymous reviewer J01 for academic Abstract and Results prose. Read ONLY /Users/liyufeng/Code/super_writer/evals/compression-pilot/blind/J01.json. It contains12 cases, four unlabeled versions A/B/C/D each, common body-grounded facts and two reader questions. Do not read other files, mappings, prompts, guide cards, writer notes, other reviews or author abstracts. No web, other agents, file writes, or code edits. Judge every case in given order. Compare all six distinct unordered version pairs AB,AC,AD,BC,BD,CD. For each choose the better overall scientific prose or tie; separately choose clarity and economy. Prefer a coherent scientific point, informative technical relationships, selective decisive evidence, precise conventional language and necessary scope. Neither more complete nor shorter is automatically better; a faithful omission can be legitimate. The facts are evidence, not a checklist requiring every fact in every paragraph. Do not favor wording that merely enumerates modules, numbers or generic cautions. An experimental paragraph can focus on its declared two questions without repeating an entire abstract. Give one located reason per pair with a short exact prose witness in the reason. Keep each reason at most35 words.\nFor each version answer Q1 and Q2 using ONLY what that prose states or necessarily entails, then check your reading against facts. Question_id Q1 and Q2 correspond to the first and second question in order. Mark recovered only when all consequential parts are recoverable; partial when some are, missing otherwise, contradicted when prose says the opposite. Supply one exact contiguous prose witness (can span sentences), or empty for missing. Keep each answer at most25 words. Do not fill missing text from source knowledge.\nSeparately audit factual fidelity against provided facts. Mark pass or concern. Missing nonessential facts are not factual errors. If concern, record exact prose witness, source fact_ids and reason, and consequential=true only when an error or lost essential condition materially changes the scientific claim. A reviewer can prefer fluent prose but still flag it factually unacceptable.\nReturn ONLY strict JSON with exactly your reviewer_id and12 cases. Each case has:\n{\"id\":\"input case ID\",\"comparisons\":[{\"pair\":[\"A\",\"B\"],\"choice\":\"A|B|tie\",\"clarity\":\"A|B|tie\",\"economy\":\"A|B|tie\",\"reason\":\"located decisive reason\"} (all6 pairs)],\"versions\":{\"A\":{\"fidelity\":\"pass|concern\",\"consequential\":false,\"issues\":[] (or [{\"witness\":\"exact substring\",\"fact_ids\":[\"F01\"],\"reason\":\"supported reason\"}]),\"answers\":[{\"question_id\":\"Q1\",\"status\":\"recovered|partial|missing|contradicted\",\"answer\":\"short answer\",\"witness\":\"exact substring\"},{\"question_id\":\"Q2\",\"status\":\"...\",\"answer\":\"...\",\"witness\":\"...\"}]},\"B\":same,\"C\":same,\"D\":same}}.\nThe schema prose above is explanatory: your final answer must be valid JSON only. Return each case once, all6 pairs once, all4 versions and both questions once per version. Do not make a winning-condition assumption.",
+      "agent_id": "01a14f3b-e2cc-76f0-986b-bdb85950df46",
+      "nickname": "Sagan"
+    },
+    {
+      "reviewer_id": "J02",
+      "prompt": "You are anonymous reviewer J02 for academic Abstract and Results prose. Read ONLY /Users/liyufeng/Code/super_writer/evals/compression-pilot/blind/J02.json. It contains12 cases, four unlabeled versions A/B/C/D each, common body-grounded facts and two reader questions. Do not read other files, mappings, prompts, guide cards, writer notes, other reviews or author abstracts. No web, other agents, file writes, or code edits. Judge every case in given order. Compare all six distinct unordered version pairs AB,AC,AD,BC,BD,CD. For each choose the better overall scientific prose or tie; separately choose clarity and economy. Prefer a coherent scientific point, informative technical relationships, selective decisive evidence, precise conventional language and necessary scope. Neither more complete nor shorter is automatically better; a faithful omission can be legitimate. The facts are evidence, not a checklist requiring every fact in every paragraph. Do not favor wording that merely enumerates modules, numbers or generic cautions. An experimental paragraph can focus on its declared two questions without repeating an entire abstract. Give one located reason per pair with a short exact prose witness in the reason. Keep each reason at most35 words.\nFor each version answer Q1 and Q2 using ONLY what that prose states or necessarily entails, then check your reading against facts. Question_id Q1 and Q2 correspond to the first and second question in order. Mark recovered only when all consequential parts are recoverable; partial when some are, missing otherwise, contradicted when prose says the opposite. Supply one exact contiguous prose witness (can span sentences), or empty for missing. Keep each answer at most25 words. Do not fill missing text from source knowledge.\nSeparately audit factual fidelity against provided facts. Mark pass or concern. Missing nonessential facts are not factual errors. If concern, record exact prose witness, source fact_ids and reason, and consequential=true only when an error or lost essential condition materially changes the scientific claim. A reviewer can prefer fluent prose but still flag it factually unacceptable.\nReturn ONLY strict JSON with exactly your reviewer_id and12 cases. Each case has:\n{\"id\":\"input case ID\",\"comparisons\":[{\"pair\":[\"A\",\"B\"],\"choice\":\"A|B|tie\",\"clarity\":\"A|B|tie\",\"economy\":\"A|B|tie\",\"reason\":\"located decisive reason\"} (all6 pairs)],\"versions\":{\"A\":{\"fidelity\":\"pass|concern\",\"consequential\":false,\"issues\":[] (or [{\"witness\":\"exact substring\",\"fact_ids\":[\"F01\"],\"reason\":\"supported reason\"}]),\"answers\":[{\"question_id\":\"Q1\",\"status\":\"recovered|partial|missing|contradicted\",\"answer\":\"short answer\",\"witness\":\"exact substring\"},{\"question_id\":\"Q2\",\"status\":\"...\",\"answer\":\"...\",\"witness\":\"...\"}]},\"B\":same,\"C\":same,\"D\":same}}.\nThe schema prose above is explanatory: your final answer must be valid JSON only. Return each case once, all6 pairs once, all4 versions and both questions once per version. Do not make a winning-condition assumption.",
+      "agent_id": "01a14f3b-e2fb-7573-981c-1a5bef6812e4",
+      "nickname": "Sartre"
+    }
+  ],
+  "exposure": "Source preparation and coordinator inspected body pages2-10; first pages excluded from writer packets. Model pretraining exposure cannot be excluded.",
+  "retries": [],
+  "reference_study": {
+    "preparation": {
+      "agent_id": "01a14f3f-412f-71b2-b762-0b5854efb8ab",
+      "nickname": "Heisenberg",
+      "prompt": "Prepare a private reference-comparison source file. Read ONLY first-page OCR files /tmp/super-writer-compression-20261018.a92GT6/p052-first.txt, p109-first.txt, p110-first.txt, p112-first.txt, p156-first.txt, p157-first.txt and, if needed, render page1 of their corresponding PDFs in the same directory for visual verification. Extract the EXACT author abstract (excluding label Abstract, title, captions, author lists, intro and affiliations). Repair only obvious OCR mistakes and line-break hyphenation by visually checking the PDF; preserve scientific wording and claims. Do not rewrite or improve. No web, other files, other agents or reading any generated revision. Create ONLY /tmp/super-writer-compression-20261018.a92GT6/author-abstracts.json via apply_patch with {\"abstracts\":[{\"id\":\"R01\",\"source\":\"https://www.roboticsproceedings.org/rss21/p052.pdf\",\"text\":\"clean exact abstract\",\"notes\":\"OCR checks/uncertainty\"},...]} using mapping R01=p052,R02=p109,R03=p110,R04=p112,R05=p156,R06=p157. Full originals must remain private and outside Git. Final response only confirm path and uncertain OCR, not abstract text."
+    },
+    "reviewers": [
+      {
+        "reviewer_id": "A01",
+        "prompt": "You are anonymous academic abstract style reviewer A01. Read ONLY /tmp/super-writer-compression-20261018.a92GT6/A01.json. Six pairs A/B describe the same published research. Judge the passages on scientific focus, organization, economy, natural disciplinary language and overall abstract quality. You do not know the authorship or generation conditions. Neither more detail nor fewer words is automatically better. Prefer a clear problem, a distinctive idea, a coherent path from method to meaningful evidence, and selective conventional prose. Look for missing contribution, crowded measurement lists, redundant framing, abrupt transitions, defensive qualification and excessive method detail. You have no source body here, so do not invent a factual audit or penalize a true-sounding difference as a proven error. No web, other files, other agents or file writes.\nReturn strict JSON only: {\"reviewer_id\":\"A01\",\"cases\":[{\"id\":\"exact case ID\",\"choice\":\"A|B|tie\",\"focus\":\"A|B|tie\",\"organization\":\"A|B|tie\",\"economy\":\"A|B|tie\",\"language\":\"A|B|tie\",\"reason\":\"at most70 words, explain the decisive writing difference\",\"improve_A\":\"one concrete useful edit or none\",\"improve_B\":\"one concrete useful edit or none\"}]}. Cover each of6 cases once in given order. Paraphrase the writing differences; do not quote sentences or distinctive source phrases in your response. Do not assume either label is preferred.",
+        "agent_id": "01a14f41-5ffa-7d03-84e5-522596b59329",
+        "nickname": "Godel"
+      },
+      {
+        "reviewer_id": "A02",
+        "prompt": "You are anonymous academic abstract style reviewer A02. Read ONLY /tmp/super-writer-compression-20261018.a92GT6/A02.json. Six pairs A/B describe the same published research. Judge the passages on scientific focus, organization, economy, natural disciplinary language and overall abstract quality. You do not know the authorship or generation conditions. Neither more detail nor fewer words is automatically better. Prefer a clear problem, a distinctive idea, a coherent path from method to meaningful evidence, and selective conventional prose. Look for missing contribution, crowded measurement lists, redundant framing, abrupt transitions, defensive qualification and excessive method detail. You have no source body here, so do not invent a factual audit or penalize a true-sounding difference as a proven error. No web, other files, other agents or file writes.\nReturn strict JSON only: {\"reviewer_id\":\"A02\",\"cases\":[{\"id\":\"exact case ID\",\"choice\":\"A|B|tie\",\"focus\":\"A|B|tie\",\"organization\":\"A|B|tie\",\"economy\":\"A|B|tie\",\"language\":\"A|B|tie\",\"reason\":\"at most70 words, explain the decisive writing difference\",\"improve_A\":\"one concrete useful edit or none\",\"improve_B\":\"one concrete useful edit or none\"}]}. Cover each of6 cases once in given order. Paraphrase the writing differences; do not quote sentences or distinctive source phrases in your response. Do not assume either label is preferred.",
+        "agent_id": "01a14f41-6026-7151-be29-f11459dcafd9",
+        "nickname": "Newton"
+      }
+    ],
+    "source_access": "Original abstracts inspected only after all primary revisions were saved; originals retained outside the Git repository; reference reviewer reasons are paraphrases.",
+    "scope": "Exploratory unequal-information comparison; no change to primary protocol, inputs or gate."
+  },
+  "completion_status": "Six writer batches, two primary reviewer batches and two reference reviewer batches complete; no prose-quality retries.",
+  "coordinator_source_spot_check": "Safe Beyond the Horizon, PDF page10, TableII: crash/collision/control-rate measurements checked visually after source preparation."
+}

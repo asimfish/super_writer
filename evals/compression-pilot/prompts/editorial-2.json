@@ -1,0 +1,369 @@
+{
+  "writer_id": "editorial-2",
+  "instruction": "Revise each supplied passage once for clear, precise academic writing. Preserve the contribution, numerical referents and necessary conditions. Use only supplied facts. Do not pad to a minimum. Answer the reader questions in the prose. Return JSON with writer_id and cases: each case has id, text, note. Notes stay outside manuscript prose. Return your actual result even if it misses the budget. Do not read other inputs, author abstracts or repository guides. No web searches or agents. Improve clarity, concision and cohesion using ordinary editorial judgment.",
+  "counting_rule": "ASCII alphanumeric tokens joined by hyphens/apostrophes",
+  "cases": [
+    {
+      "id": "R04-abstract",
+      "paper": "R04",
+      "unit": "abstract",
+      "source": "https://www.roboticsproceedings.org/rss21/p112.pdf",
+      "contribution": "Neural Shield VIMPC combines a learned discrete-time policy barrier with rollout resampling to improve empirical safety beyond short prediction horizons and sampling efficiency.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 4, Section III-B, equations (11)-(13); PDF page 5, opening paragraphs",
+          "text": "Penalizing constraint violations only within an MPC prediction horizon does not rule out later unsafe states. Adding barrier penalties can also waste most sampled trajectories when violations drive their importance weights close to zero."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 5, Section IV-A, equations (19)-(25); PDF page 6, Section IV-A, equation (28); PDF page 7, Section IV-C",
+          "text": "DPNCBF starts from a policy value defined by the worst constraint-function value along the policy's infinite future trajectory. It learns a discounted neural approximation offline and takes its maximum with the original constraint function. Online, NS-VIMPC uses this approximation in the discrete-time barrier descent constraint; the experiments learn from an S-MPPI policy."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 6, Section IV-B, Figure 3 and text following equation (31); PDF page 7, Section IV-C",
+          "text": "Resampling-based rollouts check state constraints at every rollout step except the last. If safe particles remain, unsafe states and their control prefixes are replaced by safe counterparts, preserving the remaining control suffixes. If all particles violate constraints, no resampling occurs and a violation cost remains. The controller forms a weighted control estimate and executes only its first input."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Remark 4; PDF page 6, Remark 5",
+          "text": "The learned neural barrier is an approximation, not a verified discrete-time control barrier function. In addition, a weighted mean of constraint-satisfying controls need not itself satisfy a nonconvex safety constraint. The authors describe checking the mean and substituting a feasible rollout as a possible remedy, rather than establishing a general guarantee for the evaluated controller."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 8, Section V-B and Figure 6; PDF page 9, Figure 7",
+          "text": "The Drone simulation requires a planar quadrotor with ground effects to traverse a narrow corridor near the ground. With 500 sampled trajectories, NS-MPPI was the only tested controller with zero crash rate across the evaluated control horizons, including 10 steps. At the ten-step horizon, its barrier constraint prompted early descent while S-MPPI failed to anticipate the obstacle beyond the horizon."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 8, Section V, baseline definitions and footnote 2; Section V-A and Figure 5",
+          "text": "Simulation baselines are MPPI, S-MPPI and CEM; S-MPPI's gradient-dependent local repair is removed. In AutoRally, contact with the track edge counts as a collision, while fully leaving the track counts as a crash. Target-speed sweeps over 20 trials compare deterministic dynamics and dynamics with Gaussian state disturbances; NS-MPPI has lower crash and collision rates without a substantially lower average speed."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 9, Section V-C, 'RBR improves sample efficiency by 5X,' and Figure 8",
+          "text": "A controlled AutoRally comparison adds only RBR to S-MPPI and varies the sampled-trajectory count over 100 trials. The authors report comparable collision rates using roughly five times fewer trajectories with RBR, separating the resampling benefit from the learned-barrier change."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 10, Table II; Section V-C, 'Enhanced sampling efficiency enables safe real-time planning on a CPU'",
+          "text": "For AutoRally with a 12 m/s target speed, a 15-step horizon and 30 sampled trajectories per optimization iteration, Table II reports NS-MPPI crash rate 0.04, collision rate 0.06 and CPU control frequency 73.64 Hz. S-MPPI yields 0.46, 0.70 and 107.31 Hz respectively; MPPI yields 0.98, 1.00 and 130.05 Hz; CEM yields 1.00, 1.00 and 88.17 Hz."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 10, Section V-D and Figure 12",
+          "text": "On the six-dimensional Drone task, the tested continuous-time grid-based reachability value function marks the narrow corridor unsafe because the grid is too coarse to resolve it. Substituting that function into NS-MPPI produces lower success rates at longer horizons than the learned DPNCBF, illustrating a discretization-related comparison rather than a failure of every reachability method."
+        }
+      ],
+      "draft": "Sampling-based MPC can satisfy predicted constraints yet enter states that become unsafe after its horizon. Neural Shield VIMPC combines a learned discrete-time policy barrier with resampling-based rollouts. The barrier approximates a policy's worst future constraint value; rollout resampling replaces unsafe prefixes with safe ones. In drone simulations using 500 sampled trajectories, NS-MPPI avoided crashes even at a ten-step horizon. On AutoRally, a 12 m/s target, 15-step horizon and 30 trajectories yielded a 0.04 crash rate at 73.64 Hz on a CPU, compared with 0.46 for S-MPPI. These results concern an unverified barrier approximation, not a general safety guarantee.",
+      "questions": [
+        "How do the learned barrier and rollout resampling address different failures of short-horizon sampling-based MPC?",
+        "What short-horizon and CPU evidence supports the method, and why does it not establish a general safety guarantee?"
+      ],
+      "max_words": 160
+    },
+    {
+      "id": "R04-results",
+      "paper": "R04",
+      "unit": "results",
+      "source": "https://www.roboticsproceedings.org/rss21/p112.pdf",
+      "contribution": "Neural Shield VIMPC combines a learned discrete-time policy barrier with rollout resampling to improve empirical safety beyond short prediction horizons and sampling efficiency.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 4, Section III-B, equations (11)-(13); PDF page 5, opening paragraphs",
+          "text": "Penalizing constraint violations only within an MPC prediction horizon does not rule out later unsafe states. Adding barrier penalties can also waste most sampled trajectories when violations drive their importance weights close to zero."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 5, Section IV-A, equations (19)-(25); PDF page 6, Section IV-A, equation (28); PDF page 7, Section IV-C",
+          "text": "DPNCBF starts from a policy value defined by the worst constraint-function value along the policy's infinite future trajectory. It learns a discounted neural approximation offline and takes its maximum with the original constraint function. Online, NS-VIMPC uses this approximation in the discrete-time barrier descent constraint; the experiments learn from an S-MPPI policy."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 6, Section IV-B, Figure 3 and text following equation (31); PDF page 7, Section IV-C",
+          "text": "Resampling-based rollouts check state constraints at every rollout step except the last. If safe particles remain, unsafe states and their control prefixes are replaced by safe counterparts, preserving the remaining control suffixes. If all particles violate constraints, no resampling occurs and a violation cost remains. The controller forms a weighted control estimate and executes only its first input."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Remark 4; PDF page 6, Remark 5",
+          "text": "The learned neural barrier is an approximation, not a verified discrete-time control barrier function. In addition, a weighted mean of constraint-satisfying controls need not itself satisfy a nonconvex safety constraint. The authors describe checking the mean and substituting a feasible rollout as a possible remedy, rather than establishing a general guarantee for the evaluated controller."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 8, Section V-B and Figure 6; PDF page 9, Figure 7",
+          "text": "The Drone simulation requires a planar quadrotor with ground effects to traverse a narrow corridor near the ground. With 500 sampled trajectories, NS-MPPI was the only tested controller with zero crash rate across the evaluated control horizons, including 10 steps. At the ten-step horizon, its barrier constraint prompted early descent while S-MPPI failed to anticipate the obstacle beyond the horizon."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 8, Section V, baseline definitions and footnote 2; Section V-A and Figure 5",
+          "text": "Simulation baselines are MPPI, S-MPPI and CEM; S-MPPI's gradient-dependent local repair is removed. In AutoRally, contact with the track edge counts as a collision, while fully leaving the track counts as a crash. Target-speed sweeps over 20 trials compare deterministic dynamics and dynamics with Gaussian state disturbances; NS-MPPI has lower crash and collision rates without a substantially lower average speed."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 9, Section V-C, 'RBR improves sample efficiency by 5X,' and Figure 8",
+          "text": "A controlled AutoRally comparison adds only RBR to S-MPPI and varies the sampled-trajectory count over 100 trials. The authors report comparable collision rates using roughly five times fewer trajectories with RBR, separating the resampling benefit from the learned-barrier change."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 10, Table II; Section V-C, 'Enhanced sampling efficiency enables safe real-time planning on a CPU'",
+          "text": "For AutoRally with a 12 m/s target speed, a 15-step horizon and 30 sampled trajectories per optimization iteration, Table II reports NS-MPPI crash rate 0.04, collision rate 0.06 and CPU control frequency 73.64 Hz. S-MPPI yields 0.46, 0.70 and 107.31 Hz respectively; MPPI yields 0.98, 1.00 and 130.05 Hz; CEM yields 1.00, 1.00 and 88.17 Hz."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 10, Section V-D and Figure 12",
+          "text": "On the six-dimensional Drone task, the tested continuous-time grid-based reachability value function marks the narrow corridor unsafe because the grid is too coarse to resolve it. Substituting that function into NS-MPPI produces lower success rates at longer horizons than the learned DPNCBF, illustrating a discretization-related comparison rather than a failure of every reachability method."
+        }
+      ],
+      "draft": "Adding only rollout resampling to S-MPPI on AutoRally matched collision rates with roughly five times fewer trajectories over 100 trials. Separately, at a 12 m/s target speed, 15-step horizon and 30 trajectories, NS-MPPI recorded crash and collision rates of 0.04 and 0.06, versus S-MPPI's 0.46 and 0.70. CPU control frequency fell from 107.31 to 73.64 Hz. Drone tests using 500 trajectories showed zero NS-MPPI crashes across tested horizons, including ten steps. The learned barrier remains unverified.",
+      "questions": [
+        "Which controlled comparison isolates the sampling benefit of RBR from the effect of learning a different barrier?",
+        "At the reported CPU budget, how do NS-MPPI's crash and collision rates compare with S-MPPI's, and what is the control-frequency tradeoff?"
+      ],
+      "max_words": 130
+    },
+    {
+      "id": "R05-abstract",
+      "paper": "R05",
+      "unit": "abstract",
+      "source": "https://www.roboticsproceedings.org/rss21/p156.pdf",
+      "contribution": "ArticuBot learns a hierarchical, point-cloud-based opening policy from simulated demonstrations, using weighted displacement subgoals and a conditioned diffusion controller for zero-shot transfer to unseen articulated objects and two robot embodiments.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Section I; PDF page 3, Section III",
+          "text": "The task is to open articulated objects with a parallel-jaw gripper despite differences in object geometry and articulation. Objects must have handles graspable from the fully closed state. Deployment assumes a target-object name for open-vocabulary segmentation into object-only point clouds; the learned policy does not receive articulation parameters. Simulation generation does require object assets with handle annotations."
+        },
+        {
+          "id": "F02",
+          "location": "PDF pages 3-5, Section IV-A",
+          "text": "Simulation demonstrations combine handle-grasp sampling, collision-free approach planning and opening actions computed from ground-truth articulation. Failed or insufficient openings are discarded; retained candidates are ranked by grasp stability and approach-path length. Object pose, size and the robot's initial configuration are randomized, so the data-generation stage uses information unavailable to the deployed policy."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 10, Section VI-A, paragraphs beginning 'For robust sim2real transfer'",
+          "text": "The final real-transfer training dataset combines 42.3k simulation trajectories and 4.7 million observation-action pairs over 322 objects. Depth augmentations simulate edge artifacts and missing pixels, and camera poses are randomized near real-camera placements. This dataset trains one weighted-displacement high-level policy; the low-level policy is transferred without training on these depth augmentations."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Section IV-B, 'High-Level Policy'; PDF pages 6-7, Section IV-B, 'Low-level Policy'; PDF page 7, Section IV-C",
+          "text": "The hierarchy predicts end-effector subgoals for grasping a handle and completing the opening. A modified 3D diffusion policy conditions on the current object point cloud, current end-effector state and predicted subgoal to output delta translation, rotation and finger movement. It learns task actions rather than merely reaching the subgoal. Both levels are rerun from current observations during execution."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 6, Section IV-B, weighted displacement model, equations (3)-(4)",
+          "text": "The high-level weighted displacement model represents a gripper subgoal by four 3D landmarks: the hand root, both fingers and the closed-grasp center. PointNet++ predicts scene-point offsets to these landmarks and a weight per scene point. The final landmark predictions are weighted averages of each scene point plus its offset, grounding pose prediction in observed geometry rather than averaging orientation vectors."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Section V-A and Figure 3; PDF page 8, Section V-B",
+          "text": "Simulation testing uses 10 unseen objects with 25 configurations each and three evaluation runs, totaling 750 trials per method. Normalized opening performance is achieved joint-opening increase divided by the demonstration's opening increase, not binary success rate. On datasets without camera randomization, non-hierarchical DP3 and its transformer-encoder variant remain below 0.25 normalized opening, while the hierarchical policy performs substantially better."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 8, Section V-C and Figure 4",
+          "text": "High-level architecture comparisons keep the low-level policy fixed. With camera-randomized training and randomized-camera testing, weighted displacement outperforms the compared DP3 high-level variants across tested dataset sizes, especially for camera poses outside the training distribution. This is not unconditional dominance: when training and testing without camera randomization on all 322 objects, DP3 Transformer Diffusion performs better than weighted displacement."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 9, Section V-D and Table II; PDF page 7, Section V-A, evaluation protocol",
+          "text": "Ablations train on 200 objects without camera randomization and report mean normalized opening performance with standard deviation over three evaluation runs: ArticuBot 0.70 +/- 0.01; replacing PointNet++ with Point Transformer 0.60 +/- 0.02; removing per-point weights 0.66 +/- 0.01; predicting 6D orientations rather than four-landmark displacements 0.53 +/- 0.01; and replacing the learned low-level controller with motion planning and IK-based joint control 0.24 +/- 0.02."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 2, Section I, paragraphs beginning 'Our final policy'; PDF page 10, Section VI-A and Figures 5-6",
+          "text": "The body introduction reports one policy opening 20 unseen real-world articulated objects across two tabletop Franka setups in different labs and an X-Arm mounted on a mobile base in kitchens and lounges. Training uses only a simulated Franka. End-effector-space subgoals and actions, rather than joint-space policy outputs, enable zero-shot transfer to the X-Arm embodiment."
+        }
+      ],
+      "draft": "ArticuBot learns an articulated-object opening policy from simulated demonstrations. A weighted displacement model predicts grasping and opening subgoals by averaging pointwise offsets to four gripper landmarks with learned weights. A goal-conditioned diffusion policy then produces end-effector motions. Training uses 42.3k trajectories spanning 322 objects. In a 200-object simulation ablation without camera randomization, normalized opening was 0.70 with the learned controller and 0.24 after substituting motion planning. The policy also opened 20 unseen real objects across Franka and X-Arm setups without real-world training. Deployment assumes graspable handles and target-object names for segmentation; weighted displacement was not best in every fixed-camera comparison.",
+      "questions": [
+        "How do weighted landmark displacements and the goal-conditioned controller divide the opening task, and what information does deployment require?",
+        "Which simulation ablation and real-robot evidence support transfer, and which camera condition limits the architecture's claimed advantage?"
+      ],
+      "max_words": 160
+    },
+    {
+      "id": "R05-results",
+      "paper": "R05",
+      "unit": "results",
+      "source": "https://www.roboticsproceedings.org/rss21/p156.pdf",
+      "contribution": "ArticuBot learns a hierarchical, point-cloud-based opening policy from simulated demonstrations, using weighted displacement subgoals and a conditioned diffusion controller for zero-shot transfer to unseen articulated objects and two robot embodiments.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Section I; PDF page 3, Section III",
+          "text": "The task is to open articulated objects with a parallel-jaw gripper despite differences in object geometry and articulation. Objects must have handles graspable from the fully closed state. Deployment assumes a target-object name for open-vocabulary segmentation into object-only point clouds; the learned policy does not receive articulation parameters. Simulation generation does require object assets with handle annotations."
+        },
+        {
+          "id": "F02",
+          "location": "PDF pages 3-5, Section IV-A",
+          "text": "Simulation demonstrations combine handle-grasp sampling, collision-free approach planning and opening actions computed from ground-truth articulation. Failed or insufficient openings are discarded; retained candidates are ranked by grasp stability and approach-path length. Object pose, size and the robot's initial configuration are randomized, so the data-generation stage uses information unavailable to the deployed policy."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 10, Section VI-A, paragraphs beginning 'For robust sim2real transfer'",
+          "text": "The final real-transfer training dataset combines 42.3k simulation trajectories and 4.7 million observation-action pairs over 322 objects. Depth augmentations simulate edge artifacts and missing pixels, and camera poses are randomized near real-camera placements. This dataset trains one weighted-displacement high-level policy; the low-level policy is transferred without training on these depth augmentations."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Section IV-B, 'High-Level Policy'; PDF pages 6-7, Section IV-B, 'Low-level Policy'; PDF page 7, Section IV-C",
+          "text": "The hierarchy predicts end-effector subgoals for grasping a handle and completing the opening. A modified 3D diffusion policy conditions on the current object point cloud, current end-effector state and predicted subgoal to output delta translation, rotation and finger movement. It learns task actions rather than merely reaching the subgoal. Both levels are rerun from current observations during execution."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 6, Section IV-B, weighted displacement model, equations (3)-(4)",
+          "text": "The high-level weighted displacement model represents a gripper subgoal by four 3D landmarks: the hand root, both fingers and the closed-grasp center. PointNet++ predicts scene-point offsets to these landmarks and a weight per scene point. The final landmark predictions are weighted averages of each scene point plus its offset, grounding pose prediction in observed geometry rather than averaging orientation vectors."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Section V-A and Figure 3; PDF page 8, Section V-B",
+          "text": "Simulation testing uses 10 unseen objects with 25 configurations each and three evaluation runs, totaling 750 trials per method. Normalized opening performance is achieved joint-opening increase divided by the demonstration's opening increase, not binary success rate. On datasets without camera randomization, non-hierarchical DP3 and its transformer-encoder variant remain below 0.25 normalized opening, while the hierarchical policy performs substantially better."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 8, Section V-C and Figure 4",
+          "text": "High-level architecture comparisons keep the low-level policy fixed. With camera-randomized training and randomized-camera testing, weighted displacement outperforms the compared DP3 high-level variants across tested dataset sizes, especially for camera poses outside the training distribution. This is not unconditional dominance: when training and testing without camera randomization on all 322 objects, DP3 Transformer Diffusion performs better than weighted displacement."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 9, Section V-D and Table II; PDF page 7, Section V-A, evaluation protocol",
+          "text": "Ablations train on 200 objects without camera randomization and report mean normalized opening performance with standard deviation over three evaluation runs: ArticuBot 0.70 +/- 0.01; replacing PointNet++ with Point Transformer 0.60 +/- 0.02; removing per-point weights 0.66 +/- 0.01; predicting 6D orientations rather than four-landmark displacements 0.53 +/- 0.01; and replacing the learned low-level controller with motion planning and IK-based joint control 0.24 +/- 0.02."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 2, Section I, paragraphs beginning 'Our final policy'; PDF page 10, Section VI-A and Figures 5-6",
+          "text": "The body introduction reports one policy opening 20 unseen real-world articulated objects across two tabletop Franka setups in different labs and an X-Arm mounted on a mobile base in kitchens and lounges. Training uses only a simulated Franka. End-effector-space subgoals and actions, rather than joint-space policy outputs, enable zero-shot transfer to the X-Arm embodiment."
+        }
+      ],
+      "draft": "With 200 training objects and no camera randomization, ArticuBot achieved normalized opening of 0.70 +/- 0.01, versus 0.66 +/- 0.01 without point weights and 0.24 +/- 0.02 when motion planning replaced the learned controller. These are opening ratios, not success rates. High-level architecture comparisons kept the low-level policy fixed: weighted displacement performed better under randomized-camera tests, but DP3 Transformer Diffusion performed better with all 322 objects when training and testing without camera randomization.",
+      "questions": [
+        "What do the 200-object ablations show about learned point weights and the low-level controller, and how should their opening metric be interpreted?",
+        "What was held fixed in the high-level comparison, and which camera condition reverses the advantage over DP3 Transformer Diffusion?"
+      ],
+      "max_words": 130
+    },
+    {
+      "id": "R06-abstract",
+      "paper": "R06",
+      "unit": "abstract",
+      "source": "https://www.roboticsproceedings.org/rss21/p157.pdf",
+      "contribution": "DemoGen generates spatially augmented action-observation demonstrations by adapting object-centric skills and editing point clouds, improving DP3 spatial generalization without executing each synthetic trajectory on a robot.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF pages 3-4, Section III-A and Section III-B; PDF page 2, discussion preceding Section II",
+          "text": "The spatial range of the studied visuomotor policies remains concentrated around demonstrated object configurations and narrows when tasks demand greater precision. Covering larger workspaces therefore increases demonstration requirements; 3D observations and pretrained 2D encoders help but do not remove this dependence. Prior rollout-based generation also needs robot execution to turn adapted action plans into training observations."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 5, Sections IV-B and IV-C; PDF page 6, Section IV-C",
+          "text": "DemoGen parses demonstrations into free-space motion segments and object-contact skill segments. It transforms each skill segment with its object while leaving hand commands unchanged, then replans free-space motion between transformed skill endpoints. Linear interpolation handles uncluttered scenes; a motion planner is used when obstacle avoidance is needed."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 5, Section IV-B, 'Segmented point cloud observations'; PDF page 6, Section IV-D and Figure 6",
+          "text": "Single-view RGBD observations are cropped to the manipulated objects and end-effector, cleaned and downsampled. First-frame object masks initialize point-cloud editing. Static objects are transformed with their target configurations; objects in contact are grouped with the end-effector and transformed together. Proprioceptive states receive corresponding transformations, producing paired synthetic observations and actions without a robot rollout for each new trajectory."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 6, Section IV-C, 'Failure-free action execution'; Section IV-D, 'Adapting proprioceptive states'",
+          "text": "Because no robot execution filters failed synthetic trajectories, the method requires reliable execution of its generated actions. It uses inverse-kinematics controllers with absolute end-effector targets to reduce accumulated control errors. Synthetic proprioception transforms recorded states rather than substituting the next commanded pose, because the controller need not reach that pose exactly."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 7, Section V-A and Table I",
+          "text": "All evaluated datasets train DP3 with equal training exposure counted by observation-action pairs. For eight simulated tasks with expanded object randomization, one scripted source trajectory yields 100 generated demonstrations for one-object tasks or 200 for two-object tasks. Task-averaged success rates, using the mean over three seeds rather than the maximum, are 88% for DemoGen, 13% for one source, 68% for 10 sources and 91% for 25 sources."
+        },
+        {
+          "id": "F06",
+          "location": "PDF pages 8-9, Section VI-A, evaluation protocol and generation strategy; PDF page 10, Section VI-B, generation strategy",
+          "text": "Real-world generation starts with one human demonstration per task and two recorded replays, giving three source observation trajectories. Evaluations use feasible configurations checked through kinematic teaching. Single-arm generation targets the evaluated object configurations, adding nine small perturbations within +/- 1.5 cm on each planar axis per target and source trajectory. The bimanual Fruit-Basket task also uses three source trajectories but omits these perturbations."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 8, Section VI and Table II; PDF page 9, Table III and Section VI-A, results analysis",
+          "text": "Across eight real-world tasks on gripper, dexterous-hand and bimanual platforms, the task-averaged success rate is 74.6% with DemoGen versus 11.0% with the three-source-only baseline. Each evaluated configuration is repeated five times. DemoGen improves every task, but Dex-Drill reaches 55.6% and Dex-Coffee 40.0%; the authors attribute their weaker performance to tight precision requirements."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 10, Table IV and Section VI-A, 'Generation cost'",
+          "text": "In a single-process measurement of real-world demonstration generation, DemoGen takes 0.010 seconds per trajectory and 22.0 seconds for the reported whole dataset. These are computation-only costs for synthetic generation, not human collection or policy-training times. MimicGen's estimated 2.1 minutes per trajectory combines robot replay duration with an assumed 20-second manual object reset; it is not a matched computation-only benchmark."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 7, Section V-B and Figures 8-9; PDF pages 9-10, Section VI-A, spatial-heatmap discussion",
+          "text": "Transforming a single camera's point cloud preserves the originally visible object surfaces instead of reconstructing newly exposed views. The authors identify this visual mismatch as a limit: simulated Pick-Cube gains saturate when synthetic coverage or density increases, and real-world performance decreases at configurations farther from the demonstrated one."
+        }
+      ],
+      "draft": "Visuomotor policies often work near demonstrated object placements, making broad workspace coverage expensive. DemoGen expands demonstrations by transforming contact-skill actions with objects, replanning free-space motion, and applying matching edits to segmented point clouds. The resulting observation-action pairs train DP3 without on-robot rollouts for each synthetic trajectory. In eight real-world tasks, mean success rose from 11.0% to 74.6%. Each task began with one human demonstration and two recorded replays; single-arm generation targeted feasible evaluation configurations with small placement perturbations. Generation cost was 0.010 seconds per trajectory in a single process. Single-view appearance mismatch still limits performance away from the demonstrated configuration.",
+      "questions": [
+        "How does DemoGen generate compatible actions and observations without executing every synthetic trajectory, and what control assumption makes this possible?",
+        "What source-data, placement and cost conditions qualify the reported real-world improvement, and what limits more distant spatial generalization?"
+      ],
+      "max_words": 160
+    },
+    {
+      "id": "R06-results",
+      "paper": "R06",
+      "unit": "results",
+      "source": "https://www.roboticsproceedings.org/rss21/p157.pdf",
+      "contribution": "DemoGen generates spatially augmented action-observation demonstrations by adapting object-centric skills and editing point clouds, improving DP3 spatial generalization without executing each synthetic trajectory on a robot.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF pages 3-4, Section III-A and Section III-B; PDF page 2, discussion preceding Section II",
+          "text": "The spatial range of the studied visuomotor policies remains concentrated around demonstrated object configurations and narrows when tasks demand greater precision. Covering larger workspaces therefore increases demonstration requirements; 3D observations and pretrained 2D encoders help but do not remove this dependence. Prior rollout-based generation also needs robot execution to turn adapted action plans into training observations."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 5, Sections IV-B and IV-C; PDF page 6, Section IV-C",
+          "text": "DemoGen parses demonstrations into free-space motion segments and object-contact skill segments. It transforms each skill segment with its object while leaving hand commands unchanged, then replans free-space motion between transformed skill endpoints. Linear interpolation handles uncluttered scenes; a motion planner is used when obstacle avoidance is needed."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 5, Section IV-B, 'Segmented point cloud observations'; PDF page 6, Section IV-D and Figure 6",
+          "text": "Single-view RGBD observations are cropped to the manipulated objects and end-effector, cleaned and downsampled. First-frame object masks initialize point-cloud editing. Static objects are transformed with their target configurations; objects in contact are grouped with the end-effector and transformed together. Proprioceptive states receive corresponding transformations, producing paired synthetic observations and actions without a robot rollout for each new trajectory."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 6, Section IV-C, 'Failure-free action execution'; Section IV-D, 'Adapting proprioceptive states'",
+          "text": "Because no robot execution filters failed synthetic trajectories, the method requires reliable execution of its generated actions. It uses inverse-kinematics controllers with absolute end-effector targets to reduce accumulated control errors. Synthetic proprioception transforms recorded states rather than substituting the next commanded pose, because the controller need not reach that pose exactly."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 7, Section V-A and Table I",
+          "text": "All evaluated datasets train DP3 with equal training exposure counted by observation-action pairs. For eight simulated tasks with expanded object randomization, one scripted source trajectory yields 100 generated demonstrations for one-object tasks or 200 for two-object tasks. Task-averaged success rates, using the mean over three seeds rather than the maximum, are 88% for DemoGen, 13% for one source, 68% for 10 sources and 91% for 25 sources."
+        },
+        {
+          "id": "F06",
+          "location": "PDF pages 8-9, Section VI-A, evaluation protocol and generation strategy; PDF page 10, Section VI-B, generation strategy",
+          "text": "Real-world generation starts with one human demonstration per task and two recorded replays, giving three source observation trajectories. Evaluations use feasible configurations checked through kinematic teaching. Single-arm generation targets the evaluated object configurations, adding nine small perturbations within +/- 1.5 cm on each planar axis per target and source trajectory. The bimanual Fruit-Basket task also uses three source trajectories but omits these perturbations."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 8, Section VI and Table II; PDF page 9, Table III and Section VI-A, results analysis",
+          "text": "Across eight real-world tasks on gripper, dexterous-hand and bimanual platforms, the task-averaged success rate is 74.6% with DemoGen versus 11.0% with the three-source-only baseline. Each evaluated configuration is repeated five times. DemoGen improves every task, but Dex-Drill reaches 55.6% and Dex-Coffee 40.0%; the authors attribute their weaker performance to tight precision requirements."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 10, Table IV and Section VI-A, 'Generation cost'",
+          "text": "In a single-process measurement of real-world demonstration generation, DemoGen takes 0.010 seconds per trajectory and 22.0 seconds for the reported whole dataset. These are computation-only costs for synthetic generation, not human collection or policy-training times. MimicGen's estimated 2.1 minutes per trajectory combines robot replay duration with an assumed 20-second manual object reset; it is not a matched computation-only benchmark."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 7, Section V-B and Figures 8-9; PDF pages 9-10, Section VI-A, spatial-heatmap discussion",
+          "text": "Transforming a single camera's point cloud preserves the originally visible object surfaces instead of reconstructing newly exposed views. The authors identify this visual mismatch as a limit: simulated Pick-Cube gains saturate when synthetic coverage or density increases, and real-world performance decreases at configurations farther from the demonstrated one."
+        }
+      ],
+      "draft": "With training exposure fixed by observation-action pair count, DemoGen reached 88% mean success across eight simulated tasks, versus 13% from one source trajectory and 91% from 25 sources, averaged over three seeds. In eight real-world tasks, mean success was 74.6% versus 11.0% for source-only training, with five repetitions per feasible configuration. Real-world data used one human demonstration plus two recorded replays and generated training placements matching evaluated configurations. Single-view point-cloud mismatch limited transfer to placements farther from the source.",
+      "questions": [
+        "What simulation comparison controls training exposure, and how does generated data compare with one and 25 source demonstrations?",
+        "How were the real-world source data and evaluated placements related, and why does the spatial success gain not imply unrestricted viewpoint or placement generalization?"
+      ],
+      "max_words": 130
+    }
+  ],
+  "guides": [],
+  "writing_resources": {}
+}

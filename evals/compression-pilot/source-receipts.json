@@ -1,0 +1,47 @@
+{
+  "scope": "RSS 2025 primary PDFs; body pages2-10; first page excluded; OCR with tesseract at170dpi when no text layer; full PDFs and OCR remain local only.",
+  "sources": [
+    {
+      "id": "052",
+      "source": "https://www.roboticsproceedings.org/rss21/p052.pdf",
+      "bytes": 11235901,
+      "pdf_sha256": "d70026270a933a437e64a18a6e14e16bf854021b14918fd6bb0100ec491f9902",
+      "body_sha256": "2e5875c38df9cc1a5ac1f4efbdcec8a90c419a324817982c3298558e3cee59a9"
+    },
+    {
+      "id": "109",
+      "source": "https://www.roboticsproceedings.org/rss21/p109.pdf",
+      "bytes": 10805407,
+      "pdf_sha256": "14d32575dc0439d1728f1533556292e06b4dcd1ad89c44d997b9a59b316d0087",
+      "body_sha256": "64f2bbae6ccad88e65da9c08850df8bb645592a045bdf7ffd4294f6eddc0038b"
+    },
+    {
+      "id": "110",
+      "source": "https://www.roboticsproceedings.org/rss21/p110.pdf",
+      "bytes": 11150414,
+      "pdf_sha256": "3bc5c7d8ac2076f2a4016faff11660e82521c7e9697a0db2c80f8e9c7e412627",
+      "body_sha256": "08e16a1f5ca0b1f708e65f51cbe05d07ad4db57567a9960452e4fc0339280d7a"
+    },
+    {
+      "id": "112",
+      "source": "https://www.roboticsproceedings.org/rss21/p112.pdf",
+      "bytes": 11309852,
+      "pdf_sha256": "4f29b8f43420a14157ecb3195c6a348702d3a915fad21982be21d7e5a60882c5",
+      "body_sha256": "c5cc585c1cbf08f4fed8f484f3d28ce54630f4ea54418bfd6edbcb6463199d69"
+    },
+    {
+      "id": "156",
+      "source": "https://www.roboticsproceedings.org/rss21/p156.pdf",
+      "bytes": 10123223,
+      "pdf_sha256": "0f713911a391ecbd72af0bbad029155eb3a6fdd5e4282d527b571cd88d218419",
+      "body_sha256": "d896552454d101d139afcb32a97a05bf7c3cf41b65ebf0ee6c458e114f40da26"
+    },
+    {
+      "id": "157",
+      "source": "https://www.roboticsproceedings.org/rss21/p157.pdf",
+      "bytes": 14401257,
+      "pdf_sha256": "c12e5e5284eff4b6694acaaa9ea5cd5a4776e22d789f94acd54f5b6842d2f09c",
+      "body_sha256": "29e3a83ba5c386288678c9f1d0c5d33ea1c47c386a4ede137f72012c0dd4ab3f"
+    }
+  ]
+}

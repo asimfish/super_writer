@@ -1,0 +1,314 @@
+{
+  "dimensions": {
+    "prior": {
+      "choice": {
+        "win": 9,
+        "loss": 15,
+        "tie": 0
+      },
+      "clarity": {
+        "win": 6,
+        "loss": 15,
+        "tie": 3
+      },
+      "economy": {
+        "win": 24,
+        "loss": 0,
+        "tie": 0
+      }
+    },
+    "editorial": {
+      "choice": {
+        "win": 16,
+        "loss": 6,
+        "tie": 2
+      },
+      "clarity": {
+        "win": 15,
+        "loss": 7,
+        "tie": 2
+      },
+      "economy": {
+        "win": 24,
+        "loss": 0,
+        "tie": 0
+      }
+    },
+    "initial": {
+      "choice": {
+        "win": 24,
+        "loss": 0,
+        "tie": 0
+      },
+      "clarity": {
+        "win": 24,
+        "loss": 0,
+        "tie": 0
+      },
+      "economy": {
+        "win": 24,
+        "loss": 0,
+        "tie": 0
+      }
+    }
+  },
+  "auxiliary_limit_deviations": [
+    {
+      "reviewer": "J01",
+      "id": "R02-results",
+      "side": "A",
+      "field": "Q1",
+      "words": 26,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R02-results",
+      "side": "D",
+      "field": "Q1",
+      "words": 26,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-results",
+      "side": "A",
+      "field": "Q2",
+      "words": 30,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-results",
+      "side": "B",
+      "field": "Q2",
+      "words": 30,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-results",
+      "side": "C",
+      "field": "Q2",
+      "words": 30,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-results",
+      "side": "D",
+      "field": "Q2",
+      "words": 30,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-abstract",
+      "side": "D",
+      "field": "Q2",
+      "words": 26,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-results",
+      "side": "B",
+      "field": "Q1",
+      "words": 27,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-results",
+      "side": "C",
+      "field": "Q1",
+      "words": 27,
+      "limit": 25
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-results",
+      "side": "D",
+      "field": "Q1",
+      "words": 27,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R06-abstract",
+      "side": "C",
+      "field": "Q2",
+      "words": 26,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-results",
+      "side": "A",
+      "field": "Q1",
+      "words": 27,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-results",
+      "side": "B",
+      "field": "Q1",
+      "words": 26,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-results",
+      "side": "C",
+      "field": "Q1",
+      "words": 26,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-results",
+      "side": "D",
+      "field": "Q1",
+      "words": 28,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "side": "A",
+      "field": "Q1",
+      "words": 27,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "side": "A",
+      "field": "Q2",
+      "words": 29,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "side": "B",
+      "field": "Q2",
+      "words": 27,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "side": "C",
+      "field": "Q1",
+      "words": 27,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "side": "C",
+      "field": "Q2",
+      "words": 29,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "side": "D",
+      "field": "Q2",
+      "words": 27,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-results",
+      "side": "A",
+      "field": "Q2",
+      "words": 32,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-results",
+      "side": "B",
+      "field": "Q2",
+      "words": 35,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-results",
+      "side": "C",
+      "field": "Q2",
+      "words": 34,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-results",
+      "side": "D",
+      "field": "Q2",
+      "words": 33,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-abstract",
+      "side": "A",
+      "field": "Q2",
+      "words": 28,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-abstract",
+      "side": "B",
+      "field": "Q2",
+      "words": 29,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-abstract",
+      "side": "C",
+      "field": "Q2",
+      "words": 28,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-abstract",
+      "side": "D",
+      "field": "Q2",
+      "words": 28,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R03-results",
+      "side": "C",
+      "field": "Q2",
+      "words": 26,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R03-abstract",
+      "side": "D",
+      "field": "Q1",
+      "words": 26,
+      "limit": 25
+    },
+    {
+      "reviewer": "J02",
+      "id": "R01-results",
+      "side": "B",
+      "field": "Q2",
+      "words": 26,
+      "limit": 25
+    }
+  ],
+  "note": "All deviations retained; reader-answer limits are outside the frozen writer gate."
+}

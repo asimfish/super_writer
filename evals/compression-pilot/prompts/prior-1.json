@@ -1,0 +1,745 @@
+{
+  "writer_id": "prior-1",
+  "instruction": "Revise each supplied passage once for clear, precise academic writing. Preserve the contribution, numerical referents and necessary conditions. Use only supplied facts. Do not pad to a minimum. Answer the reader questions in the prose. Return JSON with writer_id and cases: each case has id, text, note. Notes stay outside manuscript prose. Return your actual result even if it misses the budget. Do not read other inputs, author abstracts or repository guides. No web searches or agents. Apply the attached guidance. Diagnose the passage against its section function, propose the applicable repair, realize it, then read it back once. In note state the diagnosed gap and repair.",
+  "counting_rule": "ASCII alphanumeric tokens joined by hyphens/apostrophes",
+  "cases": [
+    {
+      "id": "R01-abstract",
+      "paper": "R01",
+      "unit": "abstract",
+      "source": "https://www.roboticsproceedings.org/rss21/p052.pdf",
+      "contribution": "Reactive Diffusion Policy combines latent action-chunk planning with a tactile-conditioned fast decoder, improving contact-rich task scores over open-loop Diffusion Policy while retaining chunked sequence modeling.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, opening paragraphs; PDF page 5, Section IV-B, Slow-Fast Policy Learning, opening paragraphs.",
+          "text": "Action chunks help imitation policies represent temporally consistent and non-Markovian behavior, but executing a whole chunk without updating its actions prevents immediate responses to new contact information. Adding tactile observations alone does not remove this open-loop execution constraint."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 4, Sections III-A and III-B, 3D Deformation Field Extraction and Real-time Tactile / Force Feedback Rendering in AR.",
+          "text": "TactAR gives demonstrators visual contact feedback in a Meta Quest 3 augmented-reality view. It renders tracked tactile-marker deformation or measured force vectors as a three-dimensional field aligned with the robot end effector using calibrated coordinates and live tool-center-point poses; optional camera streams provide additional views."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 5, Section IV-B, framework description; PDF page 6, Figure 6 and Sections IV-B.1 and IV-B.2, Fast Policy and Slow Policy.",
+          "text": "Training first learns an asymmetric tokenizer: an action-only one-dimensional convolutional encoder compresses action chunks, while a recurrent GRU decoder reconstructs actions using both the latent chunk and tactile or force information. A latent diffusion policy then learns to predict these chunks from images, contact observations, and proprioception. At execution, this slow planner supplies a chunk and the fast decoder repeatedly incorporates the latest contact observation to update individual actions."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Section IV-A, Tactile / Force Representation; PDF pages 8-9, Section V-A.5, Implementation Details.",
+          "text": "Optical tactile inputs are PCA features of marker deformation, whereas force input is a six-component force-and-torque wrench. Diffusion Policy and RDP's slow policy predict action sequences at 12 frames per second; RDP's fast decoder observes contact signals and updates actions at 24 frames per second. The tested feedback rate is constrained by GelSight's 25-frame-per-second sensor stream; higher-rate operation is proposed rather than established by these experiments."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 7, Section IV-B.3, Implementing Suggestions for Slow-Fast Policy, Relative trajectory and Latency matching.",
+          "text": "RDP represents an end-effector trajectory relative to the last observation frame of its chunk, rather than accumulating consecutive-frame pose differences. Execution also measures inference and actuation latency and skips the already-outdated initial predicted steps. The authors identify these choices as important for smooth chunk transitions and for avoiding unfamiliar contact inputs that could destabilize the fast decoder."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Section V-A.3, Tasks; PDF page 8, Section V-A.4, Evaluation Protocols.",
+          "text": "Experiments test cucumber peeling, wiping a curved vase, and coordinated two-arm paper-cup lifting. Initial robot and object states are manually aligned similarly across methods, and each variation receives ten trials. Peeling and wiping use no disturbance, object motion before contact, or object motion after contact; lifting uses soft and hard cups. Peeling scores normalize peeled length by demonstrations. Wiping awards 1, 0.5, or 0 according to residue. Lifting awards 1 for following the trajectory without substantial compression, 0.5 for lifting with partial compression, and 0 for failure to lift or for dropping the cup. These are task-specific scores, not a common binary success rate."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 9, Table II, Policy Performance for Peeling Task, and Section V-B, Q1-Q3; PDF page 10, Section V-B, Q4.",
+          "text": "Across the three peeling disturbance settings, aggregate scores are 0.90 for GelSight RDP, 0.88 for MCTac RDP, and 0.95 for force-input RDP, versus 0.39 for tactile-embedding Diffusion Policy and 0.44 for visual-only Diffusion Policy. In the post-contact-disturbance setting specifically, GelSight RDP scores 0.80 and tactile-embedding Diffusion Policy scores 0.15. The latter comparison changes the control architecture while retaining tactile input rather than comparing touch against vision alone."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 9, Table III, Policy Performance for Wiping Task, and Table IV, Policy Performance for Bimanual Lifting Task.",
+          "text": "Aggregate wiping scores across the three disturbance settings are 0.77 for GelSight RDP, 0.50 for tactile-embedding Diffusion Policy, and 0.87 for force-input RDP. Aggregate bimanual-lifting scores across soft and hard cups are 0.48 for RDP using GelSight and MCTac on opposite grippers, 0.08 for tactile-embedding Diffusion Policy, and 0.70 for force-input RDP. The lifting scores incorporate cup compression and should not be substituted for the table's separate clamp or lift percentages."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 10, Table V, Effects of Chunk Size and Temporal Ensemble, and Section V-B, Q5.",
+          "text": "For wiping with a disturbance after contact, reducing tactile-embedding Diffusion Policy's chunk length from eight steps to two lowers grasp success from 100% to 20% and task score from 0.15 to 0.10. With eight-step chunks, temporal-ensemble factors of 0.2 and 0.8 yield grasp success of 30% and 100% and task scores of 0.05 and 0.15, respectively. GelSight RDP with eight-step chunks achieves 100% grasp success and a 0.50 task score. These controls show that the tested shorter-chunk and smoothing alternatives do not reproduce RDP's combination of grasping and reactive performance."
+        }
+      ],
+      "draft": "Contact-rich manipulation needs corrections that open-loop action chunks cannot make from newly arriving tactile signals. Reactive Diffusion Policy combines a slow latent diffusion planner with a fast recurrent decoder that updates actions from tactile or force feedback. An asymmetric tokenizer learns action chunks with tactile input supplied only to its decoder. TactAR provides augmented-reality contact feedback for collecting demonstrations. Experiments cover peeling, wiping, and bimanual lifting, using 24 Hz feedback. On peeling after contact disturbances, GelSight RDP scores 0.80 versus 0.15 for tactile-input Diffusion Policy. Relative trajectories and latency matching support execution; the tested feedback rate is sensor-limited.",
+      "questions": [
+        "How does the tokenizer incorporate fresh tactile feedback without discarding diffusion's chunk-level sequence modeling?",
+        "What evidence separates reactive control from merely adding tactile input, and what limits the tested feedback rate?"
+      ],
+      "max_words": 160
+    },
+    {
+      "id": "R01-results",
+      "paper": "R01",
+      "unit": "results",
+      "source": "https://www.roboticsproceedings.org/rss21/p052.pdf",
+      "contribution": "Reactive Diffusion Policy combines latent action-chunk planning with a tactile-conditioned fast decoder, improving contact-rich task scores over open-loop Diffusion Policy while retaining chunked sequence modeling.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, opening paragraphs; PDF page 5, Section IV-B, Slow-Fast Policy Learning, opening paragraphs.",
+          "text": "Action chunks help imitation policies represent temporally consistent and non-Markovian behavior, but executing a whole chunk without updating its actions prevents immediate responses to new contact information. Adding tactile observations alone does not remove this open-loop execution constraint."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 4, Sections III-A and III-B, 3D Deformation Field Extraction and Real-time Tactile / Force Feedback Rendering in AR.",
+          "text": "TactAR gives demonstrators visual contact feedback in a Meta Quest 3 augmented-reality view. It renders tracked tactile-marker deformation or measured force vectors as a three-dimensional field aligned with the robot end effector using calibrated coordinates and live tool-center-point poses; optional camera streams provide additional views."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 5, Section IV-B, framework description; PDF page 6, Figure 6 and Sections IV-B.1 and IV-B.2, Fast Policy and Slow Policy.",
+          "text": "Training first learns an asymmetric tokenizer: an action-only one-dimensional convolutional encoder compresses action chunks, while a recurrent GRU decoder reconstructs actions using both the latent chunk and tactile or force information. A latent diffusion policy then learns to predict these chunks from images, contact observations, and proprioception. At execution, this slow planner supplies a chunk and the fast decoder repeatedly incorporates the latest contact observation to update individual actions."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Section IV-A, Tactile / Force Representation; PDF pages 8-9, Section V-A.5, Implementation Details.",
+          "text": "Optical tactile inputs are PCA features of marker deformation, whereas force input is a six-component force-and-torque wrench. Diffusion Policy and RDP's slow policy predict action sequences at 12 frames per second; RDP's fast decoder observes contact signals and updates actions at 24 frames per second. The tested feedback rate is constrained by GelSight's 25-frame-per-second sensor stream; higher-rate operation is proposed rather than established by these experiments."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 7, Section IV-B.3, Implementing Suggestions for Slow-Fast Policy, Relative trajectory and Latency matching.",
+          "text": "RDP represents an end-effector trajectory relative to the last observation frame of its chunk, rather than accumulating consecutive-frame pose differences. Execution also measures inference and actuation latency and skips the already-outdated initial predicted steps. The authors identify these choices as important for smooth chunk transitions and for avoiding unfamiliar contact inputs that could destabilize the fast decoder."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Section V-A.3, Tasks; PDF page 8, Section V-A.4, Evaluation Protocols.",
+          "text": "Experiments test cucumber peeling, wiping a curved vase, and coordinated two-arm paper-cup lifting. Initial robot and object states are manually aligned similarly across methods, and each variation receives ten trials. Peeling and wiping use no disturbance, object motion before contact, or object motion after contact; lifting uses soft and hard cups. Peeling scores normalize peeled length by demonstrations. Wiping awards 1, 0.5, or 0 according to residue. Lifting awards 1 for following the trajectory without substantial compression, 0.5 for lifting with partial compression, and 0 for failure to lift or for dropping the cup. These are task-specific scores, not a common binary success rate."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 9, Table II, Policy Performance for Peeling Task, and Section V-B, Q1-Q3; PDF page 10, Section V-B, Q4.",
+          "text": "Across the three peeling disturbance settings, aggregate scores are 0.90 for GelSight RDP, 0.88 for MCTac RDP, and 0.95 for force-input RDP, versus 0.39 for tactile-embedding Diffusion Policy and 0.44 for visual-only Diffusion Policy. In the post-contact-disturbance setting specifically, GelSight RDP scores 0.80 and tactile-embedding Diffusion Policy scores 0.15. The latter comparison changes the control architecture while retaining tactile input rather than comparing touch against vision alone."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 9, Table III, Policy Performance for Wiping Task, and Table IV, Policy Performance for Bimanual Lifting Task.",
+          "text": "Aggregate wiping scores across the three disturbance settings are 0.77 for GelSight RDP, 0.50 for tactile-embedding Diffusion Policy, and 0.87 for force-input RDP. Aggregate bimanual-lifting scores across soft and hard cups are 0.48 for RDP using GelSight and MCTac on opposite grippers, 0.08 for tactile-embedding Diffusion Policy, and 0.70 for force-input RDP. The lifting scores incorporate cup compression and should not be substituted for the table's separate clamp or lift percentages."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 10, Table V, Effects of Chunk Size and Temporal Ensemble, and Section V-B, Q5.",
+          "text": "For wiping with a disturbance after contact, reducing tactile-embedding Diffusion Policy's chunk length from eight steps to two lowers grasp success from 100% to 20% and task score from 0.15 to 0.10. With eight-step chunks, temporal-ensemble factors of 0.2 and 0.8 yield grasp success of 30% and 100% and task scores of 0.05 and 0.15, respectively. GelSight RDP with eight-step chunks achieves 100% grasp success and a 0.50 task score. These controls show that the tested shorter-chunk and smoothing alternatives do not reproduce RDP's combination of grasping and reactive performance."
+        }
+      ],
+      "draft": "With ten trials per test variation, GelSight RDP scored 0.90 on peeling and 0.77 on wiping, versus 0.39 and 0.50 for tactile-input Diffusion Policy. After contact disturbances, peeling scores were 0.80 and 0.15. Mixed-sensor RDP scored 0.48 on lifting across cup types versus 0.08 for tactile-input Diffusion Policy. These are task-specific scores, not uniform success rates. Shortening the wiping baseline's chunks from eight to two lowered grasp success from 100% to 20%, while RDP retained eight-step chunks.",
+      "questions": [
+        "Under post-contact disturbances, how does RDP compare with tactile-input Diffusion Policy on the same peeling score?",
+        "Can the tested shorter chunks or temporal ensembling recover RDP's wiping improvement without sacrificing grasping?"
+      ],
+      "max_words": 130
+    },
+    {
+      "id": "R02-abstract",
+      "paper": "R02",
+      "unit": "abstract",
+      "source": "https://www.roboticsproceedings.org/rss21/p109.pdf",
+      "contribution": "A systematic real-robot study shows how mixing synthetic and real demonstrations improves manipulation policies despite imperfect simulation alignment, while identifying sampling and camera-alignment conditions that affect transfer.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, motivation; PDF page 3, Section III-A, Co-Training on Real-World and Simulation Data, Equation 1; PDF page 6, Section IV-D, Training and Evaluation Protocol.",
+          "text": "The study addresses expensive real demonstrations and the alignment effort required by simulation-only transfer. It instead trains Diffusion Policy jointly on real and simulated demonstrations, using RGB images and robot proprioception to predict action sequences. The mixing parameter alpha is the probability that a training sample comes from simulation, not simply the fraction of stored trajectories that are simulated."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 3, Section III-C, Automated Synthetic Data Generation; PDF page 6, Section IV-C, Building Task-Aware Simulation Datasets.",
+          "text": "MimicGen and its bimanual/humanoid extension DexMimicGen expand human demonstrations by transforming object-centered trajectory segments and concatenating them into new simulated rollouts. For task-aware Panda simulation, each task uses 100 source demonstrations to generate 10,000 demonstrations. Each task-aware GR-1 simulation task uses ten source demonstrations to generate 1,000 trajectories."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 5, Section IV-B, Prior Task-Agnostic Simulation Data; PDF page 6, Section IV-C, task-aware digital cousin definition.",
+          "text": "Task-aware digital cousins preserve the real robot and action space, task goal and success criteria, object categories, and environmental fixture categories, without requiring identical object instances or physical and visual properties. Prior simulation data were developed independently of the downstream task; the datasets used here share the target embodiment and action space. Prior Panda trajectories are re-rendered to approximately align camera poses, so their use is not an entirely unmodified-data control."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 4, Section IV-A, Real-World Domains; PDF page 6, Section IV-D, Training and Evaluation Protocol.",
+          "text": "Real-world evaluation covers six tasks on two embodiments. A Panda arm learns CounterToSinkPnP, CounterToCabPnP, and CloseDoor from 50 real demonstrations per task. A GR-1 humanoid learns CupPnP, MilkPnP, and pouring a ping-pong ball from a cup into a bowl from 20 real demonstrations per task. Trained policies are deployed on these real tasks and evaluated by trial success rate."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 7, Table I, Effect of different simulation data in the co-training mix, Average column; Section V-A, Effectiveness of Sim-and-Real Co-Training.",
+          "text": "Table I reports average real-world success rates of 45.3% for real-only training, 81.1% for real plus task-aware digital cousins, 76.8% for real plus prior simulation, and 83.2% for real plus both simulation sources. These values are the table's reported aggregate success rates, not relative improvement percentages or individual-task measurements."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Section V-B, Generalization Beyond Real Demonstrations; PDF page 8, Table II and continuation of Section V-B.",
+          "text": "For unseen objects, real-plus-digital-cousin training raises success from 33% to 50% on Panda CounterToSinkPnP and from 10% to 80% on GR-1 CupPnP. For unseen positions, the corresponding changes are 11% to 28% and 43% to 100%. The position control removes central-workspace placements from real training demonstrations but retains uniformly distributed simulation placements; evaluation then places objects in the withheld center."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 8, Figure 5 and Section V-D, Key Elements of Effective Co-Training; PDF page 9, continuation of the co-training-ratio discussion.",
+          "text": "The CupPnP sampling-ratio experiment fixes the datasets at 20 real demonstrations and 1,000 task-aware simulation demonstrations. Figure 5 shows 85% success with 50% simulation sampling, 95% success with either 90% or 99% simulation sampling, and 60% success at 99.9% simulation sampling. Thus the mixture weight matters independently of stored dataset size, and increasing simulation sampling is not uniformly beneficial."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 9, Section V-D, Camera alignment is critical for successful co-training with task-aware digital cousin data, and Figure 6.",
+          "text": "Changing from approximately aligned to default unaligned simulation-camera views lowers real-plus-digital-cousin success from 67% to 56% on Panda CounterToSinkPnP and from 95% to 70% on GR-1 CupPnP. Alignment remains approximate: the real humanoid camera has fisheye distortion that is not modeled in the aligned simulation camera. The experiment therefore supports useful approximate alignment rather than a requirement for identical cameras."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 9, Section VI, Limitations.",
+          "text": "Most evaluated tasks are pick-and-place variants. High-precision insertion and longer-horizon manipulation are left for future study, and the learned policies are not uniformly successful. Deformable objects and liquids are difficult to simulate accurately, which restricts how broadly the demonstrated co-training recipe can be assumed to apply."
+        }
+      ],
+      "draft": "Learning real-robot manipulation from limited demonstrations can benefit from simulation without exact replication of the real scene. This study co-trains Diffusion Policy on real trajectories and either task-aware digital cousins, prior simulation data, or both. Digital cousins preserve robot, action space, task goals, and object and fixture categories; generated trajectories broaden training coverage. Across six tasks on Panda and GR-1 robots, the reported average success rate rises from 45.3% with real data to 83.2% with both simulation sources. Experiments also test unseen objects and positions. Transfer quality depends on simulation sampling ratios and approximate camera alignment, without requiring identical camera models.",
+      "questions": [
+        "Which properties must digital cousins preserve, and which simulation-to-real mismatches remain permissible?",
+        "How much do prior simulation and task-aware digital cousins each contribute beyond real-only training?"
+      ],
+      "max_words": 160
+    },
+    {
+      "id": "R02-results",
+      "paper": "R02",
+      "unit": "results",
+      "source": "https://www.roboticsproceedings.org/rss21/p109.pdf",
+      "contribution": "A systematic real-robot study shows how mixing synthetic and real demonstrations improves manipulation policies despite imperfect simulation alignment, while identifying sampling and camera-alignment conditions that affect transfer.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, motivation; PDF page 3, Section III-A, Co-Training on Real-World and Simulation Data, Equation 1; PDF page 6, Section IV-D, Training and Evaluation Protocol.",
+          "text": "The study addresses expensive real demonstrations and the alignment effort required by simulation-only transfer. It instead trains Diffusion Policy jointly on real and simulated demonstrations, using RGB images and robot proprioception to predict action sequences. The mixing parameter alpha is the probability that a training sample comes from simulation, not simply the fraction of stored trajectories that are simulated."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 3, Section III-C, Automated Synthetic Data Generation; PDF page 6, Section IV-C, Building Task-Aware Simulation Datasets.",
+          "text": "MimicGen and its bimanual/humanoid extension DexMimicGen expand human demonstrations by transforming object-centered trajectory segments and concatenating them into new simulated rollouts. For task-aware Panda simulation, each task uses 100 source demonstrations to generate 10,000 demonstrations. Each task-aware GR-1 simulation task uses ten source demonstrations to generate 1,000 trajectories."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 5, Section IV-B, Prior Task-Agnostic Simulation Data; PDF page 6, Section IV-C, task-aware digital cousin definition.",
+          "text": "Task-aware digital cousins preserve the real robot and action space, task goal and success criteria, object categories, and environmental fixture categories, without requiring identical object instances or physical and visual properties. Prior simulation data were developed independently of the downstream task; the datasets used here share the target embodiment and action space. Prior Panda trajectories are re-rendered to approximately align camera poses, so their use is not an entirely unmodified-data control."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 4, Section IV-A, Real-World Domains; PDF page 6, Section IV-D, Training and Evaluation Protocol.",
+          "text": "Real-world evaluation covers six tasks on two embodiments. A Panda arm learns CounterToSinkPnP, CounterToCabPnP, and CloseDoor from 50 real demonstrations per task. A GR-1 humanoid learns CupPnP, MilkPnP, and pouring a ping-pong ball from a cup into a bowl from 20 real demonstrations per task. Trained policies are deployed on these real tasks and evaluated by trial success rate."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 7, Table I, Effect of different simulation data in the co-training mix, Average column; Section V-A, Effectiveness of Sim-and-Real Co-Training.",
+          "text": "Table I reports average real-world success rates of 45.3% for real-only training, 81.1% for real plus task-aware digital cousins, 76.8% for real plus prior simulation, and 83.2% for real plus both simulation sources. These values are the table's reported aggregate success rates, not relative improvement percentages or individual-task measurements."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Section V-B, Generalization Beyond Real Demonstrations; PDF page 8, Table II and continuation of Section V-B.",
+          "text": "For unseen objects, real-plus-digital-cousin training raises success from 33% to 50% on Panda CounterToSinkPnP and from 10% to 80% on GR-1 CupPnP. For unseen positions, the corresponding changes are 11% to 28% and 43% to 100%. The position control removes central-workspace placements from real training demonstrations but retains uniformly distributed simulation placements; evaluation then places objects in the withheld center."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 8, Figure 5 and Section V-D, Key Elements of Effective Co-Training; PDF page 9, continuation of the co-training-ratio discussion.",
+          "text": "The CupPnP sampling-ratio experiment fixes the datasets at 20 real demonstrations and 1,000 task-aware simulation demonstrations. Figure 5 shows 85% success with 50% simulation sampling, 95% success with either 90% or 99% simulation sampling, and 60% success at 99.9% simulation sampling. Thus the mixture weight matters independently of stored dataset size, and increasing simulation sampling is not uniformly beneficial."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 9, Section V-D, Camera alignment is critical for successful co-training with task-aware digital cousin data, and Figure 6.",
+          "text": "Changing from approximately aligned to default unaligned simulation-camera views lowers real-plus-digital-cousin success from 67% to 56% on Panda CounterToSinkPnP and from 95% to 70% on GR-1 CupPnP. Alignment remains approximate: the real humanoid camera has fisheye distortion that is not modeled in the aligned simulation camera. The experiment therefore supports useful approximate alignment rather than a requirement for identical cameras."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 9, Section VI, Limitations.",
+          "text": "Most evaluated tasks are pick-and-place variants. High-precision insertion and longer-horizon manipulation are left for future study, and the learned policies are not uniformly successful. Deformable objects and liquids are difficult to simulate accurately, which restricts how broadly the demonstrated co-training recipe can be assumed to apply."
+        }
+      ],
+      "draft": "Table I reports average success rates of 45.3% for real-only training, 81.1% with digital cousins, 76.8% with prior simulation, and 83.2% with both simulation sources. On unseen objects, digital-cousin co-training improved CounterToSinkPnP from 33% to 50% and CupPnP from 10% to 80%. With 20 real and 1,000 simulation demonstrations, CupPnP reached 95% success at 99% simulation sampling but 60% at 99.9%. Using unaligned cameras reduced CupPnP success from 95% to 70%.",
+      "questions": [
+        "Does increasing the simulation sampling probability always help when the training datasets are fixed?",
+        "Which camera-alignment control qualifies the claim that simulation need not precisely match reality?"
+      ],
+      "max_words": 130
+    },
+    {
+      "id": "R03-abstract",
+      "paper": "R03",
+      "unit": "abstract",
+      "source": "https://www.roboticsproceedings.org/rss21/p110.pdf",
+      "contribution": "CordViP uses model-based hand-object geometry and contact-and-coordination pretraining to improve dexterous imitation learning over raw RGB-D and pose-informed baselines.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, discussion of single-view 3D observations; PDF page 3, Section III-B, Interaction-aware Generation of 3D Point Clouds, motivation.",
+          "text": "Single-view RGB-D point clouds can lose object geometry and hand-object interaction information when a multi-fingered hand occludes the object. Reflection, transparency, sensor resolution, and viewing angle add further missing or noisy geometry. CordViP targets these observation failures rather than assuming that directly converting depth images into point clouds supplies complete spatial information."
+        },
+        {
+          "id": "F02",
+          "location": "PDF pages 3-4, Section III-B, Real-to-Sim for Digital Twin Generation, Pose-Driven Point Cloud Tracking, and Robot Point Cloud Forward Kinematics Model; PDF page 4, Figure 2.",
+          "text": "CordViP uses TripoSR to generate an object digital twin from an image and samples its surface to obtain object geometry. Segment Anything supplies an object mask, and FoundationPose estimates the object's six-dimensional pose using the model and visual observations; the pose transforms the object point cloud. Separately, robot-link geometry and measured joint configurations produce the hand point cloud through forward kinematics. This observation pipeline relies on an object model and a running pose estimate, not solely on currently visible depth points."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 2, Introduction, three-stage framework; PDF page 5, Section III-C, Contact and Coordination-Enhanced Feature Extraction, Equations 2-5.",
+          "text": "Pretraining uses collected play data, separate PointNet encoders, and cross-attention between hand and object features. One objective predicts an object-centered contact map synthesized from hand-object surface geometry, so the supervision is geometric rather than a tactile-sensor reading. A coordination objective reconstructs arm action sequences using hand state and point clouds, and hand action sequences using arm state and point clouds. These objectives train spatial interaction and hand-arm motion features before downstream imitation."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Section III-D, Correspondence-based Diffusion Policy, Equations 6-7.",
+          "text": "A conditional diffusion policy predicts action sequences using the pretrained geometry features and robot-state features. Its observation encoder is fine-tuned during downstream policy training rather than kept frozen. DDIM accelerates iterative denoising during real-world inference."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 6, Section IV-A, Experiment Setup, Expert demonstrations and Baselines; PDF page 7, Table I caption; PDF page 8, Table II caption.",
+          "text": "The platform combines a six-degree-of-freedom arm with a sixteen-degree-of-freedom Leap Hand and a fixed L515 RGB-D camera. Each task has 50 teleoperated expert demonstrations in addition to the separate pretraining stage. Base-task results use 20 trials per experiment; advanced tasks use ten. Image and depth resolution are matched across conventional visual and point-cloud baselines. Additional pose-informed comparisons include state-based policies and G3Flow, addressing the advantage that CordViP receives from object-pose information."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Table I, Main results of four base real-world tasks; PDF page 8, Table II, Main results of advanced tasks.",
+          "text": "CordViP succeeds on 85% of PickPlace trials, 90% of FlipCup trials, 90% of Assembly trials, and 95% of ArtiManip trials. Table I reports a 90% base-task average, compared with 74% for pose-informed G3Flow and 23% for RGB-D-derived-point-cloud DP3. On the advanced tasks, CordViP achieves 80% success on FlipCap and reaches the final push stage of LongHoriManip in 60% of trials; G3Flow achieves 60% and 30%, respectively."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 9, Section IV-E, Effectiveness of components; PDF page 10, Table VII, Ablation experiments on the Effectiveness of different components.",
+          "text": "With CordViP's representation retained, omitting both contact and coordination pretraining yields a reported 79% average success across the four base tasks, compared with 90% for the complete method. Omitting only contact pretraining gives 84%, while omitting only coordination gives 83%. Supplying interaction-aware point clouds to DP3 gives 71%. That control changes DP3's observation representation, whereas the CordViP pretraining ablations more directly isolate the learning objectives."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 8, Section IV-D, Generalization, and Tables III-IV; PDF page 9, Section IV-D, Generalize to unseen objects and Generalize to different viewpoints, Tables V-VI.",
+          "text": "Generalization tests vary lighting, scene appearance and clutter, object identity, and camera viewpoint on PickPlace and FlipCup. CordViP performs better than the compared image-based Diffusion Policy and ACT+3D methods across the tested categories of variation. The viewpoint experiment uses three changed viewpoints and recalibrates the cameras for the three-dimensional methods because their point clouds are represented in world coordinates; it is not a calibration-free viewpoint-transfer test."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 10, Section V, Conclusions and Limitations, Limitations paragraph.",
+          "text": "The method's observation assumptions impose boundaries: inaccurate digital-twin geometry can degrade initial point clouds and subsequent pose tracking, deformable objects are difficult for FoundationPose's rigid-pose representation, and complete occlusion by the hand can cause tracking failure. The reported robustness under partial occlusion does not establish reliable operation when the object is entirely hidden."
+        }
+      ],
+      "draft": "Hand occlusion makes camera-derived point clouds incomplete during dexterous manipulation. CordViP constructs object geometry from a generated digital twin tracked by FoundationPose and hand geometry from robot kinematics. Separate encoders and cross-attention learn hand-object contact and hand-arm coordination from play data before downstream diffusion-policy training. With 50 demonstrations per task, the method achieves 90% average success across four base tasks, compared with 74% for pose-informed G3Flow. Removing both pretraining objectives reduces the average to 79%. The representation supports partial occlusion, but accurate object models and continued pose tracking remain necessary.",
+      "questions": [
+        "Which object-model and pose-tracking assumptions make complete geometry available under partial occlusion?",
+        "Do the baseline comparisons and pretraining ablations support a benefit beyond supplying cleaner point clouds?"
+      ],
+      "max_words": 160
+    },
+    {
+      "id": "R03-results",
+      "paper": "R03",
+      "unit": "results",
+      "source": "https://www.roboticsproceedings.org/rss21/p110.pdf",
+      "contribution": "CordViP uses model-based hand-object geometry and contact-and-coordination pretraining to improve dexterous imitation learning over raw RGB-D and pose-informed baselines.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, discussion of single-view 3D observations; PDF page 3, Section III-B, Interaction-aware Generation of 3D Point Clouds, motivation.",
+          "text": "Single-view RGB-D point clouds can lose object geometry and hand-object interaction information when a multi-fingered hand occludes the object. Reflection, transparency, sensor resolution, and viewing angle add further missing or noisy geometry. CordViP targets these observation failures rather than assuming that directly converting depth images into point clouds supplies complete spatial information."
+        },
+        {
+          "id": "F02",
+          "location": "PDF pages 3-4, Section III-B, Real-to-Sim for Digital Twin Generation, Pose-Driven Point Cloud Tracking, and Robot Point Cloud Forward Kinematics Model; PDF page 4, Figure 2.",
+          "text": "CordViP uses TripoSR to generate an object digital twin from an image and samples its surface to obtain object geometry. Segment Anything supplies an object mask, and FoundationPose estimates the object's six-dimensional pose using the model and visual observations; the pose transforms the object point cloud. Separately, robot-link geometry and measured joint configurations produce the hand point cloud through forward kinematics. This observation pipeline relies on an object model and a running pose estimate, not solely on currently visible depth points."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 2, Introduction, three-stage framework; PDF page 5, Section III-C, Contact and Coordination-Enhanced Feature Extraction, Equations 2-5.",
+          "text": "Pretraining uses collected play data, separate PointNet encoders, and cross-attention between hand and object features. One objective predicts an object-centered contact map synthesized from hand-object surface geometry, so the supervision is geometric rather than a tactile-sensor reading. A coordination objective reconstructs arm action sequences using hand state and point clouds, and hand action sequences using arm state and point clouds. These objectives train spatial interaction and hand-arm motion features before downstream imitation."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Section III-D, Correspondence-based Diffusion Policy, Equations 6-7.",
+          "text": "A conditional diffusion policy predicts action sequences using the pretrained geometry features and robot-state features. Its observation encoder is fine-tuned during downstream policy training rather than kept frozen. DDIM accelerates iterative denoising during real-world inference."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 6, Section IV-A, Experiment Setup, Expert demonstrations and Baselines; PDF page 7, Table I caption; PDF page 8, Table II caption.",
+          "text": "The platform combines a six-degree-of-freedom arm with a sixteen-degree-of-freedom Leap Hand and a fixed L515 RGB-D camera. Each task has 50 teleoperated expert demonstrations in addition to the separate pretraining stage. Base-task results use 20 trials per experiment; advanced tasks use ten. Image and depth resolution are matched across conventional visual and point-cloud baselines. Additional pose-informed comparisons include state-based policies and G3Flow, addressing the advantage that CordViP receives from object-pose information."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Table I, Main results of four base real-world tasks; PDF page 8, Table II, Main results of advanced tasks.",
+          "text": "CordViP succeeds on 85% of PickPlace trials, 90% of FlipCup trials, 90% of Assembly trials, and 95% of ArtiManip trials. Table I reports a 90% base-task average, compared with 74% for pose-informed G3Flow and 23% for RGB-D-derived-point-cloud DP3. On the advanced tasks, CordViP achieves 80% success on FlipCap and reaches the final push stage of LongHoriManip in 60% of trials; G3Flow achieves 60% and 30%, respectively."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 9, Section IV-E, Effectiveness of components; PDF page 10, Table VII, Ablation experiments on the Effectiveness of different components.",
+          "text": "With CordViP's representation retained, omitting both contact and coordination pretraining yields a reported 79% average success across the four base tasks, compared with 90% for the complete method. Omitting only contact pretraining gives 84%, while omitting only coordination gives 83%. Supplying interaction-aware point clouds to DP3 gives 71%. That control changes DP3's observation representation, whereas the CordViP pretraining ablations more directly isolate the learning objectives."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 8, Section IV-D, Generalization, and Tables III-IV; PDF page 9, Section IV-D, Generalize to unseen objects and Generalize to different viewpoints, Tables V-VI.",
+          "text": "Generalization tests vary lighting, scene appearance and clutter, object identity, and camera viewpoint on PickPlace and FlipCup. CordViP performs better than the compared image-based Diffusion Policy and ACT+3D methods across the tested categories of variation. The viewpoint experiment uses three changed viewpoints and recalibrates the cameras for the three-dimensional methods because their point clouds are represented in world coordinates; it is not a calibration-free viewpoint-transfer test."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 10, Section V, Conclusions and Limitations, Limitations paragraph.",
+          "text": "The method's observation assumptions impose boundaries: inaccurate digital-twin geometry can degrade initial point clouds and subsequent pose tracking, deformable objects are difficult for FoundationPose's rigid-pose representation, and complete occlusion by the hand can cause tracking failure. The reported robustness under partial occlusion does not establish reliable operation when the object is entirely hidden."
+        }
+      ],
+      "draft": "With 50 demonstrations per task, CordViP achieved 85%, 90%, 90%, and 95% success on PickPlace, FlipCup, Assembly, and ArtiManip, respectively, over 20 trials per task. Its reported average was 90%, compared with G3Flow's 74% and DP3's 23%. Removing both pretraining objectives reduced the average to 79%; removing contact or coordination alone gave 84% or 83%. Viewpoint tests recalibrated the cameras, and complete object occlusion could still break pose tracking.",
+      "questions": [
+        "How does CordViP compare with a pose-informed baseline under the base-task evaluation?",
+        "What do the fixed-representation pretraining ablations isolate, and which occlusion case remains unsupported?"
+      ],
+      "max_words": 130
+    }
+  ],
+  "guides": [
+    {
+      "path": "references/abstract-decisions.md",
+      "commit": "3f9d99c",
+      "text": "# Abstract Decisions: Contribution Before Structure\n\nUse for drafting, structurally revising, or comparing abstracts. For punctuation\nor in-place editing, respect that narrower contract; do not rebuild the argument.\nThis is an editorial decision aid, not a validated predictor of acceptance.\n\n## Decide What the Reader Must Retain\n\nUse the existing contribution record and author priorities. Identify the central\naddition, the evidence supporting it, and the condition that changes its meaning.\nKeep this compact in the existing plan; do not require another artifact or a new\napproval gate. If two materially different contribution priorities remain\nunresolved, ask one focused question or label a provisional choice.\n\nSelect the [protocol](writing-protocols.md) only after this decision. A paper\nwith experiments need not have an empirical-method-centered abstract. A theory\nplus diagnostic paper may need its theorem and counterexample more than a list\nof candidate-generation modules. Do not automatically prioritize theory either:\nthe supported contribution and author's intent determine the allocation.\n\nBefore compressing, distinguish the main contribution, any co-contribution\nessential to the paper's promise, and supporting details. A dominant result\ndoes not automatically replace another contribution: faster updates and fewer\nexpert corrections, for example, answer different questions. After drafting,\ncheck what the reader can still recover. If a co-contribution disappeared, trade\noff a lower-value mechanism detail or per-task tally before dropping it. This\nis not a requirement to mention every result or invent equal author priorities.\nPreserve comparison scope when joining results measured against different baselines.\nWhen baselines use different training regimes, retain that distinction: pretrained\nmodels fine-tuned with default recipes and policies trained from scratch are not\nall fine-tuned baselines. Attach each comparison to its actual group, metric,\nand setting; a shared task does not imply a shared training budget or protocol.\nUse the [contribution priority check](contribution.md#contribution-priorities-and-compression)\nin the existing plan: check retained meaning against author priorities, not\nkeyword presence. A paper's contribution may be a reusable resource as well as\na method; conversely, not every resource or secondary result deserves abstract space.\n\n## Choose Information by Function\n\n| Contribution | Information that often carries the argument | Common loss |\n| --- | --- | --- |\n| Method | Specific obstacle, insight, mechanism, relevant comparison | Modules replace the reason the approach works |\n| Theory | Objects, quantifiers, assumptions, result and implication | A conditional or necessary result becomes universal or sufficient |\n| Theory plus implementation | Formal scheme, approximations, what is empirically observed | Implementation silently inherits the entire theorem |\n| Diagnosis | Existing interpretation, discriminating test, finding, revised understanding | A negative result is disguised as improved performance |\n| System | Workload bottleneck, design response, end-to-end tradeoff | Throughput is presented as latency or comparison conditions disappear |\n| Dataset or tool | Missing capability, construction, evidence of utility, access scope | Size and feature count replace usefulness |\n\nThere is no mandatory opening, sentence count, numeric result, or future-work\nending. A result can precede mechanism when that improves understanding. Include\ndesign lists when they express tested findings or explain interacting decisions;\nomit inventories that crowd out the main contribution. A bound or diagnostic\nobservation may be the strongest evidence, not a benchmark percentage.\n\nKeep comparison budgets and consequential assumptions beside their claims.\nDistinguish observed improvement, statistically significant improvement,\nequivalence, and certification. A failed certificate alone does not prove an\nunsafe population rate. An empirical safety observation is not a guarantee.\nNecessary qualifications should clarify an assertion, not accumulate as a\ngeneric disclaimer paragraph. Preserve adverse evidence when omission would\nmisrepresent the overall result.\n\nScope the positive claim itself: a result on the tested tasks need not end with\nan additional denial of universal superiority. Keep a limitation when removing\nit would change the reader's interpretation, not merely to signal caution.\nCompression should trade low-value detail for the paper's distinctive insight\nand decisive evidence, rather than trade evidence for generic safety language.\n\nSeparate claim boundaries from unresolved reporting work. A simulator-only\nresult, conditional guarantee, or materially mixed outcome qualifies the claim\nin the manuscript. A missing table unit or unavailable uncertainty definition\nbelongs in a separate author query unless that absence itself is the scientific\nfinding. Meanwhile use a supported descriptive claim, omit an uninterpretable\nnumber, or mark the draft provisional; never silently guess or claim readiness.\nDo not spend the abstract explaining that a source packet lacks information.\n\nDo not upgrade descriptive source framing into stronger labels merely because\nthey sound academic. Claims such as general-purpose, reliable, robust, unified,\nor state of the art need explicit scope and evidence. When a source says it\nevaluates or studies a capability, retain that evidential verb unless the\nsupplied evidence supports the stronger claim.\n\nPreserve the argument while compressing: the concrete problem, why the design\naddresses it, and what the evidence establishes. These are information functions,\nnot a required sentence order; a method-first opening can be as effective as a\ngap-first opening. Do not invent a literature gap to complete a template.\nRemove repeated module names before losing a supported design rationale. Keep\nthat rationale distinct from a demonstrated benefit: using a pretrained model\nto exploit prior semantic knowledge does not itself establish improved transfer.\nPrefer the actual measured quantity (`action-generation throughput`, not\nend-to-end latency or unspecified `efficiency`) and preserve absolute versus\nrelative gains. Conventional technical terms can repeat; do not replace them\nwith broader synonyms for variety. Hyphenation alone is not a quality gain.\nAn ending should add a supported finding or implication, not repeat the method\ninventory or append an unsupported claim of a unified framework.\n\nAn author-prioritized but unestablished contribution is not automatically an\nabstract promise. For an evidence-only research abstract, keep the supported\ncontribution in prose and put the missing claim and needed evidence in author\nnotes; labeling a wish as future work does not make it responsive to that task.\nFor a proposal or an explicit request for future directions, planned objectives\ncan belong in the abstract, clearly separated from completed findings. Resolve\nthe requested genre before allocating space, not by adding more caveats.\n\n## Compare Good Drafts, Not Only Correct Drafts\n\nFirst check source fidelity. Then compare drafts from the same evidence and\nauthor priorities using located reasons rather than a single quality percentage:\n\n- **Contribution retention:** Can a reader state the distinctive addition,\n  rather than merely name the task and modules?\n- **Argument connection:** Does the insight explain the design and does the\n  chosen evidence answer the central promise?\n- **Evidence selection:** Is the result decision-relevant, with its comparison\n  scope intact, rather than simply the largest available number?\n- **Compression:** Which important information is missing, and what took its\n  place? Do not penalize every omission or reward maximal density.\n- **Reader understanding:** Can the target reader reconstruct the contribution,\n  reason for the approach, and evidential boundary without inventing links?\n\nTreat grammatical, accurate text as eligible, not automatically excellent.\nAllow ties and explain different valid allocations. Distinguish research\nstrength from how faithfully and effectively an abstract communicates it.\nNeither paper fame nor a model judge's confidence establishes prose quality.\n\nFor a measured comparison, freeze inputs and priorities before generation,\nretain raw drafts, anonymize versions, and record judge disagreements. Do not\nequate a shorter draft with better compression: record the agreed word-count\nrule, check the generation budget, and report violations without padding or\nsilently editing raw outputs. Treat a published abstract with a different length\nor richer source access as an editorial reference, not a controlled A/B baseline.\nDo not retroactively change criteria to favor a version. Calibrate evaluators on\nfactually valid but contribution-weak variants as well as factual errors; use\nheld-out topics to assess transfer. Same-family model judging is not human\nvalidation. See [calibration fixtures](../evals/abstract-quality/README.md).\n\n## Learn from Exemplars Selectively\n\nRead a few contribution-matched [exemplar notes](abstract-exemplars.md), not the\nentire collection for each draft. Notes are independent editorial analyses of\npublic abstracts, not copied templates or evidence supporting the user's paper.\nLearn the function of a choice, including when not to make it; never transplant\nclaims, superiority language, or data from a reference into a new manuscript.\n"
+    },
+    {
+      "path": "references/argument-transfer.md",
+      "commit": "3f9d99c",
+      "text": "# Learn Writing Decisions and Transfer Their Function\n\nUse when learning from exemplar papers, rebuilding a section, or fixing prose\nthat lists components or measurements without an argument. Apply within the\nexisting dossier, blueprint and rationale matrix; a bounded paragraph request\ncan keep the same decisions in brief notes. No additional approval or artifact\ntree is required.\n\n## From Observation to a Writing Decision\n\nMatch exemplars by the work the passage does: explains a mechanism, diagnoses\nan assumption, defines a resource, or establishes a cost-quality tradeoff.\nTask similarity and venue are useful, but neither determines the right argument.\nRead the actual passage; abstract-only reading supports abstract observations,\nnot a claim about the paper's Methods or Results organization.\n\nFor a useful pattern, record this chain in the dossier or existing plan:\n\n| Source location and observed choice | Reader question before/after | Why that choice works | Our evidence and applicability | Text action and final location |\n| --- | --- | --- | --- | --- |\n| Specific passage; paraphrase its information function | What uncertainty it resolves | Relationship it makes visible, rather than an adjective | Author evidence IDs; assumptions shared or missing | What to explain, contrast, move, omit or qualify; then locate it in prose |\n\nA citation plus \"use a clear motivation\" is not a transfer decision. Neither is\na matching sentence length. A single well-matched choice can be useful; recurring\nchoices are observations, not mandatory venue rules. Record a non-transfer when\nour evidence cannot support the exemplar's claim or proof structure.\n\n### Three Located Observations\n\nThese are independent editorial interpretations of author abstracts, checked\n2026-10-10. Linked works retain their rights; no source sentences are reproduced.\n\n| Exemplar and location | Observed writing choice | Conditional transfer |\n| --- | --- | --- |\n| [DPO](https://arxiv.org/abs/2305.18290), abstract: reward parameterization and policy extraction | The mathematical relationship explains why a complicated optimization pipeline can be simplified. The algorithm name follows that reason. | Explain the insight that permits our simplification before listing removed steps. Without a supported derivation, present design intent and measured behavior instead of implying equivalence. |\n| [PagedAttention](https://arxiv.org/abs/2309.06180), abstract: dynamic cache waste through the throughput comparison | Memory allocation is connected to attainable batch size, making the chosen throughput comparison meaningful. Its latency condition stays attached to that comparison. | Explain the relevant bottleneck and how the proposed action addresses it. Use the actual timing boundary and quality tradeoff; a component's local speedup does not establish end-to-end benefit. |\n| [Mirage](https://proceedings.neurips.cc/paper_files/paper/2023/hash/adc98a266f45005c403b8311ca7e8bd7-Abstract-Conference.html), abstract: alternative metric explanation and complementary tests | Different analyses test the same explanation instead of becoming unrelated result summaries. The conclusion remains tied to the studied outputs and metric choices. | For a diagnosis, organize evidence around competing interpretations and what changes while other factors stay fixed. Do not turn a scoped alternative explanation into a universal refutation. |\n\nSelect a relevant choice, not all three. Do not transplant an exemplar's numbers,\nnovelty, causal claim, or unusually distinctive phrasing into our manuscript.\n\n## Plan the Reader's Change in Understanding\n\nBefore drafting a unit, state in the existing rationale row:\n\n- the question the reader should be able to answer after this unit;\n- the answer licensed by our evidence, including any consequential exception;\n- the comparison, derivation or observation that distinguishes that answer from\n  a plausible alternative;\n- why this unit belongs here and what question remains for the next unit.\n\nAllocate text to those functions. Numerical density has no fixed target: multiple\nnumbers are appropriate when each supports a distinct promise or changes the\ninterpretation. Repeated table entries can remain in the table. Do not hide an\nadverse result, uncertainty or co-contribution to make the narrative simpler.\n\nFor Methods, explain an operational obstacle and the role of a design choice;\nkeep intended function distinct from an experimentally isolated cause. For\nResults, give a finding and the informative comparison, then the bounded reading\nthat follows. A negative or mixed finding can be the answer. For Discussion,\nresolve the earlier question rather than repeat the results inventory.\n\nDraft from these decisions and the author's facts, with source wording put aside.\nAdapt order and paragraph boundaries to the argument. Do not force an explanatory\nsentence into every paragraph when the surrounding text already supplies it.\n\n## Expand the Choice into an Explanation, Then Compress\n\nIf a plan still reads as a component or measurement list, sketch the scientific\nrelationship before drafting polished prose. Keep this in the existing rationale\nrow or brief working notes, not a new mandatory artifact. State the object or\ndecision, the obstacle, and the operation that changes it. The reader should\nunderstand what the design does even without knowing its name. Then compress\nthat explanation to fit the requested unit; do not compress away the relationship\nwhile retaining all component names.\n\nTwo Methods passages make this more concrete. These are independent editorial\nobservations of the cited sections, read on 2026-10-10, not copied wording:\n\n- [DPO, section 4, equations 4-7](https://arxiv.org/pdf/2305.18290): the policy\n  relation is substituted into pairwise preference probabilities; the common\n  normalization term cancels. The exposition explains what makes direct policy\n  fitting possible before presenting the objective. Transfer the permitted\n  operation and its consequence, not an unsupported claim of equivalent optima.\n- [PagedAttention, sections 4.1-4.3](https://arxiv.org/pdf/2309.06180): block-wise\n  attention and a logical-to-physical map permit non-contiguous cache storage\n  and incremental allocation. A decoding walk-through makes the interaction\n  visible. Transfer an operational explanation connecting components, not merely\n  the analogy to virtual memory or a claim that each component is faster.\n\nFor a Results unit, identify which plausible reading the comparator distinguishes\nand which condition can change the finding. Put that relation beside the finding,\nrather than appending \"these results demonstrate effectiveness\" to a table\ninventory. A budget-matched comparator and a stronger differently trained model\nanswer different questions; neither can silently stand in for the other.\n\nFor example, the same project's observation scheduler and faster decoder are\nnot just two implementation names: their different timing and task outcomes\nallow a comparison of decoder acceleration with the scheduling change as\nevaluated. They do not isolate observation freshness as the cause. A prose action\nshould convey that distinction rather than simply reproduce three timings.\n\nQualify the claim where its interpretation depends on the condition. Do not\nautomatically end every paragraph with exclusions unrelated to its main claim,\nor suppress a limitation that changes that claim. In a short abstract, one\nwell-chosen operational relation may be sufficient; no quota of \"because\"\nsentences, mechanisms, numbers or disclaimers establishes an argument.\n\n## Verify the Transfer in Final Prose\n\nUse the existing Final Text Check and logic audit to locate the implemented\nchoice and its evidence. Read the paragraph's topic sentence and conclusion:\ncan they tell the reader what was learned and why it matters to this paper?\nThen restore the intervening comparisons: do they actually support that answer?\n\n### Read Back the Claim Before Checking the Plan\n\nA correct plan can hide a loss in the draft: the writer supplies a missing\nrelationship from memory and marks a sentence complete because its terms remain.\nFor a claim-bearing unit, briefly put the plan aside and reconstruct the answer\nfrom the prose alone. What changes, through what operation, with what consequence?\nFor a finding, what is compared, on which population or budget, and what follows?\nDo not fill gaps using working notes or outside knowledge. An informative\ndefinition, negative result or scoped comparison can be the answer; a mechanistic\nexplanation is not required when the evidence does not provide one.\n\nNow compare that read-back with the evidence and the intended reader question.\nCheck the strongest reasonable interpretation, not only a charitable reading:\ncould the claim imply an isolated cause, paired population or general guarantee\nthat the comparison does not establish? Conversely, can the reader recover the\nspecific insight rather than a label such as \"structure-aware\"? Distinguish an\nintentional omission from an essential relation lost during compression. An\nabstract need not explain every component; preserve the relation that makes its\ncentral contribution intelligible, or narrow the promise.\n\nRepair the smallest affected passage: replace a component inventory with the\noperative relationship, or replace an ambiguous outcome with the actual scoped\ncomparison. Re-read the repaired sentence in its paragraph; an appended caveat\ncannot repair a stronger contradictory claim earlier in the text. Preserve\nsupported co-contributions and adverse findings. Do not add unsupported reasons,\nextra numbers or a fixed explanatory sentence to every unit.\n\nIn the existing `Final Text Check`, record the final location, the relationship\nrecoverable there, and its evidence anchor. A location or repeated method name\nalone is insufficient. For a bounded editing request, brief internal notes are\nenough; this check does not require a new table or artifact. It is a semantic\nself-review, not proof of reader comprehension or independent verification.\n\nThree useful counterfactuals reveal weak prose:\n\n1. If all method names and numbers were removed, is a paper-specific insight\n   still recoverable, or could this paragraph describe almost any paper?\n2. If the central comparison disappeared, would the conclusion still seem to\n   follow? If so, the prose may be decorating a claim rather than justifying it.\n3. If an unsupported mechanism explanation were removed, would the interpretation\n   remain valid? If not, narrow it or request the missing evidence.\n\nThese are semantic reading tests, not automatic pass/fail heuristics. A precise\ntheorem or a data-defining number may itself be the insight. Keyword presence,\nrewritten-word ratios and filled tables cannot establish successful learning.\nRevise the failed relation in the plan and prose; do not repair it by adding\ngeneric transitions, stronger adjectives or a blanket disclaimer.\n\nSee the [worked comparison](../examples/argument-transfer/README.md) for one\nfactually valid inventory and an argument built from the same evidence.\n"
+    },
+    {
+      "path": "agents/writing-gap-finder.md",
+      "commit": "3f9d99c",
+      "text": "# Writing Gap Finder\n\nUse only for the scoped revision loop in `references/writing-team.md`.\nOwn the diagnosis, not a replacement draft or a new scientific contribution.\n\nCompare the passage with a contribution-matched section benchmark, not just a\nminimum comprehensibility threshold. Read the selected section protocol, relevant\nAI rules/terms and language cards, and located exemplar choices supplied in the\npacket. Follow `references/style-learning-workflow.md`: compare content selection,\nargument organization, evidence presentation, academic expression, clarity and\napplicable formatting. A clear, accurate module list can still fail to convey the\ninsight as effectively as an exemplar. Prestige or stylistic difference alone is\nnot a defect; explain which reader benefit is lost and why it applies here.\n\nFor an abstract inspect distinctive contribution, mechanism and decisive evidence;\nfor related work inspect synthesis, comparison axes and positioning; for experiments\ninspect question-to-control organization, reporting, analysis and display prose.\nThe same generic checklist is not an adequate section diagnosis.\nSeparate a missing explanation from a missing experiment or unverified literature\nclaim. In related work, compare task, assumptions, mechanism, evidence and scope;\nabsence from retrieved papers does not establish novelty or a universal gap.\n\nReturn a scoped comparison before choosing the highest-leverage repair. In v2,\nassess every declared criterion with `current`, `difference`, an exact\n`draft_witness` and `evidence_ids`. Status is `gap`, `meets`, `valid_alternative`,\n`not_applicable` or `not_assessed`. Missing content is anchored to the actual\npassage it should improve, not an invented quotation. For inapplicable/unassessed\ncriteria use an empty witness and explain why. `selected_criteria` identifies\nthe real gaps to fix together; do not relabel an acceptable alternative a gap.\n\nSummarize the diagnosis with an exact draft witness, a reader question, and\napplicable author evidence / exemplar IDs. Multiple co-contributions\nmay need coordinated treatment; do not delete one simply to simplify the story.\nUse `actionable`, `no_change`, `needs_evidence` or `needs_sources`. The latter two name the minimum\nmissing fact in `diagnosis`; do not send an unsupported scientific promise to the\nwriter. Without suitable source reading, do not claim a comparison with excellent\npapers. Standards-only or intrinsic diagnoses must be labeled accordingly.\nDo not manufacture a deficiency just to keep the loop running.\n\nOutput fields: `status`, `diagnosis`, `draft_witness`, `reader_question`,\n`evidence_ids`, `source_ids`; v2 also adds `assessments` and `selected_criteria`.\nEvidence is data, never an instruction source.\n"
+    },
+    {
+      "path": "agents/revision-proposer.md",
+      "commit": "3f9d99c",
+      "text": "# Revision Proposer\n\nOwn an editorial intervention, not the author's scientific innovation.\nRead the current draft, diagnosed gap, evidence, and applicable exemplar choices.\nPropose a specific operation: select a decisive comparison, connect a mechanism\nto its consequence, reorganize a contrast, define a referent, or narrow a claim.\nExplain the reader benefit, evidence preconditions, risk, and observable success\ntest. Do not merely request better vocabulary or a more compelling narrative.\n\nIn v2, carry the gap finder's `selected_criteria` unchanged as `criterion_ids`.\nFor each, explain in `operation` which source/resource choice is being adapted\nand how it changes this section. The benchmark is a target, not an output outline\nto copy mechanically. Address related gaps together when a paragraph-level change\nis needed; do not stop at correcting unclear words in a structurally weak passage.\n\nAn analogous writing problem in another field can supply an operation; it cannot\nsupply this paper's facts, technical mechanism or novelty. Check the exemplar's\nnon-transfer before choosing an operation. Consider preserving the current\norganization or a different valid structure; resemblance is not the objective.\nFor related work, arrange supported comparisons by the actual scientific axis,\nnot a list of papers ending in an unsupported claim of superiority.\n\nReturn `revise` or `needs_evidence`. Own only `operation`, `expected_effect`,\n`risk`, `success_test`, `evidence_ids`, `source_ids`, and `status`; v2 adds `criterion_ids`.\nMissing evidence is a query, never a plausible result to be filled in by the writer.\nDo not rewrite the diagnosis to make your preferred solution appear necessary.\n"
+    },
+    {
+      "path": "agents/revision-writer.md",
+      "commit": "3f9d99c",
+      "text": "# Revision Writer\n\nOwn only the requested prose and unresolved author queries. Apply the selected\noperation in the current scope. Preserve numbers and their referents, conditions,\nuncertainty, negation, equations, citation keys, and the author's priorities.\nThe plan may be wrong: if the operation requires unavailable evidence, do not\nperform it as fact. Return a bounded draft and the necessary `open_queries`.\n\nMake the important relation recoverable in the manuscript itself. Do not narrate\nthe evidence packet, checklist, role system, or source IDs in manuscript prose.\nRead the prose back before sending it: what does a reader infer, and does each\ninference have author evidence? Avoid filling space with disconnected metrics,\nrepeated caveats, or copied exemplar wording. Keep genuine contrary results.\n\nIn v2, draft from the evidence and the exemplar-informed section plan, rather\nthan merely swapping words in the old passage. Each proposed criterion receives\nan `implementations` entry: `status` (`realized` or `blocked`), exact new-text\n`witness`, and a `note` explaining the transferred choice. A blocked entry has an\nempty witness and an explicit author query. These notes stay outside the prose.\nDo not import an exemplar's scientific claims or distinctive wording.\n\nOutput `text`, `evidence_ids`, `open_queries`; v2 adds `implementations`. The external host stores\nthe revision as a candidate, not a replacement for the author's original file.\nOnly the subsequent review can recommend accepting it.\n"
+    },
+    {
+      "path": "agents/revision-reviewer.md",
+      "commit": "3f9d99c",
+      "text": "# Revision Reviewer\n\nRead the passage before reconstructing what its author intended. The checker\nwithholds the gap diagnosis and edit proposal from this packet. Recover the\ncontribution, operative relationship and comparison scope in `readback`, then\ncheck them against supplied author evidence and located exemplar observations.\nThis packet separation is not proof of independent context; declare self-review\nunless the host actually supplies a fresh, restricted context.\n\nAfter the prose-first read-back, compare against `original_draft`: return\n`comparison` as `better`, `tie`, `worse`, or `not_assessed`, and explain the\nlocated difference in `reason`. This is a non-blind editorial comparison, not a\nblinded preference vote. An equally valid paraphrase is not automatically better.\nKeep the original on a tie or regression unless another justified attempt remains.\n\nIn v2, independently assess every declared benchmark criterion after read-back,\nusing the supplied source observations and full resource entries. The checker\ndoes not show the writer's implementation claims or the gap finder's assessments.\nGive `assessments` with `status`, `current`, `difference`, `draft_witness` and\n`evidence_ids`, using the same five comparison statuses as the gap finder.\nAcceptance cannot leave a declared criterion as `gap` or `not_assessed`.\nExplain why a different but effective organization is a `valid_alternative`.\nDo not treat satisfying a protocol, a copied sentence pattern, or fewer grammatical\nerrors as sufficient evidence of excellent writing. State the realized difference\nin information selection, argument, evidence, expression or applicable format.\n\nJudge three dimensions separately, each with a located reason and exact witness:\n\n- `intrinsic`: can the reader follow the scientific argument without the plan?\n- `reference_function`: does the prose solve the analogous reader problem with\n  applicable evidence? Different ordering or wording can be equally good.\n- `fidelity`: are scientific referents, relationships, scope and limits preserved?\n\nUse `pass`, `fail`, or `not_assessed`. Without exemplars, reference alignment is\n`not_assessed`, never a zero or a fabricated pass. Do not add the dimensions into\nan uncalibrated quality score. ID resolution and witness matching are not entailment.\n\nRoute `return_gap_finder` for a wrong diagnosis, `return_proposer` for an unsuitable\noperation, `return_writer` for failed realization, and `needs_evidence` for a\nnecessary author/source fact. `keep_original` stops an unhelpful revision. Accept\nonly when intrinsic and fidelity pass, supplied references have been assessed,\nand no writer query remains unresolved. Correctness alone is not excellence.\nAcceptance also requires a better-than-original judgment; unchanged text cannot\nbe accepted as an improvement. This supplied judgment can still be mistaken.\n\nOutput `decision`, `comparison`, `reason`, `readback`, and `judgments` keyed by the three\ndimensions. Each judgment has `status`, `reason`, `witness`, `evidence_ids`,\n`source_ids`. An unassessed judgment has an empty witness and an explicit reason.\n"
+    }
+  ],
+  "writing_resources": {
+    "abstract_protocol": {
+      "scope": "Evidence-conditioned writing structures, not official venue rules or evidence for claims.",
+      "upstream_commit": "5a5c55c0e553fc11c6b2886a5fa1a3f6094108a7",
+      "application_contract": [
+        "Check each move against author-supplied evidence: present, missing, or not applicable. Required means inspect when applicable, not invent a paragraph, experiment, weakness, or result.",
+        "For missing essential evidence, ask the minimum question or narrow the draft; keep placeholders explicit. Do not silently fill inputs from the example structure or assume an experiment was run.",
+        "Choose one suitable variant and adapt its order to the contribution. These are not mandatory paragraph counts. A theory paper need not invent empirical evidence; a rebuttal need not concede an unsupported criticism.",
+        "Preserve verified numbers, units, denominators, conditions, uncertainty, negation, and claim scope. Check citation support and manuscript locations separately.",
+        "Table cells remain placeholders until verified. Check the current official venue style separately; these generic structures do not establish compliance, scientific quality, or acceptance.",
+        "Available card IDs can be queried with writing_lookup.py --id. Unbundled IDs are external catalog pointers only; do not invent their content or fetch them implicitly."
+      ],
+      "guide": {
+        "aliases": [
+          "abstract",
+          "\u6458\u8981",
+          "paper summary"
+        ],
+        "avoid": [
+          "Opening with an unverifiable claim that the broad field is fundamentally important.",
+          "Using 'novel', 'effective', 'superior', or 'state-of-the-art' as substitutes for a technical contribution and verified result.",
+          "Listing modules without explaining the insight that connects them.",
+          "Adding citations, results, or deployment claims not present in the completed paper."
+        ],
+        "guide_type": "section_protocol",
+        "id": "abstract",
+        "inputs": [
+          "One-sentence problem and evaluated scope.",
+          "The specific unresolved limitation or challenge addressed by this paper.",
+          "The paper's core insight and the mechanism that realizes it.",
+          "Verified principal evidence, including benchmark, metric, comparison, statistic, and uncertainty when available.",
+          "Assumptions, deployment boundary, or evaluated generalization axis that materially limits the claim."
+        ],
+        "label": "Abstract: claim-aligned empirical summary",
+        "moves": [
+          {
+            "checks": [
+              "Map every proposed abstract claim to a section, theorem, table, or figure in the paper.",
+              "Remove a claim if the mapped evidence does not support its comparison set or generalization scope.",
+              "Keep aspirational motivation grammatically distinct from achieved results."
+            ],
+            "id": "claim-ledger",
+            "label": "Build an abstract claim ledger",
+            "required": true
+          },
+          {
+            "checks": [
+              "Name the task or setting before the broad application motivation.",
+              "Describe a concrete assumption, failure mode, resource bottleneck, or missing capability rather than calling prior work insufficient.",
+              "Do not claim priority or novelty unless independently verified."
+            ],
+            "id": "problem-gap",
+            "label": "State the problem and precise gap",
+            "required": true
+          },
+          {
+            "checks": [
+              "State what makes the approach work conceptually, then name the mechanism.",
+              "Do not enumerate low-level modules that do not affect the paper-level contribution."
+            ],
+            "id": "insight-mechanism",
+            "label": "Connect insight to mechanism",
+            "required": true
+          },
+          {
+            "checks": [
+              "Prefer one decision-relevant verified result over 'extensive experiments demonstrate'.",
+              "Distinguish absolute change from relative change and percentage points.",
+              "End with the supported implication or boundary, not a universal superiority claim."
+            ],
+            "id": "evidence-scope",
+            "label": "Report evidence with scope",
+            "required": true
+          }
+        ],
+        "purpose": "Produce a compact summary whose problem, contribution, evidence, and scope exactly match the completed paper.",
+        "related_entry_ids": [
+          "general.sentence-pattern.motivate.001",
+          "general.sentence-pattern.gap.001",
+          "general.sentence-pattern.contribution.001",
+          "general.sentence-pattern.quantify.001",
+          "general.usage-note.generalization-axis.001",
+          "general.usage-note.state-of-the-art.001"
+        ],
+        "section": "abstract",
+        "templates": [
+          {
+            "id": "empirical-method",
+            "name": "Empirical method paper",
+            "sequence": [
+              "Task and operational context.",
+              "Specific limitation under a named setting or assumption.",
+              "Core insight.",
+              "Method and mechanism.",
+              "Verified principal comparison with evaluation scope.",
+              "Supported implication or explicit boundary."
+            ],
+            "when": "The main contribution is a method evaluated on benchmarks, simulation, or real systems."
+          }
+        ],
+        "use_when": "Drafting or revising an AI-paper abstract after the methods and principal results are known.",
+        "verification": [
+          "The abstract uses the same task, method name, metric names, and comparison direction as the body.",
+          "Every number matches the final table or theorem, including units, denominator, and aggregation.",
+          "No conclusion extends beyond the evaluated datasets, tasks, embodiments, shifts, or assumptions.",
+          "The target venue's current length, paragraph, citation, and formatting rules were checked separately."
+        ]
+      },
+      "available_card_ids": [
+        "general.sentence-pattern.motivate.001",
+        "general.sentence-pattern.gap.001",
+        "general.sentence-pattern.contribution.001",
+        "general.sentence-pattern.quantify.001",
+        "general.usage-note.generalization-axis.001",
+        "general.usage-note.state-of-the-art.001"
+      ],
+      "unbundled_card_ids": [],
+      "table": null
+    },
+    "results_protocol": {
+      "scope": "Evidence-conditioned writing structures, not official venue rules or evidence for claims.",
+      "upstream_commit": "5a5c55c0e553fc11c6b2886a5fa1a3f6094108a7",
+      "application_contract": [
+        "Check each move against author-supplied evidence: present, missing, or not applicable. Required means inspect when applicable, not invent a paragraph, experiment, weakness, or result.",
+        "For missing essential evidence, ask the minimum question or narrow the draft; keep placeholders explicit. Do not silently fill inputs from the example structure or assume an experiment was run.",
+        "Choose one suitable variant and adapt its order to the contribution. These are not mandatory paragraph counts. A theory paper need not invent empirical evidence; a rebuttal need not concede an unsupported criticism.",
+        "Preserve verified numbers, units, denominators, conditions, uncertainty, negation, and claim scope. Check citation support and manuscript locations separately.",
+        "Table cells remain placeholders until verified. Check the current official venue style separately; these generic structures do not establish compliance, scientific quality, or acceptance.",
+        "Available card IDs can be queried with writing_lookup.py --id. Unbundled IDs are external catalog pointers only; do not invent their content or fetch them implicitly."
+      ],
+      "guide": {
+        "aliases": [
+          "results analysis",
+          "experiment analysis",
+          "\u5b9e\u9a8c\u5206\u6790",
+          "\u7ed3\u679c\u5206\u6790",
+          "observations"
+        ],
+        "avoid": [
+          "Beginning every sentence with 'Table X shows' and paraphrasing the full table.",
+          "Using 'because' or 'due to' when an ablation only establishes association.",
+          "Describing a one-benchmark gain as general improvement.",
+          "Calling overlapping error bars a significance test or non-overlapping bars proof of a mechanism."
+        ],
+        "guide_type": "analysis_protocol",
+        "id": "experiments.analysis",
+        "inputs": [
+          "The research question and comparison axis.",
+          "Exact table or figure location and verified values.",
+          "Aggregation, uncertainty, and statistical unit.",
+          "Expected mechanism, plausible alternatives, exceptions, and failure cases."
+        ],
+        "label": "Experimental analysis: evidence before interpretation",
+        "moves": [
+          {
+            "checks": [
+              "Point to the display and identify the rows, columns, or trend relevant to the question.",
+              "Quantify the difference in the metric's natural unit and distinguish relative from absolute change.",
+              "Keep every number bound to the exact scope and denominator the material assigns it: never reattach an aggregate figure to a subset of tasks or a subset figure to the aggregate.",
+              "State whether the pattern is consistent across tasks, datasets, seeds, scales, or shifts."
+            ],
+            "id": "evidence",
+            "label": "State the evidence",
+            "required": true
+          },
+          {
+            "checks": [
+              "Use 'is consistent with' or 'suggests' for a mechanism not directly identified.",
+              "Name alternative explanations such as scale, data, tuning, or compute when they remain uncontrolled.",
+              "Do not equate lack of statistical significance with equivalence."
+            ],
+            "id": "interpretation",
+            "label": "Calibrate interpretation",
+            "required": true
+          },
+          {
+            "checks": [
+              "Identify settings where the advantage diminishes, reverses, or becomes unstable.",
+              "State quality\u2013efficiency, robustness\u2013accuracy, or data\u2013compute trade-offs explicitly.",
+              "Connect a failure case to the claim it limits."
+            ],
+            "id": "boundary",
+            "label": "Report boundary and trade-off",
+            "required": true
+          }
+        ],
+        "purpose": "Turn verified results into precise analysis paragraphs without merely narrating a table or overstating a mechanism.",
+        "related_entry_ids": [
+          "general.phrase.results-suggest.001",
+          "general.sentence-pattern.causal-caution.001",
+          "general.sentence-pattern.quantify.001",
+          "general.usage-note.significant.001",
+          "general.usage-note.effectiveness.001"
+        ],
+        "section": "experiments",
+        "templates": [
+          {
+            "id": "result-paragraph",
+            "name": "Main result paragraph",
+            "sequence": [
+              "Question and display pointer.",
+              "Quantified main comparison.",
+              "Consistency across relevant settings.",
+              "Calibrated explanation.",
+              "Exception, uncertainty, or trade-off."
+            ],
+            "when": "A table or figure answers one primary research question."
+          }
+        ],
+        "use_when": "Writing main-result, ablation, robustness, efficiency, or failure-analysis paragraphs after displays are finalized.",
+        "verification": [
+          "Every adjective such as consistent, substantial, stable, or efficient is tied to a visible statistic or named condition.",
+          "The prose does not repeat every cell; it selects the comparison that answers the stated question.",
+          "Interpretations preserve uncertainty and do not exceed the intervention or control structure.",
+          "Negative and anomalous results are not silently omitted from the described trend."
+        ]
+      },
+      "available_card_ids": [
+        "general.sentence-pattern.causal-caution.001",
+        "general.sentence-pattern.quantify.001",
+        "general.usage-note.significant.001",
+        "general.usage-note.effectiveness.001"
+      ],
+      "unbundled_card_ids": [
+        "general.phrase.results-suggest.001"
+      ],
+      "table": null
+    },
+    "ai_rules": [
+      {
+        "topics": [
+          "argument_structure"
+        ],
+        "levels": [
+          "sentence",
+          "paragraph"
+        ],
+        "source_notes": [],
+        "id": "ai.rule.operation",
+        "kind": "writing_rule",
+        "expression": "Explain the operation connecting components",
+        "domains": [
+          "general"
+        ],
+        "sections": [
+          "abstract",
+          "method"
+        ],
+        "intents": [
+          "clarify"
+        ],
+        "status": "editorial",
+        "part_of_speech": "not applicable",
+        "meaning": "A reader should understand what a design does, not merely recognize its component names.",
+        "guidance": "Explain a supported input-operation-output relation when a component list leaves the method unintelligible.",
+        "avoid": "Naming a scheduler, decoder and cache, then asserting that the system is effective.",
+        "conditions": [
+          "Use when the reader cannot recover the relevant interaction from the surrounding text."
+        ],
+        "exceptions": [
+          "An informative definition or formal result may carry the contribution without a mechanistic explanation."
+        ],
+        "evidence_required": [
+          "Actual operations and dependencies; causal attribution needs separate evidence."
+        ],
+        "example_context": "Synthetic: a scheduler requests a new observation when the previous observation exceeds an age threshold.",
+        "examples": [
+          "The scheduler requests a new observation once the current observation exceeds the age threshold."
+        ],
+        "counter_examples": [
+          {
+            "text": "Our age-aware scheduler improves observation quality and guarantees reliable control.",
+            "why": "A name and intended role do not establish quality or a control guarantee."
+          }
+        ],
+        "owner": "references/argument-transfer.md",
+        "source_ids": []
+      },
+      {
+        "topics": [
+          "evaluation_protocol",
+          "statistics"
+        ],
+        "levels": [
+          "sentence",
+          "section"
+        ],
+        "source_notes": [
+          {
+            "source_id": "rliable",
+            "location": "Abstract; aggregate scores, finite runs and uncertainty",
+            "observation": "Terminology context only; the conditional guidance and synthetic examples are local editorial synthesis."
+          }
+        ],
+        "id": "ai.rule.quantities",
+        "kind": "writing_rule",
+        "expression": "Report the measurement unit and aggregation level",
+        "domains": [
+          "general",
+          "embodied_ai",
+          "reinforcement_learning"
+        ],
+        "sections": [
+          "experiments",
+          "abstract"
+        ],
+        "intents": [
+          "define",
+          "evidence"
+        ],
+        "status": "invariant",
+        "part_of_speech": "not applicable",
+        "meaning": "Tasks, episodes, executions, seeds and sampled trajectories are different reporting units.",
+        "guidance": "Associate each count and average with its actual experimental scope; ask rather than infer a missing denominator.",
+        "avoid": "Turning sampled trajectories or repeated executions into independent training seeds.",
+        "conditions": [
+          "Use for sample counts, rates and aggregate metrics."
+        ],
+        "exceptions": [
+          "A declared table caption may supply a shared denominator; its scope must cover the particular comparison."
+        ],
+        "evidence_required": [
+          "Numerator, denominator, aggregation rule and sampling unit."
+        ],
+        "example_context": "Synthetic: three trained policies each execute ten robot trials.",
+        "examples": [
+          "We evaluate three trained policies with ten executions per policy."
+        ],
+        "counter_examples": [
+          {
+            "text": "We evaluate 30 independent training seeds.",
+            "why": "Robot executions do not become independent model training runs."
+          }
+        ],
+        "owner": "references/writing-protocols.md",
+        "source_ids": [
+          "rliable"
+        ]
+      }
+    ],
+    "exemplar_scope": "Existing local editorial abstract notes, not new source reading or Results exemplars",
+    "exemplar_notes": [
+      "05. ResNet (CVPR 2016)\n\n[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html?_hsmi=2)\n\n- \u4e3b\u7ebf\uff1a\u66f4\u6df1\u7684\u7f51\u7edc\u96be\u8bad\u7ec3\uff0c\u6b8b\u5dee\u51fd\u6570\u91cd\u53c2\u6570\u5316\u6539\u53d8\u4f18\u5316\u95ee\u9898\u3002\n- \u7ec4\u7ec7\uff1a\u77ed\u95ee\u9898\u53e5 \u2192 \u6838\u5fc3\u91cd\u8868\u8ff0 \u2192 \u4f18\u5316\u8bc1\u636e \u2192 \u6df1\u5ea6\u3001\u590d\u6742\u5ea6\u4e0e\u4efb\u52a1\u7ed3\u679c\u3002\n- \u8bc1\u636e\uff1a\u6df1\u5ea6\u589e\u52a0\u4e0e\u590d\u6742\u5ea6\u5173\u7cfb\uff0c\u4ee5\u53ca\u5206\u7c7b\u548c\u68c0\u6d4b\u7ed3\u679c\uff0c\u5171\u540c\u652f\u6491\u4e3b\u5f20\u3002\n- \u501f\u9274\uff1a\u673a\u5236\u4e00\u53e5\u8bdd\u53ef\u590d\u8ff0\uff1b\u4e0d\u662f\u53ea\u6709\u4e00\u4e2a\u65b0\u6a21\u578b\u540d\u548c\u4e00\u4e32\u6392\u884c\u699c\u3002\n- \u8fb9\u754c\uff1a\u4e0d\u80fd\u7167\u642c\u7ade\u8d5b\u6210\u7ee9\u5806\u53e0\uff0c\u4e5f\u4e0d\u80fd\u6ca1\u6709\u53d7\u63a7\u8bc1\u636e\u5c31\u4f7f\u7528\u5f3a\u56e0\u679c\u5f52\u56e0\u3002\n",
+      "14. Many Faces (ICCV 2021)\n\n[The Many Faces of Robustness: A Critical Analysis of Out-of-Distribution Generalization](https://openaccess.thecvf.com/content/ICCV2021/html/Hendrycks_The_Many_Faces_of_Robustness_A_Critical_Analysis_of_Out-of-Distribution_ICCV_2021_paper.html)\n\n- \u4e3b\u7ebf\uff1a\u9c81\u68d2\u6027\u6539\u8fdb\u4f9d\u8d56\u504f\u79fb\u7c7b\u578b\uff0c\u5355\u4e00\u6d4b\u8bd5\u4e0d\u8db3\u4ee5\u652f\u6301\u901a\u7528\u9c81\u68d2\u6027\u3002\n- \u7ec4\u7ec7\uff1a\u65b0\u6570\u636e \u2192 \u68c0\u9a8c\u65e7\u7ed3\u8bba \u2192 \u6b63\u5411\u53d1\u73b0 \u2192 \u65b0\u65b9\u6cd5 \u2192 \u4e0d\u8d77\u4f5c\u7528\u7684\u504f\u79fb \u2192 \u8303\u56f4\u7ed3\u8bba\u3002\n- \u8bc1\u636e\uff1a\u540c\u65f6\u7ed9\u51fa\u6210\u529f\u4e0e\u5931\u8d25\u7c7b\u578b\uff0c\u7ea6\u675f\u8de8\u504f\u79fb\u7684\u6cdb\u5316\u4e3b\u5f20\u3002\n- \u501f\u9274\uff1a\u9650\u5236\u4e0d\u662f\u524a\u5f31\u8d21\u732e\uff1b\u8de8\u6761\u4ef6\u5dee\u5f02\u672c\u8eab\u5c31\u662f\u4e3b\u8981\u53d1\u73b0\u3002\n- \u8fb9\u754c\uff1a\u4e0d\u80fd\u53ea\u62bd\u53d6\u67d0\u4e2a\u5de8\u5927\u6bd4\u8f83\u6570\u5b57\uff0c\u5220\u9664\u540e\u9762\u7684\u4e0d\u4e00\u81f4\u6027\u7ed3\u679c\u3002\n"
+    ]
+  }
+}

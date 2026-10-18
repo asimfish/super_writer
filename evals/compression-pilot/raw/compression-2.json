@@ -1,0 +1,35 @@
+{
+  "writer_id": "compression-2",
+  "cases": [
+    {
+      "id": "R04-abstract",
+      "text": "Neural Shield VIMPC addresses two sampling-based MPC failures: a learned discrete-time policy barrier estimates worst future constraint values beyond the horizon, while rollout resampling replaces unsafe prefixes with available safe ones to reduce sample waste. With 500 trajectories, NS-MPPI had zero drone crashes at a ten-step horizon. On AutoRally, a 12 m/s target, 15-step horizon and 30 trajectories per iteration yielded a 0.04 crash rate versus S-MPPI's 0.46, at 73.64 Hz on a CPU. Safety remains empirical: the barrier is unverified, and averaging feasible controls can violate nonconvex constraints.",
+      "note": "Target: complementary horizon and sampling repairs support empirical, not guaranteed, safety. Merged setup with mechanism; added sample-waste reduction, per-iteration sampling scope and the control-averaging limitation."
+    },
+    {
+      "id": "R04-results",
+      "text": "Across 100 AutoRally trials, adding only rollout resampling (RBR) to S-MPPI achieved comparable collision rates with roughly five times fewer trajectories. At a 12 m/s target speed, 15-step horizon and 30 trajectories per iteration, NS-MPPI's crash and collision rates were 0.04 and 0.06 versus S-MPPI's 0.46 and 0.70, but CPU control frequency fell from 107.31 to 73.64 Hz. With 500 trajectories, NS-MPPI had zero drone crashes across tested horizons, including ten steps; its barrier remains unverified.",
+      "note": "Target: isolate RBR's sampling benefit and expose the full controller's safety-frequency tradeoff. Merged CPU rates and frequency into one contrast; replaced exact matching with comparable collision rates and clarified per-iteration sampling."
+    },
+    {
+      "id": "R05-abstract",
+      "text": "ArticuBot learns articulated-object opening from 42.3k simulated trajectories spanning 322 objects. Weighted offsets from object points locate four gripper landmarks, defining grasping and opening subgoals that condition diffusion-based end-effector control. Deployment requires handles graspable when closed and object names for segmentation, not articulation parameters. Without camera randomization, a 200-object simulation ablation yielded normalized opening of 0.70 versus 0.24 with motion planning. The policy opened 20 unseen real objects on Franka and X-Arm without real-world training. However, DP3 Transformer Diffusion surpassed weighted displacement with all 322 objects when neither training nor testing randomized cameras.",
+      "note": "Target: geometry-grounded subgoals support controller transfer, with camera-dependent architecture rankings. Merged training and mechanism descriptions; added the closed-state handle requirement, deployment's lack of articulation parameters and the exact ranking-reversal condition."
+    },
+    {
+      "id": "R05-results",
+      "text": "With 200 training objects and no camera randomization, joint-opening increase relative to demonstrations was 0.70 +/- 0.01 for ArticuBot, 0.66 +/- 0.01 without point weights and 0.24 +/- 0.02 with a planning-based controller (means +/- SD over three runs). Holding the low-level policy fixed, weighted displacement outperformed DP3 variants with camera-randomized training and testing; DP3 Transformer Diffusion performed better with all 322 objects and neither phase camera-randomized.",
+      "note": "Target: weights and learned control improve demonstration-relative opening, while architecture rankings depend on cameras. Merged the metric disclaimer into its definition; added the three-run SD basis and made both camera phases explicit."
+    },
+    {
+      "id": "R06-abstract",
+      "text": "DemoGen expands demonstrations for DP3 by transforming object-contact actions with objects, replanning free-space motion and correspondingly editing segmented point clouds and proprioception. Without rollout filtering, it assumes reliable action execution using absolute-target inverse-kinematics control. Across eight real-world tasks, task-averaged success was 74.6% versus 11.0% for three-source-only training: one human demonstration and two recorded replays per task. Generation targeted feasible evaluation placements, with small perturbations for single-arm tasks. Single-process generation took 0.010 seconds per trajectory for computation alone. Single-view edits retain only originally visible surfaces, limiting transfer farther from demonstrated placements.",
+      "note": "Target: rollout-free augmentation improves evaluated-placement performance under reliable control, not unrestricted spatial transfer. Removed generic motivation and merged source-data context; added the execution assumption, computation-only cost boundary and visible-surface explanation."
+    },
+    {
+      "id": "R06-results",
+      "text": "At equal observation-action-pair exposure, DemoGen augmentation of one source yielded 88% task-averaged success across eight simulated tasks, versus 13% with one source and 91% with 25 (three-seed means). Across eight real-world tasks, success averaged 74.6% versus 11.0% for source-only training, with five trials per feasible configuration. Each task supplied one human demonstration and two recorded replays; generation targeted evaluated placements. Single-view edits cannot reveal unseen surfaces, and performance declined farther from demonstrated placements.",
+      "note": "Target: augmentation improves success at matched exposure and targeted placements without unrestricted spatial generalization. Compressed protocol wording and merged source and placement context; added the single-source augmentation basis and missing-surface explanation."
+    }
+  ]
+}

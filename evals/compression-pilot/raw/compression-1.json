@@ -1,0 +1,35 @@
+{
+  "writer_id": "compression-1",
+  "cases": [
+    {
+      "id": "R01-abstract",
+      "text": "Reactive Diffusion Policy (RDP) makes action chunks responsive to contact while retaining sequence modeling. An asymmetric tokenizer's action-only encoder compresses chunks; its recurrent decoder updates individual actions using the latent chunk and fresh tactile or force feedback. A slow diffusion planner predicts latent chunks. TactAR supplies augmented-reality contact feedback for demonstrations. Tests cover peeling, wiping, and bimanual lifting. Under post-contact disturbances in peeling, GelSight RDP scores 0.80 versus 0.15 for tactile-input Diffusion Policy, comparing architectures rather than sensing modalities. The decoder's 24 Hz feedback is constrained by GelSight's 25 Hz stream.",
+      "note": "Target: chunk planning permits fresh contact corrections, with gains beyond tactile input. Merged the tokenizer and decoder description; removed trajectory and latency details. Added the explicit architectural comparison and GelSight's sensor-rate constraint."
+    },
+    {
+      "id": "R01-results",
+      "text": "With ten trials per variation, post-contact peeling scores were 0.80 for GelSight RDP versus 0.15 for tactile-input Diffusion Policy (Table II). In post-contact wiping, shortening baseline chunks from eight to two reduced grasp success from 100% to 20%. The best eight-step temporal ensemble scored 0.15 versus eight-step RDP's 0.50, both with 100% grasp success (Table V). Neither tested alternative recovered RDP's combination; task scores are not success rates.",
+      "note": "Target: tactile-matched and chunk-length controls favor RDP's reactive execution. Removed aggregate task tallies; retained the post-contact comparison and grasping trade-off. Added the best temporal-ensemble comparison with matched grasp success."
+    },
+    {
+      "id": "R02-abstract",
+      "text": "Co-training Diffusion Policy supplements scarce real demonstrations with task-aware digital cousins, prior simulation data, or both. Digital cousins preserve the robot, action space, task goals and success criteria, and object and fixture categories, but allow different object instances and physical and visual properties. Across six tasks on Panda and GR-1, average real-world success rises from 45.3% with real-only training to 81.1% with digital cousins, 76.8% with prior simulation, and 83.2% with both. Simulation sampling probability and approximate camera alignment affect transfer; identical camera models are unnecessary.",
+      "note": "Target: imperfectly matched simulation helps, with separate gains from each source. Removed generic coverage and generalization statements; merged setup. Added preserved success criteria, permissible mismatches, and source-specific aggregate success rates."
+    },
+    {
+      "id": "R02-results",
+      "text": "With CupPnP datasets fixed at 20 real and 1,000 simulated demonstrations, raising simulation sampling probability from 99% to 99.9% reduced success from 95% to 60% (Figure 5); more simulation sampling was not uniformly beneficial. Replacing approximately aligned with unaligned simulation-camera views reduced digital-cousin co-training success from 95% to 70% (Figure 6). Approximate alignment helped despite unmodeled real-camera fisheye distortion; identical camera models were unnecessary.",
+      "note": "Target: sampling benefits are nonmonotonic, and useful camera alignment need not be exact. Removed aggregate and unseen-object tallies. Added explicit fixed-dataset sampling probabilities and the approximately aligned versus unaligned control, including residual fisheye mismatch."
+    },
+    {
+      "id": "R03-abstract",
+      "text": "Under hand occlusion, CordViP transforms sampled object-model geometry using FoundationPose estimates and reconstructs hand geometry through kinematics. Play-data pretraining predicts geometric contact maps and reconstructs hand-arm actions before diffusion-policy training. Across four base tasks with 50 demonstrations each, success averages 90%, versus 74% for pose-informed G3Flow. Retaining the representation but removing both pretraining objectives yields 79%, supporting a benefit beyond geometry alone. Partial-occlusion performance depends on model accuracy and continued pose tracking; complete occlusion can cause tracking failure.",
+      "note": "Target: model-based observations and pretraining provide distinct benefits under conditional visibility. Removed encoder inventories; merged geometry construction. Added geometric supervision, the fixed-representation ablation condition, and the complete-occlusion boundary."
+    },
+    {
+      "id": "R03-results",
+      "text": "Across four base tasks with 50 demonstrations and 20 evaluation trials each, CordViP averaged 90% success versus pose-informed G3Flow's 74% (Table I). Holding the representation fixed, removing both pretraining objectives reduced success to 79%; removing contact or coordination alone yielded 84% or 83% (Table VII). These controls support a pretraining benefit beyond geometry. Complete hand occlusion can still cause pose-tracking failure.",
+      "note": "Target: pretraining helps beyond pose-informed geometry, without establishing full-occlusion reliability. Removed per-task tallies, DP3, and the viewpoint aside. Added G3Flow's pose-informed status and made the fixed-representation comparison explicit."
+    }
+  ]
+}

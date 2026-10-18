@@ -1,0 +1,108 @@
+{
+  "scope": "Exploratory author-abstract comparison; originals private; unequal information and lengths",
+  "seed": 20261118,
+  "sources": [
+    {
+      "id": "R01",
+      "source": "https://www.roboticsproceedings.org/rss21/p052.pdf",
+      "author_words": 212,
+      "author_text_sha256": "43517456dc1f6c227563bd87b0b6de58b8e08ad95b662593571f2a904d8d8c8b",
+      "candidate_words": 93,
+      "candidate_sha256": "13a654673e633dacd311ec6d0a342e15967b00970d0d343453b3f0083be64709"
+    },
+    {
+      "id": "R02",
+      "source": "https://www.roboticsproceedings.org/rss21/p109.pdf",
+      "author_words": 224,
+      "author_text_sha256": "d16e80b995e32e034384ae14108a8323884b5e78ad4a2df82773be5b1999fcef",
+      "candidate_words": 90,
+      "candidate_sha256": "1bd0c6bf0d5ac7d22b32f520b9fe688debd8aeccde50ffcdb4906fd0abd0608c"
+    },
+    {
+      "id": "R03",
+      "source": "https://www.roboticsproceedings.org/rss21/p110.pdf",
+      "author_words": 212,
+      "author_text_sha256": "295facd50210a4b76e4606639ee316dc4a5ea98e6a33c55298d31e75e58b6c5f",
+      "candidate_words": 78,
+      "candidate_sha256": "097a13af384b5ea00ec40b745088fb9d99a0c5cf1a588025ced2fd1ca61f6b21"
+    },
+    {
+      "id": "R04",
+      "source": "https://www.roboticsproceedings.org/rss21/p112.pdf",
+      "author_words": 179,
+      "author_text_sha256": "700d208200e973776bb3f2c3fe1436d1b45f9c1e60d1e2e2d5bde78c3721fb11",
+      "candidate_words": 94,
+      "candidate_sha256": "f4c3a3c337ee7db1c28d8b0dc1c4145b3b0538226c626b101ba55ed7e0f1f399"
+    },
+    {
+      "id": "R05",
+      "source": "https://www.roboticsproceedings.org/rss21/p156.pdf",
+      "author_words": 250,
+      "author_text_sha256": "5be1c891b46f61c47333ce63b74f39b1e16c61f8269cd2aa98428b9c92480339",
+      "candidate_words": 96,
+      "candidate_sha256": "a05595eab6e62ca80fe952cb760caa43b7dd8971c29d836b3d5ef42735fb5b3c"
+    },
+    {
+      "id": "R06",
+      "source": "https://www.roboticsproceedings.org/rss21/p157.pdf",
+      "author_words": 147,
+      "author_text_sha256": "bcc09b8942a042e6793b6643364365d11a85c5a3bf580fcadecb6dd7204e196a",
+      "candidate_words": 94,
+      "candidate_sha256": "c107e11f85512bf6d2ffe11c4995fe34f50f391f5844ebe9eef296f7c1bc3ac0"
+    }
+  ],
+  "mapping": {
+    "A01/R01": {
+      "A": "author",
+      "B": "compression"
+    },
+    "A02/R01": {
+      "A": "compression",
+      "B": "author"
+    },
+    "A01/R02": {
+      "A": "compression",
+      "B": "author"
+    },
+    "A02/R02": {
+      "A": "author",
+      "B": "compression"
+    },
+    "A01/R03": {
+      "A": "author",
+      "B": "compression"
+    },
+    "A02/R03": {
+      "A": "compression",
+      "B": "author"
+    },
+    "A01/R04": {
+      "A": "author",
+      "B": "compression"
+    },
+    "A02/R04": {
+      "A": "compression",
+      "B": "author"
+    },
+    "A01/R05": {
+      "A": "compression",
+      "B": "author"
+    },
+    "A02/R05": {
+      "A": "author",
+      "B": "compression"
+    },
+    "A01/R06": {
+      "A": "compression",
+      "B": "author"
+    },
+    "A02/R06": {
+      "A": "author",
+      "B": "compression"
+    }
+  },
+  "packet_sha256": {
+    "A01": "10bc2a9c757c6047819e6974ec2d87b7b7be59d2924c67bc0d0f6f3842a70fff",
+    "A02": "18682e0b52bc9a300d2bdc88e26cb8fecd81ae32b46acb8ce907faa140035c74"
+  }
+}

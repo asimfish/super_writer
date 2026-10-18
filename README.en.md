@@ -21,11 +21,15 @@ The repository is `super_writer`; invoke **`$super-writer`**. Your AI agent does
 the writing. Python scripts supply repeatable checks. No model is bundled,
 and no acceptance or AI-detector outcome is promised.
 
-**Latest writing test:** 12 DROID/SIMPLER pairs and 24 final passages give candidate
-3 / baseline 10 / tie 11. **The frozen gate fails; default guidance is unchanged.**
-Local metric explanation improves, but evidence selection and cohesion still lose.
-[Results and failure analysis](docs/ai-spec-pilot-evaluation.md) ·
-[Side-by-side comparison](evals/ai-spec-pilot/comparison.html)
+**Latest writing test:** six RSS 2025 papers, twelve Abstract/Results units and
+thirty-six actual revisions. Compression cuts mean Abstract length from 139.7 to
+90.8 words, but loses to previous guidance **2 wins / 10 losses**; Results are
+**7 / 5**. Exploratory comparison with author abstracts is **5 / 7**.
+**The frozen gate fails: economy does not yet produce better abstracts.**
+Runtime guides were not promoted by this pilot.
+[Results and remaining gaps](evals/compression-pilot/README.md) ·
+[Four versions side by side](evals/compression-pilot/comparison.html) ·
+[Earlier DROID/SIMPLER experiment](docs/ai-spec-pilot-evaluation.md)
 
 **Mechanism candidate:** an opt-in evidence-selection, comparison-binding,
 prose-realization and read-back procedure uses the existing rationale matrix,

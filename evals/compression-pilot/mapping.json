@@ -1,0 +1,146 @@
+{
+  "J01/R01-abstract": {
+    "A": "editorial",
+    "B": "prior",
+    "C": "initial",
+    "D": "compression"
+  },
+  "J02/R01-abstract": {
+    "A": "compression",
+    "B": "initial",
+    "C": "prior",
+    "D": "editorial"
+  },
+  "J01/R01-results": {
+    "A": "compression",
+    "B": "prior",
+    "C": "editorial",
+    "D": "initial"
+  },
+  "J02/R01-results": {
+    "A": "initial",
+    "B": "editorial",
+    "C": "prior",
+    "D": "compression"
+  },
+  "J01/R02-abstract": {
+    "A": "editorial",
+    "B": "initial",
+    "C": "prior",
+    "D": "compression"
+  },
+  "J02/R02-abstract": {
+    "A": "compression",
+    "B": "prior",
+    "C": "initial",
+    "D": "editorial"
+  },
+  "J01/R02-results": {
+    "A": "compression",
+    "B": "prior",
+    "C": "initial",
+    "D": "editorial"
+  },
+  "J02/R02-results": {
+    "A": "editorial",
+    "B": "initial",
+    "C": "prior",
+    "D": "compression"
+  },
+  "J01/R03-abstract": {
+    "A": "compression",
+    "B": "editorial",
+    "C": "initial",
+    "D": "prior"
+  },
+  "J02/R03-abstract": {
+    "A": "prior",
+    "B": "initial",
+    "C": "editorial",
+    "D": "compression"
+  },
+  "J01/R03-results": {
+    "A": "compression",
+    "B": "editorial",
+    "C": "initial",
+    "D": "prior"
+  },
+  "J02/R03-results": {
+    "A": "prior",
+    "B": "initial",
+    "C": "editorial",
+    "D": "compression"
+  },
+  "J01/R04-abstract": {
+    "A": "initial",
+    "B": "prior",
+    "C": "editorial",
+    "D": "compression"
+  },
+  "J02/R04-abstract": {
+    "A": "compression",
+    "B": "editorial",
+    "C": "prior",
+    "D": "initial"
+  },
+  "J01/R04-results": {
+    "A": "initial",
+    "B": "compression",
+    "C": "editorial",
+    "D": "prior"
+  },
+  "J02/R04-results": {
+    "A": "prior",
+    "B": "editorial",
+    "C": "compression",
+    "D": "initial"
+  },
+  "J01/R05-abstract": {
+    "A": "compression",
+    "B": "editorial",
+    "C": "initial",
+    "D": "prior"
+  },
+  "J02/R05-abstract": {
+    "A": "prior",
+    "B": "initial",
+    "C": "editorial",
+    "D": "compression"
+  },
+  "J01/R05-results": {
+    "A": "initial",
+    "B": "editorial",
+    "C": "prior",
+    "D": "compression"
+  },
+  "J02/R05-results": {
+    "A": "compression",
+    "B": "prior",
+    "C": "editorial",
+    "D": "initial"
+  },
+  "J01/R06-abstract": {
+    "A": "editorial",
+    "B": "initial",
+    "C": "compression",
+    "D": "prior"
+  },
+  "J02/R06-abstract": {
+    "A": "prior",
+    "B": "compression",
+    "C": "initial",
+    "D": "editorial"
+  },
+  "J01/R06-results": {
+    "A": "compression",
+    "B": "initial",
+    "C": "prior",
+    "D": "editorial"
+  },
+  "J02/R06-results": {
+    "A": "editorial",
+    "B": "prior",
+    "C": "initial",
+    "D": "compression"
+  }
+}

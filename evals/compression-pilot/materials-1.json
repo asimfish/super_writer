@@ -1,0 +1,211 @@
+{
+  "papers": [
+    {
+      "id": "R01",
+      "name": "Reactive Diffusion Policy",
+      "source": "https://www.roboticsproceedings.org/rss21/p052.pdf",
+      "contribution": "Reactive Diffusion Policy combines latent action-chunk planning with a tactile-conditioned fast decoder, improving contact-rich task scores over open-loop Diffusion Policy while retaining chunked sequence modeling.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, opening paragraphs; PDF page 5, Section IV-B, Slow-Fast Policy Learning, opening paragraphs.",
+          "text": "Action chunks help imitation policies represent temporally consistent and non-Markovian behavior, but executing a whole chunk without updating its actions prevents immediate responses to new contact information. Adding tactile observations alone does not remove this open-loop execution constraint."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 4, Sections III-A and III-B, 3D Deformation Field Extraction and Real-time Tactile / Force Feedback Rendering in AR.",
+          "text": "TactAR gives demonstrators visual contact feedback in a Meta Quest 3 augmented-reality view. It renders tracked tactile-marker deformation or measured force vectors as a three-dimensional field aligned with the robot end effector using calibrated coordinates and live tool-center-point poses; optional camera streams provide additional views."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 5, Section IV-B, framework description; PDF page 6, Figure 6 and Sections IV-B.1 and IV-B.2, Fast Policy and Slow Policy.",
+          "text": "Training first learns an asymmetric tokenizer: an action-only one-dimensional convolutional encoder compresses action chunks, while a recurrent GRU decoder reconstructs actions using both the latent chunk and tactile or force information. A latent diffusion policy then learns to predict these chunks from images, contact observations, and proprioception. At execution, this slow planner supplies a chunk and the fast decoder repeatedly incorporates the latest contact observation to update individual actions."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Section IV-A, Tactile / Force Representation; PDF pages 8-9, Section V-A.5, Implementation Details.",
+          "text": "Optical tactile inputs are PCA features of marker deformation, whereas force input is a six-component force-and-torque wrench. Diffusion Policy and RDP's slow policy predict action sequences at 12 frames per second; RDP's fast decoder observes contact signals and updates actions at 24 frames per second. The tested feedback rate is constrained by GelSight's 25-frame-per-second sensor stream; higher-rate operation is proposed rather than established by these experiments."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 7, Section IV-B.3, Implementing Suggestions for Slow-Fast Policy, Relative trajectory and Latency matching.",
+          "text": "RDP represents an end-effector trajectory relative to the last observation frame of its chunk, rather than accumulating consecutive-frame pose differences. Execution also measures inference and actuation latency and skips the already-outdated initial predicted steps. The authors identify these choices as important for smooth chunk transitions and for avoiding unfamiliar contact inputs that could destabilize the fast decoder."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Section V-A.3, Tasks; PDF page 8, Section V-A.4, Evaluation Protocols.",
+          "text": "Experiments test cucumber peeling, wiping a curved vase, and coordinated two-arm paper-cup lifting. Initial robot and object states are manually aligned similarly across methods, and each variation receives ten trials. Peeling and wiping use no disturbance, object motion before contact, or object motion after contact; lifting uses soft and hard cups. Peeling scores normalize peeled length by demonstrations. Wiping awards 1, 0.5, or 0 according to residue. Lifting awards 1 for following the trajectory without substantial compression, 0.5 for lifting with partial compression, and 0 for failure to lift or for dropping the cup. These are task-specific scores, not a common binary success rate."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 9, Table II, Policy Performance for Peeling Task, and Section V-B, Q1-Q3; PDF page 10, Section V-B, Q4.",
+          "text": "Across the three peeling disturbance settings, aggregate scores are 0.90 for GelSight RDP, 0.88 for MCTac RDP, and 0.95 for force-input RDP, versus 0.39 for tactile-embedding Diffusion Policy and 0.44 for visual-only Diffusion Policy. In the post-contact-disturbance setting specifically, GelSight RDP scores 0.80 and tactile-embedding Diffusion Policy scores 0.15. The latter comparison changes the control architecture while retaining tactile input rather than comparing touch against vision alone."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 9, Table III, Policy Performance for Wiping Task, and Table IV, Policy Performance for Bimanual Lifting Task.",
+          "text": "Aggregate wiping scores across the three disturbance settings are 0.77 for GelSight RDP, 0.50 for tactile-embedding Diffusion Policy, and 0.87 for force-input RDP. Aggregate bimanual-lifting scores across soft and hard cups are 0.48 for RDP using GelSight and MCTac on opposite grippers, 0.08 for tactile-embedding Diffusion Policy, and 0.70 for force-input RDP. The lifting scores incorporate cup compression and should not be substituted for the table's separate clamp or lift percentages."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 10, Table V, Effects of Chunk Size and Temporal Ensemble, and Section V-B, Q5.",
+          "text": "For wiping with a disturbance after contact, reducing tactile-embedding Diffusion Policy's chunk length from eight steps to two lowers grasp success from 100% to 20% and task score from 0.15 to 0.10. With eight-step chunks, temporal-ensemble factors of 0.2 and 0.8 yield grasp success of 30% and 100% and task scores of 0.05 and 0.15, respectively. GelSight RDP with eight-step chunks achieves 100% grasp success and a 0.50 task score. These controls show that the tested shorter-chunk and smoothing alternatives do not reproduce RDP's combination of grasping and reactive performance."
+        }
+      ],
+      "units": {
+        "abstract": {
+          "draft": "Contact-rich manipulation needs corrections that open-loop action chunks cannot make from newly arriving tactile signals. Reactive Diffusion Policy combines a slow latent diffusion planner with a fast recurrent decoder that updates actions from tactile or force feedback. An asymmetric tokenizer learns action chunks with tactile input supplied only to its decoder. TactAR provides augmented-reality contact feedback for collecting demonstrations. Experiments cover peeling, wiping, and bimanual lifting, using 24 Hz feedback. On peeling after contact disturbances, GelSight RDP scores 0.80 versus 0.15 for tactile-input Diffusion Policy. Relative trajectories and latency matching support execution; the tested feedback rate is sensor-limited.",
+          "questions": [
+            "How does the tokenizer incorporate fresh tactile feedback without discarding diffusion's chunk-level sequence modeling?",
+            "What evidence separates reactive control from merely adding tactile input, and what limits the tested feedback rate?"
+          ]
+        },
+        "results": {
+          "draft": "With ten trials per test variation, GelSight RDP scored 0.90 on peeling and 0.77 on wiping, versus 0.39 and 0.50 for tactile-input Diffusion Policy. After contact disturbances, peeling scores were 0.80 and 0.15. Mixed-sensor RDP scored 0.48 on lifting across cup types versus 0.08 for tactile-input Diffusion Policy. These are task-specific scores, not uniform success rates. Shortening the wiping baseline's chunks from eight to two lowered grasp success from 100% to 20%, while RDP retained eight-step chunks.",
+          "questions": [
+            "Under post-contact disturbances, how does RDP compare with tactile-input Diffusion Policy on the same peeling score?",
+            "Can the tested shorter chunks or temporal ensembling recover RDP's wiping improvement without sacrificing grasping?"
+          ]
+        }
+      }
+    },
+    {
+      "id": "R02",
+      "name": "Sim-and-Real Co-Training",
+      "source": "https://www.roboticsproceedings.org/rss21/p109.pdf",
+      "contribution": "A systematic real-robot study shows how mixing synthetic and real demonstrations improves manipulation policies despite imperfect simulation alignment, while identifying sampling and camera-alignment conditions that affect transfer.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, motivation; PDF page 3, Section III-A, Co-Training on Real-World and Simulation Data, Equation 1; PDF page 6, Section IV-D, Training and Evaluation Protocol.",
+          "text": "The study addresses expensive real demonstrations and the alignment effort required by simulation-only transfer. It instead trains Diffusion Policy jointly on real and simulated demonstrations, using RGB images and robot proprioception to predict action sequences. The mixing parameter alpha is the probability that a training sample comes from simulation, not simply the fraction of stored trajectories that are simulated."
+        },
+        {
+          "id": "F02",
+          "location": "PDF page 3, Section III-C, Automated Synthetic Data Generation; PDF page 6, Section IV-C, Building Task-Aware Simulation Datasets.",
+          "text": "MimicGen and its bimanual/humanoid extension DexMimicGen expand human demonstrations by transforming object-centered trajectory segments and concatenating them into new simulated rollouts. For task-aware Panda simulation, each task uses 100 source demonstrations to generate 10,000 demonstrations. Each task-aware GR-1 simulation task uses ten source demonstrations to generate 1,000 trajectories."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 5, Section IV-B, Prior Task-Agnostic Simulation Data; PDF page 6, Section IV-C, task-aware digital cousin definition.",
+          "text": "Task-aware digital cousins preserve the real robot and action space, task goal and success criteria, object categories, and environmental fixture categories, without requiring identical object instances or physical and visual properties. Prior simulation data were developed independently of the downstream task; the datasets used here share the target embodiment and action space. Prior Panda trajectories are re-rendered to approximately align camera poses, so their use is not an entirely unmodified-data control."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 4, Section IV-A, Real-World Domains; PDF page 6, Section IV-D, Training and Evaluation Protocol.",
+          "text": "Real-world evaluation covers six tasks on two embodiments. A Panda arm learns CounterToSinkPnP, CounterToCabPnP, and CloseDoor from 50 real demonstrations per task. A GR-1 humanoid learns CupPnP, MilkPnP, and pouring a ping-pong ball from a cup into a bowl from 20 real demonstrations per task. Trained policies are deployed on these real tasks and evaluated by trial success rate."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 7, Table I, Effect of different simulation data in the co-training mix, Average column; Section V-A, Effectiveness of Sim-and-Real Co-Training.",
+          "text": "Table I reports average real-world success rates of 45.3% for real-only training, 81.1% for real plus task-aware digital cousins, 76.8% for real plus prior simulation, and 83.2% for real plus both simulation sources. These values are the table's reported aggregate success rates, not relative improvement percentages or individual-task measurements."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Section V-B, Generalization Beyond Real Demonstrations; PDF page 8, Table II and continuation of Section V-B.",
+          "text": "For unseen objects, real-plus-digital-cousin training raises success from 33% to 50% on Panda CounterToSinkPnP and from 10% to 80% on GR-1 CupPnP. For unseen positions, the corresponding changes are 11% to 28% and 43% to 100%. The position control removes central-workspace placements from real training demonstrations but retains uniformly distributed simulation placements; evaluation then places objects in the withheld center."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 8, Figure 5 and Section V-D, Key Elements of Effective Co-Training; PDF page 9, continuation of the co-training-ratio discussion.",
+          "text": "The CupPnP sampling-ratio experiment fixes the datasets at 20 real demonstrations and 1,000 task-aware simulation demonstrations. Figure 5 shows 85% success with 50% simulation sampling, 95% success with either 90% or 99% simulation sampling, and 60% success at 99.9% simulation sampling. Thus the mixture weight matters independently of stored dataset size, and increasing simulation sampling is not uniformly beneficial."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 9, Section V-D, Camera alignment is critical for successful co-training with task-aware digital cousin data, and Figure 6.",
+          "text": "Changing from approximately aligned to default unaligned simulation-camera views lowers real-plus-digital-cousin success from 67% to 56% on Panda CounterToSinkPnP and from 95% to 70% on GR-1 CupPnP. Alignment remains approximate: the real humanoid camera has fisheye distortion that is not modeled in the aligned simulation camera. The experiment therefore supports useful approximate alignment rather than a requirement for identical cameras."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 9, Section VI, Limitations.",
+          "text": "Most evaluated tasks are pick-and-place variants. High-precision insertion and longer-horizon manipulation are left for future study, and the learned policies are not uniformly successful. Deformable objects and liquids are difficult to simulate accurately, which restricts how broadly the demonstrated co-training recipe can be assumed to apply."
+        }
+      ],
+      "units": {
+        "abstract": {
+          "draft": "Learning real-robot manipulation from limited demonstrations can benefit from simulation without exact replication of the real scene. This study co-trains Diffusion Policy on real trajectories and either task-aware digital cousins, prior simulation data, or both. Digital cousins preserve robot, action space, task goals, and object and fixture categories; generated trajectories broaden training coverage. Across six tasks on Panda and GR-1 robots, the reported average success rate rises from 45.3% with real data to 83.2% with both simulation sources. Experiments also test unseen objects and positions. Transfer quality depends on simulation sampling ratios and approximate camera alignment, without requiring identical camera models.",
+          "questions": [
+            "Which properties must digital cousins preserve, and which simulation-to-real mismatches remain permissible?",
+            "How much do prior simulation and task-aware digital cousins each contribute beyond real-only training?"
+          ]
+        },
+        "results": {
+          "draft": "Table I reports average success rates of 45.3% for real-only training, 81.1% with digital cousins, 76.8% with prior simulation, and 83.2% with both simulation sources. On unseen objects, digital-cousin co-training improved CounterToSinkPnP from 33% to 50% and CupPnP from 10% to 80%. With 20 real and 1,000 simulation demonstrations, CupPnP reached 95% success at 99% simulation sampling but 60% at 99.9%. Using unaligned cameras reduced CupPnP success from 95% to 70%.",
+          "questions": [
+            "Does increasing the simulation sampling probability always help when the training datasets are fixed?",
+            "Which camera-alignment control qualifies the claim that simulation need not precisely match reality?"
+          ]
+        }
+      }
+    },
+    {
+      "id": "R03",
+      "name": "CordViP",
+      "source": "https://www.roboticsproceedings.org/rss21/p110.pdf",
+      "contribution": "CordViP uses model-based hand-object geometry and contact-and-coordination pretraining to improve dexterous imitation learning over raw RGB-D and pose-informed baselines.",
+      "facts": [
+        {
+          "id": "F01",
+          "location": "PDF page 2, Introduction, discussion of single-view 3D observations; PDF page 3, Section III-B, Interaction-aware Generation of 3D Point Clouds, motivation.",
+          "text": "Single-view RGB-D point clouds can lose object geometry and hand-object interaction information when a multi-fingered hand occludes the object. Reflection, transparency, sensor resolution, and viewing angle add further missing or noisy geometry. CordViP targets these observation failures rather than assuming that directly converting depth images into point clouds supplies complete spatial information."
+        },
+        {
+          "id": "F02",
+          "location": "PDF pages 3-4, Section III-B, Real-to-Sim for Digital Twin Generation, Pose-Driven Point Cloud Tracking, and Robot Point Cloud Forward Kinematics Model; PDF page 4, Figure 2.",
+          "text": "CordViP uses TripoSR to generate an object digital twin from an image and samples its surface to obtain object geometry. Segment Anything supplies an object mask, and FoundationPose estimates the object's six-dimensional pose using the model and visual observations; the pose transforms the object point cloud. Separately, robot-link geometry and measured joint configurations produce the hand point cloud through forward kinematics. This observation pipeline relies on an object model and a running pose estimate, not solely on currently visible depth points."
+        },
+        {
+          "id": "F03",
+          "location": "PDF page 2, Introduction, three-stage framework; PDF page 5, Section III-C, Contact and Coordination-Enhanced Feature Extraction, Equations 2-5.",
+          "text": "Pretraining uses collected play data, separate PointNet encoders, and cross-attention between hand and object features. One objective predicts an object-centered contact map synthesized from hand-object surface geometry, so the supervision is geometric rather than a tactile-sensor reading. A coordination objective reconstructs arm action sequences using hand state and point clouds, and hand action sequences using arm state and point clouds. These objectives train spatial interaction and hand-arm motion features before downstream imitation."
+        },
+        {
+          "id": "F04",
+          "location": "PDF page 5, Section III-D, Correspondence-based Diffusion Policy, Equations 6-7.",
+          "text": "A conditional diffusion policy predicts action sequences using the pretrained geometry features and robot-state features. Its observation encoder is fine-tuned during downstream policy training rather than kept frozen. DDIM accelerates iterative denoising during real-world inference."
+        },
+        {
+          "id": "F05",
+          "location": "PDF page 6, Section IV-A, Experiment Setup, Expert demonstrations and Baselines; PDF page 7, Table I caption; PDF page 8, Table II caption.",
+          "text": "The platform combines a six-degree-of-freedom arm with a sixteen-degree-of-freedom Leap Hand and a fixed L515 RGB-D camera. Each task has 50 teleoperated expert demonstrations in addition to the separate pretraining stage. Base-task results use 20 trials per experiment; advanced tasks use ten. Image and depth resolution are matched across conventional visual and point-cloud baselines. Additional pose-informed comparisons include state-based policies and G3Flow, addressing the advantage that CordViP receives from object-pose information."
+        },
+        {
+          "id": "F06",
+          "location": "PDF page 7, Table I, Main results of four base real-world tasks; PDF page 8, Table II, Main results of advanced tasks.",
+          "text": "CordViP succeeds on 85% of PickPlace trials, 90% of FlipCup trials, 90% of Assembly trials, and 95% of ArtiManip trials. Table I reports a 90% base-task average, compared with 74% for pose-informed G3Flow and 23% for RGB-D-derived-point-cloud DP3. On the advanced tasks, CordViP achieves 80% success on FlipCap and reaches the final push stage of LongHoriManip in 60% of trials; G3Flow achieves 60% and 30%, respectively."
+        },
+        {
+          "id": "F07",
+          "location": "PDF page 9, Section IV-E, Effectiveness of components; PDF page 10, Table VII, Ablation experiments on the Effectiveness of different components.",
+          "text": "With CordViP's representation retained, omitting both contact and coordination pretraining yields a reported 79% average success across the four base tasks, compared with 90% for the complete method. Omitting only contact pretraining gives 84%, while omitting only coordination gives 83%. Supplying interaction-aware point clouds to DP3 gives 71%. That control changes DP3's observation representation, whereas the CordViP pretraining ablations more directly isolate the learning objectives."
+        },
+        {
+          "id": "F08",
+          "location": "PDF page 8, Section IV-D, Generalization, and Tables III-IV; PDF page 9, Section IV-D, Generalize to unseen objects and Generalize to different viewpoints, Tables V-VI.",
+          "text": "Generalization tests vary lighting, scene appearance and clutter, object identity, and camera viewpoint on PickPlace and FlipCup. CordViP performs better than the compared image-based Diffusion Policy and ACT+3D methods across the tested categories of variation. The viewpoint experiment uses three changed viewpoints and recalibrates the cameras for the three-dimensional methods because their point clouds are represented in world coordinates; it is not a calibration-free viewpoint-transfer test."
+        },
+        {
+          "id": "F09",
+          "location": "PDF page 10, Section V, Conclusions and Limitations, Limitations paragraph.",
+          "text": "The method's observation assumptions impose boundaries: inaccurate digital-twin geometry can degrade initial point clouds and subsequent pose tracking, deformable objects are difficult for FoundationPose's rigid-pose representation, and complete occlusion by the hand can cause tracking failure. The reported robustness under partial occlusion does not establish reliable operation when the object is entirely hidden."
+        }
+      ],
+      "units": {
+        "abstract": {
+          "draft": "Hand occlusion makes camera-derived point clouds incomplete during dexterous manipulation. CordViP constructs object geometry from a generated digital twin tracked by FoundationPose and hand geometry from robot kinematics. Separate encoders and cross-attention learn hand-object contact and hand-arm coordination from play data before downstream diffusion-policy training. With 50 demonstrations per task, the method achieves 90% average success across four base tasks, compared with 74% for pose-informed G3Flow. Removing both pretraining objectives reduces the average to 79%. The representation supports partial occlusion, but accurate object models and continued pose tracking remain necessary.",
+          "questions": [
+            "Which object-model and pose-tracking assumptions make complete geometry available under partial occlusion?",
+            "Do the baseline comparisons and pretraining ablations support a benefit beyond supplying cleaner point clouds?"
+          ]
+        },
+        "results": {
+          "draft": "With 50 demonstrations per task, CordViP achieved 85%, 90%, 90%, and 95% success on PickPlace, FlipCup, Assembly, and ArtiManip, respectively, over 20 trials per task. Its reported average was 90%, compared with G3Flow's 74% and DP3's 23%. Removing both pretraining objectives reduced the average to 79%; removing contact or coordination alone gave 84% or 83%. Viewpoint tests recalibrated the cameras, and complete object occlusion could still break pose tracking.",
+          "questions": [
+            "How does CordViP compare with a pose-informed baseline under the base-task evaluation?",
+            "What do the fixed-representation pretraining ablations isolate, and which occlusion case remains unsupported?"
+          ]
+        }
+      }
+    }
+  ]
+}

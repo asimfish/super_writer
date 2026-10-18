@@ -18,9 +18,12 @@
 仓库名是 `super_writer`，调用名是 **`$super-writer`**。写作由你使用的 AI agent 执行；
 Python 脚本负责可重复的检查。项目不自带模型，不承诺录用或 AI 检测通过。
 
-**最新写作验证：** DROID/SIMPLER 的 12 组对照、24 段成稿中，候选 3 票、基线 10 票、持平 11 票，
-**未通过预设门槛，默认规则不变**。指标解释有局部改善，但证据选择与段落衔接仍有退步。
-[完整结果和失败分析](docs/ai-spec-pilot-evaluation.md) · [横向对比](evals/ai-spec-pilot/comparison.html)
+**最新写作验证：** 6 篇 RSS 2025 论文、12 个摘要/实验单元、36 段实际改写。
+压缩版摘要平均从旧版的 139.7 词降至 90.8 词，但盲评对旧版只有 **2 胜、10 负**；
+实验段落为 **7 胜、5 负**。与作者原摘要的探索性比较为 **5 胜、7 负**。
+**本轮未通过门槛：更省字尚未带来更好的摘要，规则未因本轮测试升级。**
+[完整结果与差距](evals/compression-pilot/README.md) · [四版横向对比](evals/compression-pilot/comparison.html) ·
+[此前 DROID/SIMPLER 实验](docs/ai-spec-pilot-evaluation.md)
 
 **机制改进候选：** 新增“选证据 → 绑定对象与对照 → 组织成句 → 成稿读回”的可选流程，
 接入现有写作矩阵，不新增必填报告。配套 8 类、16 个反事实开发探针，检验优先级或条件改变时

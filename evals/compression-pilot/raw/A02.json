@@ -1,0 +1,71 @@
+{
+  "reviewer_id": "A02",
+  "cases": [
+    {
+      "id": "R06",
+      "choice": "A",
+      "focus": "A",
+      "organization": "A",
+      "economy": "tie",
+      "language": "A",
+      "reason": "A connects the data-efficiency problem, synthetic augmentation idea and experimental scope in a clear progression. B provides concrete evidence, but control assumptions, placement restrictions and isolated timing details interrupt the contribution. A needs more specific outcome reporting, yet its priorities and transitions better suit an abstract.",
+      "improve_A": "Replace the generic performance claim with one representative quantitative comparison.",
+      "improve_B": "Add an opening clause explaining how synthetic demonstrations address limited spatial generalization from scarce human data."
+    },
+    {
+      "id": "R05",
+      "choice": "A",
+      "focus": "A",
+      "organization": "A",
+      "economy": "B",
+      "language": "A",
+      "reason": "A organizes the contribution around simulation data generation, hierarchical control and real-world generalization. B explains the mechanism compactly, but deployment prerequisites and a late, narrowly conditioned comparison obscure that progression. A contains repetition, yet more clearly communicates why the design matters.",
+      "improve_A": "Condense the final deployment inventory into one sentence identifying the robot platforms and unseen-object transfer.",
+      "improve_B": "Replace the deployment-prerequisites sentence with a concise statement of the cross-object generalization problem."
+    },
+    {
+      "id": "R04",
+      "choice": "A",
+      "focus": "A",
+      "organization": "tie",
+      "economy": "A",
+      "language": "B",
+      "reason": "A connects two concrete algorithmic changes to comparative safety and runtime evidence, giving the contribution more substance than B's qualitative outcome claims. Its experimental settings are crowded, and B has smoother disciplinary prose, but B spends substantial space on background without providing an equally informative result.",
+      "improve_A": "Remove the trajectory counts, horizon lengths and target speed while retaining the comparative crash rates and runtime.",
+      "improve_B": "Replace the generic outcome statement with one comparative safety result and a concise runtime result."
+    },
+    {
+      "id": "R03",
+      "choice": "A",
+      "focus": "A",
+      "organization": "A",
+      "economy": "A",
+      "language": "tie",
+      "reason": "A links the occlusion problem to geometry construction, representation learning and evidence separating pretraining benefits from geometry alone. B develops the motivation more fully but repeats broad aspirations and uses promotional claims where a discriminating result would help. A's technical opening is dense, yet its evidence serves the contribution more directly.",
+      "improve_A": "Recast the opening to state the representation problem and proposed solution before naming the pose estimator.",
+      "improve_B": "Replace the broad performance superlatives with one comparative result and the pretraining ablation."
+    },
+    {
+      "id": "R02",
+      "choice": "B",
+      "focus": "B",
+      "organization": "B",
+      "economy": "B",
+      "language": "B",
+      "reason": "B makes the proposed data-matching strategy explicit and compares alternative training mixtures using a consistent outcome measure. A devotes much of its space to familiar motivation while leaving the promised recipe unspecified. B's closing transfer conditions also give the findings a practical interpretation.",
+      "improve_A": "Replace the extended background discussion with the concrete principles underlying the proposed co-training recipe.",
+      "improve_B": "Shorten the compatibility checklist to its central robot-and-task constraints."
+    },
+    {
+      "id": "R01",
+      "choice": "B",
+      "focus": "tie",
+      "organization": "B",
+      "economy": "A",
+      "language": "B",
+      "reason": "B frames the data-collection and control bottlenecks together, maps each to a system component and closes with the evaluation scope. A explains the controller more precisely and supplies a useful numerical comparison, but introduces the demonstration interface abruptly and ends with implementation qualifications. B provides a more coherent account of the joint contribution.",
+      "improve_A": "Introduce the demonstration interface alongside its data-collection motivation before describing the controller.",
+      "improve_B": "Replace the generic comparative-performance sentence with the reported disturbance-test scores and comparator."
+    }
+  ]
+}

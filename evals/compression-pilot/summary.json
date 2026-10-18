@@ -1,0 +1,1035 @@
+{
+  "papers": 6,
+  "units": 12,
+  "passages": 36,
+  "judged_versions_including_initial": 48,
+  "reviewers": 2,
+  "votes": {
+    "prior": {
+      "win": 9,
+      "loss": 15,
+      "tie": 0
+    },
+    "editorial": {
+      "win": 16,
+      "loss": 6,
+      "tie": 2
+    },
+    "initial": {
+      "win": 24,
+      "loss": 0,
+      "tie": 0
+    }
+  },
+  "unit_votes": {
+    "abstract": {
+      "prior": {
+        "win": 2,
+        "loss": 10,
+        "tie": 0
+      },
+      "editorial": {
+        "win": 7,
+        "loss": 4,
+        "tie": 1
+      },
+      "initial": {
+        "win": 12,
+        "loss": 0,
+        "tie": 0
+      }
+    },
+    "results": {
+      "prior": {
+        "win": 7,
+        "loss": 5,
+        "tie": 0
+      },
+      "editorial": {
+        "win": 9,
+        "loss": 2,
+        "tie": 1
+      },
+      "initial": {
+        "win": 12,
+        "loss": 0,
+        "tie": 0
+      }
+    }
+  },
+  "recovery": {
+    "prior": {
+      "recovered": 48,
+      "partial": 0,
+      "missing": 0,
+      "contradicted": 0
+    },
+    "compression": {
+      "recovered": 48,
+      "partial": 0,
+      "missing": 0,
+      "contradicted": 0
+    },
+    "editorial": {
+      "recovered": 48,
+      "partial": 0,
+      "missing": 0,
+      "contradicted": 0
+    },
+    "initial": {
+      "recovered": 22,
+      "partial": 26,
+      "missing": 0,
+      "contradicted": 0
+    }
+  },
+  "mean_words": {
+    "abstract": {
+      "prior": 139.66666666666666,
+      "compression": 90.83333333333333,
+      "editorial": 140.5,
+      "initial": 100.16666666666667
+    },
+    "results": {
+      "prior": 109.33333333333333,
+      "compression": 71.5,
+      "editorial": 107.83333333333333,
+      "initial": 78.66666666666667
+    }
+  },
+  "lengths": [
+    {
+      "id": "R01-abstract",
+      "condition": "prior",
+      "original_words": 100,
+      "words": 142,
+      "delta_words": 42,
+      "ceiling": 160
+    },
+    {
+      "id": "R01-results",
+      "condition": "prior",
+      "original_words": 85,
+      "words": 114,
+      "delta_words": 29,
+      "ceiling": 130
+    },
+    {
+      "id": "R02-abstract",
+      "condition": "prior",
+      "original_words": 103,
+      "words": 141,
+      "delta_words": 38,
+      "ceiling": 160
+    },
+    {
+      "id": "R02-results",
+      "condition": "prior",
+      "original_words": 77,
+      "words": 110,
+      "delta_words": 33,
+      "ceiling": 130
+    },
+    {
+      "id": "R03-abstract",
+      "condition": "prior",
+      "original_words": 90,
+      "words": 144,
+      "delta_words": 54,
+      "ceiling": 160
+    },
+    {
+      "id": "R03-results",
+      "condition": "prior",
+      "original_words": 69,
+      "words": 102,
+      "delta_words": 33,
+      "ceiling": 130
+    },
+    {
+      "id": "R04-abstract",
+      "condition": "prior",
+      "original_words": 102,
+      "words": 134,
+      "delta_words": 32,
+      "ceiling": 160
+    },
+    {
+      "id": "R04-results",
+      "condition": "prior",
+      "original_words": 84,
+      "words": 111,
+      "delta_words": 27,
+      "ceiling": 130
+    },
+    {
+      "id": "R05-abstract",
+      "condition": "prior",
+      "original_words": 103,
+      "words": 140,
+      "delta_words": 37,
+      "ceiling": 160
+    },
+    {
+      "id": "R05-results",
+      "condition": "prior",
+      "original_words": 76,
+      "words": 105,
+      "delta_words": 29,
+      "ceiling": 130
+    },
+    {
+      "id": "R06-abstract",
+      "condition": "prior",
+      "original_words": 103,
+      "words": 137,
+      "delta_words": 34,
+      "ceiling": 160
+    },
+    {
+      "id": "R06-results",
+      "condition": "prior",
+      "original_words": 81,
+      "words": 114,
+      "delta_words": 33,
+      "ceiling": 130
+    },
+    {
+      "id": "R01-abstract",
+      "condition": "compression",
+      "original_words": 100,
+      "words": 93,
+      "delta_words": -7,
+      "ceiling": 100
+    },
+    {
+      "id": "R01-results",
+      "condition": "compression",
+      "original_words": 85,
+      "words": 72,
+      "delta_words": -13,
+      "ceiling": 85
+    },
+    {
+      "id": "R02-abstract",
+      "condition": "compression",
+      "original_words": 103,
+      "words": 90,
+      "delta_words": -13,
+      "ceiling": 103
+    },
+    {
+      "id": "R02-results",
+      "condition": "compression",
+      "original_words": 77,
+      "words": 66,
+      "delta_words": -11,
+      "ceiling": 77
+    },
+    {
+      "id": "R03-abstract",
+      "condition": "compression",
+      "original_words": 90,
+      "words": 78,
+      "delta_words": -12,
+      "ceiling": 90
+    },
+    {
+      "id": "R03-results",
+      "condition": "compression",
+      "original_words": 69,
+      "words": 61,
+      "delta_words": -8,
+      "ceiling": 69
+    },
+    {
+      "id": "R04-abstract",
+      "condition": "compression",
+      "original_words": 102,
+      "words": 94,
+      "delta_words": -8,
+      "ceiling": 102
+    },
+    {
+      "id": "R04-results",
+      "condition": "compression",
+      "original_words": 84,
+      "words": 85,
+      "delta_words": 1,
+      "ceiling": 84
+    },
+    {
+      "id": "R05-abstract",
+      "condition": "compression",
+      "original_words": 103,
+      "words": 96,
+      "delta_words": -7,
+      "ceiling": 103
+    },
+    {
+      "id": "R05-results",
+      "condition": "compression",
+      "original_words": 76,
+      "words": 69,
+      "delta_words": -7,
+      "ceiling": 76
+    },
+    {
+      "id": "R06-abstract",
+      "condition": "compression",
+      "original_words": 103,
+      "words": 94,
+      "delta_words": -9,
+      "ceiling": 103
+    },
+    {
+      "id": "R06-results",
+      "condition": "compression",
+      "original_words": 81,
+      "words": 76,
+      "delta_words": -5,
+      "ceiling": 81
+    },
+    {
+      "id": "R01-abstract",
+      "condition": "editorial",
+      "original_words": 100,
+      "words": 140,
+      "delta_words": 40,
+      "ceiling": 160
+    },
+    {
+      "id": "R01-results",
+      "condition": "editorial",
+      "original_words": 85,
+      "words": 109,
+      "delta_words": 24,
+      "ceiling": 130
+    },
+    {
+      "id": "R02-abstract",
+      "condition": "editorial",
+      "original_words": 103,
+      "words": 135,
+      "delta_words": 32,
+      "ceiling": 160
+    },
+    {
+      "id": "R02-results",
+      "condition": "editorial",
+      "original_words": 77,
+      "words": 110,
+      "delta_words": 33,
+      "ceiling": 130
+    },
+    {
+      "id": "R03-abstract",
+      "condition": "editorial",
+      "original_words": 90,
+      "words": 149,
+      "delta_words": 59,
+      "ceiling": 160
+    },
+    {
+      "id": "R03-results",
+      "condition": "editorial",
+      "original_words": 69,
+      "words": 114,
+      "delta_words": 45,
+      "ceiling": 130
+    },
+    {
+      "id": "R04-abstract",
+      "condition": "editorial",
+      "original_words": 102,
+      "words": 138,
+      "delta_words": 36,
+      "ceiling": 160
+    },
+    {
+      "id": "R04-results",
+      "condition": "editorial",
+      "original_words": 84,
+      "words": 96,
+      "delta_words": 12,
+      "ceiling": 130
+    },
+    {
+      "id": "R05-abstract",
+      "condition": "editorial",
+      "original_words": 103,
+      "words": 148,
+      "delta_words": 45,
+      "ceiling": 160
+    },
+    {
+      "id": "R05-results",
+      "condition": "editorial",
+      "original_words": 76,
+      "words": 111,
+      "delta_words": 35,
+      "ceiling": 130
+    },
+    {
+      "id": "R06-abstract",
+      "condition": "editorial",
+      "original_words": 103,
+      "words": 133,
+      "delta_words": 30,
+      "ceiling": 160
+    },
+    {
+      "id": "R06-results",
+      "condition": "editorial",
+      "original_words": 81,
+      "words": 107,
+      "delta_words": 26,
+      "ceiling": 130
+    },
+    {
+      "id": "R01-abstract",
+      "condition": "initial",
+      "original_words": 100,
+      "words": 100,
+      "delta_words": 0,
+      "ceiling": 160
+    },
+    {
+      "id": "R01-results",
+      "condition": "initial",
+      "original_words": 85,
+      "words": 85,
+      "delta_words": 0,
+      "ceiling": 130
+    },
+    {
+      "id": "R02-abstract",
+      "condition": "initial",
+      "original_words": 103,
+      "words": 103,
+      "delta_words": 0,
+      "ceiling": 160
+    },
+    {
+      "id": "R02-results",
+      "condition": "initial",
+      "original_words": 77,
+      "words": 77,
+      "delta_words": 0,
+      "ceiling": 130
+    },
+    {
+      "id": "R03-abstract",
+      "condition": "initial",
+      "original_words": 90,
+      "words": 90,
+      "delta_words": 0,
+      "ceiling": 160
+    },
+    {
+      "id": "R03-results",
+      "condition": "initial",
+      "original_words": 69,
+      "words": 69,
+      "delta_words": 0,
+      "ceiling": 130
+    },
+    {
+      "id": "R04-abstract",
+      "condition": "initial",
+      "original_words": 102,
+      "words": 102,
+      "delta_words": 0,
+      "ceiling": 160
+    },
+    {
+      "id": "R04-results",
+      "condition": "initial",
+      "original_words": 84,
+      "words": 84,
+      "delta_words": 0,
+      "ceiling": 130
+    },
+    {
+      "id": "R05-abstract",
+      "condition": "initial",
+      "original_words": 103,
+      "words": 103,
+      "delta_words": 0,
+      "ceiling": 160
+    },
+    {
+      "id": "R05-results",
+      "condition": "initial",
+      "original_words": 76,
+      "words": 76,
+      "delta_words": 0,
+      "ceiling": 130
+    },
+    {
+      "id": "R06-abstract",
+      "condition": "initial",
+      "original_words": 103,
+      "words": 103,
+      "delta_words": 0,
+      "ceiling": 160
+    },
+    {
+      "id": "R06-results",
+      "condition": "initial",
+      "original_words": 81,
+      "words": 81,
+      "delta_words": 0,
+      "ceiling": 130
+    }
+  ],
+  "budget_violations": [
+    {
+      "id": "R04-results",
+      "condition": "compression",
+      "original_words": 84,
+      "words": 85,
+      "delta_words": 1,
+      "ceiling": 84
+    }
+  ],
+  "fidelity_concerns": [
+    {
+      "reviewer": "J01",
+      "id": "R05-abstract",
+      "condition": "initial",
+      "consequential": true,
+      "issues": [
+        {
+          "witness": "A weighted displacement model predicts grasping and opening subgoals by averaging pointwise offsets to four gripper landmarks with learned weights.",
+          "fact_ids": [
+            "F05"
+          ],
+          "reason": "The predicted landmarks average scene points plus their offsets, not offsets alone. Omitting the point coordinates changes the geometric operation defining the subgoals."
+        }
+      ]
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "condition": "initial",
+      "consequential": true,
+      "issues": [
+        {
+          "witness": "by averaging pointwise offsets to four gripper landmarks with learned weights",
+          "fact_ids": [
+            "F05"
+          ],
+          "reason": "Landmarks average scene points plus their predicted offsets, not offsets alone. Omitting the scene-point positions changes the stated subgoal construction."
+        }
+      ]
+    }
+  ],
+  "normalized_preferences": [
+    {
+      "reviewer": "J01",
+      "id": "R01-abstract",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "D's opening \"makes action chunks responsive to contact while retaining sequence modeling\" establishes the scientific point directly and sustains it through mechanism, comparison, and rate limitation."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R01-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "B's \"demonstration-normalized peeling score\" and explicit reconstruction objective give the mechanism and numerical comparison firmer meanings; D communicates the central contribution more compactly."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R01-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D's \"comparing architectures rather than sensing modalities\" interprets the decisive control, while its specified sensor ceiling replaces C's vague rate limitation and undeveloped execution-detail list."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R01-results",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "A's \"best eight-step temporal ensemble\" selects the decisive comparator and directly tests the claimed combination, whereas B's additional ensemble setting adds numerical detail without changing that conclusion."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R01-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "A's \"both with 100% grasp success\" makes the controlled wiping comparison immediately interpretable; C interposes aggregate peeling, wiping, and lifting results before addressing the two questions."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R01-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A's \"Neither tested alternative recovered RDP's combination\" is supported by both alternative controls; D ends after shortening chunks and never addresses temporal ensembling."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R02-abstract",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "D's \"but allow different object instances and physical and visual properties\" joins invariants and permitted mismatch directly, then presents the comparative result without A's undeveloped generalization aside."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R02-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D's \"81.1% with digital cousins, 76.8% with prior simulation\" supplies the decisive distinctions with little overhead; B spends space mentioning experiments without explaining their findings."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R02-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "C's \"Prior Panda data also undergo camera re-rendering\" gives a concrete qualification to reusable simulation data, complementing its explicit distinction between sampling probability and dataset size."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R02-results",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "A's \"more simulation sampling was not uniformly beneficial\" interprets the decisive fixed-data reversal immediately; its camera control then answers the second question without B's aggregate-results preamble."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R02-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A's \"despite unmodeled real-camera fisheye distortion\" explains why useful alignment does not require identical cameras; C reports a drop without establishing that distinction."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R02-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "A's \"datasets fixed at 20 real and 1,000 simulated demonstrations\" introduces the relevant control directly; D first detours through aggregate and unseen-object results."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R03-abstract",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "A's \"Retaining the representation but removing both pretraining objectives\" places the decisive inference beside its evidence; B surrounds the same argument with a longer architectural inventory."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R03-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A's \"predicts geometric contact maps\" identifies the supervision, and \"Retaining the representation\" makes the ablation's logic explicit; C leaves both relationships less sharply expressed."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R03-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "D's \"reconstructs arm actions from hand state and hand actions from arm state\" explains the distinctive coordination objective rather than merely naming hand-arm reconstruction."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R03-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "A's \"Holding the representation fixed\" moves directly from the relevant baseline to the isolating control; B's four individual task percentages largely repeat its reported average."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R03-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A identifies \"pose-informed G3Flow\" and explicitly holds the representation fixed, making the comparison and causal interpretation clearer than C's unqualified baseline and ablation summaries."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R03-results",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "D's \"but this comparison changes the representation\" explains why the DP3 control differs from the fixed-representation ablations, sharpening the scientific attribution."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D's \"to reduce sample waste\" establishes resampling's separate role, and its nonconvex-averaging caveat names an additional concrete obstacle to guaranteed safety without expanding into a generic warning."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "B's \"violation penalties drive their weights toward zero\" explains why samples are wasted; D names the benefit but compresses away this informative technical relationship."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-abstract",
+      "control": "editorial",
+      "outcome": "loss",
+      "reason": "C's \"retaining control suffixes\" and negligible-weight explanation distinguish the algorithmic intervention from generic safe-trajectory replacement, while maintaining a coherent empirical-safety argument."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "B's \"but CPU control frequency fell\" joins the safety gain and update-rate cost in one comparison, making the tradeoff more immediate than A's separate reporting sentences."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "B's \"but CPU control frequency fell\" supplies the essential interpretation compactly; C's longer isolation and transition language explains relationships already largely established by \"adding only\"."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R04-results",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "D's \"Collisions denote track-edge contact; crashes denote leaving the track entirely\" makes the two endpoints meaningful, and its modified-baseline qualification is more relevant than B's Drone aside."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-abstract",
+      "control": "editorial",
+      "outcome": "loss",
+      "reason": "B's \"measured relative to demonstration opening\" gives the ablation's metric an interpretable denominator, and its controller description explicitly relates subgoals, point clouds, and end-effector state."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A's \"handles graspable when closed\" preserves the deployment boundary, and its named 322-object camera exception is more informative than C's vague \"not best in every fixed-camera comparison\"."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "D's \"observed points plus offsets\" states the landmark aggregation correctly and explicitly, while its controller inputs explain how subgoal prediction connects to task actions."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D's \"joint-opening increase relative to demonstrations\" conveys the metric compactly and specifies camera randomization in both training and testing for the positive architecture comparison."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-results",
+      "control": "editorial",
+      "outcome": "loss",
+      "reason": "B's \"means +/- standard deviations over three evaluation runs\" and explicit division formula make the numerical evidence unambiguous, whereas D relies on compressed metric language."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R05-results",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "C's \"divides achieved joint-opening increase by the demonstration's increase\" precisely defines the central outcome while preserving a clear, conditional architecture comparison; D's shorthand is more economical but less exact."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R06-abstract",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "C's \"Without rollout filtering\" directly motivates the execution assumption, retaining the central evidence and placement qualification without A's abstract-level enumeration of nine perturbations and their exact range."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R06-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "C's \"absolute-target inverse-kinematics control\" supplies the missing execution condition, and \"computation alone\" states the cost's scope without B's less informative introductory generality."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R06-abstract",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "C's \"Without rollout filtering\" gives the control assumption an explicit cause and preserves the main qualifications compactly; D offers a smoother but longer walkthrough of the same scientific argument."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R06-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A's \"augmentation of one source\" specifies the generated-data budget, and \"cannot reveal unseen surfaces\" explains the transfer limit more concretely than B's general point-cloud-mismatch label."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R06-results",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "A's \"Single-view edits cannot reveal unseen surfaces\" states the operative limitation directly; C's longer unrestricted-generalization sentence largely restates the implication already supported by targeted placements and declining distant performance."
+    },
+    {
+      "reviewer": "J01",
+      "id": "R06-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "A's \"DemoGen augmentation of one source\" preserves the important simulation source budget; D instead spends that space on the single-arm versus bimanual perturbation protocol."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R06-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "D's closing 'cannot reveal unseen surfaces' preserves the decisive limitation without A's additional perturbation protocol, keeping the results argument focused."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R06-results",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "D's closing 'cannot reveal unseen surfaces' conveys the essential generalization boundary with less interpretive scaffolding than B, while retaining the controlled comparison."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R06-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D replaces C's vague mismatch explanation with 'cannot reveal unseen surfaces,' gaining mechanistic precision without an appreciable expansion."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R06-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "A's 'These paired observations and actions train DP3 without executing each synthetic trajectory' clearly links the mechanism to its practical consequence; B compresses that connection into rollout-filtering terminology."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R06-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "B's 'for computation alone' and explicit execution assumption preserve consequential qualifications that C omits, despite B's shorter presentation."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R06-abstract",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "B's 'with small perturbations for single-arm tasks' supplies the relevant placement scope without D's detailed perturbation count and planar bounds."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-results",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "B's 'divides achieved joint-opening increase by the demonstration's increase' defines the outcome explicitly, improving interpretation beyond A's compressed 'relative to demonstrations' formulation."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-results",
+      "control": "editorial",
+      "outcome": "loss",
+      "reason": "C's 'especially at camera poses outside the training distribution' gives the architecture comparison an informative scientific relationship, while also defining the opening ratio explicitly."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A's opening 'joint-opening increase relative to demonstrations' identifies the metric's reference; D's 'opening ratios' does not identify the denominator."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "A's controller 'uses current object point clouds and end-effector states' explains how subgoals become task actions, a useful technical relationship compressed away in D."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D's 'offsets from object points' preserves geometric anchoring and names the reversing comparator and condition; B is longer yet less precise on both."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R05-abstract",
+      "control": "editorial",
+      "outcome": "loss",
+      "reason": "C's controller 'conditions on these subgoals, object point clouds and end-effector states' conveys the hierarchy's functional division more clearly than D's compressed control description."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-results",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "A's 'Collisions denote track-edge contact; crashes denote leaving the track entirely' makes the paired failure metrics interpretable, while C leaves those distinctions implicit."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-results",
+      "control": "editorial",
+      "outcome": "tie",
+      "reason": "B explicitly says 'isolating the resampling benefit from barrier learning'; C conveys that control through 'adding only' and presents essentially the same evidence more compactly."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "C's 'but CPU control frequency fell' directly states the performance tradeoff and preserves the per-iteration budget with less sentence fragmentation than D."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-abstract",
+      "control": "editorial",
+      "outcome": "tie",
+      "reason": "A's 'addresses two sampling-based MPC failures' gives an efficient functional summary; B's explanation of 'negligible importance weights' makes the sampling pathology easier to understand."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "C's 'brings post-horizon information into a discrete-time barrier descent constraint' specifies how learned future information affects online control, strengthening A's more general barrier description."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R04-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A's 'to reduce sample waste' explains resampling's distinct purpose, and its nonconvex-averaging caveat is concrete; D leaves the second failure mechanism unexplained."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R03-results",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "D's 'These controls support a pretraining benefit beyond geometry' sustains the two-question argument without A's additional DP3 comparison and viewpoint-test detour."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R03-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D's 'Holding the representation fixed' supplies the decisive experimental relationship while avoiding B's task-by-task enumeration."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R03-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "D's 'pretraining benefit beyond geometry' states the scientific point directly; C adds individual task scores and camera qualifications beyond the paragraph's two central questions."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R03-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "A's 'while fine-tuning the pretrained encoder' and reciprocal reconstruction explanation connect pretraining to downstream learning; D retains the argument but compresses these technical relationships."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R03-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D's 'Retaining the representation' makes the ablation's causal interpretation explicit while preserving model/tracking assumptions more compactly than B."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R03-abstract",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "D's 'supporting a benefit beyond geometry alone' keeps construction, learning and evidence in one concise argument; C's encoder inventory adds less to the central comparison."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R02-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "D's 'more simulation sampling was not uniformly beneficial' draws the decisive conclusion from a sufficient counterexample, without A's unrelated aggregate and unseen-object figures."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R02-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D explicitly contrasts 'approximately aligned with unaligned' views and retains the fisheye mismatch, answering the alignment question more precisely despite its shorter scope."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R02-results",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "D's 99%-to-99.9% sampling counterexample and 'identical camera models were unnecessary' establish both scientific points without C's additional numerical sweep and aggregate inventory."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R02-abstract",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "A's 'but allow different object instances and physical and visual properties' efficiently states the matching boundary; B surrounds the same central evidence with generation detail and a repeated negative conclusion."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R02-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A separately reports '81.1% with digital cousins, 76.8% with prior simulation,' allowing source contributions to be assessed; C gives only the combined outcome."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R02-abstract",
+      "control": "editorial",
+      "outcome": "loss",
+      "reason": "D's 'Prior Panda trajectories are re-rendered' materially qualifies what reuse of prior simulation means, adding useful scope beyond A's otherwise effective compact summary."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R01-results",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "D's 'both with 100% grasp success' makes the decisive ensemble-versus-RDP wiping comparison interpretable, while A never supplies that control outcome."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R01-results",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "D's 'The best eight-step temporal ensemble scored 0.15' supplies a decisive matched-grasp comparison without B's broader task inventory."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R01-results",
+      "control": "prior",
+      "outcome": "win",
+      "reason": "D's best-ensemble comparison, 'both with 100% grasp success,' establishes the relevant failure to recover RDP without C's full ensemble-factor inventory."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R01-abstract",
+      "control": "initial",
+      "outcome": "win",
+      "reason": "A's 'comparing architectures rather than sensing modalities' states the experimental inference directly and names the sensor-rate bottleneck, while B ends with less informative implementation labels."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R01-abstract",
+      "control": "prior",
+      "outcome": "loss",
+      "reason": "C's 'during execution, the decoder incorporates the latest contact observation' clearly separates training from online feedback, while identifying the peeling metric and tested frequency scope."
+    },
+    {
+      "reviewer": "J02",
+      "id": "R01-abstract",
+      "control": "editorial",
+      "outcome": "win",
+      "reason": "A's 'action-only encoder compresses chunks' succinctly explains the tokenizer; D's final trajectory-reference and latency sentence introduces another technical thread without developing its necessity."
+    }
+  ],
+  "gate_pass": false
+}
