@@ -1,0 +1,104 @@
+{
+  "J01": {
+    "N01": {
+      "A": "hard",
+      "B": "relaxed",
+      "C": "meaning"
+    },
+    "N02": {
+      "A": "relaxed",
+      "B": "hard",
+      "C": "meaning"
+    },
+    "N03": {
+      "A": "meaning",
+      "B": "relaxed",
+      "C": "hard"
+    },
+    "N04": {
+      "A": "hard",
+      "B": "relaxed",
+      "C": "meaning"
+    }
+  },
+  "J02": {
+    "N04": {
+      "A": "meaning",
+      "B": "relaxed",
+      "C": "hard"
+    },
+    "N03": {
+      "A": "hard",
+      "B": "relaxed",
+      "C": "meaning"
+    },
+    "N02": {
+      "A": "meaning",
+      "B": "hard",
+      "C": "relaxed"
+    },
+    "N01": {
+      "A": "meaning",
+      "B": "relaxed",
+      "C": "hard"
+    }
+  },
+  "reader": {
+    "T01": {
+      "paper": "N01",
+      "condition": "hard"
+    },
+    "T02": {
+      "paper": "N03",
+      "condition": "hard"
+    },
+    "T03": {
+      "paper": "N01",
+      "condition": "relaxed"
+    },
+    "T04": {
+      "paper": "N03",
+      "condition": "relaxed"
+    },
+    "T05": {
+      "paper": "N01",
+      "condition": "meaning"
+    },
+    "T06": {
+      "paper": "N03",
+      "condition": "meaning"
+    },
+    "T07": {
+      "paper": "N02",
+      "condition": "hard"
+    },
+    "T08": {
+      "paper": "N04",
+      "condition": "hard"
+    },
+    "T09": {
+      "paper": "N02",
+      "condition": "relaxed"
+    },
+    "T10": {
+      "paper": "N04",
+      "condition": "relaxed"
+    },
+    "T11": {
+      "paper": "N02",
+      "condition": "meaning"
+    },
+    "T12": {
+      "paper": "N04",
+      "condition": "meaning"
+    },
+    "K01": {
+      "paper": "synthetic",
+      "condition": "K01"
+    },
+    "K02": {
+      "paper": "synthetic",
+      "condition": "K02"
+    }
+  }
+}

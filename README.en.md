@@ -21,15 +21,16 @@ The repository is `super_writer`; invoke **`$super-writer`**. Your AI agent does
 the writing. Python scripts supply repeatable checks. No model is bundled,
 and no acceptance or AI-detector outcome is promised.
 
-**Latest writing test:** six RSS 2025 papers, twelve Abstract/Results units and
-thirty-six actual revisions. Compression cuts mean Abstract length from 139.7 to
-90.8 words, but loses to previous guidance **2 wins / 10 losses**; Results are
-**7 / 5**. Exploratory comparison with author abstracts is **5 / 7**.
-**The frozen gate fails: economy does not yet produce better abstracts.**
-Runtime guides were not promoted by this pilot.
-[Results and remaining gaps](evals/compression-pilot/README.md) ·
-[Four versions side by side](evals/compression-pilot/comparison.html) ·
-[Earlier DROID/SIMPLER experiment](docs/ai-spec-pilot-evaluation.md)
+**Latest writing test:** four fresh papers and twelve revised abstracts include
+a legacy control with the same 150-word cap. Audited model answer recovery rises
+from **6/8 to 8/8**, but overall preference is **3 wins / 2 losses / 3 ties**.
+Candidate and relaxed control each misbind a dataset count to the training
+population. **Preference and fidelity gates fail.** This is a local explanatory
+signal, not stable overall writing improvement; outcomes are not pooled with
+earlier rounds.
+[Methods and failure analysis](evals/explanation-pilot/README.md) ·
+[Four versions side by side](evals/explanation-pilot/comparison.html) ·
+[Previous compression pilot](evals/compression-pilot/README.md)
 
 **Mechanism candidate:** an opt-in evidence-selection, comparison-binding,
 prose-realization and read-back procedure uses the existing rationale matrix,
@@ -44,8 +45,8 @@ editorial proposals and prose realization under an orchestrator. Section benchma
 load actual exemplar observations, protocols, AI rules and optional language cards
 to compare content selection, organization, evidence, expression, clarity and
 applicable format, including clear-but-weaker prose. Each pass states one target
-reader answer, selects a few priority gaps and enforces deletion-first compression
-budgets; selected gaps are linked to proposed edits and final-text witnesses.
+reader answer, selects a few priority gaps and links them to proposed edits and
+final-text witnesses under an explicit editorial budget.
 Strengths, deferred gaps and valid alternatives remain explicit.
 A prose-first reviewer reassesses the criteria and fidelity. A local checker
 validates handoffs, freshness, returns and stops; it does not call models or prove
@@ -53,7 +54,16 @@ writing gains. The large idea corpus is a proposed discovery source, **not impor
 [Architecture](docs/system-organization.md#可选角色协作与反馈) ·
 [Source study and reward adaptation](docs/research/ideascientist-2026-10-15.md) ·
 [Authored handoff example](examples/writing-team/README.md) ·
-[Compression-first abstract, related-work and experiment contrasts](examples/writing-team/benchmark.md)
+[Existing v2 teaching contrasts](examples/writing-team/benchmark.md) ·
+[V3 meaning and preservation contract](references/writing-team.md#schema-3-meaning-and-preservation)
+
+V3 protects a few indispensable relationships before compressing, such as which
+quantity predicts another or which operation avoids specific work. These are
+meanings, not one additional sentence per check. Growth is allowed within the
+author's actual constraints unless no-expansion is explicit. Review must compare
+all declared criteria with the original; a newly introduced defect cannot be
+deferred as lower priority. Structural witnesses do not prove entailment, reader
+understanding or successful learning from excellent papers.
 
 <a id="examples"></a>
 ## Start With the Examples

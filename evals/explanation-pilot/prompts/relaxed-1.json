@@ -1,0 +1,162 @@
+{
+  "writer_id": "relaxed-1",
+  "instruction": "Revise each initial draft once into an effective academic abstract using only its evidence. Preserve technical referents, consequential scope and author contribution priorities. Apply the attached editorial guidance. Do not pad to a minimum or use every fact. The budget below is author-authorized for this experiment and overrides any generic instruction in a guide to seek permission for expansion. Return your actual first result even if it misses a constraint; no retries. Return JSON {writer_id,cases}: each case has {id,text,note}, id is paper_id; note <=40 words stays outside prose. No file reads beyond this packet, web searches or agents. Growth beyond the initial draft is explicitly permitted up to 150 words. ",
+  "cases": [
+    {
+      "paper_id": "N01",
+      "title": "MISO",
+      "contribution": "A hierarchical back-end for neural implicit SLAM with two necessary co-contributions: residual-conditioned initialization of multiresolution submaps followed by joint local map/trajectory optimization, and hierarchical feature-space alignment plus feature-space fusion across submaps for global consistency. Pretrained encoders and a shared decoder support the local stage; final SDF-based alignment refines the feature-based global stage. The paper presents both local acceleration and global submap optimization, not just a new scene representation.",
+      "evidence": [
+        {
+          "id": "N01-E01",
+          "statement": "MISO represents a scene as posed multiresolution feature-grid submaps. Its back-end addresses local SLAM within submaps and global alignment/fusion between submaps, using odometry and point clouds from depth images or LiDAR.",
+          "location": "PDF p. 3, Section III (Overview) and Section IV-A; p. 12, Section VIII (Conclusion)."
+        },
+        {
+          "id": "N01-E02",
+          "statement": "Encoders and decoder are pretrained offline and fixed during the proposed local optimization; online variables are grid features and robot poses. Replica-pretrained weights are used on ScanNet and FastCaMo-Large without additional fine-tuning.",
+          "location": "PDF p. 3, Sections III and IV-A; p. 7, Section VI-A; p. 13, Appendix A."
+        },
+        {
+          "id": "N01-E03",
+          "statement": "With a linear decoder and quadratic costs, the optimal level's initialization is a linear function of residuals left by coarser levels. For nonlinear decoding, separate learned encoders map those residuals to progressively finer feature grids; all grid levels and robot poses are then jointly optimized.",
+          "location": "PDF p. 4, Section IV-B; p. 5, Proposition 1, equations (8)-(11), and Algorithm 1; p. 14, proof."
+        },
+        {
+          "id": "N01-E04",
+          "statement": "Global alignment updates submap base poses by minimizing discrepancies between overlapping interpolated feature fields at transformed query coordinates. Levels are included from coarse to fine. These feature-based iterations avoid decoding SDF values and do not require explicit geometric correspondences.",
+          "location": "PDF p. 6, Section V, equations (16)-(17) and Algorithm 2; p. 7, opening paragraph; p. 9, alignment discussion."
+        },
+        {
+          "id": "N01-E05",
+          "statement": "A final SDF-disagreement stage refines submap poses. In Table VI, ScanNet 0011 from 10-degree/0.25-m initial errors, coarse-plus-fine features give 3.68 degrees/0.12 m in 2.54 s; adding SDF refinement gives 2.71 degrees/0.09 m in 10.13 s, averaged over ten trials.",
+          "location": "PDF p. 7, equations (18)-(19); p. 11, Section VI-E and Table VI, scene 0011."
+        },
+        {
+          "id": "N01-E06",
+          "statement": "For a world-frame query, fusion transforms the query into covering submaps, averages their interpolated implicit features using bounding-box membership weights, and decodes that average. It does not average independently decoded SDF values or merge explicit meshes as its fusion rule.",
+          "location": "PDF p. 7, Section V (Submap Fusion), equations (20)-(21)."
+        },
+        {
+          "id": "N01-E07",
+          "statement": "On ScanNet 0011, with 5-degree/0.20-m initial submap errors, MISO reports 10.53 s GPU time and final errors 1.86 degrees/0.06 m; MIPS reports 59.23 s and 3.93 degrees/0.15 m, and VFPP 74.16 s and 2.40 degrees/0.11 m. Results average ten trials; neural methods use 100 alignment iterations.",
+          "location": "PDF p. 9, Table III and Section VI-B (Submap alignment and fusion evaluation)."
+        },
+        {
+          "id": "N01-E08",
+          "statement": "On ScanNet 0011 with ground-truth poses, MISO reports 0.80 s, 6.07-cm Chamfer-L1, and 71.23% F-score; iSDF reports 25.89 s, 6.35 cm, and 67.32%. F-score uses a 5-cm threshold. MISO runs 20 online epochs versus 100 for iSDF, which lacks the pretraining.",
+          "location": "PDF p. 8, Table I and Section VI-B (Local SLAM evaluation)."
+        },
+        {
+          "id": "N01-E09",
+          "statement": "Evaluation includes ScanNet, FastCaMo-Large, and outdoor Newer College. The authors identify dense-grid memory scaling and predominantly offline batch evaluation of static scenes as limitations; the incremental extension disables encoder initialization, and its Newer College experiments pretrain a decoder per scene.",
+          "location": "PDF p. 6, Section IV-C; p. 7, Section VI-A; p. 10, Sections VI-C and VI-D; p. 11, Section VII."
+        }
+      ],
+      "initial_draft": "MISO is a neural SLAM back-end that represents an environment with multiresolution submaps. It uses pretrained encoders to initialize finer-level features from residuals left by coarser levels, then optimizes features and robot poses together. A second stage aligns submaps using their features and applies SDF refinement before fusion. The method was tested on ScanNet, FastCaMo-Large, and Newer College. On ScanNet scene 0011, alignment took 10.53 seconds versus 59.23 seconds for MIPS, starting with errors of 5 degrees and 0.20 meters. The results show faster optimization with competitive accuracy. Dense grids can require substantial memory in larger environments.",
+      "relations": [
+        {
+          "id": "N01-R01",
+          "meaning": "Local information flows from a coarser prediction's remaining measurement residuals into the encoder for a finer feature grid. Learned initialization precedes, rather than replaces, joint optimization of map features and robot poses.",
+          "evidence_ids": [
+            "N01-E02",
+            "N01-E03"
+          ],
+          "original_witness": "It uses pretrained encoders to initialize finer-level features from residuals left by coarser levels, then optimizes features and robot poses together."
+        },
+        {
+          "id": "N01-R02",
+          "meaning": "The global operations act on the implicit features: alignment compares overlapping feature fields to update submap poses, and fusion averages aligned features before decoding a global prediction. Avoiding repeated SDF decoding applies to feature-alignment iterations, not to the final SDF refinement or decoded fused output.",
+          "evidence_ids": [
+            "N01-E04",
+            "N01-E05",
+            "N01-E06"
+          ],
+          "original_witness": ""
+        }
+      ],
+      "max_words": 150
+    },
+    {
+      "paper_id": "N03",
+      "title": "Building Rome with Convex Optimization",
+      "contribution": "The authors propose XM, a certifiable scaled bundle-adjustment solver that uses learned depth to estimate camera poses, 3D landmarks, and per-frame scales. Its empirically tight semidefinite relaxation addresses initialization and optimality; the indispensable computational co-contribution is a low-rank Riemannian-staircase solver with a C++/CUDA trust-region implementation. XM-SfM integrates this engine with matching, filtering, and CERES refinement of conventional bundle adjustment.",
+      "evidence": [
+        {
+          "id": "N03-E01",
+          "statement": "Conventional bundle adjustment jointly estimates camera poses and landmarks from 2D keypoints; reprojection and pose constraints make it nonconvex, while large view graphs make optimization expensive.",
+          "location": "PDF p. 2, Section I, 'Classical BA formulation' and 'Optimization challenges', equation (1)."
+        },
+        {
+          "id": "N03-E02",
+          "statement": "Learned metric depth lifts 2D keypoints to camera-frame 3D points. A positive per-frame scale adjusts predicted depth, and camera-to-global poses align those scaled points with jointly estimated landmarks using 3D distances instead of reprojection.",
+          "location": "PDF p. 2, 'BA with learned depth', equations (2)-(3) and footnote 2; visually checked."
+        },
+        {
+          "id": "N03-E03",
+          "statement": "Eliminating translations and landmarks yields a scaled-rotation problem, then a QCQP and SDP relaxation. Rank-three tightness recovers a QCQP optimum; recovering an SBA optimum additionally requires proper rotations. The SDP bound and a feasible SBA solution bound suboptimality.",
+          "location": "PDF pp. 3-4, Propositions 2, 3, and 5; equations (9)-(16)."
+        },
+        {
+          "id": "N03-E04",
+          "statement": "Burer-Monteiro factorization replaces the full SDP matrix with a low-rank factor. The staircase tests a dual matrix for positive semidefiniteness; failure supplies a negative-eigenvalue descent direction after increasing rank, rather than accepting a bad local minimum.",
+          "location": "PDF pp. 5-6, Section III-A, Algorithm 1 and Theorems 8-10; PDF p. 12, Figure 10's rank-3/rank-4 example; Algorithm 1 visually checked."
+        },
+        {
+          "id": "N03-E05",
+          "statement": "XM implements Riemannian trust-region optimization with truncated conjugate gradients directly in C++/CUDA, using analytic Hessian-vector products, cuBLAS, and custom batched manifold operations. Almost all reported staircase runs terminate at rank three or four.",
+          "location": "PDF p. 6, end of Section III-A and Section III-B; PDF p. 7, Section III summary."
+        },
+        {
+          "id": "N03-E06",
+          "statement": "XM-SfM combines feature matching, learned depth, outlier filtering, and XM. Because depth noise can impair reconstruction, XM's poses and landmarks warm-start CERES on the original 2D reprojection objective.",
+          "location": "PDF p. 7, Section IV, especially 'Depth estimation', 'XM solver', and 'CERES refinement'; PDF p. 8, Figure 3."
+        },
+        {
+          "id": "N03-E07",
+          "statement": "The BAL solver experiment gives XM and MANOPT the same lifted 3D observations, described as accurate but slightly noisy. CERES receives 2D observations and is tested with several initialization conditions; this is not a learned-depth end-to-end SfM comparison.",
+          "location": "PDF p. 7, Section V-A, 'Setup and baselines'; PDF p. 8, Table I and results paragraph."
+        },
+        {
+          "id": "N03-E08",
+          "statement": "On BAL-1934, with 1,934 cameras and 67,594 landmarks, XM solver time is 2.09 s versus MANOPT's 236.46 s on the same problem; each has a separately reported 69.15 s preprocessing time.",
+          "location": "PDF p. 8, Table I, BAL-1934 column, MANOPT and XM rows; visually checked."
+        },
+        {
+          "id": "N03-E09",
+          "statement": "For IMC Rome-2063, filtered two-pass XM plus CERES takes 19.17 + 300.16 s of solving versus GLOMAP's 9,813.04 s; ATE-T is 0.021 versus 0.003. Preprocessing is separate: 4,877.89 versus 3,459.04 s.",
+          "location": "PDF p. 12, Table VII, Rome-2063 row; visually checked."
+        }
+      ],
+      "initial_draft": "This paper presents XM for bundle adjustment and structure from motion. Learned depth turns image matches into 3D measurements, and per-frame scales adjust these measurements for depth prediction errors. XM estimates camera poses and landmarks using a convex relaxation, low-rank optimization, and a GPU solver. The SfM pipeline also includes filtering and CERES refinement. Experiments use bundle adjustment benchmarks and real image collections. On BAL-1934, solver time is 2.09 seconds for XM and 236.46 seconds for MANOPT on the same problem. The approach is faster in these tests, although depth quality and outliers remain concerns.",
+      "relations": [
+        {
+          "id": "N03-R01",
+          "meaning": "The depth operation runs from matched 2D image points to 3D measurements, and the frame scales act on those lifted measurements to accommodate depth prediction error; the scales are not an unrelated output attached to ordinary reprojection BA.",
+          "evidence_ids": [
+            "N03-E01",
+            "N03-E02"
+          ],
+          "original_witness": "Learned depth turns image matches into 3D measurements, and per-frame scales adjust these measurements for depth prediction errors."
+        },
+        {
+          "id": "N03-R02",
+          "meaning": "The relaxation and implementation address coupled bottlenecks: the SDP supplies optimality bounds, while low-rank factors and GPU trust-region updates make its solution scalable. Although factorization is nonconvex, the staircase uses the SDP dual certificate either to certify a solution or to increase rank and escape, rather than treating a local factor optimum as sufficient.",
+          "evidence_ids": [
+            "N03-E03",
+            "N03-E04",
+            "N03-E05",
+            "N03-E08"
+          ],
+          "original_witness": ""
+        }
+      ],
+      "max_words": 150
+    }
+  ],
+  "count_rule": "ASCII alphanumerics, with one internal hyphen/apostrophe, count as one token; [A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?",
+  "guides": [
+    "# Abstract Decisions: Contribution Before Structure\n\nUse for drafting, structurally revising, or comparing abstracts. For punctuation\nor in-place editing, respect that narrower contract; do not rebuild the argument.\nThis is an editorial decision aid, not a validated predictor of acceptance.\n\n## Decide What the Reader Must Retain\n\nUse the existing contribution record and author priorities. Identify the central\naddition, the evidence supporting it, and the condition that changes its meaning.\nKeep this compact in the existing plan; do not require another artifact or a new\napproval gate. If two materially different contribution priorities remain\nunresolved, ask one focused question or label a provisional choice.\n\nSelect the [protocol](writing-protocols.md) only after this decision. A paper\nwith experiments need not have an empirical-method-centered abstract. A theory\nplus diagnostic paper may need its theorem and counterexample more than a list\nof candidate-generation modules. Do not automatically prioritize theory either:\nthe supported contribution and author's intent determine the allocation.\n\nBefore compressing, distinguish the main contribution, any co-contribution\nessential to the paper's promise, and supporting details. A dominant result\ndoes not automatically replace another contribution: faster updates and fewer\nexpert corrections, for example, answer different questions. After drafting,\ncheck what the reader can still recover. If a co-contribution disappeared, trade\noff a lower-value mechanism detail or per-task tally before dropping it. This\nis not a requirement to mention every result or invent equal author priorities.\nPreserve comparison scope when joining results measured against different baselines.\nWhen baselines use different training regimes, retain that distinction: pretrained\nmodels fine-tuned with default recipes and policies trained from scratch are not\nall fine-tuned baselines. Attach each comparison to its actual group, metric,\nand setting; a shared task does not imply a shared training budget or protocol.\nUse the [contribution priority check](contribution.md#contribution-priorities-and-compression)\nin the existing plan: check retained meaning against author priorities, not\nkeyword presence. A paper's contribution may be a reusable resource as well as\na method; conversely, not every resource or secondary result deserves abstract space.\n\n## Choose Information by Function\n\n| Contribution | Information that often carries the argument | Common loss |\n| --- | --- | --- |\n| Method | Specific obstacle, insight, mechanism, relevant comparison | Modules replace the reason the approach works |\n| Theory | Objects, quantifiers, assumptions, result and implication | A conditional or necessary result becomes universal or sufficient |\n| Theory plus implementation | Formal scheme, approximations, what is empirically observed | Implementation silently inherits the entire theorem |\n| Diagnosis | Existing interpretation, discriminating test, finding, revised understanding | A negative result is disguised as improved performance |\n| System | Workload bottleneck, design response, end-to-end tradeoff | Throughput is presented as latency or comparison conditions disappear |\n| Dataset or tool | Missing capability, construction, evidence of utility, access scope | Size and feature count replace usefulness |\n\nThere is no mandatory opening, sentence count, numeric result, or future-work\nending. A result can precede mechanism when that improves understanding. Include\ndesign lists when they express tested findings or explain interacting decisions;\nomit inventories that crowd out the main contribution. A bound or diagnostic\nobservation may be the strongest evidence, not a benchmark percentage.\n\nKeep comparison budgets and consequential assumptions beside their claims.\nDistinguish observed improvement, statistically significant improvement,\nequivalence, and certification. A failed certificate alone does not prove an\nunsafe population rate. An empirical safety observation is not a guarantee.\nNecessary qualifications should clarify an assertion, not accumulate as a\ngeneric disclaimer paragraph. Preserve adverse evidence when omission would\nmisrepresent the overall result.\n\nScope the positive claim itself: a result on the tested tasks need not end with\nan additional denial of universal superiority. Keep a limitation when removing\nit would change the reader's interpretation, not merely to signal caution.\nCompression should trade low-value detail for the paper's distinctive insight\nand decisive evidence, rather than trade evidence for generic safety language.\n\nSeparate claim boundaries from unresolved reporting work. A simulator-only\nresult, conditional guarantee, or materially mixed outcome qualifies the claim\nin the manuscript. A missing table unit or unavailable uncertainty definition\nbelongs in a separate author query unless that absence itself is the scientific\nfinding. Meanwhile use a supported descriptive claim, omit an uninterpretable\nnumber, or mark the draft provisional; never silently guess or claim readiness.\nDo not spend the abstract explaining that a source packet lacks information.\n\nDo not upgrade descriptive source framing into stronger labels merely because\nthey sound academic. Claims such as general-purpose, reliable, robust, unified,\nor state of the art need explicit scope and evidence. When a source says it\nevaluates or studies a capability, retain that evidential verb unless the\nsupplied evidence supports the stronger claim.\n\nPreserve the argument while compressing: the concrete problem, why the design\naddresses it, and what the evidence establishes. These are information functions,\nnot a required sentence order; a method-first opening can be as effective as a\ngap-first opening. Do not invent a literature gap to complete a template.\nRemove repeated module names before losing a supported design rationale. Keep\nthat rationale distinct from a demonstrated benefit: using a pretrained model\nto exploit prior semantic knowledge does not itself establish improved transfer.\nPrefer the actual measured quantity (`action-generation throughput`, not\nend-to-end latency or unspecified `efficiency`) and preserve absolute versus\nrelative gains. Conventional technical terms can repeat; do not replace them\nwith broader synonyms for variety. Hyphenation alone is not a quality gain.\nAn ending should add a supported finding or implication, not repeat the method\ninventory or append an unsupported claim of a unified framework.\n\nAn author-prioritized but unestablished contribution is not automatically an\nabstract promise. For an evidence-only research abstract, keep the supported\ncontribution in prose and put the missing claim and needed evidence in author\nnotes; labeling a wish as future work does not make it responsive to that task.\nFor a proposal or an explicit request for future directions, planned objectives\ncan belong in the abstract, clearly separated from completed findings. Resolve\nthe requested genre before allocating space, not by adding more caveats.\n\n## Compare Good Drafts, Not Only Correct Drafts\n\nFirst check source fidelity. Then compare drafts from the same evidence and\nauthor priorities using located reasons rather than a single quality percentage:\n\n- **Contribution retention:** Can a reader state the distinctive addition,\n  rather than merely name the task and modules?\n- **Argument connection:** Does the insight explain the design and does the\n  chosen evidence answer the central promise?\n- **Evidence selection:** Is the result decision-relevant, with its comparison\n  scope intact, rather than simply the largest available number?\n- **Compression:** Which important information is missing, and what took its\n  place? Do not penalize every omission or reward maximal density.\n- **Reader understanding:** Can the target reader reconstruct the contribution,\n  reason for the approach, and evidential boundary without inventing links?\n\nTreat grammatical, accurate text as eligible, not automatically excellent.\nAllow ties and explain different valid allocations. Distinguish research\nstrength from how faithfully and effectively an abstract communicates it.\nNeither paper fame nor a model judge's confidence establishes prose quality.\n\nFor a measured comparison, freeze inputs and priorities before generation,\nretain raw drafts, anonymize versions, and record judge disagreements. Do not\nequate a shorter draft with better compression: record the agreed word-count\nrule, check the generation budget, and report violations without padding or\nsilently editing raw outputs. Treat a published abstract with a different length\nor richer source access as an editorial reference, not a controlled A/B baseline.\nDo not retroactively change criteria to favor a version. Calibrate evaluators on\nfactually valid but contribution-weak variants as well as factual errors; use\nheld-out topics to assess transfer. Same-family model judging is not human\nvalidation. See [calibration fixtures](../evals/abstract-quality/README.md).\n\n## Learn from Exemplars Selectively\n\nRead a few contribution-matched [exemplar notes](abstract-exemplars.md), not the\nentire collection for each draft. Notes are independent editorial analyses of\npublic abstracts, not copied templates or evidence supporting the user's paper.\nLearn the function of a choice, including when not to make it; never transplant\nclaims, superiority language, or data from a reference into a new manuscript.\n",
+    "# Compression-First Writing\n\nExcellent scientific prose is selective, not exhaustive. A revision should make\nthe reader's most important answer easier to recover under the same evidence and\na declared information budget. More detail, more caveats, and more protocol\nlabels are not improvements by themselves.\n\n## One answer before many checks\n\nWrite one target answer before diagnosing style: what should a reader remember\nafter this section? Choose at most three priority criteria for one pass. Other\ncriteria may be assessed and explicitly deferred; they must not force unrelated\nsentences into the draft.\n\n## Delete before adding\n\nUse this operation order unless evidence requires otherwise:\n\n1. delete module inventories, generic setup, repeated referents, and defensive\n   caveats whose scope is already explicit in the metric or noun;\n2. merge sentences that serve the same reader question;\n3. move a result next to the operation or comparison it evaluates;\n4. add only the smallest clause needed to recover the target answer.\n\nEvery added clause must replace, merge, or make a required comparison explicit.\nThe proposal records what it keeps, removes or merges, and adds only if needed.\n\n## Budget and acceptance\n\nCompare the candidate with the source draft, not with an imaginary ideal. The\nbenchmark declares maximum words, sentences, allowed word-count change, and\nadded clauses. A candidate that exceeds these limits is rejected before taste or\nfluency is discussed. If a longer draft is genuinely necessary, the author must\nraise the budget explicitly and explain which evidence requires it.\n\nThe reviewer asks, in order:\n\n- Is the target answer more recoverable?\n- Did the revision preserve the supplied facts, conditions, and uncertainty?\n- Is the result shorter or no longer without losing the decisive relation?\n- Did any sentence survive only because a checklist asked for it?\n\nKeep the original on a tie. A technically accurate but more verbose rewrite is a\nregression when the original was already clear.\n"
+  ]
+}

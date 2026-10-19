@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-19",
+  "seed": 20261019,
+  "inputs": {
+    "PROTOCOL.md": "6475f055450a66292b67b288619280aa4ab3af89408299779e8f0afe3ce72534",
+    "pilot.py": "efc482b90e9280f93c61be528517fe832e307f70355124b0fe227f925400531e",
+    "materials-1.json": "988502285a5dd4f4a1f2e2dba7b642581a63f845e26dd6e645bb07b2ee236ddf",
+    "materials-2.json": "5ee51eeffc757f3c1fde36cd6b4921af8f9f03d8b1ef3de7db749816d2e66611",
+    "materials.json": "fedf750f89826348c92063c0d41ddf2624edb2ff6824d6c1d1dd1b3dd86bb761",
+    "guides.json": "8f2bb49f7f60280bcb6be3e0ff18222ce5b052b927175e0856493c9f1ddc3e7e",
+    "prompts/hard-1.json": "07d062b27d4cbc391b570853e27b159a0ac58a18c5999c6a5a401c9c521604f6",
+    "prompts/hard-2.json": "c110c2275628ab2ba82d36be26f4f6b56d27ddb3aab1f8bd5ca83f428c8cd7bd",
+    "prompts/meaning-1.json": "e1a707e13a0303b7948a8b1c73827c29e57999a8c301e9f5b104752dfc5322a5",
+    "prompts/meaning-2.json": "265ca2e0fbd1f9855bdb8c97acd37e6a152cba6d56ce9527afa07fd6a04ed6ab",
+    "prompts/relaxed-1.json": "edecc9e813f16e1505c449293641db7e52cc3dce891d4ceb7d47a61514f61d8b",
+    "prompts/relaxed-2.json": "914d3f0c53f4d80f726d2f51cccd736651894ce7dfe89f310d56aa60ea7feb02"
+  }
+}

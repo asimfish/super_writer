@@ -1,0 +1,15 @@
+{
+  "writer_id": "hard-1",
+  "cases": [
+    {
+      "id": "N01",
+      "text": "MISO accelerates local and global neural implicit SLAM using multiresolution feature-grid submaps. Pretrained encoders initialize finer grids from residuals left by coarser predictions before joint optimization of grid features and robot poses. Globally, coarse-to-fine alignment compares overlapping feature fields without SDF decoding or explicit correspondences; SDF refinement precedes fusion, which averages aligned features before decoding. On ScanNet 0011, alignment from 5-degree/0.20-m errors takes 10.53 seconds versus MIPS's 59.23, with final errors of 1.86 degrees/0.06 m versus 3.93 degrees/0.15 m.",
+      "note": "Prioritized residual-conditioned local optimization and feature-space global alignment and fusion; retained a scoped speed and accuracy comparison."
+    },
+    {
+      "id": "N03",
+      "text": "XM couples certifiable scaled bundle adjustment with scalable optimization. Learned depth lifts matched keypoints into 3D, with per-frame scales accommodating depth error during joint pose and landmark estimation. An empirically tight semidefinite relaxation supplies optimality bounds; a low-rank Riemannian staircase tests dual certificates to certify SDP solutions or increase rank and escape local minima. A C++/CUDA trust-region implementation solves BAL-1934 in 2.09 seconds versus MANOPT's 236.46 on identical lifted observations, excluding preprocessing. XM-SfM filters outliers and initializes CERES refinement of the original reprojection objective.",
+      "note": "Preserved the relaxation and computational co-contribution, distinguished SDP certification from downstream refinement, and scoped the timing comparison to shared solver inputs."
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "gate": {
+    "preference": false,
+    "recovery": true,
+    "calibration": true,
+    "budget": true,
+    "fidelity": false,
+    "passed": false
+  },
+  "comparisons": {
+    "hard": {
+      "overall": {
+        "win": 8
+      },
+      "explanation": {
+        "win": 8
+      },
+      "organization": {
+        "tie": 8
+      },
+      "language": {
+        "win": 1,
+        "tie": 7
+      }
+    },
+    "relaxed": {
+      "overall": {
+        "tie": 3,
+        "loss": 2,
+        "win": 3
+      },
+      "explanation": {
+        "tie": 2,
+        "loss": 2,
+        "win": 4
+      },
+      "organization": {
+        "tie": 8
+      },
+      "language": {
+        "win": 1,
+        "tie": 7
+      }
+    }
+  },
+  "recovery": {
+    "hard": {
+      "missing": 2,
+      "supported": 6
+    },
+    "relaxed": {
+      "supported": 6,
+      "missing": 2
+    },
+    "meaning": {
+      "supported": 8
+    }
+  },
+  "calibration": {
+    "K02": "supported",
+    "K01": "missing"
+  },
+  "factual_errors": [
+    {
+      "case": "T10",
+      "condition": "relaxed",
+      "errors": [
+        {
+          "claim": "Training uses only synthetic data spanning eight grippers and thirteen objects.",
+          "evidence_ids": [
+            "N04-E06"
+          ],
+          "reason": "The evidence assigns eight grippers and thirteen objects to the synthetic dataset, while also stating that D'Claw and pudding_box are excluded from training for held-out evaluation. Presenting dataset coverage as training coverage risks overstating exposure. The supplied evidence does not unambiguously establish the post-exclusion training counts, so an exact replacement count cannot be asserted."
+        }
+      ]
+    },
+    {
+      "case": "T12",
+      "condition": "meaning",
+      "errors": [
+        {
+          "claim": "Training uses only synthetic data spanning eight grippers and thirteen objects.",
+          "evidence_ids": [
+            "N04-E06"
+          ],
+          "reason": "The evidence assigns eight grippers and thirteen objects to the synthetic dataset, while also stating that D'Claw and pudding_box are excluded from training for held-out evaluation. Presenting dataset coverage as training coverage risks overstating exposure. The supplied evidence does not unambiguously establish the post-exclusion training counts, so an exact replacement count cannot be asserted."
+        }
+      ]
+    }
+  ],
+  "words": [
+    {
+      "paper": "N01",
+      "condition": "hard",
+      "words": 90,
+      "max_words": 100,
+      "compliant": true
+    },
+    {
+      "paper": "N03",
+      "condition": "hard",
+      "words": 87,
+      "max_words": 97,
+      "compliant": true
+    },
+    {
+      "paper": "N01",
+      "condition": "relaxed",
+      "words": 137,
+      "max_words": 150,
+      "compliant": true
+    },
+    {
+      "paper": "N03",
+      "condition": "relaxed",
+      "words": 129,
+      "max_words": 150,
+      "compliant": true
+    },
+    {
+      "paper": "N01",
+      "condition": "meaning",
+      "words": 145,
+      "max_words": 150,
+      "compliant": true
+    },
+    {
+      "paper": "N03",
+      "condition": "meaning",
+      "words": 146,
+      "max_words": 150,
+      "compliant": true
+    },
+    {
+      "paper": "N02",
+      "condition": "hard",
+      "words": 86,
+      "max_words": 96,
+      "compliant": true
+    },
+    {
+      "paper": "N04",
+      "condition": "hard",
+      "words": 82,
+      "max_words": 97,
+      "compliant": true
+    },
+    {
+      "paper": "N02",
+      "condition": "relaxed",
+      "words": 140,
+      "max_words": 150,
+      "compliant": true
+    },
+    {
+      "paper": "N04",
+      "condition": "relaxed",
+      "words": 140,
+      "max_words": 150,
+      "compliant": true
+    },
+    {
+      "paper": "N02",
+      "condition": "meaning",
+      "words": 131,
+      "max_words": 150,
+      "compliant": true
+    },
+    {
+      "paper": "N04",
+      "condition": "meaning",
+      "words": 146,
+      "max_words": 150,
+      "compliant": true
+    }
+  ],
+  "pairs": [
+    {
+      "reviewer": "J01",
+      "paper": "N01",
+      "left": "hard",
+      "right": "relaxed",
+      "reason": "B's 'then refines poses using SDF disagreement' identifies both the optimization target and its signal, whereas A's 'SDF refinement precedes fusion' leaves that step underspecified.",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N01",
+      "left": "hard",
+      "right": "meaning",
+      "reason": "C's global-alignment sentence identifies submap poses as the updated variables and spells out 'signed distance functions (SDFs)'; A's corresponding sentence leaves the update target implicit and the acronym unexplained.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "meaning"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N01",
+      "left": "relaxed",
+      "right": "meaning",
+      "reason": "Both global-optimization passages clearly distinguish feature alignment, SDF-based pose refinement, and feature fusion. C's expansion of 'signed distance functions (SDFs)' improves accessibility slightly without materially changing the explanation.",
+      "overall": "tie",
+      "explanation": "tie",
+      "organization": "tie",
+      "language": "meaning"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N02",
+      "left": "relaxed",
+      "right": "hard",
+      "reason": "A explains that corresponding points have approximately equal independently computed scores under approximately constant velocities and small rotation; B's 'Doppler-informed scalar matching' names the operation without explaining why it establishes correspondence.",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N02",
+      "left": "relaxed",
+      "right": "meaning",
+      "reason": "A's 'approximately constant velocities and small inter-scan rotation' makes the approximation concrete and connects directly to the later sharp-turn failure; C leaves the governing assumption at 'a short-scan motion approximation.'",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N02",
+      "left": "hard",
+      "right": "meaning",
+      "reason": "C's 'corresponding points have approximately equal scalar scores, each computed from its own range and radial velocity' supplies the explanatory bridge from measurements to matching that B's 'Doppler-informed scalar matching' omits.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N03",
+      "left": "meaning",
+      "right": "relaxed",
+      "reason": "A explicitly separates SDP certification from recovering an optimal scaled bundle-adjustment solution through 'rank-three tightness and proper rotations'; B explains relaxation certification but leaves that relationship unstated.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N03",
+      "left": "meaning",
+      "right": "hard",
+      "reason": "After describing the dual test, A states the additional conditions needed to recover an optimal original-problem solution. C moves directly from certifying SDP solutions to implementation, leaving the scope of 'certifiable scaled bundle adjustment' less clearly bounded.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N03",
+      "left": "relaxed",
+      "right": "hard",
+      "reason": "In their central solver passages, both connect semidefinite bounds, certificate-driven rank increases, and GPU trust-region optimization into an intelligible pipeline; B's additional elaboration does not decisively improve that high-level account.",
+      "overall": "tie",
+      "explanation": "tie",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N04",
+      "left": "hard",
+      "right": "relaxed",
+      "reason": "B's 'hypothesis-versus-observation representation' explains why contact-labeled gripper geometry is paired with the previously positioned object model; A lists the combined inputs and asserts that they enable correction without explaining that relationship.",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N04",
+      "left": "hard",
+      "right": "meaning",
+      "reason": "C's 'compares the hypothesized object with observed haptic geometry to learn a pose correction' makes the representation's role explicit, whereas A moves directly from combining point clouds to 'enabling hypothesis correction.'",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J01",
+      "paper": "N04",
+      "left": "relaxed",
+      "right": "meaning",
+      "reason": "C explains adaptive fusion through the concrete contrast 'vision supports tracking without contact, while haptics supports tracking under severe occlusion'; B stops at modality use varying with contact and visibility.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N04",
+      "left": "meaning",
+      "right": "relaxed",
+      "reason": "A's fusion sentence explains the complementary roles of vision without contact and haptics under occlusion; B's handover ending instead makes the application outcome concrete. These strengths balance overall, with A clearer on modality behavior.",
+      "overall": "tie",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N04",
+      "left": "meaning",
+      "right": "hard",
+      "reason": "At the representation step, A distinguishes the contact-labeled gripper cloud from the object cloud positioned by the previous estimate, making the hypothesis-versus-observation comparison clearer than C's compressed 'shared point cloud' description.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N04",
+      "left": "relaxed",
+      "right": "hard",
+      "reason": "B's representation sentence explains that contact labels augment a kinematics-derived gripper cloud to encode touch and posture; C's 'contact-labeled gripper posture' leaves that encoding less intelligible.",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N03",
+      "left": "hard",
+      "right": "relaxed",
+      "reason": "B's depth-lifting sentence explains that frame scales adjust camera-frame measurements before alignment with global landmarks, giving the scales an operational role that A's 'accommodating depth error' leaves implicit.",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N03",
+      "left": "hard",
+      "right": "meaning",
+      "reason": "Immediately after describing the dual test, C distinguishes SDP optimality from recovery of an optimal scaled bundle-adjustment solution through its rank and rotation conditions, clarifying the certificate's scope more effectively than A.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N03",
+      "left": "relaxed",
+      "right": "meaning",
+      "reason": "C's sentence beginning 'Recovering an optimal scaled bundle-adjustment solution' explicitly connects relaxation certification to the original problem through additional conditions; B identifies relaxation certification but leaves that connection unexplained.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N02",
+      "left": "meaning",
+      "right": "hard",
+      "reason": "A's second sentence explains that corresponding points have approximately equal scores computed from their own range and radial velocity, supplying the association mechanism that B only names as 'Doppler-informed scalar matching.'",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N02",
+      "left": "meaning",
+      "right": "relaxed",
+      "reason": "C specifies approximately constant velocities and small inter-scan rotation before introducing score equality, making the later sharp-turn failure understandable; A leaves those assumptions inside the less explanatory 'short-scan motion approximation.'",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N02",
+      "left": "hard",
+      "right": "relaxed",
+      "reason": "C's opening mechanism explains approximately equal scores computed independently from range and radial Doppler velocity, so the reader can understand why matching works; B's 'Doppler-informed scalar matching' does not establish that relationship.",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N01",
+      "left": "meaning",
+      "right": "relaxed",
+      "reason": "Their global-method passages both clearly sequence feature-field alignment, SDF-based pose refinement, and feature averaging before decoding; the wording differences do not produce a material explanatory or presentational advantage.",
+      "overall": "tie",
+      "explanation": "tie",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N01",
+      "left": "meaning",
+      "right": "hard",
+      "reason": "In the local-optimization sentence, A contrasts jointly optimized grid features and robot poses with a fixed shared decoder, making the optimization boundary explicit where C leaves the decoder's role unspecified.",
+      "overall": "meaning",
+      "explanation": "meaning",
+      "organization": "tie",
+      "language": "tie"
+    },
+    {
+      "reviewer": "J02",
+      "paper": "N01",
+      "left": "relaxed",
+      "right": "hard",
+      "reason": "B's global-optimization passage states that SDF disagreement drives pose refinement after feature alignment, whereas C merely names 'SDF refinement'; B therefore explains how that intermediate step relates to the surrounding operations.",
+      "overall": "relaxed",
+      "explanation": "relaxed",
+      "organization": "tie",
+      "language": "tie"
+    }
+  ],
+  "auxiliary_deviations": []
+}

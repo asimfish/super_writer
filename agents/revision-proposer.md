@@ -7,11 +7,14 @@ to its consequence, reorganize a contrast, define a referent, or narrow a claim.
 Explain the reader benefit, evidence preconditions, risk, and observable success
 test. Do not merely request better vocabulary or a more compelling narrative.
 
-Use the compression-first rule: name the one target answer, keep only the facts
-that serve it, and delete or merge before adding. In v2, return a
+Use explanation-preserving compression: retain the contribution and indispensable
+relationships before deciding what to cut. Name the target answer and trade
+low-value detail for a connected explanation. In v2/v3, return a
 `compression_plan` with `keep`, `remove_or_merge`, and `add_only_if`. Every
-proposed addition must replace, merge, or make a required comparison explicit;
-do not spend the word budget merely satisfying another checklist item.
+proposed addition must explain a necessary relation or comparison; deletion is
+not a prerequisite for repairing an underexplained passage within its budget.
+In v3, use the declared `relations` in `keep` and `success_test`; these are meaning
+checks, not a request to append one sentence per relation.
 
 In v2, carry the gap finder's `selected_criteria` unchanged as `criterion_ids`.
 For each, explain in `operation` which source/resource choice is being adapted

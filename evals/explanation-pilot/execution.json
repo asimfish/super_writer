@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-19",
+  "model": "Host model and effort inherited; no override. Same-model independence is context separation, not independent model families.",
+  "source_agents": [
+    "01a15373-bb8e-7561-bd06-1fd032f77401",
+    "01a15373-bbd3-7bf2-9f1a-e15d4636e374"
+  ],
+  "code_review_agent": "01a1537a-8ec1-7fa0-be34-b28b5e7d0b08",
+  "source_scope": "Official PDFs, page2 onward, body extraction and page-image verification; exact source files and read scope in materials. Coordinator narrowed questions before freeze.",
+  "jobs": [
+    {
+      "id": "hard-1",
+      "agent_id": "01a1537d-42ab-75f1-a694-b634a7b544f3",
+      "dispatch": "You are an independent writing context in a frozen academic editing experiment. Read only this self-contained JSON packet: /Users/liyufeng/Code/super_writer/evals/explanation-pilot/prompts/hard-1.json . Follow its instruction and supplied guidance, use its facts only. Do not inspect any other files, conversation history, outputs, original abstracts, web sources, or other agents. No edits or git operations. Produce your first actual revisions without quality retries. Final response must be the requested raw JSON object, no Markdown fences, with writer_id \"hard-1\"."
+    },
+    {
+      "id": "relaxed-1",
+      "agent_id": "01a1537d-42e1-7340-933f-46de57e94155",
+      "dispatch": "You are an independent writing context in a frozen academic editing experiment. Read only this self-contained JSON packet: /Users/liyufeng/Code/super_writer/evals/explanation-pilot/prompts/relaxed-1.json . Follow its instruction and supplied guidance, use its facts only. Do not inspect any other files, conversation history, outputs, original abstracts, web sources, or other agents. No edits or git operations. Produce your first actual revisions without quality retries. Final response must be the requested raw JSON object, no Markdown fences, with writer_id \"relaxed-1\"."
+    },
+    {
+      "id": "meaning-1",
+      "agent_id": "01a1537d-4308-7f12-ab8a-38fca31a88e1",
+      "dispatch": "You are an independent writing context in a frozen academic editing experiment. Read only this self-contained JSON packet: /Users/liyufeng/Code/super_writer/evals/explanation-pilot/prompts/meaning-1.json . Follow its instruction and supplied guidance, use its facts only. Do not inspect any other files, conversation history, outputs, original abstracts, web sources, or other agents. No edits or git operations. Produce your first actual revisions without quality retries. Final response must be the requested raw JSON object, no Markdown fences, with writer_id \"meaning-1\"."
+    },
+    {
+      "id": "hard-2",
+      "agent_id": "01a1537d-432f-7e01-9692-dc91f2c35231",
+      "dispatch": "You are an independent writing context in a frozen academic editing experiment. Read only this self-contained JSON packet: /Users/liyufeng/Code/super_writer/evals/explanation-pilot/prompts/hard-2.json . Follow its instruction and supplied guidance, use its facts only. Do not inspect any other files, conversation history, outputs, original abstracts, web sources, or other agents. No edits or git operations. Produce your first actual revisions without quality retries. Final response must be the requested raw JSON object, no Markdown fences, with writer_id \"hard-2\"."
+    },
+    {
+      "id": "relaxed-2",
+      "agent_id": "01a1537d-435a-7ae1-8101-ab51f5e22661",
+      "dispatch": "You are an independent writing context in a frozen academic editing experiment. Read only this self-contained JSON packet: /Users/liyufeng/Code/super_writer/evals/explanation-pilot/prompts/relaxed-2.json . Follow its instruction and supplied guidance, use its facts only. Do not inspect any other files, conversation history, outputs, original abstracts, web sources, or other agents. No edits or git operations. Produce your first actual revisions without quality retries. Final response must be the requested raw JSON object, no Markdown fences, with writer_id \"relaxed-2\"."
+    },
+    {
+      "id": "meaning-2",
+      "agent_id": "01a1537d-4385-7af0-9937-f1cb921fe2ec",
+      "dispatch": "You are an independent writing context in a frozen academic editing experiment. Read only this self-contained JSON packet: /Users/liyufeng/Code/super_writer/evals/explanation-pilot/prompts/meaning-2.json . Follow its instruction and supplied guidance, use its facts only. Do not inspect any other files, conversation history, outputs, original abstracts, web sources, or other agents. No edits or git operations. Produce your first actual revisions without quality retries. Final response must be the requested raw JSON object, no Markdown fences, with writer_id \"meaning-2\"."
+    },
+    {
+      "id": "J01",
+      "agent_id": "01a1537f-107c-7071-9d65-493d9b32f7a5",
+      "dispatch": "You are a fresh independent context in an archived writing experiment. Read only /Users/liyufeng/Code/super_writer/evals/explanation-pilot/blind/J01.json . Follow that packet's instruction exactly. Do not read other files, writer/source packets, other outputs, conversation history or mapping files. No searches, agents, edits or git operations. Return the requested raw JSON object only, no Markdown fences. Judge/answer solely from the provided prose, with genuine ties and unspecified answers where justified."
+    },
+    {
+      "id": "J02",
+      "agent_id": "01a1537f-10a5-7b31-b48a-4e8b1b58ad28",
+      "dispatch": "You are a fresh independent context in an archived writing experiment. Read only /Users/liyufeng/Code/super_writer/evals/explanation-pilot/blind/J02.json . Follow that packet's instruction exactly. Do not read other files, writer/source packets, other outputs, conversation history or mapping files. No searches, agents, edits or git operations. Return the requested raw JSON object only, no Markdown fences. Judge/answer solely from the provided prose, with genuine ties and unspecified answers where justified."
+    },
+    {
+      "id": "R01",
+      "agent_id": "01a1537f-10c8-7e42-a5f9-d12ca35c7f72",
+      "dispatch": "You are a fresh independent context in an archived writing experiment. Read only /Users/liyufeng/Code/super_writer/evals/explanation-pilot/blind/R01.json . Follow that packet's instruction exactly. Do not read other files, writer/source packets, other outputs, conversation history or mapping files. No searches, agents, edits or git operations. Return the requested raw JSON object only, no Markdown fences. Judge/answer solely from the provided prose, with genuine ties and unspecified answers where justified."
+    },
+    {
+      "id": "A01",
+      "agent_id": "01a15381-3f36-77c0-84c6-589d4968cec9",
+      "dispatch": "You are a fresh grounded auditor. Read only /Users/liyufeng/Code/super_writer/evals/explanation-pilot/blind/A01.json . Follow its instructions, audit actual reader answers for entailment from prose as well as fidelity to supplied evidence; source-correct guesses do not repair missing text. Do not read other files, condition mappings, preferences, history, web sources or other agents. No edits. Return requested raw JSON only, no Markdown fences, auditor_id A01. Retain genuine source uncertainty in reasons; do not manufacture errors from optional omissions."
+    }
+  ]
+}

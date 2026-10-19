@@ -18,6 +18,10 @@ criteria that can wait. Do not turn every applicable norm into an edit: a clear
 sentence that already serves the target answer is a strength. Select no more than
 the benchmark's priority criteria for this pass; list other diagnosed gaps in
 `deferred_criteria` rather than forcing them into the revision.
+In v3, inspect the declared `relations` before proposing compression: can the
+reader recover their operation/object/direction from prose, or only recognize a
+label? Check the contribution record for coupled contributions before privileging
+one result. Missing meaning and excessive length are distinct diagnoses.
 
 For an abstract inspect distinctive contribution, mechanism and decisive evidence;
 for related work inspect synthesis, comparison axes and positioning; for experiments

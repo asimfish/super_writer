@@ -1,0 +1,15 @@
+{
+  "writer_id": "relaxed-2",
+  "cases": [
+    {
+      "id": "N02",
+      "text": "We introduce Doppler Correspondence, a geometrically and kinematically derived relation for associating consecutive 4D radar/LiDAR point clouds. Under approximately constant velocities and small inter-scan rotation, corresponding points have approximately equal scalar scores computed independently from range and radial Doppler velocity. Thus, measured motion guides association before rigid registration, reducing reliance on repetitive geometry rather than changing the registration objective. A lightweight baseline matches scores once, rejects candidates using spatial and score thresholds, and fits a rigid transformation without iterative correspondence updates. Across radar and LiDAR evaluations, Campus2 transformation estimation takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP, excluding preprocessing. Accuracy gains are not uniform: sharp turns can invalidate the approximation and cause drift. Doppler 4D-ICP extends the approach by retaining Doppler-derived matches while iteratively updating geometric matches within a weighted robust registration objective.",
+      "note": "Prioritized correspondence selection, the non-iterative demonstration, and the iterative extension; retained spatial dependence, timing scope, and the turning limitation."
+    },
+    {
+      "id": "N04",
+      "text": "We present V-HOP, a model-based visuo-haptic 6D object pose tracker combining a shared geometric representation with adaptive transformer feature fusion. Contact labels augment a kinematics-derived gripper point cloud, encoding touch and posture alongside the object CAD model transformed by the previous pose. This hypothesis-versus-observation representation supports learning pose corrections across sensor layouts and embodiments. A trainable haptic encoder and frozen FoundationPose visual encoder feed fine-tuned transformers, allowing modality use to vary with contact and visibility. Training uses only synthetic data spanning eight grippers and thirteen objects. On FeelSight-Occlusion, with an unseen hand, tactile sensor type, and object, V-HOP achieves 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS; NeuralFeels receives ground-truth segmentation, whereas V-HOP does not. Real bimanual handovers average 80% success versus FoundationPose's 40% across three objects with five trials each.",
+      "note": "Retained both geometric representation and adaptive fusion, with synthetic training scope and comparison conditions. Used handover success to connect pose tracking to manipulation."
+    }
+  ]
+}

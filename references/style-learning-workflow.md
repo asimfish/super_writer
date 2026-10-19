@@ -74,11 +74,15 @@ of a genuine conceptual evolution, or necessary technical repetition can be a
 valid alternative. Different facts may require a different rhetorical choice.
 Show what should improve, what already works, and what must not be transferred.
 
-In the explicitly selected [role loop](writing-team.md), use schema v2 to carry
+In the explicitly selected [role loop](writing-team.md), use schema v3 to carry
 these criteria and selected resources through every handoff. The writer must
 locate the implementation of each proposed criterion; the reviewer rechecks the
 criteria against the prose without seeing earlier assessments. No clear-text
-case should be declared good merely because it is understandable.
+case should be declared good merely because it is understandable. Before cutting,
+identify 1-3 indispensable explanatory relations and any essential co-contribution
+in the existing plan. Preserve them in prose, not just keywords or writer notes.
+Apply [explanation-preserving compression](compression-first-writing.md); a draft's
+current length is not automatically its ideal budget. V1/v2 remain compatible.
 
 For drafting from materials, use the same target and exemplar-informed blueprint
 before the first draft. There is no existing-prose gap to invent, and the revision

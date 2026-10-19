@@ -1,0 +1,194 @@
+{
+  "reader_id": "R01",
+  "instruction": "Answer each question from that case's prose alone, not other cases or your background knowledge. If the relation is not stated or necessarily entailed, answer 'not specified' with empty witness. Return JSON {reader_id,cases:[{id,answers:[{id,answer,witness}]}]}; each answer <=35 words, witness an exact prose span. No source searches, other file reads or agents.",
+  "cases": [
+    {
+      "id": "T02",
+      "text": "XM couples certifiable scaled bundle adjustment with scalable optimization. Learned depth lifts matched keypoints into 3D, with per-frame scales accommodating depth error during joint pose and landmark estimation. An empirically tight semidefinite relaxation supplies optimality bounds; a low-rank Riemannian staircase tests dual certificates to certify SDP solutions or increase rank and escape local minima. A C++/CUDA trust-region implementation solves BAL-1934 in 2.09 seconds versus MANOPT's 236.46 on identical lifted observations, excluding preprocessing. XM-SfM filters outliers and initializes CERES refinement of the original reprojection objective.",
+      "questions": [
+        {
+          "id": "N03-Q01",
+          "question": "What does learned depth change about the measurements and residuals being optimized, and what prediction error do the per-frame scales address?"
+        },
+        {
+          "id": "N03-Q02",
+          "question": "What does the SDP supply, and how can the low-rank staircase move beyond an uncertified local solution?"
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "text": "We introduce Doppler Correspondence, a geometrically and kinematically derived range\u2013Doppler relation for associating consecutive 4D radar/LiDAR scans under a short-scan approximation. Doppler-informed scalar matching reduces dependence on repetitive geometry; spatially gated matches are computed once before standard rigid registration. On Campus2, transformation estimation excluding preprocessing takes 0.16 ms/frame versus 5.9 for unseeded point-to-point ICP. Accuracy is not consistently better, and the approximation degrades during sharp turns. Doppler 4D-ICP extends the method by retaining Doppler-derived matches while iteratively updating geometric matches.",
+      "questions": [
+        {
+          "id": "N02-Q01",
+          "question": "Where does Doppler enter the matching pipeline, and how does that avoid ICP's repeated rematching?"
+        },
+        {
+          "id": "N02-Q02",
+          "question": "Why can these associations help with repeated geometry, and what geometric operations remain?"
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "text": "We introduce Doppler Correspondence, a geometrically and kinematically derived relation for associating consecutive 4D radar/LiDAR point clouds. Under approximately constant velocities and small inter-scan rotation, corresponding points have approximately equal scalar scores computed independently from range and radial Doppler velocity. Thus, measured motion guides association before rigid registration, reducing reliance on repetitive geometry rather than changing the registration objective. A lightweight baseline matches scores once, rejects candidates using spatial and score thresholds, and fits a rigid transformation without iterative correspondence updates. Across radar and LiDAR evaluations, Campus2 transformation estimation takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP, excluding preprocessing. Accuracy gains are not uniform: sharp turns can invalidate the approximation and cause drift. Doppler 4D-ICP extends the approach by retaining Doppler-derived matches while iteratively updating geometric matches within a weighted robust registration objective.",
+      "questions": [
+        {
+          "id": "N02-Q01",
+          "question": "Where does Doppler enter the matching pipeline, and how does that avoid ICP's repeated rematching?"
+        },
+        {
+          "id": "N02-Q02",
+          "question": "Why can these associations help with repeated geometry, and what geometric operations remain?"
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "text": "V-HOP tracks model-based 6D object pose using RGB-D and haptics. A shared point cloud combines contact-labeled gripper posture with the object model at its previous pose, enabling hypothesis correction across embodiments. Transformers fuse a frozen FoundationPose visual encoder's features with haptic features according to contact and visibility. Trained on multi-gripper synthetic data, V-HOP is evaluated on unseen objects, grippers, and tactile sensors. On FeelSight-Occlusion, it achieves 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS.",
+      "questions": [
+        {
+          "id": "N04-Q01",
+          "question": "In the shared gripper-object point cloud, which part is the observed haptic geometry and which is the pose hypothesis, and what correction is learned from comparing them?"
+        },
+        {
+          "id": "N04-Q02",
+          "question": "Why does the unified haptic representation still need adaptive visual-haptic fusion, and what differs between the no-contact and contact-with-occlusion cases?"
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "text": "We present V-HOP, a model-based visuo-haptic 6D object pose tracker combining a shared geometric representation with adaptive transformer feature fusion. Contact labels augment a kinematics-derived gripper point cloud, encoding touch and posture alongside the object CAD model transformed by the previous pose. This hypothesis-versus-observation representation supports learning pose corrections across sensor layouts and embodiments. A trainable haptic encoder and frozen FoundationPose visual encoder feed fine-tuned transformers, allowing modality use to vary with contact and visibility. Training uses only synthetic data spanning eight grippers and thirteen objects. On FeelSight-Occlusion, with an unseen hand, tactile sensor type, and object, V-HOP achieves 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS; NeuralFeels receives ground-truth segmentation, whereas V-HOP does not. Real bimanual handovers average 80% success versus FoundationPose's 40% across three objects with five trials each.",
+      "questions": [
+        {
+          "id": "N04-Q01",
+          "question": "In the shared gripper-object point cloud, which part is the observed haptic geometry and which is the pose hypothesis, and what correction is learned from comparing them?"
+        },
+        {
+          "id": "N04-Q02",
+          "question": "Why does the unified haptic representation still need adaptive visual-haptic fusion, and what differs between the no-contact and contact-with-occlusion cases?"
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "text": "We introduce Doppler Correspondence, a geometrically and kinematically derived range-and-Doppler relation for associating consecutive 4D radar and LiDAR scans. Under a short-scan motion approximation, corresponding points have approximately equal scalar scores, each computed from its own range and radial velocity. Doppler therefore guides association before rigid registration, reducing reliance on repetitive geometry without replacing spatial constraints. A lightweight non-iterative algorithm finds matches once in score space, rejects candidates using spatial and score thresholds, and estimates a rigid transformation. Experiments cover sparse and semi-dense radar and dense LiDAR. On Campus2, transformation estimation excluding preprocessing takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP. Sharp turns can invalidate the approximation and cause drift. An iterative extension, Doppler 4D-ICP, combines fixed Doppler-derived correspondences with repeatedly updated geometric matches.",
+      "questions": [
+        {
+          "id": "N02-Q01",
+          "question": "Where does Doppler enter the matching pipeline, and how does that avoid ICP's repeated rematching?"
+        },
+        {
+          "id": "N02-Q02",
+          "question": "Why can these associations help with repeated geometry, and what geometric operations remain?"
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "text": "We present XM, a certifiable scaled bundle-adjustment solver that jointly estimates camera poses, landmarks, and per-frame depth scales. Learned depth lifts matched image points into camera-frame 3D measurements; frame scales adjust these measurements before alignment with global landmarks. An empirically tight semidefinite relaxation supplies optimality bounds, while a low-rank Riemannian staircase and C++/CUDA trust-region implementation make optimization scalable. Dual checks certify relaxation solutions or trigger rank increases and descent, rather than accepting an uncertified local factor optimum. XM-SfM combines XM with matching and outlier filtering, then uses its estimates to initialize CERES refinement of the original reprojection objective. On BAL-1934, using the same lifted 3D observations, XM and MANOPT require 2.09 and 236.46 s of solver time, respectively, excluding 69.15 s of preprocessing for each.",
+      "questions": [
+        {
+          "id": "N03-Q01",
+          "question": "What does learned depth change about the measurements and residuals being optimized, and what prediction error do the per-frame scales address?"
+        },
+        {
+          "id": "N03-Q02",
+          "question": "What does the SDP supply, and how can the low-rank staircase move beyond an uncertified local solution?"
+        }
+      ]
+    },
+    {
+      "id": "K02",
+      "text": "PatchMap keeps unchanged cells and updates only cells touched by new observations, instead of rebuilding the entire map.",
+      "questions": [
+        {
+          "id": "Q1",
+          "question": "Which map cells are recomputed and what work is avoided?"
+        }
+      ]
+    },
+    {
+      "id": "K01",
+      "text": "PatchMap uses a cache and an updater for indoor navigation. Mean map-update time falls from 28 to 12 ms.",
+      "questions": [
+        {
+          "id": "Q1",
+          "question": "Which map cells are recomputed and what work is avoided?"
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "text": "MISO is a hierarchical neural implicit SLAM back-end coupling residual-conditioned local initialization with global submap alignment and fusion. Within multiresolution feature-grid submaps, fixed pretrained encoders initialize finer grids from residuals left by coarser predictions; grid features and robot poses are then jointly optimized with a fixed shared decoder. Global optimization aligns overlapping feature fields from coarse to fine without decoding SDF values during feature-alignment iterations, then refines poses using SDF disagreement. Fusion averages aligned implicit features before decoding, rather than averaging decoded SDFs. On ScanNet 0011, from initial submap errors of 5 degrees and 0.20 m, alignment takes 10.53 s versus MIPS's 59.23 s, with final errors of 1.86 degrees/0.06 m versus 3.93 degrees/0.15 m. Evaluation is predominantly offline on static scenes, and dense grids limit memory scalability.",
+      "questions": [
+        {
+          "id": "N01-Q01",
+          "question": "What information initializes each finer feature level, and what is still optimized after initialization?"
+        },
+        {
+          "id": "N01-Q02",
+          "question": "Which representations are aligned and fused, and where is decoding still needed?"
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "text": "XM addresses initialization and computational cost in scaled bundle adjustment by combining a semidefinite relaxation with a low-rank GPU solver. Learned depth lifts matched 2D keypoints into camera-frame 3D measurements; positive per-frame scales adjust these measurements for depth error while camera poses and landmarks are jointly estimated using 3D distances. The relaxation provides optimality bounds, while a Riemannian staircase solves low-rank factorizations: a dual test either certifies SDP optimality or supplies a direction for escaping a stationary point after increasing rank. Recovering an optimal scaled bundle-adjustment solution additionally requires rank-three tightness and proper rotations. A C++/CUDA trust-region implementation makes this scheme computationally practical. On BAL-1934, XM solves the same lifted-observation problem as MANOPT in 2.09 versus 236.46 s, excluding 69.15 s preprocessing for each. XM-SfM integrates matching and filtering, then uses XM estimates to initialize CERES refinement of the original reprojection objective.",
+      "questions": [
+        {
+          "id": "N03-Q01",
+          "question": "What does learned depth change about the measurements and residuals being optimized, and what prediction error do the per-frame scales address?"
+        },
+        {
+          "id": "N03-Q02",
+          "question": "What does the SDP supply, and how can the low-rank staircase move beyond an uncertified local solution?"
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "text": "MISO accelerates local and global neural implicit SLAM using multiresolution feature-grid submaps. Pretrained encoders initialize finer grids from residuals left by coarser predictions before joint optimization of grid features and robot poses. Globally, coarse-to-fine alignment compares overlapping feature fields without SDF decoding or explicit correspondences; SDF refinement precedes fusion, which averages aligned features before decoding. On ScanNet 0011, alignment from 5-degree/0.20-m errors takes 10.53 seconds versus MIPS's 59.23, with final errors of 1.86 degrees/0.06 m versus 3.93 degrees/0.15 m.",
+      "questions": [
+        {
+          "id": "N01-Q01",
+          "question": "What information initializes each finer feature level, and what is still optimized after initialization?"
+        },
+        {
+          "id": "N01-Q02",
+          "question": "Which representations are aligned and fused, and where is decoding still needed?"
+        }
+      ]
+    },
+    {
+      "id": "T12",
+      "text": "V-HOP is a model-based visuo-haptic tracker for 6D object pose during manipulation. It represents heterogeneous tactile inputs and gripper posture as a contact-labeled gripper point cloud, paired with an object CAD cloud positioned by the previous pose estimate. This shared geometry compares the hypothesized object with observed haptic geometry to learn a pose correction across sensor layouts and embodiments. A frozen FoundationPose RGB-D encoder and trainable haptic encoder feed fine-tuned transformers, adapting feature fusion to contact and visibility: vision supports tracking without contact, while haptics supports tracking under severe occlusion. Training uses only synthetic data spanning eight grippers and thirteen objects. On FeelSight-Occlusion, with an unseen hand, tactile sensor type, and object, V-HOP achieves 1.46 mm ADD-S error at 32 FPS, compared with NeuralFeels' 2.14 mm at 3 FPS. NeuralFeels receives ground-truth segmentation; V-HOP does not. Real robot experiments also evaluate tracking and manipulation.",
+      "questions": [
+        {
+          "id": "N04-Q01",
+          "question": "In the shared gripper-object point cloud, which part is the observed haptic geometry and which is the pose hypothesis, and what correction is learned from comparing them?"
+        },
+        {
+          "id": "N04-Q02",
+          "question": "Why does the unified haptic representation still need adaptive visual-haptic fusion, and what differs between the no-contact and contact-with-occlusion cases?"
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "text": "MISO is a hierarchical neural implicit SLAM back-end for local map and trajectory optimization and global submap consistency. Within multiresolution feature-grid submaps, pretrained encoders initialize finer grids from measurement residuals left by coarser levels; all grid features and robot poses are then jointly optimized with a fixed shared decoder. Globally, coarse-to-fine alignment compares overlapping feature fields to update submap poses without repeatedly decoding signed distance functions (SDFs) or establishing explicit geometric correspondences. After SDF-based pose refinement, fusion averages aligned submap features before decoding, rather than averaging decoded distances. On ScanNet scene 0011, starting from 5-degree/0.20-m submap errors, alignment takes 10.53 s versus 59.23 s for MIPS, with final errors of 1.86 degrees/0.06 m versus 3.93 degrees/0.15 m, averaged over ten trials. Evaluation also covers FastCaMo-Large and Newer College; dense-grid memory scaling remains a limitation.",
+      "questions": [
+        {
+          "id": "N01-Q01",
+          "question": "What information initializes each finer feature level, and what is still optimized after initialization?"
+        },
+        {
+          "id": "N01-Q02",
+          "question": "Which representations are aligned and fused, and where is decoding still needed?"
+        }
+      ]
+    }
+  ]
+}

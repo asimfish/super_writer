@@ -1,0 +1,261 @@
+{
+  "auditor_id": "A01",
+  "cases": [
+    {
+      "id": "T02",
+      "answers": [
+        {
+          "id": "N03-Q01",
+          "status": "missing",
+          "reason": "The prose supplies 3D lifting and depth-error adjustment, but does not identify the optimized 3D-distance residuals or their replacement of reprojection residuals. The reader's abstention does not supply that missing relationship.",
+          "witness": "Learned depth lifts matched keypoints into 3D, with per-frame scales accommodating depth error during joint pose and landmark estimation."
+        },
+        {
+          "id": "N03-Q02",
+          "status": "supported",
+          "reason": "The answer directly recovers bounds, certification, and rank-increase escape from the prose, consistently with N03-E03/E04.",
+          "witness": "An empirically tight semidefinite relaxation supplies optimality bounds; a low-rank Riemannian staircase tests dual certificates to certify SDP solutions or increase rank and escape local minima."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T07",
+      "answers": [
+        {
+          "id": "N02-Q01",
+          "status": "supported",
+          "reason": "The prose places Doppler-informed scalar matching before rigid registration and explicitly makes matching one-time, supporting the answer without requiring the score formula.",
+          "witness": "Doppler-informed scalar matching reduces dependence on repetitive geometry; spatially gated matches are computed once before standard rigid registration."
+        },
+        {
+          "id": "N02-Q02",
+          "status": "supported",
+          "reason": "The answer preserves the stated association benefit and the remaining spatial gating and rigid fit, faithfully reflecting N02-E03/E04.",
+          "witness": "Doppler-informed scalar matching reduces dependence on repetitive geometry; spatially gated matches are computed once before standard rigid registration."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T09",
+      "answers": [
+        {
+          "id": "N02-Q01",
+          "status": "supported",
+          "reason": "Independent range/Doppler scores, one-time matching, filtering, and rigid fitting are explicit and consistent with N02-E01/E02/E03.",
+          "witness": "Under approximately constant velocities and small inter-scan rotation, corresponding points have approximately equal scalar scores computed independently from range and radial Doppler velocity. Thus, measured motion guides association before rigid registration, reducing reliance on repetitive geometry rather than changing the registration objective. A lightweight baseline matches scores once, rejects candidates using spatial and score thresholds, and fits a rigid transformation without iterative correspondence updates."
+        },
+        {
+          "id": "N02-Q02",
+          "status": "supported",
+          "reason": "The prose explicitly distinguishes motion-informed association from the retained registration objective and geometric filtering, as the answer does.",
+          "witness": "Thus, measured motion guides association before rigid registration, reducing reliance on repetitive geometry rather than changing the registration objective. A lightweight baseline matches scores once, rejects candidates using spatial and score thresholds, and fits a rigid transformation without iterative correspondence updates."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T08",
+      "answers": [
+        {
+          "id": "N04-Q01",
+          "status": "supported",
+          "reason": "The gripper/contact representation, previous-pose object hypothesis, and correction relationship are recoverable from the sentence and agree with N04-E01/E02/E03.",
+          "witness": "A shared point cloud combines contact-labeled gripper posture with the object model at its previous pose, enabling hypothesis correction across embodiments."
+        },
+        {
+          "id": "N04-Q02",
+          "status": "missing",
+          "reason": "The prose says fusion depends on contact and visibility, but never specifies visual reliance without contact versus haptic reliance with contact under occlusion. Those source-supported directions cannot be credited to an abstaining answer.",
+          "witness": "Transformers fuse a frozen FoundationPose visual encoder's features with haptic features according to contact and visibility."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T10",
+      "answers": [
+        {
+          "id": "N04-Q01",
+          "status": "supported",
+          "reason": "The answer's observed touch/posture, previous-pose CAD hypothesis, and learned correction are supplied by the prose and faithful to N04-E02/E03.",
+          "witness": "Contact labels augment a kinematics-derived gripper point cloud, encoding touch and posture alongside the object CAD model transformed by the previous pose. This hypothesis-versus-observation representation supports learning pose corrections across sensor layouts and embodiments."
+        },
+        {
+          "id": "N04-Q02",
+          "status": "missing",
+          "reason": "Varying modality use is stated, but the contrasting no-contact and contact-with-occlusion behaviors are not. N04-E04/E05 supply information absent from this prose.",
+          "witness": "A trainable haptic encoder and frozen FoundationPose visual encoder feed fine-tuned transformers, allowing modality use to vary with contact and visibility."
+        }
+      ],
+      "factual_errors": [
+        {
+          "claim": "Training uses only synthetic data spanning eight grippers and thirteen objects.",
+          "evidence_ids": [
+            "N04-E06"
+          ],
+          "reason": "The evidence assigns eight grippers and thirteen objects to the synthetic dataset, while also stating that D'Claw and pudding_box are excluded from training for held-out evaluation. Presenting dataset coverage as training coverage risks overstating exposure. The supplied evidence does not unambiguously establish the post-exclusion training counts, so an exact replacement count cannot be asserted."
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "answers": [
+        {
+          "id": "N02-Q01",
+          "status": "supported",
+          "reason": "Per-point range/radial-velocity scores and one-time score-space matching are explicit, supporting the answer and agreeing with N02-E01/E02.",
+          "witness": "Under a short-scan motion approximation, corresponding points have approximately equal scalar scores, each computed from its own range and radial velocity. Doppler therefore guides association before rigid registration, reducing reliance on repetitive geometry without replacing spatial constraints. A lightweight non-iterative algorithm finds matches once in score space, rejects candidates using spatial and score thresholds, and estimates a rigid transformation."
+        },
+        {
+          "id": "N02-Q02",
+          "status": "supported",
+          "reason": "The answer accurately preserves the reduced dependence on repeated geometry alongside spatial rejection and rigid estimation.",
+          "witness": "Doppler therefore guides association before rigid registration, reducing reliance on repetitive geometry without replacing spatial constraints. A lightweight non-iterative algorithm finds matches once in score space, rejects candidates using spatial and score thresholds, and estimates a rigid transformation."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T04",
+      "answers": [
+        {
+          "id": "N03-Q01",
+          "status": "missing",
+          "reason": "Lifting, rescaling, and landmark alignment are stated, but the depth-prediction-error purpose of the scales is not explained and the residual metric is not identified. The abstention does not recover the complete requested relationship.",
+          "witness": "Learned depth lifts matched image points into camera-frame 3D measurements; frame scales adjust these measurements before alignment with global landmarks."
+        },
+        {
+          "id": "N03-Q02",
+          "status": "supported",
+          "reason": "Bounds and the certification-versus-rank-increase/descent alternatives are explicit and agree with N03-E03/E04.",
+          "witness": "An empirically tight semidefinite relaxation supplies optimality bounds, while a low-rank Riemannian staircase and C++/CUDA trust-region implementation make optimization scalable. Dual checks certify relaxation solutions or trigger rank increases and descent, rather than accepting an uncertified local factor optimum."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "K02",
+      "answers": [
+        {
+          "id": "Q1",
+          "status": "supported",
+          "reason": "The answer directly restates selective cell updates and preservation of unchanged cells, matching both prose and E1.",
+          "witness": "PatchMap keeps unchanged cells and updates only cells touched by new observations, instead of rebuilding the entire map."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "K01",
+      "answers": [
+        {
+          "id": "Q1",
+          "status": "missing",
+          "reason": "A cache, updater, and timing reduction do not entail selective cell updates or avoidance of full rebuilding. E1 contains that mechanism, but the prose and reader answer do not.",
+          "witness": "PatchMap uses a cache and an updater for indoor navigation. Mean map-update time falls from 28 to 12 ms."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T03",
+      "answers": [
+        {
+          "id": "N01-Q01",
+          "status": "supported",
+          "reason": "Residual-conditioned initialization, jointly optimized features/poses, and the fixed decoder are all explicit and agree with N01-E02/E03.",
+          "witness": "Within multiresolution feature-grid submaps, fixed pretrained encoders initialize finer grids from residuals left by coarser predictions; grid features and robot poses are then jointly optimized with a fixed shared decoder."
+        },
+        {
+          "id": "N01-Q02",
+          "status": "supported",
+          "reason": "The prose supplies feature alignment, feature averaging, SDF refinement, and decoding after fusion. Its local optimization with a fixed decoder also supports the answer's local-decoding statement; fixed weights do not imply an unused decoder.",
+          "witness": "Within multiresolution feature-grid submaps, fixed pretrained encoders initialize finer grids from residuals left by coarser predictions; grid features and robot poses are then jointly optimized with a fixed shared decoder. Global optimization aligns overlapping feature fields from coarse to fine without decoding SDF values during feature-alignment iterations, then refines poses using SDF disagreement. Fusion averages aligned implicit features before decoding, rather than averaging decoded SDFs."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T06",
+      "answers": [
+        {
+          "id": "N03-Q01",
+          "status": "supported",
+          "reason": "The answer directly recovers 2D-to-3D lifting, 3D-distance optimization, and depth-error adjustment by positive frame scales, consistently with N03-E02.",
+          "witness": "Learned depth lifts matched 2D keypoints into camera-frame 3D measurements; positive per-frame scales adjust these measurements for depth error while camera poses and landmarks are jointly estimated using 3D distances."
+        },
+        {
+          "id": "N03-Q02",
+          "status": "supported",
+          "reason": "Bounds, failed-test escape after increasing rank, and the distinction between SDP certification and SBA recovery conditions are explicitly stated and faithful to N03-E03/E04.",
+          "witness": "The relaxation provides optimality bounds, while a Riemannian staircase solves low-rank factorizations: a dual test either certifies SDP optimality or supplies a direction for escaping a stationary point after increasing rank. Recovering an optimal scaled bundle-adjustment solution additionally requires rank-three tightness and proper rotations."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T01",
+      "answers": [
+        {
+          "id": "N01-Q01",
+          "status": "supported",
+          "reason": "The prose explicitly identifies coarser-prediction residuals as initialization inputs and features/poses as subsequent optimization variables.",
+          "witness": "Pretrained encoders initialize finer grids from residuals left by coarser predictions before joint optimization of grid features and robot poses."
+        },
+        {
+          "id": "N01-Q02",
+          "status": "supported",
+          "reason": "Feature-field alignment and feature averaging are explicit. SDF refinement entails evaluating decoded SDFs, while decoding after averaging is directly stated, matching N01-E04/E05/E06.",
+          "witness": "Globally, coarse-to-fine alignment compares overlapping feature fields without SDF decoding or explicit correspondences; SDF refinement precedes fusion, which averages aligned features before decoding."
+        }
+      ],
+      "factual_errors": []
+    },
+    {
+      "id": "T12",
+      "answers": [
+        {
+          "id": "N04-Q01",
+          "status": "supported",
+          "reason": "The observed gripper geometry, previous-pose CAD hypothesis, and learned correction are explicitly connected and agree with N04-E02/E03.",
+          "witness": "It represents heterogeneous tactile inputs and gripper posture as a contact-labeled gripper point cloud, paired with an object CAD cloud positioned by the previous pose estimate. This shared geometry compares the hypothesized object with observed haptic geometry to learn a pose correction across sensor layouts and embodiments."
+        },
+        {
+          "id": "N04-Q02",
+          "status": "supported",
+          "reason": "The prose explicitly states the contact/visibility dependence and the visual-without-contact versus haptic-under-occlusion contrast. The answer claims usefulness, not exclusive reliance, consistent with N04-E04/E05.",
+          "witness": "A frozen FoundationPose RGB-D encoder and trainable haptic encoder feed fine-tuned transformers, adapting feature fusion to contact and visibility: vision supports tracking without contact, while haptics supports tracking under severe occlusion."
+        }
+      ],
+      "factual_errors": [
+        {
+          "claim": "Training uses only synthetic data spanning eight grippers and thirteen objects.",
+          "evidence_ids": [
+            "N04-E06"
+          ],
+          "reason": "The evidence assigns eight grippers and thirteen objects to the synthetic dataset, while also stating that D'Claw and pudding_box are excluded from training for held-out evaluation. Presenting dataset coverage as training coverage risks overstating exposure. The supplied evidence does not unambiguously establish the post-exclusion training counts, so an exact replacement count cannot be asserted."
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "answers": [
+        {
+          "id": "N01-Q01",
+          "status": "supported",
+          "reason": "Residual inputs, pretrained initialization, joint feature/pose optimization, and a fixed decoder are directly stated and consistent with N01-E02/E03.",
+          "witness": "Within multiresolution feature-grid submaps, pretrained encoders initialize finer grids from measurement residuals left by coarser levels; all grid features and robot poses are then jointly optimized with a fixed shared decoder."
+        },
+        {
+          "id": "N01-Q02",
+          "status": "supported",
+          "reason": "The answer follows the stated feature-alignment and feature-fusion pipeline. Local optimization with a fixed decoder supports local decoding; SDF-based refinement and decoding after averaging supply the other decoding stages.",
+          "witness": "Within multiresolution feature-grid submaps, pretrained encoders initialize finer grids from measurement residuals left by coarser levels; all grid features and robot poses are then jointly optimized with a fixed shared decoder. Globally, coarse-to-fine alignment compares overlapping feature fields to update submap poses without repeatedly decoding signed distance functions (SDFs) or establishing explicit geometric correspondences. After SDF-based pose refinement, fusion averages aligned submap features before decoding, rather than averaging decoded distances."
+        }
+      ],
+      "factual_errors": []
+    }
+  ]
+}

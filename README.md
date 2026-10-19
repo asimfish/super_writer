@@ -18,12 +18,13 @@
 仓库名是 `super_writer`，调用名是 **`$super-writer`**。写作由你使用的 AI agent 执行；
 Python 脚本负责可重复的检查。项目不自带模型，不承诺录用或 AI 检测通过。
 
-**最新写作验证：** 6 篇 RSS 2025 论文、12 个摘要/实验单元、36 段实际改写。
-压缩版摘要平均从旧版的 139.7 词降至 90.8 词，但盲评对旧版只有 **2 胜、10 负**；
-实验段落为 **7 胜、5 负**。与作者原摘要的探索性比较为 **5 胜、7 负**。
-**本轮未通过门槛：更省字尚未带来更好的摘要，规则未因本轮测试升级。**
-[完整结果与差距](evals/compression-pilot/README.md) · [四版横向对比](evals/compression-pilot/comparison.html) ·
-[此前 DROID/SIMPLER 实验](docs/ai-spec-pilot-evaluation.md)
+**最新写作验证：** 4 篇新论文、12 段摘要改写，加入相同 150 词上限的旧流程作为对照。
+解释问题的模型读回从 **6/8 提高到 8/8**；整体盲评为 **3 胜、2 负、3 平**。
+新旧两版还各出现一处数据集总量与训练范围混淆，**本轮未通过偏好和事实门槛**。
+这提供了局部解释改善的信号，尚未证明整体写作稳定提高；不与此前实验合并统计。
+[完整方法与失败分析](evals/explanation-pilot/README.md) ·
+[四版横向对比](evals/explanation-pilot/comparison.html) ·
+[上一轮压缩实验](evals/compression-pilot/README.md)
 
 **机制改进候选：** 新增“选证据 → 绑定对象与对照 → 组织成句 → 成稿读回”的可选流程，
 接入现有写作矩阵，不新增必填报告。配套 8 类、16 个反事实开发探针，检验优先级或条件改变时
@@ -38,7 +39,13 @@ gap finder 按当前章节选入优秀论文观察、章节协议、写作规范
 [角色与架构图](docs/system-organization.md#可选角色协作与反馈) ·
 [来源核实与奖励适配](docs/research/ideascientist-2026-10-15.md) ·
 [原创交接示例](examples/writing-team/README.md) ·
-[摘要、相关工作和实验：压缩优先地改进清楚但不够好的写法](examples/writing-team/benchmark.md)
+[已有 v2 教学对比](examples/writing-team/benchmark.md) ·
+[v3 解释保真契约](references/writing-team.md#schema-3-meaning-and-preservation)
+
+v3 在动笔前确定少量必须讲清的关系，例如“用什么预测什么”“哪项操作避免了什么工作”，
+先保留贡献和解释，再分配篇幅；不要求每条关系各占一句。字数遵守作者或会场的实际限制，
+不默认禁止扩写。审读还要对照原稿检查所有已声明维度，不能把新造成的缺陷当作低优先级遗留。
+工具验证交接和文本见证，不自动判定语义理解，也不据此宣称已经学会优秀论文的写法。
 
 <a id="examples"></a>
 ## 样文：先看结果

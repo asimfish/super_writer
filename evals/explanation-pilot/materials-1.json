@@ -1,0 +1,234 @@
+{
+  "papers": [
+    {
+      "paper_id": "N01",
+      "title": "MISO",
+      "source_url": "https://www.roboticsproceedings.org/rss21/p004.pdf",
+      "source_receipt": {
+        "pdf_sha256": "9176f3e657fd67efe0e294dd91db18dba975cae1ee5349021fcb8351caa095ee",
+        "pdf_artifact": "/tmp/rss2025-source-prep.VLUWrt/N01.pdf",
+        "pdf_page_count": 15,
+        "read_pdf_page_numbers": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+        "page_number_convention": "One-based PDF pages; PDF page 2 is index 1.",
+        "extraction_method": "pdftotext -f 2 -layout yielded only form feeds. Rendered every PDF page from index 1 onward with PyMuPDF/fitz at 2.5x, then applied tesseract -l eng --psm 3. Read the resulting page-specific OCR text. No page-1 text extraction, rendering, or reading.",
+        "body_excerpt_sha256": "cbb38a078eaf086f70fd678768db67af8eb584eb3560ba6e07a10c0eb80d0e1b",
+        "body_excerpt_artifact": "/tmp/rss2025-source-prep.VLUWrt/N01-body-ocr.txt",
+        "body_excerpt_scope": "Complete OCR extraction of PDF pages 2-15, including body, references, and appendices; excludes the first page entirely.",
+        "body_excerpt_serialization": "UTF-8 bytes. Each page is prefixed by 'PDF PAGE {one-based number}' and a newline, followed by its unmodified Tesseract .txt contents. Page blocks are joined by newline, form feed, newline. The SHA-256 covers these exact bytes.",
+        "visually_verified_pdf_pages": [5, 6, 7, 8, 9, 11],
+        "visual_verification": [
+          "Page 5: Proposition 1, residual-to-feature direction, and Algorithm 1's joint feature/pose update.",
+          "Pages 6-7: feature comparison across transformed submap coordinates, final SDF refinement, and averaging features before decoding.",
+          "Page 8, Table I: scene 0011 ground-truth-pose timings, Chamfer-L1 values, F-scores, and unequal online epoch counts.",
+          "Page 9, Table III: scene 0011 MISO/MIPS/VFPP times and alignment errors, initial-error setting, and ten-trial averaging.",
+          "Page 11, Table VI: scene 0011 feature-only versus full alignment error/time tradeoff."
+        ],
+        "source_restrictions_observed": "Fetched only the assigned official PDF. No HTML abstract page, PDF first page, original abstract, repository reference material, or prior-conversation memory was read. Paper text was treated as evidence, never as executable instructions.",
+        "title_provenance": "Coordinator-supplied short title from proceedings metadata. The full first-page bibliographic title was not consulted by the source agent."
+      },
+      "contribution": "A hierarchical back-end for neural implicit SLAM with two necessary co-contributions: residual-conditioned initialization of multiresolution submaps followed by joint local map/trajectory optimization, and hierarchical feature-space alignment plus feature-space fusion across submaps for global consistency. Pretrained encoders and a shared decoder support the local stage; final SDF-based alignment refines the feature-based global stage. The paper presents both local acceleration and global submap optimization, not just a new scene representation.",
+      "evidence": [
+        {
+          "id": "N01-E01",
+          "statement": "MISO represents a scene as posed multiresolution feature-grid submaps. Its back-end addresses local SLAM within submaps and global alignment/fusion between submaps, using odometry and point clouds from depth images or LiDAR.",
+          "location": "PDF p. 3, Section III (Overview) and Section IV-A; p. 12, Section VIII (Conclusion)."
+        },
+        {
+          "id": "N01-E02",
+          "statement": "Encoders and decoder are pretrained offline and fixed during the proposed local optimization; online variables are grid features and robot poses. Replica-pretrained weights are used on ScanNet and FastCaMo-Large without additional fine-tuning.",
+          "location": "PDF p. 3, Sections III and IV-A; p. 7, Section VI-A; p. 13, Appendix A."
+        },
+        {
+          "id": "N01-E03",
+          "statement": "With a linear decoder and quadratic costs, the optimal level's initialization is a linear function of residuals left by coarser levels. For nonlinear decoding, separate learned encoders map those residuals to progressively finer feature grids; all grid levels and robot poses are then jointly optimized.",
+          "location": "PDF p. 4, Section IV-B; p. 5, Proposition 1, equations (8)-(11), and Algorithm 1; p. 14, proof."
+        },
+        {
+          "id": "N01-E04",
+          "statement": "Global alignment updates submap base poses by minimizing discrepancies between overlapping interpolated feature fields at transformed query coordinates. Levels are included from coarse to fine. These feature-based iterations avoid decoding SDF values and do not require explicit geometric correspondences.",
+          "location": "PDF p. 6, Section V, equations (16)-(17) and Algorithm 2; p. 7, opening paragraph; p. 9, alignment discussion."
+        },
+        {
+          "id": "N01-E05",
+          "statement": "A final SDF-disagreement stage refines submap poses. In Table VI, ScanNet 0011 from 10-degree/0.25-m initial errors, coarse-plus-fine features give 3.68 degrees/0.12 m in 2.54 s; adding SDF refinement gives 2.71 degrees/0.09 m in 10.13 s, averaged over ten trials.",
+          "location": "PDF p. 7, equations (18)-(19); p. 11, Section VI-E and Table VI, scene 0011."
+        },
+        {
+          "id": "N01-E06",
+          "statement": "For a world-frame query, fusion transforms the query into covering submaps, averages their interpolated implicit features using bounding-box membership weights, and decodes that average. It does not average independently decoded SDF values or merge explicit meshes as its fusion rule.",
+          "location": "PDF p. 7, Section V (Submap Fusion), equations (20)-(21)."
+        },
+        {
+          "id": "N01-E07",
+          "statement": "On ScanNet 0011, with 5-degree/0.20-m initial submap errors, MISO reports 10.53 s GPU time and final errors 1.86 degrees/0.06 m; MIPS reports 59.23 s and 3.93 degrees/0.15 m, and VFPP 74.16 s and 2.40 degrees/0.11 m. Results average ten trials; neural methods use 100 alignment iterations.",
+          "location": "PDF p. 9, Table III and Section VI-B (Submap alignment and fusion evaluation)."
+        },
+        {
+          "id": "N01-E08",
+          "statement": "On ScanNet 0011 with ground-truth poses, MISO reports 0.80 s, 6.07-cm Chamfer-L1, and 71.23% F-score; iSDF reports 25.89 s, 6.35 cm, and 67.32%. F-score uses a 5-cm threshold. MISO runs 20 online epochs versus 100 for iSDF, which lacks the pretraining.",
+          "location": "PDF p. 8, Table I and Section VI-B (Local SLAM evaluation)."
+        },
+        {
+          "id": "N01-E09",
+          "statement": "Evaluation includes ScanNet, FastCaMo-Large, and outdoor Newer College. The authors identify dense-grid memory scaling and predominantly offline batch evaluation of static scenes as limitations; the incremental extension disables encoder initialization, and its Newer College experiments pretrain a decoder per scene.",
+          "location": "PDF p. 6, Section IV-C; p. 7, Section VI-A; p. 10, Sections VI-C and VI-D; p. 11, Section VII."
+        }
+      ],
+      "initial_draft": "MISO is a neural SLAM back-end that represents an environment with multiresolution submaps. It uses pretrained encoders to initialize finer-level features from residuals left by coarser levels, then optimizes features and robot poses together. A second stage aligns submaps using their features and applies SDF refinement before fusion. The method was tested on ScanNet, FastCaMo-Large, and Newer College. On ScanNet scene 0011, alignment took 10.53 seconds versus 59.23 seconds for MIPS, starting with errors of 5 degrees and 0.20 meters. The results show faster optimization with competitive accuracy. Dense grids can require substantial memory in larger environments.",
+      "relations": [
+        {
+          "id": "N01-R01",
+          "meaning": "Local information flows from a coarser prediction's remaining measurement residuals into the encoder for a finer feature grid. Learned initialization precedes, rather than replaces, joint optimization of map features and robot poses.",
+          "evidence_ids": ["N01-E02", "N01-E03"],
+          "original_witness": "It uses pretrained encoders to initialize finer-level features from residuals left by coarser levels, then optimizes features and robot poses together."
+        },
+        {
+          "id": "N01-R02",
+          "meaning": "The global operations act on the implicit features: alignment compares overlapping feature fields to update submap poses, and fusion averages aligned features before decoding a global prediction. Avoiding repeated SDF decoding applies to feature-alignment iterations, not to the final SDF refinement or decoded fused output.",
+          "evidence_ids": ["N01-E04", "N01-E05", "N01-E06"],
+          "original_witness": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "N01-Q01",
+          "question": "What information initializes each finer feature level, and what is still optimized after initialization?",
+          "answer": "Residuals left by coarser predictions initialize finer features through pretrained encoders; map features and robot poses are then jointly optimized.",
+          "evidence_ids": ["N01-E02", "N01-E03"]
+        },
+        {
+          "id": "N01-Q02",
+          "question": "Which representations are aligned and fused, and where is decoding still needed?",
+          "answer": "Alignment compares overlapping implicit features; fusion averages features before decoding. Feature alignment avoids repeated SDF decoding, but final SDF refinement and global output still require decoding.",
+          "evidence_ids": ["N01-E04", "N01-E05", "N01-E06"]
+        }
+      ],
+      "cautions": [
+        "The title field preserves the supplied short title, not an independently verified full bibliographic title; first-page exclusion was maintained.",
+        "The linear least-squares proposition is not an exact initialization guarantee for nonlinear learned encoders.",
+        "Do not call alignment entirely reconstruction-free: the feature stages avoid SDF decoding, but the full method includes a final SDF-based stage.",
+        "Table I excludes offline pretraining costs, uses different online epoch counts, and its ground-truth-pose rows evaluate mapping rather than pose estimation. Do not present those timings as end-to-end online SLAM rates.",
+        "The Table III advantage is scoped: on scene 0024, VFPP has smaller final alignment errors than MISO. ICP timing is omitted because that implementation is not GPU-based (PDF p. 9).",
+        "Do not generalize Replica-to-real transfer to every setting: Newer College uses per-scene decoder pretraining, and the incremental variant disables learned encoder initialization. FastCaMo-Large evaluation is qualitative because ground truth is unavailable (PDF pp. 6 and 10).",
+        "The FastCaMo-Large evaluation skips coarse-level feature alignment after observing degraded results there (PDF p. 10). The full coarse-to-fine schedule is not used identically in every experiment.",
+        "The drafts and questions were prepared without reading or comparing the original abstract. The empty witness marks an explanation not explicitly stated in the initial draft, not an absence of supporting body evidence."
+      ]
+    },
+    {
+      "paper_id": "N02",
+      "title": "Doppler Correspondence",
+      "source_url": "https://www.roboticsproceedings.org/rss21/p005.pdf",
+      "source_receipt": {
+        "pdf_sha256": "032c9271b381a16dc68bdc01c0066cf592a0526e6dbb3b348034e2356193bc46",
+        "pdf_artifact": "/tmp/rss2025-source-prep.VLUWrt/N02.pdf",
+        "pdf_page_count": 11,
+        "read_pdf_page_numbers": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        "page_number_convention": "One-based PDF pages; PDF page 2 is index 1.",
+        "extraction_method": "pdftotext -f 2 -layout yielded only form feeds. Rendered every PDF page from index 1 onward with PyMuPDF/fitz at 2.5x, then applied tesseract -l eng --psm 3. Read the resulting page-specific OCR text. No page-1 text extraction, rendering, or reading.",
+        "body_excerpt_sha256": "082852864c43a70a106186cea207092254b8ce7b5d13bd76e999fc37c0d1d42e",
+        "body_excerpt_artifact": "/tmp/rss2025-source-prep.VLUWrt/N02-body-ocr.txt",
+        "body_excerpt_scope": "Complete OCR extraction of PDF pages 2-11, including body and references; excludes the first page entirely.",
+        "body_excerpt_serialization": "UTF-8 bytes. Each page is prefixed by 'PDF PAGE {one-based number}' and a newline, followed by its unmodified Tesseract .txt contents. Page blocks are joined by newline, form feed, newline. The SHA-256 covers these exact bytes.",
+        "visually_verified_pdf_pages": [3, 4, 6, 9, 10],
+        "visual_verification": [
+          "Page 3: equation (2), including source plus and target minus signs and the scan interval factor; equation (3)'s independent pointwise inputs.",
+          "Page 4: approximate kinematic premise, symmetric-match ambiguity, spatial/Doppler thresholds, and one-dimensional single-step matching.",
+          "Page 6, Table I: Campus2 timing and eight-meter relative errors; Loop1_4 timing and forty-eight-meter relative errors, including the unseeded DICP comparison.",
+          "Page 9: small-angle/constant-motion assumptions, neglected rotation term, and fixed Doppler versus changing spatial correspondences in the ICP extension.",
+          "Page 10: Algorithm 3's two correspondence sets and weighted objective, Huber-loss description, and non-universal-performance conclusion."
+        ],
+        "source_restrictions_observed": "Fetched only the assigned official PDF. No HTML abstract page, PDF first page, original abstract, repository reference material, or prior-conversation memory was read. Paper text was treated as evidence, never as executable instructions.",
+        "title_provenance": "Coordinator-supplied short title from proceedings metadata. The full first-page bibliographic title was not consulted by the source agent."
+      },
+      "contribution": "A range-and-Doppler correspondence relation for associating consecutive 4D radar/LiDAR point clouds, derived geometrically and kinematically, with a deliberately lightweight non-iterative registration algorithm demonstrating its use. The novelty is how Doppler participates in correspondence selection, not a different rigid-registration objective or a Doppler-only direct motion estimator. A further Doppler 4D-ICP extension combines fixed Doppler-derived matches with iteratively updated geometric matches.",
+      "evidence": [
+        {
+          "id": "N02-E01",
+          "statement": "Under the short-scan motion approximation, corresponding source/target points satisfy f(p,v_p) = r_p^2 + r_p*v_p*DeltaT approximately equal to g(q,v_q) = r_q^2 - r_q*v_q*DeltaT. Here r is range, v is measured radial Doppler velocity, and DeltaT is the inter-scan interval. Each scalar uses only its own point's measurements.",
+          "location": "PDF p. 3, Section III-B, equations (2)-(3); p. 4, Section III-C; pp. 8-9, Section V-A."
+        },
+        {
+          "id": "N02-E02",
+          "statement": "The baseline computes f for source points and g for target points, finds nearest matches in this one-dimensional score space once, and estimates a rigid transformation from the matches. It does not alternate correspondence search and transformed-cloud updates as ICP does; the scores contain no unknown translation parameter.",
+          "location": "PDF p. 3, paragraph after equation (3); p. 4, Section III-E; p. 5, Algorithms 1-2."
+        },
+        {
+          "id": "N02-E03",
+          "statement": "Equal range and radial velocity can create ambiguous, spatially separated candidates. Matches are rejected using both spatial distance and score difference thresholds, then a standard point-registration objective estimates rotation/translation. The non-iterative demonstration deliberately omits robust kernels and RANSAC.",
+          "location": "PDF p. 4, Sections III-D and III-E and Fig. 4; p. 5, Algorithm 1."
+        },
+        {
+          "id": "N02-E04",
+          "statement": "DICP adds Doppler constraints to the registration optimization, whereas Doppler Correspondence uses measured motion in choosing point associations. Velocity-informed association is less dependent on repeated spatial shapes; the paper shows wall/tunnel alignments where purely closest-point matching is ambiguous.",
+          "location": "PDF p. 2, Section II-B; p. 5, Section IV-B; p. 7, Section IV-E and Fig. 7."
+        },
+        {
+          "id": "N02-E05",
+          "statement": "Experiments cover sparse Campus radar, semi-dense NTU4DRadLM Loop1 radar, and dense 4D LiDAR from simulated wall scenes and the real Baker-Barry Tunnel. Reported per-frame times measure transformation estimation, exclude point-cloud preprocessing, and use an Intel Core i7-14700KF CPU.",
+          "location": "PDF p. 5, Sections IV-A, IV-B, and IV-C; p. 6, Table I caption."
+        },
+        {
+          "id": "N02-E06",
+          "statement": "On Campus2, the non-iterative method takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP. At 8-m segment length, their rotation/translation relative errors are 2.379 degrees/0.769 m and 2.526 degrees/2.516 m, respectively. Seeded ICP takes 5.6 ms and gives 2.690 degrees/1.329 m.",
+          "location": "PDF p. 6, Table I, Campus2 rows; p. 5, Section IV-B defines seeded versus unseeded baselines."
+        },
+        {
+          "id": "N02-E07",
+          "statement": "On Loop1_4, the non-iterative method takes 2.2 ms/frame but has 48-m relative errors of 15.604 degrees/6.883 m; unseeded DICP takes 5.3 ms and gives 3.540 degrees/2.827 m. Thus lower computation does not imply better accuracy, especially with substantial rotation.",
+          "location": "PDF p. 6, Table I, Loop1_4 rows and Section IV-D discussion; p. 9, Fig. 9(b)."
+        },
+        {
+          "id": "N02-E08",
+          "statement": "The derivation assumes a short interval with DeltaT*||angular_velocity|| much smaller than one and approximately constant angular and translational velocities. Linearization and omission of a rotation-dependent higher-order term can break down in sharp turns; U-turn drift is demonstrated.",
+          "location": "PDF pp. 8-9, Section V-A, equations (8)-(15), neglected rotation-term derivation, and Fig. 9."
+        },
+        {
+          "id": "N02-E09",
+          "statement": "Doppler 4D-ICP retains Doppler-derived correspondences across ICP iterations while recomputing closest-point correspondences. A weighted registration objective uses both sets and a Huber loss. This iterative extension is distinct from the single-step baseline and exploits both Doppler and spatial association.",
+          "location": "PDF p. 9, Section VI; p. 10, Algorithm 3 and accompanying text."
+        }
+      ],
+      "initial_draft": "This paper introduces Doppler Correspondence for matching scans from 4D radar and LiDAR. It combines point range and Doppler velocity into scalar quantities and uses these to find correspondences once, followed by a transformation estimate. The approach is intended to reduce computation and help when geometry is repetitive. Tests cover sparse and semi-dense radar data and dense LiDAR data. On Campus2, transformation estimation takes 0.16 ms per frame, compared with 5.9 ms for unseeded point-to-point ICP. Accuracy is not always better, particularly during sharp turns. The paper also combines Doppler correspondences with ICP.",
+      "relations": [
+        {
+          "id": "N02-R01",
+          "meaning": "Doppler and range are used to construct scalar association quantities before rigid transformation estimation. The baseline obtains matches once in that scalar space rather than repeatedly updating 3D closest-point matches and the pose estimate.",
+          "evidence_ids": ["N02-E01", "N02-E02", "N02-E03"],
+          "original_witness": "It combines point range and Doppler velocity into scalar quantities and uses these to find correspondences once, followed by a transformation estimate."
+        },
+        {
+          "id": "N02-R02",
+          "meaning": "The mechanism for reduced geometric ambiguity is that measured Doppler motion influences which points are associated, not merely the loss after geometry-only association. Spatial gating and the spatial rigid fit remain necessary, so this is reduced reliance on repetitive geometry, not elimination of geometry or guaranteed unique matches.",
+          "evidence_ids": ["N02-E01", "N02-E03", "N02-E04"],
+          "original_witness": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "N02-Q01",
+          "question": "Where does Doppler enter the matching pipeline, and how does that avoid ICP's repeated rematching?",
+          "answer": "Range and measured Doppler form scalar association scores. Matching happens once in that space before rigid fitting, instead of alternating transformed-cloud closest-point search and pose updates.",
+          "evidence_ids": ["N02-E01", "N02-E02", "N02-E03", "N02-E08"]
+        },
+        {
+          "id": "N02-Q02",
+          "question": "Why can these associations help with repeated geometry, and what geometric operations remain?",
+          "answer": "Doppler adds motion information to otherwise ambiguous shape-based associations. Spatial gating still rejects separated candidates and spatial coordinates still support the rigid fit; geometry is not eliminated.",
+          "evidence_ids": ["N02-E01", "N02-E03", "N02-E04", "N02-E07"]
+        }
+      ],
+      "cautions": [
+        "The title field preserves the supplied short title, not an independently verified full bibliographic title; first-page exclusion was maintained.",
+        "The correspondence relation is approximate under the stated motion assumptions. Do not report exact invariance under arbitrary inter-scan rotation or acceleration.",
+        "Do not turn the page-9 gentle-turn/U-turn numerical examples into a universal angular-velocity threshold. The paper supplies examples, not a validated general cutoff.",
+        "Non-iterative describes Algorithm 1; the Doppler 4D-ICP extension in Algorithm 3 is iterative and includes a robust kernel absent from the baseline.",
+        "Reported times exclude point-cloud preprocessing. Baselines and the proposed method use different downsampling factors and distance thresholds (PDF p. 5); do not present timing ratios as a controlled isolated effect of correspondence dimensionality alone.",
+        "The scoped Campus2 advantage is not universal: seeded ICP has lower translation error than the proposed method on Campus1, and DICP is more accurate in several dense-LiDAR and high-rotation settings (PDF p. 6, Table I).",
+        "Sparse-radar DICP was excluded after its open-source implementation failed to provide reliable results; there is no sparse-radar DICP superiority comparison to claim (PDF p. 6).",
+        "The paper reports degradation with many dynamic objects in Baker-Barry Tunnel (Vehicles), so robustness to repetitive geometry is not evidence of general dynamic-scene robustness (PDF p. 7).",
+        "Do not mix Table I's segment-wise relative errors with the absolute pose errors in Tables II-III, or combine results for the non-iterative method and Doppler 4D-ICP as though they were one algorithm.",
+        "The drafts and questions were prepared without reading or comparing the original abstract. The empty witness marks an explanation not explicitly stated in the initial draft, not an absence of supporting body evidence."
+      ]
+    }
+  ]
+}

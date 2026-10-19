@@ -5,13 +5,25 @@ evidence of improved conference acceptance. Broad coverage and subsequent evalua
 calibration still do not establish human effectiveness. Software tests
 do not measure prose quality. No model weights are trained by the skill.
 
-**Current status (2026-10-13): no stable writing-quality improvement is demonstrated.**
-The latest selected AI-spec pilot is now complete: candidate 3 / baseline 10 /
-tie 11, with a failed continuation gate and no runtime promotion.
-[Current diagnosis](docs/writing-effect-status-2026-10-13.md) and
-[the new report](docs/ai-spec-pilot-evaluation.md) separate writing outcomes
-from successful engineering checks. The original prepared protocol is retained;
-[the executed archive](evals/ai-spec-pilot/README.md) contains frozen inputs and raw responses.
+**Current status (2026-10-19): no stable writing-quality improvement is demonstrated.**
+The latest explanation-preserving pilot improves model answer recovery, but
+fails preference and fidelity gates. New contract checks are engineering changes,
+not quality promotion. Conditions differ across rounds and are not pooled.
+
+- [Explanation-preserving guide ablation](evals/explanation-pilot/README.md):
+  four fresh-to-this-repository RSS 2025 papers and twelve generated abstracts.
+  Against a 150-word-budget legacy control, the candidate is 3 / 2 / 3 overall;
+  against hard no-growth compression it is 8 / 0 / 0. Audited model recovery is
+  8/8 versus both controls' 6/8, but candidate and relaxed control each confuse
+  whole-dataset with training-population counts in one passage. Preference and
+  fidelity gates fail. This tests a guide, not the complete v3 role loop.
+  [All four versions](evals/explanation-pilot/comparison.html).
+
+- [Compression-first pilot](evals/compression-pilot/README.md): six RSS 2025
+  papers, twelve Abstract/Results units, thirty-six revisions. Candidate versus
+  previous guidance is 9 / 15 / 0 overall, Abstracts 2 / 10 / 0, Results 7 / 5 / 0.
+  The author-original comparison is separately exploratory and length-confounded.
+  The frozen gate fails; shorter abstracts lose important explanatory substance.
 
 - [Current AI-spec pilot](docs/ai-spec-pilot-evaluation.md): DROID and SIMPLER,
   two replicates and three units, 12 pairs/24 final passages. Abstract votes

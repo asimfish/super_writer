@@ -132,6 +132,42 @@ Changed upstream inputs invalidate old receipts. Fork a new run and preserve the
 old one rather than relabeling old outputs. Hashes are not signatures or proof
 that another agent produced the content.
 
+### Schema 3: Meaning and Preservation
+
+Use v3 for new explanation-preserving revision runs. V1/v2 keep their output
+schemas; existing events are never migrated or re-hashed. Add `relations` to the
+v2 benchmark, with 1-3 ID-keyed records containing `meaning`, nonempty author
+`evidence_ids`, and `original_witness` (an exact original span, or empty for an
+omission). Select indispensable explanations, not every source fact. Keep author
+co-contributions in `contribution` before allocating space. For example:
+
+```json
+"relations": {
+  "M1": {
+    "meaning": "Update observed cells instead of rebuilding the entire map.",
+    "evidence_ids": ["E1"],
+    "original_witness": ""
+  }
+}
+```
+
+V3 permits `budget.max_delta_words: null` for an absolute-only word cap; a numeric
+cap, including explicit no-expansion `0`, remains binding. Keep the other budget
+fields. Set actual author/venue constraints or a provisional editorial budget,
+not a universal requirement to shorten. All benchmark attempts count relative to
+the original draft, even after returning to a writer.
+
+Writer and reviewer add `relation_checks` keyed by every relation, with `status`
+(`stated`, `entailed`, `missing`), an exact prose `witness` (empty for missing),
+and a separate `readback`. An explanation in notes is not manuscript realization.
+The reviewer does not receive writer checks. Each reviewer criterion assessment
+adds `original_status` and `original_witness`, independently assessed from the
+original. Acceptance cannot introduce a gap outside priority criteria, reclassify
+a satisfied criterion as inapplicable, leave a candidate criterion unassessed,
+or leave a declared meaning relation missing. A pre-existing lower-priority gap
+can remain. Semantic judgments still require editorial inspection: the checker
+can verify witness presence and reported status, not entailment or reader comprehension.
+
 Reviewer packets omit the diagnosis, proposal and previous review, so the reviewer
 must recover meaning from prose. They include the original passage for a subsequent
 non-blind editorial comparison (`better`, `tie`, `worse`, `not_assessed`). Other packets contain only stage-relevant

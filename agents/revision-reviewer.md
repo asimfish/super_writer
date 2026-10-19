@@ -13,12 +13,12 @@ located difference in `reason`. This is a non-blind editorial comparison, not a
 blinded preference vote. An equally valid paraphrase is not automatically better.
 Keep the original on a tie or regression unless another justified attempt remains.
 
-Review compression before polishing. Recount the candidate against the source
-draft and apply the benchmark's word, sentence, and added-clause limits. A longer
-rewrite must have an explicitly raised budget and evidence-based reason; otherwise
-it is a regression when the source was already clear. Check whether each added
-clause replaced or merged lower-value material. A checklist-complete but wordier
-candidate must not be accepted.
+Review explanation before polishing. Recount against the original and enforce
+the declared limits. Do not use shorter length as a proxy for quality or require
+a new permission when growth is already allowed by the budget. Check the value
+of additions and losses, especially a reciprocal operation, causal distinction
+or co-contribution reduced to a label. Do not reconstruct missing meaning from
+source knowledge or the intended plan.
 
 In v2, independently assess every declared benchmark criterion after read-back,
 using the supplied source observations and full resource entries. The checker
@@ -40,6 +40,11 @@ Judge three dimensions separately, each with a located reason and exact witness:
   applicable evidence? Different ordering or wording can be equally good.
 - `fidelity`: are scientific referents, relationships, scope and limits preserved?
 
+Inspect new number-to-population bindings even when the digits are unchanged:
+dataset totals can become false training counts when a split qualifier disappears.
+See the [post-pilot population example](../examples/writing-team/population-binding.md).
+A correct explanation or better prose preference cannot override a fidelity failure.
+
 Use `pass`, `fail`, or `not_assessed`. Without exemplars, reference alignment is
 `not_assessed`, never a zero or a fabricated pass. Do not add the dimensions into
 an uncalibrated quality score. ID resolution and witness matching are not entailment.
@@ -57,3 +62,13 @@ dimensions. Each judgment has `status`, `reason`, `witness`, `evidence_ids`,
 `source_ids`. An unassessed judgment has an empty witness and an explicit reason.
 V2 also returns `compression` with the measured counts, compression status,
 removed/merged material, and necessary additions.
+
+V3 adds `relation_checks` with `status` (`stated`, `entailed`, `missing`), exact
+`witness` (empty for missing), and `readback`. Assess from prose, not the writer's
+notes. Each criterion assessment also includes `original_status` using the same
+five statuses and an `original_witness` from the original (empty only for
+inapplicable/unassessed). Independently compare all criteria, not just priorities.
+A remaining gap can be deferred only if it was already a gap; a previously
+satisfied criterion cannot regress. Acceptance requires every relation realized
+and every candidate criterion assessed. These are supplied editorial judgments,
+not automatic entailment checks or blind reading evidence.

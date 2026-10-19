@@ -2,10 +2,22 @@
   "skill": "super-writer",
   "activation_cases": [
     {
+      "id": "meaning-before-compression",
+      "prompt": "Use $super-writer to improve this abstract against the supplied exemplars. The last rewrite replaced the explanation with module names. Up to 150 words is fine.",
+      "should_activate": true,
+      "expected_behavior": "For the requested comparative loop, select the v3 benchmark: ground a few indispensable meaning relations in author evidence, retain essential co-contributions, allow growth within the explicit cap, and independently check original-strength preservation. Do not claim witness matching proves semantic quality."
+    },
+    {
+      "id": "explicit-no-expansion-remains-binding",
+      "prompt": "Use super-writer to structurally revise this short abstract, but do not exceed its current word count.",
+      "should_activate": true,
+      "expected_behavior": "Respect the explicit relative cap even under explanation-preserving compression. Trade lower-value detail for essential explanation or explain the unresolved constraint; never silently relax the author's limit."
+    },
+    {
       "id": "clear-but-weaker-section",
       "prompt": "这段摘要没有语病也很好懂，但只是列模块和数字。用我们的优秀论文范例和规范库找差距，并通过角色协作改进，不要只做清晰度检查。",
       "should_activate": true,
-      "expected_behavior": "Use a v2 contribution-matched section benchmark with actual selected resources and located exemplar choices. Compare information selection, argument, evidence, expression and applicable format as well as clarity; trace selected criteria to edits and final prose."
+      "expected_behavior": "Use a v3 contribution-matched section benchmark with actual selected resources and located exemplar choices. Compare information selection, argument, evidence, expression and applicable format as well as clarity; preserve indispensable relations and original strengths while tracing selected criteria to edits and final prose."
     },
     {
       "id": "valid-exemplar-alternative",

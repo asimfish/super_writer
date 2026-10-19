@@ -32,7 +32,9 @@ def word_count(value: str) -> int:
 
 
 def sentence_count(value: str) -> int:
-    return max(1, len(re.findall(r"[.!?。！？]+", value))) if value.strip() else 0
+    # Decimal metrics are not sentence boundaries; this remains a punctuation heuristic.
+    prose = re.sub(r"(?<=\d)\.(?=\d)", "", value)
+    return max(1, len(re.findall(r"[.!?。！？]+", prose))) if prose.strip() else 0
 
 
 def string_list(value: object, message: str) -> None:
@@ -47,9 +49,11 @@ def ids(values: object, pool: dict) -> None:
             "Duplicate or unknown benchmark ID")
 
 
-def load_resources(profile: dict, exemplars: dict) -> dict:
+def load_resources(profile: dict, exemplars: dict, *, schema_version: int = 2,
+                   evidence: dict | None = None) -> dict:
     fields(profile, "section contribution target_answer priority_criteria protocol variant "
-                   "ai_spec_ids library_ids budget criteria")
+                   "ai_spec_ids library_ids budget criteria"
+           + (" relations" if schema_version == 3 else ""))
     for key in ("section", "contribution", "protocol", "variant"):
         nonempty(profile[key])
     nonempty(profile["target_answer"])
@@ -80,11 +84,25 @@ def load_resources(profile: dict, exemplars: dict) -> dict:
     budget = profile["budget"]
     fields(budget, "max_words max_delta_words max_sentences max_added_clauses replacement_rule")
     for key in ("max_words", "max_delta_words", "max_sentences", "max_added_clauses"):
+        if schema_version == 3 and key == "max_delta_words" and budget[key] is None:
+            continue
         require(type(budget[key]) is int and budget[key] >= 0,
                 f"{key} must be a non-negative integer")
     require(budget["max_words"] > 0 and budget["max_sentences"] > 0,
             "A writing budget needs positive word and sentence limits")
     nonempty(budget["replacement_rule"])
+    if schema_version == 3:
+        relations = profile["relations"]
+        require(isinstance(relations, dict) and 1 <= len(relations) <= 3,
+                "Select 1..3 indispensable meaning relations, not a fact inventory")
+        for ident, relation in relations.items():
+            nonempty(ident)
+            fields(relation, "meaning evidence_ids original_witness")
+            nonempty(relation["meaning"])
+            ids(relation["evidence_ids"], evidence or {})
+            require(bool(relation["evidence_ids"]), "Meaning relations need author evidence")
+            require(isinstance(relation["original_witness"], str),
+                    "A relation's original_witness must be text or empty for an omission")
     for ident, criterion in criteria.items():
         nonempty(ident)
         fields(criterion, "dimension expectation applicability resource_ids source_ids")
@@ -99,12 +117,14 @@ def load_resources(profile: dict, exemplars: dict) -> dict:
     return resources
 
 
-def assess(values: dict, context: dict) -> None:
+def assess(values: dict, context: dict, *, reviewer: bool = False) -> None:
     criteria = context["benchmark"]["criteria"]
     require(isinstance(values, dict) and set(values) == set(criteria),
             "Assess every declared criterion exactly once")
+    preserve = reviewer and "relations" in context["benchmark"]
     for assessment in values.values():
-        fields(assessment, "status current difference draft_witness evidence_ids")
+        fields(assessment, "status current difference draft_witness evidence_ids"
+               + (" original_status original_witness" if preserve else ""))
         require(isinstance(assessment["status"], str) and assessment["status"] in ASSESSMENTS,
                 "Unknown comparison assessment")
         nonempty(assessment["current"])
@@ -116,6 +136,31 @@ def assess(values: dict, context: dict) -> None:
         else:
             nonempty(witness)
             require(witness in context["draft"], "Comparison witness is not in the draft")
+        if preserve:
+            require(assessment["original_status"] in ASSESSMENTS,
+                    "Unknown original comparison assessment")
+            original_witness = assessment["original_witness"]
+            if assessment["original_status"] in ("not_applicable", "not_assessed"):
+                require(original_witness == "", "Unassessed original has no witness")
+            else:
+                nonempty(original_witness)
+                require(original_witness in context["original_draft"],
+                        "Original assessment witness is not in the source draft")
+
+
+def check_relations(values: dict, context: dict, prose: str) -> None:
+    require(isinstance(values, dict) and set(values) == set(context["benchmark"]["relations"]),
+            "Account for every declared meaning relation exactly once")
+    for item in values.values():
+        fields(item, "status witness readback")
+        require(item["status"] in ("stated", "entailed", "missing"),
+                "Unknown meaning-relation status")
+        nonempty(item["readback"])
+        if item["status"] == "missing":
+            require(item["witness"] == "", "A missing relation has no prose witness")
+        else:
+            nonempty(item["witness"])
+            require(item["witness"] in prose, "Relation witness is not in the prose")
 
 
 def validate_compression(value: dict, context: dict, *, reviewer: bool) -> None:
@@ -147,19 +192,27 @@ def validate_compression(value: dict, context: dict, *, reviewer: bool) -> None:
     budget = context["benchmark"]["budget"]
     require(expected_revision <= budget["max_words"],
             "Revision exceeds the section word budget")
-    require(expected_revision - expected_original <= budget["max_delta_words"],
-            "Revision exceeds the allowed change in word count")
+    if budget["max_delta_words"] is not None:
+        require(expected_revision - expected_original <= budget["max_delta_words"],
+                "Revision exceeds the allowed change in word count")
     require(len(value["added_clauses"]) <= budget["max_added_clauses"],
             "Revision adds more clauses than the edit budget allows")
-    if expected_revision != expected_original:
+    if expected_revision < expected_original:
         require(value["removed_or_merged"],
-                "A changed-length revision must name what it removed or merged")
+                "A shorter revision must name what it removed or merged")
+    elif expected_revision > expected_original:
+        require(value["removed_or_merged"] or value["added_clauses"],
+                "An expanded revision must account for its editorial change")
 
 
 def validate_handoff(role: str, output: dict, context: dict) -> None:
     criteria = context["benchmark"]["criteria"]
+    meaning_contract = "relations" in context["benchmark"]
+    if meaning_contract and role in ("writer", "reviewer"):
+        check_relations(output["relation_checks"], context,
+                        output["text"] if role == "writer" else context["draft"])
     if role in ("gap_finder", "reviewer"):
-        assess(output["assessments"], context)
+        assess(output["assessments"], context, reviewer=role == "reviewer")
         statuses = {row["status"] for row in output["assessments"].values()}
         if role == "gap_finder":
             ids(output["selected_criteria"], criteria)
@@ -185,6 +238,19 @@ def validate_handoff(role: str, output: dict, context: dict) -> None:
             else:
                 require(not output["selected_criteria"], "A stopped diagnosis cannot select edits")
         elif output["decision"] == "accept":
+            if meaning_contract:
+                require(all(item["status"] != "missing"
+                            for item in output["relation_checks"].values()),
+                        "Missing meaning relations block acceptance")
+                for row in output["assessments"].values():
+                    require(row["status"] != "not_assessed",
+                            "Unassessed candidate criteria block v3 acceptance")
+                    if row["status"] == "gap":
+                        require(row["original_status"] == "gap",
+                                "A newly introduced gap cannot be deferred")
+                    if row["original_status"] in ("meets", "valid_alternative"):
+                        require(row["status"] in ("meets", "valid_alternative"),
+                                "A previously satisfied criterion cannot regress")
             priority_statuses = {output["assessments"][ident]["status"]
                                  for ident in context["benchmark"]["priority_criteria"]}
             require(not priority_statuses & {"gap", "not_assessed"},

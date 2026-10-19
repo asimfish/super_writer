@@ -52,8 +52,8 @@ def validate_input(run: dict) -> None:
     require(isinstance(run, dict), "Run must be a JSON object")
     version = run.get("schema_version")
     fields(run, "schema_version task draft evidence exemplars max_steps events"
-           + (" benchmark" if version == 2 else ""))
-    require(type(version) is int and version in (1, 2),
+           + (" benchmark" if version in (2, 3) else ""))
+    require(type(version) is int and version in (1, 2, 3),
             "Unsupported schema_version")
     text(run["task"])
     text(run["draft"])
@@ -79,6 +79,8 @@ def validate_output(role: str, out: dict, context: dict) -> None:
                   "proposer": " criterion_ids compression_plan",
                   "writer": " implementations compression", "reviewer": " assessments compression"}
     extension = extensions[role] if "benchmark" in context else ""
+    if "relations" in context.get("benchmark", {}) and role in ("writer", "reviewer"):
+        extension += " relation_checks"
     if role == "gap_finder":
         fields(out, "status diagnosis draft_witness reader_question evidence_ids source_ids" + extension)
         require(out["status"] in ("actionable", "no_change", "needs_evidence", "needs_sources"),
@@ -157,8 +159,13 @@ def instructions(role: str) -> list[dict]:
 def inspect_run(run: dict) -> dict:
     """Replay handoffs. A hash links inputs, not authorship or semantic truth."""
     validate_input(run)
-    resources = (writing_benchmark.load_resources(run["benchmark"], run["exemplars"])
-                 if run["schema_version"] == 2 else None)
+    resources = (writing_benchmark.load_resources(run["benchmark"], run["exemplars"],
+                  schema_version=run["schema_version"], evidence=run["evidence"])
+                 if run["schema_version"] in (2, 3) else None)
+    if run["schema_version"] == 3:
+        for relation in run["benchmark"]["relations"].values():
+            require(not relation["original_witness"] or relation["original_witness"] in run["draft"],
+                    "Relation original_witness is not in the source draft")
     initial = {key: value for key, value in run.items() if key != "events"}
     role, status = "gap_finder", "ready"
     draft, gap, proposal, feedback, queries = run["draft"], None, None, None, []
@@ -174,6 +181,8 @@ def inspect_run(run: dict) -> dict:
                    "evidence": run["evidence"], "exemplars": run["exemplars"]}
         if resources is not None:
             context.update(benchmark=run["benchmark"], writing_resources=resources)
+            # A returned writer must not ratchet the relative budget from its last attempt.
+            context["original_draft"] = run["draft"]
             context["benchmark_basis"] = ("standards_and_exemplars" if run["exemplars"] else "standards_only")
         if role == "reviewer":
             # Read-back is independent of the proposed explanation, not of host memory.

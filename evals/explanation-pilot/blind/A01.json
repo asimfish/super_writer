@@ -1,0 +1,1080 @@
+{
+  "auditor_id": "A01",
+  "instruction": "Audit actual reader answers against BOTH the supplied prose and source evidence. supported means the required relationship is recoverable from prose and the answer faithful to evidence. missing means the needed relation is absent even if the reader correctly says not specified. reader_added means the reader supplied source-correct specificity not stated/necessarily entailed by prose. contradicted means the text/answer conflicts with evidence. Do not credit a source-aware guess. For each answer return id,status (supported/missing/contradicted/reader_added),reason,witness (exact prose span, empty allowed). Separately flag consequential factual errors in each prose, not missing optional details. Return JSON {auditor_id,cases:[{id,answers:[...],factual_errors:[{claim,evidence_ids,reason}]}]}. No condition identities/preferences supplied; no other files, searches or agents.",
+  "cases": [
+    {
+      "id": "T02",
+      "text": "XM couples certifiable scaled bundle adjustment with scalable optimization. Learned depth lifts matched keypoints into 3D, with per-frame scales accommodating depth error during joint pose and landmark estimation. An empirically tight semidefinite relaxation supplies optimality bounds; a low-rank Riemannian staircase tests dual certificates to certify SDP solutions or increase rank and escape local minima. A C++/CUDA trust-region implementation solves BAL-1934 in 2.09 seconds versus MANOPT's 236.46 on identical lifted observations, excluding preprocessing. XM-SfM filters outliers and initializes CERES refinement of the original reprojection objective.",
+      "evidence": [
+        {
+          "id": "N03-E01",
+          "statement": "Conventional bundle adjustment jointly estimates camera poses and landmarks from 2D keypoints; reprojection and pose constraints make it nonconvex, while large view graphs make optimization expensive.",
+          "location": "PDF p. 2, Section I, 'Classical BA formulation' and 'Optimization challenges', equation (1)."
+        },
+        {
+          "id": "N03-E02",
+          "statement": "Learned metric depth lifts 2D keypoints to camera-frame 3D points. A positive per-frame scale adjusts predicted depth, and camera-to-global poses align those scaled points with jointly estimated landmarks using 3D distances instead of reprojection.",
+          "location": "PDF p. 2, 'BA with learned depth', equations (2)-(3) and footnote 2; visually checked."
+        },
+        {
+          "id": "N03-E03",
+          "statement": "Eliminating translations and landmarks yields a scaled-rotation problem, then a QCQP and SDP relaxation. Rank-three tightness recovers a QCQP optimum; recovering an SBA optimum additionally requires proper rotations. The SDP bound and a feasible SBA solution bound suboptimality.",
+          "location": "PDF pp. 3-4, Propositions 2, 3, and 5; equations (9)-(16)."
+        },
+        {
+          "id": "N03-E04",
+          "statement": "Burer-Monteiro factorization replaces the full SDP matrix with a low-rank factor. The staircase tests a dual matrix for positive semidefiniteness; failure supplies a negative-eigenvalue descent direction after increasing rank, rather than accepting a bad local minimum.",
+          "location": "PDF pp. 5-6, Section III-A, Algorithm 1 and Theorems 8-10; PDF p. 12, Figure 10's rank-3/rank-4 example; Algorithm 1 visually checked."
+        },
+        {
+          "id": "N03-E05",
+          "statement": "XM implements Riemannian trust-region optimization with truncated conjugate gradients directly in C++/CUDA, using analytic Hessian-vector products, cuBLAS, and custom batched manifold operations. Almost all reported staircase runs terminate at rank three or four.",
+          "location": "PDF p. 6, end of Section III-A and Section III-B; PDF p. 7, Section III summary."
+        },
+        {
+          "id": "N03-E06",
+          "statement": "XM-SfM combines feature matching, learned depth, outlier filtering, and XM. Because depth noise can impair reconstruction, XM's poses and landmarks warm-start CERES on the original 2D reprojection objective.",
+          "location": "PDF p. 7, Section IV, especially 'Depth estimation', 'XM solver', and 'CERES refinement'; PDF p. 8, Figure 3."
+        },
+        {
+          "id": "N03-E07",
+          "statement": "The BAL solver experiment gives XM and MANOPT the same lifted 3D observations, described as accurate but slightly noisy. CERES receives 2D observations and is tested with several initialization conditions; this is not a learned-depth end-to-end SfM comparison.",
+          "location": "PDF p. 7, Section V-A, 'Setup and baselines'; PDF p. 8, Table I and results paragraph."
+        },
+        {
+          "id": "N03-E08",
+          "statement": "On BAL-1934, with 1,934 cameras and 67,594 landmarks, XM solver time is 2.09 s versus MANOPT's 236.46 s on the same problem; each has a separately reported 69.15 s preprocessing time.",
+          "location": "PDF p. 8, Table I, BAL-1934 column, MANOPT and XM rows; visually checked."
+        },
+        {
+          "id": "N03-E09",
+          "statement": "For IMC Rome-2063, filtered two-pass XM plus CERES takes 19.17 + 300.16 s of solving versus GLOMAP's 9,813.04 s; ATE-T is 0.021 versus 0.003. Preprocessing is separate: 4,877.89 versus 3,459.04 s.",
+          "location": "PDF p. 12, Table VII, Rome-2063 row; visually checked."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N03-Q01",
+          "question": "What does learned depth change about the measurements and residuals being optimized, and what prediction error do the per-frame scales address?",
+          "answer": "Learned depth lifts 2D matches into 3D points; frame scales adjust depth prediction error. Optimization aligns these points to landmarks using 3D distances instead of 2D reprojection residuals.",
+          "evidence_ids": [
+            "N03-E01",
+            "N03-E02",
+            "N03-E06"
+          ]
+        },
+        {
+          "id": "N03-Q02",
+          "question": "What does the SDP supply, and how can the low-rank staircase move beyond an uncertified local solution?",
+          "answer": "The SDP supplies bounds and a dual certificate; low-rank GPU optimization reduces cost. An unsuccessful certificate test leads to higher-rank descent, not acceptance of a local factor optimum.",
+          "evidence_ids": [
+            "N03-E03",
+            "N03-E04",
+            "N03-E05",
+            "N03-E08"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N03-Q01",
+          "answer": "not specified",
+          "witness": ""
+        },
+        {
+          "id": "N03-Q02",
+          "answer": "The SDP supplies optimality bounds. The low-rank staircase tests dual certificates, either certifying an SDP solution or increasing rank to escape local minima.",
+          "witness": "An empirically tight semidefinite relaxation supplies optimality bounds; a low-rank Riemannian staircase tests dual certificates to certify SDP solutions or increase rank and escape local minima."
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "text": "We introduce Doppler Correspondence, a geometrically and kinematically derived range\u2013Doppler relation for associating consecutive 4D radar/LiDAR scans under a short-scan approximation. Doppler-informed scalar matching reduces dependence on repetitive geometry; spatially gated matches are computed once before standard rigid registration. On Campus2, transformation estimation excluding preprocessing takes 0.16 ms/frame versus 5.9 for unseeded point-to-point ICP. Accuracy is not consistently better, and the approximation degrades during sharp turns. Doppler 4D-ICP extends the method by retaining Doppler-derived matches while iteratively updating geometric matches.",
+      "evidence": [
+        {
+          "id": "N02-E01",
+          "statement": "Under the short-scan motion approximation, corresponding source/target points satisfy f(p,v_p) = r_p^2 + r_p*v_p*DeltaT approximately equal to g(q,v_q) = r_q^2 - r_q*v_q*DeltaT. Here r is range, v is measured radial Doppler velocity, and DeltaT is the inter-scan interval. Each scalar uses only its own point's measurements.",
+          "location": "PDF p. 3, Section III-B, equations (2)-(3); p. 4, Section III-C; pp. 8-9, Section V-A."
+        },
+        {
+          "id": "N02-E02",
+          "statement": "The baseline computes f for source points and g for target points, finds nearest matches in this one-dimensional score space once, and estimates a rigid transformation from the matches. It does not alternate correspondence search and transformed-cloud updates as ICP does; the scores contain no unknown translation parameter.",
+          "location": "PDF p. 3, paragraph after equation (3); p. 4, Section III-E; p. 5, Algorithms 1-2."
+        },
+        {
+          "id": "N02-E03",
+          "statement": "Equal range and radial velocity can create ambiguous, spatially separated candidates. Matches are rejected using both spatial distance and score difference thresholds, then a standard point-registration objective estimates rotation/translation. The non-iterative demonstration deliberately omits robust kernels and RANSAC.",
+          "location": "PDF p. 4, Sections III-D and III-E and Fig. 4; p. 5, Algorithm 1."
+        },
+        {
+          "id": "N02-E04",
+          "statement": "DICP adds Doppler constraints to the registration optimization, whereas Doppler Correspondence uses measured motion in choosing point associations. Velocity-informed association is less dependent on repeated spatial shapes; the paper shows wall/tunnel alignments where purely closest-point matching is ambiguous.",
+          "location": "PDF p. 2, Section II-B; p. 5, Section IV-B; p. 7, Section IV-E and Fig. 7."
+        },
+        {
+          "id": "N02-E05",
+          "statement": "Experiments cover sparse Campus radar, semi-dense NTU4DRadLM Loop1 radar, and dense 4D LiDAR from simulated wall scenes and the real Baker-Barry Tunnel. Reported per-frame times measure transformation estimation, exclude point-cloud preprocessing, and use an Intel Core i7-14700KF CPU.",
+          "location": "PDF p. 5, Sections IV-A, IV-B, and IV-C; p. 6, Table I caption."
+        },
+        {
+          "id": "N02-E06",
+          "statement": "On Campus2, the non-iterative method takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP. At 8-m segment length, their rotation/translation relative errors are 2.379 degrees/0.769 m and 2.526 degrees/2.516 m, respectively. Seeded ICP takes 5.6 ms and gives 2.690 degrees/1.329 m.",
+          "location": "PDF p. 6, Table I, Campus2 rows; p. 5, Section IV-B defines seeded versus unseeded baselines."
+        },
+        {
+          "id": "N02-E07",
+          "statement": "On Loop1_4, the non-iterative method takes 2.2 ms/frame but has 48-m relative errors of 15.604 degrees/6.883 m; unseeded DICP takes 5.3 ms and gives 3.540 degrees/2.827 m. Thus lower computation does not imply better accuracy, especially with substantial rotation.",
+          "location": "PDF p. 6, Table I, Loop1_4 rows and Section IV-D discussion; p. 9, Fig. 9(b)."
+        },
+        {
+          "id": "N02-E08",
+          "statement": "The derivation assumes a short interval with DeltaT*||angular_velocity|| much smaller than one and approximately constant angular and translational velocities. Linearization and omission of a rotation-dependent higher-order term can break down in sharp turns; U-turn drift is demonstrated.",
+          "location": "PDF pp. 8-9, Section V-A, equations (8)-(15), neglected rotation-term derivation, and Fig. 9."
+        },
+        {
+          "id": "N02-E09",
+          "statement": "Doppler 4D-ICP retains Doppler-derived correspondences across ICP iterations while recomputing closest-point correspondences. A weighted registration objective uses both sets and a Huber loss. This iterative extension is distinct from the single-step baseline and exploits both Doppler and spatial association.",
+          "location": "PDF p. 9, Section VI; p. 10, Algorithm 3 and accompanying text."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N02-Q01",
+          "question": "Where does Doppler enter the matching pipeline, and how does that avoid ICP's repeated rematching?",
+          "answer": "Range and measured Doppler form scalar association scores. Matching happens once in that space before rigid fitting, instead of alternating transformed-cloud closest-point search and pose updates.",
+          "evidence_ids": [
+            "N02-E01",
+            "N02-E02",
+            "N02-E03",
+            "N02-E08"
+          ]
+        },
+        {
+          "id": "N02-Q02",
+          "question": "Why can these associations help with repeated geometry, and what geometric operations remain?",
+          "answer": "Doppler adds motion information to otherwise ambiguous shape-based associations. Spatial gating still rejects separated candidates and spatial coordinates still support the rigid fit; geometry is not eliminated.",
+          "evidence_ids": [
+            "N02-E01",
+            "N02-E03",
+            "N02-E04",
+            "N02-E07"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N02-Q01",
+          "answer": "Doppler informs scalar matching before rigid registration. Spatially gated matches are computed once, so the baseline does not repeatedly recompute correspondences.",
+          "witness": "Doppler-informed scalar matching reduces dependence on repetitive geometry; spatially gated matches are computed once before standard rigid registration."
+        },
+        {
+          "id": "N02-Q02",
+          "answer": "Doppler-informed scalar matching reduces reliance on repetitive geometry. Spatial gating and standard rigid registration remain.",
+          "witness": "Doppler-informed scalar matching reduces dependence on repetitive geometry; spatially gated matches are computed once before standard rigid registration."
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "text": "We introduce Doppler Correspondence, a geometrically and kinematically derived relation for associating consecutive 4D radar/LiDAR point clouds. Under approximately constant velocities and small inter-scan rotation, corresponding points have approximately equal scalar scores computed independently from range and radial Doppler velocity. Thus, measured motion guides association before rigid registration, reducing reliance on repetitive geometry rather than changing the registration objective. A lightweight baseline matches scores once, rejects candidates using spatial and score thresholds, and fits a rigid transformation without iterative correspondence updates. Across radar and LiDAR evaluations, Campus2 transformation estimation takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP, excluding preprocessing. Accuracy gains are not uniform: sharp turns can invalidate the approximation and cause drift. Doppler 4D-ICP extends the approach by retaining Doppler-derived matches while iteratively updating geometric matches within a weighted robust registration objective.",
+      "evidence": [
+        {
+          "id": "N02-E01",
+          "statement": "Under the short-scan motion approximation, corresponding source/target points satisfy f(p,v_p) = r_p^2 + r_p*v_p*DeltaT approximately equal to g(q,v_q) = r_q^2 - r_q*v_q*DeltaT. Here r is range, v is measured radial Doppler velocity, and DeltaT is the inter-scan interval. Each scalar uses only its own point's measurements.",
+          "location": "PDF p. 3, Section III-B, equations (2)-(3); p. 4, Section III-C; pp. 8-9, Section V-A."
+        },
+        {
+          "id": "N02-E02",
+          "statement": "The baseline computes f for source points and g for target points, finds nearest matches in this one-dimensional score space once, and estimates a rigid transformation from the matches. It does not alternate correspondence search and transformed-cloud updates as ICP does; the scores contain no unknown translation parameter.",
+          "location": "PDF p. 3, paragraph after equation (3); p. 4, Section III-E; p. 5, Algorithms 1-2."
+        },
+        {
+          "id": "N02-E03",
+          "statement": "Equal range and radial velocity can create ambiguous, spatially separated candidates. Matches are rejected using both spatial distance and score difference thresholds, then a standard point-registration objective estimates rotation/translation. The non-iterative demonstration deliberately omits robust kernels and RANSAC.",
+          "location": "PDF p. 4, Sections III-D and III-E and Fig. 4; p. 5, Algorithm 1."
+        },
+        {
+          "id": "N02-E04",
+          "statement": "DICP adds Doppler constraints to the registration optimization, whereas Doppler Correspondence uses measured motion in choosing point associations. Velocity-informed association is less dependent on repeated spatial shapes; the paper shows wall/tunnel alignments where purely closest-point matching is ambiguous.",
+          "location": "PDF p. 2, Section II-B; p. 5, Section IV-B; p. 7, Section IV-E and Fig. 7."
+        },
+        {
+          "id": "N02-E05",
+          "statement": "Experiments cover sparse Campus radar, semi-dense NTU4DRadLM Loop1 radar, and dense 4D LiDAR from simulated wall scenes and the real Baker-Barry Tunnel. Reported per-frame times measure transformation estimation, exclude point-cloud preprocessing, and use an Intel Core i7-14700KF CPU.",
+          "location": "PDF p. 5, Sections IV-A, IV-B, and IV-C; p. 6, Table I caption."
+        },
+        {
+          "id": "N02-E06",
+          "statement": "On Campus2, the non-iterative method takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP. At 8-m segment length, their rotation/translation relative errors are 2.379 degrees/0.769 m and 2.526 degrees/2.516 m, respectively. Seeded ICP takes 5.6 ms and gives 2.690 degrees/1.329 m.",
+          "location": "PDF p. 6, Table I, Campus2 rows; p. 5, Section IV-B defines seeded versus unseeded baselines."
+        },
+        {
+          "id": "N02-E07",
+          "statement": "On Loop1_4, the non-iterative method takes 2.2 ms/frame but has 48-m relative errors of 15.604 degrees/6.883 m; unseeded DICP takes 5.3 ms and gives 3.540 degrees/2.827 m. Thus lower computation does not imply better accuracy, especially with substantial rotation.",
+          "location": "PDF p. 6, Table I, Loop1_4 rows and Section IV-D discussion; p. 9, Fig. 9(b)."
+        },
+        {
+          "id": "N02-E08",
+          "statement": "The derivation assumes a short interval with DeltaT*||angular_velocity|| much smaller than one and approximately constant angular and translational velocities. Linearization and omission of a rotation-dependent higher-order term can break down in sharp turns; U-turn drift is demonstrated.",
+          "location": "PDF pp. 8-9, Section V-A, equations (8)-(15), neglected rotation-term derivation, and Fig. 9."
+        },
+        {
+          "id": "N02-E09",
+          "statement": "Doppler 4D-ICP retains Doppler-derived correspondences across ICP iterations while recomputing closest-point correspondences. A weighted registration objective uses both sets and a Huber loss. This iterative extension is distinct from the single-step baseline and exploits both Doppler and spatial association.",
+          "location": "PDF p. 9, Section VI; p. 10, Algorithm 3 and accompanying text."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N02-Q01",
+          "question": "Where does Doppler enter the matching pipeline, and how does that avoid ICP's repeated rematching?",
+          "answer": "Range and measured Doppler form scalar association scores. Matching happens once in that space before rigid fitting, instead of alternating transformed-cloud closest-point search and pose updates.",
+          "evidence_ids": [
+            "N02-E01",
+            "N02-E02",
+            "N02-E03",
+            "N02-E08"
+          ]
+        },
+        {
+          "id": "N02-Q02",
+          "question": "Why can these associations help with repeated geometry, and what geometric operations remain?",
+          "answer": "Doppler adds motion information to otherwise ambiguous shape-based associations. Spatial gating still rejects separated candidates and spatial coordinates still support the rigid fit; geometry is not eliminated.",
+          "evidence_ids": [
+            "N02-E01",
+            "N02-E03",
+            "N02-E04",
+            "N02-E07"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N02-Q01",
+          "answer": "Range and radial Doppler velocity produce scalar association scores before registration. The baseline matches scores once, filters candidates, and fits a rigid transformation without iterative correspondence updates.",
+          "witness": "Under approximately constant velocities and small inter-scan rotation, corresponding points have approximately equal scalar scores computed independently from range and radial Doppler velocity. Thus, measured motion guides association before rigid registration, reducing reliance on repetitive geometry rather than changing the registration objective. A lightweight baseline matches scores once, rejects candidates using spatial and score thresholds, and fits a rigid transformation without iterative correspondence updates."
+        },
+        {
+          "id": "N02-Q02",
+          "answer": "Motion-derived scores reduce reliance on repetitive geometry without changing the registration objective. Spatial and score thresholding and rigid transformation fitting remain.",
+          "witness": "Thus, measured motion guides association before rigid registration, reducing reliance on repetitive geometry rather than changing the registration objective. A lightweight baseline matches scores once, rejects candidates using spatial and score thresholds, and fits a rigid transformation without iterative correspondence updates."
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "text": "V-HOP tracks model-based 6D object pose using RGB-D and haptics. A shared point cloud combines contact-labeled gripper posture with the object model at its previous pose, enabling hypothesis correction across embodiments. Transformers fuse a frozen FoundationPose visual encoder's features with haptic features according to contact and visibility. Trained on multi-gripper synthetic data, V-HOP is evaluated on unseen objects, grippers, and tactile sensors. On FeelSight-Occlusion, it achieves 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS.",
+      "evidence": [
+        {
+          "id": "N04-E01",
+          "statement": "V-HOP assumes an object CAD model, RGB-D observations, an initial pose, and a rigid gripper with known kinematics and tactile sensing. At each tracking step, the previous estimated pose becomes the new pose hypothesis.",
+          "location": "PDF p. 2, Section II-A, problem definition; PDF pp. 9-10, Section VII, limitations."
+        },
+        {
+          "id": "N04-E02",
+          "statement": "Taxel-based or vision-based tactile observations yield contact points. These label a gripper surface point cloud generated from kinematics, with positions, normals, and contact/non-contact labels, jointly representing tactile signals and gripper posture rather than contact alone.",
+          "location": "PDF pp. 2-3, Section II-B and Section III-A, equation (3); PDF p. 3 visually checked."
+        },
+        {
+          "id": "N04-E03",
+          "statement": "The object CAD point cloud is transformed by the previous pose and combined with the observed gripper point cloud. This compares a hypothesized object configuration with actual haptic geometry; training predicts a relative pose correction between hypothesis and observation.",
+          "location": "PDF p. 3, Section III-B, equations (4)-(6); PDF p. 4, Section III-D, equations (7)-(9); visually checked."
+        },
+        {
+          "id": "N04-E04",
+          "statement": "A frozen FoundationPose visual encoder and a trainable haptic encoder supply embeddings to fine-tuned pretrained transformers. Self-attention fuses features adaptively: vision is useful without contact, while haptics is favored under severe occlusion. Separate heads estimate translation and rotation.",
+          "location": "PDF pp. 3-4, Section III-C, especially 'Visuo-haptic fusion', and Figure 2; PDF p. 4 visually checked."
+        },
+        {
+          "id": "N04-E05",
+          "statement": "Early feature fusion achieves 86.62 AUC ADD-S versus 70.43 for late result fusion; removing tactile contact labels yields 77.33. Grad-CAM visualizations suggest greater visual reliance without contact and greater haptic reliance with contact and occlusion.",
+          "location": "PDF p. 6, Tables III-IV and Sections IV-C/D; PDF p. 9, Section V-D and Figure 9. Table values visually checked."
+        },
+        {
+          "id": "N04-E06",
+          "statement": "The synthetic Isaac Sim dataset contains approximately 1.55 million images spanning eight grippers and thirteen objects. Training excludes D'Claw and pudding_box for unseen-gripper/object evaluation; the paper uses synthetic data only for training.",
+          "location": "PDF p. 5, Sections IV-A/B; PDF p. 6, Table II caption and per-object/per-gripper results."
+        },
+        {
+          "id": "N04-E07",
+          "statement": "The FeelSight-Occlusion comparison evaluates an unseen Allegro hand with DIGIT fingertips, an unseen vision-based tactile sensor type, and an unseen Rubik's cube. The model-based NeuralFeels baseline receives ground-truth segmentation; V-HOP does not.",
+          "location": "PDF p. 7, Section IV-F and Table V; visually checked."
+        },
+        {
+          "id": "N04-E08",
+          "statement": "On FeelSight-Occlusion, V-HOP reports 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS on an RTX 4070. ADD-S-0.1d is 98.45 versus 98.95, respectively; V-HOP does not win that threshold metric.",
+          "location": "PDF p. 7, Table V, caption, and Section IV-F; visually checked."
+        },
+        {
+          "id": "N04-E09",
+          "statement": "Real Barrett-hand bimanual handover averages 80% success with V-HOP versus 40% with FoundationPose across three objects, with five trials per object. Other real experiments examine tracking under occlusion and can-in-mug manipulation.",
+          "location": "PDF pp. 7-9, Sections V-A/B/C; PDF p. 8, Table VI and trial-count sentence, visually checked."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N04-Q01",
+          "question": "In the shared gripper-object point cloud, which part is the observed haptic geometry and which is the pose hypothesis, and what correction is learned from comparing them?",
+          "answer": "The current gripper surface and contact labels are observed geometry; the previous pose places the CAD model as the hypothesis. Their comparison yields a relative object-pose correction.",
+          "evidence_ids": [
+            "N04-E01",
+            "N04-E02",
+            "N04-E03"
+          ]
+        },
+        {
+          "id": "N04-Q02",
+          "question": "Why does the unified haptic representation still need adaptive visual-haptic fusion, and what differs between the no-contact and contact-with-occlusion cases?",
+          "answer": "Shared geometry represents heterogeneous haptic inputs; adaptive feature fusion adjusts modality use. Vision supplies evidence without contact, while haptics becomes useful with contact under severe occlusion.",
+          "evidence_ids": [
+            "N04-E02",
+            "N04-E04",
+            "N04-E05"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N04-Q01",
+          "answer": "Contact-labeled gripper posture provides observed haptic geometry; the object model at its previous pose supplies the hypothesis. The shared representation enables correction of that pose hypothesis across embodiments.",
+          "witness": "A shared point cloud combines contact-labeled gripper posture with the object model at its previous pose, enabling hypothesis correction across embodiments."
+        },
+        {
+          "id": "N04-Q02",
+          "answer": "not specified",
+          "witness": ""
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "text": "We present V-HOP, a model-based visuo-haptic 6D object pose tracker combining a shared geometric representation with adaptive transformer feature fusion. Contact labels augment a kinematics-derived gripper point cloud, encoding touch and posture alongside the object CAD model transformed by the previous pose. This hypothesis-versus-observation representation supports learning pose corrections across sensor layouts and embodiments. A trainable haptic encoder and frozen FoundationPose visual encoder feed fine-tuned transformers, allowing modality use to vary with contact and visibility. Training uses only synthetic data spanning eight grippers and thirteen objects. On FeelSight-Occlusion, with an unseen hand, tactile sensor type, and object, V-HOP achieves 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS; NeuralFeels receives ground-truth segmentation, whereas V-HOP does not. Real bimanual handovers average 80% success versus FoundationPose's 40% across three objects with five trials each.",
+      "evidence": [
+        {
+          "id": "N04-E01",
+          "statement": "V-HOP assumes an object CAD model, RGB-D observations, an initial pose, and a rigid gripper with known kinematics and tactile sensing. At each tracking step, the previous estimated pose becomes the new pose hypothesis.",
+          "location": "PDF p. 2, Section II-A, problem definition; PDF pp. 9-10, Section VII, limitations."
+        },
+        {
+          "id": "N04-E02",
+          "statement": "Taxel-based or vision-based tactile observations yield contact points. These label a gripper surface point cloud generated from kinematics, with positions, normals, and contact/non-contact labels, jointly representing tactile signals and gripper posture rather than contact alone.",
+          "location": "PDF pp. 2-3, Section II-B and Section III-A, equation (3); PDF p. 3 visually checked."
+        },
+        {
+          "id": "N04-E03",
+          "statement": "The object CAD point cloud is transformed by the previous pose and combined with the observed gripper point cloud. This compares a hypothesized object configuration with actual haptic geometry; training predicts a relative pose correction between hypothesis and observation.",
+          "location": "PDF p. 3, Section III-B, equations (4)-(6); PDF p. 4, Section III-D, equations (7)-(9); visually checked."
+        },
+        {
+          "id": "N04-E04",
+          "statement": "A frozen FoundationPose visual encoder and a trainable haptic encoder supply embeddings to fine-tuned pretrained transformers. Self-attention fuses features adaptively: vision is useful without contact, while haptics is favored under severe occlusion. Separate heads estimate translation and rotation.",
+          "location": "PDF pp. 3-4, Section III-C, especially 'Visuo-haptic fusion', and Figure 2; PDF p. 4 visually checked."
+        },
+        {
+          "id": "N04-E05",
+          "statement": "Early feature fusion achieves 86.62 AUC ADD-S versus 70.43 for late result fusion; removing tactile contact labels yields 77.33. Grad-CAM visualizations suggest greater visual reliance without contact and greater haptic reliance with contact and occlusion.",
+          "location": "PDF p. 6, Tables III-IV and Sections IV-C/D; PDF p. 9, Section V-D and Figure 9. Table values visually checked."
+        },
+        {
+          "id": "N04-E06",
+          "statement": "The synthetic Isaac Sim dataset contains approximately 1.55 million images spanning eight grippers and thirteen objects. Training excludes D'Claw and pudding_box for unseen-gripper/object evaluation; the paper uses synthetic data only for training.",
+          "location": "PDF p. 5, Sections IV-A/B; PDF p. 6, Table II caption and per-object/per-gripper results."
+        },
+        {
+          "id": "N04-E07",
+          "statement": "The FeelSight-Occlusion comparison evaluates an unseen Allegro hand with DIGIT fingertips, an unseen vision-based tactile sensor type, and an unseen Rubik's cube. The model-based NeuralFeels baseline receives ground-truth segmentation; V-HOP does not.",
+          "location": "PDF p. 7, Section IV-F and Table V; visually checked."
+        },
+        {
+          "id": "N04-E08",
+          "statement": "On FeelSight-Occlusion, V-HOP reports 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS on an RTX 4070. ADD-S-0.1d is 98.45 versus 98.95, respectively; V-HOP does not win that threshold metric.",
+          "location": "PDF p. 7, Table V, caption, and Section IV-F; visually checked."
+        },
+        {
+          "id": "N04-E09",
+          "statement": "Real Barrett-hand bimanual handover averages 80% success with V-HOP versus 40% with FoundationPose across three objects, with five trials per object. Other real experiments examine tracking under occlusion and can-in-mug manipulation.",
+          "location": "PDF pp. 7-9, Sections V-A/B/C; PDF p. 8, Table VI and trial-count sentence, visually checked."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N04-Q01",
+          "question": "In the shared gripper-object point cloud, which part is the observed haptic geometry and which is the pose hypothesis, and what correction is learned from comparing them?",
+          "answer": "The current gripper surface and contact labels are observed geometry; the previous pose places the CAD model as the hypothesis. Their comparison yields a relative object-pose correction.",
+          "evidence_ids": [
+            "N04-E01",
+            "N04-E02",
+            "N04-E03"
+          ]
+        },
+        {
+          "id": "N04-Q02",
+          "question": "Why does the unified haptic representation still need adaptive visual-haptic fusion, and what differs between the no-contact and contact-with-occlusion cases?",
+          "answer": "Shared geometry represents heterogeneous haptic inputs; adaptive feature fusion adjusts modality use. Vision supplies evidence without contact, while haptics becomes useful with contact under severe occlusion.",
+          "evidence_ids": [
+            "N04-E02",
+            "N04-E04",
+            "N04-E05"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N04-Q01",
+          "answer": "The contact-labeled, kinematics-derived gripper cloud supplies observed touch and posture; the CAD model transformed by the previous pose supplies the hypothesis. Comparing them supports learning pose corrections across embodiments.",
+          "witness": "Contact labels augment a kinematics-derived gripper point cloud, encoding touch and posture alongside the object CAD model transformed by the previous pose. This hypothesis-versus-observation representation supports learning pose corrections across sensor layouts and embodiments."
+        },
+        {
+          "id": "N04-Q02",
+          "answer": "not specified",
+          "witness": ""
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "text": "We introduce Doppler Correspondence, a geometrically and kinematically derived range-and-Doppler relation for associating consecutive 4D radar and LiDAR scans. Under a short-scan motion approximation, corresponding points have approximately equal scalar scores, each computed from its own range and radial velocity. Doppler therefore guides association before rigid registration, reducing reliance on repetitive geometry without replacing spatial constraints. A lightweight non-iterative algorithm finds matches once in score space, rejects candidates using spatial and score thresholds, and estimates a rigid transformation. Experiments cover sparse and semi-dense radar and dense LiDAR. On Campus2, transformation estimation excluding preprocessing takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP. Sharp turns can invalidate the approximation and cause drift. An iterative extension, Doppler 4D-ICP, combines fixed Doppler-derived correspondences with repeatedly updated geometric matches.",
+      "evidence": [
+        {
+          "id": "N02-E01",
+          "statement": "Under the short-scan motion approximation, corresponding source/target points satisfy f(p,v_p) = r_p^2 + r_p*v_p*DeltaT approximately equal to g(q,v_q) = r_q^2 - r_q*v_q*DeltaT. Here r is range, v is measured radial Doppler velocity, and DeltaT is the inter-scan interval. Each scalar uses only its own point's measurements.",
+          "location": "PDF p. 3, Section III-B, equations (2)-(3); p. 4, Section III-C; pp. 8-9, Section V-A."
+        },
+        {
+          "id": "N02-E02",
+          "statement": "The baseline computes f for source points and g for target points, finds nearest matches in this one-dimensional score space once, and estimates a rigid transformation from the matches. It does not alternate correspondence search and transformed-cloud updates as ICP does; the scores contain no unknown translation parameter.",
+          "location": "PDF p. 3, paragraph after equation (3); p. 4, Section III-E; p. 5, Algorithms 1-2."
+        },
+        {
+          "id": "N02-E03",
+          "statement": "Equal range and radial velocity can create ambiguous, spatially separated candidates. Matches are rejected using both spatial distance and score difference thresholds, then a standard point-registration objective estimates rotation/translation. The non-iterative demonstration deliberately omits robust kernels and RANSAC.",
+          "location": "PDF p. 4, Sections III-D and III-E and Fig. 4; p. 5, Algorithm 1."
+        },
+        {
+          "id": "N02-E04",
+          "statement": "DICP adds Doppler constraints to the registration optimization, whereas Doppler Correspondence uses measured motion in choosing point associations. Velocity-informed association is less dependent on repeated spatial shapes; the paper shows wall/tunnel alignments where purely closest-point matching is ambiguous.",
+          "location": "PDF p. 2, Section II-B; p. 5, Section IV-B; p. 7, Section IV-E and Fig. 7."
+        },
+        {
+          "id": "N02-E05",
+          "statement": "Experiments cover sparse Campus radar, semi-dense NTU4DRadLM Loop1 radar, and dense 4D LiDAR from simulated wall scenes and the real Baker-Barry Tunnel. Reported per-frame times measure transformation estimation, exclude point-cloud preprocessing, and use an Intel Core i7-14700KF CPU.",
+          "location": "PDF p. 5, Sections IV-A, IV-B, and IV-C; p. 6, Table I caption."
+        },
+        {
+          "id": "N02-E06",
+          "statement": "On Campus2, the non-iterative method takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP. At 8-m segment length, their rotation/translation relative errors are 2.379 degrees/0.769 m and 2.526 degrees/2.516 m, respectively. Seeded ICP takes 5.6 ms and gives 2.690 degrees/1.329 m.",
+          "location": "PDF p. 6, Table I, Campus2 rows; p. 5, Section IV-B defines seeded versus unseeded baselines."
+        },
+        {
+          "id": "N02-E07",
+          "statement": "On Loop1_4, the non-iterative method takes 2.2 ms/frame but has 48-m relative errors of 15.604 degrees/6.883 m; unseeded DICP takes 5.3 ms and gives 3.540 degrees/2.827 m. Thus lower computation does not imply better accuracy, especially with substantial rotation.",
+          "location": "PDF p. 6, Table I, Loop1_4 rows and Section IV-D discussion; p. 9, Fig. 9(b)."
+        },
+        {
+          "id": "N02-E08",
+          "statement": "The derivation assumes a short interval with DeltaT*||angular_velocity|| much smaller than one and approximately constant angular and translational velocities. Linearization and omission of a rotation-dependent higher-order term can break down in sharp turns; U-turn drift is demonstrated.",
+          "location": "PDF pp. 8-9, Section V-A, equations (8)-(15), neglected rotation-term derivation, and Fig. 9."
+        },
+        {
+          "id": "N02-E09",
+          "statement": "Doppler 4D-ICP retains Doppler-derived correspondences across ICP iterations while recomputing closest-point correspondences. A weighted registration objective uses both sets and a Huber loss. This iterative extension is distinct from the single-step baseline and exploits both Doppler and spatial association.",
+          "location": "PDF p. 9, Section VI; p. 10, Algorithm 3 and accompanying text."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N02-Q01",
+          "question": "Where does Doppler enter the matching pipeline, and how does that avoid ICP's repeated rematching?",
+          "answer": "Range and measured Doppler form scalar association scores. Matching happens once in that space before rigid fitting, instead of alternating transformed-cloud closest-point search and pose updates.",
+          "evidence_ids": [
+            "N02-E01",
+            "N02-E02",
+            "N02-E03",
+            "N02-E08"
+          ]
+        },
+        {
+          "id": "N02-Q02",
+          "question": "Why can these associations help with repeated geometry, and what geometric operations remain?",
+          "answer": "Doppler adds motion information to otherwise ambiguous shape-based associations. Spatial gating still rejects separated candidates and spatial coordinates still support the rigid fit; geometry is not eliminated.",
+          "evidence_ids": [
+            "N02-E01",
+            "N02-E03",
+            "N02-E04",
+            "N02-E07"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N02-Q01",
+          "answer": "Doppler enters scalar scores computed from each point's range and radial velocity before registration. The baseline finds matches once in score space, avoiding repeated correspondence updates.",
+          "witness": "Under a short-scan motion approximation, corresponding points have approximately equal scalar scores, each computed from its own range and radial velocity. Doppler therefore guides association before rigid registration, reducing reliance on repetitive geometry without replacing spatial constraints. A lightweight non-iterative algorithm finds matches once in score space, rejects candidates using spatial and score thresholds, and estimates a rigid transformation."
+        },
+        {
+          "id": "N02-Q02",
+          "answer": "Doppler-derived scores guide association with less reliance on repetitive geometry. Spatial constraints remain through candidate rejection, followed by rigid transformation estimation.",
+          "witness": "Doppler therefore guides association before rigid registration, reducing reliance on repetitive geometry without replacing spatial constraints. A lightweight non-iterative algorithm finds matches once in score space, rejects candidates using spatial and score thresholds, and estimates a rigid transformation."
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "text": "We present XM, a certifiable scaled bundle-adjustment solver that jointly estimates camera poses, landmarks, and per-frame depth scales. Learned depth lifts matched image points into camera-frame 3D measurements; frame scales adjust these measurements before alignment with global landmarks. An empirically tight semidefinite relaxation supplies optimality bounds, while a low-rank Riemannian staircase and C++/CUDA trust-region implementation make optimization scalable. Dual checks certify relaxation solutions or trigger rank increases and descent, rather than accepting an uncertified local factor optimum. XM-SfM combines XM with matching and outlier filtering, then uses its estimates to initialize CERES refinement of the original reprojection objective. On BAL-1934, using the same lifted 3D observations, XM and MANOPT require 2.09 and 236.46 s of solver time, respectively, excluding 69.15 s of preprocessing for each.",
+      "evidence": [
+        {
+          "id": "N03-E01",
+          "statement": "Conventional bundle adjustment jointly estimates camera poses and landmarks from 2D keypoints; reprojection and pose constraints make it nonconvex, while large view graphs make optimization expensive.",
+          "location": "PDF p. 2, Section I, 'Classical BA formulation' and 'Optimization challenges', equation (1)."
+        },
+        {
+          "id": "N03-E02",
+          "statement": "Learned metric depth lifts 2D keypoints to camera-frame 3D points. A positive per-frame scale adjusts predicted depth, and camera-to-global poses align those scaled points with jointly estimated landmarks using 3D distances instead of reprojection.",
+          "location": "PDF p. 2, 'BA with learned depth', equations (2)-(3) and footnote 2; visually checked."
+        },
+        {
+          "id": "N03-E03",
+          "statement": "Eliminating translations and landmarks yields a scaled-rotation problem, then a QCQP and SDP relaxation. Rank-three tightness recovers a QCQP optimum; recovering an SBA optimum additionally requires proper rotations. The SDP bound and a feasible SBA solution bound suboptimality.",
+          "location": "PDF pp. 3-4, Propositions 2, 3, and 5; equations (9)-(16)."
+        },
+        {
+          "id": "N03-E04",
+          "statement": "Burer-Monteiro factorization replaces the full SDP matrix with a low-rank factor. The staircase tests a dual matrix for positive semidefiniteness; failure supplies a negative-eigenvalue descent direction after increasing rank, rather than accepting a bad local minimum.",
+          "location": "PDF pp. 5-6, Section III-A, Algorithm 1 and Theorems 8-10; PDF p. 12, Figure 10's rank-3/rank-4 example; Algorithm 1 visually checked."
+        },
+        {
+          "id": "N03-E05",
+          "statement": "XM implements Riemannian trust-region optimization with truncated conjugate gradients directly in C++/CUDA, using analytic Hessian-vector products, cuBLAS, and custom batched manifold operations. Almost all reported staircase runs terminate at rank three or four.",
+          "location": "PDF p. 6, end of Section III-A and Section III-B; PDF p. 7, Section III summary."
+        },
+        {
+          "id": "N03-E06",
+          "statement": "XM-SfM combines feature matching, learned depth, outlier filtering, and XM. Because depth noise can impair reconstruction, XM's poses and landmarks warm-start CERES on the original 2D reprojection objective.",
+          "location": "PDF p. 7, Section IV, especially 'Depth estimation', 'XM solver', and 'CERES refinement'; PDF p. 8, Figure 3."
+        },
+        {
+          "id": "N03-E07",
+          "statement": "The BAL solver experiment gives XM and MANOPT the same lifted 3D observations, described as accurate but slightly noisy. CERES receives 2D observations and is tested with several initialization conditions; this is not a learned-depth end-to-end SfM comparison.",
+          "location": "PDF p. 7, Section V-A, 'Setup and baselines'; PDF p. 8, Table I and results paragraph."
+        },
+        {
+          "id": "N03-E08",
+          "statement": "On BAL-1934, with 1,934 cameras and 67,594 landmarks, XM solver time is 2.09 s versus MANOPT's 236.46 s on the same problem; each has a separately reported 69.15 s preprocessing time.",
+          "location": "PDF p. 8, Table I, BAL-1934 column, MANOPT and XM rows; visually checked."
+        },
+        {
+          "id": "N03-E09",
+          "statement": "For IMC Rome-2063, filtered two-pass XM plus CERES takes 19.17 + 300.16 s of solving versus GLOMAP's 9,813.04 s; ATE-T is 0.021 versus 0.003. Preprocessing is separate: 4,877.89 versus 3,459.04 s.",
+          "location": "PDF p. 12, Table VII, Rome-2063 row; visually checked."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N03-Q01",
+          "question": "What does learned depth change about the measurements and residuals being optimized, and what prediction error do the per-frame scales address?",
+          "answer": "Learned depth lifts 2D matches into 3D points; frame scales adjust depth prediction error. Optimization aligns these points to landmarks using 3D distances instead of 2D reprojection residuals.",
+          "evidence_ids": [
+            "N03-E01",
+            "N03-E02",
+            "N03-E06"
+          ]
+        },
+        {
+          "id": "N03-Q02",
+          "question": "What does the SDP supply, and how can the low-rank staircase move beyond an uncertified local solution?",
+          "answer": "The SDP supplies bounds and a dual certificate; low-rank GPU optimization reduces cost. An unsuccessful certificate test leads to higher-rank descent, not acceptance of a local factor optimum.",
+          "evidence_ids": [
+            "N03-E03",
+            "N03-E04",
+            "N03-E05",
+            "N03-E08"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N03-Q01",
+          "answer": "not specified",
+          "witness": ""
+        },
+        {
+          "id": "N03-Q02",
+          "answer": "The SDP supplies optimality bounds. Dual checks either certify relaxation solutions or trigger rank increases and descent, rather than accepting an uncertified local factor optimum.",
+          "witness": "An empirically tight semidefinite relaxation supplies optimality bounds, while a low-rank Riemannian staircase and C++/CUDA trust-region implementation make optimization scalable. Dual checks certify relaxation solutions or trigger rank increases and descent, rather than accepting an uncertified local factor optimum."
+        }
+      ]
+    },
+    {
+      "id": "K02",
+      "text": "PatchMap keeps unchanged cells and updates only cells touched by new observations, instead of rebuilding the entire map.",
+      "evidence": [
+        {
+          "id": "E1",
+          "statement": "PatchMap preserves unchanged cells and updates newly observed cells rather than rebuilding the map; reported map-update time is 28 versus 12 ms.",
+          "location": "Authored control, not a real study"
+        }
+      ],
+      "questions": [
+        {
+          "id": "Q1",
+          "answer": "Only newly observed cells are updated, avoiding full map rebuilding."
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "Q1",
+          "answer": "Only cells touched by new observations are updated; unchanged cells are retained, avoiding reconstruction of the entire map.",
+          "witness": "PatchMap keeps unchanged cells and updates only cells touched by new observations, instead of rebuilding the entire map."
+        }
+      ]
+    },
+    {
+      "id": "K01",
+      "text": "PatchMap uses a cache and an updater for indoor navigation. Mean map-update time falls from 28 to 12 ms.",
+      "evidence": [
+        {
+          "id": "E1",
+          "statement": "PatchMap preserves unchanged cells and updates newly observed cells rather than rebuilding the map; reported map-update time is 28 versus 12 ms.",
+          "location": "Authored control, not a real study"
+        }
+      ],
+      "questions": [
+        {
+          "id": "Q1",
+          "answer": "Only newly observed cells are updated, avoiding full map rebuilding."
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "Q1",
+          "answer": "not specified",
+          "witness": ""
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "text": "MISO is a hierarchical neural implicit SLAM back-end coupling residual-conditioned local initialization with global submap alignment and fusion. Within multiresolution feature-grid submaps, fixed pretrained encoders initialize finer grids from residuals left by coarser predictions; grid features and robot poses are then jointly optimized with a fixed shared decoder. Global optimization aligns overlapping feature fields from coarse to fine without decoding SDF values during feature-alignment iterations, then refines poses using SDF disagreement. Fusion averages aligned implicit features before decoding, rather than averaging decoded SDFs. On ScanNet 0011, from initial submap errors of 5 degrees and 0.20 m, alignment takes 10.53 s versus MIPS's 59.23 s, with final errors of 1.86 degrees/0.06 m versus 3.93 degrees/0.15 m. Evaluation is predominantly offline on static scenes, and dense grids limit memory scalability.",
+      "evidence": [
+        {
+          "id": "N01-E01",
+          "statement": "MISO represents a scene as posed multiresolution feature-grid submaps. Its back-end addresses local SLAM within submaps and global alignment/fusion between submaps, using odometry and point clouds from depth images or LiDAR.",
+          "location": "PDF p. 3, Section III (Overview) and Section IV-A; p. 12, Section VIII (Conclusion)."
+        },
+        {
+          "id": "N01-E02",
+          "statement": "Encoders and decoder are pretrained offline and fixed during the proposed local optimization; online variables are grid features and robot poses. Replica-pretrained weights are used on ScanNet and FastCaMo-Large without additional fine-tuning.",
+          "location": "PDF p. 3, Sections III and IV-A; p. 7, Section VI-A; p. 13, Appendix A."
+        },
+        {
+          "id": "N01-E03",
+          "statement": "With a linear decoder and quadratic costs, the optimal level's initialization is a linear function of residuals left by coarser levels. For nonlinear decoding, separate learned encoders map those residuals to progressively finer feature grids; all grid levels and robot poses are then jointly optimized.",
+          "location": "PDF p. 4, Section IV-B; p. 5, Proposition 1, equations (8)-(11), and Algorithm 1; p. 14, proof."
+        },
+        {
+          "id": "N01-E04",
+          "statement": "Global alignment updates submap base poses by minimizing discrepancies between overlapping interpolated feature fields at transformed query coordinates. Levels are included from coarse to fine. These feature-based iterations avoid decoding SDF values and do not require explicit geometric correspondences.",
+          "location": "PDF p. 6, Section V, equations (16)-(17) and Algorithm 2; p. 7, opening paragraph; p. 9, alignment discussion."
+        },
+        {
+          "id": "N01-E05",
+          "statement": "A final SDF-disagreement stage refines submap poses. In Table VI, ScanNet 0011 from 10-degree/0.25-m initial errors, coarse-plus-fine features give 3.68 degrees/0.12 m in 2.54 s; adding SDF refinement gives 2.71 degrees/0.09 m in 10.13 s, averaged over ten trials.",
+          "location": "PDF p. 7, equations (18)-(19); p. 11, Section VI-E and Table VI, scene 0011."
+        },
+        {
+          "id": "N01-E06",
+          "statement": "For a world-frame query, fusion transforms the query into covering submaps, averages their interpolated implicit features using bounding-box membership weights, and decodes that average. It does not average independently decoded SDF values or merge explicit meshes as its fusion rule.",
+          "location": "PDF p. 7, Section V (Submap Fusion), equations (20)-(21)."
+        },
+        {
+          "id": "N01-E07",
+          "statement": "On ScanNet 0011, with 5-degree/0.20-m initial submap errors, MISO reports 10.53 s GPU time and final errors 1.86 degrees/0.06 m; MIPS reports 59.23 s and 3.93 degrees/0.15 m, and VFPP 74.16 s and 2.40 degrees/0.11 m. Results average ten trials; neural methods use 100 alignment iterations.",
+          "location": "PDF p. 9, Table III and Section VI-B (Submap alignment and fusion evaluation)."
+        },
+        {
+          "id": "N01-E08",
+          "statement": "On ScanNet 0011 with ground-truth poses, MISO reports 0.80 s, 6.07-cm Chamfer-L1, and 71.23% F-score; iSDF reports 25.89 s, 6.35 cm, and 67.32%. F-score uses a 5-cm threshold. MISO runs 20 online epochs versus 100 for iSDF, which lacks the pretraining.",
+          "location": "PDF p. 8, Table I and Section VI-B (Local SLAM evaluation)."
+        },
+        {
+          "id": "N01-E09",
+          "statement": "Evaluation includes ScanNet, FastCaMo-Large, and outdoor Newer College. The authors identify dense-grid memory scaling and predominantly offline batch evaluation of static scenes as limitations; the incremental extension disables encoder initialization, and its Newer College experiments pretrain a decoder per scene.",
+          "location": "PDF p. 6, Section IV-C; p. 7, Section VI-A; p. 10, Sections VI-C and VI-D; p. 11, Section VII."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N01-Q01",
+          "question": "What information initializes each finer feature level, and what is still optimized after initialization?",
+          "answer": "Residuals left by coarser predictions initialize finer features through pretrained encoders; map features and robot poses are then jointly optimized.",
+          "evidence_ids": [
+            "N01-E02",
+            "N01-E03"
+          ]
+        },
+        {
+          "id": "N01-Q02",
+          "question": "Which representations are aligned and fused, and where is decoding still needed?",
+          "answer": "Alignment compares overlapping implicit features; fusion averages features before decoding. Feature alignment avoids repeated SDF decoding, but final SDF refinement and global output still require decoding.",
+          "evidence_ids": [
+            "N01-E04",
+            "N01-E05",
+            "N01-E06"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N01-Q01",
+          "answer": "Fixed pretrained encoders initialize finer grids from residuals left by coarser predictions. Grid features and robot poses are then jointly optimized; the shared decoder remains fixed.",
+          "witness": "Within multiresolution feature-grid submaps, fixed pretrained encoders initialize finer grids from residuals left by coarser predictions; grid features and robot poses are then jointly optimized with a fixed shared decoder."
+        },
+        {
+          "id": "N01-Q02",
+          "answer": "Overlapping feature fields are aligned; aligned implicit features are averaged for fusion. Decoding remains in local optimization, SDF-based pose refinement, and after feature fusion.",
+          "witness": "Within multiresolution feature-grid submaps, fixed pretrained encoders initialize finer grids from residuals left by coarser predictions; grid features and robot poses are then jointly optimized with a fixed shared decoder. Global optimization aligns overlapping feature fields from coarse to fine without decoding SDF values during feature-alignment iterations, then refines poses using SDF disagreement. Fusion averages aligned implicit features before decoding, rather than averaging decoded SDFs."
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "text": "XM addresses initialization and computational cost in scaled bundle adjustment by combining a semidefinite relaxation with a low-rank GPU solver. Learned depth lifts matched 2D keypoints into camera-frame 3D measurements; positive per-frame scales adjust these measurements for depth error while camera poses and landmarks are jointly estimated using 3D distances. The relaxation provides optimality bounds, while a Riemannian staircase solves low-rank factorizations: a dual test either certifies SDP optimality or supplies a direction for escaping a stationary point after increasing rank. Recovering an optimal scaled bundle-adjustment solution additionally requires rank-three tightness and proper rotations. A C++/CUDA trust-region implementation makes this scheme computationally practical. On BAL-1934, XM solves the same lifted-observation problem as MANOPT in 2.09 versus 236.46 s, excluding 69.15 s preprocessing for each. XM-SfM integrates matching and filtering, then uses XM estimates to initialize CERES refinement of the original reprojection objective.",
+      "evidence": [
+        {
+          "id": "N03-E01",
+          "statement": "Conventional bundle adjustment jointly estimates camera poses and landmarks from 2D keypoints; reprojection and pose constraints make it nonconvex, while large view graphs make optimization expensive.",
+          "location": "PDF p. 2, Section I, 'Classical BA formulation' and 'Optimization challenges', equation (1)."
+        },
+        {
+          "id": "N03-E02",
+          "statement": "Learned metric depth lifts 2D keypoints to camera-frame 3D points. A positive per-frame scale adjusts predicted depth, and camera-to-global poses align those scaled points with jointly estimated landmarks using 3D distances instead of reprojection.",
+          "location": "PDF p. 2, 'BA with learned depth', equations (2)-(3) and footnote 2; visually checked."
+        },
+        {
+          "id": "N03-E03",
+          "statement": "Eliminating translations and landmarks yields a scaled-rotation problem, then a QCQP and SDP relaxation. Rank-three tightness recovers a QCQP optimum; recovering an SBA optimum additionally requires proper rotations. The SDP bound and a feasible SBA solution bound suboptimality.",
+          "location": "PDF pp. 3-4, Propositions 2, 3, and 5; equations (9)-(16)."
+        },
+        {
+          "id": "N03-E04",
+          "statement": "Burer-Monteiro factorization replaces the full SDP matrix with a low-rank factor. The staircase tests a dual matrix for positive semidefiniteness; failure supplies a negative-eigenvalue descent direction after increasing rank, rather than accepting a bad local minimum.",
+          "location": "PDF pp. 5-6, Section III-A, Algorithm 1 and Theorems 8-10; PDF p. 12, Figure 10's rank-3/rank-4 example; Algorithm 1 visually checked."
+        },
+        {
+          "id": "N03-E05",
+          "statement": "XM implements Riemannian trust-region optimization with truncated conjugate gradients directly in C++/CUDA, using analytic Hessian-vector products, cuBLAS, and custom batched manifold operations. Almost all reported staircase runs terminate at rank three or four.",
+          "location": "PDF p. 6, end of Section III-A and Section III-B; PDF p. 7, Section III summary."
+        },
+        {
+          "id": "N03-E06",
+          "statement": "XM-SfM combines feature matching, learned depth, outlier filtering, and XM. Because depth noise can impair reconstruction, XM's poses and landmarks warm-start CERES on the original 2D reprojection objective.",
+          "location": "PDF p. 7, Section IV, especially 'Depth estimation', 'XM solver', and 'CERES refinement'; PDF p. 8, Figure 3."
+        },
+        {
+          "id": "N03-E07",
+          "statement": "The BAL solver experiment gives XM and MANOPT the same lifted 3D observations, described as accurate but slightly noisy. CERES receives 2D observations and is tested with several initialization conditions; this is not a learned-depth end-to-end SfM comparison.",
+          "location": "PDF p. 7, Section V-A, 'Setup and baselines'; PDF p. 8, Table I and results paragraph."
+        },
+        {
+          "id": "N03-E08",
+          "statement": "On BAL-1934, with 1,934 cameras and 67,594 landmarks, XM solver time is 2.09 s versus MANOPT's 236.46 s on the same problem; each has a separately reported 69.15 s preprocessing time.",
+          "location": "PDF p. 8, Table I, BAL-1934 column, MANOPT and XM rows; visually checked."
+        },
+        {
+          "id": "N03-E09",
+          "statement": "For IMC Rome-2063, filtered two-pass XM plus CERES takes 19.17 + 300.16 s of solving versus GLOMAP's 9,813.04 s; ATE-T is 0.021 versus 0.003. Preprocessing is separate: 4,877.89 versus 3,459.04 s.",
+          "location": "PDF p. 12, Table VII, Rome-2063 row; visually checked."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N03-Q01",
+          "question": "What does learned depth change about the measurements and residuals being optimized, and what prediction error do the per-frame scales address?",
+          "answer": "Learned depth lifts 2D matches into 3D points; frame scales adjust depth prediction error. Optimization aligns these points to landmarks using 3D distances instead of 2D reprojection residuals.",
+          "evidence_ids": [
+            "N03-E01",
+            "N03-E02",
+            "N03-E06"
+          ]
+        },
+        {
+          "id": "N03-Q02",
+          "question": "What does the SDP supply, and how can the low-rank staircase move beyond an uncertified local solution?",
+          "answer": "The SDP supplies bounds and a dual certificate; low-rank GPU optimization reduces cost. An unsuccessful certificate test leads to higher-rank descent, not acceptance of a local factor optimum.",
+          "evidence_ids": [
+            "N03-E03",
+            "N03-E04",
+            "N03-E05",
+            "N03-E08"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N03-Q01",
+          "answer": "Learned depth lifts matched 2D keypoints into camera-frame 3D measurements, optimized using 3D distances. Positive per-frame scales adjust those measurements for depth error while poses and landmarks are jointly estimated.",
+          "witness": "Learned depth lifts matched 2D keypoints into camera-frame 3D measurements; positive per-frame scales adjust these measurements for depth error while camera poses and landmarks are jointly estimated using 3D distances."
+        },
+        {
+          "id": "N03-Q02",
+          "answer": "The SDP supplies optimality bounds. A failed dual test yields an escape direction after rank increase; certification concerns SDP optimality, while scaled bundle-adjustment optimality additionally needs rank-three tightness and proper rotations.",
+          "witness": "The relaxation provides optimality bounds, while a Riemannian staircase solves low-rank factorizations: a dual test either certifies SDP optimality or supplies a direction for escaping a stationary point after increasing rank. Recovering an optimal scaled bundle-adjustment solution additionally requires rank-three tightness and proper rotations."
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "text": "MISO accelerates local and global neural implicit SLAM using multiresolution feature-grid submaps. Pretrained encoders initialize finer grids from residuals left by coarser predictions before joint optimization of grid features and robot poses. Globally, coarse-to-fine alignment compares overlapping feature fields without SDF decoding or explicit correspondences; SDF refinement precedes fusion, which averages aligned features before decoding. On ScanNet 0011, alignment from 5-degree/0.20-m errors takes 10.53 seconds versus MIPS's 59.23, with final errors of 1.86 degrees/0.06 m versus 3.93 degrees/0.15 m.",
+      "evidence": [
+        {
+          "id": "N01-E01",
+          "statement": "MISO represents a scene as posed multiresolution feature-grid submaps. Its back-end addresses local SLAM within submaps and global alignment/fusion between submaps, using odometry and point clouds from depth images or LiDAR.",
+          "location": "PDF p. 3, Section III (Overview) and Section IV-A; p. 12, Section VIII (Conclusion)."
+        },
+        {
+          "id": "N01-E02",
+          "statement": "Encoders and decoder are pretrained offline and fixed during the proposed local optimization; online variables are grid features and robot poses. Replica-pretrained weights are used on ScanNet and FastCaMo-Large without additional fine-tuning.",
+          "location": "PDF p. 3, Sections III and IV-A; p. 7, Section VI-A; p. 13, Appendix A."
+        },
+        {
+          "id": "N01-E03",
+          "statement": "With a linear decoder and quadratic costs, the optimal level's initialization is a linear function of residuals left by coarser levels. For nonlinear decoding, separate learned encoders map those residuals to progressively finer feature grids; all grid levels and robot poses are then jointly optimized.",
+          "location": "PDF p. 4, Section IV-B; p. 5, Proposition 1, equations (8)-(11), and Algorithm 1; p. 14, proof."
+        },
+        {
+          "id": "N01-E04",
+          "statement": "Global alignment updates submap base poses by minimizing discrepancies between overlapping interpolated feature fields at transformed query coordinates. Levels are included from coarse to fine. These feature-based iterations avoid decoding SDF values and do not require explicit geometric correspondences.",
+          "location": "PDF p. 6, Section V, equations (16)-(17) and Algorithm 2; p. 7, opening paragraph; p. 9, alignment discussion."
+        },
+        {
+          "id": "N01-E05",
+          "statement": "A final SDF-disagreement stage refines submap poses. In Table VI, ScanNet 0011 from 10-degree/0.25-m initial errors, coarse-plus-fine features give 3.68 degrees/0.12 m in 2.54 s; adding SDF refinement gives 2.71 degrees/0.09 m in 10.13 s, averaged over ten trials.",
+          "location": "PDF p. 7, equations (18)-(19); p. 11, Section VI-E and Table VI, scene 0011."
+        },
+        {
+          "id": "N01-E06",
+          "statement": "For a world-frame query, fusion transforms the query into covering submaps, averages their interpolated implicit features using bounding-box membership weights, and decodes that average. It does not average independently decoded SDF values or merge explicit meshes as its fusion rule.",
+          "location": "PDF p. 7, Section V (Submap Fusion), equations (20)-(21)."
+        },
+        {
+          "id": "N01-E07",
+          "statement": "On ScanNet 0011, with 5-degree/0.20-m initial submap errors, MISO reports 10.53 s GPU time and final errors 1.86 degrees/0.06 m; MIPS reports 59.23 s and 3.93 degrees/0.15 m, and VFPP 74.16 s and 2.40 degrees/0.11 m. Results average ten trials; neural methods use 100 alignment iterations.",
+          "location": "PDF p. 9, Table III and Section VI-B (Submap alignment and fusion evaluation)."
+        },
+        {
+          "id": "N01-E08",
+          "statement": "On ScanNet 0011 with ground-truth poses, MISO reports 0.80 s, 6.07-cm Chamfer-L1, and 71.23% F-score; iSDF reports 25.89 s, 6.35 cm, and 67.32%. F-score uses a 5-cm threshold. MISO runs 20 online epochs versus 100 for iSDF, which lacks the pretraining.",
+          "location": "PDF p. 8, Table I and Section VI-B (Local SLAM evaluation)."
+        },
+        {
+          "id": "N01-E09",
+          "statement": "Evaluation includes ScanNet, FastCaMo-Large, and outdoor Newer College. The authors identify dense-grid memory scaling and predominantly offline batch evaluation of static scenes as limitations; the incremental extension disables encoder initialization, and its Newer College experiments pretrain a decoder per scene.",
+          "location": "PDF p. 6, Section IV-C; p. 7, Section VI-A; p. 10, Sections VI-C and VI-D; p. 11, Section VII."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N01-Q01",
+          "question": "What information initializes each finer feature level, and what is still optimized after initialization?",
+          "answer": "Residuals left by coarser predictions initialize finer features through pretrained encoders; map features and robot poses are then jointly optimized.",
+          "evidence_ids": [
+            "N01-E02",
+            "N01-E03"
+          ]
+        },
+        {
+          "id": "N01-Q02",
+          "question": "Which representations are aligned and fused, and where is decoding still needed?",
+          "answer": "Alignment compares overlapping implicit features; fusion averages features before decoding. Feature alignment avoids repeated SDF decoding, but final SDF refinement and global output still require decoding.",
+          "evidence_ids": [
+            "N01-E04",
+            "N01-E05",
+            "N01-E06"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N01-Q01",
+          "answer": "Pretrained encoders initialize finer grids from residuals left by coarser predictions. Grid features and robot poses remain subject to joint optimization afterward.",
+          "witness": "Pretrained encoders initialize finer grids from residuals left by coarser predictions before joint optimization of grid features and robot poses."
+        },
+        {
+          "id": "N01-Q02",
+          "answer": "Overlapping feature fields are aligned, and aligned features are averaged for fusion. Decoding is needed for SDF refinement and after feature averaging, not during feature alignment.",
+          "witness": "Globally, coarse-to-fine alignment compares overlapping feature fields without SDF decoding or explicit correspondences; SDF refinement precedes fusion, which averages aligned features before decoding."
+        }
+      ]
+    },
+    {
+      "id": "T12",
+      "text": "V-HOP is a model-based visuo-haptic tracker for 6D object pose during manipulation. It represents heterogeneous tactile inputs and gripper posture as a contact-labeled gripper point cloud, paired with an object CAD cloud positioned by the previous pose estimate. This shared geometry compares the hypothesized object with observed haptic geometry to learn a pose correction across sensor layouts and embodiments. A frozen FoundationPose RGB-D encoder and trainable haptic encoder feed fine-tuned transformers, adapting feature fusion to contact and visibility: vision supports tracking without contact, while haptics supports tracking under severe occlusion. Training uses only synthetic data spanning eight grippers and thirteen objects. On FeelSight-Occlusion, with an unseen hand, tactile sensor type, and object, V-HOP achieves 1.46 mm ADD-S error at 32 FPS, compared with NeuralFeels' 2.14 mm at 3 FPS. NeuralFeels receives ground-truth segmentation; V-HOP does not. Real robot experiments also evaluate tracking and manipulation.",
+      "evidence": [
+        {
+          "id": "N04-E01",
+          "statement": "V-HOP assumes an object CAD model, RGB-D observations, an initial pose, and a rigid gripper with known kinematics and tactile sensing. At each tracking step, the previous estimated pose becomes the new pose hypothesis.",
+          "location": "PDF p. 2, Section II-A, problem definition; PDF pp. 9-10, Section VII, limitations."
+        },
+        {
+          "id": "N04-E02",
+          "statement": "Taxel-based or vision-based tactile observations yield contact points. These label a gripper surface point cloud generated from kinematics, with positions, normals, and contact/non-contact labels, jointly representing tactile signals and gripper posture rather than contact alone.",
+          "location": "PDF pp. 2-3, Section II-B and Section III-A, equation (3); PDF p. 3 visually checked."
+        },
+        {
+          "id": "N04-E03",
+          "statement": "The object CAD point cloud is transformed by the previous pose and combined with the observed gripper point cloud. This compares a hypothesized object configuration with actual haptic geometry; training predicts a relative pose correction between hypothesis and observation.",
+          "location": "PDF p. 3, Section III-B, equations (4)-(6); PDF p. 4, Section III-D, equations (7)-(9); visually checked."
+        },
+        {
+          "id": "N04-E04",
+          "statement": "A frozen FoundationPose visual encoder and a trainable haptic encoder supply embeddings to fine-tuned pretrained transformers. Self-attention fuses features adaptively: vision is useful without contact, while haptics is favored under severe occlusion. Separate heads estimate translation and rotation.",
+          "location": "PDF pp. 3-4, Section III-C, especially 'Visuo-haptic fusion', and Figure 2; PDF p. 4 visually checked."
+        },
+        {
+          "id": "N04-E05",
+          "statement": "Early feature fusion achieves 86.62 AUC ADD-S versus 70.43 for late result fusion; removing tactile contact labels yields 77.33. Grad-CAM visualizations suggest greater visual reliance without contact and greater haptic reliance with contact and occlusion.",
+          "location": "PDF p. 6, Tables III-IV and Sections IV-C/D; PDF p. 9, Section V-D and Figure 9. Table values visually checked."
+        },
+        {
+          "id": "N04-E06",
+          "statement": "The synthetic Isaac Sim dataset contains approximately 1.55 million images spanning eight grippers and thirteen objects. Training excludes D'Claw and pudding_box for unseen-gripper/object evaluation; the paper uses synthetic data only for training.",
+          "location": "PDF p. 5, Sections IV-A/B; PDF p. 6, Table II caption and per-object/per-gripper results."
+        },
+        {
+          "id": "N04-E07",
+          "statement": "The FeelSight-Occlusion comparison evaluates an unseen Allegro hand with DIGIT fingertips, an unseen vision-based tactile sensor type, and an unseen Rubik's cube. The model-based NeuralFeels baseline receives ground-truth segmentation; V-HOP does not.",
+          "location": "PDF p. 7, Section IV-F and Table V; visually checked."
+        },
+        {
+          "id": "N04-E08",
+          "statement": "On FeelSight-Occlusion, V-HOP reports 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS on an RTX 4070. ADD-S-0.1d is 98.45 versus 98.95, respectively; V-HOP does not win that threshold metric.",
+          "location": "PDF p. 7, Table V, caption, and Section IV-F; visually checked."
+        },
+        {
+          "id": "N04-E09",
+          "statement": "Real Barrett-hand bimanual handover averages 80% success with V-HOP versus 40% with FoundationPose across three objects, with five trials per object. Other real experiments examine tracking under occlusion and can-in-mug manipulation.",
+          "location": "PDF pp. 7-9, Sections V-A/B/C; PDF p. 8, Table VI and trial-count sentence, visually checked."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N04-Q01",
+          "question": "In the shared gripper-object point cloud, which part is the observed haptic geometry and which is the pose hypothesis, and what correction is learned from comparing them?",
+          "answer": "The current gripper surface and contact labels are observed geometry; the previous pose places the CAD model as the hypothesis. Their comparison yields a relative object-pose correction.",
+          "evidence_ids": [
+            "N04-E01",
+            "N04-E02",
+            "N04-E03"
+          ]
+        },
+        {
+          "id": "N04-Q02",
+          "question": "Why does the unified haptic representation still need adaptive visual-haptic fusion, and what differs between the no-contact and contact-with-occlusion cases?",
+          "answer": "Shared geometry represents heterogeneous haptic inputs; adaptive feature fusion adjusts modality use. Vision supplies evidence without contact, while haptics becomes useful with contact under severe occlusion.",
+          "evidence_ids": [
+            "N04-E02",
+            "N04-E04",
+            "N04-E05"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N04-Q01",
+          "answer": "The contact-labeled gripper cloud represents observed tactile inputs and posture; the CAD cloud at the previous pose represents the hypothesis. Comparing them learns a pose correction across sensor layouts and embodiments.",
+          "witness": "It represents heterogeneous tactile inputs and gripper posture as a contact-labeled gripper point cloud, paired with an object CAD cloud positioned by the previous pose estimate. This shared geometry compares the hypothesized object with observed haptic geometry to learn a pose correction across sensor layouts and embodiments."
+        },
+        {
+          "id": "N04-Q02",
+          "answer": "Modality usefulness varies with contact and visibility despite the shared geometry. Vision supports tracking without contact, whereas haptics supports tracking under severe occlusion.",
+          "witness": "A frozen FoundationPose RGB-D encoder and trainable haptic encoder feed fine-tuned transformers, adapting feature fusion to contact and visibility: vision supports tracking without contact, while haptics supports tracking under severe occlusion."
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "text": "MISO is a hierarchical neural implicit SLAM back-end for local map and trajectory optimization and global submap consistency. Within multiresolution feature-grid submaps, pretrained encoders initialize finer grids from measurement residuals left by coarser levels; all grid features and robot poses are then jointly optimized with a fixed shared decoder. Globally, coarse-to-fine alignment compares overlapping feature fields to update submap poses without repeatedly decoding signed distance functions (SDFs) or establishing explicit geometric correspondences. After SDF-based pose refinement, fusion averages aligned submap features before decoding, rather than averaging decoded distances. On ScanNet scene 0011, starting from 5-degree/0.20-m submap errors, alignment takes 10.53 s versus 59.23 s for MIPS, with final errors of 1.86 degrees/0.06 m versus 3.93 degrees/0.15 m, averaged over ten trials. Evaluation also covers FastCaMo-Large and Newer College; dense-grid memory scaling remains a limitation.",
+      "evidence": [
+        {
+          "id": "N01-E01",
+          "statement": "MISO represents a scene as posed multiresolution feature-grid submaps. Its back-end addresses local SLAM within submaps and global alignment/fusion between submaps, using odometry and point clouds from depth images or LiDAR.",
+          "location": "PDF p. 3, Section III (Overview) and Section IV-A; p. 12, Section VIII (Conclusion)."
+        },
+        {
+          "id": "N01-E02",
+          "statement": "Encoders and decoder are pretrained offline and fixed during the proposed local optimization; online variables are grid features and robot poses. Replica-pretrained weights are used on ScanNet and FastCaMo-Large without additional fine-tuning.",
+          "location": "PDF p. 3, Sections III and IV-A; p. 7, Section VI-A; p. 13, Appendix A."
+        },
+        {
+          "id": "N01-E03",
+          "statement": "With a linear decoder and quadratic costs, the optimal level's initialization is a linear function of residuals left by coarser levels. For nonlinear decoding, separate learned encoders map those residuals to progressively finer feature grids; all grid levels and robot poses are then jointly optimized.",
+          "location": "PDF p. 4, Section IV-B; p. 5, Proposition 1, equations (8)-(11), and Algorithm 1; p. 14, proof."
+        },
+        {
+          "id": "N01-E04",
+          "statement": "Global alignment updates submap base poses by minimizing discrepancies between overlapping interpolated feature fields at transformed query coordinates. Levels are included from coarse to fine. These feature-based iterations avoid decoding SDF values and do not require explicit geometric correspondences.",
+          "location": "PDF p. 6, Section V, equations (16)-(17) and Algorithm 2; p. 7, opening paragraph; p. 9, alignment discussion."
+        },
+        {
+          "id": "N01-E05",
+          "statement": "A final SDF-disagreement stage refines submap poses. In Table VI, ScanNet 0011 from 10-degree/0.25-m initial errors, coarse-plus-fine features give 3.68 degrees/0.12 m in 2.54 s; adding SDF refinement gives 2.71 degrees/0.09 m in 10.13 s, averaged over ten trials.",
+          "location": "PDF p. 7, equations (18)-(19); p. 11, Section VI-E and Table VI, scene 0011."
+        },
+        {
+          "id": "N01-E06",
+          "statement": "For a world-frame query, fusion transforms the query into covering submaps, averages their interpolated implicit features using bounding-box membership weights, and decodes that average. It does not average independently decoded SDF values or merge explicit meshes as its fusion rule.",
+          "location": "PDF p. 7, Section V (Submap Fusion), equations (20)-(21)."
+        },
+        {
+          "id": "N01-E07",
+          "statement": "On ScanNet 0011, with 5-degree/0.20-m initial submap errors, MISO reports 10.53 s GPU time and final errors 1.86 degrees/0.06 m; MIPS reports 59.23 s and 3.93 degrees/0.15 m, and VFPP 74.16 s and 2.40 degrees/0.11 m. Results average ten trials; neural methods use 100 alignment iterations.",
+          "location": "PDF p. 9, Table III and Section VI-B (Submap alignment and fusion evaluation)."
+        },
+        {
+          "id": "N01-E08",
+          "statement": "On ScanNet 0011 with ground-truth poses, MISO reports 0.80 s, 6.07-cm Chamfer-L1, and 71.23% F-score; iSDF reports 25.89 s, 6.35 cm, and 67.32%. F-score uses a 5-cm threshold. MISO runs 20 online epochs versus 100 for iSDF, which lacks the pretraining.",
+          "location": "PDF p. 8, Table I and Section VI-B (Local SLAM evaluation)."
+        },
+        {
+          "id": "N01-E09",
+          "statement": "Evaluation includes ScanNet, FastCaMo-Large, and outdoor Newer College. The authors identify dense-grid memory scaling and predominantly offline batch evaluation of static scenes as limitations; the incremental extension disables encoder initialization, and its Newer College experiments pretrain a decoder per scene.",
+          "location": "PDF p. 6, Section IV-C; p. 7, Section VI-A; p. 10, Sections VI-C and VI-D; p. 11, Section VII."
+        }
+      ],
+      "questions": [
+        {
+          "id": "N01-Q01",
+          "question": "What information initializes each finer feature level, and what is still optimized after initialization?",
+          "answer": "Residuals left by coarser predictions initialize finer features through pretrained encoders; map features and robot poses are then jointly optimized.",
+          "evidence_ids": [
+            "N01-E02",
+            "N01-E03"
+          ]
+        },
+        {
+          "id": "N01-Q02",
+          "question": "Which representations are aligned and fused, and where is decoding still needed?",
+          "answer": "Alignment compares overlapping implicit features; fusion averages features before decoding. Feature alignment avoids repeated SDF decoding, but final SDF refinement and global output still require decoding.",
+          "evidence_ids": [
+            "N01-E04",
+            "N01-E05",
+            "N01-E06"
+          ]
+        }
+      ],
+      "reader_answers": [
+        {
+          "id": "N01-Q01",
+          "answer": "Pretrained encoders initialize finer grids from measurement residuals left by coarser levels. All grid features and robot poses are then jointly optimized with a fixed shared decoder.",
+          "witness": "Within multiresolution feature-grid submaps, pretrained encoders initialize finer grids from measurement residuals left by coarser levels; all grid features and robot poses are then jointly optimized with a fixed shared decoder."
+        },
+        {
+          "id": "N01-Q02",
+          "answer": "Overlapping feature fields are aligned to update submap poses; aligned features, not decoded distances, are averaged for fusion. Decoding remains in local optimization, SDF-based pose refinement, and after fusion.",
+          "witness": "Within multiresolution feature-grid submaps, pretrained encoders initialize finer grids from measurement residuals left by coarser levels; all grid features and robot poses are then jointly optimized with a fixed shared decoder. Globally, coarse-to-fine alignment compares overlapping feature fields to update submap poses without repeatedly decoding signed distance functions (SDFs) or establishing explicit geometric correspondences. After SDF-based pose refinement, fusion averages aligned submap features before decoding, rather than averaging decoded distances."
+        }
+      ]
+    }
+  ]
+}

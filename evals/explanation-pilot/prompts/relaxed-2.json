@@ -1,0 +1,164 @@
+{
+  "writer_id": "relaxed-2",
+  "instruction": "Revise each initial draft once into an effective academic abstract using only its evidence. Preserve technical referents, consequential scope and author contribution priorities. Apply the attached editorial guidance. Do not pad to a minimum or use every fact. The budget below is author-authorized for this experiment and overrides any generic instruction in a guide to seek permission for expansion. Return your actual first result even if it misses a constraint; no retries. Return JSON {writer_id,cases}: each case has {id,text,note}, id is paper_id; note <=40 words stays outside prose. No file reads beyond this packet, web searches or agents. Growth beyond the initial draft is explicitly permitted up to 150 words. ",
+  "cases": [
+    {
+      "paper_id": "N02",
+      "title": "Doppler Correspondence",
+      "contribution": "A range-and-Doppler correspondence relation for associating consecutive 4D radar/LiDAR point clouds, derived geometrically and kinematically, with a deliberately lightweight non-iterative registration algorithm demonstrating its use. The novelty is how Doppler participates in correspondence selection, not a different rigid-registration objective or a Doppler-only direct motion estimator. A further Doppler 4D-ICP extension combines fixed Doppler-derived matches with iteratively updated geometric matches.",
+      "evidence": [
+        {
+          "id": "N02-E01",
+          "statement": "Under the short-scan motion approximation, corresponding source/target points satisfy f(p,v_p) = r_p^2 + r_p*v_p*DeltaT approximately equal to g(q,v_q) = r_q^2 - r_q*v_q*DeltaT. Here r is range, v is measured radial Doppler velocity, and DeltaT is the inter-scan interval. Each scalar uses only its own point's measurements.",
+          "location": "PDF p. 3, Section III-B, equations (2)-(3); p. 4, Section III-C; pp. 8-9, Section V-A."
+        },
+        {
+          "id": "N02-E02",
+          "statement": "The baseline computes f for source points and g for target points, finds nearest matches in this one-dimensional score space once, and estimates a rigid transformation from the matches. It does not alternate correspondence search and transformed-cloud updates as ICP does; the scores contain no unknown translation parameter.",
+          "location": "PDF p. 3, paragraph after equation (3); p. 4, Section III-E; p. 5, Algorithms 1-2."
+        },
+        {
+          "id": "N02-E03",
+          "statement": "Equal range and radial velocity can create ambiguous, spatially separated candidates. Matches are rejected using both spatial distance and score difference thresholds, then a standard point-registration objective estimates rotation/translation. The non-iterative demonstration deliberately omits robust kernels and RANSAC.",
+          "location": "PDF p. 4, Sections III-D and III-E and Fig. 4; p. 5, Algorithm 1."
+        },
+        {
+          "id": "N02-E04",
+          "statement": "DICP adds Doppler constraints to the registration optimization, whereas Doppler Correspondence uses measured motion in choosing point associations. Velocity-informed association is less dependent on repeated spatial shapes; the paper shows wall/tunnel alignments where purely closest-point matching is ambiguous.",
+          "location": "PDF p. 2, Section II-B; p. 5, Section IV-B; p. 7, Section IV-E and Fig. 7."
+        },
+        {
+          "id": "N02-E05",
+          "statement": "Experiments cover sparse Campus radar, semi-dense NTU4DRadLM Loop1 radar, and dense 4D LiDAR from simulated wall scenes and the real Baker-Barry Tunnel. Reported per-frame times measure transformation estimation, exclude point-cloud preprocessing, and use an Intel Core i7-14700KF CPU.",
+          "location": "PDF p. 5, Sections IV-A, IV-B, and IV-C; p. 6, Table I caption."
+        },
+        {
+          "id": "N02-E06",
+          "statement": "On Campus2, the non-iterative method takes 0.16 ms/frame versus 5.9 ms for unseeded point-to-point ICP. At 8-m segment length, their rotation/translation relative errors are 2.379 degrees/0.769 m and 2.526 degrees/2.516 m, respectively. Seeded ICP takes 5.6 ms and gives 2.690 degrees/1.329 m.",
+          "location": "PDF p. 6, Table I, Campus2 rows; p. 5, Section IV-B defines seeded versus unseeded baselines."
+        },
+        {
+          "id": "N02-E07",
+          "statement": "On Loop1_4, the non-iterative method takes 2.2 ms/frame but has 48-m relative errors of 15.604 degrees/6.883 m; unseeded DICP takes 5.3 ms and gives 3.540 degrees/2.827 m. Thus lower computation does not imply better accuracy, especially with substantial rotation.",
+          "location": "PDF p. 6, Table I, Loop1_4 rows and Section IV-D discussion; p. 9, Fig. 9(b)."
+        },
+        {
+          "id": "N02-E08",
+          "statement": "The derivation assumes a short interval with DeltaT*||angular_velocity|| much smaller than one and approximately constant angular and translational velocities. Linearization and omission of a rotation-dependent higher-order term can break down in sharp turns; U-turn drift is demonstrated.",
+          "location": "PDF pp. 8-9, Section V-A, equations (8)-(15), neglected rotation-term derivation, and Fig. 9."
+        },
+        {
+          "id": "N02-E09",
+          "statement": "Doppler 4D-ICP retains Doppler-derived correspondences across ICP iterations while recomputing closest-point correspondences. A weighted registration objective uses both sets and a Huber loss. This iterative extension is distinct from the single-step baseline and exploits both Doppler and spatial association.",
+          "location": "PDF p. 9, Section VI; p. 10, Algorithm 3 and accompanying text."
+        }
+      ],
+      "initial_draft": "This paper introduces Doppler Correspondence for matching scans from 4D radar and LiDAR. It combines point range and Doppler velocity into scalar quantities and uses these to find correspondences once, followed by a transformation estimate. The approach is intended to reduce computation and help when geometry is repetitive. Tests cover sparse and semi-dense radar data and dense LiDAR data. On Campus2, transformation estimation takes 0.16 ms per frame, compared with 5.9 ms for unseeded point-to-point ICP. Accuracy is not always better, particularly during sharp turns. The paper also combines Doppler correspondences with ICP.",
+      "relations": [
+        {
+          "id": "N02-R01",
+          "meaning": "Doppler and range are used to construct scalar association quantities before rigid transformation estimation. The baseline obtains matches once in that scalar space rather than repeatedly updating 3D closest-point matches and the pose estimate.",
+          "evidence_ids": [
+            "N02-E01",
+            "N02-E02",
+            "N02-E03"
+          ],
+          "original_witness": "It combines point range and Doppler velocity into scalar quantities and uses these to find correspondences once, followed by a transformation estimate."
+        },
+        {
+          "id": "N02-R02",
+          "meaning": "The mechanism for reduced geometric ambiguity is that measured Doppler motion influences which points are associated, not merely the loss after geometry-only association. Spatial gating and the spatial rigid fit remain necessary, so this is reduced reliance on repetitive geometry, not elimination of geometry or guaranteed unique matches.",
+          "evidence_ids": [
+            "N02-E01",
+            "N02-E03",
+            "N02-E04"
+          ],
+          "original_witness": ""
+        }
+      ],
+      "max_words": 150
+    },
+    {
+      "paper_id": "N04",
+      "title": "V-HOP",
+      "contribution": "The authors propose V-HOP, a model-based visuo-haptic 6D object pose tracker with two indispensable contributions: a shared point-cloud representation of tactile contact, gripper posture, and a hypothesized object, and transformer-based feature fusion built on a pretrained visual tracker. The representation addresses sensor and embodiment differences, while fusion combines visual and haptic evidence under changing contact and visibility. A multi-embodied synthetic dataset supports training and generalization evaluation.",
+      "evidence": [
+        {
+          "id": "N04-E01",
+          "statement": "V-HOP assumes an object CAD model, RGB-D observations, an initial pose, and a rigid gripper with known kinematics and tactile sensing. At each tracking step, the previous estimated pose becomes the new pose hypothesis.",
+          "location": "PDF p. 2, Section II-A, problem definition; PDF pp. 9-10, Section VII, limitations."
+        },
+        {
+          "id": "N04-E02",
+          "statement": "Taxel-based or vision-based tactile observations yield contact points. These label a gripper surface point cloud generated from kinematics, with positions, normals, and contact/non-contact labels, jointly representing tactile signals and gripper posture rather than contact alone.",
+          "location": "PDF pp. 2-3, Section II-B and Section III-A, equation (3); PDF p. 3 visually checked."
+        },
+        {
+          "id": "N04-E03",
+          "statement": "The object CAD point cloud is transformed by the previous pose and combined with the observed gripper point cloud. This compares a hypothesized object configuration with actual haptic geometry; training predicts a relative pose correction between hypothesis and observation.",
+          "location": "PDF p. 3, Section III-B, equations (4)-(6); PDF p. 4, Section III-D, equations (7)-(9); visually checked."
+        },
+        {
+          "id": "N04-E04",
+          "statement": "A frozen FoundationPose visual encoder and a trainable haptic encoder supply embeddings to fine-tuned pretrained transformers. Self-attention fuses features adaptively: vision is useful without contact, while haptics is favored under severe occlusion. Separate heads estimate translation and rotation.",
+          "location": "PDF pp. 3-4, Section III-C, especially 'Visuo-haptic fusion', and Figure 2; PDF p. 4 visually checked."
+        },
+        {
+          "id": "N04-E05",
+          "statement": "Early feature fusion achieves 86.62 AUC ADD-S versus 70.43 for late result fusion; removing tactile contact labels yields 77.33. Grad-CAM visualizations suggest greater visual reliance without contact and greater haptic reliance with contact and occlusion.",
+          "location": "PDF p. 6, Tables III-IV and Sections IV-C/D; PDF p. 9, Section V-D and Figure 9. Table values visually checked."
+        },
+        {
+          "id": "N04-E06",
+          "statement": "The synthetic Isaac Sim dataset contains approximately 1.55 million images spanning eight grippers and thirteen objects. Training excludes D'Claw and pudding_box for unseen-gripper/object evaluation; the paper uses synthetic data only for training.",
+          "location": "PDF p. 5, Sections IV-A/B; PDF p. 6, Table II caption and per-object/per-gripper results."
+        },
+        {
+          "id": "N04-E07",
+          "statement": "The FeelSight-Occlusion comparison evaluates an unseen Allegro hand with DIGIT fingertips, an unseen vision-based tactile sensor type, and an unseen Rubik's cube. The model-based NeuralFeels baseline receives ground-truth segmentation; V-HOP does not.",
+          "location": "PDF p. 7, Section IV-F and Table V; visually checked."
+        },
+        {
+          "id": "N04-E08",
+          "statement": "On FeelSight-Occlusion, V-HOP reports 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS on an RTX 4070. ADD-S-0.1d is 98.45 versus 98.95, respectively; V-HOP does not win that threshold metric.",
+          "location": "PDF p. 7, Table V, caption, and Section IV-F; visually checked."
+        },
+        {
+          "id": "N04-E09",
+          "statement": "Real Barrett-hand bimanual handover averages 80% success with V-HOP versus 40% with FoundationPose across three objects, with five trials per object. Other real experiments examine tracking under occlusion and can-in-mug manipulation.",
+          "location": "PDF pp. 7-9, Sections V-A/B/C; PDF p. 8, Table VI and trial-count sentence, visually checked."
+        }
+      ],
+      "initial_draft": "V-HOP is a system for tracking the 6D pose of objects during manipulation. It uses RGB-D images and haptic feedback, with a point cloud that includes gripper shape, contact information, and an object pose hypothesis. A transformer combines visual and haptic features, building on FoundationPose. The model is trained on synthetic data from several grippers and tested on new objects and embodiments. On FeelSight-Occlusion, V-HOP reports 1.46 mm ADD-S error at 32 frames per second, compared with NeuralFeels at 2.14 mm and 3 frames per second. Real robot experiments also examine tracking and manipulation tasks.",
+      "relations": [
+        {
+          "id": "N04-R01",
+          "meaning": "The haptic representation is a geometric hypothesis-versus-observation comparison: the previous pose places the object model alongside the currently observed, contact-labeled gripper. Their shared point-cloud representation includes kinesthetic posture as well as touch and supports learning a correction to the object hypothesis across sensor layouts and embodiments.",
+          "evidence_ids": [
+            "N04-E01",
+            "N04-E02",
+            "N04-E03",
+            "N04-E06"
+          ],
+          "original_witness": ""
+        },
+        {
+          "id": "N04-R02",
+          "meaning": "Unified geometry and adaptive fusion solve different parts of the problem: geometry makes heterogeneous haptic inputs representable together, while transformer feature fusion changes the use of vision and haptics with contact and visibility. The frozen visual encoder retains the pretrained visual prior; tuning fusion and the haptic encoder adds haptic evidence instead of imposing a fixed modality balance or merely merging final pose predictions.",
+          "evidence_ids": [
+            "N04-E02",
+            "N04-E04",
+            "N04-E05"
+          ],
+          "original_witness": ""
+        }
+      ],
+      "max_words": 150
+    }
+  ],
+  "count_rule": "ASCII alphanumerics, with one internal hyphen/apostrophe, count as one token; [A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?",
+  "guides": [
+    "# Abstract Decisions: Contribution Before Structure\n\nUse for drafting, structurally revising, or comparing abstracts. For punctuation\nor in-place editing, respect that narrower contract; do not rebuild the argument.\nThis is an editorial decision aid, not a validated predictor of acceptance.\n\n## Decide What the Reader Must Retain\n\nUse the existing contribution record and author priorities. Identify the central\naddition, the evidence supporting it, and the condition that changes its meaning.\nKeep this compact in the existing plan; do not require another artifact or a new\napproval gate. If two materially different contribution priorities remain\nunresolved, ask one focused question or label a provisional choice.\n\nSelect the [protocol](writing-protocols.md) only after this decision. A paper\nwith experiments need not have an empirical-method-centered abstract. A theory\nplus diagnostic paper may need its theorem and counterexample more than a list\nof candidate-generation modules. Do not automatically prioritize theory either:\nthe supported contribution and author's intent determine the allocation.\n\nBefore compressing, distinguish the main contribution, any co-contribution\nessential to the paper's promise, and supporting details. A dominant result\ndoes not automatically replace another contribution: faster updates and fewer\nexpert corrections, for example, answer different questions. After drafting,\ncheck what the reader can still recover. If a co-contribution disappeared, trade\noff a lower-value mechanism detail or per-task tally before dropping it. This\nis not a requirement to mention every result or invent equal author priorities.\nPreserve comparison scope when joining results measured against different baselines.\nWhen baselines use different training regimes, retain that distinction: pretrained\nmodels fine-tuned with default recipes and policies trained from scratch are not\nall fine-tuned baselines. Attach each comparison to its actual group, metric,\nand setting; a shared task does not imply a shared training budget or protocol.\nUse the [contribution priority check](contribution.md#contribution-priorities-and-compression)\nin the existing plan: check retained meaning against author priorities, not\nkeyword presence. A paper's contribution may be a reusable resource as well as\na method; conversely, not every resource or secondary result deserves abstract space.\n\n## Choose Information by Function\n\n| Contribution | Information that often carries the argument | Common loss |\n| --- | --- | --- |\n| Method | Specific obstacle, insight, mechanism, relevant comparison | Modules replace the reason the approach works |\n| Theory | Objects, quantifiers, assumptions, result and implication | A conditional or necessary result becomes universal or sufficient |\n| Theory plus implementation | Formal scheme, approximations, what is empirically observed | Implementation silently inherits the entire theorem |\n| Diagnosis | Existing interpretation, discriminating test, finding, revised understanding | A negative result is disguised as improved performance |\n| System | Workload bottleneck, design response, end-to-end tradeoff | Throughput is presented as latency or comparison conditions disappear |\n| Dataset or tool | Missing capability, construction, evidence of utility, access scope | Size and feature count replace usefulness |\n\nThere is no mandatory opening, sentence count, numeric result, or future-work\nending. A result can precede mechanism when that improves understanding. Include\ndesign lists when they express tested findings or explain interacting decisions;\nomit inventories that crowd out the main contribution. A bound or diagnostic\nobservation may be the strongest evidence, not a benchmark percentage.\n\nKeep comparison budgets and consequential assumptions beside their claims.\nDistinguish observed improvement, statistically significant improvement,\nequivalence, and certification. A failed certificate alone does not prove an\nunsafe population rate. An empirical safety observation is not a guarantee.\nNecessary qualifications should clarify an assertion, not accumulate as a\ngeneric disclaimer paragraph. Preserve adverse evidence when omission would\nmisrepresent the overall result.\n\nScope the positive claim itself: a result on the tested tasks need not end with\nan additional denial of universal superiority. Keep a limitation when removing\nit would change the reader's interpretation, not merely to signal caution.\nCompression should trade low-value detail for the paper's distinctive insight\nand decisive evidence, rather than trade evidence for generic safety language.\n\nSeparate claim boundaries from unresolved reporting work. A simulator-only\nresult, conditional guarantee, or materially mixed outcome qualifies the claim\nin the manuscript. A missing table unit or unavailable uncertainty definition\nbelongs in a separate author query unless that absence itself is the scientific\nfinding. Meanwhile use a supported descriptive claim, omit an uninterpretable\nnumber, or mark the draft provisional; never silently guess or claim readiness.\nDo not spend the abstract explaining that a source packet lacks information.\n\nDo not upgrade descriptive source framing into stronger labels merely because\nthey sound academic. Claims such as general-purpose, reliable, robust, unified,\nor state of the art need explicit scope and evidence. When a source says it\nevaluates or studies a capability, retain that evidential verb unless the\nsupplied evidence supports the stronger claim.\n\nPreserve the argument while compressing: the concrete problem, why the design\naddresses it, and what the evidence establishes. These are information functions,\nnot a required sentence order; a method-first opening can be as effective as a\ngap-first opening. Do not invent a literature gap to complete a template.\nRemove repeated module names before losing a supported design rationale. Keep\nthat rationale distinct from a demonstrated benefit: using a pretrained model\nto exploit prior semantic knowledge does not itself establish improved transfer.\nPrefer the actual measured quantity (`action-generation throughput`, not\nend-to-end latency or unspecified `efficiency`) and preserve absolute versus\nrelative gains. Conventional technical terms can repeat; do not replace them\nwith broader synonyms for variety. Hyphenation alone is not a quality gain.\nAn ending should add a supported finding or implication, not repeat the method\ninventory or append an unsupported claim of a unified framework.\n\nAn author-prioritized but unestablished contribution is not automatically an\nabstract promise. For an evidence-only research abstract, keep the supported\ncontribution in prose and put the missing claim and needed evidence in author\nnotes; labeling a wish as future work does not make it responsive to that task.\nFor a proposal or an explicit request for future directions, planned objectives\ncan belong in the abstract, clearly separated from completed findings. Resolve\nthe requested genre before allocating space, not by adding more caveats.\n\n## Compare Good Drafts, Not Only Correct Drafts\n\nFirst check source fidelity. Then compare drafts from the same evidence and\nauthor priorities using located reasons rather than a single quality percentage:\n\n- **Contribution retention:** Can a reader state the distinctive addition,\n  rather than merely name the task and modules?\n- **Argument connection:** Does the insight explain the design and does the\n  chosen evidence answer the central promise?\n- **Evidence selection:** Is the result decision-relevant, with its comparison\n  scope intact, rather than simply the largest available number?\n- **Compression:** Which important information is missing, and what took its\n  place? Do not penalize every omission or reward maximal density.\n- **Reader understanding:** Can the target reader reconstruct the contribution,\n  reason for the approach, and evidential boundary without inventing links?\n\nTreat grammatical, accurate text as eligible, not automatically excellent.\nAllow ties and explain different valid allocations. Distinguish research\nstrength from how faithfully and effectively an abstract communicates it.\nNeither paper fame nor a model judge's confidence establishes prose quality.\n\nFor a measured comparison, freeze inputs and priorities before generation,\nretain raw drafts, anonymize versions, and record judge disagreements. Do not\nequate a shorter draft with better compression: record the agreed word-count\nrule, check the generation budget, and report violations without padding or\nsilently editing raw outputs. Treat a published abstract with a different length\nor richer source access as an editorial reference, not a controlled A/B baseline.\nDo not retroactively change criteria to favor a version. Calibrate evaluators on\nfactually valid but contribution-weak variants as well as factual errors; use\nheld-out topics to assess transfer. Same-family model judging is not human\nvalidation. See [calibration fixtures](../evals/abstract-quality/README.md).\n\n## Learn from Exemplars Selectively\n\nRead a few contribution-matched [exemplar notes](abstract-exemplars.md), not the\nentire collection for each draft. Notes are independent editorial analyses of\npublic abstracts, not copied templates or evidence supporting the user's paper.\nLearn the function of a choice, including when not to make it; never transplant\nclaims, superiority language, or data from a reference into a new manuscript.\n",
+    "# Compression-First Writing\n\nExcellent scientific prose is selective, not exhaustive. A revision should make\nthe reader's most important answer easier to recover under the same evidence and\na declared information budget. More detail, more caveats, and more protocol\nlabels are not improvements by themselves.\n\n## One answer before many checks\n\nWrite one target answer before diagnosing style: what should a reader remember\nafter this section? Choose at most three priority criteria for one pass. Other\ncriteria may be assessed and explicitly deferred; they must not force unrelated\nsentences into the draft.\n\n## Delete before adding\n\nUse this operation order unless evidence requires otherwise:\n\n1. delete module inventories, generic setup, repeated referents, and defensive\n   caveats whose scope is already explicit in the metric or noun;\n2. merge sentences that serve the same reader question;\n3. move a result next to the operation or comparison it evaluates;\n4. add only the smallest clause needed to recover the target answer.\n\nEvery added clause must replace, merge, or make a required comparison explicit.\nThe proposal records what it keeps, removes or merges, and adds only if needed.\n\n## Budget and acceptance\n\nCompare the candidate with the source draft, not with an imaginary ideal. The\nbenchmark declares maximum words, sentences, allowed word-count change, and\nadded clauses. A candidate that exceeds these limits is rejected before taste or\nfluency is discussed. If a longer draft is genuinely necessary, the author must\nraise the budget explicitly and explain which evidence requires it.\n\nThe reviewer asks, in order:\n\n- Is the target answer more recoverable?\n- Did the revision preserve the supplied facts, conditions, and uncertainty?\n- Is the result shorter or no longer without losing the decisive relation?\n- Did any sentence survive only because a checklist asked for it?\n\nKeep the original on a tie. A technically accurate but more verbose rewrite is a\nregression when the original was already clear.\n"
+  ]
+}

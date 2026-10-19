@@ -6,6 +6,49 @@ behavior below, not research novelty, factual entailment or acceptance gains.
 
 ## Reproducible Checks
 
+### Meaning and original-strength preservation (2026-10-19)
+
+The optional [v3 handoff contract](../references/writing-team.md#schema-3-meaning-and-preservation)
+selects 1-3 evidence-linked meaning relations, preserves independently assessed
+original strengths, and permits an explicit absolute-only word budget. V1/v2
+output schemas remain supported. Updated guidance requires new receipts; archived
+events are not silently migrated. The helper still reads local inputs/resources
+and emits JSON only, without model, network or manuscript-writing capability.
+
+Sixteen authored contract tests cover the complete v3 sequence, explicit and
+absolute-only budgets, source/relation IDs and witnesses, missing-relation veto,
+existing versus introduced lower-priority gaps, unassessed candidate criteria,
+original-text comparison witnesses, receipt invalidation and reviewer projection.
+Returned writers count against the original, preventing a ratcheted relative
+budget. Decimal metric points no longer consume sentence slots; sentence counting
+otherwise remains a punctuation heuristic, not a linguistic parser.
+
+Eight archive tests verify the separate [four-paper guide ablation](../evals/explanation-pilot/README.md):
+identical facts/priorities and relaxed budgets, body-only source scope, prose-only
+anonymous packets, complete passage/pair/answer denominators, frozen hashes,
+actual completion preservation and factual-error veto. These check reproducibility,
+not whether semantic judgments are right or writing has improved. The ablation
+tests the guide, not the full multi-role runtime. Activation expectations are
+declared behavior; no activation-rate measurement or human evaluation is claimed.
+
+Local macOS verification uses Python 3.14: 365 tests run, 364 pass, one
+PowerShell-unavailable skip; all 11 smoke checks, compilation and whitespace
+checks pass. The existing Python 3.9 environment supplies PyYAML for the external
+skill validator and Playwright for browser checks; no dependencies are added to
+the skill. The built ZIP is extracted to a path containing spaces: its v3 CLI
+packet matches the source, and its archived experiment check passes offline.
+Chrome screenshots at 1680, 960 and 390 px widths show all 16 comparison passages,
+with no horizontal overflow or page errors. The older compression, author-reference
+and auxiliary-audit archives still reproduce exactly. Remote CI is separate,
+commit-bound evidence rather than part of this local result.
+
+```bash
+python -m unittest discover -s tests -p test_writing_meaning.py -v
+python -m unittest discover -s tests -p test_explanation_pilot.py -v
+python evals/explanation-pilot/pilot.py check
+python evals/compression-pilot/pilot.py check
+```
+
 ### Section benchmarks beyond clarity (2026-10-15)
 
 Schema v2 carries contribution-matched criteria, selected existing protocols,

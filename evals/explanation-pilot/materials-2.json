@@ -1,0 +1,258 @@
+{
+  "papers": [
+    {
+      "paper_id": "N03",
+      "title": "Building Rome with Convex Optimization",
+      "source_url": "https://www.roboticsproceedings.org/rss21/p032.pdf",
+      "source_receipt": {
+        "pdf_sha256": "28cf106d4be6340d38f64f182b8b29acc87901cfcab21432941c96772313db0a",
+        "pdf_page_count": 19,
+        "page_numbering": "One-based physical PDF pages; PDF page 2 is index 1.",
+        "read_pdf_pages": [2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 16, 17, 18, 19],
+        "extracted_pdf_pages": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+        "extraction_method": "pdftotext -f 2 -layout produced no words. PyMuPDF 1.26.5 rendered only PDF indices 1 through 18 at 200 dpi; Tesseract 5.5.2, English, --psm 3, OCR-extracted each rendered body page. Selected claims were checked against the rendered page images.",
+        "body_excerpt_sha256": "b19a568360dfa31f54c1d9763874113f99675555fc815187c72818279f220b11",
+        "body_excerpt_definition": "SHA256 of the UTF-8 bytes in the uncorrected body-only OCR transcript. For each extracted page n, concatenate '=== PDF PAGE n ===' plus a newline and that page's Tesseract text; join these page blocks with one newline, in PDF order. This transcript includes body, references, and appendices after page 1, but never page 1.",
+        "temporary_pdf_path": "/tmp/super-writer-sources.h4BiGE/N03.pdf",
+        "temporary_body_excerpt_path": "/tmp/super-writer-sources.h4BiGE/N03-body-ocr.txt",
+        "visually_verified_pdf_pages": [2, 5, 8, 12],
+        "visual_verification": [
+          {
+            "pdf_page": 2,
+            "details": "Checked equations (2)-(3), the per-frame scale, the 3D alignment objective, and the camera-to-global transformation direction."
+          },
+          {
+            "pdf_page": 5,
+            "details": "Checked the positive-semidefinite dual-certificate condition and rank-increase branch in Algorithm 1; OCR loses inequality signs."
+          },
+          {
+            "pdf_page": 8,
+            "details": "Checked the BAL-1934 MANOPT/XM solver and preprocessing rows, and the largest-instance certification exception in the results paragraph."
+          },
+          {
+            "pdf_page": 12,
+            "details": "Checked the Rome-2063 runtime and ATE-T columns in Table VII and the rank-3 versus rank-4 explanation accompanying Figure 10."
+          }
+        ],
+        "first_page_read": false,
+        "html_abstract_page_fetched_or_read": false,
+        "original_abstract_compared": false
+      },
+      "contribution": "The authors propose XM, a certifiable scaled bundle-adjustment solver that uses learned depth to estimate camera poses, 3D landmarks, and per-frame scales. Its empirically tight semidefinite relaxation addresses initialization and optimality; the indispensable computational co-contribution is a low-rank Riemannian-staircase solver with a C++/CUDA trust-region implementation. XM-SfM integrates this engine with matching, filtering, and CERES refinement of conventional bundle adjustment.",
+      "evidence": [
+        {
+          "id": "N03-E01",
+          "statement": "Conventional bundle adjustment jointly estimates camera poses and landmarks from 2D keypoints; reprojection and pose constraints make it nonconvex, while large view graphs make optimization expensive.",
+          "location": "PDF p. 2, Section I, 'Classical BA formulation' and 'Optimization challenges', equation (1)."
+        },
+        {
+          "id": "N03-E02",
+          "statement": "Learned metric depth lifts 2D keypoints to camera-frame 3D points. A positive per-frame scale adjusts predicted depth, and camera-to-global poses align those scaled points with jointly estimated landmarks using 3D distances instead of reprojection.",
+          "location": "PDF p. 2, 'BA with learned depth', equations (2)-(3) and footnote 2; visually checked."
+        },
+        {
+          "id": "N03-E03",
+          "statement": "Eliminating translations and landmarks yields a scaled-rotation problem, then a QCQP and SDP relaxation. Rank-three tightness recovers a QCQP optimum; recovering an SBA optimum additionally requires proper rotations. The SDP bound and a feasible SBA solution bound suboptimality.",
+          "location": "PDF pp. 3-4, Propositions 2, 3, and 5; equations (9)-(16)."
+        },
+        {
+          "id": "N03-E04",
+          "statement": "Burer-Monteiro factorization replaces the full SDP matrix with a low-rank factor. The staircase tests a dual matrix for positive semidefiniteness; failure supplies a negative-eigenvalue descent direction after increasing rank, rather than accepting a bad local minimum.",
+          "location": "PDF pp. 5-6, Section III-A, Algorithm 1 and Theorems 8-10; PDF p. 12, Figure 10's rank-3/rank-4 example; Algorithm 1 visually checked."
+        },
+        {
+          "id": "N03-E05",
+          "statement": "XM implements Riemannian trust-region optimization with truncated conjugate gradients directly in C++/CUDA, using analytic Hessian-vector products, cuBLAS, and custom batched manifold operations. Almost all reported staircase runs terminate at rank three or four.",
+          "location": "PDF p. 6, end of Section III-A and Section III-B; PDF p. 7, Section III summary."
+        },
+        {
+          "id": "N03-E06",
+          "statement": "XM-SfM combines feature matching, learned depth, outlier filtering, and XM. Because depth noise can impair reconstruction, XM's poses and landmarks warm-start CERES on the original 2D reprojection objective.",
+          "location": "PDF p. 7, Section IV, especially 'Depth estimation', 'XM solver', and 'CERES refinement'; PDF p. 8, Figure 3."
+        },
+        {
+          "id": "N03-E07",
+          "statement": "The BAL solver experiment gives XM and MANOPT the same lifted 3D observations, described as accurate but slightly noisy. CERES receives 2D observations and is tested with several initialization conditions; this is not a learned-depth end-to-end SfM comparison.",
+          "location": "PDF p. 7, Section V-A, 'Setup and baselines'; PDF p. 8, Table I and results paragraph."
+        },
+        {
+          "id": "N03-E08",
+          "statement": "On BAL-1934, with 1,934 cameras and 67,594 landmarks, XM solver time is 2.09 s versus MANOPT's 236.46 s on the same problem; each has a separately reported 69.15 s preprocessing time.",
+          "location": "PDF p. 8, Table I, BAL-1934 column, MANOPT and XM rows; visually checked."
+        },
+        {
+          "id": "N03-E09",
+          "statement": "For IMC Rome-2063, filtered two-pass XM plus CERES takes 19.17 + 300.16 s of solving versus GLOMAP's 9,813.04 s; ATE-T is 0.021 versus 0.003. Preprocessing is separate: 4,877.89 versus 3,459.04 s.",
+          "location": "PDF p. 12, Table VII, Rome-2063 row; visually checked."
+        }
+      ],
+      "initial_draft": "This paper presents XM for bundle adjustment and structure from motion. Learned depth turns image matches into 3D measurements, and per-frame scales adjust these measurements for depth prediction errors. XM estimates camera poses and landmarks using a convex relaxation, low-rank optimization, and a GPU solver. The SfM pipeline also includes filtering and CERES refinement. Experiments use bundle adjustment benchmarks and real image collections. On BAL-1934, solver time is 2.09 seconds for XM and 236.46 seconds for MANOPT on the same problem. The approach is faster in these tests, although depth quality and outliers remain concerns.",
+      "relations": [
+        {
+          "id": "N03-R01",
+          "meaning": "The depth operation runs from matched 2D image points to 3D measurements, and the frame scales act on those lifted measurements to accommodate depth prediction error; the scales are not an unrelated output attached to ordinary reprojection BA.",
+          "evidence_ids": ["N03-E01", "N03-E02"],
+          "original_witness": "Learned depth turns image matches into 3D measurements, and per-frame scales adjust these measurements for depth prediction errors."
+        },
+        {
+          "id": "N03-R02",
+          "meaning": "The relaxation and implementation address coupled bottlenecks: the SDP supplies optimality bounds, while low-rank factors and GPU trust-region updates make its solution scalable. Although factorization is nonconvex, the staircase uses the SDP dual certificate either to certify a solution or to increase rank and escape, rather than treating a local factor optimum as sufficient.",
+          "evidence_ids": ["N03-E03", "N03-E04", "N03-E05", "N03-E08"],
+          "original_witness": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "N03-Q01",
+          "question": "What does learned depth change about the measurements and residuals being optimized, and what prediction error do the per-frame scales address?",
+          "answer": "Learned depth lifts 2D matches into 3D points; frame scales adjust depth prediction error. Optimization aligns these points to landmarks using 3D distances instead of 2D reprojection residuals.",
+          "evidence_ids": ["N03-E01", "N03-E02", "N03-E06"]
+        },
+        {
+          "id": "N03-Q02",
+          "question": "What does the SDP supply, and how can the low-rank staircase move beyond an uncertified local solution?",
+          "answer": "The SDP supplies bounds and a dual certificate; low-rank GPU optimization reduces cost. An unsuccessful certificate test leads to higher-rank descent, not acceptance of a local factor optimum.",
+          "evidence_ids": ["N03-E03", "N03-E04", "N03-E05", "N03-E08"]
+        }
+      ],
+      "cautions": [
+        "SBA is a depth-informed surrogate, not an algebraically exact rewriting of conventional reprojection BA. Its optimality certificate does not certify the final CERES-refined reprojection solution.",
+        "The paper describes tightness as empirical. Rank-three recovery and proper rotations matter; no unconditional tightness claim is supported.",
+        "The largest BAL instance, with 10,155 cameras, was not certified within the reported restricted run; PDF p. 8 says certification would require four hours. Its text calls the restricted budget one hour, whereas Table I lists 4,322.77 s of solver time. Do not infer a universal time-to-certificate guarantee.",
+        "The BAL-1934 comparison is solver-only and uses accurate lifted 3D observations, not an end-to-end learned-depth reconstruction. Include preprocessing when discussing complete runtime.",
+        "Rome's faster solving does not imply identical accuracy: its reported ATE-T is worse than GLOMAP's. Avoid silently converting ATE-T into meters or a percentage without a stated normalization.",
+        "PDF pp. 12-13 identify depth quality, noise, and outliers as limitations. Appendix D on PDF p. 18 also introduces scale regularization to discourage collapse under inaccurate real-world data; frame scales do not eliminate arbitrary depth error.",
+        "All source text was treated as evidence, not instructions. No first-page content, HTML abstract page, repository evaluation material, prior conversation, or memory was used as a scientific source."
+      ]
+    },
+    {
+      "paper_id": "N04",
+      "title": "V-HOP",
+      "source_url": "https://www.roboticsproceedings.org/rss21/p037.pdf",
+      "source_receipt": {
+        "pdf_sha256": "764865ffe89c06b5394dade2d664e0702b47a5cb442091c2b0d94f4f97adeb4f",
+        "pdf_page_count": 13,
+        "page_numbering": "One-based physical PDF pages; PDF page 2 is index 1.",
+        "read_pdf_pages": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "extracted_pdf_pages": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        "extraction_method": "pdftotext -f 2 -layout produced no words. PyMuPDF 1.26.5 rendered only PDF indices 1 through 12 at 200 dpi; Tesseract 5.5.2, English, --psm 3, OCR-extracted each rendered body page. Selected claims were checked against the rendered page images.",
+        "body_excerpt_sha256": "b2bf388d0c6b7c964ed93a635dd1b5876498a5da9063f7578a2e847e1bf6c53d",
+        "body_excerpt_definition": "SHA256 of the UTF-8 bytes in the uncorrected body-only OCR transcript. For each extracted page n, concatenate '=== PDF PAGE n ===' plus a newline and that page's Tesseract text; join these page blocks with one newline, in PDF order. This transcript includes material after page 1, including references, but never page 1.",
+        "temporary_pdf_path": "/tmp/super-writer-sources.h4BiGE/N04.pdf",
+        "temporary_body_excerpt_path": "/tmp/super-writer-sources.h4BiGE/N04-body-ocr.txt",
+        "visually_verified_pdf_pages": [3, 4, 6, 7, 8],
+        "visual_verification": [
+          {
+            "pdf_page": 3,
+            "details": "Checked the contact/non-contact/object point labels, the previous-pose transformation of object points, and the gripper-observation versus object-hypothesis comparison in equations (3)-(6)."
+          },
+          {
+            "pdf_page": 4,
+            "details": "Checked Figure 2, the frozen visual encoder and trainable fusion components, adaptive feature fusion, and the relative-pose update direction."
+          },
+          {
+            "pdf_page": 6,
+            "details": "Checked the no-tactile and early/late-fusion AUC ADD-S values in Tables III-IV; these are AUC scores, not millimeter errors."
+          },
+          {
+            "pdf_page": 7,
+            "details": "Checked Table V's ADD-S units, metric directions, FPS values, and ground-truth segmentation asymmetry; checked the FeelSight-Occlusion scope and RTX 4070 statement."
+          },
+          {
+            "pdf_page": 8,
+            "details": "Checked the handover success rates in Table VI and the statement that each object has five trials."
+          }
+        ],
+        "first_page_read": false,
+        "html_abstract_page_fetched_or_read": false,
+        "original_abstract_compared": false
+      },
+      "contribution": "The authors propose V-HOP, a model-based visuo-haptic 6D object pose tracker with two indispensable contributions: a shared point-cloud representation of tactile contact, gripper posture, and a hypothesized object, and transformer-based feature fusion built on a pretrained visual tracker. The representation addresses sensor and embodiment differences, while fusion combines visual and haptic evidence under changing contact and visibility. A multi-embodied synthetic dataset supports training and generalization evaluation.",
+      "evidence": [
+        {
+          "id": "N04-E01",
+          "statement": "V-HOP assumes an object CAD model, RGB-D observations, an initial pose, and a rigid gripper with known kinematics and tactile sensing. At each tracking step, the previous estimated pose becomes the new pose hypothesis.",
+          "location": "PDF p. 2, Section II-A, problem definition; PDF pp. 9-10, Section VII, limitations."
+        },
+        {
+          "id": "N04-E02",
+          "statement": "Taxel-based or vision-based tactile observations yield contact points. These label a gripper surface point cloud generated from kinematics, with positions, normals, and contact/non-contact labels, jointly representing tactile signals and gripper posture rather than contact alone.",
+          "location": "PDF pp. 2-3, Section II-B and Section III-A, equation (3); PDF p. 3 visually checked."
+        },
+        {
+          "id": "N04-E03",
+          "statement": "The object CAD point cloud is transformed by the previous pose and combined with the observed gripper point cloud. This compares a hypothesized object configuration with actual haptic geometry; training predicts a relative pose correction between hypothesis and observation.",
+          "location": "PDF p. 3, Section III-B, equations (4)-(6); PDF p. 4, Section III-D, equations (7)-(9); visually checked."
+        },
+        {
+          "id": "N04-E04",
+          "statement": "A frozen FoundationPose visual encoder and a trainable haptic encoder supply embeddings to fine-tuned pretrained transformers. Self-attention fuses features adaptively: vision is useful without contact, while haptics is favored under severe occlusion. Separate heads estimate translation and rotation.",
+          "location": "PDF pp. 3-4, Section III-C, especially 'Visuo-haptic fusion', and Figure 2; PDF p. 4 visually checked."
+        },
+        {
+          "id": "N04-E05",
+          "statement": "Early feature fusion achieves 86.62 AUC ADD-S versus 70.43 for late result fusion; removing tactile contact labels yields 77.33. Grad-CAM visualizations suggest greater visual reliance without contact and greater haptic reliance with contact and occlusion.",
+          "location": "PDF p. 6, Tables III-IV and Sections IV-C/D; PDF p. 9, Section V-D and Figure 9. Table values visually checked."
+        },
+        {
+          "id": "N04-E06",
+          "statement": "The synthetic Isaac Sim dataset contains approximately 1.55 million images spanning eight grippers and thirteen objects. Training excludes D'Claw and pudding_box for unseen-gripper/object evaluation; the paper uses synthetic data only for training.",
+          "location": "PDF p. 5, Sections IV-A/B; PDF p. 6, Table II caption and per-object/per-gripper results."
+        },
+        {
+          "id": "N04-E07",
+          "statement": "The FeelSight-Occlusion comparison evaluates an unseen Allegro hand with DIGIT fingertips, an unseen vision-based tactile sensor type, and an unseen Rubik's cube. The model-based NeuralFeels baseline receives ground-truth segmentation; V-HOP does not.",
+          "location": "PDF p. 7, Section IV-F and Table V; visually checked."
+        },
+        {
+          "id": "N04-E08",
+          "statement": "On FeelSight-Occlusion, V-HOP reports 1.46 mm ADD-S error at 32 FPS versus NeuralFeels' 2.14 mm at 3 FPS on an RTX 4070. ADD-S-0.1d is 98.45 versus 98.95, respectively; V-HOP does not win that threshold metric.",
+          "location": "PDF p. 7, Table V, caption, and Section IV-F; visually checked."
+        },
+        {
+          "id": "N04-E09",
+          "statement": "Real Barrett-hand bimanual handover averages 80% success with V-HOP versus 40% with FoundationPose across three objects, with five trials per object. Other real experiments examine tracking under occlusion and can-in-mug manipulation.",
+          "location": "PDF pp. 7-9, Sections V-A/B/C; PDF p. 8, Table VI and trial-count sentence, visually checked."
+        }
+      ],
+      "initial_draft": "V-HOP is a system for tracking the 6D pose of objects during manipulation. It uses RGB-D images and haptic feedback, with a point cloud that includes gripper shape, contact information, and an object pose hypothesis. A transformer combines visual and haptic features, building on FoundationPose. The model is trained on synthetic data from several grippers and tested on new objects and embodiments. On FeelSight-Occlusion, V-HOP reports 1.46 mm ADD-S error at 32 frames per second, compared with NeuralFeels at 2.14 mm and 3 frames per second. Real robot experiments also examine tracking and manipulation tasks.",
+      "relations": [
+        {
+          "id": "N04-R01",
+          "meaning": "The haptic representation is a geometric hypothesis-versus-observation comparison: the previous pose places the object model alongside the currently observed, contact-labeled gripper. Their shared point-cloud representation includes kinesthetic posture as well as touch and supports learning a correction to the object hypothesis across sensor layouts and embodiments.",
+          "evidence_ids": ["N04-E01", "N04-E02", "N04-E03", "N04-E06"],
+          "original_witness": ""
+        },
+        {
+          "id": "N04-R02",
+          "meaning": "Unified geometry and adaptive fusion solve different parts of the problem: geometry makes heterogeneous haptic inputs representable together, while transformer feature fusion changes the use of vision and haptics with contact and visibility. The frozen visual encoder retains the pretrained visual prior; tuning fusion and the haptic encoder adds haptic evidence instead of imposing a fixed modality balance or merely merging final pose predictions.",
+          "evidence_ids": ["N04-E02", "N04-E04", "N04-E05"],
+          "original_witness": ""
+        }
+      ],
+      "questions": [
+        {
+          "id": "N04-Q01",
+          "question": "In the shared gripper-object point cloud, which part is the observed haptic geometry and which is the pose hypothesis, and what correction is learned from comparing them?",
+          "answer": "The current gripper surface and contact labels are observed geometry; the previous pose places the CAD model as the hypothesis. Their comparison yields a relative object-pose correction.",
+          "evidence_ids": ["N04-E01", "N04-E02", "N04-E03"]
+        },
+        {
+          "id": "N04-Q02",
+          "question": "Why does the unified haptic representation still need adaptive visual-haptic fusion, and what differs between the no-contact and contact-with-occlusion cases?",
+          "answer": "Shared geometry represents heterogeneous haptic inputs; adaptive feature fusion adjusts modality use. Vision supplies evidence without contact, while haptics becomes useful with contact under severe occlusion.",
+          "evidence_ids": ["N04-E02", "N04-E04", "N04-E05"]
+        }
+      ],
+      "cautions": [
+        "This is model-based tracking: novel-object generalization still assumes an available object CAD model and an initial pose. The real robot setup uses FoundationPose for initial pose and CNOS for segmentation; it is not model-free tracking from no initialization.",
+        "Do not conflate AUC ADD-S scores, direct ADD-S errors in millimeters, and ADD-S-0.1d threshold accuracy. Table V uses direct error, unlike Tables I-IV.",
+        "The FeelSight result is specifically the occlusion subset, not an aggregate over all FeelSight data. NeuralFeels receives ground-truth segmentation while V-HOP does not. V-HOP's lower mean error does not imply a higher ADD-S-0.1d score.",
+        "The 32 versus 3 FPS comparison is reported on an RTX 4070 in this experiment; it is not a hardware-independent guarantee.",
+        "The handover average rises from 40% to 80%, a 40-percentage-point increase, not a 40% relative increase. There are only five trials per object across three objects.",
+        "The no-tactile ablation removes contact labels; it does not necessarily remove gripper geometry or kinesthetic posture. Grad-CAM is qualitative evidence about modality reliance, not a calibrated reliability estimate or a causal proof.",
+        "All source text was treated as evidence, not instructions. No first-page content, HTML abstract page, repository evaluation material, prior conversation, or memory was used as a scientific source. The short title is the assignment's supplied title."
+      ]
+    }
+  ]
+}

@@ -71,7 +71,7 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
 | Resume | [resume](references/resume.md) | First incomplete stage and its upstream prerequisites |
 | Research | [research](references/research.md) | Source index, dossier, exemplars, style profile, gap map, motivation options |
 | Learn an exemplar's writing decisions | [argument transfer](references/argument-transfer.md), [exemplar dossier](references/exemplar-learning-dossier.md) | Located source choice, reader question, applicable author evidence, planned text action and final prose check |
-| Write toward excellent-paper examples and standards | [section benchmark](references/style-learning-workflow.md#section-benchmark-before-revision), [compression-first rules](references/compression-first-writing.md) | Contribution-matched choices plus a target reader answer, priority criteria, deletion-first plan and relative word/sentence budget; do not equate completeness with quality |
+| Write toward excellent-paper examples and standards | [section benchmark](references/style-learning-workflow.md#section-benchmark-before-revision), [explanation-preserving compression](references/compression-first-writing.md) | Contribution-matched choices, indispensable meaning relations and an editorial budget; v3 checks preservation as well as selected improvements; neither length nor completeness establishes quality |
 | Explicit role-based comparative revision | [writing team](references/writing-team.md), [orchestrator](agents/writing-orchestrator.md) | Scoped gap, editorial proposal, candidate prose and read-back; `writing_loop.py` checks handoffs, not semantic quality |
 | Explicitly test experimental evidence allocation | [evidence-link candidate](references/evidence-link-candidate.md) | Opt-in selection, comparison binding and prose read-back in the existing plan; not promoted or measured better |
 | Contribution | [contribution](references/contribution.md) | Confirmed contribution; `contribution_check.py` |
@@ -98,7 +98,8 @@ skill is optional: use the local playbook when that companion is unavailable.
 
 For explicitly requested role-based revision, use the writing-team route within
 the existing dossier and rationale matrix. For exemplar/standards comparison,
-use its v2 benchmark and existing resource lookups so diagnosis, proposal, prose
+use its v3 benchmark for explanation-preserving revision (v1/v2 remain readable)
+and existing resource lookups so diagnosis, proposal, prose
 and review share actual criteria and sources. Clear text can still need better
 selection or organization; a different valid structure is not automatically a gap.
 Distinguish a writing gap from missing

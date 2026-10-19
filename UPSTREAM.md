@@ -474,3 +474,21 @@ no new paper reading, source text, external dataset or license is incorporated.
 The new helper only reads bundled resources and explicit run inputs; no provider,
 network, credentials, automatic file writes or global installation are added.
 Compatibility checks and authored examples do not establish writing-quality gain.
+
+### Explanation-Preservation Follow-up (2026-10-19)
+
+Independent local synthesis from the failed
+[six-paper compression pilot](evals/compression-pilot/README.md), archived at
+`020e17862e00ac9d03afdd05fd3612348ffb46c3`. No additional upstream skill,
+executable code, model dependency, vocabulary corpus or license is imported.
+Schema v3 carries 1-3 author-evidence-linked meaning relations, allows an explicit
+absolute-only budget and checks reviewer-reported preservation of all criteria.
+V1/v2 schemas remain supported; new guidance requires new run receipts, not
+rewriting old raw events. The helper's local read-only capability is unchanged.
+
+The [four-paper guide ablation](evals/explanation-pilot/PROTOCOL.md) uses official
+RSS 2025 PDFs as research sources. Public records retain independently
+paraphrased facts, page locations, source hashes and generated revisions, not
+full papers or original abstracts. These are research observations and experimental
+outputs, not newly licensed upstream training templates. Body-only generation
+does not establish that a model never encountered the paper in pretraining.
