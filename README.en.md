@@ -32,6 +32,10 @@ earlier rounds.
 [Four versions side by side](evals/explanation-pilot/comparison.html) ·
 [Previous compression pilot](evals/compression-pilot/README.md)
 
+See the new [five-paper embodied abstract comparison](evals/abstract-five/README.md)
+for Chinese side-by-side summaries, body-only generation receipts and per-paper
+diagnosis. Writer packets withheld the author abstracts.
+
 **Mechanism candidate:** an opt-in evidence-selection, comparison-binding,
 prose-realization and read-back procedure uses the existing rationale matrix,
 without another required report. Eight families / 16 counterfactual development

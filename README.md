@@ -26,6 +26,10 @@ Python 脚本负责可重复的检查。项目不自带模型，不承诺录用�
 [四版横向对比](evals/explanation-pilot/comparison.html) ·
 [上一轮压缩实验](evals/compression-pilot/README.md)
 
+本轮 5 篇真实具身论文的中文摘要对照：
+[EquiBot、Sparsh、ManiWAV、PoliFormer、OKAMI](evals/abstract-five/README.md)。
+生成上下文不含作者摘要，结果同时保留机制解释、事实边界和仍然过密的地方。
+
 **机制改进候选：** 新增“选证据 → 绑定对象与对照 → 组织成句 → 成稿读回”的可选流程，
 接入现有写作矩阵，不新增必填报告。配套 8 类、16 个反事实开发探针，检验优先级或条件改变时
 是否需要改变写法；**尚未执行新模型盲测，不代表效果提升，也未升级默认规则**。

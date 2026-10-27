@@ -1,0 +1,17 @@
+{
+  "source_scope": "Official PMLR PDFs; body pages after the first page only",
+  "papers": {
+    "P01": {"pdf_sha256": "abceb9169f7ca8276eb530913706a383dd14ca3e3ed6d6be6e84fd0438d6fb2e", "body_pages": "2-21", "evidence_items": 12, "meaning_relations": 2},
+    "P02": {"pdf_sha256": "410597f452f0bd64bcc5d0d15f26ef77c03a34b125017d3399a8172dfde8de93", "body_pages": "2-31", "evidence_items": 11, "meaning_relations": 2},
+    "P03": {"pdf_sha256": "151b597434416208187bb2f8c4dc2dcabcfdcd1ce3ba2e0f1c52f316b45c7d0b", "body_pages": "2-16", "evidence_items": 11, "meaning_relations": 2},
+    "P04": {"pdf_sha256": "19b11d60218dc5418ac9d3673e03e851944187b998fe83142477e96502c40a82", "body_pages": "2-25", "evidence_items": 10, "meaning_relations": 2},
+    "P05": {"pdf_sha256": "a87623278d4c9b69e79b33d876e4fbba80fd5a82814e372756b13c1f4b0e2b31", "body_pages": "2-19", "evidence_items": 12, "meaning_relations": 2}
+  },
+  "generation": {
+    "writer_contexts": 3,
+    "author_abstracts_in_writer_packets": false,
+    "source_pages_in_writer_packets": false,
+    "author_word_caps": {"P01": 145, "P02": 209, "P03": 166, "P04": 141, "P05": 143},
+    "generated_word_counts": {"P01": 145, "P02": 209, "P03": 147, "P04": 141, "P05": 143}
+  }
+}
