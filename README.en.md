@@ -35,6 +35,7 @@ earlier rounds.
 See the new [five-paper embodied abstract comparison](evals/abstract-five/README.md)
 for Chinese side-by-side summaries, body-only generation receipts and per-paper
 diagnosis. Writer packets withheld the author abstracts.
+[Open the Chinese side-by-side HTML](evals/abstract-five/comparison.html).
 
 **Mechanism candidate:** an opt-in evidence-selection, comparison-binding,
 prose-realization and read-back procedure uses the existing rationale matrix,

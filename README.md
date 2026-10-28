@@ -28,6 +28,7 @@ Python 脚本负责可重复的检查。项目不自带模型，不承诺录用�
 
 本轮 5 篇真实具身论文的中文摘要对照：
 [EquiBot、Sparsh、ManiWAV、PoliFormer、OKAMI](evals/abstract-five/README.md)。
+[打开中文双栏对照 HTML](evals/abstract-five/comparison.html)。
 生成上下文不含作者摘要，结果同时保留机制解释、事实边界和仍然过密的地方。
 
 **机制改进候选：** 新增“选证据 → 绑定对象与对照 → 组织成句 → 成稿读回”的可选流程，

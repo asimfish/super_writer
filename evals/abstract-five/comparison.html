@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>五篇论文摘要 · 中文对照 | Super Writer</title>
+<style>
+:root { color-scheme: light; --ink: #25272b; --muted: #62666d; --line: #dfe2e5;
+  --author: #25686b; --writer: #8f4658; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { margin: 0; background: #fff; color: var(--ink); letter-spacing: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+a { color: #205d68; text-underline-offset: 4px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid #236b9a; outline-offset: 5px; }
+.page-heading, main, .footer-inner, .nav-inner { max-width: 1460px; margin: 0 auto; }
+.page-heading { padding: 32px 36px 25px; }
+.eyebrow { font-size: 12px; color: var(--muted); margin: 0 0 9px; }
+h1 { font-size: 27px; line-height: 1.4; font-weight: 650; margin: 0 0 12px; }
+.context { color: #51575d; font-size: 14px; line-height: 1.85; margin: 0; max-width: 1040px; }
+.context + .context { margin-top: 4px; }
+nav { position: sticky; top: 0; z-index: 2; border-block: 1px solid var(--line); background: #f7f9fa; }
+.nav-inner { display: flex; flex-wrap: wrap; gap: 8px 28px; padding: 15px 36px; }
+nav a { text-decoration: none; font-size: 14px; line-height: 1.7; font-weight: 550; }
+nav a:hover { text-decoration: underline; }
+nav span { color: #747a83; font-size: 12px; margin-right: 5px; font-variant-numeric: tabular-nums; }
+main { padding: 0 36px; }
+.paper { padding: 30px 0 28px; border-bottom: 1px solid var(--line); scroll-margin-top: 0; }
+.paper-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.paper-title { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+.paper-number { color: #858a90; font-size: 13px; font-variant-numeric: tabular-nums; }
+h2 { font-size: 23px; line-height: 1.4; margin: 0; overflow-wrap: anywhere; }
+.source { font-size: 13px; flex-shrink: 0; }
+.full-title { font-size: 14px; line-height: 1.65; margin: 8px 0 3px; overflow-wrap: anywhere; }
+.venue { font-size: 12px; color: var(--muted); margin: 0 0 21px; }
+.comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.version { min-width: 0; border-top: 3px solid var(--author); padding-top: 13px; }
+.writer { border-color: var(--writer); }
+.version-heading { display: flex; align-items: baseline; justify-content: space-between;
+  gap: 8px 15px; flex-wrap: wrap; margin-bottom: 13px; }
+h3 { font-size: 15px; line-height: 1.6; margin: 0; color: var(--author); }
+.writer h3 { color: var(--writer); }
+.word-count { font-size: 12px; line-height: 1.6; color: var(--muted); white-space: nowrap;
+  font-variant-numeric: tabular-nums; }
+.abstract { margin: 0; font-size: 17px; line-height: 1.95; text-align: left; overflow-wrap: anywhere; }
+details { margin-top: 23px; padding-top: 15px; border-top: 1px solid #e9ebed; }
+summary { width: fit-content; cursor: pointer; font-size: 14px; line-height: 1.8; color: #505860; }
+summary:hover { color: var(--ink); }
+dl { margin: 16px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+dt { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+dd { font-size: 14px; color: #565e65; line-height: 1.85; margin: 0; overflow-wrap: anywhere; }
+footer { background: #f7f9fa; }
+.footer-inner { padding: 23px 36px 30px; font-size: 12px; line-height: 1.9; color: var(--muted); }
+.footer-inner p { margin: 0 0 6px; }
+@media (max-width: 760px) {
+  html { scroll-padding-top: 15px; }
+  .page-heading { padding: 23px 20px 20px; }
+  h1 { font-size: 23px; }
+  nav { position: static; }
+  .nav-inner { padding: 12px 20px; gap: 8px 19px; }
+  main { padding: 0 20px; }
+  .paper { padding: 25px 0; }
+  h2 { font-size: 21px; }
+  .comparison { grid-template-columns: minmax(0, 1fr); gap: 25px; }
+  .abstract { font-size: 16px; line-height: 1.95; }
+  dl { grid-template-columns: minmax(0, 1fr); gap: 17px; }
+  .footer-inner { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  html { scroll-behavior: auto; }
+  nav, .source { display: none; }
+  .page-heading, main, .footer-inner { padding-inline: 0; }
+  .paper { break-before: page; }
+  .paper:first-child { break-before: auto; }
+  .comparison { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .abstract { font-size: 11pt; line-height: 1.7; }
+  details { display: none; }
+  .version-heading, .paper-heading { break-after: avoid; }
+}
+</style>
+</head>
+<body>
+<header class="page-heading">
+<p class="eyebrow">SUPER WRITER · 2026-10-27 · 5 篇论文</p>
+<h1>五篇论文摘要 · 中文对照</h1>
+<p class="context">左栏为作者摘要的中文概述，并非原摘要全文译文；右栏为前轮独立英文稿的中文翻译。写作者仅接收正文证据包，未提供作者摘要。</p>
+<p class="context">英文词数沿用前轮记录，不是本页中文长度。本页呈现已有结果与取舍，不代表新版本优于原论文。</p>
+</header>
+<nav aria-label="论文目录"><div class="nav-inner"><a href="#P01"><span>01</span> EquiBot</a><a href="#P02"><span>02</span> Sparsh</a><a href="#P03"><span>03</span> ManiWAV</a><a href="#P04"><span>04</span> PoliFormer</a><a href="#P05"><span>05</span> OKAMI</a></div></nav>
+<main><section class="paper" id="P01" aria-labelledby="title-P01"><header class="paper-heading"><div class="paper-title"><span class="paper-number">01</span><h2 id="title-P01">EquiBot</h2></div><a class="source" href="https://proceedings.mlr.press/v270/yang25a.html" target="_blank" rel="noopener noreferrer">论文原文 ↗</a></header><p class="full-title" lang="en">EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning</p><p class="venue">CoRL 2025, PMLR 270:1048-1068</p><div class="comparison"><article class="version author" aria-label="EquiBot 作者摘要 · 中文概述"><div class="version-heading"><h3>作者摘要 · 中文概述</h3><span class="word-count">英文 145 词</span></div><p class="abstract">作者摘要中文概述：机器人学习长期面临的问题是，如何构建有效的模仿学习方法，使机器人在有限数据下学习，并能在多样的真实环境中泛化。论文提出 EquiBot，一种用于机器人操作任务学习、兼具鲁棒性、数据效率和泛化能力的方法。该方法将 SIM(3) 等变神经网络架构与扩散模型结合，使所学策略对尺度、旋转和平移变化保持不变，从而更适用于未见环境，同时保留基于扩散的策略学习在多模态性和鲁棒性方面的优势。在 6 个仿真任务上，方法降低了数据需求并提升了对新场景的泛化能力。在真实世界的 6 个移动操作任务的 10 种变化中，方法表明每个任务仅从 5 分钟的人类演示学习后，就能泛化到新的物体和场景。</p></article><article class="version writer" aria-label="EquiBot Super Writer · 中文译稿"><div class="version-heading"><h3>Super Writer · 中文译稿</h3><span class="word-count">英文 145 词</span></div><p class="abstract">EquiBot 是一种视觉运动模仿策略，将 SIM(3) 等变点云处理与扩散动作预测结合起来。它对平移和尺度进行规范化，在条件模块和去噪模块中使用 SO(3) 等变结构，再把预测动作缩放回输入坐标系；扩散表示则用于建模多模态、具有时间延展性的行为。在 4 个仿真任务中，除 Push T 使用 200 条演示外，其余任务使用 50 条演示；在每项 150 次试验的汇总中，相对于普通扩散策略、数据增强和 EquiAct，EquiBot 在旋转、尺度、位置及组合变化下的性能下降最小。在 Robomimic 的 Can 和 Square 任务中，当训练演示从 100 条降至 25 条时，它仍保持更高性能。每项任务仅用 15 段人类视频训练时，它还在 6 个机器人任务上、包括未见物体及平移或旋转后的布局中取得更好结果，但每种设置仅评估 10 个回合。该方法尚未覆盖非线性形状或动力学变化、多物体相对位置变化、遮挡和大幅视角变化；失败还包括夹爪时序、动作误差累积和分割错误。</p></article></div><details><summary>差异与取舍</summary><dl><div><dt>保留内容</dt><dd>保留了作者摘要中的核心贡献、SIM(3) 等变与扩散的组合、仿真和真实机器人泛化主题。</dd></div><div><dt>解释变化</dt><dd>把“为什么能泛化”写成了可检查的机制链：规范化与等变处理对应变换场景，扩散对应多模态和时间延展动作。</dd></div><div><dt>遗漏与风险</dt><dd>新版本加入了大量正文实验细节，虽然更可审计，但相比作者摘要更拥挤，削弱了摘要的主线；“性能下降最小”仍需读者回到具体表格理解。</dd></div></dl></details></section><section class="paper" id="P02" aria-labelledby="title-P02"><header class="paper-heading"><div class="paper-title"><span class="paper-number">02</span><h2 id="title-P02">Sparsh</h2></div><a class="source" href="https://proceedings.mlr.press/v270/higuera25a.html" target="_blank" rel="noopener noreferrer">论文原文 ↗</a></header><p class="full-title" lang="en">Sparsh: Self-supervised touch representations for vision-based tactile sensing</p><p class="venue">CoRL 2025, PMLR 270:885-915</p><div class="comparison"><article class="version author" aria-label="Sparsh 作者摘要 · 中文概述"><div class="version-heading"><h3>作者摘要 · 中文概述</h3><span class="word-count">英文 209 词</span></div><p class="abstract">作者摘要中文概述：论文针对日益普及的基于视觉的触觉传感器，提出通用的触觉表示。这类传感器能够补充视觉并推动机器人操作进展，但现有方案往往依赖任务和传感器特定的手工感知模型；大规模收集带有任务中心真值标签（如接触力和滑移）的真实数据也很困难，而且不同外形规格的传感器还存在光照、凝胶纹理等差异。为此，论文采用在计算机视觉中表现出色的自监督学习，提出 Sparsh 自监督模型系列，以支持多种基于视觉的触觉传感器，并通过在超过 46 万张触觉图像上进行像素空间和潜空间中的掩码训练与自蒸馏预训练，减少对定制标签的需求。论文还构建 TacBench，用于跨传感器和跨模型的标准化评测，包含从理解触觉属性到物理感知和操作规划的 6 项任务。评测显示，在 TacBench 上，触觉表示的自监督预训练平均比任务和传感器特定的端到端训练高 95.1%；Sparsh (DINO) 与 Sparsh (IJEPA) 最具竞争力，表明在潜空间中学习触觉图像的价值。</p></article><article class="version writer" aria-label="Sparsh Super Writer · 中文译稿"><div class="version-heading"><h3>Super Writer · 中文译稿</h3><span class="word-count">英文 209 词</span></div><p class="abstract">Sparsh 是一组面向触觉传感的自监督表示模型，在 3 种触觉传感器上适配掩码图像、自蒸馏和联合嵌入目标。在约 66.1 万张触觉图像上，70% 用于自监督学习，其余用于在线探针监测；模型还使用短帧历史提供时间上下文。TacBench 包含 6 项任务：力、滑移、位姿、抓取稳定性、纺织品识别和珠迷宫控制。除力场可视化与策略学习外，各项评测都冻结编码器，只训练有标签的注意力解码器，并与随机初始化的端到端模型比较。在减少标注数据的设置下，表示学习仍优于基线：DINO 在力和位姿上最强，I-JEPA 在滑移、抓取稳定性和纺织品语义上更强，并在使用全部采集标注量的 33% 至 50% 时保持提升。力解码器在尖头和球形压头上训练、在留出的平面压头上测试；滑移使用类别不平衡下的 F1 评测；珠迷宫策略则在 10 个新起点上面对留出的轨迹。Sparsh 使迷宫轨迹误差降低约 16%，并使失败前距离提高 20% 至 53%，但没有真实机器人策略完成迷宫。数据主要来自离散接触，未消融触觉历史长度，滑移标签依赖估计摩擦系数，且正文与附录的迷宫协议存在差异。</p></article></div><details><summary>差异与取舍</summary><dl><div><dt>保留内容</dt><dd>保留了作者摘要的“通用触觉表示 + 自监督预训练 + TacBench + 多任务效果”主线。</dd></div><div><dt>解释变化</dt><dd>把“跨任务迁移”具体化为冻结编码器、训练探针、减少标注和留出压头/轨迹测试，解释了 95.1% 数字背后的评测结构。</dd></div><div><dt>遗漏与风险</dt><dd>正文证据中的协议差异和失败边界较多，造成摘要信息密度偏高；新版本没有复述作者摘要的 95.1% 总体数字，因为正文同时存在不同聚合口径，避免混用。</dd></div></dl></details></section><section class="paper" id="P03" aria-labelledby="title-P03"><header class="paper-heading"><div class="paper-title"><span class="paper-number">03</span><h2 id="title-P03">ManiWAV</h2></div><a class="source" href="https://proceedings.mlr.press/v270/liu25c.html" target="_blank" rel="noopener noreferrer">论文原文 ↗</a></header><p class="full-title" lang="en">ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data</p><p class="venue">CoRL 2025, PMLR 270:947-962</p><div class="comparison"><article class="version author" aria-label="ManiWAV 作者摘要 · 中文概述"><div class="version-heading"><h3>作者摘要 · 中文概述</h3><span class="word-count">英文 166 词</span></div><p class="abstract">作者摘要中文概述：通过接触获得的音频信号包含关于机器人交互和物体属性的丰富信息；在视觉信息含糊或不完整时，这些信息尤其有助于学习接触丰富的机器人操作技能。然而，音频数据在机器人操作中的使用一直受限于遥操作演示，这些演示需要把麦克风安装在机器人或物体上，因而显著限制了其在机器人学习流程中的应用。论文提出 ManiWAV，一种“手上之耳”数据采集设备，用于收集带有同步音频和视觉反馈的真实环境人类演示，并提供相应的策略接口，直接从演示中学习机器人操作策略。论文通过 4 个接触丰富的操作任务展示系统能力：这些任务要求被动感知接触事件和接触模式，或主动感知物体表面材料和状态。此外，系统能够通过从多样的真实环境人类演示中学习，泛化到未见的真实环境。</p></article><article class="version writer" aria-label="ManiWAV Super Writer · 中文译稿"><div class="version-heading"><h3>Super Writer · 中文译稿</h3><span class="word-count">英文 147 词</span></div><p class="abstract">ManiWAV 在 UMI 衍生夹爪上安装“手上之耳”压电接触麦克风，并学习一个融合 RGB、接触音频和近期位姿来输出机器人动作的闭环扩散策略。麦克风提供腕部视觉可能看不到或难以区分的接触与材料线索；加入环境噪声和机器人电机噪声的数据增强，则用于缩小手持人类演示与机器人部署之间的差距。在 4 个任务中，改变配置、噪声、操作高度、物体、材料和环境后，机器人在翻贝果和擦拭任务上的成功率分别为 90% 和 85%；倾倒和粘贴任务按子步骤报告，抓取/倾倒/放置为 90%/100%/90%，触碰/感知/抓取/放置为 90%/90%/80%/80%。翻贝果实验对每种策略评估 20 次，并与纯视觉和音视觉基线比较；音视觉训练相较仅实验室数据训练，在两个未见环境中表现出更好的真实环境泛化。结果受任务和回合数量限制：弱音交互、电机噪声、0.23 秒延迟以及当前未利用高采样率音频进行高频反应式控制，仍是限制。</p></article></div><details><summary>差异与取舍</summary><dl><div><dt>保留内容</dt><dd>保留了音频补足视觉、耳上采集设备、4 个接触丰富任务和真实环境泛化。</dd></div><div><dt>解释变化</dt><dd>明确了音频的作用不是泛泛增加模态，而是提供接触状态和材料线索；同时把子步骤指标与整体任务成功率区分开。</dd></div><div><dt>遗漏与风险</dt><dd>版本加入了很多百分比和协议细节，读者需要较高领域背景；如果投稿摘要字数紧张，应删去部分子步骤数字，保留音频机制和一项代表性结果。</dd></div></dl></details></section><section class="paper" id="P04" aria-labelledby="title-P04"><header class="paper-heading"><div class="paper-title"><span class="paper-number">04</span><h2 id="title-P04">PoliFormer</h2></div><a class="source" href="https://proceedings.mlr.press/v270/zeng25a.html" target="_blank" rel="noopener noreferrer">论文原文 ↗</a></header><p class="full-title" lang="en">PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators</p><p class="venue">CoRL 2025, PMLR 270:408-432</p><div class="comparison"><article class="version author" aria-label="PoliFormer 作者摘要 · 中文概述"><div class="version-heading"><h3>作者摘要 · 中文概述</h3><span class="word-count">英文 141 词</span></div><p class="abstract">作者摘要中文概述：论文提出 PoliFormer（Policy Transformer），一种仅使用 RGB 的室内导航智能体。它在大规模强化学习下端到端训练，完全在仿真中学习，却无需适应即可泛化到真实世界。PoliFormer 使用基础视觉 Transformer 编码器和因果 Transformer 解码器，以支持长期记忆与推理；训练在多样环境中进行，涵盖数亿次交互，并利用并行化的多机器 rollout 实现高吞吐的高效训练。该导航器在两种不同本体 LoCoBot 和 Stretch RE-1，以及 4 个导航基准上取得了最先进结果；在 CHORES-S 的目标物体导航任务中达到 85.5% 的成功率，绝对提升 28.5%。无需微调，PoliFormer 还可直接扩展到物体跟踪、多物体导航和开放词汇导航等多种下游应用。</p></article><article class="version writer" aria-label="PoliFormer Super Writer · 中文译稿"><div class="version-heading"><h3>Super Writer · 中文译稿</h3><span class="word-count">英文 141 词</span></div><p class="abstract">PoliFormer 面向部分可观测、长时程视觉导航，使用从头开始的在线强化学习训练，将冻结的 DINOv2 特征、目标条件 Transformer 状态编码器、带 KV 缓存的因果时间记忆和并行 rollout 结合起来。该设计降低了 rollout 收集期间使用时间 Transformer 的成本，使训练速度提升 3.4 倍；LoCoBot 在 ProcTHOR-10k 上完成 4.35 亿步训练，Stretch 则在 ProcTHOR-150k 上使用约 4 万个 Objaverse 资产。在留出的仿真套件上，LoCoBot 的文本目标策略在 ProcTHOR-10k、ArchitecTHOR 和 AI2-iTHOR 上分别达到 82.4%、68.3% 和 85.3% SPL，Stretch 在 CHORES-S 上达到 85.5% SEL。无需真实世界微调时，它在未见房屋中对 15 个 LoCoBot 任务和 18 个 Stretch 任务分别达到 80.0% 和 83.3% 成功率。基于边界框的变体还被定性展示用于开放词汇、多目标、跟随、跟踪和实例描述导航。记忆在超过 4 个房间后退化；离散动作、缺少深度、两种本体分别训练策略以及较高计算成本限制了结论范围。</p></article></div><details><summary>差异与取舍</summary><dl><div><dt>保留内容</dt><dd>保留了 RGB-only、在线强化学习、Transformer 长期记忆、仿真到现实迁移和 CHORES-S 结果。</dd></div><div><dt>解释变化</dt><dd>把“规模化训练为什么有用”说清楚：KV 缓存降低时间建模成本，并行 rollout 支撑数亿步训练，进而连接到留出仿真和未见房屋结果。</dd></div><div><dt>遗漏与风险</dt><dd>新版本的指标较多且同时覆盖两个机器人本体，主线比作者摘要更技术化；“无需微调”需要与具体未见房屋任务绑定，不能泛化为所有下游应用。</dd></div></dl></details></section><section class="paper" id="P05" aria-labelledby="title-P05"><header class="paper-heading"><div class="paper-title"><span class="paper-number">05</span><h2 id="title-P05">OKAMI</h2></div><a class="source" href="https://proceedings.mlr.press/v270/li25a.html" target="_blank" rel="noopener noreferrer">论文原文 ↗</a></header><p class="full-title" lang="en">OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation</p><p class="venue">CoRL 2025, PMLR 270:299-317</p><div class="comparison"><article class="version author" aria-label="OKAMI 作者摘要 · 中文概述"><div class="version-heading"><h3>作者摘要 · 中文概述</h3><span class="word-count">英文 143 词</span></div><p class="abstract">作者摘要中文概述：论文研究如何让人形机器人通过模仿单个视频演示来学习操作技能。提出的 OKAMI 从单个 RGB-D 视频生成操作计划并得到可执行策略。其核心是面向物体的动作重定向，使人形机器人能够模仿 RGB-D 视频中的人类动作，并在部署时适应不同的物体位置；OKAMI 使用开放世界视觉模型识别任务相关物体，并分别重定向身体动作和手部姿态。实验表明，OKAMI 在变化的视觉和空间条件下具有较强泛化能力，并在开放世界的观察模仿任务上超过最先进基线。此外，OKAMI 的 rollout 轨迹还可用于训练闭环视觉运动策略，在不需要劳动密集型遥操作的情况下达到 79.2% 的平均成功率。</p></article><article class="version writer" aria-label="OKAMI Super Writer · 中文译稿"><div class="version-heading"><h3>Super Writer · 中文译稿</h3><span class="word-count">英文 143 词</span></div><p class="abstract">OKAMI 使双臂人形机器人能够从一段 RGB-D 人类视频模仿操作，而不需要机器人动作标签。它识别并跟踪物体，重建身体和手部运动，并建立关键帧计划；部署时，物体定位以及目标/参考物关系会把手臂轨迹变换到新的位置，手指则单独进行重定向。这样的面向物体重定向使演示不再局限于固定工作空间坐标，同时保留抓取和腕部运动。在 Fourier GR1 上，OKAMI 在 6 个桌面任务、每项 12 次随机试验中取得平均 71.7% 成功率；其中 3 个任务包含未见物体测试，并在机器人和仿真比较中超过适配后的 ORION。随机布局下的成功 rollout 还可用于训练 ACT 策略：轨迹数量从 50 增加到 100 后，Sprinkle-salt 成功率从 58.3% 提高到 75.0%，Bagging 从 66.7% 提高到 83.3%。系统目前面向上半身桌面操作，需要静态相机拍摄的 RGB-D 视频，并且对物体形状变化和过快演示仍较敏感。</p></article></div><details><summary>差异与取舍</summary><dl><div><dt>保留内容</dt><dd>保留了单视频模仿、面向物体的重定向、身体/手部分离处理和闭环策略训练。</dd></div><div><dt>解释变化</dt><dd>明确了重定向如何把固定坐标回放变成物体条件计划，并区分了直接模仿成功率与后续 ACT 策略训练结果。</dd></div><div><dt>遗漏与风险</dt><dd>相比作者摘要，新版本使用了更多任务和轨迹数量，表达更像实验摘要；如果目标是顶会投稿摘要，应删减部分任务数字，保留核心重定向关系和一个总结果。</dd></div></dl></details></section></main>
+<footer><div class="footer-inner">
+<p>作者摘要、独立生成稿的来源与接触范围不同；此对照不是受控盲评。差异说明沿用前轮分析，未新增独立评审或事实认证。</p>
+<a href="README.md">测试说明</a> · <a href="results.json">完整数据</a> · <a href="receipts.json">来源记录</a>
+</div></footer>
+</body>
+</html>

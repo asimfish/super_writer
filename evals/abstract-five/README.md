@@ -2,7 +2,9 @@
 
 本轮测试选取 5 篇 CoRL 2025 论文：EquiBot、Sparsh、ManiWAV、PoliFormer 和 OKAMI。作者摘要来自各自的 PMLR 官方页面，Super Writer 版本由正文 PDF 第 2 页起整理出的证据包独立生成，生成上下文没有提供作者摘要或 PMLR 摘要页面。
 
-逐篇对照见 [`results.json`](results.json)。每篇包含：
+逐篇对照见 [中文双栏 HTML](comparison.html)，原始数据见 [`results.json`](results.json)。
+HTML 可直接在浏览器打开，不需要服务器或联网；内容从现有 JSON 生成，没有新增写作或评审。
+每篇包含：
 
 - 作者摘要的中文忠实概述、原文链接和原摘要词数；
 - Super Writer 独立英文摘要的中文翻译；
@@ -45,6 +47,12 @@
 新版本明确“物体定位与关系变换把一次演示变成新位置的计划”，并区分直接模仿成功率和后续 ACT 训练结果。这是本轮最接近优秀方法摘要组织的一篇，但仍然塞入了过多任务级数字和限制。
 
 ## 复现
+
+```bash
+python evals/abstract-five/render.py
+python evals/abstract-five/render.py --check
+python -m unittest discover -s tests -p test_abstract_five_html.py
+```
 
 当前目录中的源 PDF、正文证据包、原摘要临时文件和写作者原始输出保存在本机 `/tmp/super-writer-abstract5/`，没有把第三方 PDF 或原摘要全文提交到仓库。仓库 artifact 只保存了来源链接、中文概述、生成版本翻译和诊断结果。
 
