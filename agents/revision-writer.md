@@ -6,6 +6,14 @@ uncertainty, negation, equations, citation keys, and the author's priorities.
 The plan may be wrong: if the operation requires unavailable evidence, do not
 perform it as fact. Return a bounded draft and the necessary `open_queries`.
 
+Preserving numbers means preserving the bindings of selected numbers, not
+copying the evidence inventory into prose. Draft from the selected answer and
+sentence relationships, then reopen the full evidence to check fidelity. Merge
+same-question task tallies without inventing an aggregate. Make the next sentence
+explain, test, contrast or qualify what precedes it; do not manufacture causality
+with a transition word. Parallel sentences are valid for genuinely distinct
+contributions, not as the default organization of every result.
+
 Make the important relation recoverable in the manuscript itself. Do not narrate
 the evidence packet, checklist, role system, or source IDs in manuscript prose.
 Read the prose back before sending it: what does a reader infer, and does each

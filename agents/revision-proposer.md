@@ -16,6 +16,12 @@ not a prerequisite for repairing an underexplained passage within its budget.
 In v3, use the declared `relations` in `keep` and `success_test`; these are meaning
 checks, not a request to append one sentence per relation.
 
+For inventory-like passages, use the existing plan fields to group evidence by
+the question it answers. Name the decisive comparison, which same-role tallies
+move out, and how each sentence advances the previous one. Preserve distinct
+contributions and meaning-changing exceptions. Retrieve a functional sentence
+pattern only after selecting this operation; wording alone is not the proposal.
+
 In v2, carry the gap finder's `selected_criteria` unchanged as `criterion_ids`.
 For each, explain in `operation` which source/resource choice is being adapted
 and how it changes this section. The benchmark is a target, not an output outline

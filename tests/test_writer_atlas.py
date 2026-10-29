@@ -116,11 +116,13 @@ class AtlasTests(unittest.TestCase):
             for note in entry["source_notes"]:
                 self.assertIn(note["location"], text)
                 self.assertIn(note["observation"], text)
+            for value in entry.get("discourse", {}).values():
+                self.assertIn(value, text)
 
     def test_filter_options_are_derived_from_canonical_facets(self) -> None:
         html = atlas.render(ROOT / "docs")["writer-atlas.html"]
         spec = json.loads(atlas.writing_lookup.AI_SPEC.read_text())
-        for field in ("topics", "levels"):
+        for field in ("topics", "levels", "kinds"):
             for value in spec["taxonomy"][field]:
                 self.assertIn(f'<option value="{value}">', html)
 

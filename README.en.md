@@ -37,6 +37,11 @@ for Chinese side-by-side summaries, body-only generation receipts and per-paper
 diagnosis. Writer packets withheld the author abstracts.
 [Open the Chinese side-by-side HTML](evals/abstract-five/comparison.html).
 
+[Author / prior / new developmental comparison](evals/abstract-argument/comparison.html)
+addresses metric inventories and flat sentence sequences through evidence selection,
+sentence progression and eight conditional functional patterns. Prior outputs are
+preserved. These familiar cases are not a fresh blind trial or proof of quality gain.
+
 **Mechanism candidate:** an opt-in evidence-selection, comparison-binding,
 prose-realization and read-back procedure uses the existing rationale matrix,
 without another required report. Eight families / 16 counterfactual development
@@ -177,8 +182,8 @@ formation, an annotated unit, conditional entries, boundaries and provenance.
 [Specification and bounded lookup](references/ai-writing-spec.md) ·
 [Design decision](docs/designs/adr-001-ai-writing-spec.md)
 
-The local AI specification contains **19 rules, 15 claim-usage entries and 34 technical
-terms**, selected across **9 reader-problem topics and 5 writing levels**. Each retains a meaning or function, conditions, evidence requirements,
+The local AI specification contains **19 rules, 15 claim-usage entries, 34 technical
+terms and eight functional sentence patterns**, selected across **9 reader-problem topics and 5 writing levels**. Each retains a meaning or function, conditions, evidence requirements,
 exceptions, original synthetic contrasts and an owning file. It guides existing
 planning and prose read-back, not an automatic semantic checker or transplanted
 maintenance vocabulary. This engineering extension is not a measured writing
@@ -195,7 +200,9 @@ order. [Four original contrasts](examples/ai-writing-spec/clarity-context.md)
 retain legitimate academic voice/tense, technical terms and literal commands,
 without importing STE compliance claims or maintenance-domain hard limits.
 
-Nineteen primary-source records and one third-party skill-design record disclose actual read scopes. New distinctions
+Twenty-one primary-source records and one third-party skill-design record disclose actual read scopes.
+[Functional-pattern curation](docs/research/argument-selection-2026-10-29.md) explains
+how evidence roles and sentence dependencies precede wording selection. Existing distinctions
 separate source support, world truth and explanation faithfulness, as well as
 plan validity, skill feasibility and full execution. Worked paragraphs use these
 boundaries to answer an experimental question rather than enumerate scores.

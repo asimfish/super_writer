@@ -5,10 +5,20 @@ evidence of improved conference acceptance. Broad coverage and subsequent evalua
 calibration still do not establish human effectiveness. Software tests
 do not measure prose quality. No model weights are trained by the skill.
 
-**Current status (2026-10-19): no stable writing-quality improvement is demonstrated.**
+**Current status (2026-10-29): no stable writing-quality improvement is demonstrated.**
 The latest explanation-preserving pilot improves model answer recovery, but
 fails preference and fidelity gates. New contract checks are engineering changes,
 not quality promotion. Conditions differ across rounds and are not pooled.
+
+- [Evidence-selection developmental follow-up](evals/abstract-argument/README.md):
+  five already-known embodied papers, new argument-driven candidates and Chinese
+  author/prior/new views. This responds to user-observed metric inventories and
+  flat progression, not a new blind trial. Source-derived pattern observations
+  and changed length budgets are disclosed. The old five-paper self-assigned
+  factual pass labels are not independent certification. No preference votes
+  from this demonstration are added to the frozen pilots below.
+  Independent source reading found one task-ranking conflict in the raw Sparsh
+  draft; the displayed factual correction and original failure are both retained.
 
 - [Explanation-preserving guide ablation](evals/explanation-pilot/README.md):
   four fresh-to-this-repository RSS 2025 papers and twelve generated abstracts.

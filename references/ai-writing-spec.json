@@ -1,15 +1,15 @@
 {
   "schema_version": "2",
   "catalog": "ai-spec",
-  "spec_version": "0.4",
-  "reviewed_on": "2026-10-13",
+  "spec_version": "0.5",
+  "reviewed_on": "2026-10-29",
   "license": "MIT for original editorial synthesis; linked works retain their rights.",
   "scope": "Local AI research writing decisions, not ASD-STE100 compliance, a universal word whitelist, scientific claim evidence or a measured quality gain. All examples are synthetic. Source links provide terminology context, not evidence for the user's results.",
   "taxonomy": {
     "domains": ["general", "world_models", "reinforcement_learning", "embodied_ai", "robot_learning", "vision_language_action", "multimodal"],
     "sections": ["title", "abstract", "introduction", "related_work", "method", "experiments", "limitations", "conclusion", "rebuttal", "translation"],
     "intents": ["define", "clarify", "compare", "evidence", "scope"],
-    "kinds": ["writing_rule", "claim_usage", "technical_term"],
+    "kinds": ["writing_rule", "claim_usage", "technical_term", "sentence_pattern"],
     "topics": ["argument_structure","claim_strength","learning_regimes","evaluation_protocol","statistics","embodied_control","systems_measurement","citation_support","grounding_faithfulness"],
     "levels": ["word","sentence","paragraph","section","document"],
     "filter_aliases": {
@@ -21,6 +21,10 @@
     }
   },
   "aliases": {
+    "句式": ["bottleneck", "consequence", "comparison"],
+    "递进": ["operation", "consequence"],
+    "数字堆积": ["distinct", "measurements", "questions"],
+    "相关工作归纳": ["technical axis", "families"],
     "显著": ["significant"], "零样本": ["zero-shot"], "少样本": ["few-shot"],
     "微调": ["fine-tuning"], "预训练": ["pretraining"], "推理": ["inference"],
     "测试时适应": ["test-time adaptation"], "泛化": ["generalization"],
@@ -39,6 +43,8 @@
     "复现步骤": ["reproducibility instructions"], "指代歧义": ["ambiguous antecedents"]
   },
   "sources": [
+    {"id":"maniwav-rhetoric","title":"ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data","url":"https://proceedings.mlr.press/v270/liu25c.html","read_scope":"Abstract only, re-read 2026-10-29 for contribution pairing and environment-transfer organization; no new body audit in this curation record.","reviewed_on":"2026-10-29"},
+    {"id":"sparsh-rhetoric","title":"Sparsh: Self-supervised touch representations for vision-based tactile sensing","url":"https://proceedings.mlr.press/v270/higuera25a.html","read_scope":"Abstract only, re-read 2026-10-29 for benchmark contribution and result selection; no aggregate formula or full Results organization verified here.","reviewed_on":"2026-10-29"},
     {"id": "clip", "title": "Learning Transferable Visual Models From Natural Language Supervision", "url": "https://arxiv.org/abs/2103.00020", "read_scope": "Abstract; zero-shot transfer context", "reviewed_on": "2026-10-12"},
     {"id": "lora", "title": "LoRA: Low-Rank Adaptation of Large Language Models", "url": "https://arxiv.org/abs/2106.09685", "read_scope": "Abstract; pretrained-weight and trainable-adapter distinction", "reviewed_on": "2026-10-12"},
     {"id": "rliable", "title": "Deep Reinforcement Learning at the Edge of the Statistical Precipice", "url": "https://arxiv.org/abs/2108.13264", "read_scope": "Abstract; aggregate scores, finite runs and uncertainty", "reviewed_on": "2026-10-12"},
@@ -2657,6 +2663,544 @@
           "location": "SKILL.md operating rules 1, 6-7; references/essential-rules.md passage priorities and preservation; references/source-boundary.md verification boundary",
           "observation": "Text function, preconditions and required actions are relevant design ideas. The research-specific checksum example is original; numeric STE limits, warning labels and rule-ID authority are not imported."
         }
+      ]
+    },
+    {
+      "id": "ai.pattern.bottleneck-choice",
+      "kind": "sentence_pattern",
+      "expression": "{existing approach} requires {costly condition}. We instead {operation}, so that {supported consequence}.",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "introduction",
+        "method"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "editorial",
+      "part_of_speech": "discourse pattern",
+      "meaning": "Move from a specific bottleneck to a design choice, rather than from a generic field introduction to a module list.",
+      "guidance": "Name the obstacle that makes the operation relevant. Use the consequence only if supported; otherwise state the design objective.",
+      "avoid": "A fashionable method introduced after an unrelated claim that current work is insufficient.",
+      "conditions": [
+        "Use only when the author's evidence supports the stated relationship and the selected section needs this information function."
+      ],
+      "exceptions": [
+        "This is a conditional editorial option, not a required sentence, fixed outline, numerical quota or venue rule. An already clear passage may need no change."
+      ],
+      "evidence_required": [
+        "Author evidence for each filled slot, its comparator and scope; the exemplar supports the writing observation, not the manuscript's scientific claims."
+      ],
+      "example_context": "Synthetic: The supplied design shares frozen backbone weights and stores only task-specific updates.",
+      "examples": [
+        "Full-model updates require storing a separate adapted copy for each task. We instead train a small task-specific update while retaining the shared backbone."
+      ],
+      "counter_examples": [
+        {
+          "text": "Existing methods have many limitations. We propose an advanced framework with three powerful modules.",
+          "why": "Neither the limitation nor the relation between it and the design is recoverable."
+        }
+      ],
+      "discourse": {
+        "question": "Why this design rather than the existing approach?",
+        "predecessor": "A task or practical objective requiring the missing capability.",
+        "successor": "Explain the operation or test whether it resolves the named obstacle.",
+        "non_transfer": "The exemplar's literature gap, novelty and mathematical equivalence do not transfer."
+      },
+      "owner": "references/writing-library.md",
+      "source_ids": [
+        "lora"
+      ],
+      "source_notes": [
+        {
+          "source_id": "lora",
+          "location": "Abstract, task-specific deployment cost followed by frozen weights and low-rank updates",
+          "observation": "A concrete adaptation cost motivates the operation; this is a local interpretation, not a universal required opening."
+        }
+      ],
+      "related_library_ids": [
+        "general.sentence-pattern.abstract-gap.001"
+      ]
+    },
+    {
+      "id": "ai.pattern.operation-effect",
+      "kind": "sentence_pattern",
+      "expression": "By {operation on a defined object}, {method} {supported operational consequence}.",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "method",
+        "experiments"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "editorial",
+      "part_of_speech": "discourse pattern",
+      "meaning": "Explain what a named mechanism actually changes before claiming improved performance.",
+      "guidance": "Connect an operation to its immediate technical consequence. Keep design intent, a derived consequence and an experimentally isolated effect distinct.",
+      "avoid": "Using enables or therefore to convert correlation into an established causal mechanism.",
+      "conditions": [
+        "Use only when the author's evidence supports the stated relationship and the selected section needs this information function."
+      ],
+      "exceptions": [
+        "This is a conditional editorial option, not a required sentence, fixed outline, numerical quota or venue rule. An already clear passage may need no change."
+      ],
+      "evidence_required": [
+        "Author evidence for each filled slot, its comparator and scope; the exemplar supports the writing observation, not the manuscript's scientific claims."
+      ],
+      "example_context": "Synthetic: An indexed store permits retrieval by location; the packet contains no intervention isolating its effect on generalization.",
+      "examples": [
+        "By indexing stored features by location, the controller can retrieve a previous observation when the target leaves view."
+      ],
+      "counter_examples": [
+        {
+          "text": "Our memory module improves success; therefore better memory is the proven cause of generalization.",
+          "why": "A system-level performance comparison does not isolate the cause."
+        }
+      ],
+      "discourse": {
+        "question": "What does this operation change, and why is that useful?",
+        "predecessor": "A concrete obstacle or a mechanism whose role remains unexplained.",
+        "successor": "Give the derivation or a comparison that tests the resulting capability.",
+        "non_transfer": "Do not import closed-form equivalence or causal isolation from a source derivation."
+      },
+      "owner": "references/writing-library.md",
+      "source_ids": [
+        "dpo"
+      ],
+      "source_notes": [
+        {
+          "source_id": "dpo",
+          "location": "Abstract, reward parameterization through closed-form policy extraction",
+          "observation": "A technical relationship explains why a simpler objective becomes possible; no source wording or derivation is transplanted."
+        }
+      ],
+      "related_library_ids": [
+        "general.sentence-pattern.abstract-insight.001"
+      ]
+    },
+    {
+      "id": "ai.pattern.contribution-pair",
+      "kind": "sentence_pattern",
+      "expression": "We introduce {resource or device} for {missing input}, together with {method or interface} that uses it to {capability}.",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "introduction",
+        "method"
+      ],
+      "intents": [
+        "clarify"
+      ],
+      "status": "editorial",
+      "part_of_speech": "discourse pattern",
+      "meaning": "Make complementary contributions form a usable pipeline instead of a pair of unrelated feature announcements.",
+      "guidance": "Explain the dependency between acquisition and use. Keep both contributions only when both matter to the paper's actual promise.",
+      "avoid": "Dropping a data-collection contribution to make room for architecture names or appending every minor tool as another contribution.",
+      "conditions": [
+        "Use only when the author's evidence supports the stated relationship and the selected section needs this information function."
+      ],
+      "exceptions": [
+        "This is a conditional editorial option, not a required sentence, fixed outline, numerical quota or venue rule. An already clear passage may need no change."
+      ],
+      "evidence_required": [
+        "Author evidence for each filled slot, its comparator and scope; the exemplar supports the writing observation, not the manuscript's scientific claims."
+      ],
+      "example_context": "Synthetic: The system contributes both portable acquisition and a controller that consumes the synchronized observations.",
+      "examples": [
+        "We introduce a portable contact recorder and a policy interface that learns manipulation from its synchronized audio and video."
+      ],
+      "counter_examples": [
+        {
+          "text": "We propose a policy with an encoder, fusion module, decoder, recorder, dataset and optimizer.",
+          "why": "The inventory does not distinguish a contribution from an implementation detail or explain their dependency."
+        }
+      ],
+      "discourse": {
+        "question": "How do the two contributions work together?",
+        "predecessor": "The useful signal or resource is unavailable in the existing workflow.",
+        "successor": "Explain the information supplied or demonstrate the joint capability.",
+        "non_transfer": "Do not invent a co-contribution or infer that either component alone solves the task."
+      },
+      "owner": "references/writing-library.md",
+      "source_ids": [
+        "maniwav-rhetoric"
+      ],
+      "source_notes": [
+        {
+          "source_id": "maniwav-rhetoric",
+          "location": "Abstract, constrained audio collection through device and policy interface",
+          "observation": "The resource and its use answer one deployment problem; this observation is about the abstract, not the full Results section."
+        }
+      ],
+      "related_library_ids": []
+    },
+    {
+      "id": "ai.pattern.result-answer",
+      "kind": "sentence_pattern",
+      "expression": "To test whether {specific capability}, we compare {matched conditions}. {finding with decisive evidence}.",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "experiments"
+      ],
+      "intents": [
+        "evidence",
+        "compare"
+      ],
+      "status": "editorial",
+      "part_of_speech": "discourse pattern",
+      "meaning": "Organize a Results unit around a question and answer rather than a sequence of table cells.",
+      "guidance": "Select the comparison that discriminates the answer. If the question is already explicit, state the finding directly rather than adding a repetitive purpose sentence.",
+      "avoid": "Reading every row aloud or adding a general effectiveness claim after unrelated scores.",
+      "conditions": [
+        "Use only when the author's evidence supports the stated relationship and the selected section needs this information function."
+      ],
+      "exceptions": [
+        "This is a conditional editorial option, not a required sentence, fixed outline, numerical quota or venue rule. An already clear passage may need no change."
+      ],
+      "evidence_required": [
+        "Author evidence for each filled slot, its comparator and scope; the exemplar supports the writing observation, not the manuscript's scientific claims."
+      ],
+      "example_context": "Synthetic: A frozen pretrained encoder and a randomly initialized baseline are evaluated with the same downstream label budget.",
+      "examples": [
+        "With the same labeled-data budget, pretraining improves slip detection relative to random initialization. The gain concerns low-label transfer, not a label-free downstream classifier."
+      ],
+      "counter_examples": [
+        {
+          "text": "Task A scores 81, task B scores 74, and task C scores 90. These results demonstrate effectiveness.",
+          "why": "The claim being tested and the informative comparison are missing."
+        }
+      ],
+      "discourse": {
+        "question": "What did this experiment establish?",
+        "predecessor": "A contribution promise, hypothesis or plausible competing explanation.",
+        "successor": "Interpret the comparison, test an alternative, or delimit its scope.",
+        "non_transfer": "A well-organized comparison does not make its experimental controls adequate."
+      },
+      "owner": "references/writing-library.md",
+      "source_ids": [
+        "sparsh-rhetoric"
+      ],
+      "source_notes": [
+        {
+          "source_id": "sparsh-rhetoric",
+          "location": "Abstract, TacBench contribution followed by benchmark-level comparison",
+          "observation": "The result answers whether shared pretraining is useful instead of listing each task's measurements. No aggregate formula is inferred."
+        }
+      ],
+      "related_library_ids": [
+        "general.sentence-pattern.quantify.001"
+      ]
+    },
+    {
+      "id": "ai.pattern.distinct-evidence",
+      "kind": "sentence_pattern",
+      "expression": "{Main capability finding}. At {defined scope}, {second finding about a different promise or cost}.",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "experiments",
+        "conclusion"
+      ],
+      "intents": [
+        "evidence",
+        "compare"
+      ],
+      "status": "editorial",
+      "part_of_speech": "discourse pattern",
+      "meaning": "Keep multiple measurements when they answer different questions, not merely because they are all available.",
+      "guidance": "Distinguish quality, data, memory, timing and transfer. Attach each number to its own comparator and population; use a reported aggregate only as defined.",
+      "avoid": "Replacing all results with one impressive number, or averaging incomparable task scores and substep rates.",
+      "conditions": [
+        "Use only when the author's evidence supports the stated relationship and the selected section needs this information function."
+      ],
+      "exceptions": [
+        "This is a conditional editorial option, not a required sentence, fixed outline, numerical quota or venue rule. An already clear passage may need no change."
+      ],
+      "evidence_required": [
+        "Author evidence for each filled slot, its comparator and scope; the exemplar supports the writing observation, not the manuscript's scientific claims."
+      ],
+      "example_context": "Synthetic: Quality and task-specific storage are measured separately; no common composite metric is defined.",
+      "examples": [
+        "The adapted model matches the baseline's measured accuracy. It also requires less task-specific storage; the study reports training memory separately."
+      ],
+      "counter_examples": [
+        {
+          "text": "We average accuracy, memory reduction and throughput to obtain an overall improvement.",
+          "why": "The quantities answer different questions and have incompatible units and denominators."
+        }
+      ],
+      "discourse": {
+        "question": "What else changes the practical interpretation of the main finding?",
+        "predecessor": "The main outcome has been established with a defined comparison.",
+        "successor": "State the resulting tradeoff or remaining condition, without repeating the outcome.",
+        "non_transfer": "Parameter count, GPU memory and latency are distinct quantities; success does not imply efficiency."
+      },
+      "owner": "references/writing-library.md",
+      "source_ids": [
+        "lora"
+      ],
+      "source_notes": [
+        {
+          "source_id": "lora",
+          "location": "Abstract, trainable parameters and GPU memory followed by quality and inference-latency comparisons",
+          "observation": "Several numbers serve distinct quality and resource promises; this is a counterexample to a universal one-number rule."
+        }
+      ],
+      "related_library_ids": [
+        "general.sentence-pattern.result-tradeoff.001"
+      ]
+    },
+    {
+      "id": "ai.pattern.scope-transfer",
+      "kind": "sentence_pattern",
+      "expression": "After training on {source conditions}, {method} {observed outcome} on {held-out target} without {specified adaptation}.",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "experiments",
+        "conclusion"
+      ],
+      "intents": [
+        "evidence",
+        "scope"
+      ],
+      "status": "editorial",
+      "part_of_speech": "discourse pattern",
+      "meaning": "Make a transfer result advance the argument beyond in-domain performance while preserving what was held out and what was adapted.",
+      "guidance": "Specify the actual transfer axis and adaptation boundary. Training diversity, held-out evaluation and no target fine-tuning are different facts.",
+      "avoid": "Calling all generalization zero-shot or broadening a tested task/environment to arbitrary deployment.",
+      "conditions": [
+        "Use only when the author's evidence supports the stated relationship and the selected section needs this information function."
+      ],
+      "exceptions": [
+        "This is a conditional editorial option, not a required sentence, fixed outline, numerical quota or venue rule. An already clear passage may need no change."
+      ],
+      "evidence_required": [
+        "Author evidence for each filled slot, its comparator and scope; the exemplar supports the writing observation, not the manuscript's scientific claims."
+      ],
+      "example_context": "Synthetic: Evaluation holds out two kitchens but retains the same task and robot; no target fine-tuning is performed.",
+      "examples": [
+        "Trained on demonstrations from several kitchens, the policy succeeds in two held-out kitchens without target-environment fine-tuning."
+      ],
+      "counter_examples": [
+        {
+          "text": "The policy generalizes to all objects and tasks because it works in an unseen kitchen.",
+          "why": "The tested environment shift does not establish those other transfer axes."
+        }
+      ],
+      "discourse": {
+        "question": "Does the capability extend beyond the training conditions?",
+        "predecessor": "A training setup or an in-domain capability has been explained.",
+        "successor": "State a consequential transfer boundary or stop if the supported contribution is complete.",
+        "non_transfer": "An unseen environment is not automatically an unseen task, sensor, object or embodiment."
+      },
+      "owner": "references/writing-library.md",
+      "source_ids": [
+        "maniwav-rhetoric"
+      ],
+      "source_notes": [
+        {
+          "source_id": "maniwav-rhetoric",
+          "location": "Abstract, diverse human demonstrations followed by unseen-environment evaluation",
+          "observation": "The final finding extends the acquisition-and-control argument along an environment axis, not every generalization axis."
+        }
+      ],
+      "related_library_ids": [
+        "general.sentence-pattern.scope.001"
+      ]
+    },
+    {
+      "id": "ai.pattern.family-contrast",
+      "kind": "sentence_pattern",
+      "expression": "Both {family A} and {family B} address {shared objective}; they differ in {supported assumption or operation}. Our setting requires {relevant distinction}.",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "related_work",
+        "introduction"
+      ],
+      "intents": [
+        "compare",
+        "clarify"
+      ],
+      "status": "editorial",
+      "part_of_speech": "discourse pattern",
+      "meaning": "Synthesize related work along a technical axis instead of listing papers with identical comparison sentences.",
+      "guidance": "Group only works supported by the literature record. Explain why the axis matters to this paper; contrast does not imply superiority.",
+      "avoid": "Claiming an entire family cannot solve a problem because one example uses a different mechanism.",
+      "conditions": [
+        "Use only when the author's evidence supports the stated relationship and the selected section needs this information function."
+      ],
+      "exceptions": [
+        "This is a conditional editorial option, not a required sentence, fixed outline, numerical quota or venue rule. An already clear passage may need no change."
+      ],
+      "evidence_required": [
+        "Author evidence for each filled slot, its comparator and scope; the exemplar supports the writing observation, not the manuscript's scientific claims."
+      ],
+      "example_context": "Synthetic: The cited methods document different deployment operations; no universal quality comparison is available.",
+      "examples": [
+        "Both approaches reduce adaptation cost, but one adds inference-time modules while the other merges its update into the weights. This distinction matters when deployment latency is constrained."
+      ],
+      "counter_examples": [
+        {
+          "text": "Unlike all prior work, our method is efficient, general and superior.",
+          "why": "No technical axis, family coverage or matched evidence supports the ranking."
+        }
+      ],
+      "discourse": {
+        "question": "Which distinction positions this work relative to its closest alternatives?",
+        "predecessor": "The relevant shared objective or closest family is established.",
+        "successor": "Explain the consequence of that distinction or the remaining evidenced gap.",
+        "non_transfer": "An abstract-level contrast is not a review of every member of a research family."
+      },
+      "owner": "references/writing-library.md",
+      "source_ids": [
+        "lora"
+      ],
+      "source_notes": [
+        {
+          "source_id": "lora",
+          "location": "Abstract, comparison with adapters on additional inference latency",
+          "observation": "A concrete deployment distinction supports positioning. The full related-work section was not read in this curation round."
+        }
+      ],
+      "related_library_ids": [
+        "general.sentence-pattern.related-synthesis.001"
+      ]
+    },
+    {
+      "id": "ai.pattern.result-boundary",
+      "kind": "sentence_pattern",
+      "expression": "Under {evaluated condition}, {finding}. This supports {bounded conclusion}, rather than {stronger unsupported reading}.",
+      "topics": [
+        "argument_structure"
+      ],
+      "levels": [
+        "sentence",
+        "paragraph"
+      ],
+      "domains": [
+        "general"
+      ],
+      "sections": [
+        "abstract",
+        "experiments",
+        "limitations",
+        "conclusion"
+      ],
+      "intents": [
+        "scope",
+        "evidence"
+      ],
+      "status": "editorial",
+      "part_of_speech": "discourse pattern",
+      "meaning": "Let an evaluation condition or contrary finding change the interpretation instead of appending a generic limitations list.",
+      "guidance": "Use the boundary only when omission would mislead. State it beside the affected claim; a precise positive claim may need no extra denial.",
+      "avoid": "Making every abstract end in an unrelated catalogue of caveats, or hiding an adverse result to simplify the story.",
+      "conditions": [
+        "Use only when the author's evidence supports the stated relationship and the selected section needs this information function."
+      ],
+      "exceptions": [
+        "This is a conditional editorial option, not a required sentence, fixed outline, numerical quota or venue rule. An already clear passage may need no change."
+      ],
+      "evidence_required": [
+        "Author evidence for each filled slot, its comparator and scope; the exemplar supports the writing observation, not the manuscript's scientific claims."
+      ],
+      "example_context": "Synthetic: A previously reported advantage disappears in an evaluation with the same model-selection rule; the packet does not isolate other causes.",
+      "examples": [
+        "With model selection held fixed, the baseline matches the proposed method on the tested domains. The result does not support attributing the earlier gap to the new objective alone."
+      ],
+      "counter_examples": [
+        {
+          "text": "Our method is universally better. There are many limitations involving compute, data and generalization.",
+          "why": "A generic disclaimer does not repair an overbroad main claim."
+        }
+      ],
+      "discourse": {
+        "question": "What interpretation of this finding is actually warranted?",
+        "predecessor": "A finding whose meaning depends on a condition or competing reading.",
+        "successor": "Resolve the original question, or identify the specific unresolved comparison.",
+        "non_transfer": "A diagnostic finding under controlled evaluation does not establish a universal ranking."
+      },
+      "owner": "references/writing-library.md",
+      "source_ids": [
+        "domainbed"
+      ],
+      "source_notes": [
+        {
+          "source_id": "domainbed",
+          "location": "Abstract, model-selection problem through carefully implemented baseline finding",
+          "observation": "The evaluation condition is part of the finding's interpretation; the synthetic example is not a reported DomainBed result."
+        }
+      ],
+      "related_library_ids": [
+        "general.sentence-pattern.result-boundary.001"
       ]
     }
   ]

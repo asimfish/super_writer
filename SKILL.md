@@ -47,6 +47,12 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
    found in a paper or upload manuscript text as a literature-search query.
 3. Learn structure and rhetoric from exemplar papers; build citation support
    separately. A valid DOI is not proof that the cited paper supports a claim.
+   When prose reads like a fact inventory, group evidence by reader question,
+   select the decisive comparison and plan sentence relationships before wording.
+   An evidence bank is not a coverage quota. Use the selection procedure in
+   [abstract decisions](references/abstract-decisions.md#select-an-answer-not-a-fact-inventory)
+   and [functional patterns](references/writing-library.md#sentence-progression-not-syntactic-variety);
+   retrieve functional sentence patterns only after the argument is chosen.
 4. For full-paper drafting or blueprinting, read
    [references/contribution.md](references/contribution.md), create
    `confirmed_contribution.md`, and run `contribution_check.py`. Define what is

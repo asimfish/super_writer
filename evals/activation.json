@@ -2,6 +2,18 @@
   "skill": "super-writer",
   "activation_cases": [
     {
+      "id": "evidence-inventory-and-flat-progression",
+      "prompt": "我们的论文摘要列了很多作用相同的数字，句子像排比流水账。参考优秀论文的组织方式改进，并积累能实际检索使用的句式。",
+      "should_activate": true,
+      "expected_behavior": "Group evidence by reader question, preserve distinct promises and consequential exceptions, choose decisive comparisons, and plan sentence relationships before retrieving a small applicable set of functional patterns. Do not invent aggregates, causal links or a fresh blind-gain claim."
+    },
+    {
+      "id": "do-not-apply-research-patterns-to-marketing",
+      "prompt": "把这个咖啡店广告改成几句押韵的排比文案，不是论文，不需要文献或实验。",
+      "should_activate": false,
+      "expected_behavior": "Do not activate the academic writing workflow, benchmark or evidence-linked sentence patterns for explicitly non-research marketing copy."
+    },
+    {
       "id": "meaning-before-compression",
       "prompt": "Use $super-writer to improve this abstract against the supplied exemplars. The last rewrite replaced the explanation with module names. Up to 150 words is fine.",
       "should_activate": true,

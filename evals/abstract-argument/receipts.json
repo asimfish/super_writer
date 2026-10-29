@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-29",
+  "purpose": "Developmental response to observed evidence inventories and flat sentence sequences; not a held-out or matched-budget trial.",
+  "baseline_commit": "5776d6d",
+  "writer_agent_id": "01a1869c-c818-7cd2-9d73-7714aefa9796",
+  "source_access_limits": "Writer instructed not to read full author abstracts or prior drafts; source-derived rhetorical observations in the guides/cards may be visible. Host has read author abstracts. Not proof of tool isolation or lack of model pretraining familiarity.",
+  "artifacts_sha256": {
+    "evals/abstract-five/results.json": "fb872761b4a0986bc63b3892dbadaf36b9cfef668736aa0d60db897880bc38c3",
+    "evals/abstract-five/receipts.json": "685d0fdc96d8523c0c017e42593c7509c6959b6da1f68c3af459ceee69d823d1",
+    "evals/abstract-five/comparison.html": "fa0c7540e599958ea16a3e50549200726e8c23654bf72a1d0ba7437905ec15b1",
+    "references/abstract-decisions.md": "605601fe524bde7205428a7199d878d9f9bc2051a069833554b5c79fa00bfbe9",
+    "references/argument-transfer.md": "abbedc07c0df98c67450921360db3874bab106fc01f3e4a85470249256fd9ea3",
+    "references/ai-writing-spec.json": "3d70bd9efc357e34f735febec68bd49de5aa3c022f522174534c715908bdd93e",
+    "references/writing-library.json": "e59830a029dfe4259868335f3a0c6a6048b5dcb3a6ff767cdbe3578612287fe2",
+    "agents/revision-writer.md": "ad60880ed18f9cfbf171dc076bf62321f4b75a01bde465bde787baea47bc807c"
+  },
+  "temporary_input_packets_sha256": {
+    "materials-1.json": "a9249aa4af5764d8f899d369f024759b7f21eac282fc1935206c56c1d7ab8710",
+    "materials-2.json": "43a121230ac0609d904cfe59bc4f2067fad9e771c17ec40356e55888801294c0",
+    "materials-3.json": "0062e44408f2bd10b06a30f3e0b756a7f43a7bcfc1ad1bb71ead1002e24c065e"
+  },
+  "quality_status": "not_measured",
+  "retained_artifacts_sha256": {
+    "baseline.json": "cdf19d6bbd12c3096617da95390bbb07a866b5a5064d58cfb18544c7e1f52aec",
+    "evidence.json": "0bdf47d95e66238dfb7875b4756d8027f978e2ea48218c9745e538c2aa0b091d",
+    "candidates.json": "b46b2b2e03daf88e5d3285c96083ca2e5074eb619c470306afa9475c26c90d6c",
+    "audit.json": "cdd31677a477dbba9495416ba3ce47cf4ce5a6f462f1d7efaaa1211a29aea3b8",
+    "corrections.json": "971db043d9ce37e984398dca9ca1d57285fd3aa358da55f37d52dce7045c287a",
+    "correction-audit.json": "3e1bb5f1e0dd3243b376a69913dbefdaa25bb2e9e3424201f732bf40a98fbd29"
+  },
+  "reviewer_agent_id": "01a186a4-ffb6-7aa2-a677-16ac0d0d3a83",
+  "post_audit_guide_addition": "After the raw source audit found a prose/table conflict in Sparsh, abstract-decisions.md gained a source-conflict check. The raw writer did not see this later addition. Host corrections are stored separately from candidates.json.",
+  "post_generation_relocation": {
+    "passage": "Sentence Progression, Not Syntactic Variety",
+    "writer_saw_in": "references/argument-transfer.md",
+    "current_owner": "references/writing-library.md",
+    "reason": "Preserve the archive-protected default guide; the passage moved unchanged and the eight cards' owner metadata and links were updated. Raw candidates and the recorded pre-relocation resource hashes remain unchanged."
+  },
+  "old_audit_warning": "Earlier five-paper factual_audit pass flags were authored labels, not completed independent certification; they are not reused as validation here."
+}

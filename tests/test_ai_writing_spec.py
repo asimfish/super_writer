@@ -43,7 +43,8 @@ class AISpecTests(unittest.TestCase):
         spec = self.spec()
         writing_lookup.validate_ai_spec(spec)
         kinds = {k: sum(e["kind"] == k for e in spec["entries"]) for k in spec["taxonomy"]["kinds"]}
-        self.assertEqual(kinds, {"writing_rule": 19, "claim_usage": 15, "technical_term": 34})
+        self.assertEqual(kinds, {"writing_rule": 19, "claim_usage": 15, "technical_term": 34,
+                                 "sentence_pattern": 8})
         library = json.loads(writing_lookup.INDEX.read_text())
         self.assertEqual(len(library["entries"]), 130)
         self.assertTrue(set(e["id"] for e in library["entries"]).isdisjoint(e["id"] for e in spec["entries"]))
@@ -55,6 +56,36 @@ class AISpecTests(unittest.TestCase):
         self.assertIn("upstream_commit", report)
         self.assertNotIn("catalog", report)
         self.assertEqual(report["entries"][0]["id"], "general.usage-note.significant.001")
+
+    def test_functional_pattern_retrieval_preserves_discourse_and_sources(self) -> None:
+        result = cli("数字堆积", "--catalog", "ai-spec", "--kind", "sentence_pattern",
+                     "--section", "abstract", "--limit", "1", "--format", "json")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        report = json.loads(result.stdout)
+        entry = report["entries"][0]
+        self.assertEqual(entry["id"], "ai.pattern.distinct-evidence")
+        self.assertEqual(set(entry["discourse"]), {"question", "predecessor", "successor", "non_transfer"})
+        self.assertEqual(entry, next(e for e in self.spec()["entries"] if e["id"] == entry["id"]))
+        self.assertEqual({s["id"] for s in report["terminology_context_sources"]}, set(entry["source_ids"]))
+        prose = cli("--catalog", "ai-spec", "--id", entry["id"])
+        for value in entry["discourse"].values():
+            self.assertIn(value, prose.stdout)
+        self.assertIn("incompatible units", prose.stdout)
+
+    def test_functional_patterns_reject_missing_boundaries_and_authority(self) -> None:
+        for changes in ({"discourse": None}, {"discourse": {}},
+                        {"discourse": {"question": "what?"}}, {"status": "invariant"},
+                        {"source_ids": [], "source_notes": []}):
+            spec = self.spec()
+            entry = next(e for e in spec["entries"] if e["kind"] == "sentence_pattern")
+            entry.update(changes)
+            with self.subTest(changes=changes), self.assertRaisesRegex(ValueError, "discourse boundaries"):
+                writing_lookup.validate_ai_spec(spec)
+
+    def test_related_work_patterns_do_not_leak_into_abstract_filter(self) -> None:
+        result = cli("--catalog", "ai-spec", "--id", "ai.pattern.family-contrast", "--section", "abstract")
+        self.assertEqual(result.returncode, 2)
+        self.assertEqual(result.stdout, "")
 
     def test_topic_and_level_intersect_with_existing_filters(self) -> None:
         result = cli("动作分块", "--catalog", "ai-spec", "--topic", "具身控制",
@@ -270,7 +301,7 @@ class AISpecTests(unittest.TestCase):
         for args in (("--catalog", "missing", "result"),
                      ("--catalog", "ai-spec", "--id", "general.usage-note.significant.001"),
                      ("--id", "ai.usage.significant"),
-                     ("--catalog", "ai-spec", "result", "--kind", "sentence_pattern")):
+                     ("--catalog", "ai-spec", "result", "--kind", "unsupported_pattern")):
             with self.subTest(args=args):
                 result = cli(*args)
                 self.assertEqual(result.returncode, 2)

@@ -27,6 +27,11 @@ For an abstract inspect distinctive contribution, mechanism and decisive evidenc
 for related work inspect synthesis, comparison axes and positioning; for experiments
 inspect question-to-control organization, reporting, analysis and display prose.
 The same generic checklist is not an adequate section diagnosis.
+For a fact inventory, identify which measurements answer the same reader question
+and which establish a different promise or consequential exception. For a flat
+sequence, locate the missing relationship between adjacent statements. Repeated
+grammar alone is not the defect; do not request synonyms or fewer numbers without
+showing the lost argument. Use functional wording cards only after this diagnosis.
 Separate a missing explanation from a missing experiment or unverified literature
 claim. In related work, compare task, assumptions, mechanism, evidence and scope;
 absence from retrieved papers does not establish novelty or a universal gap.

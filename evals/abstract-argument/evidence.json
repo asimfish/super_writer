@@ -1,0 +1,594 @@
+{
+  "scope": "Original source-located annotations from public paper bodies; not full paper text. Preserved from the prior five-paper packets, including unresolved reporting ambiguities.",
+  "papers": [
+    {
+      "id": "P01",
+      "title": "EquiBot",
+      "source_url": "https://proceedings.mlr.press/v270/yang25a.html",
+      "pdf_sha256": "abceb9169f7ca8276eb530913706a383dd14ca3e3ed6d6be6e84fd0438d6fb2e",
+      "body_pages_read": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "contribution": "EquiBot is a closed-loop visuomotor imitation-learning policy that combines a SIM(3)-equivariant point-cloud architecture with diffusion-based action prediction. Its encoder, conditioning layers, and action denoising network transform consistently under translations, rotations, and uniform scaling, while the stochastic diffusion representation preserves multimodal and temporally extended action prediction. The paper evaluates whether this design improves out-of-distribution generalization and data efficiency in simulated and real mobile-manipulation tasks.",
+      "evidence": [
+        {
+          "id": "E01",
+          "statement": "The policy takes single-view, object-centric scene point clouds and robot proprioception as observations and predicts sequences of end-effector actions; the action representation uses 3D offsets or velocities, normalized directions, and scalar gripper signals.",
+          "location": "PDF p. 2, Section 3.1 (Problem setup and observation/action spaces)"
+        },
+        {
+          "id": "E02",
+          "statement": "The architecture uses a SIM(3)-equivariant point-cloud encoder, extracts an object centroid and scale to normalize position and scale, converts the conditional U-net layers to SO(3)-equivariant layers, and rescales the predicted actions back to the input frame.",
+          "location": "PDF pp. 4-5, Section 3.3 (SIM(3)-Equivariant Diffusion Policy)"
+        },
+        {
+          "id": "E03",
+          "statement": "The formal construction starts from a standard Gaussian action prior that is equivariant to SO(3) and uses equivariant Markov transitions at every diffusion step; Proposition 1 states that the final conditional action distribution is therefore equivariant, with translation and scale handled by canonicalization.",
+          "location": "PDF p. 4, Section 3.2; proof in PDF pp. 16-17, Section D"
+        },
+        {
+          "id": "E04",
+          "statement": "The main simulation comparison uses four tasks: Cloth Folding, Object Covering, Box Closing, and the multimodal Push T task. The first three use 50 synthetic demonstrations each, while Push T uses the same 200 demonstrations as the cited benchmark; the tasks include deformable and articulated manipulation as well as 2D T-shape pushing.",
+          "location": "PDF p. 6, Section 4.1.1 and Figure 3 description"
+        },
+        {
+          "id": "E05",
+          "statement": "For the simulation comparison, every method is trained for 2,000 epochs with 3 random seeds; the last 5 checkpoints are evaluated for 10 episodes each, giving 3 x 5 x 10 = 150 evaluation trials per plotted result. Evaluation includes the demonstration-matched Original setup and OOD rotation, scale, position, and combined rotation-scale-position setups.",
+          "location": "PDF p. 6, Section 4.1.1 (Training and evaluation; Evaluation setups)"
+        },
+        {
+          "id": "E06",
+          "statement": "In the simulation OOD comparison, vanilla Diffusion Policy performs well in the Original setup but drops on OOD setups; augmentation helps especially for OOD rotation but drops on position and combined OOD settings; EquivAct is weak on some tasks and cannot handle the multimodal Push T data well. EquiBot is reported to train stably and show the smallest performance drop across the four tasks.",
+          "location": "PDF p. 7, Section 4.1.1 (Results)"
+        },
+        {
+          "id": "E07",
+          "statement": "The data-efficiency study uses the Robomimic Can and Square tasks with training sets of 100, 50, and 25 demonstrations, and reports means and standard deviations over 150 evaluation trials. As demonstrations decrease from 100 to 25, EquiBot retains relatively higher performance than the Diffusion Policy baseline.",
+          "location": "PDF p. 7, Section 4.1.2 (Data Efficiency Experiments)"
+        },
+        {
+          "id": "E08",
+          "statement": "The real-robot study covers six household manipulation tasks involving rigid, articulated, and deformable objects: Push Chair, Luggage Packing, Luggage Closing, Laundry Door Closing, Bimanual Folding, and Bimanual Make Bed. Each task has 15 human demonstration videos collected with a single ZED 2 camera at 15 Hz, then subsampled to 3 Hz; the demonstrations are described as 5 minutes of human data overall.",
+          "location": "PDF p. 7, Section 4.2 (Real Robot Experiments; Data collection and robot setup)"
+        },
+        {
+          "id": "E09",
+          "statement": "Real policies are trained for 1,000 epochs and evaluated for 10 episodes per method. Laundry Door Closing is evaluated in-distribution; Push Chair, Luggage Closing, and Bimanual Make Bed use unseen objects; Luggage Packing and Bimanual Folding use novel objects plus translated and rotated scene layouts.",
+          "location": "PDF p. 8, Section 4.2 (Training and evaluation)"
+        },
+        {
+          "id": "E10",
+          "statement": "In the first block of Table 1, EquiBot succeeds in 8/10 and 10/10 Push Chair trials, 8/10 Laundry Door Closing trials, and 6/10 Luggage Closing trials, compared with Diffusion Policy at 0/10, 0/10, 3/10, and 0/10; the corresponding Diffusion Policy with Augmentation results are 1/10, 2/10, 2/10, and 2/10. In the six additional object/pose variants in the second block, EquiBot records 7/10, 3/10, 8/10, 8/10, 6/10, and 8/10, while Diffusion Policy records 0/10 in each.",
+          "location": "PDF p. 8, Table 1 and surrounding Results paragraph"
+        },
+        {
+          "id": "E11",
+          "statement": "Except for Push T, the experiments use 13-dimensional proprioception and a 7-dimensional action space per robot, with observation horizon 2, prediction horizon 16, and action horizon 8. Simulation inference uses 100 DDPM denoising steps, while real-robot inference uses 8 DDIM steps; real and simulated mobile-manipulation observations generally use 1,024-point clouds.",
+          "location": "PDF pp. 17-19, Section E (Method Architectures and Implementation Detail)"
+        },
+        {
+          "id": "E12",
+          "statement": "The authors state that the method does not handle nonlinear changes in object shape or dynamics or changes in relative object positioning when multiple objects are present by construction, and may fail under partial occlusion or large camera-angle changes. Real-robot failures include premature or delayed gripper opening, accumulated action errors, and incomplete object segmentation.",
+          "location": "PDF p. 8, Section 5 (Conclusions, Limitations and Future work); PDF pp. 14-15, Section C.1"
+        }
+      ],
+      "relations": [
+        {
+          "id": "R01",
+          "meaning": "Equivariance explains the claimed out-of-distribution and low-data behavior: consistent transformation of point-cloud features, diffusion transitions, and actions lets the policy reuse learned behavior under changed positions, rotations, and scales, including when training demonstrations do not cover all test poses.",
+          "evidence_ids": [
+            "E02",
+            "E03",
+            "E05",
+            "E06",
+            "E07",
+            "E09"
+          ]
+        },
+        {
+          "id": "R02",
+          "meaning": "Diffusion-based stochastic action modeling explains the ability to represent multimodal demonstrations and predict temporally extended action sequences; this addresses the Push T failure mode of deterministic EquivAct and supports the reported stable closed-loop behavior.",
+          "evidence_ids": [
+            "E01",
+            "E04",
+            "E06",
+            "E11"
+          ]
+        }
+      ],
+      "limitations": [
+        "The construction does not cover nonlinear changes in object shape or dynamics, or relative-position changes among multiple objects (PDF p. 8, Section 5).",
+        "Performance may degrade with partial occlusion or large changes in camera viewpoint (PDF p. 8, Section 5).",
+        "Observed real-robot failures include gripper timing errors, accumulated action-prediction errors that push observations out of distribution, and incomplete segmentation of a folded comforter (PDF pp. 14-15, Section C.1).",
+        "The main evaluation is bounded to four simulated tasks, two low-data benchmark tasks, and six real-robot tasks, with 10 real-robot episodes per reported setup; the paper does not establish performance beyond these task and episode scopes (PDF pp. 6-8).",
+        "PDF p. 8 Table 1 is a columnar table whose headers flatten in plain-text extraction; the six second-block success counts are therefore preserved in displayed left-to-right order rather than assigned beyond the labels that remain unambiguous."
+      ],
+      "initial_draft_facts": "EquiBot is a point-cloud visuomotor imitation policy that combines SIM(3)-equivariant network components with diffusion-based prediction of multi-step robot actions. The study tests four simulated manipulation tasks, a two-task 100/50/25-demonstration data-efficiency study, and six real mobile-manipulation tasks trained from 15 human videos per task, reporting 150-trial simulation aggregates and 10-episode real-robot evaluations. Across transformed scenes, reduced demonstration counts, and several unseen-object tests, the paper reports smaller simulation performance drops and higher real-robot success rates than vanilla diffusion, augmentation-based diffusion, and a prior deterministic equivariant policy, while noting limits for nonlinear shape or dynamics changes, multi-object relative placement, occlusion, viewpoint shifts, and execution or segmentation errors."
+    },
+    {
+      "id": "P02",
+      "title": "Sparsh",
+      "source_url": "https://proceedings.mlr.press/v270/higuera25a.html",
+      "pdf_sha256": "410597f452f0bd64bcc5d0d15f26ef77c03a34b125017d3399a8172dfde8de93",
+      "body_pages_read": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        17,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "contribution": "Sparsh is a family of self-supervised touch representations for vision-based tactile sensors. The paper adapts masked-image, self-distillation, and joint-embedding predictive objectives to tactile data, releases the TacBench benchmark of six touch-centric tasks, and evaluates frozen pretrained encoders against task-specific end-to-end baselines under reduced labeled-data budgets.",
+      "evidence": [
+        {
+          "id": "P02-E01",
+          "statement": "Sparsh is trained with self-supervision across DIGIT, GelSight 2017, and GelSight Mini sensors; the study compares pixel reconstruction (MAE), self-distillation (DINO/DINOv2), and joint-embedding predictive approaches (I-JEPA/V-JEPA).",
+          "location": "PDF p. 3, Section 3 and Figure 2"
+        },
+        {
+          "id": "P02-E02",
+          "statement": "The curated touch corpus contains about 661k images: 180k from YCB-Slide, 180k from Touch-Slide, 220k from Touch-and-Go, and 81k from ObjectFolder; 70%, or 462.7k images, are used for SSL pretraining and the remainder is held out for online-probe monitoring rather than downstream task labels.",
+          "location": "PDF pp. 3-4, Figure 2 and Section 3"
+        },
+        {
+          "id": "P02-E03",
+          "statement": "For image-based SSL, two tactile frames at a stride of five samples are concatenated, giving an approximately 80 ms history at 60 FPS; V-JEPA instead uses four frames over an approximately 100 ms window, and the models support up to 112 FPS inference on an Nvidia RTX 3080.",
+          "location": "PDF p. 4, Section 3"
+        },
+        {
+          "id": "P02-E04",
+          "statement": "TacBench has six core touch-centric tasks (T1-T6), with T1A as an auxiliary force-field visualization evaluation; the core tasks cover force estimation, slip detection, relative pose estimation, grasp stability, textile recognition, and a bead-maze policy. Except for force-field visualization and policy learning, evaluation freezes the Sparsh encoder and trains an attentive decoder on labeled task data, with a same-capacity end-to-end model trained from random initialization as baseline.",
+          "location": "PDF pp. 4-5, Section 4"
+        },
+        {
+          "id": "P02-E05",
+          "statement": "Force estimation uses separate DIGIT and GelSight Mini datasets listed at 75k samples each; the force decoder trains on sharp and spherical indenters and tests on flat-indenter data, with 25k unseen test samples per sensor in the appendix evaluation.",
+          "location": "PDF p. 5, Section 5.1; PDF pp. 20-21, Appendix D.3 and Tables 5-6"
+        },
+        {
+          "id": "P02-E06",
+          "statement": "The slip dataset has 125k samples with 13% slip instances and a 25k-sample evaluation reserve; labels come from a friction-cone model with an empirically estimated static-friction coefficient, so F1 rather than accuracy is reported because of class imbalance.",
+          "location": "PDF p. 5, Section 5.3; PDF p. 24, Appendix D.5"
+        },
+        {
+          "id": "P02-E07",
+          "statement": "Pose estimation uses 49k DIGIT object-sliding samples and discretizes relative SE(2) changes into translation bins at 5 mm resolution and rotation bins at 2 degrees; the reported appendix accuracy is computed on 630 test samples.",
+          "location": "PDF p. 6, Section 6.1; PDF p. 25, Appendix D.6 and Table 8"
+        },
+        {
+          "id": "P02-E08",
+          "statement": "The grasp-stability dataset has about 9.3k grasps with 64% successful and 36% failed outcomes; the paper creates an approximately 8k-train/1.3k-evaluation split, and full-data Sparsh I-JEPA or V-JEPA reaches about 80% accuracy using touch from one finger.",
+          "location": "PDF p. 6, Section 6.2; PDF p. 20, Table 3; PDF p. 25, Appendix D.7"
+        },
+        {
+          "id": "P02-E09",
+          "statement": "Textile recognition uses 4,467 videos of 10-25 frames across 20 textile classes and follows the dataset metadata train-test split; the appendix reports 26k tactile images for this classification evaluation and finds pretrained representations useful with 10% of the labeled data.",
+          "location": "PDF p. 6, Section 6.3; PDF p. 26, Appendix D.8 and Table 10"
+        },
+        {
+          "id": "P02-E10",
+          "statement": "For the bead maze, the main text reports 50 demonstrations on different maze patterns and about 34k tactile-image/joint-angle training pairs; evaluation uses a held-out maze trajectory and 10 randomized novel starting locations, where Sparsh policies reduce trajectory error by about 16% and improve distance before failure by about 20-53% over end-to-end training, although no model completes the full maze in the real-robot rollout.",
+          "location": "PDF pp. 7-8, Section 7.1 and Section 8; PDF p. 28, Appendix D.9 and Table 11"
+        },
+        {
+          "id": "P02-E11",
+          "statement": "The paper reports a 95.1% average improvement over task- and sensor-specific end-to-end models when downstream tasks use 33-50% of their collected labeled data; it characterizes DINO as strongest for physics-oriented force and pose tasks, I-JEPA as stronger for slip, grasp stability, and textile semantics, and DINO as 5.6% better than I-JEPA on average across the benchmark.",
+          "location": "PDF p. 2, introduction; PDF p. 8, Section 8"
+        }
+      ],
+      "relations": [
+        {
+          "id": "P02-R01",
+          "meaning": "The paper explains low-label transfer as a consequence of pretraining on a large, mixed-sensor unlabeled corpus and then probing a frozen encoder, which lets one representation support multiple tactile properties, perception tasks, and a manipulation policy.",
+          "evidence_ids": [
+            "P02-E02",
+            "P02-E04",
+            "P02-E05",
+            "P02-E06",
+            "P02-E07",
+            "P02-E08",
+            "P02-E09",
+            "P02-E10",
+            "P02-E11"
+          ]
+        },
+        {
+          "id": "P02-R02",
+          "meaning": "The reported advantage of latent-space objectives is tied to tactile ambiguity and nuisance variation: clustering or latent prediction can avoid spending capacity on exact pixels, while temporal tokenization supplies the short history needed for slip and relative-motion inference.",
+          "evidence_ids": [
+            "P02-E01",
+            "P02-E03",
+            "P02-E06",
+            "P02-E11"
+          ]
+        }
+      ],
+      "limitations": [
+        "The considered open-source tactile datasets are dominated by discrete contacts; the paper expects shear-rich data to improve the representations (PDF p. 8, Section 8).",
+        "The study does not ablate tactile-history length, so the effect of the chosen 80-100 ms windows is not isolated (PDF p. 8, Section 8).",
+        "Real-robot bead-maze performance is partial because errors compound, force control is absent, grip loss is unrecoverable, and local decisions cause trajectory drift (PDF pp. 7-8, Sections 7.1-8).",
+        "Slip labels can be inaccurate because they depend on an experimentally estimated friction coefficient (PDF p. 24, Appendix D.5).",
+        "The main text reports 50 bead-maze demonstrations, while Appendix D.9 describes a 30-demonstration setup and Table 11 evaluates policies trained with 50; the protocol should be reported with that scope caveat (PDF pp. 7, 27-28).",
+        "The main discussion reports a 95.1% average improvement, whereas Appendix Table 13 gives a different 98.75% aggregate; these aggregate figures should not be merged without preserving their source context (PDF pp. 2, 8, 29)."
+      ],
+      "initial_draft_facts": "Sparsh is a family of self-supervised tactile encoders trained across DIGIT, GelSight 2017, and GelSight Mini data. The paper assembles about 661k unlabeled images, uses 462.7k for pretraining, and evaluates frozen encoders with TacBench across six touch-centric tasks, with task-specific labeled data and separate test sets. The benchmark covers force, slip, pose, grasp stability, textile recognition, and bead-maze control; examples include 25k unseen force-test samples per sensor, 25k slip evaluation samples, 630 pose-test samples, about 1.3k grasp evaluations, and 10 novel bead-maze starts. The reported low-label results favor DINO for force and pose and I-JEPA or V-JEPA for several semantic touch tasks, but real bead-maze completion remains limited by compounding control errors and the benchmark data are mostly discrete-contact data."
+    },
+    {
+      "id": "P03",
+      "title": "ManiWAV",
+      "source_url": "https://proceedings.mlr.press/v270/liu25c.html",
+      "pdf_sha256": "151b597434416208187bb2f8c4dc2dcabcfdcd1ce3ba2e0f1c52f316b45c7d0b",
+      "body_pages_read": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "contribution": "ManiWAV combines an ear-in-hand piezoelectric contact microphone with synchronized vision and a diffusion-policy controller for contact-rich manipulation. It collects human demonstrations with a portable UMI-derived gripper, augments training audio with environmental and robot noise to address the deployment domain gap, and evaluates audio-visual policies on four tasks with in-lab, perturbed, and in-the-wild tests.",
+      "evidence": [
+        {
+          "id": "P03-E01",
+          "statement": "The ear-in-hand device embeds a piezoelectric contact microphone under high-friction tape in one UMI gripper finger; it records 48 kHz audio synchronously with 60 Hz images through a GoPro MP4 stream, and the same gripper is mounted on a UR5 robot for deployment.",
+          "location": "PDF p. 3, Section 3.1"
+        },
+        {
+          "id": "P03-E02",
+          "statement": "ManiWAV is an end-to-end closed-loop model that maps RGB images, audio, and recent end-effector poses to 10-DoF robot actions; it uses a CLIP-pretrained ViT-B/16 image encoder, an AST audio encoder, transformer fusion, and a diffusion-policy head trained with noise-prediction MSE on 16-step future trajectories.",
+          "location": "PDF pp. 3-4, Section 3.2"
+        },
+        {
+          "id": "P03-E03",
+          "statement": "To bridge hand-held training data and robot-deployment audio, the method samples ESC-50 background sounds and records 10 robot-motor-noise examples; each noise type is overlaid on the original training audio with probability 0.5.",
+          "location": "PDF p. 4, Section 3.2"
+        },
+        {
+          "id": "P03-E04",
+          "statement": "The audio branch uses the last 2-3 seconds of waveform, resamples from 48 kHz to 16 kHz, forms a log-mel spectrogram with FFT/window length 400, hop length 160, and 64 mel filters, and normalizes the spectrogram to [-1, 1].",
+          "location": "PDF p. 4, Section 3.2"
+        },
+        {
+          "id": "P03-E05",
+          "statement": "The demonstration counts are 283 in-lab and 274 in-the-wild demonstrations for bagel flipping, 119 for wiping, 145 for pouring, and 193 for taping; the 274 in-the-wild flipping demonstrations span seven environments and four pans and are human data collected with the hand-held gripper.",
+          "location": "PDF pp. 5-8, Sections 4.1-4.4; PDF p. 12, Appendix B.1"
+        },
+        {
+          "id": "P03-E06",
+          "statement": "Bagel flipping is evaluated in 20 robot rollouts per policy across changed configurations, audio perturbations, unseen table heights, and two unseen in-the-wild environments; the appendix reports 90% success for ManiWAV versus 25% for vision-only, 60% for the MLP policy, 35% for ResNet audio, and 55% for AVID audio.",
+          "location": "PDF p. 5, Section 4.1; PDF p. 15, Appendix B.2.4 and Table 4"
+        },
+        {
+          "id": "P03-E07",
+          "statement": "Wiping uses 119 demonstrations and 20 test rollouts covering shapes, audio noise, table heights, board configurations, and unseen erasers; the appendix reports 85% success for ManiWAV, compared with 40% vision-only, 35% MLP fusion, 50% noise masking, and 35% without noise augmentation.",
+          "location": "PDF p. 6, Section 4.2; PDF p. 14, Appendix B.2.3 and Table 3"
+        },
+        {
+          "id": "P03-E08",
+          "statement": "Pouring uses 145 demonstrations and 12 rollouts per policy, including unseen object counts and unseen objects such as screws or beans; appendix substep success for ManiWAV is 90% grasp, 100% pour, and 90% place, while vision-only is 100%, 0%, and 8.3% respectively.",
+          "location": "PDF p. 7, Section 4.3; PDF p. 12, Appendix B.2.1 and Table 1"
+        },
+        {
+          "id": "P03-E09",
+          "statement": "Taping uses 193 demonstrations and 10 rollouts, with 2-4 randomly ordered Velcro tapes per rollout and at least one hook tape; ManiWAV's appendix substep rates are 90% touch, 90% sense, 80% pick, and 80% place, while the environment-microphone baseline has 80%, 30%, 90%, and 40%.",
+          "location": "PDF p. 8, Section 4.4; PDF p. 13, Appendix B.2.2 and Table 2"
+        },
+        {
+          "id": "P03-E10",
+          "statement": "The paper attributes improvements to contact audio revealing information unavailable or ambiguous in the wrist camera, including board contact during wiping, spatula-pan contact during flipping, whether a cup contains objects during pouring, and hook-versus-loop surface material during taping; it reports that audio-visual training improves in-the-wild generalization over lab-only training on two unseen environments.",
+          "location": "PDF pp. 5-8, Sections 4.1-4.4"
+        },
+        {
+          "id": "P03-E11",
+          "statement": "The calibrated audio latency is 0.23 seconds; the authors caution that contact microphones may be uninformative for interactions without salient sounds, such as cloth or quasi-static tasks, may be masked by robot motor noise, and are not yet used for higher-frequency reactive actions.",
+          "location": "PDF p. 5, Section 3.2; PDF p. 8, Section 4.5; PDF p. 12, Appendix A.1"
+        }
+      ],
+      "relations": [
+        {
+          "id": "P03-R01",
+          "meaning": "Contact audio adds task-relevant state and material information that the camera cannot reliably observe, which explains the gains in contact-mode switching, hidden object-state sensing, and surface-material selection across the four tasks.",
+          "evidence_ids": [
+            "P03-E06",
+            "P03-E07",
+            "P03-E08",
+            "P03-E09",
+            "P03-E10"
+          ]
+        },
+        {
+          "id": "P03-R02",
+          "meaning": "Noise augmentation and transformer-based audio-visual fusion are intended to preserve invariant contact cues across hand-held collection and robot deployment; the reported perturbation, unseen-height, and unseen-environment tests are the evidence used for that domain-gap explanation.",
+          "evidence_ids": [
+            "P03-E02",
+            "P03-E03",
+            "P03-E06",
+            "P03-E07",
+            "P03-E10"
+          ]
+        }
+      ],
+      "limitations": [
+        "The contact microphone can fail when interactions generate weak or no salient acoustic signals, including cloth and quasi-static interactions (PDF p. 8, Section 4.5).",
+        "Deployment motor noise can make contact audio imperceptible despite training augmentation, and the reported latency is 0.23 seconds (PDF pp. 5, 8, 12).",
+        "The current policy does not exploit the microphone's higher sampling rate for higher-frequency reactive actions (PDF p. 8, Section 4.5).",
+        "The evaluation uses small task-specific demonstration and rollout populations: 20 flipping and wiping rollouts, 12 pouring rollouts, and 10 taping rollouts; substep percentages should not be conflated with whole-task success (PDF pp. 5-8, 12-15).",
+        "The claimed in-the-wild generalization is demonstrated for the tested flipping environments and the listed task scenarios, not as a broad claim over arbitrary objects or environments (PDF pp. 5-6, Sections 4.1-4.2)."
+      ],
+      "initial_draft_facts": "ManiWAV is an audio-visual robot-learning system built around a UMI-derived hand-held gripper with a piezoelectric contact microphone. It records 48 kHz audio with 60 Hz images, augments human-demonstration audio using ESC-50 and robot motor noises, and conditions a diffusion policy on fused vision, audio, and recent poses to produce 10-DoF actions. The study uses 283 lab plus 274 in-the-wild flipping demonstrations, 119 wiping demonstrations, 145 pouring demonstrations, and 193 taping demonstrations, then tests separate robot rollout populations under configuration, noise, height, object, material, and environment changes. Reported results include 90% flipping success and 85% wiping success, while pouring and taping are reported with substep rates; audio is especially used for hidden contact mode, cup contents, and Velcro material cues. The authors limit the claims for weakly audible interactions, deployment motor noise, small rollout counts, and the current lack of high-frequency audio-reactive control."
+    },
+    {
+      "id": "P04",
+      "title": "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators",
+      "source_url": "https://proceedings.mlr.press/v270/zeng25a.html",
+      "pdf_sha256": "19b11d60218dc5418ac9d3673e03e851944187b998fe83142477e96502c40a82",
+      "body_pages_read": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "contribution": "PoliFormer is a high-capacity transformer policy trained from scratch with large-scale on-policy reinforcement learning for partially observed, long-horizon visual navigation. Its training recipe combines a frozen DINOv2 visual backbone, transformer state and temporal modeling with a causal decoder and KV-cache, hundreds of parallel rollouts, large batches, and diverse procedural environments. The paper also introduces a bounding-box-goal variant, PoliFormer-BoxNav, for promptable zero-shot navigation applications.",
+      "evidence": [
+        {
+          "id": "P04-E1",
+          "statement": "PoliFormer is trained with on-policy reinforcement learning in the AI2-THOR simulator, and the paper targets partially observed, long-horizon navigation from RGB observations with deployment in the real world without adaptation.",
+          "location": "PDF p. 2, Introduction after Figure 1"
+        },
+        {
+          "id": "P04-E2",
+          "statement": "At each timestep the policy processes an ego-centric RGB observation with a frozen DINOv2 vision transformer, combines visual and goal features in a transformer state encoder, models temporal state with a causal transformer decoder, and predicts action logits and a value estimate with actor and critic heads; KV-cache is used for rollout and inference.",
+          "location": "PDF p. 4, Fig. 2 and Section 3.1"
+        },
+        {
+          "id": "P04-E3",
+          "statement": "The scalable RL setup uses 192 parallel rollouts for Stretch RE-1 and 384 for LoCoBot, DD-PPO over four nodes with 32 A6000 GPUs and 512 CPU cores, and reports about 3.4x training-speed acceleration; four-node training takes about 4.5 days versus an estimated 15.3 days on one node.",
+          "location": "PDF p. 5, Section 3.2"
+        },
+        {
+          "id": "P04-E4",
+          "statement": "The rollout length is increased from 32 to 64 to 128 every 10M environment steps, giving LoCoBot a final batch size of 49,152 frames.",
+          "location": "PDF p. 6, Section 3.2"
+        },
+        {
+          "id": "P04-E5",
+          "statement": "LoCoBot experiments train on ProcTHOR-10k houses, while Stretch RE-1 experiments train on ProcTHOR-150k houses populated with approximately 40,000 annotated Objaverse assets; simulation optimizations raise Stretch training throughput from about 550 to 950 steps per second.",
+          "location": "PDF p. 6, Section 3.3"
+        },
+        {
+          "id": "P04-E6",
+          "statement": "For LoCoBot, training uses 10,000 ProcTHOR scenes and 435M training steps; evaluation uses 800 tasks in 20 AI2-iTHOR scenes, 1,200 tasks in 5 ArchitecTHOR scenes, and 1,500 tasks in 150 ProcTHOR-10k validation scenes. Stretch evaluation uses 200 tasks in 200 CHORES-S test houses, which are not seen during training.",
+          "location": "PDF pp. 6-7, Implementation Details; p. 23, Appendix C"
+        },
+        {
+          "id": "P04-E7",
+          "statement": "With RGB plus text goals, PoliFormer obtains 85.5% Success (SEL) on CHORES-S for Stretch RE-1 and 82.4%, 68.3%, and 85.3% Success (SPL) on ProcTHOR-10k validation, ArchitecTHOR, and AI2-iTHOR for LoCoBot, respectively.",
+          "location": "PDF p. 7, Table 1"
+        },
+        {
+          "id": "P04-E8",
+          "statement": "The real-world evaluation contains 15 LoCoBot tasks and 18 Stretch RE-1 tasks, uses three starting poses and five or six target specifications respectively, applies no real-world fine-tuning, and tests houses not seen during training; text-only PoliFormer reaches 80.0% LoCoBot and 83.3% Stretch success.",
+          "location": "PDF p. 7, Section 4.2 and Table 2b"
+        },
+        {
+          "id": "P04-E9",
+          "statement": "PoliFormer-BoxNav replaces or supplements text goals with bounding-box goals and is demonstrated qualitatively for open-vocabulary ObjectNav, room navigation, sequential multi-target navigation, human following, object tracking, and instance-description navigation using external detectors or VLMs.",
+          "location": "PDF pp. 3 and 8, Introduction and Section 4.4; p. 18, Appendix A"
+        },
+        {
+          "id": "P04-E10",
+          "statement": "The authors report that the main failure mode is limited memory: after trajectories visit more than four rooms, the agent's recollection degrades and it may revisit rooms; they also report substantial GPU and training-time requirements.",
+          "location": "PDF p. 25, Appendix E, Failure Analysis and Extensive Use of GPUs and Significant Training Time"
+        }
+      ],
+      "relations": [
+        {
+          "id": "P04-R1",
+          "meaning": "The KV-cached causal decoder makes temporal transformer memory affordable during rollout collection; together with parallel rollouts, increasing batch lengths, and optimized simulation, this enables high-throughput on-policy RL at hundreds of millions of environment steps.",
+          "evidence_ids": [
+            "P04-E2",
+            "P04-E3",
+            "P04-E4",
+            "P04-E5"
+          ]
+        },
+        {
+          "id": "P04-R2",
+          "meaning": "Training on procedurally varied houses and object assets, while retaining RGB goal conditioning and a promptable bounding-box interface, supports both held-out simulation benchmarks and zero-shot transfer to unseen real-world houses and downstream goal types.",
+          "evidence_ids": [
+            "P04-E5",
+            "P04-E6",
+            "P04-E8",
+            "P04-E9"
+          ]
+        }
+      ],
+      "limitations": [
+        "The policy has no depth sensor; the authors identify depth integration as future work, especially for mobile-manipulation extensions (PDF p. 25, Appendix E).",
+        "The discretized action space is used for fair comparison but may be inefficient and unrealistic for timely real-world action (PDF p. 25, Appendix E).",
+        "The paper trains separate PoliFormer agents for LoCoBot and Stretch RE-1 and does not train one policy jointly across both embodiments (PDF p. 25, Appendix E).",
+        "Memory degrades on longer trajectories, particularly after visiting more than four rooms, leading to room revisits (PDF p. 25, Appendix E).",
+        "Training requires substantial compute; the authors report that eight A6000 GPUs can reach similar final performance but take about 3.5 times longer than 32 A6000 GPUs (PDF p. 25, Appendix E).",
+        "The authors hypothesize that IL pretraining followed by RL fine-tuning could improve sample efficiency, but this is proposed future work rather than an evaluated result (PDF p. 25, Appendix E).",
+        "Scaling to novel tasks such as manipulation requires new reward models and careful reward shaping (PDF p. 8, Section 5; p. 25, Appendix E)."
+      ],
+      "initial_draft_facts": "PoliFormer is a transformer navigation policy trained from scratch with on-policy RL in AI2-THOR. It uses frozen DINOv2 RGB features, transformer goal-conditioned state encoding, causal temporal memory with KV-cache, and large parallel rollout batches. LoCoBot training uses ProcTHOR-10k and 435M steps, while Stretch training uses ProcTHOR-150k with roughly 40,000 Objaverse assets; held-out evaluations cover AI2-iTHOR, ArchitecTHOR, ProcTHOR validation, and CHORES-S. The text-goal model reaches 85.5% SEL on CHORES-S and 82.4%, 68.3%, and 85.3% SPL on the three LoCoBot suites. Separate real-world tests use 15 LoCoBot and 18 Stretch tasks with no real-world fine-tuning and unseen houses, reaching 80.0% and 83.3% success in the text-only setting. A bounding-box-goal variant supports qualitative zero-shot open-vocabulary, multi-target, room, following, tracking, and instance-description behaviors. The main stated constraints are discrete actions, no depth, high compute, limited long-horizon memory, and the need for new rewards on new tasks."
+    },
+    {
+      "id": "P05",
+      "title": "OKAMI (Object-aware Kinematic retArgeting for huManoid Imitation)",
+      "source_url": "https://proceedings.mlr.press/v270/li25a.html",
+      "pdf_sha256": "a87623278d4c9b69e79b33d876e4fbba80fd5a82814e372756b13c1f4b0e2b31",
+      "body_pages_read": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "contribution": "OKAMI is a two-stage object-aware retargeting system that enables a bimanual humanoid to imitate a manipulation task from one RGB-D human video. It combines open-world object identification and tracking, human body-and-hand reconstruction, keyframe-based reference-plan generation, and factorized retargeting that adapts arm trajectories to test-time object locations while mapping hand poses to dexterous fingers. Successful OKAMI rollouts are also used as data for closed-loop visuomotor policies.",
+      "evidence": [
+        {
+          "id": "P05-E1",
+          "statement": "The task is open-world imitation from observation: the input is one recorded RGB-D human video without ground-truth robot actions, and execution is successful when the robot state matches the final state in the video's final frame; the video assumptions are that all frames show the human body and the camera view remains static.",
+          "location": "PDF p. 3, Problem Formulation"
+        },
+        {
+          "id": "P05-E2",
+          "statement": "OKAMI has two stages: it first generates a reference manipulation plan from the demonstration, then retargets human motions to a humanoid while adapting them to target-object locations in the test environment.",
+          "location": "PDF p. 2, Introduction; p. 3, Section 3"
+        },
+        {
+          "id": "P05-E3",
+          "statement": "The open-world vision pipeline uses GPT-4V to identify task-relevant objects from sampled RGB frames, Grounded-SAM to segment them in the first frame, and Cutie to track their locations throughout the video.",
+          "location": "PDF pp. 4-5, Section 3.1, Identifying and Localizing Task-Relevant Objects"
+        },
+        {
+          "id": "P05-E4",
+          "statement": "Human motion reconstruction extends SLAHMR by optimizing SMPL-H body and hand poses initialized with HaMeR hand estimates, producing full-body and hand trajectories for humanoid retargeting.",
+          "location": "PDF p. 5, Section 3.1, Reconstructing Human Motions; p. 14, Appendix A.1"
+        },
+        {
+          "id": "P05-E5",
+          "statement": "OKAMI detects velocity changes in CoTracker keypoints to identify keyframes and subgoals, assigns target and reference objects to each subgoal, and stores point clouds plus an SMPL-H trajectory segment in each reference-plan step.",
+          "location": "PDF p. 5, Section 3.1, Generating a Plan from Video"
+        },
+        {
+          "id": "P05-E6",
+          "statement": "At test time the system localizes task-relevant objects in robot observations, maps and scales the human body motion into humanoid task space, warps the arm trajectory to new object locations using target/reference relations, computes arm joint configurations by inverse kinematics, and separately retargets finger joints.",
+          "location": "PDF pp. 5-6, Section 3.2, Object-Aware Retargeting"
+        },
+        {
+          "id": "P05-E7",
+          "statement": "The evaluation uses six tabletop tasks: plush toy in basket, sprinkle salt, close drawer, close laptop, place snacks on plate, and bagging; these cover pick-and-place, pouring, articulated-object interaction, and dexterous bimanual manipulation. The hardware is a Fourier GR1 with two 6-DoF Inspire hands and a D435i RealSense camera, using a 400 Hz joint controller with commands computed at 40 Hz and interpolated.",
+          "location": "PDF p. 6, Section 4.1, Task Designs and Hardware Setup"
+        },
+        {
+          "id": "P05-E8",
+          "statement": "Each task is evaluated in 12 trials with object locations randomly initialized inside the intersection of the camera view and the humanoid arm workspace, in tabletop scenes containing task-relevant and distractor objects; new instances of the same object types are additionally tested on three tasks.",
+          "location": "PDF p. 7, Section 4.1, Evaluation Protocol"
+        },
+        {
+          "id": "P05-E9",
+          "statement": "Across the six real-robot tasks, OKAMI averages 71.7% success, with task values of 58.3% for Sprinkle-salt, 66.7% for Plush-toy-in-basket, 83.3% for Close-the-laptop, 75.0% for Close-the-drawer, 75.0% for Place-snacks-on-plate, and 58.3% for Bagging.",
+          "location": "PDF pp. 2 and 7, Introduction and Figure 4(a)"
+        },
+        {
+          "id": "P05-E10",
+          "statement": "Against the minimally adapted ORION baseline, OKAMI reaches 75.0% versus 0.0% on Place-snacks-on-plate and 83.3% versus 41.2% on Close-the-laptop on the robot; in simulation it reaches 82.0% versus 0.0% on Sprinkle-salt and 84.0% versus 10.0% on Close-the-drawer.",
+          "location": "PDF p. 7, Section 4.2, Quantitative Results"
+        },
+        {
+          "id": "P05-E11",
+          "statement": "For different human demonstrators, Close-the-laptop shows no statistically significant performance change, while Place-snacks-on-plate remains above 50% but has a 16.7 percentage-point gap between the best and worst demonstrator policies; the authors attribute degradation to faster motion producing noisier reconstruction.",
+          "location": "PDF p. 8, Section 4.2"
+        },
+        {
+          "id": "P05-E12",
+          "statement": "For closed-loop visuomotor learning, the authors generate rollouts over random object layouts, discard failed rollouts, and train ACT behavioral-cloning policies; using 50 versus 100 trajectories raises Sprinkle-salt success from 58.3% to 75.0% and Bagging success from 66.7% to 83.3%.",
+          "location": "PDF p. 8, Section 4.3 and Figure 5"
+        }
+      ],
+      "relations": [
+        {
+          "id": "P05-R1",
+          "meaning": "Test-time object localization plus relational trajectory warping converts one demonstrated motion into an object-conditioned plan, explaining generalization across randomized layouts and novel instances rather than replaying fixed workspace coordinates.",
+          "evidence_ids": [
+            "P05-E5",
+            "P05-E6",
+            "P05-E8"
+          ]
+        },
+        {
+          "id": "P05-R2",
+          "meaning": "Retaining the demonstrator's body motion while separately adapting arms and fingers preserves embodiment-specific grasp and wrist behaviors; this explains the large advantage over ORION and provides successful rollouts that can train closed-loop policies.",
+          "evidence_ids": [
+            "P05-E6",
+            "P05-E10",
+            "P05-E12"
+          ]
+        }
+      ],
+      "limitations": [
+        "The current system focuses on upper-body retargeting for tabletop manipulation and does not provide lower-body locomotion; full-body loco-manipulation would require a whole-body motion controller instead of the joint-position controller used here (PDF p. 8, Limitations and Future Work).",
+        "The method requires RGB-D video, limiting direct use of in-the-wild Internet videos recorded only in RGB (PDF p. 8, Limitations and Future Work).",
+        "The retargeting is not robust to large variations in object shape (PDF p. 8, Limitations and Future Work).",
+        "Human reconstruction is computationally heavy: on an RTX3090, a 10-second video at 30 fps takes about 10 minutes to process (PDF p. 14, Appendix A.1).",
+        "The formulation assumes that all video frames capture the human body and that the recording camera is static (PDF p. 3, Problem Formulation).",
+        "Faster demonstrator motion can make human-model reconstruction noisier and reduce cross-demonstrator performance (PDF p. 8, Section 4.2)."
+      ],
+      "initial_draft_facts": "OKAMI addresses open-world imitation from observation for a bimanual humanoid using a single RGB-D human video with no robot action labels. It first identifies and tracks task-relevant objects, reconstructs SMPL-H body and hand motion, and builds a keyframe reference plan; it then localizes objects at test time, warps arm trajectories according to target/reference relations, and retargets fingers separately through inverse kinematics and joint mapping. On a Fourier GR1 with two dexterous hands, six tabletop tasks are evaluated with 12 randomized trials per task and additional novel-object tests on three tasks. The method averages 71.7% success across tasks and substantially exceeds the adapted ORION baseline on robot and simulated comparisons. Successful rollouts collected under randomized layouts can train ACT visuomotor policies, with higher success from 100 than 50 trajectories on Sprinkle-salt and Bagging. The scope is upper-body tabletop manipulation, depends on RGB-D and static-camera videos, and remains sensitive to large object-shape changes and noisy fast demonstrations."
+    }
+  ]
+}

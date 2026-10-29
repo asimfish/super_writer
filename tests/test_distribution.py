@@ -380,6 +380,12 @@ class DistributionTests(unittest.TestCase):
                               "--level", "sentence", "--kind", "writing_rule", "--limit", "1", "--format", "json")
         entry = json.loads(result.stdout)["entries"][0]
         self.assertEqual(entry, next(e for e in canonical["entries"] if e["id"] == "ai.rule.procedure-order"))
+        result = self.run_cli(extracted / "super-writer/scripts/writing_lookup.py",
+                              "--catalog", "ai-spec", "数字堆积", "--kind", "sentence_pattern",
+                              "--section", "abstract", "--limit", "1", "--format", "json")
+        entry = json.loads(result.stdout)["entries"][0]
+        self.assertEqual(entry, next(e for e in canonical["entries"] if e["id"] == "ai.pattern.distinct-evidence"))
+        self.assertEqual(set(entry["discourse"]), {"question", "predecessor", "successor", "non_transfer"})
         self.assertEqual(hashlib.sha256(payload["references/marmot-ste-context.LICENSE"]).hexdigest(),
                          "fe29e8048edc1f0ae8123ffc96ba0b3022d1fb2b7aa6995ffa708c539376fd1e")
 

@@ -1,0 +1,41 @@
+{
+  "scope": "Verbatim prior generated English drafts; original Chinese versions remain in ../abstract-five/results.json. No author English abstracts reproduced.",
+  "count_rule": "scripts/writing_benchmark.py word_count: Latin/number tokens with internal hyphen/apostrophe; CJK characters separately.",
+  "papers": [
+    {
+      "id": "P01",
+      "text_en": "EquiBot is a visuomotor imitation policy that combines SIM(3)-equivariant point-cloud processing with diffusion action prediction. It canonicalizes translation and scale, applies SO(3)-equivariant conditioning and denoising, and rescales actions back to the input frame, while diffusion represents multimodal, temporally extended behavior. In four simulated tasks, using 50 demonstrations per task except the 200-demonstration Push T benchmark, 150-trial aggregates report the smallest performance drop under rotation, scale, position, and combined shifts versus vanilla diffusion, augmentation, and EquivAct. On Robomimic Can and Square, it retains higher performance as training data fall from 100 to 25 demonstrations. Trained on 15 human videos per task, it also outperforms policies across six robot tasks, including unseen objects and translated or rotated layouts, in 10-episode evaluations. It does not cover nonlinear shape or dynamics changes, multi-object relative-position changes, occlusion, or large viewpoint shifts; failures include gripper timing, accumulated action, and segmentation errors.",
+      "old_self_reported_words": 145,
+      "old_displayed_words": 145,
+      "recounted_words": 149
+    },
+    {
+      "id": "P02",
+      "text_en": "Sparsh is a family of self-supervised representations for tactile sensing, adapting masked-image, self-distillation, and joint-embedding objectives across three tactile sensors. On about 661,000 tactile images, 70% is used for self-supervision and the remainder held out for online-probe monitoring; short frame histories supply temporal context. TacBench has six tasks: force, slip, pose, grasp stability, textile recognition, and bead-maze control. Except for force-field visualization and policy learning, each evaluation freezes the encoder and trains an attentive decoder on labeled data, comparing with end-to-end models trained from random initialization. With reduced labeled-data budgets, the representations improve over baselines: DINO is strongest for force and pose, whereas I-JEPA is stronger for slip, grasp stability, and textile semantics, with gains at 33-50% of collected labels. Force decoders train on sharp and spherical indenters but test on held-out flat indenters; slip is evaluated with F1 under class imbalance; and bead-maze policies face a held-out trajectory at 10 novel starts. Sparsh reduces maze trajectory error by about 16% and improves distance before failure by 20-53% over end-to-end training, but no real-robot policy completes the maze. The corpus is dominated by discrete contacts, tactile-history length is not ablated, slip labels depend on an estimated friction coefficient, and the maze protocol differs between the main text and appendix.",
+      "old_self_reported_words": 209,
+      "old_displayed_words": 209,
+      "recounted_words": 212
+    },
+    {
+      "id": "P03",
+      "text_en": "ManiWAV equips a UMI-derived gripper with an ear-in-hand piezoelectric contact microphone and learns a closed-loop diffusion policy that fuses RGB, contact audio, and recent poses to produce robot actions. The microphone exposes contact and material cues that wrist vision may miss or leave ambiguous, while audio augmentation with environmental and robot-motor noise addresses the gap between handheld human demonstrations and robot deployment. Across four tasks, robot tests under changed configurations, noise, heights, objects, materials, and environments report 90% bagel-flipping and 85% wiping success; pouring and taping are reported by substep, reaching 90/100/90% for grasp/pour/place and 90/90/80/80% for touch/sense/pick/place. The flipping study compares 20 rollouts per policy with vision-only and audio-visual baselines, and audio-visual training improves in-the-wild generalization over lab-only training on two unseen environments. These results are task- and rollout-limited: weakly audible interactions, motor noise, 0.23-s latency, and the current lack of high-frequency reactive control remain constraints.",
+      "old_self_reported_words": 147,
+      "old_displayed_words": 147,
+      "recounted_words": 160
+    },
+    {
+      "id": "P04",
+      "text_en": "PoliFormer trains from scratch with on-policy reinforcement learning for partially observed, long-horizon visual navigation, combining frozen DINOv2 features with a goal-conditioned transformer state encoder, KV-cached causal temporal memory, and parallel rollouts. This design makes temporal modeling affordable during rollout collection, enabling 3.4x training-speed acceleration and 435M LoCoBot steps on ProcTHOR-10k; Stretch trains on ProcTHOR-150k with approximately 40,000 Objaverse assets. On held-out simulation suites, the text-goal policy reaches 82.4%, 68.3%, and 85.3% SPL on ProcTHOR-10k, ArchitecTHOR, and AI2-iTHOR for LoCoBot, and 85.5% SEL on CHORES-S for Stretch. Without real-world fine-tuning, it reaches 80.0% success on 15 LoCoBot tasks and 83.3% on 18 Stretch tasks in unseen houses. A bounding-box variant is qualitatively demonstrated for open-vocabulary, multi-target, following, tracking, and instance-description navigation. Memory degrades after more than four rooms, while discrete actions, absent depth, separate embodiment-specific policies, and substantial compute limit the scope.",
+      "old_self_reported_words": 141,
+      "old_displayed_words": 141,
+      "recounted_words": 149
+    },
+    {
+      "id": "P05",
+      "text_en": "OKAMI enables a bimanual humanoid to imitate manipulation from one RGB-D human video without robot action labels. It identifies and tracks objects, reconstructs body and hand motion, and builds a keyframe plan; at test time, object localization and target/reference relations warp arm trajectories to new locations, while fingers are retargeted separately. This object-conditioned retargeting adapts demonstrations beyond fixed workspace coordinates while preserving grasp and wrist motion. On a Fourier GR1, OKAMI averages 71.7% success across six tabletop tasks and 12 randomized trials per task, with novel-object tests on three tasks, and exceeds adapted ORION in robot and simulation comparisons. Successful randomized-layout rollouts train ACT policies: 100 rather than 50 trajectories improves Sprinkle-salt from 58.3% to 75.0% and Bagging from 66.7% to 83.3%. The system covers upper-body tabletop manipulation, requires RGB-D videos with static cameras, and remains sensitive to object-shape changes and fast demonstrations.",
+      "old_self_reported_words": 143,
+      "old_displayed_words": 143,
+      "recounted_words": 149
+    }
+  ]
+}

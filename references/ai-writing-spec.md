@@ -3,13 +3,14 @@
 Use when AI research prose needs a precise claim verb, technical term, reporting
 unit or explanation of a system's operation. This is an original local editorial
 specification, not ASD-STE100, an official conference standard or a word whitelist.
-Version 0.4 contains 19 writing rules, 15 claim-usage entries and 34 technical
-entries. Their canonical records are in [ai-writing-spec.json](ai-writing-spec.json).
+Version 0.5 contains 19 writing rules, 15 claim-usage entries, 34 technical
+entries and eight functional sentence patterns. Canonical records are in
+[ai-writing-spec.json](ai-writing-spec.json).
 The existing 130 imported language cards and their pins remain separate.
 
 ## Classification Model
 
-The three kinds answer **what the entry is**. Nine topics answer **which reader
+The four kinds answer **what the entry is**. Nine topics answer **which reader
 problem it addresses**, and five levels answer **where the decision operates**.
 Domains, manuscript sections and local intents remain independent filters.
 
@@ -18,6 +19,7 @@ Domains, manuscript sections and local intents remain independent filters.
 | `writing_rule` | Truth-preserving constraints or conditional organization decisions | A universal paragraph formula |
 | `claim_usage` | Meaning and evidential strength of a word in context | A global approved/banned vocabulary |
 | `technical_term` | Operational meaning, boundaries and confusable concepts | Authority over a manuscript's explicit definition |
+| `sentence_pattern` | Conventional wording with a reader question, preceding/following functions and evidence boundaries | A sentence to paste without planning the argument |
 
 The dictionary is a view over claim uses and technical terms, not a duplicate
 database. Positive/negative examples belong to each entry: same synthetic facts,
@@ -111,6 +113,8 @@ python scripts/writing_lookup.py --catalog ai-spec --id ai.rule.result-answer --
 python scripts/writing_lookup.py --catalog ai-spec "视觉定位" --domain multimodal --topic grounding_faithfulness --level word --kind technical_term --limit 1
 python scripts/writing_lookup.py --catalog ai-spec --id ai.term.task-chain-success --format json
 python scripts/writing_lookup.py --catalog ai-spec "复现步骤" --topic evaluation_protocol --level sentence --kind writing_rule --limit 1
+python scripts/writing_lookup.py --catalog ai-spec "数字堆积" --kind sentence_pattern --section abstract --limit 1
+python scripts/writing_lookup.py --catalog ai-spec --id ai.pattern.operation-effect
 python scripts/writing_lookup.py --id general.usage-note.significant.001 --format json
 ```
 
@@ -121,7 +125,7 @@ entries, including conditions, examples, exceptions and source context, must fit
 the output budget; otherwise the command fails with no partial prose or JSON.
 `--format ids` returns identifiers only, not sufficient guidance for application.
 
-1. Select a relevant rule or dictionary sense, not all 68 records.
+1. Select a relevant rule, dictionary sense or functional pattern, not all 76 records.
 2. Compare its conditions and evidence needs with this paper's actual materials.
 3. Use its owning playbook and existing rationale row to plan the text action.
 4. Write from author evidence. Synthetic examples are contrasts, not paste-ready
@@ -153,7 +157,25 @@ is third-party design context, not an authoritative STE standard or another
 primary paper. Use [context-sensitive clarity](clarity-context.md) only for
 relevant ambiguity or procedure risks; its [four original cases](../examples/ai-writing-spec/clarity-context.md)
 preserve legitimate academic exceptions. There are 19 primary-source records
-and one skill-design record; do not sum them as 20 papers reviewed in full.
+and one skill-design record in that historical round; do not sum them as 20 papers reviewed in full.
+
+## Functional Patterns: Select, Then Phrase
+
+The eight `ai.pattern.*` records are local editorial extensions, not modifications
+of the imported library. They cover bottleneck/choice, operation/effect,
+complementary contributions, question/answer Results, distinct evidence roles,
+scoped transfer, family-level contrast and interpretation-changing boundaries.
+Each includes `discourse.question`, `predecessor`, `successor` and `non_transfer`.
+The lookup and existing `ai_spec_ids` role-packet selection preserve these fields
+with the conditions, evidence requirements and source observations.
+
+Use [evidence selection](abstract-decisions.md#select-an-answer-not-a-fact-inventory)
+and [sentence progression](writing-library.md#sentence-progression-not-syntactic-variety)
+first. Select one applicable relationship, not a sequence of eight mandatory moves.
+The [curation record](../docs/research/argument-selection-2026-10-29.md) distinguishes
+source observations from original templates and synthetic examples. The total is
+now 21 primary-source records and one third-party skill-design record, with actual
+read scopes; neither this count nor the eight cards measures learning quality.
 
 ## Domain Adaptation and Verification
 

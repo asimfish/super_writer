@@ -102,6 +102,16 @@ class WritingBenchmarkTests(unittest.TestCase):
             with self.subTest(key=key, value=value), self.assertRaises(ValueError):
                 LOOP.inspect_run(run)
 
+    def test_functional_sentence_card_reaches_existing_role_packet_unchanged(self):
+        self.run["benchmark"]["ai_spec_ids"].append("ai.pattern.result-answer")
+        self.run["benchmark"]["criteria"]["C1"]["resource_ids"].append("ai.pattern.result-answer")
+        packet = LOOP.inspect_run(self.run)["packet"]["input"]
+        card = packet["writing_resources"]["ai.pattern.result-answer"]["entries"][0]
+        catalog = json.loads((ROOT / "references/ai-writing-spec.json").read_text())
+        self.assertEqual(card, next(e for e in catalog["entries"] if e["id"] == card["id"]))
+        self.assertIn("question", card["discourse"])
+        self.assertTrue(card["evidence_required"])
+
     def test_target_answer_priority_and_compression_budget_are_required(self):
         for changes in (
             {"target_answer": ""},

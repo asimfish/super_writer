@@ -102,6 +102,13 @@ def validate_ai_spec(index: dict) -> None:
             if len(note_ids) != len(set(note_ids)) or set(note_ids) != set(entry["source_ids"]):
                 raise ValueError("Source notes must cover exactly the entry's source IDs")
         strings(entry.get("related_library_ids", []), "related_library_ids", allow_empty=True)
+        if entry["kind"] == "sentence_pattern":
+            discourse = entry.get("discourse")
+            fields = {"question", "predecessor", "successor", "non_transfer"}
+            if (not isinstance(discourse, dict) or set(discourse) != fields
+                    or any(not isinstance(v, str) or not v.strip() for v in discourse.values())
+                    or not entry["source_ids"] or entry["status"] != "editorial"):
+                raise ValueError("Sentence patterns need sourced editorial discourse boundaries")
         examples = entry.get("counter_examples")
         if (not isinstance(examples, list) or not examples
                 or any(not isinstance(x, dict) or any(not isinstance(x.get(k), str)
@@ -168,6 +175,12 @@ def render(index: dict, entries: list[dict], output_format: str) -> str:
                      f"Meaning: {entry['meaning']}", f"Action: {entry['guidance']}", f"Avoid: {entry['avoid']}"]
             if "topics" in entry:
                 lines.append("Topics: " + ", ".join(entry["topics"]) + "; levels: " + ", ".join(entry["levels"]))
+            if entry["kind"] == "sentence_pattern":
+                for field, label in (("question", "Reader question"),
+                                     ("predecessor", "Preceding function"),
+                                     ("successor", "Following function"),
+                                     ("non_transfer", "Does not transfer")):
+                    lines.append(label + ": " + entry["discourse"][field])
             for field, label in (("conditions", "Applies when"), ("exceptions", "Exceptions"),
                                  ("evidence_required", "Evidence needed")):
                 lines.append(label + ":\n" + "\n".join("- " + x for x in entry[field]))

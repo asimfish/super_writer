@@ -492,3 +492,16 @@ paraphrased facts, page locations, source hashes and generated revisions, not
 full papers or original abstracts. These are research observations and experimental
 outputs, not newly licensed upstream training templates. Body-only generation
 does not establish that a model never encountered the paper in pretraining.
+
+### Functional Sentence Patterns (2026-10-29)
+
+Eight original editorial patterns extend the local AI-spec catalog to 0.5;
+the 130 imported Super Library records and upstream pin are unchanged. They add
+reader-question and preceding/following-function contracts to conventional
+wording, rather than copying paper sentences. The [research record](docs/research/argument-selection-2026-10-29.md)
+locates abstract-only observations from LoRA, DPO, ManiWAV, Sparsh and DomainBed,
+with explicit non-transfer boundaries. New examples are synthetic MIT synthesis;
+the papers retain their rights. The runtime remains bounded, offline and read-only.
+The [developmental comparison](evals/abstract-argument/README.md) retains public
+source-located annotations and generated drafts, not original English abstracts
+or PDFs. It does not supersede prior failed quality gates or claim model training.

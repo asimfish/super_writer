@@ -20,6 +20,13 @@ of additions and losses, especially a reciprocal operation, causal distinction
 or co-contribution reduced to a label. Do not reconstruct missing meaning from
 source knowledge or the intended plan.
 
+Inspect evidence selection separately from coverage: which question does each
+reported number answer, and does the next sentence advance the argument or add
+another equivalent observation? Require a located explanation before calling a
+sequence better. Do not reward fewer digits, more connectives, pattern matching,
+or omission of an inconvenient finding. Different results can share a rhetorical
+role without being mathematically equivalent; distinct metrics can be essential.
+
 In v2, independently assess every declared benchmark criterion after read-back,
 using the supplied source observations and full resource entries. The checker
 does not show the writer's implementation claims or the gap finder's assessments.

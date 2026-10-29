@@ -56,6 +56,16 @@ try {
     });
     await page.goto(pathToFileURL(args.get('--html')).href);
     await page.locator('#count').filter({ hasText: `${recordCount} / ${recordCount} entries` }).waitFor();
+    await page.locator('#kind').selectOption('sentence_pattern');
+    const patterns = spec.entries.filter(entry => entry.kind === 'sentence_pattern');
+    assert.equal(await page.locator('.record:not([hidden])').count(), patterns.length);
+    const pattern = page.locator(`[data-id="${patterns[0].id}"]`);
+    await pattern.locator('summary').click();
+    for (const value of Object.values(patterns[0].discourse)) {
+      assert((await pattern.innerText()).includes(value), 'Pattern discourse boundary omitted');
+    }
+    await pattern.locator('summary').click();
+    await page.locator('#kind').selectOption('');
     const actualRecords = await page.locator('.record').evaluateAll(records => records.map(record => ({
       id: record.id, topics: JSON.parse(record.dataset.topics), levels: JSON.parse(record.dataset.levels),
       text: record.textContent,

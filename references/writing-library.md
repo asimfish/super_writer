@@ -13,10 +13,41 @@ structures and tables, use [writing protocols](writing-protocols.md) separately.
 
 The original library remains the lookup default. The separate, locally authored
 [AI writing specification](ai-writing-spec.md) contains 19 rules, 15 claim-usage entries
-and 34 technical terms via explicit `--catalog ai-spec`, with topic/level facets.
+and 34 technical terms, plus eight local functional sentence patterns, via explicit
+`--catalog ai-spec`, with topic/level facets. The eight patterns extend the 78
+upstream wording cards with preceding/following functions and non-transfer bounds;
+they do not change the pinned imported records or constitute eight venue templates.
 These are conditional
 editorial records, not more imported cards or a universal vocabulary whitelist.
 They do not change the 130-card count, imported data or reproduction pins.
+
+## Sentence Progression, Not Syntactic Variety
+
+Test the sequence by reading adjacent sentences: what question or unresolved
+object does the first leave, and what does the next add? A bottleneck can motivate
+an operation; that operation can explain a capability; a comparison can test it;
+a boundary can revise the resulting interpretation. These are possible relations,
+not a compulsory abstract outline. Independent co-contributions may be parallel
+when their relationship and shared purpose are explicit.
+
+If result sentences can be freely permuted with no change in the argument,
+inspect whether they are a table inventory. Merge measurements answering the
+same question, then give the next sentence a different job. A useful next job
+might be testing an alternative explanation or showing transfer, rather than
+announcing another task score. Do not merely vary subjects, insert "moreover",
+or add "therefore": a connective cannot supply missing scientific support.
+The permutation test is an editorial probe, not a mechanical pass/fail rule.
+
+Retrieve conventional wording only after choosing that relationship. The local
+`sentence_pattern` cards record a reader question, predecessor, successor and
+non-transfer boundary, alongside evidence requirements and original positive and
+negative examples. Existing upstream phrase cards remain useful for wording.
+Choose a small applicable subset; do not concatenate one sentence per card or
+replace precise, familiar technical terms to make the prose look more varied.
+Related work needs an axis of comparison; Results needs a question and finding;
+neither should inherit an abstract's order just because it uses the same wording.
+
+## Query and Apply
 
 Resolve commands against the skill directory, keeping the paper project as cwd:
 

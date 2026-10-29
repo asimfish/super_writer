@@ -1,0 +1,440 @@
+{
+  "scope": "Independent-context source and translation reading, not human validation or blind quality test",
+  "reviewer_agent_id": "independent-context reviewer",
+  "papers": [
+    {
+      "id": "P01",
+      "readback_zh": "摘要提出一种将几何等变性与随机动作序列预测结合的闭环模仿策略：用物体质心和尺度归一化输入，执行旋转等变扩散，再将动作映回观测坐标系，使条件动作分布随平移、旋转和均匀缩放一致变换，而非保持动作不变。实验陈述分为四个模拟任务的几何变化、Can/Square 的 100 至 25 条示范比较，以及每任务 15 段视频条件下真实未见行李箱关闭的 6/10 对 0/10。",
+      "summary_zh": "在已核对的主张中未发现实质问题。几何等变与多模态动作建模这两项贡献均有保留；模拟几何变化、减少示范和一个真实任务的结果没有被合并成同一成功率。此结论不等于证据包全量核实：5 分钟的计量范围及真实结果表第二块的任务/变体标注问题仍须保留，候选没有使用这些不明确的信息。",
+      "status": "no_issue_found_in_checked_claims",
+      "checked_claims": [
+        {
+          "claim": "EquiBot combines geometric equivariance with stochastic action-sequence prediction for closed-loop visuomotor imitation.",
+          "evidence_ids": ["E01", "E02", "E03"],
+          "source_locations": [
+            "EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning, PDF p. 2, Section 3.1; pp. 4-5, Sections 3.2-3.3"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "观测条件化的扩散策略输出多步末端动作，并以重新观测的方式闭环执行；等变构造和随机序列建模均为实际方法内容。摘要未把随机性误写成单一确定动作，也未将闭环执行归因于某个未隔离的单独模块。"
+        },
+        {
+          "claim": "It normalizes a scene point cloud by object centroid and scale, applies rotation-equivariant diffusion transitions, and maps predicted actions back to the observation frame.",
+          "evidence_ids": ["E02", "E03"],
+          "source_locations": [
+            "EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning, PDF pp. 4-5, Section 3.3, Encoder, Routing input observations and actions, and Output"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "正文以编码器产生的质心与尺度规范化位置/尺度相关量，将条件 U-net 改为 SO(3) 等变层，并对相关输出分量反变换。摘要是这一处理链的概括，不是在声称所有动作分量都接受相同的平移或尺度操作。"
+        },
+        {
+          "claim": "This makes the conditional action distribution transform consistently with scene translations, rotations, and uniform scaling, while preserving multiple plausible action sequences.",
+          "evidence_ids": ["E01", "E02", "E03", "E04", "E06"],
+          "source_locations": [
+            "EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning, PDF p. 4, Section 3.2, Proposition 1; pp. 4-5, Section 3.3; pp. 6-7, Section 4.1.1; pp. 16-17, Section D"
+          ],
+          "result": "supported_with_mathematical_scope",
+          "reason": "等变转移与等变先验支持旋转下条件分布的等变性，平移和均匀缩放由规范化处理；扩散表示容纳多模态示范。这里是动作分布随输入变换，不是不变性，也不是任意形状、动力学或多物体相对位置改变都可保证成功。"
+        },
+        {
+          "claim": "Across four simulated manipulation tasks, EquiBot exhibits the smallest performance drop among the compared policies under tested geometric shifts.",
+          "evidence_ids": ["E04", "E05", "E06"],
+          "source_locations": [
+            "EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning, PDF pp. 6-7, Section 4.1.1, Evaluation setups and Results, Figure 4"
+          ],
+          "result": "supported_with_tested_scope",
+          "reason": "四任务及相对各比较基线的最小性能下降对应正文结果概括。该实验报告最终奖励而非统一的任务成功率；候选使用 performance，未偷换指标。所测几何变化包含超出纯均匀缩放的经验扰动，候选没有声称这些全部由理论保证。"
+        },
+        {
+          "claim": "Its data-efficiency study on Can and Square also favors EquiBot over Diffusion Policy as training decreases from 100 to 25 demonstrations.",
+          "evidence_ids": ["E07"],
+          "source_locations": [
+            "EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning, PDF p. 7, Section 4.1.2, Figure 5"
+          ],
+          "result": "supported_with_separate_evaluation_scope",
+          "reason": "正文明确使用 Can/Square、100/50/25 条示范和 DP 对照，减少数据时 EquiBot 保持相对较高表现。这是单独的分布内数据效率实验，不是前述四任务 OOD 测试的另一组成功率；候选未混合两者。"
+        },
+        {
+          "claim": "With 15 human demonstration videos per task, EquiBot achieves 6/10 successes on real-robot luggage closing with unseen objects, versus 0/10 for Diffusion Policy.",
+          "evidence_ids": ["E08", "E09", "E10"],
+          "source_locations": [
+            "EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning, PDF pp. 7-8, Section 4.2; p. 8, Table 1, first block, Large Luggage column, original table image"
+          ],
+          "result": "exact_match_in_checked_table_column",
+          "reason": "每任务 15 段人类视频来自数据采集段。原表第一块 Large Luggage 列确为 Ours 6/10、DP 0/10，且正文将行李箱关闭列为未见物体测试。候选没有把同列 DP+Aug 的 2/10 当作 DP，也没有把单列结果泛化成六任务平均。"
+        },
+        {
+          "claim": "The candidate does not assert a five-minute total, assign the second real-result table block to particular tasks, or claim robustness to all untested changes.",
+          "evidence_ids": ["E08", "E10", "E12"],
+          "source_locations": [
+            "EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning, PDF pp. 7-8, Section 4.2 and Table 1, original table image; p. 8, Section 5"
+          ],
+          "result": "unused_source_ambiguities_preserved",
+          "reason": "原文反复写 5 minutes，但该表述不能在此被核定为六任务总计或每任务总计；E08 的 overall 归纳不因此获得确认。Table 1 第二块原图也出现 Luggage Closing 标题与衣物装箱类变体并置的问题，不能仅因读了图就宣称整块任务归属已解决。候选仅采用明确的第一块列。非线性形状/动力学、多物体相对位置、遮挡和视角限制不否定当前限定主张，无需为完整性逐一增列。"
+        }
+      ],
+      "issues": [],
+      "translation": {
+        "status": "no_issue_found",
+        "notes_zh": [
+          "中文保留了等变性及条件分布一致变换，没有翻成动作不变；多种合理动作序列的含义也得到保留。",
+          "四任务几何变化、Can/Square 的示范预算、每任务 15 段视频以及未见行李箱的 6/10 对 0/10 在两种语言中绑定一致。",
+          "未发现中文新增全任务平均、5 分钟计量范围或任意场景鲁棒性承诺。"
+        ]
+      }
+    },
+    {
+      "id": "P02",
+      "readback_zh": "摘要描述从三种视觉触觉传感器的 462,700 张无标签图像中预训练可复用表征，比较三类目标，并发布六任务 TacBench。它说明感知评估冻结编码器、训练注意力解码器，以同容量随机初始化端到端模型为对照；概括 33-50% 标签条件下的预训练优势。摘要还声称 DINO 偏向力/位姿，I-JEPA 在滑移、抓取稳定性和织物方面更强，并将 bead-maze 的误差和距离改善与未完成完整真实迷宫区分开。",
+      "summary_zh": "表征家族、混合传感器预训练和六任务评估资源均有保留，控制部分也保留了未完成任务这一关键边界。但织物识别的目标优劣存在实质冲突：候选和 E11 沿用正文概括，而原图 Table 10 显示 I-JEPA 低于 DINO，MAE 最高。95.1% 与 98.75% 的汇总差异、迷宫 50/30 条示范的协议差异仍未解决；候选未使用这些有争议的数字，不代表证据包获全量验证。",
+      "status": "issues_found",
+      "checked_claims": [
+        {
+          "claim": "Sparsh learns reusable representations for vision-based touch from unlabeled, mixed-sensor data.",
+          "evidence_ids": ["P02-E01", "P02-E02", "P02-E04"],
+          "source_locations": [
+            "Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF pp. 3-4, Section 3; pp. 4-5, Section 4"
+          ],
+          "result": "supported_with_downstream_label_scope",
+          "reason": "无标签指预训练数据而非所有下游学习无需标签。正文确实混合多种传感器数据，并评估同类表征在不同任务上的复用；候选后文明确训练有标签的下游解码器，未把 SSL 扩大为无监督控制成功。"
+        },
+        {
+          "claim": "Pretraining uses 462,700 images from DIGIT, GelSight 2017, and GelSight Mini, comparing pixel reconstruction, self-distillation, and latent predictive objectives.",
+          "evidence_ids": ["P02-E01", "P02-E02"],
+          "source_locations": [
+            "Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF pp. 3-4, Section 3, Figure 2"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "正文将约 661k 整理语料的 70%、即 462.7k 用于预训练，其余用于在线探针监测。三类目标对应 MAE、自蒸馏和 JEPA 家族；候选没有把整理规模或监测保留集算进预训练规模。"
+        },
+        {
+          "claim": "The released TacBench benchmark covers six tasks spanning physical estimation, semantic recognition, and manipulation.",
+          "evidence_ids": ["P02-E04"],
+          "source_locations": [
+            "Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF pp. 4-7, Sections 4-7, tasks T1-T6 and auxiliary T1A"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "六项核心任务是力、滑移、相对位姿、抓取稳定性、织物识别与 bead-maze 控制；T1A 力场可视化是辅助评估，不构成第七项核心任务。该句保留了基准资源这一独立贡献。"
+        },
+        {
+          "claim": "For perception, evaluation freezes the pretrained encoder and trains an attentive decoder, comparing against a same-capacity model trained end to end from random initialization.",
+          "evidence_ids": ["P02-E04"],
+          "source_locations": [
+            "Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF pp. 4-5, Section 4, Evaluation protocol; p. 20, Appendix D.2"
+          ],
+          "result": "supported_for_core_perception_evaluations",
+          "reason": "核心感知任务采用冻结表征和注意力探针，对照同时训练随机初始化编码器/解码器的同容量 E2E。候选没有把注意力解码器流程套给 bead-maze 策略。辅助力场可视化不使用这一探针结构，本句不能被扩写为所有附加实验均如此。"
+        },
+        {
+          "claim": "With 33-50% of the collected downstream labels, benchmark results favor pretrained representations over task- and sensor-specific end-to-end models.",
+          "evidence_ids": ["P02-E05", "P02-E06", "P02-E07", "P02-E08", "P02-E09", "P02-E10", "P02-E11"],
+          "source_locations": [
+            "Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF p. 8, Section 8; pp. 21-29, Appendix D, Tables 5-13"
+          ],
+          "result": "supported_as_qualitative_benchmark_comparison_not_a_reconciled_average",
+          "reason": "低标签预算下的任务表支持表征家族相对 E2E 的总体比较，不意味着每个 SSL 模型在每个任务都获胜。正文 95.1% 与 Table 13 的 98.75% 不能合并；Table 13 分列两种力传感器且未列织物，与六项任务的简单等权平均不是同一已明确口径。候选没有报均值，本审计也不推导替代均值或认证这两个汇总数。"
+        },
+        {
+          "claim": "The best objective depends on the task: DINO favors force and pose estimation.",
+          "evidence_ids": ["P02-E05", "P02-E07", "P02-E11"],
+          "source_locations": [
+            "Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF p. 8, Section 8, Analysis; pp. 21-22, Tables 5-6; p. 25, Table 8"
+          ],
+          "result": "supported_as_task_dependent_comparison_not_universal_ranking",
+          "reason": "DINO 在力与位姿表中相对 I-JEPA 有依据，例如 Table 8 的 1/3 标签位姿准确率为 0.834 对 0.601。力任务的一些设置中 DINOv2 更优，因此这里不能理解为 DINO 在所有传感器和预算下都是全模型第一。Table 13 的部分比较符号与任务表不易对齐，不能只靠该汇总列替代任务表。"
+        },
+        {
+          "claim": "I-JEPA is stronger for slip, grasp stability, and textiles.",
+          "evidence_ids": ["P02-E06", "P02-E08", "P02-E09", "P02-E11"],
+          "source_locations": [
+            "Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF p. 8, Section 8, Analysis; p. 24, Table 7; p. 27, Table 9; p. 28, Table 10, original table image"
+          ],
+          "result": "source_conflict_for_textile_ranking",
+          "reason": "该句符合 E11 和正文 Analysis 的概括，但不符合织物任务表。Table 10 的 1/3 标签准确率为 DINO 0.520、I-JEPA 0.478、MAE 0.588；完整数据为 0.527、0.506、0.599，另两个预算也同样是 DINO 高于 I-JEPA，且 MAE 最高。滑移及 1/3 标签抓取稳定性的相对优势有任务表支撑，但不能据此把织物归给 I-JEPA。这里保留正文与表格的冲突，不擅自假定哪一处是排版或模型标签错误。"
+        },
+        {
+          "claim": "In bead-maze control, pretrained policies reduce trajectory error and increase distance before failure, but no model completes the full real-robot maze.",
+          "evidence_ids": ["P02-E10"],
+          "source_locations": [
+            "Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF pp. 7-8, Sections 7.1 and 8; pp. 27-29, Appendix D.9, Tables 11-12, original table images on pp. 28-29"
+          ],
+          "result": "supported_in_main_evaluation_with_protocol_uncertainty",
+          "reason": "轨迹误差来自未见迷宫示范上的短动作段比较，行进距离来自 10 个随机新起点的真实 rollout；两者不是同一总体上的完整任务成功率。主设置下的局部收益及未完成整个迷宫均有原文支持。主文/Table 11 的 50 条示范与 D.9 的 30 条仍冲突，候选未报条数。另一个单迷宫过拟合设置中，Sparsh 仅完成约 30%、E2E 约 80%，是反向结果；故不能把候选的主设置概括扩大为预训练在所有控制训练设置下均占优。未要求摘要额外枚举这个不同设置的分数。"
+        }
+      ],
+      "issues": [
+        {
+          "severity": "medium",
+          "witness": "Candidate EN: 'I-JEPA is stronger for slip, grasp stability, and textiles.' Candidate ZH: 'I-JEPA 在滑移、抓取稳定性和织物识别方面更强。' Sparsh PDF p. 28, Table 10: at 1/3 labels, DINO 0.520, I-JEPA 0.478, MAE 0.588; all four displayed budgets rank DINO above I-JEPA and MAE highest.",
+          "reason_zh": "候选把证据包 E11 和正文的任务概括作为无条件事实，但该概括与原始织物分类表相反。即使忠实复述了正文，也不能在已有相反任务数据时无说明地断言 I-JEPA 在织物方面更强。这是来源内部矛盾进入了候选，而非中文单独强化了英文。",
+          "suggested_fix_zh": "保留最佳目标随任务变化这一结论，删除两种语言中 I-JEPA 在织物识别更强的判断，或明确指出正文概括与 Table 10 不一致。后续若指定织物任务优胜者，应依照同一标签预算的 Table 10，并同步修正中英文；不要自行假定表格或正文哪一处应被改成另一处。"
+        }
+      ],
+      "translation": {
+        "status": "no_issue_found",
+        "notes_zh": [
+          "无标签预训练与有标签下游解码器的区分、462,700 张图像和 33-50% 标签预算在两种语言中一致。",
+          "英文的目标优劣判断被中文等强度地复述；织物任务的来源冲突是双语共同问题，不是译文新增的结论。",
+          "中文保留未完成整个真实迷宫的反向边界，没有将距离改善翻译成完整控制成功，也未新增 95.1% 或 98.75% 的均值。"
+        ]
+      }
+    },
+    {
+      "id": "P03",
+      "readback_zh": "摘要用视觉难以判断的接触和杯内状态解释接触音频的用途，接着说明手指内麦克风的手持示范采集、同一夹爪部署到机器人，以及视听信号和近期位姿经扩散预测动作序列。环境声和电机噪声叠加被写为应对采集到执行差异的训练操作。结果包括四任务中的擦拭 20 次测试、85% 对纯视觉 40%，以及两个未见场所中含实地数据的翻转训练优于仅实验室训练。",
+      "summary_zh": "在已核对的主张中未发现实质问题。硬件采集接口、视听策略和应对部署音频差异的操作均有保留；具体成功率仅绑定完整擦拭任务，未把倾倒或贴带子的子步骤指标拼接成任务成功率。未见环境结论限定于翻转实验，未声称音频已消除所有噪声问题。",
+      "status": "no_issue_found_in_checked_claims",
+      "checked_claims": [
+        {
+          "claim": "ManiWAV augments vision with contact sound to infer manipulation states that are ambiguous in wrist-camera images, such as surface contact and hidden container contents.",
+          "evidence_ids": ["P03-E10"],
+          "source_locations": [
+            "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data, PDF pp. 6-7, Sections 4.2-4.3"
+          ],
+          "result": "supported_with_state_referent_scope",
+          "reason": "正文分别指出腕部视角难以判断擦拭器是否接触板面，以及杯内是否仍有物体；倾倒还使用摇晃动作产生振动。hidden container contents 在这里有依据的是不可见内容物的有无状态，不是任意识别容器内物体的类别或精细状态。候选未进一步作后一种承诺。"
+        },
+        {
+          "claim": "A microphone embedded in a gripper finger records synchronized audio and vision during hand-held demonstrations; the same gripper is then mounted on a robot.",
+          "evidence_ids": ["P03-E01"],
+          "source_locations": [
+            "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data, PDF p. 3, Section 3.1, Figure 2"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "压电接触麦克风嵌在手指高摩擦胶带下，同步视听由 GoPro 记录，部署时同一平行夹爪装到 UR5 上。人类手持采集未被误写为机器人示范轨迹。"
+        },
+        {
+          "claim": "The policy fuses these signals with recent end-effector poses to predict action sequences through diffusion.",
+          "evidence_ids": ["P03-E02"],
+          "source_locations": [
+            "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data, PDF pp. 3-5, Section 3.2, Figure 3, Sensory Fusion and Policy Learning"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "Transformer 融合视听特征，随后拼接过去两个时刻的末端位姿，条件化扩散策略头预测未来动作。候选概括了操作关系，没有把图像、音频和位姿的每一部分都说成同一种编码器。"
+        },
+        {
+          "claim": "To address the audio shift from human collection to robot execution, training overlays environmental sounds and robot motor noise on demonstration audio.",
+          "evidence_ids": ["P03-E03"],
+          "source_locations": [
+            "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data, PDF p. 4, Section 3.2, Audio Data Augmentation"
+          ],
+          "result": "supported_as_design_purpose_and_training_operation",
+          "reason": "ESC-50 背景声和录制的机器人电机噪声各以 0.5 概率叠加到原音频。To address 表达设计目的，并非已完全消除人类到机器人域差异的因果认证。省略概率和样本数不改变所描述的操作。"
+        },
+        {
+          "claim": "The four-task evaluation includes a 20-rollout wiping test covering configuration, noise, height, and eraser changes, where ManiWAV achieves 85% success versus 40% for vision-only control.",
+          "evidence_ids": ["P03-E07", "P03-E10"],
+          "source_locations": [
+            "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data, PDF pp. 5-8, Sections 4.1-4.4; pp. 6-7, Section 4.2 and Figure 6; p. 14, Appendix B.2.3, Table 3"
+          ],
+          "result": "exact_match_with_wiping_population",
+          "reason": "四项任务是翻转、擦拭、倾倒和贴带子。擦拭每个策略使用 20 次 rollout，Table 3 的整任务结果是 85% 对 40%，涵盖配置、噪声、形状、桌面高度及未见擦拭器。摘要没有把 20 次解释成所有四任务总数，也未把一个擦拭成功率移用到其他任务。"
+        },
+        {
+          "claim": "Flipping experiments in two unseen environments additionally favor training that includes in-the-wild demonstrations over lab-only training.",
+          "evidence_ids": ["P03-E05", "P03-E06", "P03-E10"],
+          "source_locations": [
+            "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data, PDF pp. 5-6, Section 4.1, Figure 5 and In-the-wild comparison; p. 12, Appendix B.1"
+          ],
+          "result": "supported_with_unseen_environment_subset_scope",
+          "reason": "正文明确在两个未见场所比较实地数据训练和仅实验室数据训练，支持这一方向性结论。它不是对任意环境的保证，也不隔离数据多样性和数据量各自的因果贡献。总体翻转测试的 90% 不能直接赋给这两个场所的子集，候选没有这样做。"
+        },
+        {
+          "claim": "The candidate does not assert complete noise robustness or infer whole-task success from pouring/taping substep rates.",
+          "evidence_ids": ["P03-E08", "P03-E09", "P03-E11"],
+          "source_locations": [
+            "ManiWAV: Learning Robot Manipulation from In-the-Wild Audio-Visual Data, PDF p. 8, Section 4.5; pp. 12-13, Appendix B.2.1-B.2.2, Tables 1-2"
+          ],
+          "result": "scope_retained_without_requiring_all_caveats",
+          "reason": "弱声、准静态交互、电机噪声遮蔽与延迟限制仍存在，但不直接推翻摘要对所测任务和训练操作的陈述。选用完整擦拭结果后，无需为罗列所有任务而增加不可直接合并的子步骤分数。"
+        }
+      ],
+      "issues": [],
+      "translation": {
+        "status": "no_issue_found",
+        "notes_zh": [
+          "接触状态和不可见杯内内容的有无、手持同步视听采集、同一夹爪部署及近期位姿融合在两种语言中对应一致。",
+          "中文用‘为应对’对应 To address，没有把训练目的强化为域差异已被消除。",
+          "20 次、85% 和 40% 均绑定擦拭测试；两处未见环境只绑定翻转的定性比较，没有跨任务或子集挪用成功率。"
+        ]
+      }
+    },
+    {
+      "id": "P04",
+      "readback_zh": "摘要描述在冻结的预训练 DINOv2 特征之上从零学习 Transformer 导航策略，将因果时间建模和键值缓存与数百并行轨迹、程序化房屋结合。它分别报告文本目标策略在 15 项 LoCoBot 和 18 项 Stretch RE-1 真实任务上的 80.0% 和 83.3%，限定无需真实微调且房屋未见。随后保留超过四个房间后记忆下降的限制，并把 BoxNav 外部边界框接口与定性零样本开放词汇导航、跟随演示作为另一贡献。",
+      "summary_zh": "在已核对的主张中未发现实质问题。规模化同策略训练、缓存时间建模和框目标接口均得到保留；没有把冻结 DINOv2 说成从零训练，没有把两种具身策略合并为一个联合模型。原图已澄清所查表格的 Success 与括号内效率指标，但这不等于旧证据包中的并列标签或全部条目已获认证。",
+      "status": "no_issue_found_in_checked_claims",
+      "checked_claims": [
+        {
+          "claim": "PoliFormer learns transformer navigation policies with large-scale on-policy reinforcement learning, training the navigation components from scratch atop a frozen, pretrained DINOv2 visual backbone.",
+          "evidence_ids": ["P04-E1", "P04-E2"],
+          "source_locations": [
+            "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators, PDF pp. 2-3, Introduction and Related Work; pp. 4-5, Section 3.1"
+          ],
+          "result": "supported_for_learned_navigation_policy_not_all_encoders",
+          "reason": "从零训练的是导航策略的可学习控制部分，不是冻结的 DINOv2。Stretch 的目标特征还来自 FLAN-T5 small 编码；因此本句不能扩写为整个系统、所有输入编码器或所有表示均从零获得。当前句子的视觉骨干限定避免了最直接的全模型从零训练误读。"
+        },
+        {
+          "claim": "A causal decoder integrates past goal-conditioned observations, caching attention keys and values so parallel rollout collection can reuse earlier computations.",
+          "evidence_ids": ["P04-E2"],
+          "source_locations": [
+            "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators, PDF pp. 4-5, Section 3.1, Figure 2 and Causal Transformer Decoder; pp. 19-20, Appendix B.3, Figure 5"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "状态编码器先形成目标条件化特征，因果解码器整合其时间序列，缓存每条轨迹过去的键和值，避免每步重算全部历史。摘要没有声称不同并行轨迹共用记忆，也没有把缓存说成常数时间的无限长度记忆。"
+        },
+        {
+          "claim": "Combined with hundreds of simultaneous rollouts and procedurally varied houses, this supports training for partially observed, long-horizon navigation.",
+          "evidence_ids": ["P04-E1", "P04-E3", "P04-E4", "P04-E5"],
+          "source_locations": [
+            "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators, PDF pp. 5-6, Sections 3.2-3.3"
+          ],
+          "result": "supported_as_combined_training_recipe",
+          "reason": "Stretch/LoCoBot 分别使用 192/384 并行 rollout，配合增长的 rollout 长度、大 batch 和程序化环境。正文明确缓存本身不足以支撑高效大规模 RL；候选使用 combined with，未将全部加速或长时程能力归因于缓存单项。"
+        },
+        {
+          "claim": "In unseen real houses without real-world fine-tuning, separately trained text-goal policies achieve 80.0% success on 15 LoCoBot tasks and 83.3% on 18 Stretch RE-1 tasks.",
+          "evidence_ids": ["P04-E8", "P04-E10"],
+          "source_locations": [
+            "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators, PDF p. 7, Section 4.2 and Table 2(b), original table image; p. 25, Appendix E, Cross-embodiment"
+          ],
+          "result": "exact_match_with_real_world_metric_and_embodiment_binding",
+          "reason": "原表无 Detic 的文本目标行确为 LoCoBot 80.0%、Stretch 83.3%；15/18 项任务分别由三个起点乘五/六种目标规格组成。正文明确房屋未见且无真实微调；附录明确未联合训练两种具身。候选未用带 Detic 的 88.9% 替代文本目标结果，也未把任务数当作房屋数。"
+        },
+        {
+          "claim": "Memory nevertheless degrades after trajectories visit more than four rooms, sometimes causing revisits.",
+          "evidence_ids": ["P04-E10"],
+          "source_locations": [
+            "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators, PDF p. 25, Appendix E, Failure Analysis"
+          ],
+          "result": "supported_as_reported_failure_analysis",
+          "reason": "原文将超过四个房间后的记忆衰退和重复访问列为主要失败模式。候选保留了对长时程能力有直接影响的反向发现；这不是一个经统计识别的普适四房间硬阈值。"
+        },
+        {
+          "claim": "The PoliFormer-BoxNav variant accepts bounding-box goals from external detectors or vision-language models, extending the policy to externally specified visual targets.",
+          "evidence_ids": ["P04-E9"],
+          "source_locations": [
+            "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators, PDF pp. 2-3, Introduction; p. 8, Section 4.4; pp. 18-19, Appendix A"
+          ],
+          "result": "supported_as_interface_extension",
+          "reason": "BoxNav 用边界框目标接入 Detic 或 VLM 等外部模型，属于区别于标准文本目标策略的接口贡献。框目标策略本身经过训练；这里的零样本是向应用迁移，不是说该策略无需任何训练。模拟中的真值框也没有被候选误写成真实部署的无误差检测。"
+        },
+        {
+          "claim": "Qualitative zero-shot demonstrations include open-vocabulary navigation and following.",
+          "evidence_ids": ["P04-E9"],
+          "source_locations": [
+            "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators, PDF p. 8, Section 4.4 and Figure 3; p. 18, Appendix A, Open Vocabulary ObjectNav and Human Following"
+          ],
+          "result": "supported_as_qualitative_demonstration_only",
+          "reason": "开放词汇目标和 Person 检测驱动的跟随均有演示，正文明确本节是定性展示。候选没有给这类应用分配 Table 2 的成功率或声称覆盖任意指令、动态目标。"
+        },
+        {
+          "claim": "No simulation Success, SPL, or SEL value from the ambiguous P04-E7 packet wording is asserted in the candidate.",
+          "evidence_ids": ["P04-E7", "P04-E8"],
+          "source_locations": [
+            "PoliFormer: Scaling On-Policy RL with Transformers Results in Masterful Navigators, PDF p. 7, Tables 1 and 2(b), original table image"
+          ],
+          "result": "unused_packet_metric_ambiguity_distinguished_from_checked_source",
+          "reason": "原表 RGB+text 行的 85.5 (61.2) 分别是 Success 与 SEL；82.4 (58.5)、68.3 (45.1)、85.3 (72.7) 分别是 Success 与 SPL。旧包将 Success 与括号内指标并置，不能据此把 85.5 称为 SEL 或把三个外侧值称为 SPL。候选改用明确的真实 Success 值，未继承此歧义；本次澄清仅覆盖已看的表格，旧包本身保持原样。"
+        }
+      ],
+      "issues": [],
+      "translation": {
+        "status": "no_issue_found",
+        "notes_zh": [
+          "中文明确冻结的预训练 DINOv2 与从零学习的导航部分，没有强化为整网从零训练。",
+          "‘同策略’对应 on-policy；键值缓存、历史计算复用、并行轨迹和程序化环境的组合关系得到保留。",
+          "15/18 项任务、80.0%/83.3%、分别训练、未见房屋和无真实微调在两种语言中绑定相同；记忆退化限制及定性零样本演示的证据强度也未被削弱。"
+        ]
+      }
+    },
+    {
+      "id": "P05",
+      "readback_zh": "摘要描述从一段固定相机 RGB-D 人类视频、而非机器人动作标签出发，将重建身体/手部运动与目标物体和参考物体子目标连接。执行时重新定位物体、按关系变形手臂轨迹并独立映射手指，以适应新布局；六项真实随机布局任务中以放零食 75.0% 对最小适配 ORION 的 0.0% 为例。随后转到独立的数据生成贡献：舍弃失败的重定向执行，用成功机器人轨迹训练闭环 ACT；50 至 100 条轨迹对应装袋成功率 66.7% 至 83.3%。",
+      "summary_zh": "在已核对的主张中未发现实质问题。物体关系驱动的重定向与成功执行数据训练 ACT 两项贡献均有保留，输入人类视频、生成的机器人轨迹和最终 ACT 结果没有混淆。证据包中的 71.7% 总平均无法由所列六项等次数任务分数直接核定，候选未采用该平均，本审计不补造替代均值或把问题视为已解决。",
+      "status": "no_issue_found_in_checked_claims",
+      "checked_claims": [
+        {
+          "claim": "OKAMI transfers upper-body tabletop manipulation from a single static-camera RGB-D human video without robot action labels.",
+          "evidence_ids": ["P05-E1", "P05-E2"],
+          "source_locations": [
+            "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation, PDF pp. 3-4, Problem Formulation; p. 8, Limitations and Future Work"
+          ],
+          "result": "supported_with_input_and_embodiment_scope",
+          "reason": "问题设置确为单段 RGB-D 视频且无真值机器人动作，镜头静止；当前实现限于上半身桌面操作。原文另假设每帧能看到人体，候选未列出这一条件但也未声称能使用任意遮挡视频或网络 RGB 视频，不要求为完整性逐项增列全部输入限制。"
+        },
+        {
+          "claim": "It builds a reference plan linking reconstructed body-and-hand motion to subgoals defined by target and reference objects.",
+          "evidence_ids": ["P05-E3", "P05-E4", "P05-E5"],
+          "source_locations": [
+            "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation, PDF pp. 4-5, Section 3.1, Reconstructing Human Motions and Generating a Plan from Video"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "参考计划将身体/手部 SMPL-H 轨迹段与关键帧子目标及物体点云关联；目标物体和参考物体用于表示交互关系。有些抓取子目标可没有参考物体，候选是在概括计划表示，不是在断言每一步必须存在两个物体。省略视觉模型品牌不构成丢失这一操作贡献。"
+        },
+        {
+          "claim": "At execution, it localizes those objects again and warps arm trajectories according to their spatial relationships, while mapping human finger poses separately to the humanoid's hands.",
+          "evidence_ids": ["P05-E5", "P05-E6"],
+          "source_locations": [
+            "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation, PDF pp. 5-6, Section 3.2; pp. 16-17, Appendix A.3-A.5"
+          ],
+          "result": "supported_by_checked_source",
+          "reason": "执行按计划逐步重新定位物体，根据目标/参考关系是否变化选择轨迹变形依据，手臂经任务空间重定向和逆运动学获得关节轨迹，手指另行映射。候选没有将手臂和手指适配误写为同一算法，也没有凭空声称对所有形状变化适用。"
+        },
+        {
+          "claim": "This adapts the demonstrated motion to new layouts rather than replaying fixed workspace coordinates.",
+          "evidence_ids": ["P05-E5", "P05-E6", "P05-E8"],
+          "source_locations": [
+            "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation, PDF pp. 5-6, Section 3.2; p. 7, Section 4.1, Evaluation Protocol"
+          ],
+          "result": "supported_as_mechanistic_distinction_with_tested_layout_scope",
+          "reason": "测试时对象定位与关系驱动的变形直接使轨迹依对象布局改变，随机物体位置实验也对应这一能力。这里的机制解释不等于保证任意布局成功，不排除可达空间、感知和物体形状限制。"
+        },
+        {
+          "claim": "Real-robot evaluation spans six tasks with randomized object positions; as one direct-retargeting comparison, placing snacks on a plate succeeds in 75.0% of trials versus 0.0% for a minimally adapted ORION baseline.",
+          "evidence_ids": ["P05-E7", "P05-E8", "P05-E10"],
+          "source_locations": [
+            "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation, PDF pp. 6-7, Sections 4.1-4.2, Figure 4(a), original figure image; p. 17, Appendix B.2"
+          ],
+          "result": "exact_match_with_direct_robot_comparison",
+          "reason": "六任务、每任务 12 次及相机视野与手臂可达范围交集中的随机位置均有正文依据。真实 Place-snacks-on-plate 对照确为 OKAMI 75.0%、ORION 0.0%；ORION 为适配人形机器人而作最小修改。候选把这标作一个直接重定向比较，没有推广成所有基线、任务或模拟环境的总体优势。"
+        },
+        {
+          "claim": "Successful retargeted rollouts, with failed executions discarded, also provide robot trajectories for training separate closed-loop ACT visuomotor policies.",
+          "evidence_ids": ["P05-E12"],
+          "source_locations": [
+            "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation, PDF p. 8, Section 4.3; pp. 18-19, Appendix B.5"
+          ],
+          "result": "supported_with_success_filter_and_model_separation",
+          "reason": "正文明确随机布局运行 OKAMI、只收集成功轨迹并舍弃失败轨迹，再用 ACT 行为克隆。ACT 以图像及机器人关节状态为输入反复预测动作，闭环性质有据。这里有额外生成的机器人数据，不能把其训练成功率当作仅凭一个人类视频直接重定向的成功率；候选明确区分了这两阶段。"
+        },
+        {
+          "claim": "Increasing this training set from 50 to 100 trajectories raises ACT bagging success from 66.7% to 83.3%.",
+          "evidence_ids": ["P05-E12"],
+          "source_locations": [
+            "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation, PDF p. 8, Section 4.3 and Figure 5, original figure image"
+          ],
+          "result": "exact_match_with_ACT_task_and_training_budget",
+          "reason": "Figure 5 的 Bagging 两柱为 50 条时 66.7%、100 条时 83.3%；58.3% 至 75.0% 则属于 Sprinkle-salt。摘要没有跨任务错配或把训练轨迹条数当成测试次数。此句描述该训练量比较，不构成显著性检验或对其他数据量的普适单调因果规律。"
+        },
+        {
+          "claim": "The candidate does not use the reported 71.7% retargeting aggregate or conflate it with ACT policy performance.",
+          "evidence_ids": ["P05-E8", "P05-E9", "P05-E12"],
+          "source_locations": [
+            "OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation, PDF p. 2, Introduction; p. 7, Evaluation Protocol and Figure 4(a), original figure image; p. 8, Figure 5, original figure image"
+          ],
+          "result": "unused_aggregation_conflict_preserved",
+          "reason": "原文引言的 71.7% 指直接重定向，另述闭环策略平均 79.2%，两者不是同一评估。Figure 4(a) 六项直接执行分数确为 58.3、66.7、83.3、75.0、75.0、58.3%，且协议写每项 12 次；这些值不能直接支持所报 71.7% 的等权总平均，来源没有在已查位置给出可协调口径。候选只用明确任务值，本审计不生成替代平均、不假定隐藏加权，也不据此宣称 E9 已验证。"
+        }
+      ],
+      "issues": [],
+      "translation": {
+        "status": "no_issue_found",
+        "notes_zh": [
+          "单段固定相机 RGB-D 视频、无机器人动作标签、上半身桌面范围及物体关系驱动的轨迹变形在两种语言中一致。",
+          "75.0% 对 0.0% 保持为一个直接重定向的真实放零食比较，未被中文扩大为六任务平均。",
+          "舍弃失败、仅保留成功机器人轨迹、另训 ACT，以及装袋 50/100 条轨迹对应 66.7%/83.3% 均得到保留，没有把 ACT 训练集偷换为单段人类视频。"
+        ]
+      }
+    }
+  ]
+}

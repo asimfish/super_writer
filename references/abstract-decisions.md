@@ -104,6 +104,37 @@ the requested genre before allocating space, not by adding more caveats.
 
 ## Compare Good Drafts, Not Only Correct Drafts
 
+### Select an Answer, Not a Fact Inventory
+
+An evidence packet is a pool of admissible facts, not a coverage checklist.
+It can also contain a source conflict: check a task-ranking claim against the
+located results, not only a paper's summary. If prose and a table disagree,
+omit the disputed ranking or resolve it outside the abstract; do not guess.
+Before drafting, group candidate results by the reader question they answer:
+task capability, transfer, data requirement, resource cost, or another actual
+contribution. Several task scores may be numerically different yet do the same
+rhetorical work. For each group, select the comparison that best tests the
+promise, or use an author-reported aggregate with its population and comparator.
+Keep another result when it changes the interpretation, establishes a separate
+co-contribution, or exposes a consequential exception. This is not a number cap.
+
+Do not manufacture an average across tasks, metrics, substeps or denominators.
+If no aggregate is justified, name the supported capability and its evaluated
+scope, optionally with a representative comparison explicitly labeled as such.
+A list of successful substeps cannot become whole-task success. Protocol counts
+usually belong in Methods; a low-data contribution may make a demo count central.
+Unselected evidence remains in the evidence bank, not a disclaimer at the end.
+Do not turn "preserve numbers" into "include every available number": preserve
+the bindings of the numbers actually used and every qualification needed for
+their meaning. Retain contrary findings that would otherwise reverse the story.
+
+In the existing plan, briefly state the contribution, what explains it, which
+evidence answers it, and what the next sentence lets the reader understand.
+Draft from this selection with the full fact list put aside. Then reopen the
+evidence for fidelity checking. See [sentence progression](writing-library.md#sentence-progression-not-syntactic-variety)
+and the conditional `ai.pattern.*` cards in the [existing lookup](writing-library.md).
+No extra handoff schema or mandatory standalone planning artifact is required.
+
 First check source fidelity. Then compare drafts from the same evidence and
 author priorities using located reasons rather than a single quality percentage:
 

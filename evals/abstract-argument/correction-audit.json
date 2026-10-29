@@ -1,0 +1,11 @@
+{
+  "scope": "Independent-context recheck of host corrections only; not a quality evaluation",
+  "papers": [
+    {
+      "id": "P02",
+      "status": "no_issue_found_in_checked_changes",
+      "summary_zh": "仅复核两处修改，并确认修订文本相对原始 P02 仅有这两项中英文变更。第一，删除 I-JEPA 比较中的 'and textiles'/织物识别，移除了与 Sparsh: Self-supervised touch representations for vision-based tactile sensing, PDF p. 28, Table 10 相冲突的判断，且未新增替代排名。第二，将预训练数量改为 'about 463,000'/约 463,000，是对该论文 PDF p. 4, Section 3 所述 462.7k 的合理近似表达，中英文数量及近似强度一致。本次未重新评价其余主张，也未解决或撤回原审计记录的其他来源歧义；原始审计、候选及修订文件均未修改。",
+      "remaining_issues": []
+    }
+  ]
+}

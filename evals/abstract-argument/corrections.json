@@ -1,0 +1,17 @@
+{
+  "scope": "Host factual corrections after the raw first-pass source audit; not a new generation or quality vote.",
+  "papers": [
+    {
+      "id": "P02",
+      "original": {
+        "text_en": "Sparsh learns reusable representations for vision-based touch from unlabeled, mixed-sensor data. Pretraining uses 462,700 images from DIGIT, GelSight 2017, and GelSight Mini, comparing pixel reconstruction, self-distillation, and latent predictive objectives. The released TacBench benchmark covers six tasks spanning physical estimation, semantic recognition, and manipulation. For perception, evaluation freezes the pretrained encoder and trains an attentive decoder, comparing against a same-capacity model trained end to end from random initialization. With 33-50% of the collected downstream labels, benchmark results favor pretrained representations over task- and sensor-specific end-to-end models. The best objective depends on the task: DINO favors force and pose estimation, whereas I-JEPA is stronger for slip, grasp stability, and textiles. In bead-maze control, pretrained policies reduce trajectory error and increase distance before failure, but no model completes the full real-robot maze.",
+        "text_zh": "Sparsh 从无标签的混合传感器数据中学习可复用于不同任务的视觉触觉表征。预训练使用来自 DIGIT、GelSight 2017 和 GelSight Mini 的 462,700 张图像，比较像素重建、自蒸馏和潜在空间预测目标。随研究发布的 TacBench 基准包含六项任务，涵盖物理量估计、语义识别和操作。在感知任务的评估中，预训练编码器被冻结，仅训练带注意力机制的解码器，并与容量相同、从随机初始化开始端到端训练的模型比较。在使用已收集下游标签的 33-50% 时，基准结果显示，预训练表征优于针对特定任务和传感器端到端训练的模型。最佳目标随任务而变化：DINO 更适合力和位姿估计，而 I-JEPA 在滑移、抓取稳定性和织物识别方面更强。在串珠迷宫控制中，预训练策略降低了轨迹误差，并增加了失败前的行进距离，但没有模型在真实机器人实验中完成整个迷宫。"
+      },
+      "replacement": {
+        "text_en": "Sparsh learns reusable representations for vision-based touch from unlabeled, mixed-sensor data. Pretraining uses about 463,000 images from DIGIT, GelSight 2017, and GelSight Mini, comparing pixel reconstruction, self-distillation, and latent predictive objectives. The released TacBench benchmark covers six tasks spanning physical estimation, semantic recognition, and manipulation. For perception, evaluation freezes the pretrained encoder and trains an attentive decoder, comparing against a same-capacity model trained end to end from random initialization. With 33-50% of the collected downstream labels, benchmark results favor pretrained representations over task- and sensor-specific end-to-end models. The best objective depends on the task: DINO favors force and pose estimation, whereas I-JEPA is stronger for slip and grasp stability. In bead-maze control, pretrained policies reduce trajectory error and increase distance before failure, but no model completes the full real-robot maze.",
+        "text_zh": "Sparsh 从无标签的混合传感器数据中学习可复用于不同任务的视觉触觉表征。预训练使用来自 DIGIT、GelSight 2017 和 GelSight Mini 的 约 463,000 张图像，比较像素重建、自蒸馏和潜在空间预测目标。随研究发布的 TacBench 基准包含六项任务，涵盖物理量估计、语义识别和操作。在感知任务的评估中，预训练编码器被冻结，仅训练带注意力机制的解码器，并与容量相同、从随机初始化开始端到端训练的模型比较。在使用已收集下游标签的 33-50% 时，基准结果显示，预训练表征优于针对特定任务和传感器端到端训练的模型。最佳目标随任务而变化：DINO 更适合力和位姿估计，而 I-JEPA 在滑移和抓取稳定性方面更强。在串珠迷宫控制中，预训练策略降低了轨迹误差，并增加了失败前的行进距离，但没有模型在真实机器人实验中完成整个迷宫。"
+      },
+      "reason_zh": "独立审读发现正文任务概括与 Table 10 的织物识别排序冲突，删除中英文中 I-JEPA 在织物任务更强的判断；将近似的预训练图像数量写为约 463,000，避免伪精确。首轮稿和审读结论保留，未重跑或覆盖。"
+    }
+  ]
+}

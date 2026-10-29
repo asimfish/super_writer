@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "status": "developmental_candidates_not_a_blind_test",
+  "generation": {
+    "source_access": "body-only supplied packets; no author abstracts intentionally read",
+    "producer": "fresh-context writer agent",
+    "budget_max_words": 200
+  },
+  "papers": [
+    {
+      "id": "P01",
+      "text_en": "EquiBot combines geometric equivariance with stochastic action-sequence prediction for closed-loop visuomotor imitation. It normalizes a scene point cloud by object centroid and scale, applies rotation-equivariant diffusion transitions, and maps predicted actions back to the observation frame. This makes the conditional action distribution transform consistently with scene translations, rotations, and uniform scaling, while preserving multiple plausible action sequences. Across four simulated manipulation tasks, EquiBot exhibits the smallest performance drop among the compared policies under tested geometric shifts. Its data-efficiency study on Can and Square also favors EquiBot over Diffusion Policy as training decreases from 100 to 25 demonstrations. With 15 human demonstration videos per task, EquiBot achieves 6/10 successes on real-robot luggage closing with unseen objects, versus 0/10 for Diffusion Policy.",
+      "text_zh": "EquiBot 将几何等变性与随机动作序列预测相结合，用于闭环视觉运动模仿学习。它依据物体质心和尺度对场景点云进行归一化，采用旋转等变的扩散转移，再将预测动作映射回观测坐标系。这使条件动作分布随场景的平移、旋转和均匀缩放一致变换，同时保留多种合理的动作序列。在四项模拟操作任务中，面对所测试的几何变化，EquiBot 在参与比较的策略中表现出最小的性能下降。在 Can 和 Square 上的数据效率研究也表明，当训练示范从 100 条减少至 25 条时，EquiBot 相比 Diffusion Policy 更具优势。在每项任务使用 15 段人类示范视频的条件下，EquiBot 在使用未见物体的真实机器人行李箱关闭任务中成功 6/10 次，而 Diffusion Policy 为 0/10 次。",
+      "thesis_zh": "通过让随机动作分布随场景几何变换一致变化，EquiBot 将几何复用与多种动作解相结合；变换场景、减少示范和真实未见物体的实验分别检验其适用性。",
+      "progression_zh": [
+        "先说明几何等变性与随机动作序列预测这两个相互配合的贡献。",
+        "从质心和尺度归一化、旋转等变转移及动作回映射，解释动作分布为何应随输入变换，而非保持动作不变。",
+        "用四任务的几何扰动结果检验变换适应，再以缩减示范回答数据需求问题。",
+        "最后用一个归属明确的真实未见物体比较，给出模拟实验之外的能力证据。"
+      ],
+      "selection": [
+        {
+          "question_zh": "几何变换如何作用于策略，又如何保留多种动作解？",
+          "evidence_ids": ["E01", "E02", "E03"],
+          "action": "retain",
+          "reason_zh": "保留归一化、旋转等变扩散与动作回映射的操作关系，以及随机动作序列的意义；不将等变性改写成不变性。"
+        },
+        {
+          "question_zh": "所设计的几何复用在测试中表现如何？",
+          "evidence_ids": ["E04", "E05", "E06"],
+          "action": "summarize",
+          "reason_zh": "保留四任务、几何扰动和比较策略中性能下降最小的定性结论，不逐项列任务分数、训练轮数与检查点。"
+        },
+        {
+          "question_zh": "减少示范后是否仍有比较优势？",
+          "evidence_ids": ["E07"],
+          "action": "retain",
+          "reason_zh": "保留 Can 和 Square、100 至 25 条示范及 Diffusion Policy 对照，以区别于几何扰动这一实验问题。"
+        },
+        {
+          "question_zh": "少量人类示范是否支持真实未见物体操作？",
+          "evidence_ids": ["E08", "E09", "E10"],
+          "action": "retain",
+          "reason_zh": "选用每任务 15 段示范和行李箱关闭 6/10 对 0/10 的明确比较，不汇总表头归属不清的变体，也不将此单任务结果推广为全部真实任务的平均。"
+        },
+        {
+          "question_zh": "哪些实现参数不承担摘要的论证功能？",
+          "evidence_ids": ["E11"],
+          "action": "omit",
+          "reason_zh": "动作维度、预测时域、点数与采样步数并非本摘要需要回答的问题，避免取代关键操作解释。"
+        },
+        {
+          "question_zh": "是否要另列构造边界和执行失败类型？",
+          "evidence_ids": ["E12"],
+          "action": "omit",
+          "reason_zh": "正文将几何性质限定为平移、旋转和均匀缩放，将经验结论限定为测试场景及一个未见物体任务，不承诺任意形状、动力学、遮挡或相机视角变化下的成功；6/10 也保留了真实执行并非全成功这一事实。"
+        }
+      ],
+      "pattern_ids": ["ai.pattern.operation-effect", "ai.pattern.result-answer"],
+      "evidence_ids": ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10"],
+      "author_notes_zh": [
+        "E10 的第二组真实机器人结果存在表头展平后的列归属问题，仍需核对原表列对应关系；候选摘要仅使用可明确归属的行李箱关闭比较。"
+      ]
+    },
+    {
+      "id": "P02",
+      "text_en": "Sparsh learns reusable representations for vision-based touch from unlabeled, mixed-sensor data. Pretraining uses 462,700 images from DIGIT, GelSight 2017, and GelSight Mini, comparing pixel reconstruction, self-distillation, and latent predictive objectives. The released TacBench benchmark covers six tasks spanning physical estimation, semantic recognition, and manipulation. For perception, evaluation freezes the pretrained encoder and trains an attentive decoder, comparing against a same-capacity model trained end to end from random initialization. With 33-50% of the collected downstream labels, benchmark results favor pretrained representations over task- and sensor-specific end-to-end models. The best objective depends on the task: DINO favors force and pose estimation, whereas I-JEPA is stronger for slip, grasp stability, and textiles. In bead-maze control, pretrained policies reduce trajectory error and increase distance before failure, but no model completes the full real-robot maze.",
+      "text_zh": "Sparsh 从无标签的混合传感器数据中学习可复用于不同任务的视觉触觉表征。预训练使用来自 DIGIT、GelSight 2017 和 GelSight Mini 的 462,700 张图像，比较像素重建、自蒸馏和潜在空间预测目标。随研究发布的 TacBench 基准包含六项任务，涵盖物理量估计、语义识别和操作。在感知任务的评估中，预训练编码器被冻结，仅训练带注意力机制的解码器，并与容量相同、从随机初始化开始端到端训练的模型比较。在使用已收集下游标签的 33-50% 时，基准结果显示，预训练表征优于针对特定任务和传感器端到端训练的模型。最佳目标随任务而变化：DINO 更适合力和位姿估计，而 I-JEPA 在滑移、抓取稳定性和织物识别方面更强。在串珠迷宫控制中，预训练策略降低了轨迹误差，并增加了失败前的行进距离，但没有模型在真实机器人实验中完成整个迷宫。",
+      "thesis_zh": "Sparsh 的贡献是可复用的自监督触觉表征及其六任务评估资源；低标签比较支持预训练的价值，但目标选择依赖任务，控制收益也不等于完整任务完成。",
+      "progression_zh": [
+        "从混合传感器无标签预训练引出跨任务复用，而非暗示下游任务无需标签。",
+        "以 TacBench 说明共同评估范围，再解释冻结编码器和训练解码器这一迁移操作及随机初始化对照。",
+        "用 33-50% 标签预算的定性比较回答低标签价值，再用目标间的任务差异修正单一最佳目标的理解。",
+        "从感知转到控制，保留误差和行进距离收益，同时明确真实迷宫未被完整完成。"
+      ],
+      "selection": [
+        {
+          "question_zh": "可复用表征由什么数据和训练操作产生？",
+          "evidence_ids": ["P02-E01", "P02-E02", "P02-E04"],
+          "action": "retain",
+          "reason_zh": "保留三种传感器、实际用于预训练的 462,700 张图像、三类目标及冻结编码器的评估操作；不把约 661k 的整理语料规模说成预训练规模，也不把感知评估流程套到所有策略实验。"
+        },
+        {
+          "question_zh": "除了编码器，研究还提供什么共同评估资源？",
+          "evidence_ids": ["P02-E04"],
+          "action": "summarize",
+          "reason_zh": "明确 TacBench 是发布的六项核心任务基准，以物理、语义和操作概括范围，不逐项报分，也不将辅助力场可视化计为第七项核心任务。"
+        },
+        {
+          "question_zh": "有限下游标签是否仍能体现预训练价值？",
+          "evidence_ids": ["P02-E11"],
+          "action": "summarize",
+          "reason_zh": "保留 33-50% 已收集标签的比较范围及任务和传感器专用端到端对照，使用定性结论，不引用、合并或重算彼此不一致的平均提升。"
+        },
+        {
+          "question_zh": "是否存在不依赖任务的最佳预训练目标？",
+          "evidence_ids": ["P02-E11"],
+          "action": "retain",
+          "reason_zh": "保留 DINO 与 I-JEPA 的任务侧重点，说明表征家族的差异，而不以一个平均排名覆盖所有任务。"
+        },
+        {
+          "question_zh": "感知收益是否已经转化为完整控制任务成功？",
+          "evidence_ids": ["P02-E10"],
+          "action": "retain",
+          "reason_zh": "控制实验回答与感知不同的问题；保留轨迹误差、失败前行进距离的定性收益和无模型完成真实迷宫这一关键反例，不写成已解决 bead maze。"
+        },
+        {
+          "question_zh": "还需要多少逐任务协议、指标和实现细节？",
+          "evidence_ids": ["P02-E03", "P02-E05", "P02-E06", "P02-E07", "P02-E08", "P02-E09"],
+          "action": "omit",
+          "reason_zh": "各任务样本量、测试集大小、离散化精度和额外标签比例重复承担覆盖说明功能；摘要不报这些任务的具体指标，也不把触觉历史长度当作已隔离验证的收益来源。"
+        }
+      ],
+      "pattern_ids": ["ai.pattern.operation-effect", "ai.pattern.result-answer", "ai.pattern.result-boundary"],
+      "evidence_ids": ["P02-E01", "P02-E02", "P02-E04", "P02-E10", "P02-E11"],
+      "author_notes_zh": [
+        "正文所报 95.1% 平均提升与附录 Table 13 的 98.75% 不一致，其任务集合、指标变换和汇总口径仍需作者核对；摘要只保留相应低标签范围的定性比较，不使用任何新均值。",
+        "bead-maze 主文和 Table 11 的 50 条示范与 Appendix D.9 的 30 条设置有出入，需确认各结果对应的训练协议；摘要不引用示范条数，并保留未完成完整真实迷宫的结果。"
+      ]
+    },
+    {
+      "id": "P03",
+      "text_en": "ManiWAV augments vision with contact sound to infer manipulation states that are ambiguous in wrist-camera images, such as surface contact and hidden container contents. A microphone embedded in a gripper finger records synchronized audio and vision during hand-held demonstrations; the same gripper is then mounted on a robot. The policy fuses these signals with recent end-effector poses to predict action sequences through diffusion. To address the audio shift from human collection to robot execution, training overlays environmental sounds and robot motor noise on demonstration audio. The four-task evaluation includes a 20-rollout wiping test covering configuration, noise, height, and eraser changes, where ManiWAV achieves 85% success versus 40% for vision-only control. Flipping experiments in two unseen environments additionally favor training that includes in-the-wild demonstrations over lab-only training.",
+      "text_zh": "ManiWAV 用接触声音补充视觉，以推断腕部相机图像中难以明确判断的操作状态，例如表面接触和被遮挡的容器内部物体状态。嵌入夹爪手指的麦克风在手持示范过程中同步记录声音与图像，随后将同一夹爪安装到机器人上。策略将这些信号与近期末端执行器位姿融合，通过扩散预测动作序列。为应对从人类采集到机器人执行时的声音分布变化，训练将环境声音和机器人电机噪声叠加到示范音频中。四任务评估包括一项含 20 次执行的擦拭测试，涵盖配置、噪声、高度和擦拭器变化；ManiWAV 的成功率为 85%，纯视觉控制为 40%。在两个未见环境中的翻转实验进一步表明，纳入实地示范的训练优于仅使用实验室示范的训练。",
+      "thesis_zh": "ManiWAV 将接触声音中的隐状态线索带入可从手持示范部署到机器人的视听策略；噪声叠加回应部署差异，纯视觉比较和未见环境实验分别检验任务价值与数据采集范围的作用。",
+      "progression_zh": [
+        "先提出相机难以判定的具体交互状态，使接触音频的用途可理解。",
+        "由手指内麦克风和同一夹爪的使用，连接人类示范采集与机器人部署，再解释信号如何进入动作序列预测。",
+        "针对这一采集到部署的转换，说明叠加环境与电机噪声的操作，但不把设计目的写成已隔离的因果结论。",
+        "用擦拭的纯视觉对照检验能力收益，再以翻转的两处未见环境结果回答训练数据范围的迁移问题。"
+      ],
+      "selection": [
+        {
+          "question_zh": "接触音频如何从示范采集进入机器人动作预测？",
+          "evidence_ids": ["P03-E01", "P03-E02"],
+          "action": "retain",
+          "reason_zh": "保留手指内麦克风、同步视听、同一夹爪部署及结合近期位姿的扩散动作预测，不以编码器名称清单代替操作说明。"
+        },
+        {
+          "question_zh": "为什么视觉之外还需要接触声音？",
+          "evidence_ids": ["P03-E10"],
+          "action": "summarize",
+          "reason_zh": "选用接触状态和隐藏容器内容这两类可理解的线索解释信息互补，不逐一复述四任务所有声音事件。"
+        },
+        {
+          "question_zh": "采集方式转换造成的声音差异如何处理？",
+          "evidence_ids": ["P03-E03"],
+          "action": "retain",
+          "reason_zh": "保留向示范音频叠加环境声和机器人电机噪声这一具体操作，措辞限定为应对分布变化的设计，而非宣布已经消除噪声问题。"
+        },
+        {
+          "question_zh": "相较纯视觉控制，完整任务成功有何证据？",
+          "evidence_ids": ["P03-E07"],
+          "action": "retain",
+          "reason_zh": "使用 20 次擦拭测试中的 85% 对 40%，并保留所覆盖变化，作为一个完整任务比较，不拼接子步骤成功率。"
+        },
+        {
+          "question_zh": "实地采集的数据是否对未见环境有帮助？",
+          "evidence_ids": ["P03-E05", "P03-E06", "P03-E10"],
+          "action": "summarize",
+          "reason_zh": "保留翻转任务中两处未见环境及含实地示范对仅实验室训练的比较；不将总体翻转成功率挪到未见环境子集，也不把 274 条人类示范写成机器人训练轨迹数。"
+        },
+        {
+          "question_zh": "是否还要枚举倾倒和贴带子的子步骤指标？",
+          "evidence_ids": ["P03-E08", "P03-E09"],
+          "action": "omit",
+          "reason_zh": "已有完整擦拭任务与环境迁移两类证据；这些子步骤分数不提供可直接比较的额外完整任务成功率，不能汇总为四任务平均。"
+        },
+        {
+          "question_zh": "频谱处理参数是否有助于本摘要的核心解释？",
+          "evidence_ids": ["P03-E04"],
+          "action": "omit",
+          "reason_zh": "采样率转换、窗口和 mel 滤波参数属于实现层，省去后仍可理解接触信号如何用于策略。"
+        },
+        {
+          "question_zh": "是否需要另加声学边界和控制频率说明？",
+          "evidence_ids": ["P03-E11"],
+          "action": "omit",
+          "reason_zh": "摘要限定于所测接触任务和未见翻转环境，不承诺无明显声音的交互、任意噪声下的可靠性或高频反应控制，因此不另列延迟和弱声任务边界。"
+        }
+      ],
+      "pattern_ids": ["ai.pattern.bottleneck-choice", "ai.pattern.operation-effect", "ai.pattern.result-answer"],
+      "evidence_ids": ["P03-E01", "P03-E02", "P03-E03", "P03-E05", "P03-E06", "P03-E07", "P03-E10"],
+      "author_notes_zh": [
+        "候选未将任何子步骤比例转写成完整倾倒或贴带任务成功率。擦拭数值对应所列 20 次测试；翻转的未见环境结果单独定性陈述，不借用整体 90% 成功率作为该子集分数。"
+      ]
+    },
+    {
+      "id": "P04",
+      "text_en": "PoliFormer learns transformer navigation policies with large-scale on-policy reinforcement learning, training the navigation components from scratch atop a frozen, pretrained DINOv2 visual backbone. A causal decoder integrates past goal-conditioned observations, caching attention keys and values so parallel rollout collection can reuse earlier computations. Combined with hundreds of simultaneous rollouts and procedurally varied houses, this supports training for partially observed, long-horizon navigation. In unseen real houses without real-world fine-tuning, separately trained text-goal policies achieve 80.0% success on 15 LoCoBot tasks and 83.3% on 18 Stretch RE-1 tasks. Memory nevertheless degrades after trajectories visit more than four rooms, sometimes causing revisits. The PoliFormer-BoxNav variant accepts bounding-box goals from external detectors or vision-language models, extending the policy to externally specified visual targets. Qualitative zero-shot demonstrations include open-vocabulary navigation and following.",
+      "text_zh": "PoliFormer 通过大规模同策略强化学习训练 Transformer 导航策略，在冻结的预训练 DINOv2 视觉骨干之上从零训练导航组件。因果解码器整合过去的目标条件观测，并缓存注意力的键和值，使并行轨迹采集能够复用此前的计算。结合数百条同时采集的轨迹和程序化生成的多样房屋，这一设计支持部分可观测长时程导航的训练。在未见过的真实房屋中，无需真实环境微调，分别训练的文本目标策略在 15 项 LoCoBot 任务上取得 80.0% 的成功率，在 18 项 Stretch RE-1 任务上取得 83.3% 的成功率。不过，轨迹访问超过四个房间后，记忆能力会下降，有时会重复访问房间。PoliFormer-BoxNav 变体接收来自外部检测器或视觉语言模型的边界框目标，将策略扩展到外部指定的视觉目标。其定性零样本演示包括开放词汇导航和跟随。",
+      "thesis_zh": "PoliFormer 将可缓存的时间建模与大规模同策略训练结合，在冻结视觉骨干的前提下学习导航；真实零微调结果和框目标接口是不同贡献，长轨迹记忆退化则限定长时程能力。",
+      "progression_zh": [
+        "先明确从零学习的是导航组件，而不是包含预训练视觉骨干在内的全部网络。",
+        "解释因果解码器如何缓存和复用历史计算，再连接并行采集与程序化环境中的规模化训练。",
+        "以分别训练的两种机器人策略在真实未见房屋中的成功率检验部署能力，不声称一个跨具身联合策略。",
+        "紧接长时程能力保留四房间之后的记忆退化，使结果边界与受影响的能力相连。",
+        "最后以框目标如何接入外部目标指定，保留接口扩展贡献，并将应用证据限定为定性演示。"
+      ],
+      "selection": [
+        {
+          "question_zh": "训练对象及时间记忆的关键操作是什么？",
+          "evidence_ids": ["P04-E1", "P04-E2"],
+          "action": "retain",
+          "reason_zh": "明确冻结的预训练 DINOv2、从零训练的导航组件及因果解码器对历史键值的复用，避免将全模型说成从零训练。"
+        },
+        {
+          "question_zh": "时间建模怎样与规模化同策略采集相配合？",
+          "evidence_ids": ["P04-E3", "P04-E4", "P04-E5"],
+          "action": "summarize",
+          "reason_zh": "保留数百并行轨迹与多样程序化环境，连接缓存的操作意义；不枚举节点数、batch 变化和多个速度数字，也不声称缓存单独导致全部训练加速。"
+        },
+        {
+          "question_zh": "无需真实微调时是否能在未见房屋中完成目标导航？",
+          "evidence_ids": ["P04-E8"],
+          "action": "retain",
+          "reason_zh": "使用标签明确的真实成功率：15 项 LoCoBot 任务为 80.0%，18 项 Stretch RE-1 任务为 83.3%；保留文本目标、分别训练及无真实微调的条件。"
+        },
+        {
+          "question_zh": "框目标接口带来什么不同于标准文本目标的贡献？",
+          "evidence_ids": ["P04-E9"],
+          "action": "retain",
+          "reason_zh": "保留外部检测器或视觉语言模型到边界框目标的接口关系，选开放词汇导航和跟随说明用途，明确仅为定性零样本演示，不列出所有应用。"
+        },
+        {
+          "question_zh": "长时程能力是否仍受具体记忆问题限制？",
+          "evidence_ids": ["P04-E10"],
+          "action": "retain",
+          "reason_zh": "四房间之后的记忆退化会改变对长时程训练成果的理解，因此在相关结果后保留，而不另加所有限制的列表。"
+        },
+        {
+          "question_zh": "模拟套件和 Table 1 数字是否承担不可替代的摘要功能？",
+          "evidence_ids": ["P04-E6", "P04-E7"],
+          "action": "omit",
+          "reason_zh": "真实迁移结果已回答核心部署问题；不复述模拟套件样本清单，也不在 Success、SPL、SEL 归属不清时挑选数值或把歧义写进摘要。"
+        }
+      ],
+      "pattern_ids": ["ai.pattern.operation-effect", "ai.pattern.result-boundary"],
+      "evidence_ids": ["P04-E1", "P04-E2", "P04-E3", "P04-E4", "P04-E5", "P04-E8", "P04-E9", "P04-E10"],
+      "author_notes_zh": [
+        "P04-E7 把 Success 与括号内的 SPL/SEL 并置，Table 1 的实际列名和各数值的指标对应关系仍需核对。摘要改用 P04-E8 中明确的真实成功率，不将标签歧义作为摘要免责声明。"
+      ]
+    },
+    {
+      "id": "P05",
+      "text_en": "OKAMI transfers upper-body tabletop manipulation from a single static-camera RGB-D human video without robot action labels. It builds a reference plan linking reconstructed body-and-hand motion to subgoals defined by target and reference objects. At execution, it localizes those objects again and warps arm trajectories according to their spatial relationships, while mapping human finger poses separately to the humanoid's hands. This adapts the demonstrated motion to new layouts rather than replaying fixed workspace coordinates. Real-robot evaluation spans six tasks with randomized object positions; as one direct-retargeting comparison, placing snacks on a plate succeeds in 75.0% of trials versus 0.0% for a minimally adapted ORION baseline. Successful retargeted rollouts, with failed executions discarded, also provide robot trajectories for training separate closed-loop ACT visuomotor policies. Increasing this training set from 50 to 100 trajectories raises ACT bagging success from 66.7% to 83.3%.",
+      "text_zh": "OKAMI 从一段由固定相机拍摄、无机器人动作标签的 RGB-D 人类视频中迁移上半身桌面操作。它构建参考计划，将重建的身体和手部运动与由目标物体和参考物体定义的子目标相联系。执行时，系统重新定位这些物体，根据它们的空间关系变形手臂轨迹，同时单独将人类手指姿态映射到人形机器人的双手。这使示范动作适应新布局，而不是重放固定工作空间坐标。真实机器人评估涵盖六项物体位置随机化的任务；以其中一项直接重定向比较为例，将零食放到盘子上的成功率为 75.0%，而仅作最小适配的 ORION 基线为 0.0%。舍弃失败执行后，成功的重定向执行还提供机器人轨迹，用于训练独立的闭环 ACT 视觉运动策略。将这一训练集从 50 条轨迹增加到 100 条，使 ACT 在装袋任务中的成功率从 66.7% 提升至 83.3%。",
+      "thesis_zh": "OKAMI 的关键是将单段人类动作绑定到物体关系，并在新场景重定位后调整手臂和手指映射；直接执行能力与由成功执行数据训练闭环 ACT 是两个不同贡献及评估对象。",
+      "progression_zh": [
+        "以单段固定相机 RGB-D 视频和无机器人动作标签界定输入与上半身桌面操作范围。",
+        "先将重建动作绑定到物体子目标，再解释执行时重新定位、关系驱动的轨迹变形与独立手指映射。",
+        "由这一操作说明适应布局而非固定坐标回放，并用真实任务中的明确直接重定向比较检验能力。",
+        "转入成功重定向执行提供机器人训练数据这一独立贡献，以 ACT 的数据量比较收束，明确不将其成功率当作直接重定向结果。"
+      ],
+      "selection": [
+        {
+          "question_zh": "单视频模仿的输入与任务范围是什么？",
+          "evidence_ids": ["P05-E1", "P05-E2"],
+          "action": "retain",
+          "reason_zh": "保留单段 RGB-D 人类视频、固定相机及无机器人动作标签的设定；将成果限定为上半身桌面操作，不暗示仅 RGB 网络视频或全身移动操作。"
+        },
+        {
+          "question_zh": "如何将人类运动变成随物体布局调整的机器人动作？",
+          "evidence_ids": ["P05-E4", "P05-E5", "P05-E6"],
+          "action": "retain",
+          "reason_zh": "保留身体与手部重建、物体子目标、执行时重定位、关系驱动的手臂轨迹变形及独立手指映射，解释为何不是固定坐标回放；省去组件品牌及逆运动学的额外实现层次。"
+        },
+        {
+          "question_zh": "真实随机布局中的直接重定向有什么明确比较？",
+          "evidence_ids": ["P05-E7", "P05-E8", "P05-E10"],
+          "action": "retain",
+          "reason_zh": "保留六项真实桌面任务和物体位置随机化，以放零食到盘子的 75.0% 对 0.0% 为明确标注的一个比较，并保留 ORION 仅作最小适配的范围；不混入模拟任务或 ACT 分数。"
+        },
+        {
+          "question_zh": "成功执行能否进一步提供闭环策略训练数据？",
+          "evidence_ids": ["P05-E12"],
+          "action": "retain",
+          "reason_zh": "明确仅保留成功的机器人执行轨迹，再训练独立 ACT；用装袋任务从 50 到 100 条轨迹、66.7% 到 83.3% 的比较回答数据价值，不将单视频输入偷换为这些机器人训练轨迹。"
+        },
+        {
+          "question_zh": "是否使用六任务总平均或逐任务分数清单？",
+          "evidence_ids": ["P05-E9"],
+          "action": "omit",
+          "reason_zh": "所报 71.7% 与同条目逐任务值的汇总关系需核对；摘要选用 E10 中的明确直接比较，不自行重算均值，也不逐项报分。"
+        },
+        {
+          "question_zh": "是否需要纳入演示者差异的额外结果？",
+          "evidence_ids": ["P05-E11"],
+          "action": "omit",
+          "reason_zh": "本摘要未承诺对任意演示者、速度或重建噪声保持性能不变，故不再加入这一独立测试的分数和显著性陈述。"
+        },
+        {
+          "question_zh": "是否要列出视觉识别与跟踪所用工具？",
+          "evidence_ids": ["P05-E3"],
+          "action": "omit",
+          "reason_zh": "具体模型名称不是解释物体关系如何改变动作的必要信息；将篇幅留给关键重定向操作和数据生成贡献。"
+        }
+      ],
+      "pattern_ids": ["ai.pattern.operation-effect", "ai.pattern.result-answer"],
+      "evidence_ids": ["P05-E1", "P05-E2", "P05-E4", "P05-E5", "P05-E6", "P05-E7", "P05-E8", "P05-E10", "P05-E12"],
+      "author_notes_zh": [
+        "P05-E9 所报 71.7% 总平均与同条目所列六任务数值的汇总关系需作者核对；候选摘要不使用该均值，也未生成替代均值。",
+        "输入假设还要求视频各帧可见人类身体；本稿保留固定相机和 RGB-D 条件，不将这种设定推广到任意公开视频。直接重定向的放零食结果与 ACT 的装袋训练结果属于不同评估，不能互换。"
+      ]
+    }
+  ]
+}
