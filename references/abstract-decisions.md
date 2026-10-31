@@ -87,6 +87,13 @@ gap-first opening. Do not invent a literature gap to complete a template.
 Remove repeated module names before losing a supported design rationale. Keep
 that rationale distinct from a demonstrated benefit: using a pretrained model
 to exploit prior semantic knowledge does not itself establish improved transfer.
+Explain at the level the abstract's reader needs. A geometric relation can
+explain why a policy adapts to moved objects without walking through centroid
+normalization and denoising layers. Those steps belong here only if they are
+the contribution or are needed to understand the claim. Explaining more internals
+is not automatically a stronger rationale. Keep the research question in view
+while moving between problem, idea and evidence; do not turn the abstract into
+a short Methods section followed by a short Results section.
 Prefer the actual measured quantity (`action-generation throughput`, not
 end-to-end latency or unspecified `efficiency`) and preserve absolute versus
 relative gains. Conventional technical terms can repeat; do not replace them
@@ -133,6 +140,16 @@ evidence answers it, and what the next sentence lets the reader understand.
 Draft from this selection with the full fact list put aside. Then reopen the
 evidence for fidelity checking. See [sentence progression](writing-library.md#sentence-progression-not-syntactic-variety)
 and the conditional `ai.pattern.*` cards in the [existing lookup](writing-library.md).
+Before starting from body-derived fact rows, check that they include the source's
+research motivation and contribution-level rationale, not only implementation
+and evaluation. Read the introduction if needed; a missing motivation in a
+packet is not permission to invent a literature gap. If the passage is accurate
+but still sounds like a technical summary, fix its information level and focus
+before retrieving another sentence pattern. Patterns are optional wording aids,
+not a required drafting stage or one-sentence-per-card outline.
+Use [source-calibrated rhetoric](abstract-rhetoric.md) to record the exemplar's
+opening contract, contribution level, move sequence, evidence span and ending
+function. This profile is what should transfer; lexical resemblance is not.
 No extra handoff schema or mandatory standalone planning artifact is required.
 
 First check source fidelity. Then compare drafts from the same evidence and

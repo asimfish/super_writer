@@ -60,6 +60,8 @@ class WritingBenchmarkTests(unittest.TestCase):
         context = LOOP.inspect_run(self.run)["packet"]["input"]
         resources = context["writing_resources"]
         self.assertEqual(context["benchmark_basis"], "standards_and_exemplars")
+        self.assertIn("references/abstract-rhetoric.md",
+                      {item["path"] for item in LOOP.inspect_run(self.run)["packet"]["guidance"]})
         self.assertEqual(set(resources), {"abstract", "ai.rule.operation", "ai.rule.quantities",
                                          "general.sentence-pattern.quantify.001"})
         protocol = BENCHMARK.writing_guide.report_for(BENCHMARK.writing_guide.load_index(),

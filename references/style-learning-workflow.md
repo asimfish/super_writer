@@ -59,7 +59,7 @@ The section changes what these dimensions mean:
 
 | Section | Compare with applicable exemplars | Useful local starting point |
 |---|---|---|
-| Abstract | Contribution emphasis; obstacle/insight/mechanism relation; decisive evidence; information compression; scoped ending | `abstract` with a contribution-matched variant; [abstract decisions](abstract-decisions.md) and selected exemplar notes |
+| Abstract | Contribution emphasis; obstacle/insight/mechanism relation; information level; decisive evidence; scoped ending | `abstract` with a contribution-matched variant; [abstract decisions](abstract-decisions.md), [source-calibrated rhetoric](abstract-rhetoric.md) and selected exemplar notes |
 | Related work | Technical grouping; synthesis across sources; fair comparison axes; relationship to our contribution; citation-to-claim scope | `related_work` / `taxonomy-first` or `concept-evolution` |
 | Experiments | Questions mapped to controls; setup/result/analysis separation; result ordering; ablation/failure logic; tables, captions and reporting | `experiments` for section structure, `experiments.analysis` for a passage, or one matching table protocol |
 

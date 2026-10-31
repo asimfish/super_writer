@@ -62,6 +62,22 @@ genuine correction/apology. Remove only framing that adds no information.
 - Chinese output should remain natural scholarly Chinese. Preserve technical
   terms; remove empty progress rhetoric only when its factual content survives.
 
+For prose that is accurate but sounds assembled, read the paragraph without its
+annotations. Check whether the main subject remains recognizable as the verbs
+introduce new information, and whether the explanation stays at a useful level
+for that section. Replace a procedural detour or opaque noun chain with the
+actual relationship, not another connective. Do not force active voice, first
+person, varied syntax or a background-first opening when the existing choice works.
+
+For Chinese delivery, read the Chinese on its own before checking it against the
+English. Rebuild modifier order and clause boundaries rather than mirroring each
+English sentence. For example, "在每项任务使用十五段人类示范视频的条件下" can often
+be "每项任务只用十五段示范视频训练后" when that really is the training budget.
+The latter is not valid if the videos are evaluation inputs. Naturalness does
+not authorize a new "only", causal link or training claim: check those meanings
+against the source. Preserve the units, qualification and information coverage;
+then compare the two languages for additions and omissions.
+
 Stop after a faithful first pass and, if useful, one light residual pass. Roll
 back a candidate that loses evidence or changes scope; do not keep rewriting to
 force a heuristic score down. Retain the last evidence-valid version.

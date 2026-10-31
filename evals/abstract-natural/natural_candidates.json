@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "status": "developmental_source_calibrated_candidates_not_a_blind_test",
+  "generation": {
+    "source_access": "official public abstracts plus prior body-derived evidence packets; original English abstracts are not reproduced in this artifact",
+    "producer": "host-authored source-calibrated rewrite",
+    "word_budget_max": 180,
+    "translation": "Chinese independently read after English draft; technical bindings checked against source notes"
+  },
+  "papers": [
+    {
+      "id": "P01",
+      "title": "EquiBot",
+      "source_url": "https://proceedings.mlr.press/v270/yang25a.html",
+      "text_en": "We study how to learn manipulation policies from limited demonstrations that generalize across objects and scenes. EquiBot combines SIM(3)-equivariant neural networks with diffusion models, allowing the policy to handle changes in scale, rotation, and translation while retaining multimodal action prediction. Across six simulation tasks, EquiBot reduces data requirements and improves generalization to novel scenarios. In real-world experiments, it generalizes to ten variations of six mobile manipulation tasks after five minutes of human demonstrations per task.",
+      "text_zh": "我们研究如何仅凭少量示范学习出能够跨物体和场景泛化的机器人操作策略。EquiBot 将 SIM(3) 等变神经网络与扩散模型结合，使策略能够应对尺度、旋转和平移变化，同时保留多模态动作预测能力。在六项模拟任务上，EquiBot 用更少的数据实现了更好的新场景泛化。在真实环境中，每项任务仅使用五分钟的人类示范，策略便能泛化到六项移动操作任务的十种变化。",
+      "shape": {
+        "opening": "从少量数据与跨场景泛化的研究问题开场",
+        "progression": "问题 → 核心组合 → 模拟验证 → 真实世界范围",
+        "abstraction": "解释等变性带来的能力，不展开归一化和扩散层实现",
+        "ending": "用真实任务范围和示范成本收束"
+      },
+      "changes": "从逐步解释点云归一化、扩散转移和多个实验条件，退回到贡献级方法与两层验证；保留原文的研究问题和真实世界范围。"
+    },
+    {
+      "id": "P02",
+      "title": "Sparsh",
+      "source_url": "https://proceedings.mlr.press/v270/higuera25a.html",
+      "text_en": "We introduce general-purpose touch representations for vision-based tactile sensors. Existing systems often rely on task- and sensor-specific models, while collecting labels for forces and slip at scale is difficult. Sparsh uses self-supervised pretraining on more than 460k tactile images and introduces TacBench, a six-task benchmark spanning tactile properties, physical perception, and manipulation planning. Under limited labeled-data budgets, self-supervised pretraining outperforms task- and sensor-specific end-to-end training on average; DINO and I-JEPA are the most competitive objectives, highlighting the value of latent-space learning for touch.",
+      "text_zh": "我们提出面向视觉触觉传感器的通用触觉表征。现有系统往往需要针对任务和传感器分别建模，而力和滑移等标注数据难以大规模采集。Sparsh 在 46 万多张触觉图像上进行自监督预训练，并构建 TacBench 六任务基准，覆盖触觉属性、物理感知和操作规划。在有限标注数据下，自监督预训练整体优于任务和传感器特定的端到端训练；DINO 和 I-JEPA 是其中最具竞争力的目标，说明在潜在空间中学习触觉表征具有价值。",
+      "shape": {
+        "opening": "直接提出资源型贡献，再用现有方法的碎片化说明必要性",
+        "progression": "资源贡献 → 标注困难 → 预训练与基准 → 汇总性结论",
+        "abstraction": "只保留表征、数据规模和基准覆盖，不列数据集配方",
+        "ending": "用最重要的总体发现解释方法意义"
+      },
+      "changes": "不再逐项讲预训练比例、每个下游任务和迷宫细节；恢复原摘要的资源论文形状，并删除与原表格冲突的织物任务排名。"
+    },
+    {
+      "id": "P03",
+      "title": "ManiWAV",
+      "source_url": "https://proceedings.mlr.press/v270/liu25c.html",
+      "text_en": "Contact audio can reveal interaction events and object properties that are ambiguous in vision. However, audio in robot manipulation is often collected through teleoperation with a microphone attached to the robot or object, limiting scalable data collection. ManiWAV introduces an ear-in-hand device for collecting in-the-wild human demonstrations with synchronized audio and vision, together with a policy interface that learns robot manipulation directly from these demonstrations. We evaluate the system on four contact-rich manipulation tasks involving passive sensing of contact events and modes as well as active sensing of surface materials and object states, and show generalization to unseen in-the-wild environments.",
+      "text_zh": "接触声音可以揭示视觉难以判断的交互事件和物体属性。然而，机器人操作中的音频通常通过遥操作采集，并将麦克风安装在机器人或物体上，这限制了可扩展的数据采集。ManiWAV 提出一种“耳朵装在手上”的装置，用于在真实环境中采集同步的音频和视觉人类示范；同时，配套的策略接口可以直接从这些示范中学习机器人操作。我们在四项接触丰富的操作任务上评估系统，涵盖对接触事件和模式的被动感知，以及对表面材质和物体状态的主动感知，并展示了从未见环境示范中学习后的泛化能力。",
+      "shape": {
+        "opening": "先说明新模态能提供什么，再指出现有采集方式的限制",
+        "progression": "信息价值 → 数据瓶颈 → 设备与策略接口 → 任务能力与泛化",
+        "abstraction": "保留系统的两项协同贡献，不展开音频采样和网络层",
+        "ending": "以四类能力和未见环境泛化收束"
+      },
+      "changes": "把旧稿中的麦克风规格、扩散头和一个擦拭数字放回正文；恢复“为什么需要音频 → 如何让它可用 → 验证什么”的自然链条。"
+    },
+    {
+      "id": "P04",
+      "title": "PoliFormer",
+      "source_url": "https://proceedings.mlr.press/v270/zeng25a.html",
+      "text_en": "We present PoliFormer, an RGB-only indoor navigation agent trained end-to-end with large-scale on-policy reinforcement learning in simulation that transfers to the real world without adaptation. PoliFormer combines a foundation vision transformer with a causal transformer decoder to support long-term memory and reasoning, and uses parallel multi-machine rollouts to train on hundreds of millions of interactions across diverse environments. It achieves strong results across two robot embodiments and four navigation benchmarks, including an 85.5% success rate on CHORES-S, a 28.5-point absolute improvement. PoliFormer also extends to object tracking, multi-object navigation, and open-vocabulary navigation without finetuning.",
+      "text_zh": "我们提出 PoliFormer，一种仅使用 RGB、在仿真中通过大规模同策略强化学习端到端训练的室内导航智能体，即使不做适应也能迁移到真实世界。PoliFormer 将视觉基础模型与因果 Transformer 解码器结合，以支持长期记忆和推理，并通过并行的多机轨迹采集，在多样环境中进行数亿次交互训练。该方法在两种机器人和四个导航基准上取得了较强结果，其中在 CHORES-S 上达到 85.5% 的成功率，绝对提升 28.5 个百分点。此外，PoliFormer 无需微调即可扩展到目标跟踪、多目标导航和开放词汇导航。",
+      "shape": {
+        "opening": "直接给出系统能力与训练范式",
+        "progression": "能力 → 关键设计与规模 → 主结果 → 下游扩展",
+        "abstraction": "将 KV-cache概括为长期记忆与可扩展训练，不列 rollout 数和训练天数",
+        "ending": "以无需微调的扩展能力结束"
+      },
+      "changes": "不再先解释 KV-cache、房间记忆失败和两种真实任务的人数；恢复原摘要“系统—规模—主结果—扩展”的节奏，同时保留可核验的主结果。"
+    },
+    {
+      "id": "P05",
+      "title": "OKAMI",
+      "source_url": "https://proceedings.mlr.press/v270/li25a.html",
+      "text_en": "We study how to teach humanoid robots manipulation skills from a single video demonstration. OKAMI generates a manipulation plan from a single RGB-D video and retargets it to a humanoid while adapting to different object locations during deployment. Its object-aware retargeting pipeline uses open-world vision models to identify task-relevant objects and transfers body motions and hand poses separately, allowing the robot to reproduce the demonstrated interaction under changing layouts. Experiments show strong generalization across visual and spatial conditions and outperform the open-world imitation baseline. OKAMI rollouts can further train closed-loop visuomotor policies, which achieve 79.2% average success without labor-intensive teleoperation.",
+      "text_zh": "我们研究如何让人形机器人仅通过观看一段人类视频学会操作技能。OKAMI 从单段 RGB-D 视频生成操作计划，并在执行时根据物体位置将人体动作重定向到人形机器人。其物体感知重定向流程使用开放世界视觉模型识别任务相关物体，并分别传递身体动作和手部姿态，使机器人能够在不同布局下复现示范中的交互。实验表明，OKAMI 在视觉和空间条件变化下具有较强泛化能力，并优于开放世界模仿基线。进一步地，OKAMI 生成的轨迹还可用于训练闭环视觉运动策略，在无需繁重人工遥操作的情况下达到 79.2% 的平均成功率。",
+      "shape": {
+        "opening": "提出单视频模仿问题，先让读者理解任务难点",
+        "progression": "问题 → 计划与重定向 → 两项关键设计 → 泛化结果 → 轨迹再利用",
+        "abstraction": "解释物体感知和身体/手部分解的作用，不列视觉模型名称",
+        "ending": "用第二项贡献及其结果形成自然延伸"
+      },
+      "changes": "把“直接重定向75%”和 ACT 装袋数字分开，回到原摘要更自然的双贡献结构；结果采用原摘要中可核对的 79.2% 平均成功率。"
+    }
+  ]
+}

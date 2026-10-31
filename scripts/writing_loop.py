@@ -199,6 +199,7 @@ def inspect_run(run: dict) -> dict:
             paths = ["references/style-learning-workflow.md"]
             if run["benchmark"]["section"] == "abstract":
                 paths.append("references/abstract-decisions.md")
+                paths.append("references/abstract-rhetoric.md")
             guidance.extend({"path": path, "text": (ROOT / path).read_text(encoding="utf-8")}
                             for path in paths)
         packet = {"role": role, "step": step, "run_input_sha256": digest(initial),

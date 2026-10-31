@@ -14,6 +14,12 @@
       "expected_behavior": "Do not activate the academic writing workflow, benchmark or evidence-linked sentence patterns for explicitly non-research marketing copy."
     },
     {
+      "id": "accurate-but-unnatural-abstract",
+      "prompt": "这版摘要事实都对，但像把 Methods 和 Results 压缩成一段，读起来不像原论文自然。请对照几篇原摘要，学习它们的信息层级和节奏后重写。",
+      "should_activate": true,
+      "expected_behavior": "Read the abstract-rhetoric guide, build a source-shaped profile, separate contribution-level explanation from implementation details, and preserve the raw draft. Do not copy source sentences or claim a blind quality gain."
+    },
+    {
       "id": "meaning-before-compression",
       "prompt": "Use $super-writer to improve this abstract against the supplied exemplars. The last rewrite replaced the explanation with module names. Up to 150 words is fine.",
       "should_activate": true,

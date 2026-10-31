@@ -14,6 +14,12 @@ explain, test, contrast or qualify what precedes it; do not manufacture causalit
 with a transition word. Parallel sentences are valid for genuinely distinct
 contributions, not as the default organization of every result.
 
+For an abstract, choose a contribution-level explanation before its implementation
+steps. Use `references/abstract-decisions.md` to distinguish an abstract from a
+compressed Methods/Results report. Functional sentence cards are optional; do not
+compose the passage by filling their slots. For Chinese delivery, use the
+standalone read and meaning check in `references/academic-expression.md`.
+
 Make the important relation recoverable in the manuscript itself. Do not narrate
 the evidence packet, checklist, role system, or source IDs in manuscript prose.
 Read the prose back before sending it: what does a reader infer, and does each

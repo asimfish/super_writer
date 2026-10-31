@@ -505,3 +505,14 @@ the papers retain their rights. The runtime remains bounded, offline and read-on
 The [developmental comparison](evals/abstract-argument/README.md) retains public
 source-located annotations and generated drafts, not original English abstracts
 or PDFs. It does not supersede prior failed quality gates or claim model training.
+
+### Source-Calibrated Abstract Rhetoric (2026-10-31)
+
+The [abstract-rhetoric guide](references/abstract-rhetoric.md) is an independent
+local synthesis of contribution-level information hierarchy, move rhythm,
+evidence span and ending function. The [five-paper demonstration](evals/abstract-natural/README.md)
+re-read the official PMLR abstract pages for EquiBot, Sparsh, ManiWAV, PoliFormer
+and OKAMI, then wrote original prose from the project's evidence. It does not
+reproduce source abstracts or add a copied upstream corpus. The source pages retain
+their rights; this is a developmental example, not a venue template or quality
+claim. The source-calibrated guide is supplied to abstract role packets only.

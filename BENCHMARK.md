@@ -20,6 +20,12 @@ not quality promotion. Conditions differ across rounds and are not pooled.
   Independent source reading found one task-ranking conflict in the raw Sparsh
   draft; the displayed factual correction and original failure are both retained.
 
+- [Source-calibrated naturalness follow-up](evals/abstract-natural/README.md):
+  five known embodied papers rewritten after reading their official abstracts.
+  The candidates transfer abstraction level, move sequence and ending function;
+  they are not blind evidence or a preference result. This is a separate
+  developmental pass from the evidence-selection follow-up above.
+
 - [Explanation-preserving guide ablation](evals/explanation-pilot/README.md):
   four fresh-to-this-repository RSS 2025 papers and twelve generated abstracts.
   Against a 150-word-budget legacy control, the candidate is 3 / 2 / 3 overall;

@@ -461,3 +461,9 @@ Presentation organization draws inspiration from
 [Figure Studio](https://github.com/c-narcissus/paper-framework-figure-studio-pro):
 show artifacts, then explain mechanisms and verification. No code, images,
 papers or performance numbers were copied, and no endorsement is implied.
+The [source-calibrated abstract comparison](evals/abstract-natural/comparison.html)
+then addresses a separate failure: technically faithful prose that still sounds
+less natural than the source. It transfers information level, move rhythm and
+ending function without copying source sentences or turning the abstract into a
+compressed Methods section. The corresponding [rhetoric guide](references/abstract-rhetoric.md)
+is now included in abstract role packets.

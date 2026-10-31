@@ -52,7 +52,8 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
    An evidence bank is not a coverage quota. Use the selection procedure in
    [abstract decisions](references/abstract-decisions.md#select-an-answer-not-a-fact-inventory)
    and [functional patterns](references/writing-library.md#sentence-progression-not-syntactic-variety);
-   retrieve functional sentence patterns only after the argument is chosen.
+   Functional sentence patterns are optional after the argument is chosen;
+   an abstract needs a contribution-level explanation, not an implementation walk-through.
 4. For full-paper drafting or blueprinting, read
    [references/contribution.md](references/contribution.md), create
    `confirmed_contribution.md`, and run `contribution_check.py`. Define what is
@@ -89,7 +90,7 @@ for provenance and [skill-card.md](skill-card.md) for capabilities.
 | Terms and sentence patterns | [writing library](references/writing-library.md) | Bounded offline `writing_lookup.py` results; not claim evidence |
 | AI claim wording and terminology boundaries | [AI writing specification](references/ai-writing-spec.md) | Explicit `--catalog ai-spec`, optional topic/level facets; complete conditions, exceptions and synthetic contrasts; not an automatic prose linter |
 | Section, paragraph and table design | [writing protocols](references/writing-protocols.md) | One `writing_guide.py` protocol/variant with evidence checks; table placeholders stay explicit |
-| Abstract drafting or comparison | [abstract decisions](references/abstract-decisions.md), [abstract preflight](references/abstract-preflight.md), [blind evaluation](references/blind-evaluation.md), [contribution priorities](references/contribution.md#contribution-priorities-and-compression) | Preserve the contribution and explain why the decisive evidence answers it; check factual scope and use randomized blind review for quality claims |
+| Abstract drafting or comparison | [abstract decisions](references/abstract-decisions.md), [source-calibrated rhetoric](references/abstract-rhetoric.md), [abstract preflight](references/abstract-preflight.md), [blind evaluation](references/blind-evaluation.md), [contribution priorities](references/contribution.md#contribution-priorities-and-compression) | Preserve the contribution, match the source's information level without copying, and explain why decisive evidence answers it; check factual scope and use randomized blind review for quality claims |
 | Venue and paper design | [paper blueprints](references/paper-blueprints.md), [typesetting](references/typesetting-validation.md) | Exact `venue_profile.py` selection and contribution-specific outline |
 | Results mapping | [results validation](references/results-validation.md) | Contribution-to-results mapping and guard |
 | LaTeX, PDF, Word | [latex](references/latex.md) | Source, compiled PDF when available, Word and format reports |
